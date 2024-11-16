@@ -1,0 +1,29 @@
+﻿title: Intro
+tags:
+---
+<<if get_week() != 2>>
+    Cassandra: What's the matter, Kristen?
+
+    Kristen: I need a date to prom...
+
+    Cassandra: Well, why don't you choose where you want to have a meet-cute (or two or three) this week!
+
+    <<enable_date_select 3>>
+<<else>>
+    Cassandra: WEEK 2 NOW
+
+    Cassandra: Where do you want to go this week?
+
+    <<enable_date_select 3>>
+<<endif>>
+===
+
+title: CassandraWeek2
+tags:
+---
+Cassandra: WEEK 2 NOW
+
+Cassandra: Where do you want to go this week?
+
+<<enable_date_select>>
+===
