@@ -7,7 +7,8 @@ public class YarnCommands : MonoBehaviour
     // Drag and drop your Dialogue Runner into this variable.
     public DialogueRunner dialogueRunner;
     public GameObject gameObject;
-    [SerializeField] private LoveInterest character;
+    [SerializeField] private Character character;
+    private LoveInterest loveInterest;
 
     void Awake()
     {
@@ -16,7 +17,7 @@ public class YarnCommands : MonoBehaviour
             ChangeScene
         );
         
-        dialogueRunner.AddCommandHandler<int>(
+        dialogueRunner.AddCommandHandler(
             "enable_date_select",
             EnableDateSelect
         );
@@ -26,10 +27,20 @@ public class YarnCommands : MonoBehaviour
             AddPoints
         );
 
+        dialogueRunner.AddCommandHandler(
+            "increment_date_count",
+            IncrementDateCount
+        );
+
         dialogueRunner.AddCommandHandler<int>(
             "next_week",
             NextWeek
         );
+    }
+
+    void Start()
+    {
+        loveInterest = GameManager.Instance.SetUpScene(character);
     }
 
     private void ChangeScene(string sceneName)
@@ -37,7 +48,7 @@ public class YarnCommands : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void EnableDateSelect(int num)
+    public void EnableDateSelect()
     {
         gameObject.SetActive(true);
     }
@@ -50,7 +61,12 @@ public class YarnCommands : MonoBehaviour
 
     private void AddPoints(int num)
     {
-        character.AddPoints(num);
+        loveInterest.AddPoints(num);
+    }
+
+    private void IncrementDateCount()
+    {
+        loveInterest.IncrementDateCount();
     }
 
     private void NextWeek(int num)

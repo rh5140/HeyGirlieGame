@@ -12,6 +12,11 @@ public class LoveInterest : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Persist between scenes
     }
 
+    public void IncrementDateCount()
+    {
+        _dateCount++;
+    }
+
     public void AddPoints(int num)
     {
         _points += num;
