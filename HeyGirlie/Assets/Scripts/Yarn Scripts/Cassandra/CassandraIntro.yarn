@@ -1,21 +1,38 @@
 ﻿title: Intro
 tags:
 ---
-<<if get_week() != 2>>
+<<if get_week() == 2>>
     Cassandra: What's the matter, Kristen?
+    Kristen: I need a date to the Spring Fling...
 
-    Kristen: I need a date to prom...
+<<elseif get_week() == 2>>
+    <<jump CassandraWeek2>>
 
-    Cassandra: Well, why don't you choose where you want to have a meet-cute (or two or three) this week!
+<<elseif get_week() == 3>>
+    Cassandra: WEEK 3 NOW
 
-    <<enable_date_select>>
+<<elseif get_week() == 4>>
+    Cassandra: WEEK 4 NOW
+
+<<elseif get_week() == 5>>
+    Cassandra: WEEK 5 NOW
+
+<<elseif get_week() == 6>>
+    Cassandra: WEEK 6 NOW
+
+<<elseif get_week() == 7>>
+    Cassandra: WEEK 7 NOW
+
+<<elseif get_week() == 8>>
+    Cassandra: WEEK 8 NOW
+
 <<else>>
-    Cassandra: WEEK 2 NOW
+    Cassandra: ??? how did u get here
 
-    Cassandra: Where do you want to go this week?
-
-    <<enable_date_select>>
 <<endif>>
+
+Cassandra: Well, why don't you choose where you want to have a meet-cute (or two or three) this week!
+<<enable_date_select>>
 ===
 
 title: CassandraWeek2
@@ -24,6 +41,5 @@ tags:
 Cassandra: WEEK 2 NOW
 
 Cassandra: Where do you want to go this week?
-
 <<enable_date_select>>
 ===

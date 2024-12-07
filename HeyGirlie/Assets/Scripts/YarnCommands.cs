@@ -6,9 +6,9 @@ public class YarnCommands : MonoBehaviour
 {
     // Drag and drop your Dialogue Runner into this variable.
     public DialogueRunner dialogueRunner;
-    public GameObject gameObject;
-    [SerializeField] private Character character;
-    private LoveInterest loveInterest;
+    public GameObject gameObject; // Vague naming -- currently only used for Date Select in the Cassandra scene
+    [SerializeField] private Character _character;
+    private LoveInterest _loveInterest;
 
     void Awake()
     {
@@ -32,7 +32,7 @@ public class YarnCommands : MonoBehaviour
             IncrementDateCount
         );
 
-        dialogueRunner.AddCommandHandler<int>(
+        dialogueRunner.AddCommandHandler(
             "next_week",
             NextWeek
         );
@@ -40,7 +40,7 @@ public class YarnCommands : MonoBehaviour
 
     void Start()
     {
-        loveInterest = GameManager.Instance.SetUpScene(character);
+        _loveInterest = GameManager.Instance.SetUpScene(_character);
     }
 
     private void ChangeScene(string sceneName)
@@ -61,15 +61,15 @@ public class YarnCommands : MonoBehaviour
 
     private void AddPoints(int num)
     {
-        loveInterest.AddPoints(num);
+        _loveInterest.AddPoints(num);
     }
 
     private void IncrementDateCount()
     {
-        loveInterest.IncrementDateCount();
+        _loveInterest.IncrementDateCount();
     }
 
-    private void NextWeek(int num)
+    private void NextWeek()
     {
         GameManager.Instance.IncreaseWeek();
     }
