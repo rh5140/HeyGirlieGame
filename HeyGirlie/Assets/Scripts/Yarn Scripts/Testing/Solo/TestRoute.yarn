@@ -1,18 +1,28 @@
 ﻿title: Intro
 tags:
 ---
-ROUTE Test
 
+ROUTE Test
+<<voiceline Fig_Nav_Greeting>>
 How will you greet the girlie?
 -> heyyy, girlie (in an attractive way)
+    <<expression FigFruit_3>>
+    <<voiceline Fig_Nav_Yeah>>
     Girlie: heyyyy
     <<add_points 2>>
 -> heyyy, girlie (in a femcel loser way, but she's into it)
+    <<voiceline Fig_Nav_Accept>>
+    <<expression FigFruit_1>>
     Girlie: heyyyy..
     <<add_points 1>>
 -> heyyy, girlie (in a femcel loser way, but she's not into it)
+    <<voiceline Fig_Nav_Reject>>
+    <<expression FigFruit_2>>
+    Girlie: ...erm...
 
+radish: this is just basic functionality testing so no 3 dates per week handled yet
 <<increment_date_count>>
+<<expression FigFruit_0>>
 <<change_scene "Test Group Event">>
 ===
 

@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class LoveInterest : MonoBehaviour
@@ -6,6 +8,9 @@ public class LoveInterest : MonoBehaviour
     [Range(1,8)][SerializeField] private int _dateCount;
     [SerializeField] private int _points;
     [SerializeField] private int _successThreshold;
+
+    public List<Sprite> expressions = new List<Sprite>();
+    public List<AudioClip> voicelines = new List<AudioClip>();
 
     void Awake()
     {

@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Yarn.Unity;
+using System.Collections;
+using System.Collections.Generic;
 
 public class YarnCommands : MonoBehaviour
 {
@@ -9,6 +12,11 @@ public class YarnCommands : MonoBehaviour
     public GameObject gameObject; // Vague naming -- currently only used for Date Select in the Cassandra scene
     [SerializeField] private Character _character;
     private LoveInterest _loveInterest;
+    private List<Sprite> _expressions;
+    private List<AudioClip> _voicelines;
+    // This is kinda bad but erm
+    private Image _loveInterestSprite;
+    private AudioSource _as;
 
     void Awake()
     {
@@ -36,11 +44,26 @@ public class YarnCommands : MonoBehaviour
             "next_week",
             NextWeek
         );
+
+        dialogueRunner.AddCommandHandler<string>(
+            "expression",
+            SwapExpression
+        );
+
+        dialogueRunner.AddCommandHandler<string>(
+            "voiceline",
+            PlayAudioByName
+        );
     }
 
     void Start()
     {
         _loveInterest = GameManager.Instance.SetUpScene(_character);
+        _expressions = _loveInterest.expressions;
+        _voicelines = _loveInterest.voicelines;
+        // This is bad but just temporary,,
+        _loveInterestSprite = GameObject.Find("LoveInterestSprite").GetComponent<Image>();
+        _as = GetComponent<AudioSource>();
     }
 
     private void ChangeScene(string sceneName)
@@ -79,5 +102,64 @@ public class YarnCommands : MonoBehaviour
     {
         return GameManager.Instance.GetWeek();
     }
+
+    private void SwapExpression(string newSprite)
+    {
+        _loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
+    }
+
+    // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
+    public void PlayAudioByName(string audioName)
+    {
+        AudioClip clip = FetchAsset<AudioClip>(audioName);
+
+        // Check if the clip was found
+        if (clip != null)
+        {
+            // Play the audio clip
+            _as.clip = clip;
+            _as.Play();
+        }
+        else
+        {
+            // Handle the case where the clip wasn't found
+            Debug.LogWarning("Audio clip not found: " + audioName);
+        }
+    }
+
+    // Borrowed from Jenny's code... https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
+    // I don't really like this approach because it's dependent on string matching the filename but just using it for now
+    T FetchAsset<T>( string assetName ) where T : UnityEngine.Object {
+		// first, check to see if it's a manully loaded asset, with
+		// manual array checks... it's messy but I can't think of a
+		// better way to do this
+		if ( typeof(T) == typeof(Sprite) ) {
+			foreach ( var spr in _expressions ) {
+				if (spr.name == assetName) {
+					return spr as T;
+				}
+			}
+		} 
+		else if ( typeof(T) == typeof(AudioClip) ) {
+			foreach ( var ac in _voicelines ) {
+				if ( ac.name == assetName ) {
+					return ac as T;
+				}
+			}
+		}
+
+		// by default, we load all Resources assets into the asset
+		// arrays already, but if you don't want that, then uncomment
+		// this, etc. 
+		// if ( useResourcesFolders ) {
+		// 	var newAsset = Resources.Load<T>(assetName); 
+		// 	if ( newAsset != null ) {
+		// 		return newAsset;
+		//  	}
+		// }
+
+		Debug.LogErrorFormat(this, "VN Manager can't find asset [{0}]... maybe it is misspelled, or isn't imported as {1}?", assetName, typeof(T).ToString() );
+		return null; // didn't find any matching asset
+	}
 
 }
