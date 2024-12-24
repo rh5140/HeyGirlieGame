@@ -9,51 +9,33 @@ public class YarnCommands : MonoBehaviour
 {
     // Drag and drop your Dialogue Runner into this variable.
     public DialogueRunner dialogueRunner;
+
+    // SHOULD REMOVE THIS ENTIRELY -- will not be used in final version
     public GameObject gameObject; // Vague naming -- currently only used for Date Select in the Cassandra scene
+
     [SerializeField] private Character _character;
     private LoveInterest _loveInterest;
+    static int _dateCount;
+
+    public GameObject[] scenarios;
+
+    // TEMPORARY VARIABLES -- I think they should be attached to the character sprites instead..?
     private List<Sprite> _expressions;
     private List<AudioClip> _voicelines;
-    // This is kinda bad but erm
     private Image _loveInterestSprite;
     private AudioSource _as;
+    // END OF TEMPORARY
 
     void Awake()
     {
-        dialogueRunner.AddCommandHandler<string>(
-            "change_scene",
-            ChangeScene
-        );
+        dialogueRunner.AddCommandHandler<string>("change_scene", ChangeScene);
+        dialogueRunner.AddCommandHandler("enable_date_select", EnableDateSelect);
+        dialogueRunner.AddCommandHandler<int>("add_points", AddPoints);
+        dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
+        dialogueRunner.AddCommandHandler("next_week", NextWeek);
         
-        dialogueRunner.AddCommandHandler(
-            "enable_date_select",
-            EnableDateSelect
-        );
-
-        dialogueRunner.AddCommandHandler<int>(
-            "add_points",
-            AddPoints
-        );
-
-        dialogueRunner.AddCommandHandler(
-            "increment_date_count",
-            IncrementDateCount
-        );
-
-        dialogueRunner.AddCommandHandler(
-            "next_week",
-            NextWeek
-        );
-
-        dialogueRunner.AddCommandHandler<string>(
-            "expression",
-            SwapExpression
-        );
-
-        dialogueRunner.AddCommandHandler<string>(
-            "voiceline",
-            PlayAudioByName
-        );
+        dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
+        dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
     }
 
     void Start()
@@ -71,6 +53,7 @@ public class YarnCommands : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    // REMOVE LATER
     public void EnableDateSelect()
     {
         gameObject.SetActive(true);
@@ -103,6 +86,7 @@ public class YarnCommands : MonoBehaviour
         return GameManager.Instance.GetWeek();
     }
 
+    // Needs to be reworked
     private void SwapExpression(string newSprite)
     {
         _loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);

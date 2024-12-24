@@ -1,8 +1,86 @@
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class DateSelectionInterface : MonoBehaviour
 {
+    public void Start()
+    {
+        Debug.Log("Start!");
+        SetUpRegions();
+    }
+
+    public void SetUpRegions()
+    {
+        foreach (LoveInterest li in GameManager.Instance.liPriority)
+        {
+            // Shouldn't really ever be empty when we're done setting everything up
+            if (li.dates != null && li.dates.Length != 0)
+            {
+                // Bounds checking
+                int curDate = li.GetDateCount();
+                if (li.dates.Length >= curDate)
+                {
+                    Date date = li.dates[curDate - 1];
+                    GetRegionQueue(date.region).Enqueue(date.sceneName);
+                    Debug.Log("Add " + date.sceneName + " to " + date.region);
+                }
+            }
+        }
+    }
+
+    private Queue<string> GetRegionQueue(Region region)
+    {
+        switch (region)
+        {
+            case Region.School:
+                return GameManager.Instance.schoolDates;
+            case Region.Elmville:
+                return GameManager.Instance.elmvilleDates;
+            default:
+                return GameManager.Instance.bastionCityDates;
+        }
+    }
+
+    // OnClick functions don't support enum parameters :[
+    // public void SelectRegion(Region region)
+    // {
+    //     string dateScene = GetRegionQueue(region).Dequeue();
+    //     SceneManager.LoadScene(dateScene);
+    // }
+    public void SelectSchoolRegion()
+    {
+        if (GameManager.Instance.schoolDates.Count == 0)
+        {
+            Debug.Log("No school dates!");
+            return;
+        }
+        string dateScene = GameManager.Instance.schoolDates.Dequeue();
+        SceneManager.LoadScene(dateScene);
+    }
+    public void SelectElmvilleRegion()
+    {
+        if (GameManager.Instance.elmvilleDates.Count == 0)
+        {
+            Debug.Log("No Elmville dates!");
+            return;
+        }
+        string dateScene = GameManager.Instance.elmvilleDates.Dequeue();
+        SceneManager.LoadScene(dateScene);
+    }
+    public void SelectBastionCityRegion()
+    {
+        if (GameManager.Instance.bastionCityDates.Count == 0)
+        {
+            Debug.Log("No Bastion City dates!");
+            return;
+        }
+        string dateScene = GameManager.Instance.bastionCityDates.Dequeue();
+        SceneManager.LoadScene(dateScene);
+    }
+
+
+
     // TEMPORARY FOR TESTING
     // Later -- parameter is Character enum defined in GameManager.cs -> load relevant scene
     public void ChangeScene()
@@ -10,6 +88,7 @@ public class DateSelectionInterface : MonoBehaviour
         SceneManager.LoadScene("Test Route");
     }
 
+    // TEMPORARY FOR TESTING
     public void CassandraScene()
     {
         SceneManager.LoadScene("Cassandra");

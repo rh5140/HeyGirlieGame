@@ -1,18 +1,5 @@
 using UnityEngine;
-
-public enum Character
-{
-    Kristen,
-    Cassandra,
-    Fig,
-    Gertie,
-    Kipperlilly,
-    Lucy,
-    Naradriel,
-    Tracker,
-    Frostkettle,
-    Trackernara,
-}
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,7 +7,17 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get {return _instance;}}
 
     private int week = 1; // Temporary
-    [SerializeField] private LoveInterest[] loveInterests;
+    [SerializeField] private LoveInterest[] _loveInterests;
+
+    // Separate data structure for ordering by affinity -- for now, just a copy of default
+    // Needs more descriptive name..?
+    public LoveInterest[] liPriority;
+
+    // One queue per region
+    // Queue of scene names to load
+    public Queue<string> schoolDates;
+    public Queue<string> elmvilleDates;
+    public Queue<string> bastionCityDates;
 
     private void Awake()
     {
@@ -31,6 +28,13 @@ public class GameManager : MonoBehaviour
         }
 
         _instance = this;
+
+        // Initializing love interest priority array -- maybe shouldn't be done here?
+        liPriority = (LoveInterest[]) _loveInterests.Clone();
+        schoolDates = new Queue<string>();
+        elmvilleDates = new Queue<string>();
+        bastionCityDates = new Queue<string>();
+
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -39,21 +43,21 @@ public class GameManager : MonoBehaviour
         switch (character)
         {
             case Character.Fig:
-                return loveInterests[0];
+                return _loveInterests[0];
             case Character.Gertie:
-                return loveInterests[1];
+                return _loveInterests[1];
             case Character.Kipperlilly:
-                return loveInterests[2];
+                return _loveInterests[2];
             case Character.Lucy:
-                return loveInterests[3];
+                return _loveInterests[3];
             case Character.Naradriel:
-                return loveInterests[4];
+                return _loveInterests[4];
             case Character.Tracker:
-                return loveInterests[5];
+                return _loveInterests[5];
             case Character.Frostkettle:
-                return loveInterests[6];
+                return _loveInterests[6];
             case Character.Trackernara:
-                return loveInterests[7];
+                return _loveInterests[7];
             default:
                 return null;
         }
