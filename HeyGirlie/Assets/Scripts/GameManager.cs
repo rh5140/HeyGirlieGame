@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance {get {return _instance;}}
 
-    private int week = 1; // Temporary
+    private int _week = 1; 
+    private int _datesThisWeek = 0;
     [SerializeField] private LoveInterest[] _loveInterests;
 
     // Separate data structure for ordering by affinity -- for now, just a copy of default
@@ -63,14 +64,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void IncreaseDatesThisWeek()
+    {
+        _datesThisWeek++;
+        if (_datesThisWeek > 3) Debug.Log("how did you go on more than 3 dates this week??");
+    }
+
+    public int GetDatesThisWeek()
+    {
+        return _datesThisWeek;
+    }
+
     public void IncreaseWeek()
     {
-        week++;
+        _datesThisWeek = 0;
+        _week++;
     }
 
     public int GetWeek()
     {
-        return week;
+        return _week;
     }
 
 }

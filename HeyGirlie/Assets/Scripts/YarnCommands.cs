@@ -32,6 +32,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("enable_date_select", EnableDateSelect);
         dialogueRunner.AddCommandHandler<int>("add_points", AddPoints);
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
+        dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
         
         dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
@@ -73,6 +74,17 @@ public class YarnCommands : MonoBehaviour
     private void IncrementDateCount()
     {
         _loveInterest.IncrementDateCount();
+    }
+
+    private void IncreaseDatesThisWeek()
+    {
+        GameManager.Instance.IncreaseDatesThisWeek();
+    }
+
+    [YarnFunction("get_dates_this_week")]
+    public static int GetDatesThisWeek()
+    {
+        return GameManager.Instance.GetDatesThisWeek();
     }
 
     private void NextWeek()

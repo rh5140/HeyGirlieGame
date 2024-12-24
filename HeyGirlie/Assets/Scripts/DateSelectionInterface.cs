@@ -7,7 +7,7 @@ public class DateSelectionInterface : MonoBehaviour
     public void Start()
     {
         Debug.Log("Start!");
-        SetUpRegions();
+        if (GameManager.Instance.GetDatesThisWeek() == 0) SetUpRegions();
     }
 
     public void SetUpRegions()
