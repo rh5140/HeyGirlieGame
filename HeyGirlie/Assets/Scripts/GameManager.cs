@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System;
-using System.IO;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -33,10 +30,6 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
 
-        LoadData();
-
-        Debug.Log(GetWeek());
-
         // Initializing love interest priority array -- maybe shouldn't be done here?
         liPriority = (LoveInterest[]) _loveInterests.Clone();
         schoolDates = new Queue<string>();
@@ -44,12 +37,6 @@ public class GameManager : MonoBehaviour
         bastionCityDates = new Queue<string>();
 
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    private void Update(){
-        if(Input.GetKeyDown(KeyCode.S)){
-            SaveData();
-        }
     }
 
     public LoveInterest SetUpScene(Character character)
@@ -99,23 +86,4 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
-    public void SaveData(){
-        PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
-        foreach(LoveInterest li in _loveInterests){
-            data.addLI(li.GetDateCount(), li.GetPoints());
-        }
-        
-        string jsonData = JsonUtility.ToJson(data, true);
-        string filePath = Application.persistentDataPath + "/GirlieData.json";
-        File.WriteAllText(filePath, jsonData);
-        Debug.Log("done");
-    }
-
-    public void LoadData(){
-        string json = File.ReadAllText(Application.persistentDataPath + "/GirlieData.json");
-        PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-
-        _week = data.getWeek();
-        _datesThisWeek = data.getDatesThisWeek();
-    }
 }
