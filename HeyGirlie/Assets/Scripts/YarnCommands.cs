@@ -16,10 +16,14 @@ public class YarnCommands : MonoBehaviour
 
     public GameObject[] scenarios;
 
+    // Might not be of Image class in the end
+    // [SerializeField] private Image _kristenSprite;
+    // [SerializeField] private Image _charLeftSprite;
+    // [SerializeField] private Image _charRightSprite;
+
     // TEMPORARY VARIABLES -- I think they should be attached to the character sprites instead..?
     private List<Sprite> _expressions;
     private List<AudioClip> _voicelines;
-    private Image _loveInterestSprite;
     private AudioSource _as;
     // END OF TEMPORARY
 
@@ -38,11 +42,10 @@ public class YarnCommands : MonoBehaviour
     void Start()
     {
         _loveInterest = GameManager.Instance.SetUpScene(_character);
-        _expressions = _loveInterest.expressions;
-        _voicelines = _loveInterest.voicelines;
+        // _expressions = _loveInterest.expressions;
+        // _voicelines = _loveInterest.voicelines;
         // This is bad but just temporary,,
-        _loveInterestSprite = GameObject.Find("LoveInterestSprite").GetComponent<Image>();
-        _as = GetComponent<AudioSource>();
+        // _as = GetComponent<AudioSource>();
     }
 
     private void ChangeScene(string sceneName)
@@ -85,7 +88,7 @@ public class YarnCommands : MonoBehaviour
     // Needs to be reworked
     private void SwapExpression(string newSprite)
     {
-        _loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
+        //_loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
     }
 
     // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
@@ -109,6 +112,7 @@ public class YarnCommands : MonoBehaviour
 
     // Borrowed from Jenny's code... https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
     // I don't really like this approach because it's dependent on string matching the filename but just using it for now
+    // I guess if we do a string-to-file dictionary of sorts, it's kinda the same thing but less efficient so maybe this is fine
     T FetchAsset<T>( string assetName ) where T : UnityEngine.Object {
 		// first, check to see if it's a manully loaded asset, with
 		// manual array checks... it's messy but I can't think of a
