@@ -9,6 +9,9 @@ public class LoveInterest : MonoBehaviour
     [SerializeField] private int _points;
     [SerializeField] private int _successThreshold;
 
+    [SerializeField] public Date[] dates;
+
+    // Note: I don't really want to store these in the Love Interest -- make separate class for the sprites?
     public List<Sprite> expressions = new List<Sprite>();
     public List<AudioClip> voicelines = new List<AudioClip>();
 
@@ -22,6 +25,11 @@ public class LoveInterest : MonoBehaviour
         _dateCount++;
     }
 
+    public int GetDateCount()
+    {
+        return _dateCount;
+    }
+
     public void AddPoints(int num)
     {
         _points += num;
@@ -32,8 +40,8 @@ public class LoveInterest : MonoBehaviour
         return _points;
     }
 
-    // Whether promposal succeeds
-    public bool promSuccess()
+    // Whether Spring Fling date is successful at the end
+    public bool SucceedEnding()
     {
         return _points >= _successThreshold;
     }

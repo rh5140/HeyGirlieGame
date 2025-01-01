@@ -9,77 +9,48 @@ public class YarnCommands : MonoBehaviour
 {
     // Drag and drop your Dialogue Runner into this variable.
     public DialogueRunner dialogueRunner;
-    public GameObject gameObject; // Vague naming -- currently only used for Date Select in the Cassandra scene
+
     [SerializeField] private Character _character;
     private LoveInterest _loveInterest;
+    static int _dateCount;
+
+    public GameObject[] scenarios;
+
+    // Might not be of Image class in the end
+    // [SerializeField] private Image _kristenSprite;
+    // [SerializeField] private Image _charLeftSprite;
+    // [SerializeField] private Image _charRightSprite;
+
+    // TEMPORARY VARIABLES -- I think they should be attached to the character sprites instead..?
     private List<Sprite> _expressions;
     private List<AudioClip> _voicelines;
-    // This is kinda bad but erm
-    private Image _loveInterestSprite;
     private AudioSource _as;
+    // END OF TEMPORARY
 
     void Awake()
     {
-        dialogueRunner.AddCommandHandler<string>(
-            "change_scene",
-            ChangeScene
-        );
+        dialogueRunner.AddCommandHandler<string>("change_scene", ChangeScene);
+        dialogueRunner.AddCommandHandler<int>("add_points", AddPoints);
+        dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
+        dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
+        dialogueRunner.AddCommandHandler("next_week", NextWeek);
         
-        dialogueRunner.AddCommandHandler(
-            "enable_date_select",
-            EnableDateSelect
-        );
-
-        dialogueRunner.AddCommandHandler<int>(
-            "add_points",
-            AddPoints
-        );
-
-        dialogueRunner.AddCommandHandler(
-            "increment_date_count",
-            IncrementDateCount
-        );
-
-        dialogueRunner.AddCommandHandler(
-            "next_week",
-            NextWeek
-        );
-
-        dialogueRunner.AddCommandHandler<string>(
-            "expression",
-            SwapExpression
-        );
-
-        dialogueRunner.AddCommandHandler<string>(
-            "voiceline",
-            PlayAudioByName
-        );
+        dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
+        dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
     }
 
     void Start()
     {
         _loveInterest = GameManager.Instance.SetUpScene(_character);
-        _expressions = _loveInterest.expressions;
-        _voicelines = _loveInterest.voicelines;
+        // _expressions = _loveInterest.expressions;
+        // _voicelines = _loveInterest.voicelines;
         // This is bad but just temporary,,
-        _loveInterestSprite = GameObject.Find("LoveInterestSprite").GetComponent<Image>();
-        _as = GetComponent<AudioSource>();
+        // _as = GetComponent<AudioSource>();
     }
 
     private void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    }
-
-    public void EnableDateSelect()
-    {
-        gameObject.SetActive(true);
-    }
-    
-    // Method for going to next date OR cassandra if no more dates left in list
-    private void CassandraScene(int week)
-    {
-        SceneManager.LoadScene("Cassandra");
     }
 
     private void AddPoints(int num)
@@ -90,6 +61,17 @@ public class YarnCommands : MonoBehaviour
     private void IncrementDateCount()
     {
         _loveInterest.IncrementDateCount();
+    }
+
+    private void IncreaseDatesThisWeek()
+    {
+        GameManager.Instance.IncreaseDatesThisWeek();
+    }
+
+    [YarnFunction("get_dates_this_week")]
+    public static int GetDatesThisWeek()
+    {
+        return GameManager.Instance.GetDatesThisWeek();
     }
 
     private void NextWeek()
@@ -103,9 +85,10 @@ public class YarnCommands : MonoBehaviour
         return GameManager.Instance.GetWeek();
     }
 
+    // Needs to be reworked
     private void SwapExpression(string newSprite)
     {
-        _loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
+        //_loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
     }
 
     // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
@@ -129,6 +112,7 @@ public class YarnCommands : MonoBehaviour
 
     // Borrowed from Jenny's code... https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
     // I don't really like this approach because it's dependent on string matching the filename but just using it for now
+    // I guess if we do a string-to-file dictionary of sorts, it's kinda the same thing but less efficient so maybe this is fine
     T FetchAsset<T>( string assetName ) where T : UnityEngine.Object {
 		// first, check to see if it's a manully loaded asset, with
 		// manual array checks... it's messy but I can't think of a
