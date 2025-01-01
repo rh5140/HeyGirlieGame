@@ -30,6 +30,11 @@ public class LoveInterest : MonoBehaviour
         return _dateCount;
     }
 
+    public void SetDateCount(int dateCount)
+    {
+        _dateCount = dateCount;
+    }
+
     public void AddPoints(int num)
     {
         _points += num;
@@ -38,6 +43,11 @@ public class LoveInterest : MonoBehaviour
     public int GetPoints()
     {
         return _points;
+    }
+
+    public void SetPoints(int points)
+    {
+        _points = points;
     }
 
     // Whether Spring Fling date is successful at the end

@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
 
-        LoadData();
+        // LoadData();
 
         Debug.Log(GetWeek());
 
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     private void Update(){
         if(Input.GetKeyDown(KeyCode.S)){
-            SaveData();
+            Save();
         }
     }
 
@@ -99,23 +99,28 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
-    public void SaveData(){
+    public void Save(){
         PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
-        foreach(LoveInterest li in _loveInterests){
-            data.addLI(li.GetDateCount(), li.GetPoints());
-        }
         
-        string jsonData = JsonUtility.ToJson(data, true);
-        string filePath = Application.persistentDataPath + "/GirlieData.json";
-        File.WriteAllText(filePath, jsonData);
-        Debug.Log("done");
+        for(int li = 0; li < liPriority.Length; li++){
+            data.addLI(li, liPriority[li].GetDateCount(), liPriority[li].GetPoints());
+        }
+
+        SaveManager.SaveData(data, SaveManager.exampleProfile);
     }
 
-    public void LoadData(){
-        string json = File.ReadAllText(Application.persistentDataPath + "/GirlieData.json");
-        PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-
+    public void Load(int profileNum, PlayerData data){
+        _gameProfile = profileNum;
         _week = data.getWeek();
         _datesThisWeek = data.getDatesThisWeek();
+
+        for(int i = 0; i < 8; i++){
+            int[] liData = data.GetLoveInterest(i);
+            
+            _loveInterests[i].SetDateCount(liData[1]);
+            _loveInterests[i].SetPoints(liData[2]);
+
+            liPriority[liData[0]] = _loveInterests[i];
+        }
     }
 }

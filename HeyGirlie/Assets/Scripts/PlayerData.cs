@@ -15,13 +15,37 @@ public class PlayerData
 
     [System.Serializable]
     public class LIData {
+        [SerializeField] private int priority;
         [Range(1,8)][SerializeField] private int dateCount;
         [SerializeField] private int points;
         // [SerializeField] private int successThreshold;
 
-        public LIData(int dateCount, int points){
+        public LIData(int priority, int dateCount, int points){
+            this.priority = priority;
             this.dateCount = dateCount;
             this.points = points;
+        }
+
+        public int getPriority(){
+            return priority;
+        }
+
+        public int getDateCount(){
+            return dateCount;
+        }
+
+        public int getPoints(){
+            return points;
+        }
+    }
+
+    public PlayerData(){
+        this.scene = "Intro";
+        this.week = 1;
+        this.datesThisWeek = 0;
+
+        for(int i = 0; i < 8; i++){
+            addLI(i, 1, 0);
         }
     }
 
@@ -31,8 +55,8 @@ public class PlayerData
         this.datesThisWeek = datesThisWeek;
     }
 
-    public void addLI(int dateCount, int points){
-        liData.Add(new LIData(dateCount, points));
+    public void addLI(int priority, int dateCount, int points){
+        liData.Add(new LIData(priority, dateCount, points));
     }
 
     public string getScene(){
@@ -45,5 +69,12 @@ public class PlayerData
 
     public int getDatesThisWeek(){
         return datesThisWeek;
+    }
+
+    public int[] GetLoveInterest(int index){
+        LIData liData = this.liData[index];
+        int[] li = {liData.getPriority(), liData.getDateCount(), liData.getPoints()};
+        
+        return li;
     }
 }
