@@ -1,9 +1,10 @@
 ﻿title: Intro
 tags:
 ---
-<<if get_week() == 2>>
+<<if get_week() == 1>>
     Cassandra: What's the matter, Kristen?
     Kristen: I need a date to the Spring Fling...
+    <<jump CassandraWeek1>>
 
 <<elseif get_week() == 2>>
     <<jump CassandraWeek2>>
@@ -42,4 +43,24 @@ Cassandra: WEEK 2 NOW
 
 Cassandra: Where do you want to go this week?
 <<change_scene DateSelection>>
+===
+
+
+title: CassandraWeek1
+tags:
+---
+Cassandra: WEEK 1 NOW
+
+Cassandra: Who would you want to date?
+
+-> Fig
+    <<setLIPriority Fig>>
+-> Gertie
+    <<setLIPriority Gertie>>
+-> Kipperlilly
+    <<setLIPriority Kipperlilly>>
+
+Cassandra: Where do you want to go this week?
+<<change_scene DateSelection>>
+
 ===

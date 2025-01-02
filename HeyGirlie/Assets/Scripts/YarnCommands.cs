@@ -34,6 +34,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
+
+        dialogueRunner.AddCommandHandler<Character>("setLIPriority", SetLIPriority);
         
         dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
@@ -66,6 +68,11 @@ public class YarnCommands : MonoBehaviour
     private void IncreaseDatesThisWeek()
     {
         GameManager.Instance.IncreaseDatesThisWeek();
+    }
+
+    private void SetLIPriority(Character li)
+    {
+        GameManager.Instance.priority = li;
     }
 
     [YarnFunction("get_dates_this_week")]

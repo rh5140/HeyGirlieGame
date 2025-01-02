@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
 
     // Separate data structure for ordering by affinity -- for now, just a copy of default
     // Needs more descriptive name..?
-    public LoveInterest[] liPriority;
+    public List<LoveInterest> liQueue;
+    public Character priority = Character.Fig;
+    
 
     // One queue per region
     // Queue of scene names to load
@@ -31,12 +33,34 @@ public class GameManager : MonoBehaviour
         _instance = this;
 
         // Initializing love interest priority array -- maybe shouldn't be done here?
-        liPriority = (LoveInterest[]) _loveInterests.Clone();
+        priority = Character.Kipperlilly;
+        liQueue = priorityQueue();
+        //liQueue = (LoveInterest[]) _loveInterests.Clone();
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
         bastionCityDates = new Queue<string>();
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public List<LoveInterest> priorityQueue()
+    {
+        List<LoveInterest> liQueue = new List<LoveInterest>();
+        //loop through all love interests
+        for (int i = 2; i< 10; i++)
+        {
+            Debug.Log(priority);
+            if ((int)priority != i)
+            {
+                liQueue.Add(SetUpScene((Character)i));
+                Debug.Log(priority);
+                Debug.Log(liQueue);
+
+            }
+        }
+        liQueue.Add(SetUpScene(priority));
+        liQueue.Reverse();
+        return liQueue;
     }
 
     public LoveInterest SetUpScene(Character character)
