@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     // Separate data structure for ordering by affinity -- for now, just a copy of default
     // Needs more descriptive name..?
     public List<LoveInterest> liQueue;
-    public Character priority = Character.Fig;
+    public Character priority;
+    public Character polyamPartner;
     
 
     // One queue per region
@@ -32,10 +33,6 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
 
-        // Initializing love interest priority array -- maybe shouldn't be done here?
-        priority = Character.Kipperlilly;
-        liQueue = priorityQueue();
-        //liQueue = (LoveInterest[]) _loveInterests.Clone();
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
         bastionCityDates = new Queue<string>();
@@ -50,20 +47,35 @@ public class GameManager : MonoBehaviour
         for (int i = 2; i< 10; i++)
         {
             Debug.Log(priority);
-            if ((int)priority != i)
+            Debug.Log(polyamPartner);
+            if ((int)priority != i && i != (int)polyamPartner)
             {
-                liQueue.Add(SetUpScene((Character)i));
+                liQueue.Add(GetLoveInterest((Character)i));
                 Debug.Log(priority);
                 Debug.Log(liQueue);
 
             }
         }
-        liQueue.Add(SetUpScene(priority));
+        //randomizes non-prio love interests
+        int n = liQueue.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n);
+            LoveInterest value = liQueue[k];
+            liQueue[k] = liQueue[n];
+            liQueue[n] = value;
+        }
+        if (polyamPartner != Character.Kristen) //Kristen is default for non-polyam routes
+        {
+            liQueue.Add(GetLoveInterest(polyamPartner));
+        }
+        liQueue.Add(GetLoveInterest(priority));
         liQueue.Reverse();
         return liQueue;
     }
 
-    public LoveInterest SetUpScene(Character character)
+    public LoveInterest GetLoveInterest(Character character)
     {
         switch (character)
         {
@@ -109,5 +121,6 @@ public class GameManager : MonoBehaviour
     {
         return _week;
     }
+
 
 }

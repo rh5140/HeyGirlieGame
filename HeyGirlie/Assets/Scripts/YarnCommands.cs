@@ -35,7 +35,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
 
-        dialogueRunner.AddCommandHandler<Character>("setLIPriority", SetLIPriority);
+        dialogueRunner.AddCommandHandler<int>("setLIPriority", SetLIPriority);
         
         dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
@@ -43,7 +43,7 @@ public class YarnCommands : MonoBehaviour
 
     void Start()
     {
-        _loveInterest = GameManager.Instance.SetUpScene(_character);
+        _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         // _expressions = _loveInterest.expressions;
         // _voicelines = _loveInterest.voicelines;
         // This is bad but just temporary,,
@@ -70,9 +70,30 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.IncreaseDatesThisWeek();
     }
 
-    private void SetLIPriority(Character li)
+    private void SetLIPriority(int li)
     {
-        GameManager.Instance.priority = li;
+        GameManager.Instance.priority = (Character)li;
+
+
+        switch (GameManager.Instance.priority)
+        {
+            case Character.Kipperlilly:
+                GameManager.Instance.polyamPartner = Character.Lucy;
+                break;
+            case Character.Lucy:
+                GameManager.Instance.polyamPartner = Character.Kipperlilly;
+                break;
+            case Character.Tracker:
+                GameManager.Instance.polyamPartner = Character.Naradriel;
+                break;
+            case Character.Naradriel:
+                GameManager.Instance.polyamPartner = Character.Tracker;
+                break;
+            default:
+                GameManager.Instance.polyamPartner = Character.Kristen; //default case to Kristen herself due to no nulls for Character/enum values
+                break;
+        }
+        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue();
     }
 
     [YarnFunction("get_dates_this_week")]
@@ -83,6 +104,7 @@ public class YarnCommands : MonoBehaviour
 
     private void NextWeek()
     {
+        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue(); //reset queue randomization
         GameManager.Instance.IncreaseWeek();
     }
 
