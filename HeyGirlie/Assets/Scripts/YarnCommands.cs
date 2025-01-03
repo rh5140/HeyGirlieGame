@@ -18,10 +18,10 @@ public class YarnCommands : MonoBehaviour
 
     // Might not be of Image class in the end
     // [SerializeField] private Image _kristenSprite;
-    public GameObject _kristenSprite;
-    public GameObject _charLeftSprite;
-    public GameObject _charRightSprite;
-    public GameObject charCanvas;
+    [SerializeField] private GameObject _kristenSprite;
+    [SerializeField] private GameObject _charLeftSprite;
+    [SerializeField] private GameObject _charRightSprite;
+    [SerializeField] private GameObject _charCanvas;
     // [SerializeField] private Image _charLeftSprite;
     // [SerializeField] private Image _charRightSprite;
 
@@ -106,12 +106,12 @@ public class YarnCommands : MonoBehaviour
     private void SetSprite(string charSpriteName, Image image)
     {
         // Assigns _charSprites to the array of CharSprites attached to the CharacterSpriteCanvas. 
-        CharSprite[] _charSprites = charCanvas.GetComponent<CharSpriteArray>().charSprites;
+        CharSprite[] _charSprites = _charCanvas.GetComponent<CharSpriteArray>().charSprites;
         
         // Sets the Source Image (sprite) of the Image object to the sprite in the array that matches with charSpriteName
         foreach (CharSprite c in _charSprites)
         {
-            Debug.Log("c.spriteName = " + c.spriteName + "; charSpriteName = " + charSpriteName);
+            // Debug.Log("c.spriteName = " + c.spriteName + "; charSpriteName = " + charSpriteName);
             if (c.spriteName.Equals(charSpriteName))
             {
                 image.sprite = c.sprite;

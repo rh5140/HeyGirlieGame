@@ -5,6 +5,6 @@ using UnityEngine.UI;
 [System.Serializable] public class CharSprite //: MonoBehaviour
 {
     public string spriteName;
-    [SerializeField] public Sprite sprite;
+    public Sprite sprite;
     
 }
