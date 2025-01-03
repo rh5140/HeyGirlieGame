@@ -18,6 +18,10 @@ public class YarnCommands : MonoBehaviour
 
     // Might not be of Image class in the end
     // [SerializeField] private Image _kristenSprite;
+    [SerializeField] private GameObject _kristenSprite;
+    [SerializeField] private GameObject _charLeftSprite;
+    [SerializeField] private GameObject _charRightSprite;
+    [SerializeField] private GameObject _charCanvas;
     // [SerializeField] private Image _charLeftSprite;
     // [SerializeField] private Image _charRightSprite;
 
@@ -34,7 +38,14 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
-        
+        // Add Yarn Command to set Kristen sprite by calling "kristen" + sprite file name
+        dialogueRunner.AddCommandHandler<string>("kristen", SetKristenSprite);
+        // Add Yarn Command to set 1st (leftmost) sprite in right position by calling "char_left" + sprite file name
+        dialogueRunner.AddCommandHandler<string>("char_left", SetCharLeft);
+        // Add Yarn Command to set 2nd (rightmost) sprite in right position by calling "char_right" + sprite file name
+        dialogueRunner.AddCommandHandler<string>("char_right", SetCharRight);
+
+
         dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
     }
@@ -89,6 +100,53 @@ public class YarnCommands : MonoBehaviour
     private void SwapExpression(string newSprite)
     {
         //_loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
+    }
+    
+    // Sets Source Image (sprite) for an Image object in the scene
+    private void SetSprite(string charSpriteName, Image image)
+    {
+        // Assigns _charSprites to the array of CharSprites attached to the CharacterSpriteCanvas. 
+        CharSprite[] _charSprites = _charCanvas.GetComponent<CharSpriteArray>().charSprites;
+        
+        // Sets the Source Image (sprite) of the Image object to the sprite in the array that matches with charSpriteName
+        foreach (CharSprite c in _charSprites)
+        {
+            // Debug.Log("c.spriteName = " + c.spriteName + "; charSpriteName = " + charSpriteName);
+            if (c.spriteName.Equals(charSpriteName))
+            {
+                image.sprite = c.sprite;
+            }
+            else
+            {
+                Debug.Log("Couldn't find that sprite!");
+            }
+        }
+    }
+    /* Note to self: CharacterSpriteCanvas prefab should only have 1 thing in array, "None." Add sprites to CharacterSpriteCanvas 
+     * sprite array for each date scene in the hierarchy.
+     */
+    // Set the sprite for the Kristen/left position by calling the SetSprite function
+    private void SetKristenSprite(string charSpriteName)
+    {
+        // Assigns image to the Image component of the KristenSprite Game Object. 
+        Image image = _kristenSprite.GetComponent<Image>();
+        
+        // Sets the sprite corresponding to charSpriteName to KristenSprite Source Image (sprite).
+        SetSprite(charSpriteName, image);
+    }
+
+    // Set the first (leftmost) sprite in the right position by calling SetSprite function
+    private void SetCharLeft(string charSpriteName)
+    {
+        Image image = _charLeftSprite.GetComponent<Image>();
+        SetSprite(charSpriteName, image);
+    }
+
+    // Set the second (rightmost) sprite in the right position by calling SetSprite function
+    private void SetCharRight(string charSpriteName)
+    {
+        Image image = _charRightSprite.GetComponent<Image>();
+        SetSprite(charSpriteName, image);
     }
 
     // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
