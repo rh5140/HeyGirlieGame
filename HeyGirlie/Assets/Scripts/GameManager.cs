@@ -35,8 +35,6 @@ public class GameManager : MonoBehaviour
 
         // LoadData();
 
-        Debug.Log(GetWeek());
-
         // Initializing love interest priority array -- maybe shouldn't be done here?
         liPriority = (LoveInterest[]) _loveInterests.Clone();
         schoolDates = new Queue<string>();
