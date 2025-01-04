@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
 
+/*****************************************************
+
+Player Data - Creates a serializable object that
+contains all relevant information for a player save.
+(Needs to be serializable for JSONUtility to work)
+
+*****************************************************/
 [Serializable]
 public class PlayerData
 {
@@ -11,8 +18,8 @@ public class PlayerData
     [SerializeField] private int datesThisWeek;
 
     [SerializeField] private List<LIData> liData = new List<LIData>();
-    // public int points;
-
+ 
+    // Object for LI data without making a whole new file. Not relevant outside this scope anyways
     [System.Serializable]
     public class LIData {
         [SerializeField] private int priority;
@@ -55,6 +62,7 @@ public class PlayerData
         this.datesThisWeek = datesThisWeek;
     }
 
+    // Saves individual LI data to list
     public void addLI(int priority, int dateCount, int points){
         liData.Add(new LIData(priority, dateCount, points));
     }
@@ -71,6 +79,7 @@ public class PlayerData
         return datesThisWeek;
     }
 
+    // Pulls specified LI's data
     public int[] GetLoveInterest(int index){
         LIData liData = this.liData[index];
         int[] li = {liData.getPriority(), liData.getDateCount(), liData.getPoints()};

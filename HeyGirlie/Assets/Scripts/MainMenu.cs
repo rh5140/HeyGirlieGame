@@ -4,6 +4,12 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
+/*****************************************************
+
+Main Menu - Contains all main menu button
+functionality
+
+*****************************************************/
 public class MainMenu : MonoBehaviour
 {
     public void NewGame()

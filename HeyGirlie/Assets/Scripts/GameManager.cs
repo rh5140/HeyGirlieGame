@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
+    // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
         PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
         
@@ -109,6 +110,7 @@ public class GameManager : MonoBehaviour
         SaveManager.SaveData(data, SaveManager.exampleProfile);
     }
 
+    // Called from Save Manager, loads in relevant player data
     public void Load(int profileNum, PlayerData data){
         _gameProfile = profileNum;
         _week = data.getWeek();
