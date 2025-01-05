@@ -72,13 +72,13 @@ public class GameManager : MonoBehaviour
         }
         liQueue.Add(GetLoveInterest(priority));
 
-        if (polyamPartner != Character.Kristen /* && polyam condition met*/)
-        {
-            if(priority == Character.Kipperlilly || priority == Character.Lucy)
-                liQueue.Add(GetLoveInterest(Character.Frostkettle));
-            if (priority == Character.Naradriel || priority == Character.Tracker)
-                liQueue.Add(GetLoveInterest(Character.Trackernara));
-        }
+
+        //love interest checks are separate and not determined by priority LI; can be triggered by non-prio LI's
+        if(/*add check for Frostkettle condition  met*/)
+            liQueue.Add(GetLoveInterest(Character.Frostkettle));
+        if (/*add check for 3c condition  met*/)
+            liQueue.Add(GetLoveInterest(Character.Trackernara));
+
 
         liQueue.Reverse();
         return liQueue;
