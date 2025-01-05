@@ -71,8 +71,16 @@ public class PlayerData
         return scene;
     }
 
+    public void setScene(string scene){
+        this.scene = scene;
+    }
+
     public int getWeek(){
         return week;
+    }
+
+    public void setWeek(){
+        this.week = week;
     }
 
     public int getDatesThisWeek(){
