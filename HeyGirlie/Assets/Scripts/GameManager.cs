@@ -43,8 +43,8 @@ public class GameManager : MonoBehaviour
     public List<LoveInterest> priorityQueue()
     {
         List<LoveInterest> liQueue = new List<LoveInterest>();
-        //loop through all love interests
-        for (int i = 2; i< 10; i++)
+        //loop through all love interests minus polyam routes
+        for (int i = 2; i< 8; i++)
         {
             Debug.Log(priority);
             Debug.Log(polyamPartner);
@@ -71,6 +71,15 @@ public class GameManager : MonoBehaviour
             liQueue.Add(GetLoveInterest(polyamPartner));
         }
         liQueue.Add(GetLoveInterest(priority));
+
+        if (polyamPartner != Character.Kristen /* && polyam condition met*/)
+        {
+            if(priority == Character.Kipperlilly || priority == Character.Lucy)
+                liQueue.Add(GetLoveInterest(Character.Frostkettle));
+            if (priority == Character.Naradriel || priority == Character.Tracker)
+                liQueue.Add(GetLoveInterest(Character.Trackernara));
+        }
+
         liQueue.Reverse();
         return liQueue;
     }
