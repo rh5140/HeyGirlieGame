@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
+using System.IO;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -33,12 +36,14 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
 
+
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
         bastionCityDates = new Queue<string>();
 
         DontDestroyOnLoad(this.gameObject);
     }
+
 
     public List<LoveInterest> priorityQueue()
     {
@@ -82,6 +87,13 @@ public class GameManager : MonoBehaviour
 
         liQueue.Reverse();
         return liQueue;
+    }
+
+
+    private void Update(){
+        if(Input.GetKeyDown(KeyCode.S)){
+            Save();
+        }
     }
 
     public LoveInterest GetLoveInterest(Character character)
@@ -131,5 +143,32 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
+
+    // Calls to save manager and creates a player data object to add relevant info to save file
+    public void Save(){
+        PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
+        
+        for(int li = 0; li < liPriority.Length; li++){
+            data.addLI(li, liPriority[li].GetDateCount(), liPriority[li].GetPoints());
+        }
+
+        SaveManager.SaveData(data, SaveManager.exampleProfile);
+    }
+
+    // Called from Save Manager, loads in relevant player data
+    public void Load(int profileNum, PlayerData data){
+        // _gameProfile = profileNum;
+        _week = data.getWeek();
+        _datesThisWeek = data.getDatesThisWeek();
+
+        for(int i = 0; i < 8; i++){
+            int[] liData = data.GetLoveInterest(i);
+            
+            _loveInterests[i].SetDateCount(liData[1]);
+            _loveInterests[i].SetPoints(liData[2]);
+
+            liPriority[liData[0]] = _loveInterests[i];
+        }
+    }
 
 }
