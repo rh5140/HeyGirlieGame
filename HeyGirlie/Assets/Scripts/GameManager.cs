@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     // Called from Save Manager, loads in relevant player data
     public void Load(int profileNum, PlayerData data){
-        _gameProfile = profileNum;
+        // _gameProfile = profileNum;
         _week = data.getWeek();
         _datesThisWeek = data.getDatesThisWeek();
 
