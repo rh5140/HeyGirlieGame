@@ -79,10 +79,10 @@ public class GameManager : MonoBehaviour
 
 
         //love interest checks are separate and not determined by priority LI; can be triggered by non-prio LI's
-        if(/*add check for Frostkettle condition  met*/)
-            liQueue.Add(GetLoveInterest(Character.Frostkettle));
-        if (/*add check for 3c condition  met*/)
-            liQueue.Add(GetLoveInterest(Character.Trackernara));
+        //if(/*add check for Frostkettle condition  met*/)
+        //    liQueue.Add(GetLoveInterest(Character.Frostkettle));
+        //if (/*add check for 3c condition  met*/)
+        //    liQueue.Add(GetLoveInterest(Character.Trackernara));
 
 
         liQueue.Reverse();
