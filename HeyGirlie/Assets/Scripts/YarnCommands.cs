@@ -14,8 +14,6 @@ public class YarnCommands : MonoBehaviour
     private LoveInterest _loveInterest;
     static int _dateCount;
 
-    public GameObject[] scenarios;
-
     // Might not be of Image class in the end
     // [SerializeField] private Image _kristenSprite;
     [SerializeField] private GameObject _kristenSprite;
