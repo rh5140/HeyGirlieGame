@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
 
     // Separate data structure for ordering by affinity -- for now, just a copy of default
     // Needs more descriptive name..?
-    public LoveInterest[] liPriority;
+    public List<LoveInterest> liQueue;
+    public Character priority;
+    public Character polyamPartner;
+    
 
     // One queue per region
     // Queue of scene names to load
@@ -33,10 +36,7 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
 
-        // LoadData();
 
-        // Initializing love interest priority array -- maybe shouldn't be done here?
-        liPriority = (LoveInterest[]) _loveInterests.Clone();
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
         bastionCityDates = new Queue<string>();
@@ -44,13 +44,59 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+
+    public List<LoveInterest> priorityQueue()
+    {
+        List<LoveInterest> liQueue = new List<LoveInterest>();
+        //loop through all love interests minus polyam routes
+        for (int i = 2; i< 8; i++)
+        {
+            Debug.Log(priority);
+            Debug.Log(polyamPartner);
+            if ((int)priority != i && i != (int)polyamPartner)
+            {
+                liQueue.Add(GetLoveInterest((Character)i));
+                Debug.Log(priority);
+                Debug.Log(liQueue);
+
+            }
+        }
+        //randomizes non-prio love interests
+        int n = liQueue.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n);
+            LoveInterest value = liQueue[k];
+            liQueue[k] = liQueue[n];
+            liQueue[n] = value;
+        }
+        if (polyamPartner != Character.Kristen) //Kristen is default for non-polyam routes
+        {
+            liQueue.Add(GetLoveInterest(polyamPartner));
+        }
+        liQueue.Add(GetLoveInterest(priority));
+
+
+        //love interest checks are separate and not determined by priority LI; can be triggered by non-prio LI's
+        //if(/*add check for Frostkettle condition  met*/)
+        //    liQueue.Add(GetLoveInterest(Character.Frostkettle));
+        //if (/*add check for 3c condition  met*/)
+        //    liQueue.Add(GetLoveInterest(Character.Trackernara));
+
+
+        liQueue.Reverse();
+        return liQueue;
+    }
+
+
     private void Update(){
         if(Input.GetKeyDown(KeyCode.S)){
             Save();
         }
     }
 
-    public LoveInterest SetUpScene(Character character)
+    public LoveInterest GetLoveInterest(Character character)
     {
         switch (character)
         {
@@ -97,6 +143,7 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
+
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
         PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
@@ -123,4 +170,5 @@ public class GameManager : MonoBehaviour
             liPriority[liData[0]] = _loveInterests[i];
         }
     }
+
 }

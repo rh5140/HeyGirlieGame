@@ -12,7 +12,7 @@ public class DateSelectionInterface : MonoBehaviour
 
     public void SetUpRegions()
     {
-        foreach (LoveInterest li in GameManager.Instance.liPriority)
+        foreach (LoveInterest li in GameManager.Instance.liQueue)
         {
             // Shouldn't really ever be empty when we're done setting everything up
             if (li.dates != null && li.dates.Length != 0)
