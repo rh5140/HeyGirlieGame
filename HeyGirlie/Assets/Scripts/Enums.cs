@@ -18,5 +18,7 @@ public enum Region
 {
     School,
     Elmville,
-    BastionCity,
+    Mordred,
+    Outdoors,
+    Away,
 }

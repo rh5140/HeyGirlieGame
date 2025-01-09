@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
     // Queue of scene names to load
     public Queue<string> schoolDates;
     public Queue<string> elmvilleDates;
-    public Queue<string> bastionCityDates;
+    public Queue<string> mordredDates;
+    public Queue<string> outdoorsDates;
+    public Queue<string> awayDates;
 
     private void Awake()
     {
@@ -39,7 +41,9 @@ public class GameManager : MonoBehaviour
 
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
-        bastionCityDates = new Queue<string>();
+        mordredDates = new Queue<string>();
+        outdoorsDates = new Queue<string>();
+        awayDates = new Queue<string>();
 
         DontDestroyOnLoad(this.gameObject);
     }
