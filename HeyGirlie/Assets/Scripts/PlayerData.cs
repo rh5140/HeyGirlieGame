@@ -79,7 +79,7 @@ public class PlayerData
         return week;
     }
 
-    public void setWeek(){
+    public void setWeek(int week){
         this.week = week;
     }
 
