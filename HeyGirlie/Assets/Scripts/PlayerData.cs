@@ -13,6 +13,7 @@ contains all relevant information for a player save.
 [Serializable]
 public class PlayerData
 {
+    // private int saveProfile;
     [SerializeField] private string scene;
     [SerializeField] private int week;
     [SerializeField] private int datesThisWeek;
@@ -66,6 +67,14 @@ public class PlayerData
     public void addLI(int priority, int dateCount, int points){
         liData.Add(new LIData(priority, dateCount, points));
     }
+
+    // public string getProfile(){
+    //     return saveProfile;
+    // }
+
+    // public void setProfile(int profileNum){
+    //     this.saveProfile = profileNum;
+    // }
 
     public string getScene(){
         return scene;
