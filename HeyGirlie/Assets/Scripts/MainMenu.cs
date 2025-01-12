@@ -21,9 +21,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        PlayerData data = SaveManager.LoadData(SaveManager.exampleProfile);
+        // PlayerData data = SaveManager.LoadData(SaveManager.exampleProfile);
 
-        SceneManager.LoadScene(data.getScene());
+        SceneManager.LoadScene("Save Profiles");
+        // SceneManager.LoadScene(data.getScene());
     }
 
     public void Settings()

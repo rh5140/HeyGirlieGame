@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random=UnityEngine.Random;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     public static GameManager Instance {get {return _instance;}}
+
+    private int _saveProfile;
 
     private int _week = 1; 
     private int _datesThisWeek = 0;
@@ -48,6 +51,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    private void Update(){
+        if(Input.GetKeyDown(KeyCode.S)){
+            Save();
+        }
+    }
 
     public List<LoveInterest> priorityQueue()
     {
@@ -91,13 +99,6 @@ public class GameManager : MonoBehaviour
 
         liQueue.Reverse();
         return liQueue;
-    }
-
-
-    private void Update(){
-        if(Input.GetKeyDown(KeyCode.S)){
-            Save();
-        }
     }
 
     public LoveInterest GetLoveInterest(Character character)
@@ -147,21 +148,25 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
+    public void SetProfile(int profileNum){
+        _saveProfile = profileNum;
+    }
 
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
         PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
         
-        for(int li = 0; li < liPriority.Length; li++){
-            data.addLI(li, liPriority[li].GetDateCount(), liPriority[li].GetPoints());
+        foreach(LoveInterest li in _loveInterests){
+            data.addLI(liQueue.IndexOf(li), li.GetDateCount(), li.GetPoints());
         }
 
-        SaveManager.SaveData(data, SaveManager.exampleProfile);
+        SaveManager.SaveData(data, _saveProfile);
     }
 
+    // NOTE: THIS IS NOW BAD AT LOADING LIQUEUE. it loads the scene but they are NAWT in the right order
     // Called from Save Manager, loads in relevant player data
     public void Load(int profileNum, PlayerData data){
-        // _gameProfile = profileNum;
+        _saveProfile = profileNum;
         _week = data.getWeek();
         _datesThisWeek = data.getDatesThisWeek();
 
@@ -171,8 +176,7 @@ public class GameManager : MonoBehaviour
             _loveInterests[i].SetDateCount(liData[1]);
             _loveInterests[i].SetPoints(liData[2]);
 
-            liPriority[liData[0]] = _loveInterests[i];
+            liQueue.Add(_loveInterests[i]);
         }
     }
-
 }
