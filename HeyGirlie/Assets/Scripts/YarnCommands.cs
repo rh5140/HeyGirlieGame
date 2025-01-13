@@ -14,8 +14,6 @@ public class YarnCommands : MonoBehaviour
     private LoveInterest _loveInterest;
     static int _dateCount;
 
-    public GameObject[] scenarios;
-
     // Might not be of Image class in the end
     // [SerializeField] private Image _kristenSprite;
     [SerializeField] private GameObject _kristenSprite;
@@ -38,6 +36,11 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
+
+
+        dialogueRunner.AddCommandHandler<int>("setLIPriority", SetLIPriority);
+        
+
         // Add Yarn Command to set Kristen sprite by calling "kristen" + sprite file name
         dialogueRunner.AddCommandHandler<string>("kristen", SetKristenSprite);
         // Add Yarn Command to set 1st (leftmost) sprite in right position by calling "char_left" + sprite file name
@@ -46,13 +49,14 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("char_right", SetCharRight);
 
 
+
         dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
     }
 
     void Start()
     {
-        _loveInterest = GameManager.Instance.SetUpScene(_character);
+        _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         // _expressions = _loveInterest.expressions;
         // _voicelines = _loveInterest.voicelines;
         // This is bad but just temporary,,
@@ -79,6 +83,32 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.IncreaseDatesThisWeek();
     }
 
+    private void SetLIPriority(int li)
+    {
+        GameManager.Instance.priority = (Character)li;
+
+
+        switch (GameManager.Instance.priority)
+        {
+            case Character.Kipperlilly:
+                GameManager.Instance.polyamPartner = Character.Lucy;
+                break;
+            case Character.Lucy:
+                GameManager.Instance.polyamPartner = Character.Kipperlilly;
+                break;
+            case Character.Tracker:
+                GameManager.Instance.polyamPartner = Character.Naradriel;
+                break;
+            case Character.Naradriel:
+                GameManager.Instance.polyamPartner = Character.Tracker;
+                break;
+            default:
+                GameManager.Instance.polyamPartner = Character.Kristen; //default case to Kristen herself due to no nulls for Character/enum values
+                break;
+        }
+        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue();
+    }
+
     [YarnFunction("get_dates_this_week")]
     public static int GetDatesThisWeek()
     {
@@ -87,6 +117,7 @@ public class YarnCommands : MonoBehaviour
 
     private void NextWeek()
     {
+        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue(); //reset queue randomization
         GameManager.Instance.IncreaseWeek();
     }
 

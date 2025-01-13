@@ -12,7 +12,7 @@ public class DateSelectionInterface : MonoBehaviour
 
     public void SetUpRegions()
     {
-        foreach (LoveInterest li in GameManager.Instance.liPriority)
+        foreach (LoveInterest li in GameManager.Instance.liQueue)
         {
             // Shouldn't really ever be empty when we're done setting everything up
             if (li.dates != null && li.dates.Length != 0)
@@ -38,7 +38,7 @@ public class DateSelectionInterface : MonoBehaviour
             case Region.Elmville:
                 return GameManager.Instance.elmvilleDates;
             default:
-                return GameManager.Instance.bastionCityDates;
+                return GameManager.Instance.awayDates;
         }
     }
 
@@ -68,14 +68,34 @@ public class DateSelectionInterface : MonoBehaviour
         string dateScene = GameManager.Instance.elmvilleDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
-    public void SelectBastionCityRegion()
+    public void SelectMordredRegion()
     {
-        if (GameManager.Instance.bastionCityDates.Count == 0)
+        if (GameManager.Instance.mordredDates.Count == 0)
         {
-            Debug.Log("No Bastion City dates!");
+            Debug.Log("No Mordred dates!");
             return;
         }
-        string dateScene = GameManager.Instance.bastionCityDates.Dequeue();
+        string dateScene = GameManager.Instance.mordredDates.Dequeue();
+        SceneManager.LoadScene(dateScene);
+    }
+    public void SelectOutdoorsRegion()
+    {
+        if (GameManager.Instance.outdoorsDates.Count == 0)
+        {
+            Debug.Log("No Outdoors dates!");
+            return;
+        }
+        string dateScene = GameManager.Instance.outdoorsDates.Dequeue();
+        SceneManager.LoadScene(dateScene);
+    }
+    public void SelectAwayRegion()
+    {
+        if (GameManager.Instance.awayDates.Count == 0)
+        {
+            Debug.Log("No Away dates!");
+            return;
+        }
+        string dateScene = GameManager.Instance.awayDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
 
