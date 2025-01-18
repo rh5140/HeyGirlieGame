@@ -14,6 +14,7 @@ contains all relevant information for a player save.
 public class PlayerData
 {
     // private int saveProfile;
+    [SerializeField] private string playerName;
     [SerializeField] private string scene;
     [SerializeField] private int week;
     [SerializeField] private int datesThisWeek;
@@ -47,20 +48,24 @@ public class PlayerData
         }
     }
 
-    public PlayerData(){
-        this.scene = "Intro";
-        this.week = 1;
-        this.datesThisWeek = 0;
+    public PlayerData() : this("Kristen") {}
 
+    public PlayerData(string playerName) : this(playerName, "Intro", 1, 0) {
         for(int i = 0; i < 8; i++){
             addLI(i, 1, 0);
         }
     }
 
-    public PlayerData(string scene, int week, int datesThisWeek){
+    public PlayerData(string playerName, string scene, int week, int datesThisWeek){
+        this.playerName = playerName;
         this.scene = scene;
         this.week = week;
         this.datesThisWeek = datesThisWeek;
+
+        // this is for sure wrong, but I don't understand it enough yet to change it
+        // for(int i = 0; i < 8; i++){
+        //     addLI(i, 1, 0);
+        // }
     }
 
     // Saves individual LI data to list
@@ -68,13 +73,13 @@ public class PlayerData
         liData.Add(new LIData(priority, dateCount, points));
     }
 
-    // public string getProfile(){
-    //     return saveProfile;
-    // }
+    public string getPlayerName(){
+        return playerName;
+    }
 
-    // public void setProfile(int profileNum){
-    //     this.saveProfile = profileNum;
-    // }
+    public void setPlayerName(string playerName){
+        this.playerName = playerName;
+    }
 
     public string getScene(){
         return scene;

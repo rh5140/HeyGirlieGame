@@ -24,6 +24,14 @@ public class TestingMenu : MonoBehaviour
     public void Enter(){
         string week = weekDropdown.options[weekDropdown.value].text;
         string loveInterest = liDropdown.options[liDropdown.value].text;
+        
+        // this is repeated in GameManager(170) and there HAS to be a way to make this easier
+        PlayerData data = new PlayerData("Kristen", loveInterest+"Date"+week, Int32.Parse(week), 0);
+        for(int i = 0; i < 8; i++){
+            data.addLI(i, 1, 0);
+        }
+
+        SaveManager.SaveData(data, SaveManager.getCount() + 1);
 
         // Debug.Log(week + " " + loveInterest);
 

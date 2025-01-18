@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using TMPro;
 
 /*****************************************************
 
@@ -12,11 +14,29 @@ functionality
 *****************************************************/
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject newGamePopup;
+    [SerializeField] private TMP_InputField playerName;
+
+    private void Update(){
+        // Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
+        if (Input.GetKeyUp(KeyCode.Return) &&
+        EventSystem.current.currentSelectedGameObject.transform.name == "Input") Continue();
+    }
+
     public void NewGame()
     {
-        PlayerData data = SaveManager.NewData();
+        newGamePopup.SetActive(true);
+    }
+
+    public void Continue(){
+        PlayerData data = (!string.IsNullOrEmpty(playerName.text)) ? SaveManager.NewData(playerName.text) : SaveManager.NewData(null);
         
         SceneManager.LoadScene(data.getScene());
+    }
+
+    public void Back(){
+        playerName.text = "";
+        newGamePopup.SetActive(false);
     }
 
     public void LoadGame()

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance {get {return _instance;}}
 
+    private string _playerName;
     private int _saveProfile;
 
     private int _week = 1; 
@@ -51,8 +52,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Update(){
-        if(Input.GetKeyDown(KeyCode.S)){
+    private void Update(){ 
+        if(Input.GetKeyDown(KeyCode.F1)){
             Save();
         }
     }
@@ -148,14 +149,24 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
+    public string GetPlayerName()
+    {
+        return _playerName;
+    }
+
+    public void SetPlayerName(string playerName)
+    {
+        _playerName = playerName;
+    }
+
     public void SetProfile(int profileNum){
         _saveProfile = profileNum;
     }
 
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
-        PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
-        
+        PlayerData data = new PlayerData(GetPlayerName(), SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
+            
         foreach(LoveInterest li in _loveInterests){
             data.addLI(liQueue.IndexOf(li), li.GetDateCount(), li.GetPoints());
         }
@@ -166,6 +177,7 @@ public class GameManager : MonoBehaviour
     // NOTE: THIS IS NOW BAD AT LOADING LIQUEUE. it loads the scene but they are NAWT in the right order
     // Called from Save Manager, loads in relevant player data
     public void Load(int profileNum, PlayerData data){
+        _playerName = data.getPlayerName();
         _saveProfile = profileNum;
         _week = data.getWeek();
         _datesThisWeek = data.getDatesThisWeek();

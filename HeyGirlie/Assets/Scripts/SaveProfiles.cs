@@ -28,6 +28,10 @@ public class SaveProfiles : MonoBehaviour
         deleteButton.interactable = saveFound;
     }
 
+    public void Back(){
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void LoadSave(){
         PlayerData data = SaveManager.LoadData(selectedSave);
         if(data != null){
