@@ -41,7 +41,6 @@ namespace Yarn.Unity
 
         public void Start()
         {
-            Debug.Log("option start");
             canvasGroup.alpha = 0;
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
@@ -62,7 +61,6 @@ namespace Yarn.Unity
         }
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
-            Debug.Log("run options");
             // If we don't already have enough option views, create more
             while (dialogueOptions.Length > optionViews.Count)
             {
@@ -83,7 +81,6 @@ namespace Yarn.Unity
                     // Don't show this option.
                     continue;
                 }
-
                 optionView.gameObject.SetActive(true);
 
                 optionView.palette = this.palette;
