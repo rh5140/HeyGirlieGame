@@ -528,7 +528,6 @@ namespace Yarn.Unity
         /// </summary>
         public void OnContinueClicked()
         {
-            Debug.Log("clicked");
             // When the Continue button is clicked, we'll do the same thing as
             // if we'd received a signal from any other part of the game (for
             // example, if a DialogueAdvanceInput had signalled us.)
