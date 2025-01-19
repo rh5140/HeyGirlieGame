@@ -15,6 +15,7 @@ functionality
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject newGamePopup;
+    [SerializeField] private GameObject maxProfilePopup;
     [SerializeField] private TMP_InputField playerName;
 
     private void Update(){
@@ -31,12 +32,14 @@ public class MainMenu : MonoBehaviour
     public void Continue(){
         PlayerData data = (!string.IsNullOrEmpty(playerName.text)) ? SaveManager.NewData(playerName.text) : SaveManager.NewData(null);
         
-        SceneManager.LoadScene(data.getScene());
+        if(data != null) SceneManager.LoadScene(data.getScene());
+        else openMaxProfilePopup();
     }
 
     public void Back(){
         playerName.text = "";
         newGamePopup.SetActive(false);
+        maxProfilePopup.SetActive(false);
     }
 
     public void LoadGame()
@@ -66,5 +69,9 @@ public class MainMenu : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+    
+    public void openMaxProfilePopup(){
+        maxProfilePopup.SetActive(true);
     }
 }

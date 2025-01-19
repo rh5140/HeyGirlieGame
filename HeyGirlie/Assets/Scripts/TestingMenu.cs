@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.IO;
+using System.Collections.Generic;
 using TMPro;
 
 public class TestingMenu : MonoBehaviour
@@ -25,16 +26,18 @@ public class TestingMenu : MonoBehaviour
         string week = weekDropdown.options[weekDropdown.value].text;
         string loveInterest = liDropdown.options[liDropdown.value].text;
         
-        // this is repeated in GameManager(170) and there HAS to be a way to make this easier
-        PlayerData data = new PlayerData("Kristen", loveInterest+"Date"+week, Int32.Parse(week), 0);
-        for(int i = 0; i < 8; i++){
-            data.addLI(i, 1, 0);
-        }
+        List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
+        foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
 
-        SaveManager.SaveData(data, SaveManager.getCount() + 1);
+        PlayerData data = new PlayerData("Kristen", loveInterest+"Date"+week, Int32.Parse(week), 0, GameManager.Instance.priorityQueue());
 
-        // Debug.Log(week + " " + loveInterest);
+        int newProfileNum = SaveManager.getCount() + 1;
+        // Debug.Log("newProfileNum = " + newProfileNum);
+        if(newProfileNum <= 10)
+            SaveManager.SaveData(data, newProfileNum);
 
-        SceneManager.LoadScene(loveInterest+"Date"+week);
+        // if(SaveManager.NewData(null) != null)
+            SceneManager.LoadScene(loveInterest+"Date"+week);
+        // else MainMenu.openMaxProfilePopup();
     }
 }

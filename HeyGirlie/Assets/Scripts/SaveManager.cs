@@ -42,15 +42,24 @@ public static class SaveManager
     }
 
     // Loads in save file of specified number
-    public static PlayerData LoadData(int profileNum){
+    public static string LoadData(int profileNum){
         string filePath = profilePath + "GirlieData" + profileNum + ".json";
         Debug.Log(filePath);
+        
         if(findSave(profileNum) != null){
             string json = File.ReadAllText(filePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-            GameManager.Instance.Load(profileNum, data);
 
-            return data;
+            // GameManager.Instance.Load(profileNum, data);
+            GameManager.Instance.SetProfile(profileNum);
+            GameManager.Instance.SetPlayerName(data.getPlayerName());
+            GameManager.Instance.SetWeek(data.getWeek());
+            GameManager.Instance.SetDatesThisWeek(data.getDatesThisWeek());
+            
+            List<int[]> lis = data.getLIs();
+            GameManager.Instance.SetLiQueue(lis);
+
+            return data.getScene();
         } else return null;
     }
 

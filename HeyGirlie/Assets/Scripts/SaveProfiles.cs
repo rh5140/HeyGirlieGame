@@ -33,9 +33,9 @@ public class SaveProfiles : MonoBehaviour
     }
 
     public void LoadSave(){
-        PlayerData data = SaveManager.LoadData(selectedSave);
-        if(data != null){
-            SceneManager.LoadScene(data.getScene());
+        string scene = SaveManager.LoadData(selectedSave);
+        if(scene != null){
+            SceneManager.LoadScene(scene);
         } else {
            Debug.Log("how the fuck did you get here");
         }
