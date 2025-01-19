@@ -15,6 +15,8 @@ namespace Yarn.Unity
     {
         [SerializeField] CanvasGroup canvasGroup;
 
+        [SerializeField] Canvas gridLayout;
+
         [SerializeField] HGGOptionView optionViewPrefab;
 
         [SerializeField] MarkupPalette palette;
@@ -154,7 +156,7 @@ namespace Yarn.Unity
             HGGOptionView CreateNewOptionView()
             {
                 var optionView = Instantiate(optionViewPrefab);
-                optionView.transform.SetParent(transform, false);
+                optionView.transform.SetParent(gridLayout.transform, false);
                 optionView.transform.SetAsLastSibling();
 
                 optionView.OnOptionSelected = OptionViewWasSelected;
