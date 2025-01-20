@@ -19,7 +19,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _kristenSprite;
     [SerializeField] private GameObject _charLeftSprite;
     [SerializeField] private GameObject _charRightSprite;
-    [SerializeField] private GameObject _charCanvas;
+    // [SerializeField] private GameObject _charCanvas;
     // [SerializeField] private Image _charLeftSprite;
     // [SerializeField] private Image _charRightSprite;
 
@@ -136,6 +136,7 @@ public class YarnCommands : MonoBehaviour
     // Sets Source Image (sprite) for an Image object in the scene
     private void SetSprite(string charSpriteName, Image image)
     {
+        /* Old function w/ arrays to store sprites to be used
         // Assigns _charSprites to the array of CharSprites attached to the CharacterSpriteCanvas. 
         CharSprite[] _charSprites = _charCanvas.GetComponent<CharSpriteArray>().charSprites;
         
@@ -151,7 +152,12 @@ public class YarnCommands : MonoBehaviour
             {
                 Debug.Log("Couldn't find that sprite!");
             }
-        }
+        }*/
+        // Load the sprite file in Resources folder that matches charSpriteName
+        Sprite sprite = Resources.Load<Sprite>("Sprites/" + charSpriteName);
+        
+        // Set the sprite in the Image container to the sprite that was loaded
+        image.sprite = sprite;
     }
     /* Note to self: CharacterSpriteCanvas prefab should only have 1 thing in array, "None." Add sprites to CharacterSpriteCanvas 
      * sprite array for each date scene in the hierarchy.
