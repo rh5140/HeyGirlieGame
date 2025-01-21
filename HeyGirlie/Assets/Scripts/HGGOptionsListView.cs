@@ -17,6 +17,8 @@ namespace Yarn.Unity
 
         [SerializeField] Canvas gridLayout;
 
+        [SerializeField] Canvas verticalLayout;
+
         [SerializeField] HGGOptionView optionViewPrefab;
 
         [SerializeField] MarkupPalette palette;
@@ -64,14 +66,31 @@ namespace Yarn.Unity
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
             // If we don't already have enough option views, create more
-            while (dialogueOptions.Length > optionViews.Count)
+            if (dialogueOptions.Length > 3)
             {
-                var optionView = CreateNewOptionView();
-                optionView.gameObject.SetActive(false);
+                gridLayout.gameObject.SetActive(true);
+                while (dialogueOptions.Length > optionViews.Count)
+                {
+                    var optionView = CreateNewOptionView(gridLayout);
+                    optionView.gameObject.SetActive(false);
+                }
+
             }
+            else
+            {
+                verticalLayout.gameObject.SetActive(true);
+                while (dialogueOptions.Length > optionViews.Count)
+                {
+                    var optionView = CreateNewOptionView(verticalLayout);
+                    optionView.gameObject.SetActive(false);
+                }
+
+            }
+
 
             // Set up all of the option views
             int optionViewsCreated = 0;
+
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
@@ -153,10 +172,10 @@ namespace Yarn.Unity
             /// Creates and configures a new <see cref="OptionView"/>, and adds
             /// it to <see cref="optionViews"/>.
             /// </summary>
-            HGGOptionView CreateNewOptionView()
+            HGGOptionView CreateNewOptionView(Canvas layout)
             {
                 var optionView = Instantiate(optionViewPrefab);
-                optionView.transform.SetParent(gridLayout.transform, false);
+                optionView.transform.SetParent(layout.gameObject.transform, false);
                 optionView.transform.SetAsLastSibling();
 
                 optionView.OnOptionSelected = OptionViewWasSelected;

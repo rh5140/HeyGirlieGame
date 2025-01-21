@@ -3,20 +3,20 @@ tags:
 ---
 
 ROUTE Test
-<<voiceline Fig_Nav_Greeting>>
+//<<voiceline Fig_Nav_Greeting>>
 How will you greet the girlie?
 -> heyyy, girlie (in an attractive way)
     <<expression FigFruit_3>>
-    <<voiceline Fig_Nav_Yeah>>
+    //<<voiceline Fig_Nav_Yeah>>
     Girlie: heyyyy
     <<add_points 2>>
 -> heyyy, girlie (in a femcel loser way, but she's into it)
-    <<voiceline Fig_Nav_Accept>>
+    //<<voiceline Fig_Nav_Accept>>
     <<expression FigFruit_1>>
     Girlie: heyyyy..
     <<add_points 1>>
 -> heyyy, girlie (in a femcel loser way, but she's not into it)
-    <<voiceline Fig_Nav_Reject>>
+   // <<voiceline Fig_Nav_Reject>>
     <<expression FigFruit_2>>
     Girlie: ...erm...
 
