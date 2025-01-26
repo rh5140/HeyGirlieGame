@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance {get {return _instance;}}
 
+    private string _playerName;
     private int _saveProfile;
 
     private int _week = 1; 
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     // Separate data structure for ordering by affinity -- for now, just a copy of default
     // Needs more descriptive name..?
-    public List<LoveInterest> liQueue;
+    public List<LoveInterest> _liQueue;
     public Character priority;
     public Character polyamPartner;
     
@@ -51,8 +52,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Update(){
-        if(Input.GetKeyDown(KeyCode.S)){
+    private void Update(){ 
+        if(Input.GetKeyDown(KeyCode.F1)){
             Save();
         }
     }
@@ -70,7 +71,6 @@ public class GameManager : MonoBehaviour
                 liQueue.Add(GetLoveInterest((Character)i));
                 Debug.Log(priority);
                 Debug.Log(liQueue);
-
             }
         }
         //randomizes non-prio love interests
@@ -96,8 +96,8 @@ public class GameManager : MonoBehaviour
         //if (/*add check for 3c condition  met*/)
         //    liQueue.Add(GetLoveInterest(Character.Trackernara));
 
-
         liQueue.Reverse();
+
         return liQueue;
     }
 
@@ -137,6 +137,11 @@ public class GameManager : MonoBehaviour
         return _datesThisWeek;
     }
 
+    public void SetDatesThisWeek(int datesThisWeek)
+    {
+        _datesThisWeek = datesThisWeek;
+    }
+
     public void IncreaseWeek()
     {
         _datesThisWeek = 0;
@@ -148,35 +153,42 @@ public class GameManager : MonoBehaviour
         return _week;
     }
 
+    public void SetWeek(int week)
+    {
+        _week = week;
+    }
+
+    public string GetPlayerName()
+    {
+        return _playerName;
+    }
+
+    public void SetPlayerName(string playerName)
+    {
+        _playerName = playerName;
+    }
+
     public void SetProfile(int profileNum){
         _saveProfile = profileNum;
     }
 
-    // Calls to save manager and creates a player data object to add relevant info to save file
-    public void Save(){
-        PlayerData data = new PlayerData(SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek());
-        
-        foreach(LoveInterest li in _loveInterests){
-            data.addLI(liQueue.IndexOf(li), li.GetDateCount(), li.GetPoints());
-        }
+    public void SetLiQueue(List<int[]> lis){
+        _liQueue = new List<LoveInterest>();
 
-        SaveManager.SaveData(data, _saveProfile);
+        for(int i = 0; i < lis.Count; i++){
+            Character character = (Character)lis[i][(int)liInfo.CharacterName];
+
+            _loveInterests[((int)character) - 2].SetDateCount(lis[i][(int)liInfo.DateCount]);
+            _loveInterests[((int)character) - 2].SetPoints(lis[i][(int)liInfo.Points]);
+
+            _liQueue.Add(_loveInterests[((int)character) - 2]);
+        }
     }
 
-    // NOTE: THIS IS NOW BAD AT LOADING LIQUEUE. it loads the scene but they are NAWT in the right order
-    // Called from Save Manager, loads in relevant player data
-    public void Load(int profileNum, PlayerData data){
-        _saveProfile = profileNum;
-        _week = data.getWeek();
-        _datesThisWeek = data.getDatesThisWeek();
+    // Calls to save manager and creates a player data object to add relevant info to save file
+    public void Save(){
+        PlayerData data = new PlayerData(GetPlayerName(), SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek(), _liQueue);
 
-        for(int i = 0; i < 8; i++){
-            int[] liData = data.GetLoveInterest(i);
-            
-            _loveInterests[i].SetDateCount(liData[1]);
-            _loveInterests[i].SetPoints(liData[2]);
-
-            liQueue.Add(_loveInterests[i]);
-        }
+        SaveManager.SaveData(data, _saveProfile);
     }
 }

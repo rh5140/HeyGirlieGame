@@ -16,12 +16,16 @@ public static class SaveManager
     public static int exampleProfile = 1; // This is for testing the save/load features. will be deleted once that's all done
 
     // Creates new save file
-    public static PlayerData NewData(){
+    public static PlayerData NewData(string playerName){
         int newProfileNum = getCount() + 1;
-        PlayerData data = new PlayerData();
+
+        if(newProfileNum > 10) return null;
+
+        PlayerData data = (playerName != null) ? new PlayerData(playerName) : new PlayerData();
         
         SaveData(data, newProfileNum);
         GameManager.Instance.SetProfile(newProfileNum);
+        GameManager.Instance.SetPlayerName(playerName);
 
         return data;
     }
@@ -38,31 +42,45 @@ public static class SaveManager
     }
 
     // Loads in save file of specified number
-    public static PlayerData LoadData(int profileNum){
+    public static string LoadData(int profileNum){
         string filePath = profilePath + "GirlieData" + profileNum + ".json";
         Debug.Log(filePath);
+        
         if(findSave(profileNum) != null){
             string json = File.ReadAllText(filePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-            GameManager.Instance.Load(profileNum, data);
 
-            return data;
+            // GameManager.Instance.Load(profileNum, data);
+            GameManager.Instance.SetProfile(profileNum);
+            GameManager.Instance.SetPlayerName(data.getPlayerName());
+            GameManager.Instance.SetWeek(data.getWeek());
+            GameManager.Instance.SetDatesThisWeek(data.getDatesThisWeek());
+            
+            List<int[]> lis = data.getLIs();
+            GameManager.Instance.SetLiQueue(lis);
+
+            return data.getScene();
         } else return null;
     }
 
     // Deletes a specified profile
     public static void DeleteData(int profileNum){
+        int count = getCount();
         string filePath = profilePath + "GirlieData" + profileNum + ".json";
         string filePath2 = profilePath + "GirlieScene" + profileNum + ".png";
 
         File.Delete(filePath);
         File.Delete(filePath2);
+        
+        for(int i = profileNum + 1; i <= count; i++){
+            File.Move(profilePath + "GirlieData" + i + ".json", profilePath + "GirlieData" + (i-1) + ".json");
+            File.Move(profilePath + "GirlieScene" + i + ".png", profilePath + "GirlieScene" + (i-1) + ".png");
+        }
     }
 
     // Counts how many profiles currently exist
-    // Questions: - Is there a profile max? pls say yes
     // Need to test: if a profile of an intermediate number is deleted
-    private static int getCount(){
+    public static int getCount(){
         if (Directory.Exists(profilePath))
         {
             DirectoryInfo d = new DirectoryInfo(profilePath);
@@ -78,7 +96,12 @@ public static class SaveManager
     public static string findSave(int profileNum){
         string filePath = profilePath + "GirlieData" + profileNum + ".json";
 
-        if(File.Exists(filePath)) return "GirlieData" + profileNum;
+        if(File.Exists(filePath)) {
+            string json = File.ReadAllText(filePath);
+            PlayerData data = JsonUtility.FromJson<PlayerData>(json);
+            
+            return data.getPlayerName();
+        }
         else return null;
     }
 

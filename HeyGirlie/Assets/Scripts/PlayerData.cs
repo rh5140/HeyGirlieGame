@@ -14,6 +14,7 @@ contains all relevant information for a player save.
 public class PlayerData
 {
     // private int saveProfile;
+    [SerializeField] private string playerName;
     [SerializeField] private string scene;
     [SerializeField] private int week;
     [SerializeField] private int datesThisWeek;
@@ -23,19 +24,19 @@ public class PlayerData
     // Object for LI data without making a whole new file. Not relevant outside this scope anyways
     [System.Serializable]
     public class LIData {
-        [SerializeField] private int priority;
+        [SerializeField] private Character character;
         [Range(1,8)][SerializeField] private int dateCount;
         [SerializeField] private int points;
         // [SerializeField] private int successThreshold;
 
-        public LIData(int priority, int dateCount, int points){
-            this.priority = priority;
+        public LIData(Character character, int dateCount, int points){
+            this.character = character;
             this.dateCount = dateCount;
             this.points = points;
         }
 
-        public int getPriority(){
-            return priority;
+        public Character getCharacter(){
+            return character;
         }
 
         public int getDateCount(){
@@ -47,34 +48,39 @@ public class PlayerData
         }
     }
 
-    public PlayerData(){
-        this.scene = "Intro";
-        this.week = 1;
-        this.datesThisWeek = 0;
+    public PlayerData() : this("Kristen") {}
 
-        for(int i = 0; i < 8; i++){
-            addLI(i, 1, 0);
+    public PlayerData(string playerName) : this(playerName, "Intro", 1, 0, null) {
+        for(int i = 2; i < 8; i++){
+            addLI((Character)i, 1, 0);
         }
     }
 
-    public PlayerData(string scene, int week, int datesThisWeek){
+    public PlayerData(string playerName, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue){
+        this.playerName = playerName;
         this.scene = scene;
         this.week = week;
         this.datesThisWeek = datesThisWeek;
+         
+        if(liQueue != null){
+            foreach(LoveInterest li in liQueue){
+                if(li != null) addLI(li.GetCharacter(), li.GetDateCount(), li.GetPoints());
+            }
+        }
     }
 
     // Saves individual LI data to list
-    public void addLI(int priority, int dateCount, int points){
-        liData.Add(new LIData(priority, dateCount, points));
+    public void addLI(Character character, int dateCount, int points){
+        liData.Add(new LIData(character, dateCount, points));
     }
 
-    // public string getProfile(){
-    //     return saveProfile;
-    // }
+    public string getPlayerName(){
+        return playerName;
+    }
 
-    // public void setProfile(int profileNum){
-    //     this.saveProfile = profileNum;
-    // }
+    public void setPlayerName(string playerName){
+        this.playerName = playerName;
+    }
 
     public string getScene(){
         return scene;
@@ -96,11 +102,30 @@ public class PlayerData
         return datesThisWeek;
     }
 
+    public void setDatesThisWeek(int datesThisWeek){
+        this.datesThisWeek = datesThisWeek;
+    }
+
+    public List<int[]> getLIs(){
+        List<int[]> lis = new List<int[]>();
+
+        for(int i = 0; i < liData.Count; i++){
+            LIData li = liData[i];
+            int[] liArray = {(int)li.getCharacter(), li.getDateCount(), li.getPoints()};
+
+            // if(li != null)
+            lis.Add(liArray);
+        }
+
+        return lis;
+    }
+
     // Pulls specified LI's data
-    public int[] GetLoveInterest(int index){
+    public int[] GetLIData(int index){
         LIData liData = this.liData[index];
-        int[] li = {liData.getPriority(), liData.getDateCount(), liData.getPoints()};
-        
+        if(liData == null) return null;
+
+        int[] li = {(int)liData.getCharacter(), liData.getDateCount(), liData.getPoints()};
         return li;
     }
 }

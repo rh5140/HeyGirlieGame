@@ -5,6 +5,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class LoveInterest : MonoBehaviour
 {
+    [SerializeField] private Character _character;
     [Range(1,8)][SerializeField] private int _dateCount;
     [SerializeField] private int _points;
     [SerializeField] private int _successThreshold;
@@ -23,6 +24,16 @@ public class LoveInterest : MonoBehaviour
     public void IncrementDateCount()
     {
         _dateCount++;
+    }
+
+    public Character GetCharacter()
+    {
+        return _character;
+    }
+
+    public void SetCharacter(Character character)
+    {
+        _character = character;
     }
 
     public int GetDateCount()
