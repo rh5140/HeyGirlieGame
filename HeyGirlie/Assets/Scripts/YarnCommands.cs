@@ -17,12 +17,10 @@ public class YarnCommands : MonoBehaviour
 
     // Might not be of Image class in the end
     // [SerializeField] private Image _kristenSprite;
-    [SerializeField] private GameObject _kristenSprite;
-    [SerializeField] private GameObject _charLeftSprite;
-    [SerializeField] private GameObject _charRightSprite;
-    // [SerializeField] private GameObject _charCanvas;
-    // [SerializeField] private Image _charLeftSprite;
-    // [SerializeField] private Image _charRightSprite;
+    [SerializeField] private Image _kristenSprite;
+    [SerializeField] private Image _charLeftSprite;
+    [SerializeField] private Image _charRightSprite;
+    [SerializeField] private Image _background;
 
     // TEMPORARY VARIABLES -- I think they should be attached to the character sprites instead..?
     private List<Sprite> _expressions;
@@ -49,7 +47,7 @@ public class YarnCommands : MonoBehaviour
         // Add Yarn Command to set 2nd (rightmost) sprite in right position by calling "char_right" + sprite file name
         dialogueRunner.AddCommandHandler<string>("char_right", SetCharRight);
 
-
+        dialogueRunner.AddCommandHandler<string>("background", SetBackground);
 
         dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
@@ -148,39 +146,39 @@ public class YarnCommands : MonoBehaviour
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
     {
-        // Assigns image to the Image component of the KristenSprite Game Object. 
-        Image image = _kristenSprite.GetComponent<Image>();
-        
         // Sets the sprite corresponding to charSpriteName to KristenSprite Source Image (sprite).
         charSpriteName = ProcessFileName(charSpriteName, "Sprites/Kristen/");
-        SetSprite(charSpriteName, image);
+        SetSprite(charSpriteName, _kristenSprite);
     }
 
     // Set the first (leftmost) sprite in the right position by calling SetSprite function
     private void SetCharLeft(string charSpriteName)
     {
-        Image image = _charLeftSprite.GetComponent<Image>();
         // Regex that splits by uppercase
         string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
         charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
-        SetSprite(charSpriteName, image);
+        SetSprite(charSpriteName, _charLeftSprite);
     }
 
     // Set the second (rightmost) sprite in the right position by calling SetSprite function
     private void SetCharRight(string charSpriteName)
     {
-        Image image = _charRightSprite.GetComponent<Image>();
         // Regex that splits by uppercase
         string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
         charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
-        SetSprite(charSpriteName, image);
+        SetSprite(charSpriteName, _charRightSprite);
+    }
+
+    private void SetBackground(string bgSpriteName)
+    {
+        SetSprite("Backgrounds/" + bgSpriteName, _background);
     }
 
     private string ProcessFileName(string fileName, string folder)
     {
         if (fileName == "transparent")
         {
-            return fileName;
+            return "Sprites/" + fileName;
         }
         else
         {
