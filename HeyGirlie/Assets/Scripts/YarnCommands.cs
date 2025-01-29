@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Yarn.Unity;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class YarnCommands : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _kristenSprite;
     [SerializeField] private GameObject _charLeftSprite;
     [SerializeField] private GameObject _charRightSprite;
-    [SerializeField] private GameObject _charCanvas;
+    // [SerializeField] private GameObject _charCanvas;
     // [SerializeField] private Image _charLeftSprite;
     // [SerializeField] private Image _charRightSprite;
 
@@ -136,26 +137,14 @@ public class YarnCommands : MonoBehaviour
     // Sets Source Image (sprite) for an Image object in the scene
     private void SetSprite(string charSpriteName, Image image)
     {
-        // Assigns _charSprites to the array of CharSprites attached to the CharacterSpriteCanvas. 
-        CharSprite[] _charSprites = _charCanvas.GetComponent<CharSpriteArray>().charSprites;
+        Debug.Log(charSpriteName);
+        // Load the sprite file in Resources folder that matches charSpriteName
+        Sprite sprite = Resources.Load<Sprite>(charSpriteName);
         
-        // Sets the Source Image (sprite) of the Image object to the sprite in the array that matches with charSpriteName
-        foreach (CharSprite c in _charSprites)
-        {
-            // Debug.Log("c.spriteName = " + c.spriteName + "; charSpriteName = " + charSpriteName);
-            if (c.spriteName.Equals(charSpriteName))
-            {
-                image.sprite = c.sprite;
-            }
-            else
-            {
-                Debug.Log("Couldn't find that sprite!");
-            }
-        }
+        // Set the sprite in the Image container to the sprite that was loaded
+        image.sprite = sprite;
     }
-    /* Note to self: CharacterSpriteCanvas prefab should only have 1 thing in array, "None." Add sprites to CharacterSpriteCanvas 
-     * sprite array for each date scene in the hierarchy.
-     */
+
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
     {
@@ -163,6 +152,7 @@ public class YarnCommands : MonoBehaviour
         Image image = _kristenSprite.GetComponent<Image>();
         
         // Sets the sprite corresponding to charSpriteName to KristenSprite Source Image (sprite).
+        charSpriteName = ProcessFileName(charSpriteName, "Sprites/Kristen/");
         SetSprite(charSpriteName, image);
     }
 
@@ -170,6 +160,9 @@ public class YarnCommands : MonoBehaviour
     private void SetCharLeft(string charSpriteName)
     {
         Image image = _charLeftSprite.GetComponent<Image>();
+        // Regex that splits by uppercase
+        string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
+        charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
         SetSprite(charSpriteName, image);
     }
 
@@ -177,7 +170,22 @@ public class YarnCommands : MonoBehaviour
     private void SetCharRight(string charSpriteName)
     {
         Image image = _charRightSprite.GetComponent<Image>();
+        // Regex that splits by uppercase
+        string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
+        charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
         SetSprite(charSpriteName, image);
+    }
+
+    private string ProcessFileName(string fileName, string folder)
+    {
+        if (fileName == "transparent")
+        {
+            return fileName;
+        }
+        else
+        {
+            return folder + fileName;
+        }
     }
 
     // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
