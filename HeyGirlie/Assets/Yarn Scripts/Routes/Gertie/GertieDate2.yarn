@@ -1,9 +1,204 @@
-﻿title: Date2
-tags:
+﻿//fix voice lines when files are ready
+
+title: Date2
 ---
-
-Gertie: Hmph.
-
+<<kristen Neutral>>
+It’s been an exhausting couple of days. Between the duel, the usual duties of being president, and actually <i>trying</i> at your classes, you’ve developed some less than healthy habits. 
+You’re in a booth at Basrar’s…again. There’s nothing wrong with a bit of comfort food, and with how much you’ve been working out, you thoroughly deserve a little treat now and again.
+You had texted the Bad Kids’ crystal thread, hoping to meet up with someone, anyone, but they all seem to be busy in their own lives. Riz is working on a case. Adaine is having a movie night with Aelwyn. Hell, even Fabian is booked and busy, on a date with Mazey. 
+Tonight was looking more like i-scream than we-scream. 
+You tap your feet, dreaming of a milkshake as tall as your torso, when you hear a voice behind you.
+<<char_right GertieGreeting>>
+//<<voiceline GertieGreeting1>>
+Gertie: Hello, Miss Applebees.
+<<kristen Surprised>>
+//<<voiceline KristenSurprised2>>
+You turn around to see Gertie, who looks almost as surprised to see you as you are to see her.
+  -> Kristen: Bee Girl! I mean-Gertie!
+    <<kristen Greeting>>
+    <<char_right GertieNeutral>>
+    Gertie doesn’t seem quite as entertained by your nickname for her as you are, but at least she’s not rearing to stab you. You’ll take it as a win.
+    <<add_points 1>>
+  -> Kristen: Hey, Gertie! 
+    //<<voiceline KristenGreetingGertie2>>
+    <<kristen Greeting>>
+    <<char_right GertieHappy>>
+    Gertie smiles at you warmly. Seems like things resolved well during your duel.
+    <<add_points 2>>
+  -> Try to ignore her.
+    //<<voiceline KristenAwkward1>>
+    <<char_right GertieSad>>
+    You two haven’t really talked since the duel. A part of you is still worried that she’s going to try and stab you again.
+    //<<voiceline GertieDateFail2>>
+    Gertie: I don’t sting, you know.
+    <<add_points 0>>
+Gertie: I suppose you did suggest coming here… Not that anything ever became of those plans.
+Right. The first time you brought up the idea was back during the thick of that junior year mystery investigation. An off-handed date night plan. But there always seemed to be another enemy, another exam, another wrinkle in that exhausting quest to keep you from the follow-through.
+A hint of hurt flashes across Gertie’s face, as she undoubtedly recalls that same set of memories. Her hand twitched at her side (should you be bracing for a blade?) but her features smooth out, moving on toward a more cordial countenance.
+Gertie: But you still have Miss Abernant’s discount, correct? I shouldn’t be all that surprised to see you here. And I certainly don’t have to be antagonistic.
+Half relieved, half pleased, you wave it off immediately.
+<<kristen Happy>>
+Kristen: Water under the bridge, Gertie. Water under the bridge. I’m mature now, I can look past things like that.
+<<char_right GertieBlush>>
+Gertie gives a soft chuckle at your response. And is she…blushing? That duel might’ve resolved more than you thought!
+  -> Kristen: Do you wanna sit down?
+    //<<voiceline GertieHappy1>>
+    <<char_right GertieSurprised>>
+    Gertie looks a little surprised by the abrupt offer but not disappointed.
+    Gertie: That sounds delightful, Miss Applebees. Maybe we could catch up?
+    <<add_points 2>>
+  -> Kristen: Well…it was good seeing you!
+    <<kristen Farewell>>
+    <<char_right GertieSad>>
+    Gertie: Oh, I thought perhaps we could sit down and talk a bit.
+    You didn’t think Gertie would be all that interested in chatting with you, but if she's offering…
+    <<add_points 1>>
+  -> Kristen: You know I better get going-
+    <<char_right GertieAngry>>
+    Gertie: No need to leave on my account, Madam President. Surely we can have a cordial conversation?
+    Now that you hear her say it, talking with Gertie may help with some of the jitters you have around her. Or are they butterflies?
+    <<add_points 0>>
+<<kristen Happy>>
+Kristen: You know, that’d be really nice.
+Kristen: What’s been going on with you? I’m sure a lot has changed in the apiarist world since junior year.
+<<char_right GertieHappy>>
+Gertie’s eyes light up instantly as she slides into the booth opposite you.
+//<<voiceline GertieBee1>>
+Gertie: Fascinating that you mention that! A group of Swarmkeeper Rangers in the Baronies have actually found a combination of beehive smokers and the Fog Cloud spell that makes for a potent calming agent! It’s twice as efficient as before…
+You crack a smile at Gertie’s enthusiasm. It’s infectious, seeing her go off like this, and you can’t help but drink in the passion. That kind of energy even fuels your own pursuits. You could’ve used some of that at the start of junior year.
+The two of you wait for Basrar as you listen to Gertie talk about her hive and how much it’s grown. You respond in kind, catching her up on your new pantheon.
+By the time Basrar comes around to take your order, the two of you are too caught up in your conversation to notice him. Basrar knows to not take it too personally.
+<<char_right GertieNeutral>>
+Soon, you get your dream milkshake, complete with a nearly cartoonish cherry on top, and Gertie gets a full sundae. After Basrar sets them down, though, you see Gertie’s eyes dart from side to side. You glance  around for what she could possibly be looking out for, but see nothing.
+<<kristen Neutral>>
+You lean forward to whisper.
+Kristen: Psttt. Gertie. You okay?
+Gertie: Do act natural. I don’t want to draw any attention.
+//<<voiceline KristenNeutral1>>
+Kristen: Okaaaayyy.
+You go along with Gertie, leaning back in your seat. What could it be? Some sort of deep espionage mission gone wrong? An awkward old flame? One of Gertie’s <i>many</i> rivals?
+When you look back at Gertie, however, you see her pull out a small vial of honey. She discreetly pours it over her sundae.
+  -> Kristen: Ooo brought your own supply! I’m sure it’s better than whatever they have here anyway.
+    //<<voiceline GertieHappy3>>
+    <<kristen Happy>>
+    <<char_right GertieHappy>>
+    Gertie: I would never insult the work of another hive, but I… do prefer my own.
+    <<add_points 2>>
+  -> Kristen: You know Basrar has honey here, right?
+    <<char_right GertieAngry>>
+    Gertie: I’m very aware, Miss Applebees,.
+    <<add_points 0>>
+  -> Try and hide the act from Basrar. 
+    //<<voiceline GertieHappy3>>
+    Ultimately you don’t really help too much, but Gertie seems thankful for the effort.
+    <<add_points 1>>
+<<kristen Neutral>>
+<<char_right GertieNeutral>>
+Gertie wraps up pouring honey on her ice cream before returning focus back to you.
+Kristen: I should’ve guessed you’d want your ice cream with your own honey. But why try to hide it?
+<<char_right GertieSad>>
+Gertie shuffles in her seat a bit.
+Gertie: I enjoy coming to Basrar’s, Miss Applebees. I enjoy the atmosphere, I enjoy the food, and sometimes I even enjoy company.
+<<kristen Blush>>
+You try to hide your blush.
+Gertie: But I find that sometimes my passion for quality honey can offend others. Even when I don’t mean it to.
+She gestures over to Basrar, who’s preoccupied helping another customer.
+Gertie: And when you make as many nemeses as I do, you tend to try and value the few people who aren’t against you.
+<<kristen Neutral>>
+You listen to Gertie intensely, and it becomes clear to you that Gertie truly believes every nemesis she declares is an enemy. Someone that is out to get her. You feel a twinge of guilt that she ever looked at you that way.
+  -> Kristen: Well, you know what I say: No pain, no gain.
+    //<<voiceline KristenAwkward2>>
+    <<kristen Happy>>
+    Gertie averts her gaze. She doesn’t look angry. No, she looks more sad. It’s not an emotion you’re used to seeing on her face.
+    <<add_points 0>>
+  -> Kristen: Yeah, I mean, growing up in the Church of Helio was the same way.
+    //<<voiceline KristenSad2>>
+    Kristen: I used to pick my battles with my parents and try to keep the peace, until I realized that some fights are too important <i>not</i> to have.
+    Gertie nods. A mutual understanding passes between you.
+    <<add_points 1>>
+  -> Kristen: I can imagine how that would make you feel protective.
+    Gertie smiles, looking relieved to have your understanding, not judgement.
+    Gertie: Exactly. That's why I get so defensive. Scared to lose the things I do care about.
+    <<add_points 2>>
+You rarely see Gertie open up like this. She usually seems so sure of herself and everything she does. But hearing her speak just now? You almost sense some doubt in her. Something you know all too well.
+<<char_right GertieNeutral>>
+Gertie: What about you? What’s new with you?
+<<kristen Surprised>>
+Kristen: Uh- nothing really I guess. Same old Kristen!
+You try and play it off, but the question hits harder than you expect. 
+Gertie: And what’s that entail, Miss Applebees? Every time I meet you I almost feel like I’m talking to a different person. 
+You take a minute to think. You do tend to have a couple of different sorts of personas you rush to when talking to people. You ping-pong between suave, goofy, uncaring, worst cleric, best cleric. She may have a bit of a point.
+Gertie: I’m just wondering, which one is the real Kristen?
+You pause to think.
+  -> Kristen: Whichever one you think is hottest.
+    <<kristen Happy>>
+    <<char_right GertieBlush>>
+    Gertie rolls her eyes. You hope she’s at least a bit charmed, but you aren’t going to hold your breath.
+    <<add_points 0>>
+  -> Kristen: All of them.
+    <<kristen Neutral>>
+    Gertie nods.
+    Gertie: We are all different versions of ourselves, aren’t we, Miss Applebees?
+    <<add_points 2>>
+  -> Kristen: None of them.
+    <<kristen Neutral>>
+    Gertie tilts her head, intrigued.
+    Gertie: Well I hope I get to meet the real you someday, Miss Applebees.
+    <<add_points 1>>
+<<kristen Sad>>
+Kristen: Being raised in the Church of Helio, I had to be someone so specific. I had to be this singular version of myself that was the perfect “chosen” for the corn god.
+<<char_right GertieSad>>
+Kristen: When I finally got free of it, when I finally had a moment to just be me, I didn’t know who that was. I didn’t know how to act, I didn’t know what god to be a cleric for. 
+Kristen: I guess I’ve always been looking for identity and belonging. Something that feels right. And for the first time in a long while, I think I finally found that.
+<<kristen Happy>>
+<<char_right GertieHappy>>
+Kristen: Building this new pantheon with Cassandra and Ankarna. Trying to be a good cleric, a good student, a good class president.
+Gertie listens to you intensely while taking bites out of her honey-covered sundae. She’s paying attention to you. Not just that, she seems actually interested in what you have to say.
+:Last year, the two of you swung wildly between hot and cold: demanding information about devil’s honey in one moment, flirting and making out like it’s going out of style. You never actually sat down and got to know each other properly before you… well… dumped her and she declared you her nemesis.
+You’re starting to think that you may have made that choice a little too fast. Talking with Gertie now, things feel different.
+//<<voiceline GertieSad1>>
+Gertie: Well, Miss Applebees. As someone who’s seen a couple different sides of you, whichever one you are now is quite enjoyable. 
+When Gertie smiles again, there’s a small twinge in your gut.
+QUICK! BEFORE YOU FEEL ANYTHING TOO DEEP!
+<<kristen Surprised>>
+  -> Kristen: Soooo how about them Owlbears huh? Good bloodrush season.
+    //<<voiceline KristenAwkward3>>
+    Gertie: Oh I don’t really follow sports.
+    Neither do you, really.
+    <<add_points 0>>
+  -> Kristen: Can’t BEElieve we’re finally here, huh?
+    //<<voiceline KristenDateSuccessGertie1>>
+    Gertie: Honey, I’m just winging it over here!
+    <<add_points 2>>
+  -> Kristen: This is a nice break from all the Bad Kids. Starting to feel like we’re a bit co-dependent. 
+    Gertie: You can take a break with me anytime, Miss Applebees.
+    <<add_points 1>>
+<<kristen Happy>>
+<<char_right GertieHappy>>  
+The two of you chuckle as you finish your milkshake and Gertie her ice cream.
+Was this a date? Sure felt like it. Your first date together, perhaps, though it was a first date that was a long time coming.
+You both pay your tab. You’re able to negotiate a discount out of Basrar because Adaine used to work there. Plus Basrar has like… zero overhead, so he’s making money no matter what. 
+//<<voiceline GertieFarewell2>>
+Gertie: Well, I should buzz back over to my hive.
+Kristen: I suppose I should get back to my presidential duties. I was thinking of declaring martial law to avoid mid-terms this year.
+Gertie: Can you do that?
+Kristen: I have a feeling Aguefort wouldn’t stop me. 
+Gertie: It was quite delightful sitting down with you, my old nemesis.
+Kristen: And all it took was a quick duel to first blood.
+Who knew how easy it would be to go on a date with your former nemesis?
+As Gertie dabs a napkin to her mouth to wipe away a stray spot of ice cream, your eyes drift to her lips, remembering how nice they were on yours. Before you can get too immersed in your own daydreams, however, Gertie pulls you into a hug.
+<<kristen Blush>>
+<<char_right GertieBlush>>
+Gertie: It was delightful talking again on good terms, Miss Applebees. I think I’d like to take it slow this time.
+Was it <i>that</i> obvious you wanted to kiss her? You sincerely hope not. But hey, you’re more than happy to respect her boundaries. Rushing into things didn’t help you out last time.
+<<kristen Farewell>>
+<<char_right GertieFarewell>>
+//<<voiceline GertieFarewell1>>
+//<<voiceline KristenFarewellGertie1>>
+You watch Gertie head for the door. <i>Take it slow</i>. Right. That means you should definitely <i>not</i> immediately ask when she’s next free. Act cool. Play it chill. Wait three days before texting her…
+Before Gertie can exit though, she turns back to you.
+Gertie: Hey, you should come by my booth at the farmer’s market some time. 
+<<kristen Happy>>
+That doesn’t sound like half bad of an idea. You’ll have to take her up on that some time.
 <<jump Cassandra>>
-
 ===
