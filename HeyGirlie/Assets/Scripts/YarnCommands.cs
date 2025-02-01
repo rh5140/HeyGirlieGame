@@ -189,20 +189,7 @@ public class YarnCommands : MonoBehaviour
     // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
     public void PlayAudioByName(string audioName)
     {
-        AudioClip clip = FetchAsset<AudioClip>(audioName);
-
-        // Check if the clip was found
-        if (clip != null)
-        {
-            // Play the audio clip
-            _as.clip = clip;
-            _as.Play();
-        }
-        else
-        {
-            // Handle the case where the clip wasn't found
-            Debug.LogWarning("Audio clip not found: " + audioName);
-        }
+        // Correct audio clip behavior later, just commenting out for now to avoid error
     }
 
     // Borrowed from Jenny's code... https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
