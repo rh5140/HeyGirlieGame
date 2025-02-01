@@ -105,7 +105,7 @@ public class YarnCommands : MonoBehaviour
                 GameManager.Instance.polyamPartner = Character.Kristen; //default case to Kristen herself due to no nulls for Character/enum values
                 break;
         }
-        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue();
+        GameManager.Instance._liQueue = GameManager.Instance.priorityQueue();
     }
 
     [YarnFunction("get_dates_this_week")]
@@ -116,7 +116,7 @@ public class YarnCommands : MonoBehaviour
 
     private void NextWeek()
     {
-        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue(); //reset queue randomization
+        GameManager.Instance._liQueue = GameManager.Instance.priorityQueue(); //reset queue randomization
         GameManager.Instance.IncreaseWeek();
     }
 
