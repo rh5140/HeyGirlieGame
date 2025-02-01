@@ -1,8 +1,381 @@
 ﻿title: Date3
-tags:
 ---
+January 31
+//max points 13
+<<kristen Neutral>> <<char_left transparent>> <<char_right transparent>>
+It was a stupid idea to have suggested that Fig teach you how to skate, but it was too late to take it back now. Not when she seemed so excited about the whole idea.
+If anything, it would make it easier to keep up with her whenever she decided to make another quick getaway.
+When you finally reach the makeshift ramps, you watch as Fig effortlessly performs a kickflip and turns around to face you.
+<<voiceline FigGreeting2>>
+<<char_right FigNeutral>>
+Fig: Heyyyy Kristen, you ready to learn some sick tricks?
 
-Fig: (3rd time) Hey, Madame President!
+
+-> If you mean fall flat on my face, sure!
+  <<voiceline KristenGreetingFig2>>
+You think back on your many attempts at doing anything that might be called “sick”, most of which ended with you falling flat on your face.
+  <<voiceline FigNeutral3>>
+  Fig: That’s dramatic, but you do have terrible coordination.
+  <<add_points 1>>
+-> Can we skip to the part where I can do a sick flip?
+  <<voiceline KristenGreetingFig2>>
+  You can’t wait to show off your sick skateboarding skills that you totally have... right?
+  <<char_right FigHappy>>
+  <<voiceline FigLaugh1>>
+  Fig: I’d rather not have to carry you home in three pieces, but I respect it!
+  <<add_points 2>>
+-> Uh… Sure?
+  <<voiceline KristenGreetingFig2>>
+  You don’t feel too excited about this, but you know if anyone can teach you, it’s Fig.
+  <<char_right FigAnnoyed>>
+  <<voiceline FigAwkward1>>
+  Fig: <i>Love</i> the enthusiasm.
+  <<add_points 0>>
+
+
+<<char_right FigNeutral>>
+<<voiceline FigNeutral1>>
+Fig picks up the spare board and throws it to you, and even though you fumble it, you can’t help but send her a cheesy smile when the board is in your hands.
+<<char_right FigHappy>>
+Fig: First things first! Put the board on the ground, step up on it and push off. Easy peasy!
+<<kristen Grin>>
+Kristen: Says you!
+Fig: Yeah well, if you fall, I’ll be right here to catch you.
+<<char_right FigNeutral>>
+You’re not sure why that makes your heart feel warm. This is Fig, and she’s your best friend. You trust her more than you trust most people in your life. But still, putting faith in her feels really good. So you do.
+You set down the board and cautiously place your feet on it.
+Fig skates a few feet ahead and pivots to face you, moving effortlessly. How does she look so cool?
+<<voiceline KristenHappy2>>
+Fig: See! Nothing to it!
+<<voiceline FigHappy3>>
+
+
+-> If I fall and die, I’m haunting you.
+  Considering one of your housemates is an actual ghost, the threat is real, but Fig just laughs it off.
+  <<char_right FigBlush>>
+  <<voiceline FigLaugh1>>
+  Fig: Duh. What else are friends for? Now stop stalling and get rolling.
+  <<add_points 1>>
+-> How do you look so good doing that?
+  <<voiceline FigLaugh2>>
+  Fig: Everyone looks hot on a skateboard. Stop stalling and give it a try!
+  <<add_points 0>>
+
+
+<<char_right FigNeutral>>
+You’re barely moving, your foot still on the ground, but the skateboard beneath you wobbles like it’s got a grudge. Yeah, you definitely <i>don’t</i> got this.
+<<kristen Awkward>>
+<<voiceline KristenAwkward2>>
+Kristen: Fig, this thing is alive. I swear it’s trying to kill me.
+Fig: Nope, it’s not alive. That’s just your balance betraying you. Bend your knees more! Trust the board.
+The wobble turns into a lurch, and before you can process it, you’re tipping sideways. You yelp as Fig darts forward to grab your arm.
+
+
+-> I think this thing hates me!
+  <<char_right FigNeutral>>
+  <<voiceline FigNeutral3>>
+  Fig: Nah, you’re just giving it bad vibes. The board can sense fear, Applebees. Try again!
+  <<add_points 1>>
+-> Sorry! That was scary!
+  <<char_right FigAnnoyed>>
+  <<voiceline FigAngry4>>
+  Fig: Don’t be a wuss! Try again!
+  <<add_points 0>>
+
+
+<<char_right FigNeutral>>
+<<kristen Neutral>>
+Fig has you practice turning, something she claims is “super easy” but feels more like trying to balance on a spinning plate. You lean a little to the left, and the board shifts beneath you too much.
+Kristen: Fig! I’m gonna fall again
+Fig: You’re not gonna fall. You’re fine.
+The board tilts sharply, and you start to go down.
+<<kristen Awkward>>
+<<voiceline KristenSurprised1>>
+Kristen: Nope, definitely falling!
+Fig swoops in like it’s nothing, grabbing your waist and pulling you up. You freeze with her hands on your sides.
+<<kristen Neutral>>
+
+
+-> You’re really good at catching people. Do you do this with Ayda too?
+  <<char_right FigFlustered>>
+  <<voiceline FigAwkward1>>
+  Fig: Uh, yeah. Totally. I mean, not... like this, exactly. She can fly. But, you know, teamwork. Or something.
+  <<add_points 0>>
+-> Is this the part where you spin me around and we start ballroom dancing? Because I feel like that’s where this is headed.
+  <<char_right FigHappy>>
+  <<voiceline FigLaugh1>>
+  Fig: Ha! If you’re asking me to dance, Applebees, you’re gonna have to step up your game. But I’ll admit, I’ve got the moves if you’re ready to be impressed.
+  <<add_points 1>>
+
+
+<<char_right FigNeutral>>
+You push off again, and this time, you actually feel like you’re starting to get it! The wind is in your hair, and the confidence begins to come. This isn’t too hard at all!
+<<char_right FigHappy>>
+<<voiceline FigHappy2>>
+Fig: Hell yeah girl!
+For one glorious moment, you’re moving fast!
+And the next moment, the board wobbles underneath you again.
+<<kristen Surprised>>
+<<voiceline KristenSurprised3>>
+Your balance slips, and before you can save yourself, you’re falling. Hard. You land fully on your left knee and completely scrape it up.
+<<char_right FigSurprised>>
+<<voiceline FigSurprised2>>
+Fig: KRISTEN!
+Fig skates over to you, drops her board and crouches down, her grin replaced with genuine concern.
+Fig: You okay?
+
+
+-> It’s nothing! I’m tough!
+  Fig: Nothing?
+  She rolls her eyes and steadies your knee with her hand. There’s a nasty case of road rash.
+  <<voiceline FigSigh1>>
+  Fig: Kristen, you’re bleeding.
+  <<add_points 0>>
+-> Yeah, yeah, I’m fine. Just... kissed the pavement a little too hard.
+  <<char_right FigHappy>>
+  <<voiceline FigLaugh2>>
+  Fig: Okay, first of all, the pavement’s not that cute.
+  She leans forward to inspect the scrape on your knee and furrows her brow. 
+  Fig: Second… yikes! You’re bleeding.
+  <<add_points 1>>
+
+
+<<kristen Neutral>>
+<<char_right FigNeutral>>
+She pulls out a small tin of bandaids and you raise an eyebrow.
+Kristen: You have bandaids?
+Fig: Being chaotic doesn’t mean I have to be careless!
+
+
+-> You know we both have healing spells, right?
+  <<voiceline FigNeutral3>>
+  Fig: Bandaids are way more punk rock. Healing magic is, like, the corporate sellout of first aid. Now, hold still!
+  <<add_points 1>>
+-> You don’t have to do that…
+  <<char_right FigAnnoyed>>
+  <<voiceline FigAngry1>>
+  Fig: I’m not asking! Now hold still!
+  <<add_points 0>>
+
+
+<<char_right FigNeutral>>
+Her hands are gentle as she presses the bandaid over the scrape, fingers lingering just a little too long. You’re tempted to tell her you can just heal this yourself, but the gesture’s too sweet to stop her.
+When Fig looks up at you, her expression softens. For a second, you think she’s about to say something important.
+<<voiceline FigSigh1>>
+Fig: You, uh... you’re not bad at this, you know?
+Kristen: At falling?
+Fig: No, at trying. Most people don’t even get on the board. You’ve got guts.
+
+
+-> Well, you’re a pretty great teacher.
+  <<char_right FigHappy>>
+  <<voiceline FigLaugh1>>
+  She scoffs and shakes her head.
+  Fig: Way to make it sound lame, Applebees, but thanks!
+  <<add_points 0>>
+-> You know me, I’ll try anything once.
+  <<char_right FigHappy>>
+  <<voiceline FigHappy3>>
+  She throws her head back with a laugh.
+  Fig: That’s what I love about you!
+  <<add_points 1>>
+
+
+<<char_right FigNeutral>>
+She sits back quickly, rubbing the back of her neck.
+Fig: Anyway, you’re all patched up. You’re welcome.
+You stand up and test your leg.
+<<kristen Happy>>
+<<voiceline KristenHappy1>>
+Kristen: Thanks, Fig. You’re the best.
+<<char_right FigHappy>>
+Fig: Yeah, well… What are best friends for, right?
+<<char_right FigNeutral>>
+<<kristen Neutral>>
+Something about the way she says it feels... off. She fidgets with her skateboard when she stands up. You know “awkward” Fig pretty well, and she’s showing all the symptoms of it.
+Kristen: You okay?
+<<voiceline FigAwkward2>>
+Fig: Me? Yeah, totally! Why wouldn’t I be?
+
+
+-> I don’t know… I’m still in awe of you saving my life a bunch of times today. But… am I making you nervous or something?
+  <<char_right FigFlustered>>
+  <<voiceline FigBlush1>>
+  Her eyes widen... In panic?
+  Fig: What?! Nervous? Me? Pfft, no way. I’d like to do this again sometime, if you want…
+  <<add_points 1>>
+-> You’re acting kinda weird, Fig. Are you sure you’re not freaking out about something?
+  <<char_right FigHurt>>
+  <<voiceline FigAngry1>>
+  Immediately, you notice her getting frosty.
+  Fig: Weird? I’m not acting weird. You’re the one making this weird by saying I’m weird! Seriously, it’s fine. Just... chill, okay?
+  <<add_points 0>>
+
+
+<<char_right FigSurprised>>
+Fig: Anyway, I think we’re done for the day. You nailed it. Great effort. Gold star.
+<<kristen Surprised>>
+Kristen: Fig…
+Fig: Gotta go!
+<<voiceline FigSkateboard1>>
+You want to yell after her, but she’s already gone, her skateboard clattering against the pavement as she disappears around the corner.
+<<char_right transparent>>
+<<kristen Sad>>
+You stare after her, confused. Fig is definitely running from something. And for once, it’s not trouble.
+Picking up your skateboard, you start the long walk back home.
+<<voiceline KristenSad2>>
+You sure as hell weren't going to attempt to skate your way there.
+You thought that spending a little more time with Fig would be a lot of fun... And it had been!
+But why did it end so freaking weird?
+You and Fig had been friends a long time, but she hadn't ever acted like that with you.
+<<voiceline KristenSad3>>
+You shove your hands into your pockets. Did you say something wrong?
+As you pass through the edge of the park, the scent of cloves catches your attention.
+<<kristen Surprised>>
+<<voiceline KristenSurprised2>>
+You glance toward a secluded bench by a footpath and see Fig sat on a bench, smoking a clove cigarette.
+Her usual grin is nowhere to be seen. Instead, she looks thoughtful, maybe even a little troubled, as she stares at the ground.
+Your feet slow. She hasn’t noticed you yet... Or if she has, she’s not acknowledging it.
+You hesitate, unsure of what to do.
+
+
+-> Walk up to her.
+  <<kristen Neutral>>
+  You take a deep breath and walk toward the bench.
+  <<char_right FigNeutral>>
+  She looks up as you approach, her expression flickering with surprise before she quickly masks it with a smirk.
+  <<voiceline FigAwkward1>>
+  Fig: Y'know, the point of dipping out on the skateboard means people don't follow me.
+  Kristen: I'm not just people though, am I?
+  Fig sighs, but there’s a smile tugging at the corners of her mouth as she shakes her head.
+  Fig: Yeah, I guess you got me there, Kristen.
+  You sit down beside her and she moves to make some room.
+  <<add_points 1>>
+-> Keep walking home.
+  <<kristen Sad>>
+  You keep your head down and walk past the bench, pretending not to see her.
+  Your heart twists, but maybe she needs space. Fig is Fig, after all.
+  <<voiceline KristenSad1>>
+  You’re barely a few steps past when you hear her yell out to you.
+  <<char_right FigAnnoyed>>
+  <<voiceline FigAngry2>>
+  Fig: Kristen! Are you seriously just gonna walk past me?
+  <<kristen Awkward>>
+  You freeze mid-step and you turn back to see her glaring at you.
+  Fig: What the hell? Are you, like, purposely ignoring me now?
+  Kristen: I thought you needed space. I was trying to give you that.
+  <<voiceline FigAngry3>>
+  Fig: Space? You think I want space? I’m sitting right here! If I wanted to be alone, I wouldn’t be in the middle of the damn park.
+  <<voiceline KristenAwkward1>>
+  With a sigh, you take a deep breath and walk toward the bench and sit down beside her.
+  <<char_right FigNeutral>>
+  <<kristen Neutral>>
+  <<add_points 0>>
+
+
+Neither of you say anything for a while. Then, without a word, Fig holds out the clove cigarette to you.
+
+
+-> Accept the clove.
+  You take the clove from her and bring it to your lips. You take a drag and the taste hits you like a brick wall.
+  <<kristen Surprised>>
+  <<voiceline KristenSurprised1>>
+  You cough hard and Fig doubles over in laughter.
+  <<char_right FigHappy>>
+  <<voiceline FigLaugh1>>
+  Fig: Oh my god, Kristen! You look like you just got punched in the throat.
+  Kristen: That's fucking terrible!
+  Fig: No one said it's easy to look this cool.
+  <<add_points 0>>
+-> Reject the clove.
+  Kristen: Pass! You keep your bad influence over there.
+  <<voiceline FigNeutral3>>
+  Fig: Bad influence? On you?
+  <<char_right FigNeutral>>
+  Fig grins and raises an eyebrow.
+  Fig: Kristen, you're basically the school mascot for bad behavior.
+  <<kristen Grin>>
+  Kristen: Yeah well... Maybe we just corrupt each other.
+  Fig: And I wouldn't have it any other way.
+  <<add_points 1>>
+
+
+<<char_right FigNeutral>>
+<<kristen Neutral>>
+Fig goes quiet again as her eyes drift over to look at the horizon. Something was really bothering her.
+
+
+-> It wasn’t cool of you to just run away and leave me alone, Fig.
+  <<char_right FigSurprised>>
+  Fig's head jerks slightly and she looks genuinely surprised. She opens her mouth to say something, then closes it.
+  <<char_right FigHurt>>
+  Fig: Yeah. Yeah, you’re right. That was a dick move.
+  She leans back against the bench and flicks away the clove, avoiding your gaze.
+  <<voiceline FigSigh2>>
+  Fig: I just… freaked out, okay? It’s not an excuse, but it’s the truth. I should’ve handled it better.
+  <<add_points 0>>
+-> I’m sorry if I said something that made you uncomfortable.
+  <<voiceline FigSigh2>>
+  Fig sighs, finally turning to look at you.
+  <<char_right FigHurt>>
+  Fig: It’s not your fault, Kristen. You didn’t do anything wrong. I’m just… I'm not very open about stuff, that's all.
+  She flicks the clove away and rubs the back of her neck.
+  Fig: At least I’m consistent, right?
+  <<add_points 1>>
+
+
+Kristen: It's fine. We're fine. What are friends for, right?
+Fig: Yeah... Friends.
+<<voiceline KristenAwkward2>>
+<i>Oh no... Here it comes... The word vomit...</i>
+
+
+-> Do you have feelings for me?
+  <<char_right FigSurprised>>
+  <<kristen Nervous>>
+  Her eyes snap to yours, wide with panic. Actually, she kind of looks like she's been struck by lightning.
+  <<voiceline FigSurprised4>>
+  Fig: I—what? Feelings? For you? I mean… maybe? I don’t know!
+  She throws her hands up, laughing nervously as she shakes her head.
+  <<char_right FigFlustered>>
+  <<voiceline FigSigh2>>
+  Fig: Look, Kristen, you can’t just drop that on me, okay? I'm already a mess, and now you’re adding, like, homo feelings to the mix. Just… give me some time, alright? To figure it out. On my own.
+  <<add_points 0>>
+-> I think… I think I have feelings for you. Homo feelings
+  <<kristen Nervous>>
+  Her head snaps toward you, her eyes widening. You catch as her skin turns a shade redder.
+  <<char_right FigSurprised>>
+  <<voiceline FigSurprised4>>
+  Fig: Oh. Uh. Wow. That’s… a lot to process.
+  She laughs nervously as she looks everywhere except at you.
+  Fig: Homo feelings, huh? Yeah, okay, uh, that’s cool. I mean... it’s not <i>not</i> cool. Ugh, I’m bad at this.
+  <<char_right FigFlustered>>
+  <<voiceline FigSigh2>>
+  She drops her head into her hands for a moment before sitting back up.
+  Fig: I need time, Kristen. To figure out my own brain before I can, like, process… this.
+  <<add_points 1>>
+
+
+So you aren't going crazy. There's definitely a vibe going on here.
+Kristen: So... Uh... I'm not really sure where we go with this now.
+<<voiceline FigAwkward2>>
+Figs face flushes as she glances down at her skateboard and fidgets with the wheels.
+Fig: Look, you’re awesome, Kristen. Like, annoyingly awesome. But my brain’s a mess right now, and if I try to deal with this and you, I’m probably gonna combust. So just… let me skate this off, okay?
+<<char_right FigNeutral>>
+Fig gets up and places her skateboard on the ground.
+<<kristen Neutral>>
+Kristen: Um.... Okay, that's cool. I'll see you at home?
+Fig: Yeah, maybe... I do want to interview you for the podcast in the Bottomless Pit so um... I'll get back to you about that.
+Kristen: Sounds good, Fig.
+<<voiceline FigSkateboard1>>
+Fig pushes off on her skateboard, her figure disappearing down the path.
+<<voiceline KristenFarewell3>>
+You sit there, watching her go.
+<<char_right transparent>>
+<<kristen Sad>>
+Kristen: Well that… Could have gone worse.
+...Right?
+
 
 <<jump Cassandra>>
 ===
