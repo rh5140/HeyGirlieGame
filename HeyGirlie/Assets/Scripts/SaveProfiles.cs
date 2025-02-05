@@ -48,11 +48,11 @@ public class SaveProfiles : MonoBehaviour
     }
 
     private void SetScreenshots(){
-        for(int save = 1; save <= saves.Length; save++){
-            Sprite screenshot = SaveManager.getScreenshot(save);
+        // for(int save = 1; save <= saves.Length; save++){
+        //     Sprite screenshot = SaveManager.getScreenshot(save);
 
-            saves[save - 1].GetComponent<Image>().sprite = (screenshot != null) ? screenshot : defaultScreenshot;
-        }
+        //     saves[save - 1].GetComponent<Image>().sprite = (screenshot != null) ? screenshot : defaultScreenshot;
+        // }
     }
 
     private void SetNames(){
