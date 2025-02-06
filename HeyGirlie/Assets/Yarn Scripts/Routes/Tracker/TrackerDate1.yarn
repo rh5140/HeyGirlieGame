@@ -22,9 +22,9 @@ You walk over, butterflies in your stomach, heart beating a mile a minute, prett
 Tracker: Heya, stranger.
 Okay. You're not gonna mess this up. Again.
   -> Go for a hug
-    <<char_right TrackerSurprised>>
+    <<char_right TrackerSurprised_1>>
     Her body stiffens in surprise, briefly, and then she hugs back with warm enthusiasm.
-    <<char_right TrackerHappy>>
+    <<char_right TrackerHappy_1>>
     Tracker: It's really good to see you, Kristen.
     <<kristen Happy>>
     Kristen: It's really good to see you, too.
@@ -80,7 +80,7 @@ Tracker: Have you ever spotted anyone before?
     <<kristen Neutral>>
     <<add_points 1>>
   -> No, but I'm willing to learn.
-    <<char_right TrackerHappy>>
+    <<char_right TrackerHappy_1>>
     Tracker looks pleasantly surprised.
     Tracker: Okay, cool. Are you sure?
     You nod.
@@ -99,7 +99,7 @@ She looks you up and down, trying to judge the veracity of your words. Finally, 
 Tracker: Alright. Just don't let me break my neck, 'kay?
 She gives you a rundown of how this works. It's a lot more to keep track of (ha) than you thought, but it's not too complicated. You've got a handle on it.
 Kristen: Okay, I'm getting it.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker grins at you. It's familiar. By Cassandra, you missed it.
 She walks over to a corner near the wall with a couple of random bags, reaching in and...okay, chalk, makes sense.
 She claps her hands together to get rid of the excess and a little bit of the powder ends up on her nose.
@@ -135,7 +135,7 @@ Man, she looks good up there. And you have the perfect view.
     <<kristen Happy>>
     Yup, you've still got it. But you know how important this is to her.
     When she glances back at you, you give her a nod, still ready to catch her. She gives you a quick smile back.
-    <<char_right TrackerHappy>>
+    <<char_right TrackerHappy_1>>
     <<add_points 2>>
   -> Focus, dummy! This is serious climbing business!
     You heroically resist the urge to just ogle her in favor of focusing on, y'know, the job she gave you.
@@ -147,7 +147,7 @@ That might have been around when you stopped writing. Or maybe when she stopped 
 <<kristen Neutral>>
 Okay, nope, you're not going there now. You can cry about that over a pint at Basrar's later.
 Locking in, for REAL this time! Oh, she's at the top. When did that happen?
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker grins down at you, face sweaty. Devastatingly, it doesn't make her any less attractive.
 Tracker: How's the weather down there?
 Kristen: A cool 65 and partly cloudy. You sure you're not gonna get altitude sickness up there? I know you're not used to being tall.
@@ -180,7 +180,7 @@ You'd better not be blushing.
 ...You're definitely blushing.
 Kristen: Anyway, where were we? I think you were in the middle of saying I'm your hero and I totally saved your life or something?
 Nice save.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker smiles, small, uncertain, but real.
 Tracker: I don't think I said exactly that. I meant it, though. Thank you.
 <<kristen Neutral>>
@@ -192,7 +192,7 @@ There's still time to jump out the window.
 No, wait. Not this time. You're Responsible Kristen now.
 Kristen: Sure! Yeah, sure, whatever you wa--uh, what's up?
 Tracker: I guess...
-<<char_right TrackerSad>>
+<<char_right TrackerSad_1>>
 // vibes are more nervous/awkward than sad, but still like. a little sad. so whatever sprite fits best for that
 Tracker: Why did you come over?
 <<char_right TrackerBlush_1>>
@@ -232,12 +232,13 @@ Kristen: I'd like to hang out again soon, if you're free.
 Tracker's eyes crinkle with a hint of...something. You're still not sure what.
 Tracker: I hear the centaur rodeo's in town.
 Kristen: Yeehaw!
-<<char_right TrackerSurprised>>
-<<voiceline TrackerConfused1>>
+<<char_right TrackerSurprised_1>>
+<<voiceline TrackerConfused1_1>>
 Tracker: ...
 <<kristen Blush>>
 // again, more embarrassed than flustered :)
 Kristen: It's, um, a new thing I'm trying.
 Tracker: Huh. Yeah, alright, fuck it. Yeehaw!
-<<voiceline TrackerBespoke1>>
+<<voiceline TrackerBespoke1_1>>
+<<jump Cassandra>>
 ===

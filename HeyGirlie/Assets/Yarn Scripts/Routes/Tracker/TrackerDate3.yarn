@@ -20,7 +20,7 @@ Tracker: I meant hanging out at home, not breaking into his office.
 Kristen: Meh, tomato tomato.
 Tracker: You just said tomato the same way twice. That's not how the… whatever, fuck it. What's a little B&E between family? It's been too long since I've gotten up to any real shenanigans.
 Kristen: Was the centaur rodeo not shenanigans enough for you?
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker: <i>Never</i> enough shenanigans, Kristen. Honestly, I'm offended.
 :Both of you look around the office. It's very Jawbone: a few novelty mugs on the desk, lots of semi-abstract art on the walls, a wicker egg chair dangling from the ceiling.
 You should get in it.
@@ -58,7 +58,7 @@ Oh, man. Pressure's on. It's gotta be something good. Something cowboy-title wor
     Tracker: I'm gonna be real with you, Kristen, because I care: that sucks. It sucks for your classmate and it sucks for Jawbone. Let's just do something more… harmless, ‘kay?
     <<add_points 0>>
 -> Pranks! Pranks! Pranks! Pranks! Pranks!
-    <<char_right TrackerHappy>>
+    <<char_right TrackerHappy_1>>
     Tracker: Hell yeah. Any suggestions?
     You're not one of the Bad Kids who goes all out on pranks — that's Fig, and, surprisingly, Adaine — but you've actually got a pretty good idea.
     <<add_points 2>>
@@ -77,7 +77,7 @@ You finish turning the chair upside down - taking it off the hook, flipping it, 
 <<kristen Happy>>
 Kristen: Anything left but the desk?
 Tracker: I think we got everything.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker holds up her palm in your direction.
 -> Immediately high five her.
     You high five her. Tracker grins at you.
@@ -134,7 +134,7 @@ You've been caught!!
     Jawbone surveys the state of his own office; the flipped boxes, turned over paintings, and the pièce de résistance, his chair suspended upside down and still somehow managing to swing.
     He raises an eyebrow at you, the expression uncannily similar to Tracker's. You barely resist the urge to point finger guns in his direction and make the situation worse.
     Jawbone: … Sup.
-    <<char_right TrackerHappy>>
+    <<char_right TrackerHappy_1>>
     Tracker snorts, smiling innocently when Jawbone turns to look at her instead. He smiles fondly.
     Jawbone: Didn't quite pull off “‘sup,” huh?
     You shrug. Tracker makes a little so-so gesture with her hand.
@@ -173,14 +173,14 @@ Kristen: Cassandra… are you out there?
 Your phone buzzes. Oh, yeah. Cass is out there, and <i>loving this</i>, so she's not exactly going to swoop in and save you.
 Jawbone: I'm all for whatever makes you happy. Both of you. But if you're really doing this, you need to go all the way.
 <<kristen Surprised>>
-<<char_right TrackerSurprised>>
+<<char_right TrackerSurprised_1>>
 Record scratch. Huh??
 Jawbone: Okay. Phrasing. What I mean is, you have to commit to doing things right. Making it real. Any sort of relationship takes effort…
 <<kristen Awkward>>
 <<char_right TrackerBlush_1>>
 Okay, Ankarna? Ruvina? YES!? Can literally any higher power save you from this conversation??
 Jawbone: I love you girls to the moon and back, you know that, right? I don't like to see either of you hurt.
-<<char_right TrackerSad>>
+<<char_right TrackerSad_1>>
 Tracker seems to shrink intoin on herself, crossing her arms and avoiding your eyes.
 Jawbone: So if you're going to do this, make sure you're on the same page.
 Jawbone: If this is you two being friends, I'm good with that. If this is you… trying again, I'm good with that, too. All I want is for you to be happy.
@@ -236,7 +236,7 @@ Kristen: Now that we're not in the thick of it, can I say it was kind of… nice
 Tracker smiles softly at you, with a deep sense of understanding and kinship.
 Tracker: Yeah. Parent vibes.
 Kristen: I think he was right about being on the same page.
-<<char_right TrackerSurprised>>
+<<char_right TrackerSurprised_1>>
 Tracker: …what page is that?
 Okay. Now or never.
 Kristen: Can I take you out?
@@ -245,11 +245,12 @@ Kristen: No, but maybe next week?
 Kristen: Like, on an actual date. We can do a fancy dinner someplace.
 Tracker's quiet for long enough that you begin forming a wild plan to flee the country. Fallinel wasn't <i>that</i> bad, if you think about it...
 Tracker: Okay.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker: Yes. I'd like that. I'd really like that.
 <<kristen Happy>>
 Kristen: Awesome. I'll pick you up at home?
 Tracker: It's a date.
 <<kristen Blush>>
 You blush like you're 15 again. It's a <i>date</i>.
+<<jump Cassandra>>
 ===

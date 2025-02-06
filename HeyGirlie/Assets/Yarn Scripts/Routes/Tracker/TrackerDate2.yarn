@@ -10,7 +10,7 @@ You have absolutely no idea what Tracker's doing here - but hey, it's a little f
 You settle in on the sidelines, close enough to see one of the centaurs wrangling another but not so close as to risk getting kicked.
 There's a few clerics you recognize from class on standby, so nothing you need to worry about. Oh, wait, it looks like Aguefort's sponsoring this.
 Not the school itself, just your principal, personally. Good for him, you guess.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker settles down next to you, smiling widely. She's got a whole turkey leg in one hand and a corn dog in the other, handing the latter to you.
 Tracker: Figured you might not have grabbed something to eat on the way.
 Oh, nice, a corn dog. There's a lot of things you don't enjoy so much from your Helioic childhood, but your love for a good corn dog might just be eternal.
@@ -43,7 +43,7 @@ Kristen: Oh! Well…
   -> I guess I'll have to ribbon dance right now to prove you wrong.
     Kristen: This rodeo could use a bit more flair.
     You stand up, going for your pocket, which doesn't even have your ribbon wand in it. Tracker laughs and grabs for your arm anyway, pulling you back down.
-    <<voiceline TrackerHappy2>>
+    <<voiceline TrackerHappy2_1>>
     Tracker: You're ridiculous.
     Kristen: You love it.
     You freeze, worried you've pushed too far, but Tracker just grins.
@@ -71,7 +71,7 @@ Tracker: Right?
 Tracker: I mean, everything's kind of up his alley. But still.
 Another centaur gallops onto the field, this one decked out in full clown makeup. A clowncowcentaurboy, the perfect man...horse?
 His routine's pretty slapstick, nose honking after he makes his turns, dramatically tripping over every obstacle left on the course. It's  hard to say if he's performing his routine with the same amount of sincerity the others have. But to be fair, it's pretty funny.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker seems to get a kick out of it, because she's been howling with laughter since the first one.
 Tracker: It's so stupid.
 Kristen: Yeah, but fun stupid.
@@ -97,7 +97,7 @@ You cut off the joke you were about to make, and instead…
     The ringmaster picks her out as well, and she smiles at you.
     <<add_points 1>>
   -> Sink into your seat. You don't want to embarrass Tracker.
-    <<char_right TrackerSad>>
+    <<char_right TrackerSad_1>>
     // whatever is closest to like a -_- face REAL
     Tracker notices you hiding from the ringmaster and rolls her eyes at your cowardice.
     Tracker: Come on, live a little. You're an <i>adventurer</i>, for crying out loud.
@@ -137,7 +137,7 @@ Tracker sees you very much looking like you don't got this, and makes the first 
 Tracker: I'll go first!
 <<kristen Happy>>
 Thank Cassandra.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 You're ready to heal her if she needs it, but she really doesn't. She's so sure of herself you're surprised she hasn't done this before.
 How can six seconds feel <i>so</i> long? 
 //really it's how you use the six seconds that counts-
@@ -172,7 +172,7 @@ Tracker: Here. Let me heal you up.
 Tracker reaches a hand toward your face. Instinctively, you grab it.
   -> Push it away. You can take care of yourself.
     Kristen: It's okay, I've got this.
-    <<char_right TrackerSad>>
+    <<char_right TrackerSad_1>>
     Tracker: I don't mind.
     Kristen: It's fine.
     You drop her hand and cast a quick spell on yourself, feeling the bruises fade.
@@ -184,12 +184,12 @@ Tracker reaches a hand toward your face. Instinctively, you grab it.
     Tracker blushes a little at the sudden contact, but pulls her focus together and mutters a quick healing spell. A pleasant warmth washes over you. It almost definitely rises into your cheeks.
     <<kristen Blush>>
     Kristen: Thanks.
-    <<char_right TrackerHappy>>
+    <<char_right TrackerHappy_1>>
     Tracker's lips curl into that classic smile.
     Tracker: ‘Course. Anytime.
     <<add_points 1>>
   -> Press a quick kiss to the palm of her hand before she heals you.
-      <<char_right TrackerSurprised>>
+      <<char_right TrackerSurprised_1>>
       It's impulsive, and more than a little insane, but so are you. Tracker freezes as you gently take her palm and press it against your lips. Her skin is warm.
       You feel your bruises starting to heal before you drop her hand, abashed.
       Tracker: …
@@ -198,17 +198,17 @@ Tracker reaches a hand toward your face. Instinctively, you grab it.
       Kristen: I, uh. Sorry.
       Tracker: Don't be.
       <<char_right TrackerBlush_1>>
-      <<voiceline TrackerSurprised2>>
+      <<voiceline TrackerSurprised2_1>>
       Tracker: It was… nice.
       <<kristen Blush>>
       …
       Tracker: …bro.
       <<kristen Neutral>>
       You can't tell if she's trying to convince you or herself that all of this is platonic. The weak joke makes you both laugh a little, though.
-      <<char_right TrackerHappy>>
+      <<char_right TrackerHappy_1>>
       <<kristen Happy>>
 Freshly healed, you settle back into your seats to watch the rest of the show. You can safely say it's been a hectic, mostly entertaining day, even if the way Tracker's been stealing small, unreadable glances in your direction is just the slightest bit totally nerve-wracking. The last time, she directly locks eyes with you, and shares a conspiratorial grin.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker: Hey, Kristen. Guess what I have?
   -> Another turkey leg
     Kristen: Uh…another turkey leg?
@@ -238,5 +238,6 @@ She laughs, her eyes crinkling in the cutest way. She gives you a long, tender s
 Tracker: Huh. Looks better on you.
 <<kristen Blush>>
 Tracker: Now let's get me another turkey leg.
-<<voiceline TrackerFarewell3>>
+<<voiceline TrackerFarewell3_1>>
+<<jump Cassandra>>
 ===
