@@ -11,7 +11,7 @@ public class SaveProfiles : MonoBehaviour
     [SerializeField] private GameObject[] saves;
     [SerializeField] private Sprite defaultScreenshot;
 
-    private int selectedSave;
+    private int selectedSave = 0;
     void Start(){
         loadButton.interactable = false;
         deleteButton.interactable = false;
@@ -42,6 +42,7 @@ public class SaveProfiles : MonoBehaviour
     }
 
     public void DeleteSave(){
+        if(selectedSave < 1 || selectedSave > 10) return;
         SaveManager.DeleteData(selectedSave);
         SetScreenshots();
         SetNames();
@@ -51,7 +52,7 @@ public class SaveProfiles : MonoBehaviour
         for(int save = 1; save <= saves.Length; save++){
             Sprite screenshot = SaveManager.getScreenshot(save);
 
-            saves[save - 1].GetComponent<Image>().sprite = (screenshot != null) ? screenshot : defaultScreenshot;
+            saves[save - 1].transform.Find("Image").GetComponent<Image>().sprite = (screenshot != null) ? screenshot : defaultScreenshot;
         }
     }
 
