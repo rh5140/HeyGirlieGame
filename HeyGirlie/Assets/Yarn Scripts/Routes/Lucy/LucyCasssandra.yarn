@@ -1,27 +1,33 @@
 ﻿title: Cassandra
 tags:
 ---
-Cassandra: says something depending on how you did... #line:06ec5ee 
+Cassandra: says something depending on how you did...
 
+<<jump EndDate>>
+===
+
+title: EndDate
+tags:
+---
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
-    end of Week 2 event #line:0c7a46e 
+    end of Week 2 event
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
-    end of Week 4 event #line:0ffdf92 
+    end of Week 4 event
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
-    end of Week 6 event #line:019634a 
+    end of Week 6 event
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
-    spring fling #line:0dd74c1 
+    spring fling
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>
-    WEEK SHOULD INCREMENT #line:0ca2a12 
+    WEEK SHOULD INCREMENT
     <<change_scene Cassandra>>
 <<endif>>
 ===
