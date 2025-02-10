@@ -1,8 +1,8 @@
 ﻿title: Date1
 ---
-January 31
+February 9
 //max points 9
-<<kristen Neutral>> <<char_left transparent>> <<char_right transparent>>
+<<kristen Neutral>>
 At first, you had been excited to get home after a long day at school, but the euphoria was unfortunately short-lived.
 After emptying your school bag on your bed, you stare at the clutter, trying to figure out where to start.
 Kristen: Okay, Applebees, focus. One thing at a time.
@@ -21,7 +21,7 @@ Kristen: Come in!
   <<voiceline FigGreeting2>>
   Fig: Heeeeeey, Kristen.
   Fig throws herself onto your bed, completely scattering your neatly organized papers.
- <<add_points 1>>
+  <<add_points 1>>
 -> Hey, Fig!
   <<char_right FigHappy>>
   <<voiceline FigGreeting1>>
@@ -304,6 +304,12 @@ Fig: I think I have some ideas brewing.
 
 Kristen: Do I at least get a hint?
 Fig thinks about it for a moment before shaking her head.
+<<jump Date1Hint>>
+===
+
+
+title: Date1Hint
+---
 Fig: Nope! I’ll find you at school when the time is right.
 There are literally so many things wrong with her suggesting that, and you’re not quite sure where to start.
 Kristen: Do you think… You going back to the Aguefort is a good idea?
