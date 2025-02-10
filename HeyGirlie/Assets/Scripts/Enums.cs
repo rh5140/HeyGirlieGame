@@ -22,3 +22,10 @@ public enum Region
     Outdoors,
     Away,
 }
+
+public enum liInfo
+{
+    CharacterName,
+    DateCount,
+    Points
+}

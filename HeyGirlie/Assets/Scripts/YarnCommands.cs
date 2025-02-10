@@ -105,7 +105,7 @@ public class YarnCommands : MonoBehaviour
                 GameManager.Instance.polyamPartner = Character.Kristen; //default case to Kristen herself due to no nulls for Character/enum values
                 break;
         }
-        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue();
+        GameManager.Instance._liQueue = GameManager.Instance.priorityQueue();
     }
 
     [YarnFunction("get_dates_this_week")]
@@ -116,7 +116,7 @@ public class YarnCommands : MonoBehaviour
 
     private void NextWeek()
     {
-        GameManager.Instance.liQueue = GameManager.Instance.priorityQueue(); //reset queue randomization
+        GameManager.Instance._liQueue = GameManager.Instance.priorityQueue(); //reset queue randomization
         GameManager.Instance.IncreaseWeek();
     }
 
@@ -189,20 +189,7 @@ public class YarnCommands : MonoBehaviour
     // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
     public void PlayAudioByName(string audioName)
     {
-        AudioClip clip = FetchAsset<AudioClip>(audioName);
-
-        // Check if the clip was found
-        if (clip != null)
-        {
-            // Play the audio clip
-            _as.clip = clip;
-            _as.Play();
-        }
-        else
-        {
-            // Handle the case where the clip wasn't found
-            Debug.LogWarning("Audio clip not found: " + audioName);
-        }
+        // Correct audio clip behavior later, just commenting out for now to avoid error
     }
 
     // Borrowed from Jenny's code... https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
