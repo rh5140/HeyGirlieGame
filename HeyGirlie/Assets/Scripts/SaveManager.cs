@@ -21,7 +21,7 @@ public static class SaveManager
     // Creates new save file
     public static PlayerData NewData(string playerName){
         int newProfileNum = getCount();
-        Debug.Log(newProfileNum);
+        // Debug.Log(newProfileNum);
 
         if(newProfileNum > 10) return null;
 

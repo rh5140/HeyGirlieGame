@@ -90,11 +90,11 @@ public class PlayerData
             }
         }
 
-        this.schoolDates = schoolDates.ToList();
-        this.elmvilleDates = elmvilleDates.ToList();
-        this.mordredDates = mordredDates.ToList();
-        this.outdoorsDates = outdoorsDates.ToList();
-        this.awayDates = awayDates.ToList();
+        this.schoolDates = (schoolDates != null) ? schoolDates.ToList() : null;
+        this.elmvilleDates = (elmvilleDates != null) ? elmvilleDates.ToList() : null;
+        this.mordredDates = (mordredDates != null) ? mordredDates.ToList() : null;
+        this.outdoorsDates = (outdoorsDates != null) ? outdoorsDates.ToList() : null;
+        this.awayDates = (awayDates != null) ? awayDates.ToList() : null;
     }
 
     // Saves individual LI data to list
