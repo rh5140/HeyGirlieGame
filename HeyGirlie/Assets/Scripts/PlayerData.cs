@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 /*****************************************************
 
@@ -20,6 +21,12 @@ public class PlayerData
     [SerializeField] private int datesThisWeek;
 
     [SerializeField] private List<LIData> liData = new List<LIData>();
+    
+    [SerializeField] private List<string> schoolDates;
+    [SerializeField] private List<string> elmvilleDates;
+    [SerializeField] private List<string> mordredDates;
+    [SerializeField] private List<string> outdoorsDates;
+    [SerializeField] private List<string> awayDates;
  
     // Object for LI data without making a whole new file. Not relevant outside this scope anyways
     [System.Serializable]
@@ -50,13 +57,28 @@ public class PlayerData
 
     public PlayerData() : this("Kristen") {}
 
-    public PlayerData(string playerName) : this(playerName, "Intro", 1, 0, null) {
+    public PlayerData(string playerName) : this(playerName, "Intro", 1, 0, null, null, null, null, null, null) {
         for(int i = 2; i < 8; i++){
             addLI((Character)i, 1, 0);
         }
     }
 
-    public PlayerData(string playerName, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue){
+    // public PlayerData(string playerName, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue){
+    //     this.playerName = playerName;
+    //     this.scene = scene;
+    //     this.week = week;
+    //     this.datesThisWeek = datesThisWeek;
+         
+    //     if(liQueue != null){
+    //         foreach(LoveInterest li in liQueue){
+    //             if(li != null) addLI(li.GetCharacter(), li.GetDateCount(), li.GetPoints());
+    //         }
+    //     }
+    // }
+
+    public PlayerData(string playerName, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue,
+                        Queue<string> schoolDates, Queue<string> elmvilleDates, Queue<string> mordredDates,
+                        Queue<string> outdoorsDates, Queue<string> awayDates){
         this.playerName = playerName;
         this.scene = scene;
         this.week = week;
@@ -67,6 +89,12 @@ public class PlayerData
                 if(li != null) addLI(li.GetCharacter(), li.GetDateCount(), li.GetPoints());
             }
         }
+
+        this.schoolDates = schoolDates.ToList();
+        this.elmvilleDates = elmvilleDates.ToList();
+        this.mordredDates = mordredDates.ToList();
+        this.outdoorsDates = outdoorsDates.ToList();
+        this.awayDates = awayDates.ToList();
     }
 
     // Saves individual LI data to list
