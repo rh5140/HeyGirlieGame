@@ -15,12 +15,10 @@ public class YarnCommands : MonoBehaviour
     private LoveInterest _loveInterest;
     static int _dateCount;
 
-    // Might not be of Image class in the end
-    // [SerializeField] private Image _kristenSprite;
-    [SerializeField] private Image _kristenSprite;
-    [SerializeField] private Image _charLeftSprite;
-    [SerializeField] private Image _charRightSprite;
-    [SerializeField] private Image _background;
+    [SerializeField] private GameObject _kristenSprite;
+    [SerializeField] private GameObject _charLeftSprite;
+    [SerializeField] private GameObject _charRightSprite;
+    [SerializeField] private GameObject _background;
 
     // TEMPORARY VARIABLES -- I think they should be attached to the character sprites instead..?
     private List<Sprite> _expressions;
@@ -132,46 +130,36 @@ public class YarnCommands : MonoBehaviour
         //_loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
     }
     
-    // Sets Source Image (sprite) for an Image object in the scene
-    private void SetSprite(string charSpriteName, Image image)
-    {
-        Debug.Log(charSpriteName);
-        // Load the sprite file in Resources folder that matches charSpriteName
-        Sprite sprite = Resources.Load<Sprite>(charSpriteName);
-        
-        // Set the sprite in the Image container to the sprite that was loaded
-        image.sprite = sprite;
-    }
-
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
     {
-        // Sets the sprite corresponding to charSpriteName to KristenSprite Source Image (sprite).
-        charSpriteName = ProcessFileName(charSpriteName, "Sprites/Kristen/");
-        SetSprite(charSpriteName, _kristenSprite);
+        SetSprite(_kristenSprite, charSpriteName);
     }
 
     // Set the first (leftmost) sprite in the right position by calling SetSprite function
     private void SetCharLeft(string charSpriteName)
     {
-        // Regex that splits by uppercase
-        string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
-        charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
-        SetSprite(charSpriteName, _charLeftSprite);
+        SetSprite(_charLeftSprite, charSpriteName);
     }
 
     // Set the second (rightmost) sprite in the right position by calling SetSprite function
     private void SetCharRight(string charSpriteName)
     {
-        // Regex that splits by uppercase
-        string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
-        charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
-        SetSprite(charSpriteName, _charRightSprite);
+        SetSprite(_charRightSprite, charSpriteName);
+    }
+
+    private void SetSprite(GameObject charSprite, string charSpriteName)
+    {
+        SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
+        if (sd != null)
+        {
+            charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+        }
     }
 
     private void SetBackground(string bgSpriteName)
     {
-        SetSprite("Backgrounds/" + bgSpriteName, _background);
+        // SetSprite("Backgrounds/" + bgSpriteName, _background);
     }
 
     private string ProcessFileName(string fileName, string folder)
