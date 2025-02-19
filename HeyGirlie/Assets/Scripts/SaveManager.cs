@@ -63,6 +63,10 @@ public static class SaveManager
             List<int[]> lis = data.getLIs();
             GameManager.Instance.SetLiQueue(lis);
 
+            GameManager.Instance.SetLocationQueues(data.getLocationQueue(Region.School), data.getLocationQueue(Region.Elmville),
+                                                    data.getLocationQueue(Region.Mordred), data.getLocationQueue(Region.Outdoors),
+                                                    data.getLocationQueue(Region.Away));
+
             return data.getScene();
         } else return null;
     }

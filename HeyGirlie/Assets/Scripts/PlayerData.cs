@@ -148,6 +148,17 @@ public class PlayerData
         return lis;
     }
 
+    public List<string> getLocationQueue(Region region){
+        switch(region){
+            case Region.School: return schoolDates;
+            case Region.Elmville: return elmvilleDates;
+            case Region.Mordred: return mordredDates;
+            case Region.Outdoors: return outdoorsDates;
+            case Region.Away: return awayDates;
+            default: return null;
+        }
+    }
+
     // Pulls specified LI's data
     public int[] GetLIData(int index){
         LIData liData = this.liData[index];

@@ -172,6 +172,14 @@ public class GameManager : MonoBehaviour
         _saveProfile = profileNum;
     }
 
+    public void SetLocationQueues(List<string> schoolDates, List<string> elmvilleDates, List<string> mordredDates, List<string> outdoorsDates, List<string> awayDates){
+        this.schoolDates = new Queue<string>(schoolDates);
+        this.elmvilleDates = new Queue<string>(elmvilleDates);
+        this.mordredDates = new Queue<string>(mordredDates);
+        this.outdoorsDates = new Queue<string>(outdoorsDates);
+        this.awayDates = new Queue<string>(awayDates);
+    }
+
     public void SetLiQueue(List<int[]> lis){
         _liQueue = new List<LoveInterest>();
 
