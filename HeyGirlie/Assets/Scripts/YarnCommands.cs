@@ -15,18 +15,13 @@ public class YarnCommands : MonoBehaviour
     private LoveInterest _loveInterest;
     static int _dateCount;
 
-    // Might not be of Image class in the end
-    // [SerializeField] private Image _kristenSprite;
-    [SerializeField] private Image _kristenSprite;
-    [SerializeField] private Image _charLeftSprite;
-    [SerializeField] private Image _charRightSprite;
-    [SerializeField] private Image _background;
+    [SerializeField] private GameObject _kristenSprite;
+    [SerializeField] private GameObject _charLeftSprite;
+    [SerializeField] private GameObject _charRightSprite;
+    [SerializeField] private GameObject _background;
 
-    // TEMPORARY VARIABLES -- I think they should be attached to the character sprites instead..?
-    private List<Sprite> _expressions;
-    private List<AudioClip> _voicelines;
-    private AudioSource _as;
-    // END OF TEMPORARY
+    private Dictionary<string, AudioClip> _voicelines;
+    private AudioSource _audioSource;
 
     void Awake()
     {
@@ -49,17 +44,14 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
 
-        dialogueRunner.AddCommandHandler<string>("expression", SwapExpression);
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
     }
 
     void Start()
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
-        // _expressions = _loveInterest.expressions;
-        // _voicelines = _loveInterest.voicelines;
-        // This is bad but just temporary,,
-        // _as = GetComponent<AudioSource>();
+        _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void ChangeScene(string sceneName)
@@ -125,107 +117,43 @@ public class YarnCommands : MonoBehaviour
     {
         return GameManager.Instance.GetWeek();
     }
-
-    // Needs to be reworked
-    private void SwapExpression(string newSprite)
-    {
-        //_loveInterestSprite.sprite = FetchAsset<Sprite>(newSprite);
-    }
     
-    // Sets Source Image (sprite) for an Image object in the scene
-    private void SetSprite(string charSpriteName, Image image)
-    {
-        Debug.Log(charSpriteName);
-        // Load the sprite file in Resources folder that matches charSpriteName
-        Sprite sprite = Resources.Load<Sprite>(charSpriteName);
-        
-        // Set the sprite in the Image container to the sprite that was loaded
-        image.sprite = sprite;
-    }
-
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
     {
-        // Sets the sprite corresponding to charSpriteName to KristenSprite Source Image (sprite).
-        charSpriteName = ProcessFileName(charSpriteName, "Sprites/Kristen/");
-        SetSprite(charSpriteName, _kristenSprite);
+        SetSprite(_kristenSprite, charSpriteName);
     }
 
     // Set the first (leftmost) sprite in the right position by calling SetSprite function
     private void SetCharLeft(string charSpriteName)
     {
-        // Regex that splits by uppercase
-        string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
-        charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
-        SetSprite(charSpriteName, _charLeftSprite);
+        SetSprite(_charLeftSprite, charSpriteName);
     }
 
     // Set the second (rightmost) sprite in the right position by calling SetSprite function
     private void SetCharRight(string charSpriteName)
     {
-        // Regex that splits by uppercase
-        string[] split =  Regex.Split(charSpriteName, @"(?<!^)(?=[A-Z])");
-        charSpriteName = ProcessFileName(charSpriteName, "Sprites/" + split[0] + "/");
-        SetSprite(charSpriteName, _charRightSprite);
+        SetSprite(_charRightSprite, charSpriteName);
+    }
+
+    private void SetSprite(GameObject charSprite, string charSpriteName)
+    {
+        SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
+        if (sd != null)
+        {
+            charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+        }
     }
 
     private void SetBackground(string bgSpriteName)
     {
-        SetSprite("Backgrounds/" + bgSpriteName, _background);
+        // SetSprite("Backgrounds/" + bgSpriteName, _background);
     }
 
-    private string ProcessFileName(string fileName, string folder)
+    private void PlayAudioByName(string audioName)
     {
-        if (fileName == "transparent")
-        {
-            return "Sprites/" + fileName;
-        }
-        else
-        {
-            return folder + fileName;
-        }
+        if (_voicelines.ContainsKey(audioName)) 
+            _audioSource.PlayOneShot(_voicelines[audioName]);
     }
-
-    // Also copied from Jenny's code https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
-    public void PlayAudioByName(string audioName)
-    {
-        // Correct audio clip behavior later, just commenting out for now to avoid error
-    }
-
-    // Borrowed from Jenny's code... https://github.com/rh5140/GameOff2024/blob/main/CatAndNeighborsVN/Assets/Scripts/YarnCommands.cs
-    // I don't really like this approach because it's dependent on string matching the filename but just using it for now
-    // I guess if we do a string-to-file dictionary of sorts, it's kinda the same thing but less efficient so maybe this is fine
-    T FetchAsset<T>( string assetName ) where T : UnityEngine.Object {
-		// first, check to see if it's a manully loaded asset, with
-		// manual array checks... it's messy but I can't think of a
-		// better way to do this
-		if ( typeof(T) == typeof(Sprite) ) {
-			foreach ( var spr in _expressions ) {
-				if (spr.name == assetName) {
-					return spr as T;
-				}
-			}
-		} 
-		else if ( typeof(T) == typeof(AudioClip) ) {
-			foreach ( var ac in _voicelines ) {
-				if ( ac.name == assetName ) {
-					return ac as T;
-				}
-			}
-		}
-
-		// by default, we load all Resources assets into the asset
-		// arrays already, but if you don't want that, then uncomment
-		// this, etc. 
-		// if ( useResourcesFolders ) {
-		// 	var newAsset = Resources.Load<T>(assetName); 
-		// 	if ( newAsset != null ) {
-		// 		return newAsset;
-		//  	}
-		// }
-
-		Debug.LogErrorFormat(this, "VN Manager can't find asset [{0}]... maybe it is misspelled, or isn't imported as {1}?", assetName, typeof(T).ToString() );
-		return null; // didn't find any matching asset
-	}
 
 }
