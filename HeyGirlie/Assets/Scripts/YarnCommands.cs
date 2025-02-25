@@ -141,7 +141,9 @@ public class YarnCommands : MonoBehaviour
         SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
         if (sd != null)
         {
-            charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+            if (sd.spriteDict.ContainsKey(charSpriteName))
+                charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+            else Debug.Log("Sprite " + charSpriteName + " not found!");
         }
     }
 
@@ -152,8 +154,13 @@ public class YarnCommands : MonoBehaviour
 
     private void PlayAudioByName(string audioName)
     {
+        _audioSource.Stop();
         if (_voicelines.ContainsKey(audioName)) 
-            _audioSource.PlayOneShot(_voicelines[audioName]);
+        {
+            _audioSource.clip = _voicelines[audioName];
+            _audioSource.Play();
+        }
+        else Debug.Log("Voiceline " + audioName + " not found!");
     }
 
 }
