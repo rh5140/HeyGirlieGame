@@ -6,19 +6,15 @@ public class SpecialEventSelection : MonoBehaviour
     [SerializeField] private int _nextWeek;
     [SerializeField] private DialogueRunner _dialogueRunner;
     [SerializeField] private GameObject[] _buttons; // Set buttons in same order as LoveInterest array in GameManager
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ActivateButtons(_nextWeek);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Iterates through buttons and enables if corresonding idx in GameManager LoveInterest array meets threshold 
+    // Make sure polyam options have corresponding number
     private void ActivateButtons(int threshold)
     {
         int liIdx = 2; 
@@ -43,7 +39,6 @@ public class SpecialEventSelection : MonoBehaviour
         {
             RunYarnNode("EventDefault");
         }
-        // handle polyam later
     }
 
     public void ChooseSpecialDate(string node)
