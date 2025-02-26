@@ -23,6 +23,8 @@ public class YarnCommands : MonoBehaviour
     private Dictionary<string, AudioClip> _voicelines;
     private AudioSource _audioSource;
 
+    [SerializeField] private InMemoryVariableStorage _variableStorage;
+
     void Awake()
     {
         dialogueRunner.AddCommandHandler<string>("change_scene", ChangeScene);
@@ -45,6 +47,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
+
+        dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
     }
 
     void Start()
@@ -116,6 +120,42 @@ public class YarnCommands : MonoBehaviour
     public static int GetWeek()
     {
         return GameManager.Instance.GetWeek();
+    }
+
+    public void SetSF(string name)
+    {
+        bool result = false;
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        switch (name)
+        {
+            case "Gertie":
+                li = GameManager.Instance.GetLoveInterest(Character.Gertie);
+                break;
+            case "Kipperlilly":
+                li = GameManager.Instance.GetLoveInterest(Character.Kipperlilly);
+                break;
+            case "Lucy":
+                li = GameManager.Instance.GetLoveInterest(Character.Lucy);
+                break;
+            case "Naradriel":
+                li = GameManager.Instance.GetLoveInterest(Character.Naradriel);
+                break;
+            case "Tracker":
+                li = GameManager.Instance.GetLoveInterest(Character.Tracker);
+                break;
+            case "FKB":
+                li = GameManager.Instance.GetLoveInterest(Character.Frostkettle);
+                break;
+            case "3C":
+                li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
+                break;
+            default: // Fig is default
+                break;
+        }
+        // Note: SucceedEnding only accounts for points, which may not be the only win condition
+        // Edit switch cases as needed to account for things like date #
+        result = li.SucceedEnding();
+        _variableStorage.SetValue("$succeed", result);
     }
     
     // Set the sprite for the Kristen/left position by calling the SetSprite function

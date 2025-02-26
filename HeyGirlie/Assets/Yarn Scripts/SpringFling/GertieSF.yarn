@@ -1,11 +1,26 @@
-﻿title: GertieSuccess
+﻿title: Gertie
+---
+asking out gertie...!!
+
+<<sf_success Gertie>>
+
+<<if $succeed>>
+    <<jump GertieSuccess>>
+<<else>>
+    <<jump GertieFail>>
+<<endif>>
+===
+
+title: GertieSuccess
 tags:
 ---
 yay gertie
+<<jump Ending>>
 ===
 
 title: GertieFail
 tags:
 ---
 nay gertie
+<<jump Ending>>
 ===

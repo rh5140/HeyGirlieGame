@@ -1,10 +1,28 @@
-﻿title: TrackerSuccess
+﻿title: Tracker
+---
+asking out tracker...!!
+
+<<sf_success Tracker>>
+
+// add an if condition that prompts if you want to ask nara too
+// and if you do, <<jump TrackerNara>>
+
+<<if $succeed>>
+    <<jump TrackerSuccess>>
+<<else>>
+    <<jump TrackerFail>>
+<<endif>>
+===
+
+title: TrackerSuccess
 ---
 yay tracker
+<<jump Ending>>
 ===
 
 title: TrackerFail
 tags:
 ---
 nay tracker
+<<jump Ending>>
 ===

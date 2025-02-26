@@ -1,11 +1,29 @@
-﻿title: NaraSuccess
+﻿title: Nara
+---
+asking out nara...!!
+
+<<sf_success Naradriel>>
+
+// add an if condition that prompts if you want to ask nara too
+// and if you do, <<jump TrackerNara>>
+
+<<if $succeed>>
+    <<jump NaraSuccess>>
+<<else>>
+    <<jump NaraFail>>
+<<endif>>
+===
+
+title: NaraSuccess
 tags:
 ---
 yay nara
+<<jump Ending>>
 ===
 
 title: NaraFail
 tags:
 ---
 nay nara
+<<jump Ending>>
 ===

@@ -1,16 +1,19 @@
 using UnityEngine;
+using Yarn.Unity;
 
 public class SpringFling : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private DialogueRunner _dialogueRunner;
+    
+    public void ChooseDate(string node)
     {
-        
+        RunYarnNode(node);
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void RunYarnNode(string node)
     {
-        
+        if (_dialogueRunner.IsDialogueRunning) _dialogueRunner.Stop();
+        _dialogueRunner.StartDialogue(node);
     }
 }

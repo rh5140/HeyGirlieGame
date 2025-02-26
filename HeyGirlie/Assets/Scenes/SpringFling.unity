@@ -202,9 +202,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialEventSelection, Assembly-CSharp
-        m_MethodName: ChooseSpecialDate
+      - m_Target: {fileID: 695431210}
+        m_TargetAssemblyTypeName: SpringFling, Assembly-CSharp
+        m_MethodName: ChooseDate
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -471,9 +471,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialEventSelection, Assembly-CSharp
-        m_MethodName: ChooseSpecialDate
+      - m_Target: {fileID: 695431210}
+        m_TargetAssemblyTypeName: SpringFling, Assembly-CSharp
+        m_MethodName: ChooseDate
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -604,9 +604,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialEventSelection, Assembly-CSharp
-        m_MethodName: ChooseSpecialDate
+      - m_Target: {fileID: 695431210}
+        m_TargetAssemblyTypeName: SpringFling, Assembly-CSharp
+        m_MethodName: ChooseDate
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133ca8a5739f21643a51cbbaffdeba82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialogueRunner: {fileID: 1624310763}
 --- !u!114 &695431211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,6 +1118,10 @@ PrefabInstance:
       propertyPath: _character
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6816584826739837480, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: _variableStorage
+      value: 
+      objectReference: {fileID: 1048434105}
     - target: {fileID: 7364246201690293624, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1338,6 +1343,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4094333223550235713, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
   m_PrefabInstance: {fileID: 1048434103}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1048434105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7724963811828298242, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+  m_PrefabInstance: {fileID: 1048434103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1050212511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,9 +1573,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialEventSelection, Assembly-CSharp
-        m_MethodName: ChooseSpecialDate
+      - m_Target: {fileID: 695431210}
+        m_TargetAssemblyTypeName: SpringFling, Assembly-CSharp
+        m_MethodName: ChooseDate
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1743,6 +1759,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616378397}
   m_CullTransparentMesh: 1
+--- !u!114 &1624310763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8049015829942333973, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+  m_PrefabInstance: {fileID: 1048434103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1709881412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,9 +1989,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialEventSelection, Assembly-CSharp
-        m_MethodName: ChooseSpecialDate
+      - m_Target: {fileID: 695431210}
+        m_TargetAssemblyTypeName: SpringFling, Assembly-CSharp
+        m_MethodName: ChooseDate
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2095,9 +2122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpecialEventSelection, Assembly-CSharp
-        m_MethodName: ChooseSpecialDate
+      - m_Target: {fileID: 695431210}
+        m_TargetAssemblyTypeName: SpringFling, Assembly-CSharp
+        m_MethodName: ChooseDate
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

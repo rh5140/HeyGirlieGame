@@ -1,11 +1,29 @@
-﻿title: FkbSuccess
+﻿title: FKB
+---
+asking out kip and lucy...!!
+
+<<sf_success FKB>>
+
+// add an if condition that prompts if you want to ask lucy too
+// and if you do, <<jump FKB>>
+
+<<if $succeed>>
+    <<jump FkbSuccess>>
+<<else>>
+    <<jump FkbFail>>
+<<endif>>
+===
+
+title: FkbSuccess
 tags:
 ---
 yay lucy AND kip
+<<jump Ending>>
 ===
 
 title: FkbFail
 tags:
 ---
 neither lucy nor kip
+<<jump Ending>>
 ===

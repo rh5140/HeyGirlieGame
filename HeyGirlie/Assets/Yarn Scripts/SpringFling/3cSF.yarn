@@ -1,11 +1,26 @@
-﻿title: 3cSuccess
+﻿title: TrackerNara
+---
+asking out tracker AND nara...!!
+
+<<sf_success 3C>>
+
+<<if $succeed>>
+    <<jump TrackerNaraSuccess>>
+<<else>>
+    <<jump TrackerNaraFail>>
+<<endif>>
+===
+
+title: TrackerNaraSuccess
 tags:
 ---
 yay tracker AND nara
+<<jump Ending>>
 ===
 
-title: 3cFail
+title: TrackerNaraFail
 tags:
 ---
 neither tracker nor nara
+<<jump Ending>>
 ===
