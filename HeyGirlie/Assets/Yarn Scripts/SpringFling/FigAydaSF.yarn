@@ -1,0 +1,27 @@
+﻿title: FigAyda
+---
+asking out fig AND ayda...!!
+
+// currently we don't have an ayda tracking condition yet
+<<sf_success FigAyda>>
+
+<<if $succeed>>
+    <<jump FigAydaSuccess>>
+<<else>>
+    <<jump FigAydaFail>>
+<<endif>>
+===
+
+title: FigAydaSuccess
+tags:
+---
+yay fig AND ayda
+<<jump Ending>>
+===
+
+title: FigAydaFail
+tags:
+---
+neither fig nor ayda
+<<jump Ending>>
+===

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class LoveInterest : MonoBehaviour
 {
     [SerializeField] private Character _character;
-    [Range(1,8)][SerializeField] private int _dateCount;
+    [Range(1,9)][SerializeField] private int _dateCount;
     [SerializeField] private int _points;
     [SerializeField] private int _successThreshold;
 
