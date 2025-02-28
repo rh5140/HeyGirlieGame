@@ -195,7 +195,7 @@ public class GameManager : MonoBehaviour
 
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
-        PlayerData data = new PlayerData(GetPlayerName(), SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek(), _liQueue,
+        PlayerData data = new PlayerData(GetPlayerName(), "Spyre", SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek(), _liQueue,
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);

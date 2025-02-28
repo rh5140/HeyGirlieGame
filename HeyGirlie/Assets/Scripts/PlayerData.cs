@@ -16,6 +16,7 @@ public class PlayerData
 {
     // private int saveProfile;
     [SerializeField] private string playerName;
+    [SerializeField] private string location;
     [SerializeField] private string scene;
     [SerializeField] private int week;
     [SerializeField] private int datesThisWeek;
@@ -57,7 +58,7 @@ public class PlayerData
 
     public PlayerData() : this("Kristen") {}
 
-    public PlayerData(string playerName) : this(playerName, "Intro", 1, 0, null, null, null, null, null, null) {
+    public PlayerData(string playerName) : this(playerName, "Spyre", "Intro", 1, 0, null, null, null, null, null, null) {
         for(int i = 2; i < 8; i++){
             addLI((Character)i, 1, 0);
         }
@@ -76,10 +77,11 @@ public class PlayerData
     //     }
     // }
 
-    public PlayerData(string playerName, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue,
+    public PlayerData(string playerName, string location, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue,
                         Queue<string> schoolDates, Queue<string> elmvilleDates, Queue<string> mordredDates,
                         Queue<string> outdoorsDates, Queue<string> awayDates){
         this.playerName = playerName;
+        this.location = location;
         this.scene = scene;
         this.week = week;
         this.datesThisWeek = datesThisWeek;
@@ -108,6 +110,14 @@ public class PlayerData
 
     public void setPlayerName(string playerName){
         this.playerName = playerName;
+    }
+
+    public string getLocation(){
+        return location;
+    }
+
+    public void setLocation(string location){
+        this.location = location;
     }
 
     public string getScene(){
