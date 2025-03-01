@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6717304234574290660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6980370640556168207}
+  - component: {fileID: 7023362285150702797}
+  m_Layer: 5
+  m_Name: FigSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6980370640556168207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717304234574290660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7023362285150702797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717304234574290660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a46a68b620d9f4192af363ed5f8ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArray:
+  - spriteName: FigNeutral
+    sprite: {fileID: 21300000, guid: 391f0e17bd5c8ea4985a089049352d58, type: 3}
+  - spriteName: FigBlush
+    sprite: {fileID: 21300000, guid: 40212da8910bb7e499fbc090a8aed677, type: 3}
+  - spriteName: FigFlustered
+    sprite: {fileID: 21300000, guid: 08332af9278f4c04489ecf0635fc11c1, type: 3}
+  - spriteName: FigHappy
+    sprite: {fileID: 21300000, guid: b822a20760d55dc40b0c79d8d11b5218, type: 3}
+  - spriteName: FigHurt
+    sprite: {fileID: 21300000, guid: d566e2fc6cb9a7c4f93c6c86bc932bac, type: 3}
+  - spriteName: FigSad
+    sprite: {fileID: 21300000, guid: cf99c0456a92bae4cb2180dedd77d42d, type: 3}
+  - spriteName: FigSurprised
+    sprite: {fileID: 21300000, guid: be4bea70ef4d0354699bbae355c5cde6, type: 3}
+  - spriteName: FigAnnoyed
+    sprite: {fileID: 21300000, guid: 0f82c6a27b90cd742ae8ed5c18d5af79, type: 3}
+  - spriteName: transparent
+    sprite: {fileID: 21300000, guid: 6a07ee8d9cb62974f9eefb2da627748a, type: 3}
