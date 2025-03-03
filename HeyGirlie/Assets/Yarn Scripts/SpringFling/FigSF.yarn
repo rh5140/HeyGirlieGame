@@ -1,0 +1,29 @@
+﻿title: Fig
+---
+asking out fig...!!
+
+<<sf_success Fig>>
+
+// add an if condition that prompts if you want to ask ayda too
+// and if you do, <<jump FigAyda>>
+
+<<if $succeed>>
+    <<jump FigSuccess>>
+<<else>>
+    <<jump FigFail>>
+<<endif>>
+===
+
+title: FigSuccess
+tags:
+---
+yay fig
+<<jump Ending>>
+===
+
+title: FigFail
+tags:
+---
+nay fig
+<<jump Ending>>
+===
