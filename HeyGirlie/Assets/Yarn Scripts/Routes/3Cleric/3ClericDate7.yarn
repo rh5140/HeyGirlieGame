@@ -1,9 +1,9 @@
 ﻿title: Date7
 ---
-February 25
+March 3
 <<kristen Neutral>>
 :You’re standing in front of the finest spa in Elmville.
-:Well, the finest spa in your budget, which means you’d had to toss out the first twelve of Fabian’s fifteen suggestions.
+:Well, the finest spa in your budget, which means you’d had to toss out the first twelve of Fabian’s fifteen suggestions and go to this place in the mall instead.
 :Yeah, you know Nara <i>could</i> have paid for those, but this is supposed to be your treat!
 <<char_right TrackerAwkward_1>>
 :Yours and Tracker’s, and if you’re a teensy bit nervous, she’s actively panicking right now.
@@ -21,8 +21,8 @@ Kristen: It’ll be okay! It’ll be <i>good</i>, actually.
 Tracker: Thanks, Kristen.
 Kristen: Anytime.
 Tracker: So which package did we end up go—
-Nara: I have some thoughts!
 <<char_left NaraNeutral>>
+Nara: I have some thoughts!
 <<char_right TrackerSurprised_1>>
 <<kristen Surprised>>
 <<voiceline KristenSurprised3>>
@@ -36,7 +36,7 @@ Kristen: Hey! We shower!
 Nara: <i>Do</i> you though?
 Kristen: I —
 Nara: Kristen, I have visited your house. Do not lie to me.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker: Y’know, maybe she has a point.
 :She’s smirking, the traitor. Doesn’t she realise Nara’s also suggesting she doesn’t shower either? And also —
 Kristen: It’s also <i>your</i> house?!
@@ -201,17 +201,37 @@ Nara: Wonderful! I am delighted to learn they still bring you joy. It is why I r
 :Aw. That’s even cuter, actually.
 :You find it a lot easier to relax in here too, actually. Maybe it’s the steam, or maybe it’s the fact that it’s just the three of you and not a bunch of attendants, or maybe it’s that Tracker’s finally relaxed, too. 
 :If you’d thought Nara was content during the massage, she’s practically euphoric now, watching both you and Tracker with an easy fondness that makes your heart skip a beat.
-:The three of you chat quietly about nothing in particular. Nothing too heavy or loaded or wild, just light and simple. The new things Nara’s noticed about Solace this week, how Tracker’s cleric classes at Bastion City University are going, how you’re tackling your senior year at Aguefort. Underneath the warm low-light of the spa, their faces both transform; into something softer, more vulnerable. It kinda makes your chest hurt. In a good way, of course.
+:The three of you chat quietly about nothing in particular. Nothing too heavy or loaded or wild, just light and simple. 
+:The new things Nara’s noticed about Solace this week, how Tracker’s cleric classes at Bastion City University are going, how you’re tackling your senior year at Aguefort. 
+:Underneath the warm low-light of the spa, their faces both transform; into something softer, more vulnerable. It kinda makes your chest hurt. In a good way, of course.
 Tracker: This was really nice.
 Nara: Of course it was! I enjoyed an opportunity to show you both the finer things in life.
 Nara: Though I do wonder what contract this spa has struck with infernals to maintain this heat so consistently…
 Tracker: Babe, it’s arcanotech. 
 :Nara, predictably, ignores this entirely.
-Nara: I wish to spend time with you both again. I believe it is Kristen’s turn to choose where. 
+:After a little more chatter, Tracker falls quiet and then fully asleep. She even snores a little.
+Kristen: Cute.
+Nara: Unbelievably cute.
+:This feels like the right moment to have a little heart-to-heart with Nara.
+Kristen: Hey, so Tracker and I had a one-on-one talk last date, and I think we should have one too.
+Nara: Sure! What should we discuss?
+:You hesitate for a second.
+Kristen: Are you cool with me and Tracker?
+Nara: Of course, why would I not be?
+Kristen: No, I mean are you cool with all three of us being a thing. Together, I mean.
+<<char_right NaraThink>>
+Nara: I am not sure I understand you correctly, Kristen. I love you. I love Tracker. I know those feelings are mutual, and I know you both love each other. I know all of this, and it makes me love the both of you even more. 
+Nara: Why? Are… <i>you</i> not cool with us?
+Kristen: No! No, I am. I’m sorry for asking, Nara.
+<<char_right NaraNeutral>>
+Nara: I forgive you. To be honest, I appreciate the frankly unnecessary concern. Of course I want to spend time with the two of you.
+Tracker: Hrm?
+:You snort as Tracker stirs.
+Kristen: Hey, sleepyhead.
+Nara: I said wish to spend time with you both again. I believe it is Kristen’s turn to choose where. 
 Nara: Do not pick bloodrush again unless you agree to protect me from the dangers of violent athletes, as well as the terrors of filth and refuse.
 :You turn to Tracker, half-expecting her to have a suggestion all ready. But she just blinks at you, as lazy and content as Nara.
--> bit answer. all my brain is giving me is astral plane
-    :Suggest something more fun and cool and sexy. Like the Vulture Dimension.
+-> Suggest something more fun and cool and sexy. Like the Vulture Dimension.
     Kristen: What if we go to the Vulture Dimension? That’ll get our heart rates up after relaxing so much.
     :Tracker is intrigued. Nara is not.
     <<char_left NaraDisgust>>
@@ -222,6 +242,7 @@ Nara: Do not pick bloodrush again unless you agree to protect me from the danger
     <<kristen Awkward>>
     :Oh shit you said that last bit out loud.
     Kristen: No, I didn’t - 
+    <<char_left NaraDisgust>>
     Nara: Of course, I knew of your principal’s extensive lobbying in support of the pro avian intercourse community, Kristren. I am greatly surprised to learn of your personal support for him, though! Tell me, was the bird a longtime committed partner, or -
     Kristen: NARA, I HAVE NEVER FUCKED A BIRD IN MY LIFE EVER. 
     <<char_right TrackerLaugh_1>>
