@@ -1,0 +1,29 @@
+﻿title: Kipperlilly
+---
+asking out kip...!!
+
+<<sf_success Kipperlilly>>
+
+// add an if condition that prompts if you want to ask lucy too
+// and if you do, <<jump FKB>>
+
+<<if $succeed>>
+    <<jump KipSuccess>>
+<<else>>
+    <<jump KipFail>>
+<<endif>>
+===
+
+title: KipSuccess
+tags:
+---
+yay kip
+<<jump Ending>>
+===
+
+title: KipFail
+tags:
+---
+nay kip
+<<jump Ending>>
+===
