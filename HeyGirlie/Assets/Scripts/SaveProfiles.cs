@@ -58,9 +58,10 @@ public class SaveProfiles : MonoBehaviour
 
     private void SetNames(){
         for(int save = 1; save <= saves.Length; save++){
-            string filePath = SaveManager.findSave(save);
+            PlayerData data = SaveManager.findSave(save);
 
-            saves[save - 1].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = filePath;
+            saves[save - 1].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getPlayerName() : "";
+            saves[save - 1].transform.Find("Location").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getLocation() : "";
         }
     }
 }

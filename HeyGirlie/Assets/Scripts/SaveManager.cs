@@ -14,8 +14,8 @@ as well as does the sole interactions with save files
 public static class SaveManager
 {
     public static string profilePath = Application.persistentDataPath + "/Profiles/";
-    public static string dataPath = Application.persistentDataPath + "/Profiles/GirlieData{profileNum}.json";
-    public static string screenshotPath = Application.persistentDataPath + "/Profiles/GirlieScene{profileNum}.png";
+    public static string dataPath = Application.persistentDataPath + "/Profiles/Girlie{0}.{1}";
+    public static string screenshotPath = Application.persistentDataPath + "/Profiles/Girlie{0}.{1}";
     public static int exampleProfile = 1; // This is for testing the save/load features. will be deleted once that's all done
 
     // Creates new save file
@@ -37,8 +37,9 @@ public static class SaveManager
     // Saves relevant data to existing save file of specified number
     public static void SaveData(PlayerData data, int profileNum){
         string jsonData = JsonUtility.ToJson(data, true);
-        string filePath = dataPath.Replace("{profileNum}", profileNum.ToString("00"));
-        string filePath2 = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
+        string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
+        string filePath2 = String.Format(screenshotPath, profileNum.ToString("00"), "png");
+        // string filePath2 = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
 
         ScreenCapture.CaptureScreenshot(filePath2);
 
@@ -47,7 +48,7 @@ public static class SaveManager
 
     // Loads in save file of specified number
     public static string LoadData(int profileNum){
-        string filePath = dataPath.Replace("{profileNum}", profileNum.ToString("00"));
+        string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
         Debug.Log(filePath);
         
         if(findSave(profileNum) != null){
@@ -57,11 +58,16 @@ public static class SaveManager
             // GameManager.Instance.Load(profileNum, data);
             GameManager.Instance.SetProfile(profileNum);
             GameManager.Instance.SetPlayerName(data.getPlayerName());
+            // GameManager.Instance.SetLocation(data.getLocation());
             GameManager.Instance.SetWeek(data.getWeek());
             GameManager.Instance.SetDatesThisWeek(data.getDatesThisWeek());
             
             List<int[]> lis = data.getLIs();
             GameManager.Instance.SetLiQueue(lis);
+
+            GameManager.Instance.SetLocationQueues(data.getLocationQueue(Region.School), data.getLocationQueue(Region.Elmville),
+                                                    data.getLocationQueue(Region.Mordred), data.getLocationQueue(Region.Outdoors),
+                                                    data.getLocationQueue(Region.Away));
 
             return data.getScene();
         } else return null;
@@ -69,8 +75,8 @@ public static class SaveManager
 
     // Deletes a specified profile
     public static void DeleteData(int profileNum){
-        string filePath = dataPath.Replace("{profileNum}", profileNum.ToString("00"));
-        string filePath2 = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
+        string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
+        string filePath2 = String.Format(screenshotPath, profileNum.ToString("00"), "png");
 
         File.Delete(filePath);
         File.Delete(filePath2);
@@ -87,7 +93,7 @@ public static class SaveManager
         if (Directory.Exists(profilePath))
         {
             DirectoryInfo d = new DirectoryInfo(profilePath);
-            FileInfo[] files = d.GetFiles("GirlieData*.json");
+            FileInfo[] files = d.GetFiles("Girlie*.json");
             for(int i = 1; i <= 10; i++){
                 // Regex.Match(files[i])
                 try{
@@ -108,20 +114,20 @@ public static class SaveManager
         }
     }
 
-    public static string findSave(int profileNum){
-        string filePath = dataPath.Replace("{profileNum}", profileNum.ToString("00"));
+    public static PlayerData findSave(int profileNum){
+        string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
 
         if(File.Exists(filePath)) {
             string json = File.ReadAllText(filePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
             
-            return data.getPlayerName();
+            return data;
         }
         else return null;
     }
 
     public static Sprite getScreenshot(int profileNum){
-        string filePath = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
+        string filePath = String.Format(screenshotPath, profileNum.ToString("00"), "png");
 
         if (string.IsNullOrEmpty(filePath)) return null;
         if (System.IO.File.Exists(filePath))
