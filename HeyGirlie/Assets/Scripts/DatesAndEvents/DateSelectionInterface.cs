@@ -38,6 +38,10 @@ public class DateSelectionInterface : MonoBehaviour
                 return GameManager.Instance.schoolDates;
             case Region.Elmville:
                 return GameManager.Instance.elmvilleDates;
+            case Region.Mordred:
+                return GameManager.Instance.mordredDates;
+            case Region.Outdoors:
+                return GameManager.Instance.outdoorsDates;
             default:
                 return GameManager.Instance.awayDates;
         }
