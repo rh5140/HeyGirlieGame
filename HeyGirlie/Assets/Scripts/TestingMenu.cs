@@ -29,7 +29,7 @@ public class TestingMenu : MonoBehaviour
         List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
         foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
 
-        PlayerData data = new PlayerData("Kristen", loveInterest+"Date"+week, Int32.Parse(week), 0, GameManager.Instance.priorityQueue(),
+        PlayerData data = new PlayerData("Kristen", "Spyre", loveInterest+"Date"+week, Int32.Parse(week), 0, GameManager.Instance.priorityQueue(),
                                             GameManager.Instance.schoolDates, GameManager.Instance.elmvilleDates, GameManager.Instance.mordredDates,
                                             GameManager.Instance.outdoorsDates, GameManager.Instance.awayDates);
 
