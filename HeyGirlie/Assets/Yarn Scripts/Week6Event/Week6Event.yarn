@@ -1,17 +1,30 @@
 ﻿title: EventDefault
-tags:
 ---
-Week 6 event -- fair!
+<<wait 0.5>>
+<<kristen Neutral>>
+Week 6 event -- activities fair!
+<<declare $no_special_event = false>>
+<<special_event_selection 3>>
+<<if $no_special_event>>
+    <<jump EventFail>>
+<<endif>>
+<<kristen transparent>>
 ===
+
 title: EventFail
-tags:
 ---
 damn nobody want u fr
-<<jump EndEvent>>
+since we're just testing, we'll let you cheat and play a special event if you want
+-> yeehaw, let me at it!
+    <<special_event_selection 0>>
+    no shame, huh? /j
+-> nah i'll commit to being single
+    <<jump EndEvent>>
 ===
 
 title: EndEvent
 ---
+end the event...
 <<background None>>
 <<next_week>>
 <<change_scene Cassandra>>

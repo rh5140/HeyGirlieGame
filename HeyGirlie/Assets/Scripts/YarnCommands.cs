@@ -19,6 +19,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _charLeftSprite;
     [SerializeField] private GameObject _charRightSprite;
     [SerializeField] private GameObject _background;
+    [SerializeField] private GameObject _specialInterface; // not always used
 
     private Dictionary<string, AudioClip> _voicelines;
     private AudioSource _audioSource;
@@ -48,7 +49,9 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
 
+        dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
+        dialogueRunner.AddCommandHandler("spring_fling_selection", SpringFlingInterface);
     }
 
     void Start()
@@ -189,7 +192,13 @@ public class YarnCommands : MonoBehaviour
 
     private void SetBackground(string bgSpriteName)
     {
-        // SetSprite("Backgrounds/" + bgSpriteName, _background);
+        SpriteDictionary sd = _background.GetComponentInChildren<SpriteDictionary>();
+        if (sd != null)
+        {
+            if (sd.spriteDict.ContainsKey(bgSpriteName))
+                _background.GetComponent<Image>().sprite = sd.spriteDict[bgSpriteName];
+            else Debug.Log("Sprite " + bgSpriteName + " not found!");
+        }
     }
 
     private void PlayAudioByName(string audioName)
@@ -203,4 +212,15 @@ public class YarnCommands : MonoBehaviour
         else Debug.Log("Voiceline " + audioName + " not found!");
     }
 
+    private void ActivateButtons(int nextWeek)
+    {
+        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
+        bool noSpecialEvent = ses.ActivateButtons(nextWeek);
+        _variableStorage.SetValue("$no_special_event", noSpecialEvent);
+    }
+    
+    private void SpringFlingInterface()
+    {
+        _specialInterface.GetComponent<SpringFling>().ActivateButtons();
+    }
 }
