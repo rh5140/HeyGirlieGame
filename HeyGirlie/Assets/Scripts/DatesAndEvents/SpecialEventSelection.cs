@@ -4,19 +4,29 @@ using Yarn.Unity;
 public class SpecialEventSelection : MonoBehaviour
 {
     [SerializeField] private int _nextWeek;
-    [SerializeField] private DialogueRunner _dialogueRunner;
-    [SerializeField] private GameObject[] _buttons; // Set buttons in same order as LoveInterest array in GameManager
+    [SerializeField] protected DialogueRunner _dialogueRunner;
+    [SerializeField] protected GameObject[] _buttons; // Set buttons in same order as LoveInterest array in GameManager
+    [SerializeField] protected GameObject _buttonContainer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        ActivateButtons(_nextWeek);
-    }
+    // void Start()
+    // {
+    //     ActivateButtons(_nextWeek);
+    // }
 
     // Iterates through buttons and enables if corresonding idx in GameManager LoveInterest array meets threshold 
     // Make sure polyam options have corresponding number
-    private void ActivateButtons(int threshold)
+    public bool ActivateButtons(int threshold)
     {
+        _buttonContainer.SetActive(true);
+        if (threshold == 0)
+        {   
+            foreach (GameObject button in _buttons)
+            {
+                button.SetActive(true);
+            }
+            return false;
+        }
         int liIdx = 2; 
         int buttonsTurnedOff = 0;
         // Button array shorter than LI array when no polyam included
@@ -33,11 +43,11 @@ public class SpecialEventSelection : MonoBehaviour
 
         if (buttonsTurnedOff == _buttons.Length)
         {
-            RunYarnNode("EventFail");
+            return true;
         }
         else
         {
-            RunYarnNode("EventDefault");
+            return false;
         }
     }
 
