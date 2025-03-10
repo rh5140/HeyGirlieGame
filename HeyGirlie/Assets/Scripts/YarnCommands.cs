@@ -48,6 +48,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
+        dialogueRunner.AddCommandHandler<string>("sfx", PlayAudioByName);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -209,7 +210,7 @@ public class YarnCommands : MonoBehaviour
             _audioSource.clip = _voicelines[audioName];
             _audioSource.Play();
         }
-        else Debug.Log("Voiceline " + audioName + " not found!");
+        else Debug.Log("Audio asset " + audioName + " not found!");
     }
 
     private void ActivateButtons(int nextWeek)
