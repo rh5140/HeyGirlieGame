@@ -1,19 +1,11 @@
 using UnityEngine;
 using Yarn.Unity;
 
-public class SpringFling : MonoBehaviour
+public class SpringFling : SpecialEventSelection
 {
-    [SerializeField] private DialogueRunner _dialogueRunner;
-    
-    public void ChooseDate(string node)
+    public void ActivateButtons()
     {
-        RunYarnNode(node);
-        gameObject.SetActive(false);
-    }
-
-    private void RunYarnNode(string node)
-    {
-        if (_dialogueRunner.IsDialogueRunning) _dialogueRunner.Stop();
-        _dialogueRunner.StartDialogue(node);
+        _buttonContainer.SetActive(true);
+        // Put all the spring fling conditions here..
     }
 }
