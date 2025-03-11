@@ -46,4 +46,8 @@ public class Settings : MonoBehaviour
                 break;
         }
     }
+
+    public void Close(){
+        SceneManager.LoadScene("Main Menu");
+    }
 }
