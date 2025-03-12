@@ -6,13 +6,14 @@ using TMPro;
 
 public class SaveProfiles : MonoBehaviour
 {
+    [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button deleteButton;
     [SerializeField] private GameObject[] saves;
     [SerializeField] private Sprite defaultScreenshot;
 
     private int selectedSave = 0;
-    void Start(){
+    void Awake(){
         loadButton.interactable = false;
         deleteButton.interactable = false;
         
@@ -28,8 +29,12 @@ public class SaveProfiles : MonoBehaviour
         deleteButton.interactable = saveFound;
     }
 
-    public void Back(){
-        SceneManager.LoadScene("Main Menu");
+    public void Close(){
+        Destroy(saveProfilesMenu);
+    }
+
+    public void SaveSave(){
+        Close();
     }
 
     public void LoadSave(){
