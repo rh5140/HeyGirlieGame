@@ -14,6 +14,8 @@ functionality
 *****************************************************/
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private GameObject maxProfilePopup;
     [SerializeField] private TMP_InputField playerName;
@@ -44,15 +46,12 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        // PlayerData data = SaveManager.LoadData(SaveManager.exampleProfile);
-
-        SceneManager.LoadScene("Save Profiles");
-        // SceneManager.LoadScene(data.getScene());
+       Instantiate(saveProfilesMenu);
     }
 
     public void Settings()
     {
-        SceneManager.LoadScene("Settings");
+        Instantiate(settingsMenu);
     }
 
     public void Credits()

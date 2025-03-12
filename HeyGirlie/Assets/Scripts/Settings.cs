@@ -8,25 +8,17 @@ using TMPro;
 
 public class Settings : MonoBehaviour
 {
-    public Texture2D appleCursor;
-    public Texture2D applebeeCursor;
-    public Texture2D beeCursor;
-    public CursorMode cursorMode = CursorMode.Auto;
-    public Vector2 hotSpot = Vector2.zero;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private Texture2D appleCursor;
+    [SerializeField] private Texture2D applebeeCursor;
+    [SerializeField] private Texture2D beeCursor;
+    private CursorMode cursorMode = CursorMode.Auto;
+    private Vector2 hotSpot = Vector2.zero;
+    
+    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject saveProfilesMenu;
 
     public void OpenSaves(){
-        SceneManager.LoadScene("Save Profiles");
+        Instantiate(saveProfilesMenu);
     }
 
     public void ChangeCursor(float value){
@@ -48,6 +40,6 @@ public class Settings : MonoBehaviour
     }
 
     public void Close(){
-        SceneManager.LoadScene("Main Menu");
+        Destroy(settingsMenu);
     }
 }
