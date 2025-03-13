@@ -3,13 +3,11 @@ using TMPro;
 
 public class WeekLocationUI : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI week;
     public void Start()
     {
-        // find child object "Week number" and add the week number to the TextMeshProUGUI component
-        TextMeshProUGUI week = transform.Find("Week number").GetComponent<TextMeshProUGUI>();
+        // Set the text input of the TextMeshProUGUI to "Week" + the week # from GameManager
         week.text = "Week " + GameManager.Instance.GetWeek();
-        // Debug.Log(week.text);
-
     }
     
 }
