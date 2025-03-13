@@ -10,8 +10,10 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance {get {return _instance;}}
 
-    private string _playerName;
-    private int _saveProfile;
+    private string _playerName = "Kristen";
+    private int _saveProfile = 1;
+
+    // public string _lastMenu = "Main Menu";
 
     private int _week = 1; 
     private int _datesThisWeek = 0;
