@@ -6,13 +6,14 @@ using TMPro;
 
 public class SaveProfiles : MonoBehaviour
 {
+    [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button deleteButton;
     [SerializeField] private GameObject[] saves;
     [SerializeField] private Sprite defaultScreenshot;
 
     private int selectedSave = 0;
-    void Start(){
+    void Awake(){
         loadButton.interactable = false;
         deleteButton.interactable = false;
         
@@ -28,8 +29,12 @@ public class SaveProfiles : MonoBehaviour
         deleteButton.interactable = saveFound;
     }
 
-    public void Back(){
-        SceneManager.LoadScene("Main Menu");
+    public void Close(){
+        Destroy(saveProfilesMenu);
+    }
+
+    public void SaveSave(){
+        Close();
     }
 
     public void LoadSave(){
@@ -58,9 +63,10 @@ public class SaveProfiles : MonoBehaviour
 
     private void SetNames(){
         for(int save = 1; save <= saves.Length; save++){
-            string filePath = SaveManager.findSave(save);
+            PlayerData data = SaveManager.findSave(save);
 
-            saves[save - 1].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = filePath;
+            saves[save - 1].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getPlayerName() : "";
+            saves[save - 1].transform.Find("Location").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getLocation() : "";
         }
     }
 }

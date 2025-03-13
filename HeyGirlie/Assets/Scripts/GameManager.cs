@@ -10,8 +10,10 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance {get {return _instance;}}
 
-    private string _playerName;
-    private int _saveProfile;
+    private string _playerName = "Kristen";
+    private int _saveProfile = 1;
+
+    // public string _lastMenu = "Main Menu";
 
     private int _week = 1; 
     private int _datesThisWeek = 0;
@@ -172,6 +174,14 @@ public class GameManager : MonoBehaviour
         _saveProfile = profileNum;
     }
 
+    public void SetLocationQueues(List<string> schoolDates, List<string> elmvilleDates, List<string> mordredDates, List<string> outdoorsDates, List<string> awayDates){
+        this.schoolDates = new Queue<string>(schoolDates);
+        this.elmvilleDates = new Queue<string>(elmvilleDates);
+        this.mordredDates = new Queue<string>(mordredDates);
+        this.outdoorsDates = new Queue<string>(outdoorsDates);
+        this.awayDates = new Queue<string>(awayDates);
+    }
+
     public void SetLiQueue(List<int[]> lis){
         _liQueue = new List<LoveInterest>();
 
@@ -187,7 +197,7 @@ public class GameManager : MonoBehaviour
 
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
-        PlayerData data = new PlayerData(GetPlayerName(), SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek(), _liQueue,
+        PlayerData data = new PlayerData(GetPlayerName(), "Spyre", SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek(), _liQueue,
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);

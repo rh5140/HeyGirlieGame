@@ -5,6 +5,7 @@ using Yarn.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class YarnCommands : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _charLeftSprite;
     [SerializeField] private GameObject _charRightSprite;
     [SerializeField] private GameObject _background;
+    [SerializeField] private GameObject _specialInterface; // not always used
+    [SerializeField] private GameObject _locationUI;
 
     private Dictionary<string, AudioClip> _voicelines;
     private AudioSource _audioSource;
@@ -45,10 +48,14 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("char_right", SetCharRight);
 
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
+        dialogueRunner.AddCommandHandler<string>("location", SetLocationUI);
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
+        dialogueRunner.AddCommandHandler<string>("sfx", PlayAudioByName);
 
+        dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
+        dialogueRunner.AddCommandHandler("spring_fling_selection", SpringFlingInterface);
     }
 
     void Start()
@@ -189,8 +196,23 @@ public class YarnCommands : MonoBehaviour
 
     private void SetBackground(string bgSpriteName)
     {
-        // SetSprite("Backgrounds/" + bgSpriteName, _background);
+        SpriteDictionary sd = _background.GetComponentInChildren<SpriteDictionary>();
+        if (sd != null)
+        {
+            if (sd.spriteDict.ContainsKey(bgSpriteName))
+                _background.GetComponent<Image>().sprite = sd.spriteDict[bgSpriteName];
+            else Debug.Log("Sprite " + bgSpriteName + " not found!");
+        }
     }
+
+    
+    private void SetLocationUI(string locationName)
+    {
+        TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
+        location.text = locationName;
+        // If location is multiple words, put "quotes around location"
+    }
+    
 
     private void PlayAudioByName(string audioName)
     {
@@ -200,7 +222,18 @@ public class YarnCommands : MonoBehaviour
             _audioSource.clip = _voicelines[audioName];
             _audioSource.Play();
         }
-        else Debug.Log("Voiceline " + audioName + " not found!");
+        else Debug.Log("Audio asset " + audioName + " not found!");
     }
 
+    private void ActivateButtons(int nextWeek)
+    {
+        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
+        bool noSpecialEvent = ses.ActivateButtons(nextWeek);
+        _variableStorage.SetValue("$no_special_event", noSpecialEvent);
+    }
+    
+    private void SpringFlingInterface()
+    {
+        _specialInterface.GetComponent<SpringFling>().ActivateButtons();
+    }
 }

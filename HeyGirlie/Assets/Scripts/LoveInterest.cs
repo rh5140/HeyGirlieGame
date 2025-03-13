@@ -12,10 +12,6 @@ public class LoveInterest : MonoBehaviour
 
     [SerializeField] public Date[] dates;
 
-    // Note: I don't really want to store these in the Love Interest -- make separate class for the sprites?
-    public List<Sprite> expressions = new List<Sprite>();
-    public List<AudioClip> voicelines = new List<AudioClip>();
-
     void Awake()
     {
         DontDestroyOnLoad(gameObject); // Persist between scenes
