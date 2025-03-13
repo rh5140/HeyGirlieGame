@@ -1,8 +1,11 @@
 ﻿title: Date3
 ---
+March 12
 <<location Outdoors??>>
-Feb 15
+
 //max points 13
+//<<location “PLACEHOLDER”>>
+//<<declare $date_points = 0>>
 <<kristen Neutral>>
 It was a stupid idea to have suggested that Fig teach you how to skate, but it was too late to take it back now. Not when she seemed so excited about the whole idea.
 If anything, it would make it easier to keep up with her whenever she decided to make another quick getaway.
@@ -44,6 +47,7 @@ Kristen: Says you!
 Fig: Yeah well, if you fall, I’ll be right here to catch you.
 <<char_right FigNeutral>>
 You’re not sure why that makes your heart feel warm. This is Fig, and she’s your best friend. You trust her more than you trust most people in your life. But still, putting faith in her feels really good. So you do.
+<<kristen Neutral>>
 You set down the board and cautiously place your feet on it.
 Fig skates a few feet ahead and pivots to face you, moving effortlessly. How does she look so cool?
 <<voiceline KristenHappy2>>
@@ -87,7 +91,7 @@ The wobble turns into a lurch, and before you can process it, you’re tipping s
 <<char_right FigNeutral>>
 <<kristen Neutral>>
 Fig has you practice turning, something she claims is “super easy” but feels more like trying to balance on a spinning plate. You lean a little to the left, and the board shifts beneath you too much.
-Kristen: Fig! I’m gonna fall again
+Kristen: Fig! I’m gonna fall again.
 Fig: You’re not gonna fall. You’re fine.
 The board tilts sharply, and you start to go down.
 <<kristen Awkward>>
@@ -102,7 +106,8 @@ Fig swoops in like it’s nothing, grabbing your waist and pulling you up. You f
   <<voiceline FigAwkward1>>
   Fig: Uh, yeah. Totally. I mean, not... like this, exactly. She can fly. But, you know, teamwork. Or something.
   <<add_points 0>>
--> Is this the part where you spin me around and we start ballroom dancing? Because I feel like that’s where this is headed.
+-> Is this the part where you spin me around and we start ballroom dancing?
+  Kristen: Because I feel like that’s where this is headed.
   <<char_right FigHappy>>
   <<voiceline FigLaugh1>>
   Fig: Ha! If you’re asking me to dance, Applebees, you’re gonna have to step up your game. But I’ll admit, I’ve got the moves if you’re ready to be impressed.
@@ -137,6 +142,7 @@ Fig: You okay?
   <<voiceline FigLaugh2>>
   Fig: Okay, first of all, the pavement’s not that cute.
   She leans forward to inspect the scrape on your knee and furrows her brow. 
+  <<char_right FigSurprised>>
   Fig: Second… yikes! You’re bleeding.
   <<add_points 1>>
 
@@ -199,7 +205,8 @@ Kristen: You okay?
 Fig: Me? Yeah, totally! Why wouldn’t I be?
 
 
--> I don’t know… I’m still in awe of you saving my life a bunch of times today. But… am I making you nervous or something?
+-> Am I making you nervous or something?
+  Kristen: I’m still in awe of you saving my life a bunch of times today. But, I don’t know…
   <<char_right FigFlustered>>
   <<voiceline FigBlush1>>
   Her eyes widen... In panic?
@@ -309,7 +316,7 @@ Fig goes quiet again as her eyes drift over to look at the horizon. Something wa
 -> It wasn’t cool of you to just run away and leave me alone, Fig.
   <<char_right FigSurprised>>
   Fig's head jerks slightly and she looks genuinely surprised. She opens her mouth to say something, then closes it.
-  <<char_right FigHurt>>
+  <<char_right FigSad>>
   Fig: Yeah. Yeah, you’re right. That was a dick move.
   She leans back against the bench and flicks away the clove, avoiding your gaze.
   <<voiceline FigSigh2>>
@@ -365,7 +372,7 @@ Fig: Look, you’re awesome, Kristen. Like, annoyingly awesome. But my brain’s
 <<char_right FigNeutral>>
 Fig gets up and places her skateboard on the ground.
 <<kristen Neutral>>
-Kristen: Um.... Okay, that's cool. I'll see you at home?
+Kristen: Um.... Okay, that's cool. I'll see you later?
 <<jump Date3Hint>>
 ===
 

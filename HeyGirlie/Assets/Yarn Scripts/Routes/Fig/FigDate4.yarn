@@ -1,8 +1,10 @@
 ﻿title: Date4
 ---
+March 12
 <<location "Bottomless Pit">>
-Feb 15
 //max points 12
+//<<location “PLACEHOLDER”>>
+//<<declare $date_points = 0>>
 <<kristen Neutral>>
 So here you are. The Bottomless Pit. Former domain of Gorthalax the Insatiable. Current domain of podcasting and rock sensation, Fig.
 <<kristen Surprised>>
@@ -16,7 +18,7 @@ Fig: Hey!
 <<voiceline KristenGreetingFig2>>
 Fig looks up as you step into the booth, grins, and then quickly tries to fix her face into something more cool and nonchalant.
 <<char_right FigNeutral>>
-<<voiceline FigNeutral1>>
+<<voiceline FigSurprised4>>
 Fig: I mean. Hey.
 Definitely weird.
 
@@ -42,8 +44,10 @@ Fig: Let me show you around. That’s the mic. That’s my chair. That’s the g
 You smile as you spot Fig’s bass sitting in the corner.
 Kristen: And the bass?
 <<voiceline FigHappy3>>
+<<char_right FigHappy>>
 Fig: Yeah! I brought it with me. Thought it’d be kind of cool to play you in, a sick riff before we start and when we sign off. That’s cool, right?
 She pauses for a second, glancing at you out of the corner of her eye.
+<<char_right FigSurprised>>
 Fig: Do you think it’s cool?
 
 
@@ -103,6 +107,7 @@ Fig grins and leans into the mic again.
 <<char_right FigHappy>>
 <<voiceline FigHappy2>>
 Fig: MORNING podcast fam, Fig here, coming at you with another special guest. It’s the one, it’s the only, it’s the most complicated woman of all time-
+<<kristen Surprised>>
 Kristen: ALL time?
 Fig: The cleric of chaos, the president without precedent-
 <<kristen Grin>>
@@ -339,13 +344,13 @@ You're about to get up and see if you can find a way out when Fig peeks her way 
 Kristen: Fig?
 Fig: Hey....
 <<kristen Neutral>>
-Kristen: I thought you left
+Kristen: I thought you left.
 <<voiceline FigSigh2>>
 Fig: I tried to. But I couldn’t just... leave you here.
 
 
 -> Thank her
-<<kristen Nervous>>
+  <<kristen Nervous>>
   Kristen: Thanks Fig. This place kinda... Gives me the creeps.
   Fig steps fully in the room and kicks her feet against the floor.
   <<add_points 1>>
