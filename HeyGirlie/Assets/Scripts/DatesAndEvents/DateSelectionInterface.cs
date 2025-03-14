@@ -13,19 +13,19 @@ public class DateSelectionInterface : MonoBehaviour
 
     public void SetUpRegions()
     {
+        GameManager.Instance.schoolDates.Clear();
+        GameManager.Instance.elmvilleDates.Clear();
+        GameManager.Instance.mordredDates.Clear();
+        GameManager.Instance.outdoorsDates.Clear();
+        GameManager.Instance.awayDates.Clear();
         foreach (LoveInterest li in GameManager.Instance._liQueue)
         {
             // Shouldn't really ever be empty when we're done setting everything up
             if (li.dates != null && li.dates.Length != 0)
             {
-                // Bounds checking
                 int curDate = li.GetDateCount();
-                if (li.dates.Length >= curDate)
-                {
-                    Date date = li.dates[curDate - 1];
-                    GetRegionQueue(date.region).Enqueue(date.sceneName);
-                    Debug.Log("Add " + date.sceneName + " to " + date.region);
-                }
+                Date date = li.dates[curDate - 1];
+                GetRegionQueue(date.region).Enqueue(date.sceneName);
             }
         }
     }
@@ -102,20 +102,5 @@ public class DateSelectionInterface : MonoBehaviour
         }
         string dateScene = GameManager.Instance.awayDates.Dequeue();
         SceneManager.LoadScene(dateScene);
-    }
-
-
-
-    // TEMPORARY FOR TESTING
-    // Later -- parameter is Character enum defined in GameManager.cs -> load relevant scene
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene("Test Route");
-    }
-
-    // TEMPORARY FOR TESTING
-    public void CassandraScene()
-    {
-        SceneManager.LoadScene("Cassandra");
     }
 }
