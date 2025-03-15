@@ -1,12 +1,13 @@
 ﻿title: Date6
 ---
-<<location "Black Pit">>
-Feb 15
+March 14
 //max points 18
 //5k date
+<<location "Black Pit">>
 <<kristen Neutral>>
 You take a deep breath and step foot into the Black Pit.
 It’s just how you remember it, filled with hazy smoke, thumping music and the smell of spilled beer. You glance around, scanning the room. No sign of Fig. Not yet, anyway.
+<<kristen Sad>>
 <<voiceline KristenAwkward2>>
 </i>Did she change her mind?</i>
 It wouldn’t be the first time plans with Fig have gotten... complicated. Maybe this was a mistake.
@@ -54,9 +55,11 @@ She gestures to the seat beside her, her grin wider now but still tinged with a 
 <<char_right FigNeutral>>
 Fig shifts her weight slightly, leaning on the bar. You can tell she’s trying to play it cool, but there’s a nervous energy around her, like she’s waiting for you to take the lead.
 Kristen: So, uh, should we get drinks or something to take the edge off?
+<<char_right FigHappy>>
 Fig: Edge? What, am I that intimidating?
 Fig’s smirk returns in full force and you feel yourself finally start to relax. You’re tired of things being so complicated between you and you hope that tonight will fix that.
 Kristen: You’re like... the only person I know who can hang out in a bar without drinking and still somehow be the life of the party. I gotta keep up.
+<<char_right FigNeutral>>
 Fig smiles and shrugs as she picks up her glass of soda and spins it in her hand.
 Fig: What can I say? I’m just that fun to be around. I don’t need a drink to enjoy myself. Especially not tonight.
 
@@ -90,8 +93,10 @@ You both just stare at one another for a moment before Fig straightens up, break
 Fig: Alright, enough sitting around. Let’s find a spot near the stage before someone else takes it.
 She doesn’t wait for your reply and grabs your hand to tug you toward a smaller room off to the side.
 The neon sign above the doorway reads ‘Moon Room’ and you get hit with a pretty hard case of a flashback from your Freshman year.
+<<kristen Awkward>>
 <<voiceline KristenAwkward3>>
 Kristen: Okay, but if zombies start trying to bite at my ankles again, I’m outta here!
+<<kristen Neutral>>
 Fig laughs and weaves through the sea of people, her hand never leaving yours. When you finally stop near the front, she turns back to you, eyes sparkling.
 <<char_right FigHappy>>
 <<voiceline FigNeutral2>>
@@ -205,8 +210,6 @@ She leads you further into the venue and you look down at your connected hands.
   Fig’s blush deepens as she hesitates.
   Fig: Yeah? Well, uh, cool. Me too, I guess.
   <<add_points 0>>
-
-
 -> Lace your fingers
   <<kristen Soft>>
   Instead of saying anything, you take a leap and slide your fingers between hers to lace them together.
@@ -228,18 +231,23 @@ She leads you further into the venue and you look down at your connected hands.
 
 After the moment lingers, Fig suddenly perks up, her eyes lighting up as she spots something.
 <<kristen Neutral>>
-<<char_right FigNeutral>>
+<<char_right FigHappy>>
 Fig: Oh, hey, look! A pool table. You up for a little friendly competition?
 Kristen: With you? Always!
+<<char_right FigNeutral>>
 She tugs you gently toward the table where she sets it up, grabs a cue and starts lining up a shot with ease.
 Fig’s first shot is flawless, sending two balls into the pockets.
 <i>Of course she’s good. She’s Fig Faeth. She can do anything.</i>
 <<voiceline FigHappy3>>
+<<char_right FigHappy>>
 Fig straightens up, smirking as she rests the cue against her shoulder.
 Kristen: Wow, Fig. Show-off much? Do you ever do anything you’re not amazing at?
+<<char_right FigBlush>>
 Fig: Hey, if you’ve got it, flaunt it.
 You grab a cue and lean against it, shooting Fig a smirk.
+<<kristen Grin>>
 Kristen: Alright, hotshot. Show me how it’s done.
+<<char_right FigNeutral>>
 Fig raises an eyebrow, clearly pleased by the request. She moves closer, positioning herself behind you to adjust your stance.
 Fig: Alright, hold it like this... No, not like that. Here, let me show you.
 <<kristen Nervous>>
@@ -468,7 +476,7 @@ Fig: Now <i>this</i> is what I’m freaking talking about! We <i>have</i> to dan
   <<voiceline KristenHappy3>>
   You burst out laughing, and suddenly everything feels less intimidating. You move just as ridiculously, trying to match Fig’s unhinged energy.
   Fig: There she is! That’s my president!
-She spins around wildly, bumping into you on purpose, and you bump her right back
+  She spins around wildly, bumping into you on purpose, and you bump her right back
   <<add_points 0>>
 -> Heeyaw! Let’s do it!
   <<kristen Happy>>
@@ -492,6 +500,7 @@ It wasn’t uncommon for random people to recognize any of you in public. Not af
 Kristen: What was that? A fan?
 Fig shrugs.
 Fig: Nahh… I think he was trying to hit on me or whatever.
+<<kristen Nervous>>
 <<voiceline KristenAwkward1>>
 You furrow your brow. A few months ago, that would have been hilarious. Now… it just kind of stings.
 But Fig doesn’t seem to care about anyone else in this room. She’s looking at <i>you</i> like you’re the only person here that matters.
@@ -558,9 +567,11 @@ Fig smirks instantly.
 <<char_right FigBlush>>
 <<voiceline FigLaugh2>>
 Fig: Don’t let your head get too big, Applebees, or you’ll start getting stuck in doorways.
+<<kristen Nervous>>
 Kristen: That’s not what I meant!
 Fig: I know! Just wanted to watch you squirm a little.
 <i>Damn it!</i>
+<<kristen Neutral>>
 Fig looks at you and you recognize the shift immediately. Her expression falters and she starts to retreat into herself. You thought you were past this.
 <<kristen Surprised>>
 <<char_right FigFlustered>>
@@ -576,10 +587,12 @@ Fig: You’re having a good time though, right?
   Kristen: Yeah. I really am. But, honestly? I think it has more to do with who I’m with.
   Fig blinks, and you watch her brain malfunction for a solid three seconds.
   <<voiceline FigAwkward1>>
+  <<char_right FigSurprised>>
   Fig: Oh. Okay. That’s... a thing you just said.
   She fidgets and crosses her arms.
   Kristen: You don’t like it?
   And you were doing your best to be smooth about it, too.
+  <<char_right FigFlustered>>
   Fig: I hate how much I do like it. You should stop. Immediately.
   She covers her face with her hands, but you can see the ridiculous smile peeking through.
   <<add_points 1>>
@@ -619,7 +632,7 @@ Fig: Which… Makes it all the more complicated.
   Fig: I know I’m pretty closed off and not open about my feelings. Or, like, emotions in general.
   You bite your tongue. <i>What a lie!</i>
   Fig: But I do know that being here with you feels… really good. And that's scary as hell.
-Being honest and vulnerable freaks Fig out. You’ve always known that.
+  Being honest and vulnerable freaks Fig out. You’ve always known that.
   Kristen: I mean, Ayda told us to try this out so… That’s a good thing, right?
   Fig: Yeah… I guess so.
   <<add_points 0>>
