@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get {return _instance;}}
 
     private string _playerName = "Kristen";
-    private int _saveProfile = 1;
+    private int _saveProfile = 0;
 
     // public string _lastMenu = "Main Menu";
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         }
 
         _instance = this;
-
+        _saveProfile = (_saveProfile == 0) ? SaveManager.getCount() : _saveProfile;
 
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
@@ -162,6 +162,7 @@ public class GameManager : MonoBehaviour
 
     public string GetPlayerName()
     {
+        Debug.Log(_playerName);
         return _playerName;
     }
 
