@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get {return _instance;}}
 
     private string _playerName = "Kristen";
-    private int _saveProfile = 1;
+    private int _saveProfile = 0;
 
     // public string _lastMenu = "Main Menu";
 
@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
         }
 
         _instance = this;
-
 
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
@@ -164,6 +163,10 @@ public class GameManager : MonoBehaviour
     public void SetPlayerName(string playerName)
     {
         _playerName = playerName;
+    }
+
+    public int GetProfile(){
+        return _saveProfile;
     }
 
     public void SetProfile(int profileNum){
