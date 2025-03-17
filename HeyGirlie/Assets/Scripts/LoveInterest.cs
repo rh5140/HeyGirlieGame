@@ -12,11 +12,6 @@ public class LoveInterest : MonoBehaviour
 
     [SerializeField] public Date[] dates;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject); // Persist between scenes
-    }
-
     public void IncrementDateCount()
     {
         _dateCount++;
