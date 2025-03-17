@@ -1,5 +1,7 @@
 ﻿title: Date4
 ---
+<<location “PLACEHOLDER”>>
+<<set $date_points = 0>>
 <<kristen Neutral>>
 It’s been an exhausting day of cleric classes. Sure, you have experience both killing and birthing new gods (or reforming old ones) but that doesn’t help you write an APA (Adventuring Party Association) formatted paper on the ideal healing practices for a severed limb.
 You desperately need a detox, something to help clear that academic laced fog that’s sweeping through your brain. 
@@ -10,17 +12,17 @@ Despite her concentration, she manages to notice you coming and gives you a wide
 <<char_right GertieHappy>>
 <<voiceline GertieGreeting2>>
 Gertie: Ah! Miss Applebees, it’s a pleasure to see you again.
-<<kristen Greeting>>
+<<kristen Happy>>
 <<voiceline KristenGreetingGertie2>>
-Kristen: Hey Gertie. 
-You came here with the intent to ask Gertie on a date, but now that you’re here, you feel taken with seeing her in action.
-Kristen: You know I just now realized I’ve never actually seen you… you know… do your thing. 
+Kristen: Hey Gertie.
+<<kristen Neutral>> 
 <<char_right GertieNeutral>>
+You came here with the intent to ask Gertie on a date, but now that you’re here, you feel taken with seeing her in action.
+Kristen: You know I just now realized I’ve never actually seen you… you know… do your thing.
 Gertie: I suppose in the intense rollercoaster of our courtship, you’ve never had much of a chance to. I don’t typically show my hive to my nemeses.
 <<kristen Surprised>>
 At the mention of the word “nemesis,” you swear you can hear the bees start buzzing slightly louder. It appears Gertie isn’t the only one who remembers your old tension.
 You subconsciously take a step back from the buzzing bees. Gertie notices your careful movements but waves it away. 
-<<char_right GertieHappy>>
 <<voiceline GertieBee4>>
 Gertie: Don’t worry, Miss Applebees. Bees don’t attack unprovoked.
 You briefly wonder what their standards are “provocation.” You shake off your concern. Gertie knows these bees well. She wouldn’t let you get hurt. 
@@ -37,11 +39,10 @@ Gertie: Ah that’s the benefits of an independent study, Miss Applebees. I can 
     <<voiceline GertieDateSuccess1>> 
     <<add_points 2>>
   -> Kristen: But you’re at an adventuring academy? Don’t you ever dream of adventure?
-    <<char_right GertieNeutral>>
     Gertie: I know what I want, Miss Applebees, I didn’t come here for thrills, I came here to learn about my passion. That is my adventure.
     <<add_points 1>>
-Gertie: These bees <i>are</i> my class. There’s a lot of druidic literature on bees and how they may be some of the purest manifestations of nature-based magic.
 <<char_right GertieNeutral>>
+Gertie: These bees <i>are</i> my class. There’s a lot of druidic literature on bees and how they may be some of the purest manifestations of nature-based magic.
 Gertie continues working on her hives as she speaks. The way her hands move, her deliberate movements, you’re mesmerized by the level of care she puts into each action. 
 Gertie: Some even theorize that bees themselves can be their own source of magic. And pretty powerful magic at that. I explained this all to Principal Aguefort.
 Kristen: Let me guess, he went off about Chronomancy?
@@ -56,15 +57,16 @@ Gertie shrugs.
 Gertie: Every now and then. But I am devoted to a higher power, Miss Applebees. Something I’m sure you can relate to.
 <<kristen Surprised>>
 She’s not wrong. From a lot of perspectives, Gertie’s dedication to her bees is nothing short of religious. 
+<<kristen Nervous>>
 But you can’t deny her conviction is somewhat terrifying.
 You’re the cleric to the Goddex of Doubt and Mystery. Hell, you alone have worshipped more than a couple gods.
 Looking at Gertie? You can see she’s always been this dedicated to the apiary. It’s always been a part of her. And she’s never had reasons to doubt it’s where she belongs. You can’t help but feel a strange mix of admiration and jealousy.
-<<kristen Happy>>
 <<voiceline KristenRomantic3>>
 Kristen: Then I guess it’s a good thing I’m here! Maybe I can help that study of yours be a little less independent.
 <<voiceline GertieRomantic1>>
 <<char_right GertieBlush>> 
 Gertie chuckles at your flirting. It’s nice making her laugh — but now’s the time to get to work.
+<<char_right GertieNeutral>>
   -> Help by staying as far away from those flying-dagger-wielding insects as you can manage.
     Gertie can clearly see your hesitation as you skirt around the outskirts of the hives, never getting TOO close.
     Gertie: There’s no need to be afraid, Miss Applebees, I promise you.
@@ -84,13 +86,13 @@ You listen intently to her explanation, but when it comes time to approach the b
 <<kristen Surprised>>
 <<voiceline KristenSurprised1>>
 It’s the kind of buzzing that one gives when their friend’s ex tries a bit too hard.
-<<char_right GertieNeutral>>
 Gertie: Don’t take it personally. But you should put on gloves. Only the most skilled beekeepers approach them uncovered.
 <<kristen Neutral>>
   -> Who needs gloves? You’ve got good old-fashioned moxie.
-    You approach with all the gumption and audacity you can muster, but it doesn’t seem to impress the bees very much. Gertie stops you short of death by a thousand stings and takes over for you. She doesn’t seem super thrilled.
+    You approach with all the gumption and audacity you can muster, but it doesn’t seem to impress the bees very much.
     <<voiceline GertieNeutral3>>
     <<voiceline KristenDateFailGertie1>>
+    Gertie stops you short of death by a thousand stings and takes over for you. She doesn’t seem super thrilled.
     <<add_points 0>>
   -> Take Gertie’s advice. She knows what she’s doing.
     You put on gloves to approach. Their buzzing doesn’t cease, but they allow you to check their hive without getting aggressive.
@@ -108,19 +110,19 @@ Gertie: Thank you for your help, Miss Applebees. These bees are important to me.
 Gertie speaks with a deep sadness in her voice, like she’s in mourning.
 <<kristen Sad>>
 <<voiceline GertieSad2>>
-Gertie: Did you hear about that country club that’s planning to expand its golf course into Farhaven Woods? They’d have to flatten arces of land, not to mention pump all that water and pesticides to keep the grass green.
-Gertie: Then there are those big industries. Deforestations. Overharvesting.
-Gertie: Monoculture farms, destroying biodiversity in local ecosystems. With diverse sources of pollen and nectar, the bees go through intense cycles of feast and famine.
+Gertie: Did you hear about that country club that’s planning to expand its golf course into Far Haven Woods? They’d have to flatten arces of land, not to mention pump all that water and pesticides to keep the grass green.
+Gertie: Then there are those big industries. Deforestations. Overharvesting. Monoculture farms, destroying biodiversity in local ecosystems.
+Gertie: Without diverse sources of pollen and nectar, the bees go through intense cycles of feast and famine.
 Kristen: Leave it to civilization to fuck up nature…
-<<char_right GertieSurprise>>
-<<voiceline GertieSurprise3>>
+<<voiceline GertieNeutral3>>
+<<char_right GertieNeutral>>
 Gertie’s face flashes with a brief look of hesitation.
-<<char_right GertieSad>>
 Gertie: It’s not just your run of the mill mortal shenanigans. I think there’s more to it.
 Gertie: That theory about bees being a source of druidic magic? I’m not the only one who believes in it. 
 Gertie: I think that some <i>other</i> sources of magic may be interested in limiting nature’s power. 
 <<kristen Surprised>>
 As Gertie finishes speaking, it all starts to click for you. Single-crop fields… Greedy sources of magic… You know it before Gertie can utter another word.
+<<voiceline KristenAngry1>>
 Kristen: Helio… Of course he would. Giant corn fields aren’t just a symbol of worship -
 Gertie: They’re a way of suppressing other sources of magic. 
 <<kristen Sad>>
@@ -146,21 +148,19 @@ Gertie: You were a child. You were homeschooled. How could you have possibly lef
 You know Gertie is right, but you can’t shake the feeling that somehow this is all on you.
 Gertie: All we know is what our parents teach us, Miss Applebees. Chosen or not. 
 It suddenly hits you how deep this impromptu visit has gotten.
-<<kristen Neutral>>  
 Kristen: No wonder the bees don’t like me. I bet they still smell the corn on me.
 Gertie gives a pitying chuckle.
-<<char_right GertieNeutral>>
 Gertie: Would you like to try approaching the bees again?
-  -> You: Haha, definitely not.
+  -> Kristen: Haha, definitely not.
     <<char_right GertieAngry>>
     Gertie grimaces at your response. Maybe you came off a bit too harsh in your rejection.
     <<voiceline GertieDateFail3>>
     <<add_points 0>>
-  -> You: I don’t think that’s a great idea.
+  -> Kristen: I don’t think that’s a great idea.
     <<char_right GertieSad>>
     Gertie seems a bit disappointed, but you can tell she doesn’t want to push you too far.
     <<add_points 1>>
-  -> You: Are you sure?
+  -> Kristen: Are you sure?
     Gertie: I assure you they don’t want to sting you anymore than you want to be stung.
     <<add_points 2>>
 Gertie: You’ve never struck me as someone capable of fear, Miss Applebees. Not from what I know of you. And certainly not from the stories I hear about your adventures.
@@ -168,10 +168,12 @@ Gertie: You’ve never struck me as someone capable of fear, Miss Applebees. Not
 Kristen: What kind of stories?
 <<char_right GertieBlush>>
 Gertie: Everybody at Aguefort’s always saving one world or another. People talk. Sometimes, I listen. If I hear someone say something about the Bad Kids or you, I just… remember.
-<<kristen Neutral>>
+<<kristen Grin>>
+<<voiceline KristenDateSuccess3>>
 Kristen: Aww. Sounds like you had a crush on me.
 Gertie: We’ve literally made out before.
 Kristen: Still.
+<<kristen Neutral>>
 <<char_right GertieNeutral>>
 All jokes aside, you knew Gertie had liked you for a long time — long before you liked her, properly liked her, much to the detriment of your previous car crash of a rebound situationship.
 You two have been taking it slow this time, doing it right. But Gertie had crushed on the <i>idea</i> of you for much longer than she liked the <i>reality</i> of you. Can you ever make up for that discrepancy?
@@ -182,8 +184,8 @@ Gertie: I don’t need you to be Good At Bees, I just need you to respect them. 
 Gertie takes you by the hand and leads you over to the bees. Their buzzing speeds up as you get closer, signaling you to back off.
 Gertie, still holding your hand, carries it out toward the bees. You close your eyes and turn your face away, preparing for a billion stings… 
 But the pain never comes.
-:You feel Gertie let go of your hand as a new sensation takes over: a little tickle on the back of your hand and up your arm.
-<<kristen Surprise>>
+You feel Gertie let go of your hand as a new sensation takes over: a little tickle on the back of your hand and up your arm.
+<<kristen Surprised>>
 You open your eyes to see a handful of bees who have flown over to you and are now walking across your hand.
 They aren’t stinging you. They don’t seem to even be afraid of you. They trot along, content.
 <<kristen Happy>>
