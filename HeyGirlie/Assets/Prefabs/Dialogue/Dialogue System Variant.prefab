@@ -655,10 +655,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8940760899598148290}
   - {fileID: 5318245346635836475}
   - {fileID: 4694568306897327866}
   - {fileID: 2323238543476861296}
-  - {fileID: 8940760899598148290}
   m_Father: {fileID: 6759425271946802466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6ad4e73ac598fe34dae6a0d1b6f76cd7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e21f186d20b2a04d9a4e81cca626a59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1266,6 +1266,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2819999833614558325, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -264
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819999833614558325, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 607
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819999833614558334, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819999833614558334, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 94ba8484d60ee1f4ca86c0c6b1f21058, type: 3}
     - target: {fileID: 2819999833750329428, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
       propertyPath: m_Name
       value: HGG Line View
@@ -1395,7 +1411,8 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2819999832344087589, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2819999833750329429, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
       insertIndex: 0
@@ -1945,6 +1962,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3671634133096425296, guid: 128b93fdaebdb304eb08dbedde8124cc, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671634133096425296, guid: 128b93fdaebdb304eb08dbedde8124cc, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3671634133096425296, guid: 128b93fdaebdb304eb08dbedde8124cc, type: 3}
