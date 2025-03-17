@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
 
         _instance = this;
 
-
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();
         mordredDates = new Queue<string>();
