@@ -5,6 +5,7 @@ using Yarn.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class YarnCommands : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _charRightSprite;
     [SerializeField] private GameObject _background;
     [SerializeField] private GameObject _specialInterface; // not always used
+    [SerializeField] private GameObject _locationUI;
 
     private Dictionary<string, AudioClip> _voicelines;
     private AudioSource _audioSource;
@@ -46,6 +48,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("char_right", SetCharRight);
 
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
+        dialogueRunner.AddCommandHandler<string>("location", SetLocationUI);
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
         dialogueRunner.AddCommandHandler<string>("sfx", PlayAudioByName);
@@ -201,6 +204,15 @@ public class YarnCommands : MonoBehaviour
             else Debug.Log("Sprite " + bgSpriteName + " not found!");
         }
     }
+
+    
+    private void SetLocationUI(string locationName)
+    {
+        TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
+        location.text = locationName;
+        // If location is multiple words, put "quotes around location"
+    }
+    
 
     private void PlayAudioByName(string audioName)
     {

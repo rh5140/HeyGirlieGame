@@ -1,7 +1,10 @@
 ﻿title: Date2
 ---
-Feb 15
+March 15
 //max points 13
+<<location "Aguefort Generic">>
+<<set $date_points = 0>>
+<<set $date_points_total = 13>>
 <<kristen Neutral>>
 The hallways of Aguefort Academy feel quiet today. Your footsteps echo softly against the floor as you make your way past rows of lockers. Where is everyone?
 <<voiceline KristenNeutral1>>
@@ -27,7 +30,7 @@ Fig: Chill out, Applebees! I should be the one asking why the president is skulk
   <<add_points 1>>
 -> Shit, I should know better than to be out without my presidential detail!
   <<kristen Happy>>
-  <<char_right Happy>>
+  <<char_right FigHappy>>
   <<voiceline FigGermanShepherd1>>
   Fig: German Shepherd Mode activated!
   <<add_points 2>>
@@ -58,12 +61,15 @@ Kristen: What even is all that?
 Fig: Only the essentials for an epic night of pranks. Glitter, soda for the water fountains, and this bad boy… <i>(she holds up an enchanted looking whoopee cushion)</i> is gonna make sure the Lunch Lad regrets taking the job.
 
 
--> Glitter? Fig, that stuff’s impossible to clean up. I love it!
+-> Glitter? Fig, that stuff’s impossible to clean up.
+  Kristen: I love it!
+  <<kristen Happy>>
   Glitter bombing the school? How gay and ingenious! It’s basically insta-party mode!
-  <<char_right FigNeutral>>
+  <<char_right FigBlush>>
   Fig: Exactly! It’s the prank gift that keeps on giving.
   <<add_points 1>>
--> The Lunch Lad already regrets existing. Do we need to pile it on?
+-> The Lunch Lad already regrets existing.
+  Kristen: Do we need to pile it on?
   <<kristen Awkward>>
   You and the rest of the Bad Kids have been giving Simeon du Vayne a hard time but to be fair, he had pretty big shoes to follow.
   <<char_right FigAnnoyed>>
@@ -94,7 +100,6 @@ You round a corner and spot a row of pristine water fountains that sit innocent 
 <<voiceline KristenHappy4>>
 Kristen: Alright, Applebees, time to show the school who’s boss.
 You crouch down by the first fountain, unscrewing the cap of a soda bottle. The soda pours in, bubbling and fizzing as it mixes with the water. A small splash lands on your hand, sticky and sweet. You smirk to yourself. Chaos, that’s what you’re all about.
-<<char_right FigNeutral>>
 <<kristen Neutral>>
 Kristen: One down, three to go!
 You manage to spike the other fountains without any issues. The two of you regroup in the main hallway later, trying to stifle your laughter as glitter spills out from under the teacher’s lounge door and faint, gurgling soda sounds come from the fountains.
@@ -103,19 +108,22 @@ You manage to spike the other fountains without any issues. The two of you regro
 Fig: Okay, okay, I know I said this was going to be good, but this? This is legendary. Like, prank hall-of-fame levels of mischief!
 
 
--> You and glitter… seriously? I thought you left the cutesy stuff behind!
+-> You and glitter… seriously?
+  Kristen: I thought you left the cutesy stuff behind!
   <<char_right FigNeutral>>
   Fig gives a faint pout, crossing her arms.
   Fig: Excuse you, Applebees, glitter is unstoppable, impossible to clean up, and an artistic weapon. It’s basically me, in sparkly particle form.
   <<add_points 1>>
--> What if someone figures out we did this? I can’t do weekend detention!
+-> What if someone figures out we did this?
+  Kristen: I can’t do weekend detention!
   Your heart races with pranker’s remorse, the high of devious deeds fading into a faint panic. Maybe you can’t make a law that keeps you from getting into trouble...
   <<char_right FigNeutral>>
   <<voiceline FigAwkward1>>
   Fig: Pfft, please. Nobody’s catching us. And if they do, so what? You can make a new bylaw so you get extra credit, or whatever.
   Okay, if she says you can, it must be true.
   <<add_points 0>>
--> Those soda fountains are going to cause mass chaos tomorrow morning. Sticky chaos. That’s all me, by the way.
+-> Those soda fountains are going to cause mass chaos tomorrow morning.
+  Kristen: Sticky chaos. That’s all me, by the way.
   <<char_right FigHappy>>
   <<voiceline FigLaugh1>>
   Fig: Oh, no question. You’re the unsung hero of this prank. When the teachers are trying to explain why their coffee tastes like root beer, I’ll be pointing everyone your way.
@@ -134,7 +142,8 @@ Her grin dares you to suggest something even more outrageous.
   <<voiceline FigHappy2>>
   Fig: Great idea! I can already feel an idea forming. Let’s go!
   <<add_points 1>>
--> We should stop before we actually get caught. I’ve got a reputation to protect.
+-> We should stop before we actually get caught.
+  Kristen: I’ve got a reputation to protect.
   <<char_right FigAnnoyed>>
   <<voiceline FigAngry1>>
   Fig: Wow, okay, president buzzkill. Next thing I know, you’re going to start campaigning for curfews and responsible bedtime schedules. I have an idea.
@@ -155,7 +164,8 @@ Fig: We make a pretty great team, don’t we?
 She smirks, leaning a little closer as she pulls out a pack of sticky notes and you get to work. Maybe it’s the lighting, but Fig looks good being in her chaotic element. Really good. You feel a slight flush on your cheeks and swallow. Right, back to pranking.
 
 
--> Sticky notes on the ceiling? You just want me to climb something, don’t you?
+-> You just want me to climb something, don’t you?
+  Kristen: Sticky notes on the ceiling? I mean… Come on!
   You can’t deny the allure of your sick, sick gains. Even you’ve admired your own ass in the mirror.
   <<char_right FigHappy>>
   Fig: Busted. I mean, I’m not gonna say I wouldn’t enjoy watching you try. But it’s mainly for the prank.
@@ -167,7 +177,8 @@ She smirks, leaning a little closer as she pulls out a pack of sticky notes and 
   Fig: She knows she’s dating the archdevil of rebellion. Besides, it’s not like this is <i>her</i> library. She loves me just the way I am.
   Awww, that’s... kinda sweet, if not incredibly cheesy.
   <<add_points 0>>
- -> You know, if you weren’t already an archdevil, you’d make a great librarian. Maybe a really <i>hot</i> librarian.
+ -> You’d make a <i>hot</i> librarian.
+  Kristen: You know, if you weren’t already an archdevil.
   Fig breaks out into her classic laugh.
   <<char_right FigHappy>>
   <<voiceline FigLaugh1>>
@@ -187,18 +198,17 @@ Kristen: What a mess!
 <<kristen Neutral>>
 Fig steps back to admire the hard work.
 Fig: Being part of the Bad Kids is cool and all, but… I’ve missed spending time with just the two of us..
-
-
 You glance at her, and for the first time today, she seems... uncertain. What does she mean by that?
 
 
--> I’ve missed it too, Fig. It’s nice not having to share you with everyone else for a change.
+-> It’s nice not having to share you with everyone else.
   <<char_right FigFlustered>>
   <<voiceline FigAwkward1>>
   Fig: I mean, don’t get me wrong, I love those dorks, but… Uh… I don’t really know where I was going with that.
   <<add_points 0>>
--> Aw, Fig, I didn’t know you could get sentimental. Don’t worry, you’re still my favorite partner-in-crime.
-You tap her shoulder with your fist. Smooth.
+-> Aw, Fig, I didn’t know you could get sentimental.
+  Kristen: Don’t worry, you’re still my favorite partner-in-crime.
+  You tap her shoulder with your fist. Smooth.
   <<char_right FigHappy>>
   <<voiceline FigLaugh1>>
   Fig: Pfft, sentimental? Me? Nah, I just call it like I see it. But thanks, Applebees. You’re not too bad yourself.
@@ -263,6 +273,7 @@ Dimweather shuffles closer, but luckily, she doesn’t seem to notice either of 
 She moves on, muttering under her breath about disorganized shelves.
 Once Dimweather’s footsteps fade into another part of the library, you both let out a sigh of relief.
 Fig leans back against the bookshelf as she gives you a sidelong glance.
+<<voiceline FigSuccess4>>
 Fig: Well, that was fun. Nothing like a little high-stakes sneaking to spice up the day.
 It’s only then that you notice how close you still are to Fig, her face only inches from yours.
 <<char_right FigNeutral>>
@@ -270,14 +281,16 @@ Your pulse quickens as the realization sets in. You’re suddenly hyper aware of
 For a second, neither of you move.
 
 
--> Uh, sorry... about, um, the whole... y’know, being this close thing.
+-> Uh, sorry…
+  Kristen: About, um, the whole... y’know, being this close thing.
   <<kristen Awkward>>
   Fig: Wow, Kristen, you really know how to kill a moment. You’re lucky I’m too cool to take offense.
   She gives you a playful shove as she moves away from the bookshelf.
   <<voiceline FigNeutral3>>
   Fig: Come on, let’s get out of here before Dimweather finds a pair of glasses.
   <<add_points 0>>
--> Well, this is cozy. Should I be worried you’re gonna charge me rent for standing this close?
+-> Well, this is cozy.
+  Kristen: Should I be worried you’re gonna charge me rent for standing this close?
   <<kristen Happy>>
   Fig: Please, like I’d waste a perfectly good opportunity to remind you that you’re the one who dragged me here.
   She leans in slightly.
@@ -296,10 +309,13 @@ You shake your head as the two of you make your way out of the school.
 <<voiceline KristenNeutral1>>
 Kristen: Hey, what do you say we grab a milkshake or something?
 Fig glances at you, arching an eyebrow before smirking.
+<<char_right FigBlush>>
 Fig: What’d I tell you? I’m addicting. Spend time with me once, and suddenly you’re begging for more.
 
 
--> Can you blame me? You’re kind of fun to hang out with... in a chaotic, infuriating way.
+-> Can you blame me?
+  Kristen: You’re kind of fun to hang out with... in a chaotic, infuriating way.
+  <<char_right FigNeutral>>
   Her smirk softens and she tilts her head.
   She leans in slightly, and you feel your heart race.
   <<voiceline FigLaugh2>>
@@ -336,7 +352,7 @@ Her laughter finally subsides, and she shakes her head.
 Fig: Alright, you’re on. Let’s meet downtown next week… I know a place. But don’t blame me when you’re covered in bruises.
 
 
--> I’m holding you to that, Faeth. You better bring your A-game.
+-> You better bring your A-game.
   <<char_right FigHappy>>
   She laughs, throwing her head back as she starts to walk away.
   <<voiceline FigLaugh1>>

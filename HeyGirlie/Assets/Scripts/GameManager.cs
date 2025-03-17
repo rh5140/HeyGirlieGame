@@ -66,13 +66,9 @@ public class GameManager : MonoBehaviour
         //loop through all love interests minus polyam routes
         for (int i = 2; i< 8; i++)
         {
-            Debug.Log(priority);
-            Debug.Log(polyamPartner);
             if ((int)priority != i && i != (int)polyamPartner)
             {
                 liQueue.Add(GetLoveInterest((Character)i));
-                Debug.Log(priority);
-                Debug.Log(liQueue);
             }
         }
         //randomizes non-prio love interests
