@@ -1,16 +1,19 @@
 ﻿title: Date4
-// max 12 points perhaps we should lower it lol
+// max 16 points perhaps we should lower it lol
 
 ---
-January 30
+March 17
+<<location "PLACEHOLDER">>
+<<set $date_points = 0>>
 
+<<kristen Neutral>>
 Kipperlilly practically vanishes in the week after Cork’s birthday. You didn’t expect to notice her absence so much. 
 
-It’s not surprising, but it’s a bit disappointing. You’d like to tell her that Cork loved the cupcakes and even laughed at your reused funfetti joke. You could text her, but it’s more fun to talk to her in person, and her only signs of life are the mysteriously fluctuating air-conditioning at Aguefort and Riz’s not-so-quiet grumbling over “cheater classmates who take advantage of solid friendships.” At least he’s forgiven you for that.
+It’s not surprising, but it’s a bit disappointing. You’d like to tell her that Cork loved the cupcakes and even laughed at your reused funfetti joke. You could text her, but it’s more fun to talk to her in person, and her only signs of life are the mysteriously fluctuating air-conditioning temperature at Aguefort and Riz’s not-so-quiet grumbling over “cheater classmates who take advantage of solid friendships.” At least he’s forgiven you for that.
 
 You’re about to give up hope and resign yourself to waiting for a text. Then you remember her mentioning that she was going to the arcade this week. Perfect!
 
-The arcade has been renovated since you helped destroy it in freshman year. Most notably, it’s taken over one of the neighboring stores and converted it into a laser tag arena. Teens and tweens are scattered between the rows of games and gachas as you walk through, but not so many that it would be hard to spot Kipperlilly. 
+The arcade has been renovated since you helped destroy it in freshman year. Most notably, it’s taken over one of the neighboring storefronts and converted it into a laser tag arena. Teens and tweens are scattered between the rows of games and gachas as you walk through, but not so many that it would be hard to spot Kipperlilly. 
 
 Surely you have more than enough experience rogue-spotting to find her this time, right?
 -> The claw machines?
@@ -26,27 +29,32 @@ Surely you have more than enough experience rogue-spotting to find her this time
 There! You finally spot her near the entrance to laser tag, talking animatedly to an attendant who seems completely uninterested in whatever she’s going on about. 
 
 <<kristen Happy>>
+<<voiceline KristenGreeting1>>
 Kristen: Hey, Kipperlilly! 
 
 Kipperlilly glances over her shoulder in confusion, doing a double take and whirling around when she notices you.
 
 <<char_right KipperlillySurprised>>
+<<voiceline KipGreeting2>>
 Kipperlilly: What are you doing here? 
--> You know, just playing some [insert arcade game parody here].
+-> You know, just playing some Lagala.
   <<char_right KipperlillyNeutral>>
+  <<voiceline KipSurprised2>>
   Kipperlilly: Didn’t take you to be a gamer, Applebees.
   <<add_points 1>>
 -> What are YOU doing here?
   <<char_right KipperlillyNeutral>>
+  <<voiceline KipNeutral1>>
   Kipperlilly: … I asked first. Spill.
   <<add_points 1>>
 -> Waiting for you. You said you were going to be here!
   <<char_right KipperlillyAnnoyed>>
-  Kipperlilly: Every time I think you’re being normal for once, you prove me wrong.
+  <<voiceline KipAnnoyed1>>
+  Kipperlilly: Every time I think you’re actually being normal, you prove me wrong.
   <<add_points 0>>
 
 <<kristen Neutral>>
-Kipperlilly looks at you suspiciously, folding her arms and waiting for your answer.
+Kipperlilly looks at you suspiciously, folding her arms and waiting for you to speak.
 
 Kristen: I’m not trying to bother you or anything. I just wanted to tell you my brother really liked the cupcakes. All my brothers did, really.
 
@@ -74,49 +82,57 @@ Kristen: Your what?
 
 Is this going to be “best trash-picker-upper” all over again?
 
-<<kristen Neutral>>
-Before you can ask her to elaborate on absolutely anything, someone laughs theatrically behind you. 
+Before you can ask her to elaborate on absolutely anything she just said, someone laughs theatrically behind you. 
 
+<<kristen Surprised>>
+<<voiceline KristenSurprised3>>
 You turn to see someone around Kipperlilly’s height dressed in baggy clothes, a bandana covering the lower half of their face. They brush past you to face down Kipperlilly, who immediately squares up like she’s ready to attack at any moment.
 
 ????: This rematch has been a long time coming, KIPP.
 
 <<char_right KipperlillySmug>>
+<<voiceline KipSmug2>>
 Kipperlilly: Thanks for keeping that spot warm for me. I’m looking forward to seeing my name on top again.
 
-Kristen: What is <i>happening</i> here?
+What is <i>happening</i> here?
 
 ????: I don’t know about that one, my friend. I’ve gotten pretty used to being champion. I think I’ll stay right where I am.
 
 Kipperlilly: In your dreams.
 
-The mysterious halfling laughs again, turning around to walk backwards through the door to the laser tag arena. They give a mocking salute before disappearing into the darkness. Kipperlilly shakes a fist at them. The attendant sighs and is ignored.
+The mysterious halfling laughs again, turning around to keep eye contact with Kipperlilly as they walk backwards through the door to the laser tag arena. They give a mocking salute as they disappear into the darkness. Kipperlilly shakes a fist at them. The attendant sighs and is promptly ignored.
 
+<<kristen Neutral>>
+<<voiceline KristenNeutral1>>
 Kristen: Okay. Who was that?
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: T100. My greatest competition for the laser tag leaderboard.
 -> And so you’re here to… beat them?
   <<char_right KipperlillyHappy>>
+  <<voiceline KipHappy1>>
   Kipperlilly: With <i>great</i> prejudice.
   <<add_points 2>>
 -> Their name is T100?
   <<char_right KipperlillyNeutral>>
+  <<voiceline KipNeutral1>>
   Kipperlilly: Obviously not, that’s just the handle they use for the arcade leaderboards.
   <<add_points 1>>
 -> Wow, I didn’t think you were that lame.
   <<char_right KipperlillyAnnoyed>>
+  <<voiceline KipAnnoyed2>>
   Kipperlilly: You know, you can just leave if you don’t have anything else to tell me.
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
-Kipperlilly: The top spot has been bouncing back and forth between us for a couple of years now, but obviously it was a bit difficult to take part while I was in hell.
+Kipperlilly: The top spot has been bouncing back and forth between us for a couple of years now, but obviously it was a bit difficult to take part while I was in Hell.
 
 Kipperlilly: They’ve been sitting pretty without being challenged for months now, but I’m finally ready to take back my crown.
 
 Kristen: Seems like some pretty serious business, Kip.
 
 <<char_right KipperlillyAnnoyed>>
+<<voiceline KipSad1>>
 Kipperlilly: Don’t call me that.
 
 <<kristen Surprised>>
@@ -136,6 +152,7 @@ She waves a hand as if to dismiss you, only to pause and look back thoughtfully.
 Kipperlilly: Unless…
 -> You like what you see?
   <<char_right KipperlillyBlush>>
+  <<voiceline KipNeutral2>>
   Kipperlilly: I have no idea what you’re talking about.
   <<add_points 2>>
 -> Unless… what?
@@ -144,6 +161,7 @@ Kipperlilly: Unless…
   <<add_points 2>>
 -> Unless I <i>do</i> get to call you Kip?
   <<char_right KipperlillyAnnoyed>>
+  <<voiceline KipAnnoyed2>>
   Kipperlilly: Ugh, no.
   <<add_points 0>>
 
@@ -175,33 +193,40 @@ Kristen: I’ve got Darkness?
 <<char_right KipperlillyHappy>>
 Kipperlilly: You do?
 
-<<kristen Happy>>
+<<kristen Grin>>
 Kristen: Goddess of mystery and night? Course I do.
 
+<<kristen Neutral>>
 She grabs you by the wrist and starts pulling you towards the laser tag arena.
 
+<<voiceline KipHappy1>>
 Kipperlilly: This is your next mission for the key. You’re helping me win this game.
 
-<<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
-Kipperlilly drags you into the laser tag arena, giving you instructions on how to organize the equipment in between a rundown on T100’s playstyle that goes entirely over your head because you have never put more than three seconds of thought towards laser tag strategy. You didn’t even know there could be a strategy beyond pointing and shooting, but perhaps you shouldn’t be surprised — this <i>is</i> Kipperlilly, after all. You wouldn’t be surprised if she had a strategy for making strategies. 
+Kipperlilly drags you into the laser tag arena, giving you instructions on how to organize the equipment in between a rundown on T100’s playstyle that goes entirely over your head because you have never put more than three seconds of thought towards laser tag strategy. You didn’t even know there could be a strategy beyond pointing and shooting.
+
+Then again, this <i>is</i> Kipperlilly. You wouldn’t be surprised if she had a strategy for making strategies. 
 
 It sounds like a fun afternoon, though!
 
 Kipperlilly: — and as long as you go on my signal, this should be easy. Any questions?
 
 <<kristen Awkward>>
+<<voiceline KristenAwkward2>>
 Uh oh. You must’ve zoned out on the whole plan.
 -> Just double-checking, you’re taking the lead?
   <<char_right KipperlillySmug>>
+  <<voiceline KipSurprised1>>
   Kipperlilly: Of course. Otherwise I wouldn’t get the points.
   <<add_points 2>>
 -> Is this T100 guy a rogue too? Do I need to worry about sneak attacks?
   <<char_right KipperlillyNeutral>>
+  <<voiceline KipNeutral1>>
   Kipperlilly: They’re not a rogue yet. Give them a couple of years. Don’t worry, they’re not allowed to jump on you or anything. 
   <<add_points 1>>
 -> Uh, nope. I absolutely, one hundred percent, definitely, completely understand the plan.
   <<char_right KipperlillyAngry>>
+  <<voiceline KipAngry2>>
   Kipperlilly: You weren’t listening at all, were you?
   <<add_points 0>>
 
@@ -216,7 +241,8 @@ Kristen: And after I cast Darkness, I…
 
 Kipperlilly: Watch my back so T100 can’t ambush <i>me.</i>
 
-Ah. You’re a meatshield. That seems simple enough. And doesn’t require you to actually try hitting anything. Wins all around.
+<<kristen Neutral>>
+Ah. You’re a meatshield. That seems simple enough. And doesn’t hinge on you actually hitting anything. Wins all around.
 
 <<kristen Grin>>
 Kristen: Let’s do it. T100 won’t know what hit them. 
@@ -227,20 +253,27 @@ Kipperlilly grins as she leads you to the starting spot for your team. The laser
 If you lure T100 there, they’ll be a sitting duck. Allegedly. 
 
 <<kristen Neutral>>
+<<char_right KipperlillyNeutral>>
 A countdown starts, and you watch Kipperlilly settle into battle mode, rolling her shoulders and preparing her laser tag gun to fire immediately.
 
 Any last words?
 -> Let’s take this guy down! No mercy!
   <<char_right KipperlillyHappy>>
+  <<voiceline KipHappy1>>
   Kipperlilly: That’s exactly the kind of energy we need.
   <<add_points 2>>
 -> This is still just for fun, right?
+  <<voiceline KipNeutral1>>
+  <<char_right KipperlillyNeutral>>
   Kipperlilly: Defeating my rivals beyond the point of recovery <i>is</> fun, Applebees. 
   <<add_points 1>>
 -> How do I know if my gun is on?
+  <<voiceline KipAnnoyed2>>
+  <<char_right KipperlillyAnnoyed>>
   Kipperlilly: It’s on, Applebees. 
   <<add_points 0>>
 
+<<char_right KipperlillyNeutral>>
 3… 2… 1… GO!
 
 Kipperlilly darts into the arena with a giddy laugh. You scramble to try to keep up before she can vanish into the shadows. Another set of giggles that probably come from T100 sound from elsewhere in the arena before echoing into silence.
@@ -250,6 +283,7 @@ Kipperlilly darts into the arena with a giddy laugh. You scramble to try to keep
 It takes a heroic thirty seconds for you to realize you are incredibly out of your depth here. Kipperlilly’s long since vanished, and you’re getting turned around by the identical walls and flashing lights.
 
 <<kristen Sad>>
+<<voiceline KristenSad3>>
 A few seconds later, your vest vibrates and flashes red, a taunting buzz of failure highlighting your incompetence alongside the triumphant laughter of T100. 
 
 Shit. Which way do you go? 
@@ -307,11 +341,13 @@ You fumble with your gun for a second before sending a quick prayer to Cass. You
 T100: Hah! The Darkness strategy! You really are afraid of losing this match, aren’t you, KIPP? 
 
 <<char_right KipperlillySmug>>
-
 Kipperlilly: I’m not afraid, I’m being smart! Only a fool doesn’t make use of their greatest weapons!
 
+<<kristen Happy>>
+<<voiceline KristenHappy4>>
 Aw, she called you her greatest weapon.
 
+<<kristen Neutral>>
 Kristen: Alright! Now what?
 
 <<char_right KipperlillyHappy>>
@@ -322,12 +358,14 @@ Kipperlilly: Just stay right here and keep an eye out. I’m going in.
 <<kristen Surprised>>
 She sprints directly into the Darkness, and within seconds there’s a small cacophony of laser shots. Dings and buzzes of hits and misses, thumps of shoulders clipping walls and feet tripping around corners. 
 
+<<voiceline KipBespoke1>>
 You can hear Kipperlilly and T100 taunting each other, and soon realize that T100’s voice is getting closer. Kipperlilly is slowly leading them towards you.
 
 <<kristen Neutral>>
 You wait for T100 to stumble out of the darkness, obviously expecting further attack but not knowing where it might come from or even where they’ve ended up. You shoot immediately, nailing them in the chest while another laser shot appears from within the spell to simultaneously hit the back. 
 
 <<kristen Happy>>
+<<voiceline KristenHappy1>>
 T100’s vest lights up with dual sounds of failure, and an announcer declares a victory to KIPP (and partner).
 
 T100’s shoulders slump with a petty groan.
@@ -337,10 +375,11 @@ T100: Awwwwww, I was almost at nine months of being champion!
 <<char_right KipperlillySmug>>
 You snap your fingers to dispel the Darkness. Kipperlilly jumps down from the wall she’d climbed with a triumphant grin.
 
+<<voiceline KipHappy3>>
 Kipperlilly: Quite long enough, I think! 
 
 <<kristen Neutral>> 
-You half-expect her to rub salt in the wound, maybe by taunting T100 further or just reveling in her victory. Instead, she holds up a hand for T100 to high-five.
+You half-expect her to rub salt in the wound, maybe by taunting T100 further or just loudly reveling in her victory. Instead, she holds up a hand for T100 to high-five.
 
 <<char_right KipperlillyHappy>>
 Kipperlilly: Same time next month? 
@@ -357,7 +396,6 @@ When the person you assumed was a halfling is gone, you look back at Kipperlilly
 Kristen: Wait, is that an actual child?
 
 <<char_right KipperlillyNeutral>>
-
 Kipperlilly: Did you… not realize they’re a kid?
 
 Kristen: I thought they were another halfling! 
@@ -367,7 +405,7 @@ Kipperlilly looks at you for a long moment before busting out laughing.
 <<char_right KipperlillyHappy>>
 Kristen: They’re your size!
 
-Kipperlilly: They’re like, 12! And a half-elf.
+Kipperlilly: They’re like, twelve! And a half-elf.
 
 Kristen: Your epic laser tag rival is a little kid? 
 
@@ -381,33 +419,42 @@ She grins again.
 Kipperlilly: And so do I! Alongside official confirmation of my championship status! 
 -> I never doubted you!
   <<char_right KipperlillySmug>>
+  <<voiceline KipHappy1>>
   Kipperlilly: Of course you didn’t!
   <<add_points 2>>
 -> Does any of that championship status apply to me too?
   <<char_right KipperlillyNeutral>>
+  <<voiceline KipSurprised2>>
   Kipperlilly: Hmm, perhaps I can get you put down as an assist.
   <<add_points 1>>
 -> I don’t know if beating a kid is all that impressive.
   <<char_right KipperlillyAnnoyed>>
+  <<voiceline KipAnnoyed1>>
   Kipperlilly: It is when they’re the only one to ever hold a candle to me.
   <<add_points 0>>
 
 Kristen: I didn’t think you’d be someone who likes team games so much.
 
-Kipperlilly: Well, laser tag isn’t really a team game. But I’m not, like, <i>against</i> working with someone. I’d be heading to Salazar’s after graduation if I was.
+<<char_right KipperlillyNeutral>>
+Kipperlilly: Well, this kind of laser tag isn’t really a team game. But I’m not, like, <i>against</i> working with someone. I’d be heading to Salazar’s after graduation if I was.
+<<jump Date4Hint>>
+===
 
+title: Date4Hint
+---
 …y’know, while he was driving you home last week, Gorgug mentioned something he was working on for his own capstone project. He’d even asked you to test it out for him. Maybe…?
 
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly: …what?
+Kipperlilly: … what?
 
-<<kristen NervousBlush>>
+<<kristen Nervous>>
 Kristen: If I asked Riz to give you a note, would you take it without asking for anything in exchange?
 
 Kipperlilly: That’s not how bartering works.
 
-Kristen: …please? I promise you’ll like it.
+Kristen: … please? I promise you’ll like it.
 
+<<voiceline KipNeutral2>>
 Kipperlilly: Ugh. Whatever. Maybe if I’m in a good mood.
 
 <<kristen Happy>>
