@@ -23,8 +23,10 @@ public class SaveProfiles : MonoBehaviour
 
     public void isSelected(){
         selectedSave = int.Parse(EventSystem.current.currentSelectedGameObject.transform.parent.name);
+        bool saveFound = (SaveManager.findSave(selectedSave) != null) ? true : false;
 
-        Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
+        loadButton.interactable = saveFound;
+        deleteButton.interactable = saveFound;
     }
 
     public void Close(){
@@ -49,7 +51,6 @@ public class SaveProfiles : MonoBehaviour
         SaveManager.DeleteData(selectedSave);
         SetScreenshots();
         SetNames();
-        Unselect(false);
     }
 
     private void SetScreenshots(){
@@ -67,12 +68,5 @@ public class SaveProfiles : MonoBehaviour
             saves[save - 1].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getPlayerName() : "";
             saves[save - 1].transform.Find("Location").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getLocation() : "";
         }
-    }
-
-    private void Unselect(bool saveFound){
-        EventSystem.current.SetSelectedGameObject(null);
-
-        loadButton.interactable = saveFound;
-        deleteButton.interactable = saveFound;
     }
 }
