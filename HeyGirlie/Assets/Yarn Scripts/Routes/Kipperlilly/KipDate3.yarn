@@ -1,15 +1,23 @@
 ﻿title: Date3
 // max 9 points
 ---
-January 30
-<<char_right transparent>>
+March 17
+<<location "PLACEHOLDER">>
+<<set $date_points = 0>>
+
 <<kristen Sad>>
-You’re the worst big sister in the entire world. All this bullshit about dates and the Spring Fling and flirting has somehow distracted you from the things in your life that are actually important, and now you have to fix it. Gorgug must recognize something in your expression, because he drops everything to give you a ride back to Mordred the moment you ask and doesn’t even pry the way your other friends would. You barely remember to thank him before you’re flying out of the Hangvan, brushing off Sandra Lynn’s concern and Jawbone’s kindness as you sprint to your room.
+
+You’re the worst big sister in the entire world. All this bullshit about dates and the Spring Fling and flirting has somehow distracted you from the things in your life that are actually important, and now you have to fix it. 
+<<voiceline KristenSad2>>
+Gorgug must recognize something in your expression because he drops everything to give you a ride back to Mordred and doesn’t even pry the way your other friends would. You barely remember to thank him before you’re flying out of the Hangvan, brushing off Sandra Lynn’s concern and Jawbone’s kindness as you sprint to your room.
 
 How the fuck did you forget about Cork’s birthday? You don’t even have a present ready for him.
 
-You find a sheet of blank paper, fold it in half, and attempt to draw an ear of corn with a smiley face, giving it a speech bubble that says “Happy Birthday!”. It looks even shittier than you thought it would. It’s not like Cork would care; he’s probably going to scrunch up his nose no matter what you give him, since he’s recently hit that particular age in which boys hate open affection. But he would know that you’d half-assed it, and you would know that he knew, and you would rather shrivel up and die before letting any of your siblings think you forgot about them.
+You find a sheet of blank paper, fold it in half, and attempt to draw an ear of corn with a smiley face, giving it a speech bubble that says “Happy Birthday!”. It looks even shittier than you thought it would. 
 
+It’s not like Cork would care; he’s probably going to scrunch up his nose no matter what you give him, since he’s recently hit that particular age during which boys hate open affection. But he would know that you’d half-assed it, and you would know that he knew, and you would rather shrivel up and die before letting any of your siblings think you forgot about them.
+
+<<kristen Neutral>> 
 Your crystal lies heavy in your pocket.
 -> dude i think im having a panic attack over a birthday card lol
   KipperlillyText: ... have you ever had a panic attack before, Applebees? 
@@ -22,7 +30,6 @@ Your crystal lies heavy in your pocket.
   <<add_points 1>>
 
 <<kristen Awkward>>
-
 You stare at your phone in horror. You texted <i>Kipperlilly?!</i> You meant to text literally anyone else, and now the bane of your presidential career knows exactly how much of a mess you still are.
 
 KristenText: hey can u pretend i never sent that
@@ -35,6 +42,8 @@ There’s a pause. A speech bubble with three dots pops up before disappearing.
 
 KipperlillyText: Oh, you’re actually panicking, aren’t you.
 
+<<kristen Surprised>>
+<<voiceline KristenSurprised1>>
 KristenText: ??????????
 
 KipperlillyText: Please, you can’t blame me for thinking you’re messing with me after all of last year.
@@ -44,7 +53,6 @@ KipperlillyText: What’s the full context?
 KipperlillyText: And don’t think I can’t parse it out for myself. All that would do is waste my time and piss me off. Just tell me what’s going on, Applebees.
 
 <<kristen Sad>>
-
 It’s easier to vent everything to Kipperlilly than it should be. Maybe it’s because you’re not really friends. Maybe it’s because you don’t expect any empty sympathy from her the way your party of only children-plus-Adaine would offer. Maybe there’s something about Kipperlilly herself that makes it easy to confess minor shames to her.
 
 KipperlillyText: Well. That’s a lot. 
@@ -56,7 +64,6 @@ KristenText: i dont know shit about baking unless its readymade cookie dough fro
 KipperlillyText: Wow, that’s pretty sad. You should try it sometime.
 
 <<kristen Neutral>>
-
 KristenText: like... today maybe? with someone who already knows so much about baking things like cupcakes? hint hint??
 
 Okay, that sounded pretty desperate, but in your defense, you <i>are</i> desperate. Hopefully she takes pity on you.
@@ -65,7 +72,7 @@ KipperlillyText: Hmm. What do I get out of it?
 
 Rogues and their favors. Surely you can think of something Kipperlilly would consider worth her while.
 -> ill steal another one of riz’s books for u
-  KipperlillyText: You really know how to tempt a girl.
+  KipperlillyText: Ha. You really know how to tempt a girl.
   <<add_points 2>>
 -> literally anything u want
   KipperlillyText: Aren’t you already doing that for the office key? 
@@ -91,7 +98,7 @@ You send Kipperlilly the address to Mordred Manor and spend the next twenty minu
 Kipperlilly: You live with the school counselor?
 
 <<kristen Awkward>> 
-
+<<voiceline KristenGreeting2>>
 Belatedly, you remember reading all of Jawbone’s notes on his sessions with Kipperlilly. For the first time, you feel a bit guilty about it.
 
 Kristen: Ah, yeah, sorry, should’ve said something —
@@ -104,6 +111,7 @@ She begins taking things out of the bag and placing them in a certain order on t
 
 Kipperlilly: I thought you might already have the basics, but I wanted to be prepared in case. What kind of cake do you want to make?
 
+<<kristen Nervous>>
 Kristen: Um, growing up, the only cakes we had were to celebrate harvest season and mostly made of cornmeal. And Mom would cut the sugar in half. So.
 
 Kipperlilly stares at you.
@@ -113,6 +121,7 @@ Kipperlilly: Right, so we’re <i>not</i> doing that. Chocolate? Vanilla? Give m
 
 You shrug helplessly. She rolls her eyes and storms past you to the pantry.
 
+<<kristen Neutral>>
 <<char_right KipperlillyAnnoyed>>
 Kipperlilly: Geez, this is fucking dire.
 
@@ -142,37 +151,36 @@ Kipperlilly pauses from her task of placing cupcake liners in a muffin tin.
 Kipperlilly: I didn’t see any kids on the way in.
 
 <<kristen Awkward>>
-
+<<voiceline KristenAwkward3>>
 Kristen: Oh, my brothers don’t live here. They, um, live with my parents. In the family home.
 
-Kipperlilly studies you. You distract yourself by dumping the sugar into the egg-milk mixture she brought with her.
+Kipperlilly studies you. You distract yourself by dumping sugar into the egg-milk mixture she brought with her.
 
 Kipperlilly: Brothers, plural? How many of you are there?
 
 <<kristen Neutral>>
-
 She doesn’t ask after the obvious. You’re more grateful than you thought you’d be.
 
 Kristen: Three younger brothers and me. Bucky’s a sophomore paladin at Aguefort; you’ve probably seen him around.
 
-Kipperlilly: The little brat who’s always trying to get people to join that PrayerChain app?
+Kipperlilly: The brat who’s always trying to get people to join that PrayerChain app?
 
 <<kristen Awkward>>
-
 You wince.
 
 Kipperlilly: I see the resemblance.
 
 <<kristen Neutral>>
-
 Kristen: Hey, now.
 
 Kipperlilly: Don’t overmix. They’ll turn out horrible.
 
 Kristen: Is that experience talking?
 
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: Unfortunately. Ruben has absolutely no knack for cooking <i>or</i> baking.
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly: This recipe is pretty forgiving, though. My mom showed me how to make these cupcakes for my fifth birthday, and we’ve baked them every year since.
 
 <<kristen SoftBlush>>
@@ -188,11 +196,11 @@ You look at the bottle of sprinkles Kipperlilly dug up. It’s around half-full.
   <<voiceline KipSurprised1>>
   Kipperlilly: Good grief. You’re worse than I was as a six-year-old.
   <<add_points 1>>
--> You carefully measure out the tablespoon.
+-> Carefully measure out the tablespoon.
   <<voiceline KipNeutral1>>
   Kipperlilly: How precise of you.
   <<add_points 1>>
--> You pour some into your mouth.
+-> Pour some into your mouth.
   <<voiceline KipSurprised1>>
   Kipperlilly: I don’t know what I expected.
   <<add_points 1>>
@@ -208,13 +216,12 @@ Kipperlilly: This is why organized religion should be a crime.
 Kipperlilly: The sprinkles bleed into the cake during baking and leave behind colorful confetti-like spots. 
 
 <<kristen Happy>>
-
+<<voiceline KristenHappy2>>
 Kristen: Oh, that <i>is</i> pretty fun.
 
 Kipperlilly: Oh, <i>very</i> good, Applebees. A joke absolutely no one’s made before, ever!
 
 <<kristen Neutral>>
-
 She turns to an invisible crowd and gestures towards you.
 
 <<char_right KipperlillySmug>>
@@ -231,19 +238,18 @@ She lets you do the messy work. You’re happy enough to do it, so you don’t c
 Kipperlilly: Y’know, you still haven’t explained exactly why you were so freaked out earlier. 
 
 <<kristen Sad>>
-
 Kristen: I don’t really want to talk about it.
 
 Kipperlilly: I get that, really I do, but you’re the one who dragged me across town on half an hour’s notice to bake these fucking cupcakes. I’d like to know exactly what this actually means to you.
 
 You can’t really argue with that.
-->I don’t really get to see my brothers all that often, so I focus on the big occasions. Like birthdays.
+-> I don’t really get to see my brothers all that often, so I focus on the big occasions. Like birthdays.
   <<voiceline KipNeutral1>>
   Kipperlilly: Hmm. Makes sense.
   <<add_points 2>>
 -> Can’t an older sister want to do something nice for her brothers?
   <<voiceline KipNeutral1>>
-  Kipperlilly: Does an older sister really panic that much over something she just randomly chose to do?
+  Kipperlilly: Does an older sister panic that much over something she just randomly chose to do?
   <<add_points 1>>
 -> I was gonna try to bean him in the head with them. Target practice!
   <<char_right KipperlillyAngry>>
@@ -305,6 +311,7 @@ Kipperlilly: Grandma, actually.
 <<char_right KipperlillySurprised>>
 Kipperlilly freezes, as if it’s incredibly embarrassing for her to even have grandparents, let alone talk about them.
 
+<<kristen Soft>>
 Kristen: Oh, that’s pretty cool. I haven’t talked to my grandparents in ages. 
 
 <<char_right KipperlillyNeutral>>
@@ -337,6 +344,7 @@ Kipperlilly: A–anyhow! Do these meet your standards, Applebees?
 Honestly, they look kinda bad. You overfilled a couple cupcakes and ran out of batter for others, and one of them is burnt along one side. You tried to compensate for cupcake size by adding more frosting on the smaller ones, and now they’re sagging. You ran out of sprinkles before you could finish decorating all of the cupcakes, so only half are dotted with little rainbow nonpareils.
 
 <<kristen Happy>>
+<<voiceline KristenHappy4>>
 Kristen: They’re perfect.
 
 <<char_right KipperlillyNeutral>>
@@ -373,10 +381,9 @@ Kipperlilly: You’re welcome.
 <<voiceline KipDateFailure2>> 
 Kipperlilly: If you ever tell anyone I was here, you’re never seeing that key.
 
-<<kristen SoftBlush>>
-
+<<kristen Soft>>
+<<voiceline KristenRomanticKip1>>
 Before you can say anything in response, she turns around and darts down the path to the road, never looking back. 
 
 <<jump Cassandra>>
 ===
-
