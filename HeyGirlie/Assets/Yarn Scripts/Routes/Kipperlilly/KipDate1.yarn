@@ -1,32 +1,39 @@
 ﻿title: Date1
 // max 7 points
 ---
-January 22 // just add a new line at the start!
+March 17
 // scene 0- kristen finding out she needs the key
-
+<<location "PLACEHOLDER">>
+<<declare $date_points = 0>>
+<<kristen Happy>>
+<<voiceline KristenGreeting3>>
 Welcome to senior year! Now that you’re officially the senior class president, you’re excited to hit the ground running with all of your responsibilities!
 
-...is what you’d say if you could. Unfortunately, it seems that some of your responsibilities are locked behind the door of the president’s office, which Riz has already told you is booby-trapped to the nines. He offered to disarm it for you, but traps reset and you don’t want to bother him every time you have to use the room, so it looks like you’re just going to need the key.
+<<kristen Nervous>>
+...is what you’d say if you could. Unfortunately, it seems that a bunch of your responsibilities are locked behind the door of the president’s office, which Riz has already told you is booby-trapped to the nines. He offered to disarm it for you, but traps reset and you don’t want to bother him every time you have to use the room, so it looks like you’re just going to need the key.
 
-You’d think finding a key to a school door would be easy, but you heard from  Adaine, who heard from Fabian, who heard from Mazey, who heard from... well, who heard from <i>someone</i>, it went missing after a particular evil barbarian teacher had a meeting with the robot principal last year. According to that same grapevine, he’d given it to someone else. A very specific someone. Someone who you have a sinking suspicion isn’t going to play too nice about giving it back.
+<<kristen Neutral>>
+You’d think finding a key to a school door would be easy, but you heard from  Adaine, who heard from Fabian, who heard from Mazey, who heard from... well, who heard from <i>someone</i>, that it went missing after a certain evil barbarian teacher had a meeting with the robot principal last year. According to that same grapevine, he’d given it to someone else. A very specific someone. Someone who you have a sinking suspicion isn’t going to play too nice about giving it back.
 
 But you’re going to stay optimistic! Surely she doesn’t hate you that much anymore, right? And surely she doesn’t want to hold onto a piece of junk like a key she can’t use. This should be the simplest task of your entire presidential career.
 
 // scene 1- kipperlilly at community service
 
-Apparently if you bust out of Hell without going through all of the proper channels, you have to amass 1,000 volunteer hours helping the group of people you scorned badly enough to get sent to damnation. 
+Apparently if you bust out of Hell without going through all of the proper channels, you have to earn 1,000 community service hours helping the group of people you scorned badly enough to get sent to damnation, which is why you’re walking up to a table with a sign that reads “LITTER-B-GONE VOLUNTEER CHECK-IN”. 
 
-Honestly, though, community service is pretty cool. Or, well, at the very least it’s not like doing community service has ever killed anyone. Might as well join in. You give the incredibly bored volunteer manager a winning smile, pull on a pair of disposable gloves, and take a trash bag.
-
-You find Kipperlilly in a high-vis vest chasing an empty chip bag with a trash grabber. She’s running in a full sprint, which would be far more impressive if the breeze hadn’t floated the bag just out of her reach three times in as many seconds. Finally, she manages to snag it and stuff it triumphantly in a trash bag before she turns and notices you.
-
-She freezes for a brief moment before she straightens up, flicking her hair behind her shoulder and turning her nose up at you. It’s kind of impressive, since she’s at least a full two feet shorter than you.
+Honestly, community service is pretty cool. Or, well, at the very least it’s not like doing community service has ever killed anyone. Might as well join in. You give the incredibly bored volunteer manager a winning smile, pull on a pair of disposable gloves, and take a trash bag.
 
 <<char_right KipperlillyNeutral>> 
+You find Kipperlilly in a high-vis vest chasing an empty chip bag with a trash grabber. She’s running in a full sprint, which would be far more impressive if the breeze hadn’t floated the bag just out of her reach three times in as many seconds. Finally, she manages to snag it and stuff it triumphantly in a trash bag before she turns and notices you.
+She freezes for a brief moment before she straightens up, flicking her hair behind her shoulder and turning her nose up at you. It’s kind of impressive, since she’s at least a full two feet shorter than you.
+
 Kipperlilly: Oh, laugh it up, Applebees.
 
+<<kristen Grin>>
+<<voiceline KristenGreetingKip1>>
 Kristen: Hey, Kipperlilly.
 
+<<kristen Neutral>>
 She glares at you, then sighs heavily. You notice a tiny bit of cellophane embedded in the ground and spend a second digging it up to throw in your own bag. If you’re going to have to talk to Kipperlilly anyway, you might as well help her clean up a bit.
 
 <<char_right KipperlillyAnnoyed>> 
@@ -62,6 +69,8 @@ Kipperlilly: Wait. Wait. Are you telling me Aguefort got you to track me down be
 
 Kipperlilly: Aren’t you Bad Kids, like, his favorites? Hasn’t he bent reality multiple times just to save your asses from being perma-dead? Isn’t his daughter one of your honorary party members when she’s not at her job? He’s not going to help <i>you</i>, of all people, get into a room that’s barely more than a glorified supply closet right down the hall from his office?
 
+<<kristen Neutral>>
+<<voiceline KristenNeutral2>>
 Kipperlilly: ...
 
 Kipperlilly stares at you. For a brief moment, she looks almost concerned that you’ve somehow lost Arthur’s regard. Is she actually worried about you? Maybe getting this key will be even simpler than you thought!
@@ -71,11 +80,13 @@ Kipperlilly stares at you. For a brief moment, she looks almost concerned that y
 Kipperlilly: This is the best day of my life.
 
 <<kristen Sad>>
+<<voiceline KristenSad1>> 
 Never mind. 
 
 Kipperlilly smirks victoriously before turning as if to walk away, potentially taking your only chance of getting into the office with her.
 
 <<kristen Surprised>>
+<<voiceline KristenSurprised3>>
 Kristen: Wait! Can’t you just give it to me? 
 
 <<char_right KipperlillySmug>> 
@@ -115,7 +126,7 @@ There has to be a way to convince her.
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
-She keeps walking around to different bits of garbage on the ground, forcing you to follow if you want to keep talking to her. It’s a petty power move, though somewhat undercut by the fact that you’re both just picking up trash on the side of the road, and her vest is obviously a size too big for her.
+She keeps walking around to grab different bits of litter, forcing you to follow if you want to keep talking to her. It’s a petty power move, though somewhat undercut by the fact that you’re both just picking up trash on the side of the road, and her vest is obviously a size too big for her.
 
 Kristen: What are you even doing with it?
 
@@ -127,10 +138,12 @@ Kipperlilly: My machinations have machinations that you could never dream of. Fo
 <<char_right KipperlillyNeutral>>
 Kipperlilly: I suppose I’ll give it to the next president at the end of the year, though. It’d be pretty lame if a college student was that stuck on high school politics. Ooh, or maybe I could convince Eugenia to hold onto it so that the next rogue to track her down gets a bonus prize. It could be a new Aguefort tradition.
 
+<<kristen Angry>>
 Great. You kind of forgot how annoying Kipperlilly can be sometimes. Obviously she just wants to be stubborn until you give up and go home. 
 
 But you’re Kristen Applebees. You’ve punched at least one god in the face. You force yourself into your shitty parents’ lives every few weeks just to talk to your little brothers. Kipperlilly may be stubborn, but she’s dealing with the president of stubborn. 
 
+<<kristen Neutral>> 
 Kristen: Alright, I get it. I can read between the lines.
 
 Kristen: But come on! We’re seniors now, surely this kind of pettiness is beneath you.
@@ -209,6 +222,7 @@ Kipperlilly: Huh. Alright then.
 
 Kipperlilly: We’re playing this game now? Fine. Let’s play.
 
+<<voiceline KristenNeutral3>>
 Kristen: Game? What game?
 
 Instead of actually answering your question, Kipperlilly takes a step back and chuckles to herself.
@@ -216,6 +230,8 @@ Instead of actually answering your question, Kipperlilly takes a step back and c
 <<voiceline KipHappy1>>
 Kipperlilly: Carrot and stick. You want that stupid key that badly? You’re going to have to work for it. New concept for you, I know.
 
+<<kristen Angry>>
+<<voiceline KristenAngry3>>
 Kristen: Hey, I work plenty hard! Whatever you’re thinking, I’m totally up for it. 
 
 <<char_right KipperlillyNeutral>>
@@ -226,6 +242,7 @@ Kipperlilly: If you can prove to me that you deserve this key, then I’ll retri
 
 Kipperlilly: You better be ready to fucking jump when I tell you to, ‘cause otherwise there’s no way you’re getting that key from me.
 
+<<kristen neutral>>
 -> Okay, fine. Challenge fucking accepted, Copperkettle.
   <<voiceline KipSmug2>>
   Kipperlilly: Hmph. You better be prepared.
@@ -268,7 +285,14 @@ Surely this won’t result in anything too embarrassing, right? Right?
 Kipperlilly: ...did you need anything else from me?
 
 Kristen: Uh, nope, I think that’s it.
+<<voiceline KristenFarewellKip1>>
 
+<<jump Date1Hint>>
+===
+
+
+title: Date1Hint
+---
 <<voiceline KipFarewell1>>
 Kipperlilly: Okay, then. Stop stealing my trash. Go pick some up somewhere else. I need to research something for my capstone project next week, and I have to make up for the litter I can’t pick up then.
 
