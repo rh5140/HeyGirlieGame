@@ -1,19 +1,24 @@
 ﻿title: Date2
-// max 10 points
+// max 11 points
 ---
-January 22
+March 17
+<<location "PLACEHOLDER">>
+<<set $date_points = 0>>
 <<char_right transparent>>
+<<kristen Neutral>>
 You thought Kipperlilly would blow up your phone with a list of ridiculous, undoable demands within the next twenty-four hours. Instead, it takes her almost a full week to even acknowledge your existence.
 
 KipperlillyText: Library, after school. I can’t force you to be punctual but at least try to be on time, Applebees.
 
-She has to be the only person your age in the world who texts like she’s writing an essay.
+She <i>has</i> to be the only person your age in the world who texts like she’s writing an essay.
 
 When the final bell rings, you haphazardly sweep all of your stuff into your backpack and head to the library, expecting to find Kipperlilly waiting near the front door, or at least within eyeshot of it. 
 
-There are a handful of students studying either by themselves or in groups at tables. A couple browse the shelves. You don’t recognize any of them. No sign of a smug halfling ready to blackmail you. 
+There are a handful of students studying either by themselves or in groups at tables. A couple browse the shelves. 
 
-You resign yourself to long hours of wandering in search of her. Maybe this is your first task: waste your time attempting to track down a rogue that was small enough to fit in an air vent or between the pages of a book just for her amusement.
+No sign of a smug halfling ready to blackmail you. 
+
+:You resign yourself to long hours of wandering in search of her. Maybe this is your first task: waste your time attempting to track down a rogue that was small enough to fit in an air vent or between the pages of a book just for her amusement.
 
 Suddenly, something lands on your shoulders and wrenches you off-balance, yanking you backwards by your ponytail. 
 
@@ -21,6 +26,7 @@ Suddenly, something lands on your shoulders and wrenches you off-balance, yankin
 ???: Sneak attack!
 
 <<kristen Surprised>>
+<<voiceline KristenSurprised2>>
 Kristen: AAAAH! 
 
 The librarian shushes you, but you don’t have time to acknowledge that. You land on your back with a loud “OOF!” as the wind is knocked out of your lungs. The weight rolls over just enough to pin you down, a pencil held to your neck. The blunt end presses in slightly before letting up, and you roll over to see Kipperlilly standing up next to you, dusting off her skirt and shaking her head in disappointment.
@@ -37,6 +43,7 @@ Kipperlilly: Tsk. I’m glad I brought you here, you might learn something.
 Kipperlilly: Lesson number one: 80% of ambushes occur in places familiar to the victim. Don’t tell me you Bad Kids don’t practice for those. 
 
 <<kristen Neutral>>
+<<voiceline KristenNeutral2>>
 Kristen: Not really?
 
 Kipperlilly: Hmm. More fun for me, then.
@@ -56,6 +63,7 @@ Kipperlilly: Hmm. More fun for me, then.
   Kipperlilly: Not my fault Gukgak doesn’t care enough about you to prepare you for an ambush.
   <<add_points 0>>
 
+<<kristen Sad>>
 You resign yourself to more sneak attacks in your future. Maybe you should ask Riz for pointers next time you see him.
 
 <<char_right KipperlillyNeutral>>
@@ -63,12 +71,15 @@ Kristen: Alright, Kipperlilly, what do you need me to do? Unless ambushing me to
 
 Kipperlilly: Please, you weren’t even a decent challenge. C’mon, this way.
 
+<<kristen Neutral>>
 She leads you through a maze of bookshelves to a table barely big enough for the two of you and produces notebooks, stationery, and a stack of library books on heists and thieves. What could she want you to do with these? She knows you’re not exactly the most academically minded student out there. 
 
 Kristen: … am I supposed to read these for you or…?
 
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly: No, don’t touch anything. I need some quotes from <i>Encyclopedia Speculatus.</i> There’s a chapter in there on circumventing magical detection, and <i>your</i> rogue has the only copy out on loan.
+Kipperlilly: No, don’t touch anything. You’ll fuck up my system.
+
+Kipperlilly: I need some quotes from <i>Encyclopedia Speculatus.</i> There’s a chapter in there on circumventing magical detection, and <i>your</i> rogue has the only copy out on loan.
 
 Kristen: Riz? Why would he have it?
 
@@ -81,7 +92,7 @@ Kristen: And then you’ll give me the key?
 
 <<voiceline KipAnnoyed2>>
 Kipperlilly: ... lesson number two is going to be on how multistep plans work. Of course not. This is step one of getting the key. 
--> Alright! Let’s get some pictures!
+-> In that case, let’s get some pictures!
   <<voiceline KipNeutral2>>
   Kipperlilly: That’s what I like to hear, Applebees.
   <<add_points 2>>
@@ -91,19 +102,19 @@ Kipperlilly: ... lesson number two is going to be on how multistep plans work. O
   Kipperlilly: I knew you’d see it my way.
   <<add_points 1>>
 -> What exactly are you going to use that chapter for?
-  <<Annoyed>>
+  <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly: Literally just homework. This draft’s due in two days. What, do you think I’m using you for my latest plan to end the world? Even if I <i>was</i>, why would I tell you that?
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
 
-Now that you think about it, you do remember Riz stressing about some insane capstone project he has to do this year. It’s like 120% of his grade; when Adaine asked how <i>that</i> worked, he said it could cover some of his missing credits from freshman year when you were all in jail.
+Now that you think about it, you do remember Riz stressing about some insane capstone project he’s working on this year. It’s something like 120% of his grade; when Adaine asked how <i>that</i> worked, he said it could cover some of his missing credits from freshman year when you were all in jail.
 
 It’s also something you have absolutely nothing to do with. He might get suspicious of ulterior motives if you suddenly ask for pictures of some book about heists and traps. Mentioning Kipperlilly probably wouldn’t go over very well.
 
 <<kristen Awkward>>
-
+<<voiceline KristenAwkward2>>
 KristenText: hey riz :) big favor to ask
 -> does ur project have anything about getting around magic detection? tryin to get my president shit done, adaine and ayda are busy, and its kinda urgent lol
   Kristen: Riz trusts me enough to not think too hard about it, and Arthur’s crazy enough to, like, set up magical spyware on the student president. Probably.
@@ -118,7 +129,6 @@ KristenText: hey riz :) big favor to ask
 Riz doesn’t reply immediately. You’re not surprised; he refused to drop any of the clubs he joined last year. Apparently, it implies to colleges that he’ll just give up on his responsibilities.
 
 <<kristen Neutral>>
-
 Kristen: Yeah, he’s probably not gonna answer right away.
 
 Kipperlilly is already opening another book and reading through it, jotting things down on sticky notes and marking the pages as she goes.
@@ -133,7 +143,7 @@ Kipperlilly slowly looks up at you, incredulous. You replay your words in your h
 
 Kipperlilly: Like everything else at this school, library due dates are a suggestion. He’s had it for two months now. He’s not returning it.
 
-<<char_right KipperlillyNeutral>>
+<<char_right KipperlillySmug>>
 Kipperlilly: Just like how I’m not returning <i>these</i>.
 
 She pats the book she’s holding before opening another.
@@ -164,7 +174,7 @@ Kipperlilly: I have to design a security system based on available resources and
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
-Kipperlilly: We have an understanding. If we need something from the other person’s cache, we set the air-conditioning down one degree and write what we need in one of the vents. If the other person agrees, they set the temperature <i>up</i> one degree. Then, we make use of one of fifteen dead drop locations to make the trade, all without having to speak to each other face-to-face.
+Kipperlilly: We have an understanding. If we need something from the other person’s cache, we set the air-conditioning down one degree and write what we need in one of the vents. If the other person agrees, they set the temperature <i>up</i> one degree. Then, we make use of one of fifteen dead drop locations on-campus to make the trade without having to speak to each other face-to-face.
 
 Kipperlilly: It’s really not that complicated.
 
@@ -173,31 +183,31 @@ You have the belated realization that you are being used to circumvent the deran
 Oh well. A bit late to back out now. 
 
 <<kristen Grin>>
-
 Kristen: You know, I’m actually not all that surprised Riz set this kind of thing up with you. He’s a great guy, but man is he such a rogue. Always gotta have a ten-step plan for everything. That’s what you’re like, right? Plans upon plans, or whatever you said —
 
 <<char_right KipperlillyAnnoyed>>
 Kipperlilly: Shhh. I’m not getting booted from the library because you can’t ever shut up, Applebees.
 
 <<kristen Neutral>> 
-
 You look around. There’s no one else near enough to even hear you, let alone to be bothered by your conversation.
 
 Kristen: I don’t think Ms. Dimweather has ever actually kicked someone out of the library in her life.
 
 <<voiceline KipSad1>>
+<<char_right KipperlillyNeutral>>
 Kipperlilly glares at you before deliberately turning back to her books.
 
 Kristen: Oh, come on, don’t be like that.
 
 Kipperlilly: …
 
-An idea strikes you, and you pull out your crystal. 
+A brilliant idea strikes you, and you pull out your crystal. 
 
 <<kristen Grin>>
-
+<<voiceline KristenHappy3>>
 KristenText: heyyyyyy kipperlilly :)
 
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly’s crystal vibrates, and she glances at it. A beat passes, then she looks up at you, unamused.
 
 Kristen: You’re the one who said I needed to shut up! 
@@ -208,6 +218,8 @@ KipperlillyText: I specifically told you not to text me.
 
 KristenText: u also told me not to get u kicked out of the library
 
+<<kristen Neutral>>
+<<char_right KipperlillyNeutral>>
 Kipperlilly pointedly stands one of her books up so it blocks her from your view. Good thing you don’t need line of sight to send a text.
 -> what if he doesn’t reply today
   KipperlillyText: Then you’ll have to get it another way, won’t you?
@@ -227,7 +239,7 @@ KristenText: besides this how has school been :)
 
 KipperlillyText: You are incorrigible.
 
-<<kristen SoftBlush>>
+<<kristen Soft>>
 <<voiceline KipSad1>>
 You heart-react that one. Kipperlilly audibly scoffs.
 
@@ -237,7 +249,6 @@ KristenText: thanks!
 Kipperlilly actually takes down her book-wall to give you a truly disgusted look. You send another smile emoji. She rolls her eyes dramatically before going back to studying, leaving the book flat on her table this time.
 
 <<kristen Neutral>>
-
 You mess around on your crystal for a bit, ignoring your own homework in favor of Cantrip Crush. Kipperlilly slowly relaxes, focusing on her schoolwork rather than eyeing her crystal like it’s going to bite her.
 
 After about ten levels, you feel something vibrate on the table. Kipperlilly immediately glares at you again, but you hold your hands up in surrender.
@@ -246,12 +257,14 @@ Kristen: Not me this time!
 
 Kipperlilly still narrows her eyes suspiciously before glancing at her crystal. You lean over the table, curious for any glimpse into Kipperlilly’s life. 
 
-You barely manage to catch a text from “Mom” starting with ‘Good afternoon baby!’ with four distinct emojis that all include a heart before the crystal is jerked out of view. Kipperlilly holds it close to her chest, her cheeks flushing red.
+<<char_right KipperlillySurprised>>
+You barely manage to catch a text from “Mom” starting with “Good afternoon baby!” with four distinct emojis that all include a heart before the crystal is jerked out of view. Kipperlilly holds it close to her chest, her cheeks flushing red.
 
 <<kristen Happy>>
-
+<<voiceline KristenHappy4>>
 Kristen: Awwwwww —
 
+<<char_right KipperlillyNeutral>>
 <<voiceline KipAnnoyed1>>
 Kipperlilly: Shut the fuck up, Applebees.
 
@@ -278,23 +291,20 @@ KipperlillyText: She was asking what I wanted for dessert tonight, if you must k
 KristenText: awwww its sweet that shes checking in
 
 <<voiceline KipSad1>>
-Kipperlilly scoffs and rolls her eyes before clicking her crystal off and putting it face-down on the table. 
+Kipperlilly scoffs and rolls her eyes before pointedly clicking her crystal off and putting it face-down on the table. 
 
 <<kristen Neutral>> 
-
 Before you can come up with another banger text to prod her with, you get a notification of your own, followed by six more. 
 
 <<kristen Happy>>
-
 Kristen: Hey, Riz finally replied!
 
-Kipperlilly perks up immediately, nearly standing on her chair to lean over and try to see your crystal.
+Kipperlilly perks up immediately, nearly standing on her chair to lean over and try to see your crystal as it buzzes twice more.
 
-<<char_right KipperlillySurprised>> 
+<<char_right KipperlillyHappy>> 
 Kipperlilly: Well?
 
 <<kristen Neutral>>
-
 You scroll through the messages. 
 
 RizText: ?
@@ -313,45 +323,46 @@ RizText: :(
 
 RizText: i’m kidding
 
-RizText: though if you ARE planning a heist let me in on it, madam pres
+RizText: though if you ARE planning a heist let me in on it, yeah?
 
-Riz sends around twenty pictures of dense text. He’s such a good friend. Too bad you and Kipperlilly are both exploiting his loyalty right now. You forward everything to Kipperlilly, who studies her crystal before breaking out into giddy giggles.
+Riz then sends around twenty pictures of dense text. He’s such a good friend. Too bad you and Kipperlilly are both exploiting his loyalty right now. You forward everything to Kipperlilly, who studies her crystal before breaking out into giddy giggles.
 
 <<char_right KipperlillyHappy>>
 <<voiceline KipHappy1>>
 Kipperlilly: HA! Take <i>that</i>, Gukgak. 
 
+<<kristen Nervous>>
 You wonder how guilty you should feel. It didn’t <i>hurt</i> Riz, it just helped Kipperlilly. And it was to get the key! He’ll understand, right? 
 
 Kipperlilly begins tapping away at her crystal while you reckon with the gravity of what you’ve just participated in today. 
 
+<<kristen Neutral>>
 Kristen: Uh, what are you doing?
 
 <<char_right KipperlillySmug>>
 Kipperlilly: <i>Gloating.</i>
 
 <<kristen Surprised>>
-
 Before you can ask what the hell that means, your crystal rings. Riz’s caller ID flashes across the screen. Oh dear.
 
 <<kristen Awkward>>
-
+<<voiceline KristenAwkward1>>
 Riz: KRISTEN. APPLEBEES. 
 
 Kristen: Heyyyy —
 
 Riz: DON’T YOU FUCKING “HEY” ME. ARE YOU WITH HER RIGHT NOW?
 
-You go to answer, but Kipperlilly is quicker, physically climbing over the table to yank your crystal out of your hand and hit the speaker button.
+You go to answer, but Kipperlilly is quicker, physically climbing onto the table to yank your crystal out of your hand and hit the speaker button.
 
 Kristen: Dude, <i>you’re</i> the one who didn’t want to get kicked out —
 
-<<char_right KipperlillyHappy>>
 <<voiceline KipHappy3>>
 Kipperlilly: Suck it, Gukgak! That’s a whole chapter for FREE!
 
 Riz: I can’t believe you tricked my own friend into betraying me -
 
+<<char_right KipperlillyLaugh>>
 Kipperlilly: She acted on her own free will and with full knowledge of what I requested!
 
 Riz: KRISTEN?
@@ -362,15 +373,16 @@ Kristen: I had to do it, dude! For the key! She’s gonna give me the key!
 
 Riz: I can’t believe this. A whole chapter for absolutely nothing. Now I’m gonna have to give her, like, five extra diagrams for those letters I’ve been needing. FIVE. DO YOU KNOW HOW MANY THAT IS, KRISTEN?
 
+<<char_right KipperlillySmug>>
 <<voiceline KipHappy2>>
 Kipperlilly: SUFFER!
 
 Kipperlilly ends the call before you can stop her.
 
 <<kristen Neutral>> 
-
 Kristen: That’s seriously not enough to get the key?
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly: I told you, Applebees. I’m making you work for it.
 -> Fine, fine. I can handle a little hard work.
   <<voiceline KipHappy1>>
@@ -386,7 +398,7 @@ Kipperlilly: I told you, Applebees. I’m making you work for it.
   Kipperlilly: Aww, giving up so soon? 
   <<add_points 0>>
 
-Kristen: I’m not messing with my friends again. 
+Kristen: I’m not messing with my friends again. Once was more than enough for me.
 
 <<char_right KipperlillyNeutral>>
 <<voiceline KipNeutral2>>
@@ -397,7 +409,6 @@ You shoulder your backpack with a sigh, waiting for Kipperlilly to pack her thin
 Kipperlilly: Didn’t your parents teach you any manners?
 
 <<kristen Surprised>> 
-
 Kristen: Huh?
 
 Kipperlilly: It’s <i>polite</i> to hold the door open for a lady. Duh.
@@ -405,19 +416,17 @@ Kipperlilly: It’s <i>polite</i> to hold the door open for a lady. Duh.
 Kristen: … are you calling yourself a lady?
 
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly: That’s not — ugh, never mind. I forgot that you were raised in a cornfield. by heathens.
-
-Kristen: Ultra-religious heathens, yeah.
+Kipperlilly: That’s not — ugh, never mind. I forgot that you were raised in a cornfield. 
 
 Kipperlilly rolls her eyes.
 
 <<kristen Neutral>> 
-
 Kristen: Are you going to keep yanking me around everywhere? That doesn’t seem very fair. Maybe next time, <i>I’ll</i> be the one calling <i>you</i> over.
 
 <<char_right KipperlillyNeutral>>
 <<voiceline KipFarewell2>>
 Kipperlilly: Whatever. I’m going home. Mom’s making brownies and I want to be there when they come out of the oven.
+<<voiceline KristenFarewellKip1>>
 
 <<jump Cassandra>>
 ===

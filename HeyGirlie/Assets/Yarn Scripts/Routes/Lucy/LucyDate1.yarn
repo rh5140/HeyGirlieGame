@@ -1,6 +1,8 @@
 ﻿title: Date1
 ---
-February 7 // just add a new line at the start!
+March 17
+<<location "PLACEHOLDER">>
+<<declare $date_points = 0>>
 
 It’s a beautiful Monday morning. The sky is blue, the sun is shining, the birds are chirping… and you’re trying really hard not to fall asleep in cleric class. 
 This isn’t like last year where you were at constant risk of expulsion. Senior year is a fresh start! For one thing, you’re student council president now; you have an example to set, and that means paying attention in class. 
@@ -19,8 +21,10 @@ Eventually your eyes fall on the desk next to you, where Lucy Frostblade sits.
 She’s diligently taking notes, hunching over a desk that is slightly too small for her. Her sweater sleeves are pulled over her hands, and her hair falls into her eyes as she leans over her notebook. Her backpack is by her feet, and you notice that she has various buttons and pins on it, including one for Basrar’s. 
 It’s strange to think about how much history you and Lucy share without ever having spoken more than a few words to each other. 
 You wonder if she’s doing okay after the whole being betrayed and dying thing. You didn’t take your own death — death<i>s</i> — very well, after all, and without your friends, you would have been lost. 
-A vague sense of guilt fills you. Maybe you should have reached out, as one of the few people at this school who knows what dying is really like. Not to mention that she did hang out in <i>your</i> afterlife for a while. Isn’t it kind of a dick move not to have at least checked in on her?
-But from what you know, Lucy and the Rat Grinders have made up. And from how many times Yolanda has made the effort to check on you in the last few months, she’s probably watching out for Lucy, too. Lucy’s probably doing okay, right?
+A vague sense of guilt fills you. Maybe you should have reached out, as one of the few people at this school who knows what dying is really like. 
+Not to mention that she did hang out in <i>your</i> afterlife for a while. Isn’t it kind of a dick move not to have at least checked in on her?
+But from what you know, Lucy and the Rat Grinders have made up. And from how many times Yolanda has made the effort to check on you in the last few months, she’s probably watching out for Lucy, too. 
+Lucy’s probably doing okay, right?
 Lucy turns a page, and she looks up to meet your eyes. 
 <<char_right LucySurprised>>
 <<kristen Surprised>>
@@ -34,7 +38,7 @@ Yolanda begins speaking.
 “As you approach graduation, it will be increasingly important to build reflective practice into your daily life.”
 “As clerics, your relationships with your deities are crucial towards both maintaining your own power and cementing your gods’ legacies and worship. That means you also need to examine your relationships with <i>yourselves</i>.”
 “Your major assignment for this term is to write a five-page paper answering these questions.”
-Yolanda writes three questions on the board: 
+:Yolanda writes three questions on the board: 
 <i>Who are you?</i>
 <i>How does your deity reflect your identity?</i>
 <i>What does faith mean to you?</i>
@@ -44,21 +48,21 @@ And maybe you’ll get to know her a bit better.
 You notice that Lucy is looking back at you from the corner of her eye. 
 Kristen: So…
 -> Kristen: Let’s do this, partner!
-  <<kristen Happy>>
-  <<voiceline KristenGreeting2>>	
-  Lucy looks surprised but pleased. 
-  Lucy: Oh, sure!
+    <<kristen Happy>>
+    <<voiceline KristenGreeting2>>	
+    Lucy looks surprised but pleased. 
+    Lucy: Oh, sure!
   <<add_points 2>>
 -> Kristen: Maybe we should…?
-  <<kristen Nervous>>
-  <<voiceline KristenGreeting1>>
-  Lucy tucks her hair behind an ear, nodding.
-  Lucy: Yeah…
+    <<kristen Nervous>>
+    <<voiceline KristenGreeting1>>
+    Lucy tucks her hair behind an ear, nodding.
+    Lucy: Yeah…
   <<add_points 1>>
 -> Kristen: …
-  You stare at each awkwardly. You clear your throat.
-  She looks at you cautiously.
-  Lucy: …
+    You stare at each awkwardly. You clear your throat.
+    She looks at you cautiously.
+    Lucy: …
   <<add_points 0>>
 
 <<kristen Neutral>>
@@ -81,7 +85,7 @@ That was a joke, right?
 You squint at her. You can’t really tell.
 
 ->Kristen: That’s funny!
-   You let out a laugh, but it’s a little awkward. It echoes louder than you intended, and it kind of sounds like a goose honking. Other students turn to look at you, giggles sounding around the room. 
+  You let out a laugh, but it’s a little awkward. It echoes louder than you intended, and it kind of sounds like a goose honking. Other students turn to look at you, giggles sounding around the room. 
   <<kristen Awkward>>
   You cringe. At least Lucy looks vaguely amused. You think.
   Lucy: Hey, I’m dead serious.
@@ -93,7 +97,6 @@ You squint at her. You can’t really tell.
   Lucy: Oh… congratulations? 
   You resist the urge to slap your own forehead.
   <<add_points 1>>
-
 ->Kristen: Oh… that’s kinda dark.
   Lucy: Yeah, well... 
   <<add_points 0>>
@@ -169,7 +172,9 @@ You bite back a smirk at the idea. Maybe this assignment will be more fun than y
 
 Lucy: Wait, what? You’re connected to other gods? 
 
-Kristen: Oh, yeah. Well, I used to be. I was a cleric of Helio for most of my life, but long story short, he turned out to be an asshole. Then I — invented? I think that’s it. I invented YES?, but YES? was just… there. I didn’t like them much either, honestly. 
+Kristen: Oh, yeah. Well, I used to be. I was a cleric of Helio for most of my life, but long story short, he turned out to be an asshole.
+
+Kristen: Then I — invented? I think that’s it. I invented YES?, but YES? was just… there. I didn’t like them much either, honestly. 
 
 Lucy looks baffled at that, which is fair. The last few years have been so wild and full of change that you still sometimes have a hard time wrapping your mind around it all.
 
@@ -205,7 +210,9 @@ Again, you’re not sure if that’s a joke. You laugh anyway.
 
 Kristen: Honestly, I’m not sure. I’ve been trying to figure that out for years. But I do feel like I’m closer to the answer now than I’ve ever been.
 
-You really do mean that. It’s been a rough three years but finally, <i>finally</i>, you feel like you’ve settled on something that works for you. Maybe now you’ll have one year without any major life-altering catastrophes. And even if you don’t, even if something earth-shatteringly awful happens to you again, you know Cassandra and your friends will help you pick up the pieces. Again. 
+You really do mean that. It’s been a rough three years but finally, <i>finally</i>, you feel like you’ve settled on something that works for you. Maybe now you’ll have one year without any major life-altering catastrophes. 
+
+And even if you don’t, even if something earth-shatteringly awful happens to you again, you know Cassandra and your friends will help you pick up the pieces. Again. 
 
 Huh. You think you’re starting to get the point of this project now. Nice one, Yolanda.
 
@@ -229,9 +236,15 @@ Lucy: She has been worshipped for a long time among my people. She is…
 
 Lucy pauses heavily. She looks up at you, her eyes suddenly bright and intense. You feel yourself leaning in to listen, drawn in by a sudden gravity.
 
-Lucy: Ruvina is the scalding heat of a fire during a blizzard. She is the kind, painful press of warm hands around frostbitten fingers. She is the chattering of teeth between smiles, the bone-aching shivers caused by winds that carry away your laughter. She is the reminder that despite the cold, despite the pain, snow is soft when it falls. 
+Lucy: Ruvina is the scalding heat of a fire during a blizzard. 
 
-You find yourself strangely breathless when she finishes. Her words don’t sound like a memorized recitation; they sound <i>real</i>, like Lucy believes them with her whole heart. Your own relationship to faith seems almost… inadequate compared to Lucy’s fervent, steadfast passion. 
+Lucy: She is the kind, painful press of warm hands around frostbitten fingers. She is the chattering of teeth between smiles, the bone-aching shivers caused by winds that carry away your laughter. 
+
+Lucy: She is the reminder that despite the cold, despite the pain, snow is soft when it falls. 
+
+You find yourself strangely breathless when she finishes. Her words don’t sound like a memorized recitation; they sound <i>real</i>, like Lucy believes them with her whole heart. 
+
+Your own relationship to faith seems almost… inadequate compared to Lucy’s fervent, steadfast passion. 
 
 Now that you think about it, Lucy <i>had</i> been the only unshakeable member of the Rat Grinders. 
 
@@ -242,6 +255,8 @@ You are suddenly, strongly reminded how little you know about Lucy Frostblade.
 Kristen: That’s really beautiful.
 
 Lucy: That’s Ruvina. She’s been a constant throughout my whole life.
+
+<<char_right LucySad>>
 
 Her voice drops to a whisper.
 
@@ -263,6 +278,11 @@ That surprises you. Usually, your eyes would have been glued to the clock, count
 <<char_right LucyNeutral1>>
 <<kristen Neutral>>
 
+<<jump Date1Hint>>
+===
+
+title: Date1Hint
+---
 Lucy: This was a great conversation. About the project, I mean. Do you want to continue it later?
 
 ->Kristen: Hell, yeah, partner! We gotta hang out sometime.
