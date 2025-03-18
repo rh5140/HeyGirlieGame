@@ -34,11 +34,6 @@ public class TestingMenu : MonoBehaviour
                                             GameManager.Instance.schoolDates, GameManager.Instance.elmvilleDates, GameManager.Instance.mordredDates,
                                             GameManager.Instance.outdoorsDates, GameManager.Instance.awayDates);
 
-        int newProfileNum = SaveManager.getCount();
-        // Debug.Log("newProfileNum = " + newProfileNum);
-        if(newProfileNum <= 10)
-            SaveManager.SaveData(data, newProfileNum);
-
         // if(SaveManager.NewData(null) != null)
             SceneManager.LoadScene(loveInterest+"Date"+week);
         // else MainMenu.openMaxProfilePopup();
@@ -75,11 +70,6 @@ public class TestingMenu : MonoBehaviour
         PlayerData data = new PlayerData("Kristen", "Spyre", sceneName, week, 0, GameManager.Instance.priorityQueue(),
                                             GameManager.Instance.schoolDates, GameManager.Instance.elmvilleDates, GameManager.Instance.mordredDates,
                                             GameManager.Instance.outdoorsDates, GameManager.Instance.awayDates);
-
-        int newProfileNum = SaveManager.getCount();
-        // Debug.Log("newProfileNum = " + newProfileNum);
-        if(newProfileNum <= 10)
-            SaveManager.SaveData(data, newProfileNum);
 
         // if(SaveManager.NewData(null) != null)
             SceneManager.LoadScene(sceneName);
