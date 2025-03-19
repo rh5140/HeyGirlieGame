@@ -49,7 +49,6 @@ public static class SaveManager
     // Loads in save file of specified number
     public static string LoadData(int profileNum){
         string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
-        Debug.Log(filePath);
         
         if(findSave(profileNum) != null){
             string json = File.ReadAllText(filePath);

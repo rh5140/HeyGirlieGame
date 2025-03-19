@@ -120,4 +120,9 @@ public class SettingManager : MonoBehaviour
     public void SetLineView(HGGLineView lineView){
         hggLineView = lineView;
     }
+
+    public void UpdateLineView(){
+        ChangeSpeed(speed);
+        ChangeAutoforward(autoforward);
+    }
 }
