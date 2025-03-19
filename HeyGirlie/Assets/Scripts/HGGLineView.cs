@@ -237,12 +237,15 @@ namespace Yarn.Unity
         /// </summary>
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
 
+        private void Start(){
+            SettingManager.Instance.SetLineView(this);
+            SettingManager.Instance.UpdateLineView();
+        }
+
         private void Awake()
         {
             canvasGroup.alpha = 0;
             canvasGroup.blocksRaycasts = false;
-            SettingManager.Instance.SetLineView(this);
-            SettingManager.Instance.LoadSettings();
         }
 
         private void Reset()
