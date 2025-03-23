@@ -6,14 +6,15 @@ using System.Collections.Generic;
     [SerializeField] public SpriteDictionary[] spriteDicts;
     public Dictionary<string, Sprite> multiSpriteDict;
 
-    public void Awake()
+    public void Start()
     {
         multiSpriteDict = new Dictionary<string, Sprite>();
         foreach (SpriteDictionary sd in spriteDicts)
         {
             foreach (var element in sd.spriteDict)
             {
-                multiSpriteDict.Add(element.Key, element.Value);
+                if (!multiSpriteDict.ContainsKey(element.Key))
+                    multiSpriteDict.Add(element.Key, element.Value);
             }
         }
     }

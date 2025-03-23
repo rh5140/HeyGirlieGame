@@ -164,6 +164,7 @@ public class YarnCommands : MonoBehaviour
         // Edit switch cases as needed to account for things like date #
         result = li.SucceedEnding();
         _variableStorage.SetValue("$succeed", result);
+        _variableStorage.SetValue("$date", name);
     }
     
     // Set the sprite for the Kristen/left position by calling the SetSprite function
