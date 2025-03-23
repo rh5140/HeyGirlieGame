@@ -38,7 +38,7 @@ public static class SaveManager
     public static void SaveData(PlayerData data, int profileNum){
         string jsonData = JsonUtility.ToJson(data, true);
         string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
-        string filePath2 = String.Format(screenshotPath, profileNum.ToString("00"), "png");
+        string filePath2 = String.Format(dataPath, profileNum.ToString("00"), "png");
         // string filePath2 = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
 
         ScreenCapture.CaptureScreenshot(filePath2);
@@ -49,7 +49,6 @@ public static class SaveManager
     // Loads in save file of specified number
     public static string LoadData(int profileNum){
         string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
-        Debug.Log(filePath);
         
         if(findSave(profileNum) != null){
             string json = File.ReadAllText(filePath);
@@ -76,7 +75,7 @@ public static class SaveManager
     // Deletes a specified profile
     public static void DeleteData(int profileNum){
         string filePath = String.Format(dataPath, profileNum.ToString("00"), "json");
-        string filePath2 = String.Format(screenshotPath, profileNum.ToString("00"), "png");
+        string filePath2 = String.Format(dataPath, profileNum.ToString("00"), "png");
 
         File.Delete(filePath);
         File.Delete(filePath2);
@@ -127,7 +126,7 @@ public static class SaveManager
     }
 
     public static Sprite getScreenshot(int profileNum){
-        string filePath = String.Format(screenshotPath, profileNum.ToString("00"), "png");
+        string filePath = String.Format(dataPath, profileNum.ToString("00"), "png");
 
         if (string.IsNullOrEmpty(filePath)) return null;
         if (System.IO.File.Exists(filePath))
