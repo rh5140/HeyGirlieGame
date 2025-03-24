@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         }
 
         _instance = this;
+        _saveProfile = (_saveProfile == 0) ? SaveManager.getCount() : _saveProfile;
 
         schoolDates = new Queue<string>();
         elmvilleDates = new Queue<string>();

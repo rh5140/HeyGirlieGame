@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void Continue(){
-        PlayerData data = (!string.IsNullOrEmpty(playerName.text)) ? SaveManager.NewData(playerName.text) : SaveManager.NewData(null);
+        PlayerData data = (!string.IsNullOrEmpty(playerName.text)) ? SaveManager.NewData(playerName.text) : SaveManager.NewData("Kristen");
         
         if(data != null) SceneManager.LoadScene(data.getScene());
         else openMaxProfilePopup();
