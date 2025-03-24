@@ -1,9 +1,6 @@
 ﻿title: Fig
 ---
-<<kristen transparent>>
-<<background ActivitiesFair_Fig>>
-<<wait 2>>
-March 14
+March 23
 <<kristen Neutral>>
 Your curiosity gets the better of you as you walk up to the haunted house and can’t help but notice that the people walking away from it seem a little green around the gills.
 <i>Could it really be THAT bad?</i>
@@ -70,29 +67,37 @@ Fig: No…
 Kristen: Oh, absolutely not…
 A clown steps out of the shadows.
 Not a fun clown.
-//SPLASH ART SCENE
+<<kristen transparent>>
+<<char_right transparent>>
+<<background ActivitiesFair_Fig>>
+<<wait 2>>
 An absolutely demonic clown, with a ruffled, dirty costume, smeared makeup, and a fanged grin that stretches across its horrible face. It holds a limp balloon in one hand, dragging its fingers along the wall with the other.
-<<kristen Awkward>>
+//<<kristen Awkward>>
 <<voiceline KristenSurprised1>>
 Kristen: FIG WHY IS IT SO TALL?
-<<char_right FigFlustered>>
+//<<char_right FigFlustered>>
 Fig: WHY IS IT MAKING EYE CONTACT WITH ME SPECIFICALLY?
 The clown’s head tilts, the balloon squeaks and you both flail to grip onto one another.
-<<char_right FigSurprised>>
+//<<char_right FigSurprised>>
 Fig: WE SHOULD HAVE BROUGHT WEAPONS!
-<<kristen Surprised>>
+//<<kristen Surprised>>
 Kristen: WHY WOULD WE NEED WEAPONS AT A FAIR?
 <<voiceline FigSurprised3>>
 Fig: DO YOU SEE THAT THING?
 The clown takes a slow, shuffling step forward and you and Fig fling yourselves backward, gripping each other so tight you might actually merge into one person.
-<<kristen Awkward>>
+//<<kristen Awkward>>
 <<voiceline KristenAwkward2>>
 Kristen: Okay, new plan. We run.
-<<char_right FigFlustered>>
+//<<char_right FigFlustered>>
 Fig: RUNNING IS GOOD.
 You make a break for it, still attached to each other, careening through the maze of cheap plywood walls like you’re being hunted for sport.
 <i>Which, you actually might be.</i>
 The clown’s giggle follows you and you don’t stop until you see the neon glow of the EXIT sign up ahead.
+//RETURN TO GENERIC BG HERE
+<<wait 2>>
+<<background ActivitiesFair>>
+<<kristen Awkward>>
+<<char_right FigSurprised>>
 With absolutely no grace or dignity, you fling yourselves out into the open air… panting, shaking and still holding onto each other as though your lives depended on it.
 You and Fig turn to look at each other, breathless…
 Before you burst into laughter.
@@ -104,6 +109,7 @@ Fig: If you tell anyone we screamed like that, I will smite you.
 <<kristen Grin>>
 Kristen: Oh, Fig. We both know I’m telling <i>everyone</i>.
 
-
 <<jump EndEvent>>
+//<<next_week>>
+//<<change_scene Cassandra>>
 ===
