@@ -64,6 +64,7 @@ public class YarnCommands : MonoBehaviour
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
         _audioSource = GetComponent<AudioSource>();
+        _variableStorage.SetValue("$date_points", 0);
     }
 
     private void ChangeScene(string sceneName)
@@ -74,6 +75,12 @@ public class YarnCommands : MonoBehaviour
     private void AddPoints(int num)
     {
         _loveInterest.AddPoints(num);
+        // Handling Cassandra
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        Debug.Log("add points");
+        Debug.Log(_variableStorage.TryGetValue("$date_points", out date_points));
+        Debug.Log(date_points + num);
+        _variableStorage.SetValue("$date_points", date_points + num);
     }
 
     private void IncrementDateCount()

@@ -1,7 +1,17 @@
 ﻿title: Cassandra
 tags:
 ---
-Cassandra: says something depending on how you did with Gertie...
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie?
 
 <<jump EndDate>>
 ===
