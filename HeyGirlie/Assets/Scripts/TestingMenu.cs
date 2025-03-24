@@ -40,7 +40,13 @@ public class TestingMenu : MonoBehaviour
             SaveManager.SaveData(data, newProfileNum);
 
         // if(SaveManager.NewData(null) != null)
-            SceneManager.LoadScene(loveInterest+"Date"+week);
+        if(loveInterest.Equals("FigAyda (alt date 8)"))
+        {
+            SceneManager.LoadScene("FigDate8 Alt");
+        } else
+        {
+            SceneManager.LoadScene(loveInterest + "Date" + week);
+        }
         // else MainMenu.openMaxProfilePopup();
     }
 
