@@ -1,9 +1,6 @@
 ﻿title: Fig
 ---
-<<kristen transparent>>
-<<background MusicFestival_Fig>>
-<<wait 2>>
-March 12
+March 23
 <<kristen Sad>>
 <<voiceline KristenSad2>>
 It kinda sucked that the <i>one</i> person you really wanted to spend the day with was busy being a literal rockstar. She was probably hanging with her band backstage, meeting all the other headliners and enjoying every second of it.
@@ -98,14 +95,21 @@ Fig: ♪♫ Said it didn't mean a thing, but I feel it every day.
 Fig: ♪♫ ‘Cause I can’t stop writing fucking songs, and I’m running out of ways to say—
 <<char_right FigBlush>>
 Fig: ♪♫ I think I’d die again to make you stay.
-//SPLASH ART SCENE
+<<kristen transparent>>
+<<char_right transparent>>
+<<background MusicFestival_Fig>>
+<<wait 2>>
 She’s fully in her element with sweat shining on her forehead. And every time you lock eyes, you swear she’s casting some kind of cantrip on you.
-<<kristen Happy>>
-<<char_right FigHappy>>
+//<<kristen Happy>>
+//<<char_right FigHappy>>
 <<voiceline KristenHappy3>>
 You dance, you scream along with the lyrics, you laugh when Fig hits a sick note and points directly at you like the little shit she is.
 But you decide not to overthink it all too much. You’re just here with the music, with the crowd, with Fig.
 Right now, nothing else matters.
 
-<<jump EndEvent>>
+<<wait 2>>
+
+//<<jump EndEvent>>
+<<next_week>>
+<<change_scene Cassandra>>
 ===
