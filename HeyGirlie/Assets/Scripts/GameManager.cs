@@ -167,6 +167,10 @@ public class GameManager : MonoBehaviour
         _playerName = playerName;
     }
 
+    public int GetProfile(){
+        return _saveProfile;
+    }
+
     public void SetProfile(int profileNum){
         _saveProfile = profileNum;
     }
