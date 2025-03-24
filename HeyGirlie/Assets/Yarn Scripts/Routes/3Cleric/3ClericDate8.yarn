@@ -1,7 +1,9 @@
 ﻿title:date8
 ---
-<<location “PLACEHOLDER”>>
+March 23
+<<location "PLACEHOLDER">>
 <<set $date_points = 0>>
+<<set $date_points_total = 0>>
 :A slumber party! What could go wrong?
 <<char_right TrackerAngry_1>>
 <<char_left NaraDisgust>>
@@ -68,7 +70,7 @@ Kristen: Yeah, I get it. Um. So do you.
 Kristen: Nara’s about to put us both to shame, though.
 Tracker: Oh, definitely.
 Tracker: I’m kind of excited for it.
-:You can tell she’s nervous when she tells you, like she’s not sure how you’re going to react.
+You can tell she’s nervous when she tells you, like she’s not sure how you’re going to react.
 -> Excited, huh? Go on…
     <<kristen Grin>>
     Kristen: Oh, <i>really?</i>
@@ -243,7 +245,7 @@ Tracker: Baby, that’s just the <i>start</i> of what Aelwyn said.
 <<char_right TrackerNeutral_1>>
 :Nara shares her own gossip about people at BCU, and even one salacious detail about the new Fallinelven ambassador that she whispers in your and Tracker’s ears. 
 :You didn’t know they were cool like that. <i>Way</i> cooler than Adaine’s dad.
-:Eventually, it’s your turn. You’re not sure about gossip, but you do have at least one thing to share.
+Eventually, it’s your turn. You’re not sure about gossip, but you do have at least one thing to share.
 -> If you slow down one of Fig’s old songs, you can hear her yelling at Gilear not to walk into the studio.
     Tracker: Oh, yeah, I remember that.
     <<char_left NaraThink>>
@@ -317,10 +319,12 @@ Nara: I agree. Kristen has already approached me about the subject.
 Tracker: Huh… she’s had a talk with me as well…
 Nara: I see… is this her attempt to initiate a polycule with us? Or does she have an ulterior motive to reunite us without her?
 :Wait, are they talking about <i>leaving you out?</i>
+
+
 -> Wake up and join in! You’re awake and bored! You wanna be involved!
     //back to manor background
    You jolt up from your sleeping position so fast you hear all the bones in your body crack simultaneously. Also, you might just have narrowly missed giving yourself a brain aneurysm.
-    Whatever, you have more important things to worry about - like the fact Tracker and Nara are both looking at you in confusion. Right, they don’t understand what you’ve been doing.
+     Whatever, you have more important things to worry about - like the fact Tracker and Nara are both looking at you in confusion. Right, they don’t understand what you’ve been doing.
     (...Honestly, do <i>you</i> understand what you’ve been doing?) 
     Okay, so you’ve admittedly been flying off the cuff this entire time, might as well keep going. Deep breath. Clear as possible, Applebees...
     Kristen: No! 
@@ -329,31 +333,37 @@ Nara: I see… is this her attempt to initiate a polycule with us? Or does she h
     Kristen: I mean. No! I wanna date both of you!   Preferably at the same time!
     Well, you’ve spat it out now. For better or worse. Tracker gives you an appraising look for a second, then huffs out a breath of laughter at whatever she sees in your face.
     Tracker: Okay. So, for future reference, you should  really think about how you’re gonna end a sentence before you start it, cowboy…
-    You wince, but at least she mostly sounds fond.
+You wince, but at least she mostly sounds fond.
     Tracker: Yeah, it probably is time for us all to address the elephant in the room.
     Nara: I agree. It would be best for us to discuss this sooner rather than later.
-    <<add_points 1>>
+<<add_points 1>>
+
+
 -> Wake up and admonish them! There’s no way they’re making any decisions without you!
     \\back to manor background
     Your eyes snap open. You will not let this stand! Not in your house! And also Tracker’s! But mainly yours!
     Kristen: What the fuck! No! Why are you guys talking without me?! What the fuck!!
-    The look both Tracker and Nara give you is beyond frosty.
+The look both Tracker and Nara give you is beyond frosty.
     Tracker: Oh, i’m <i>sorry,<i> Kristen. I wasn’t aware we’re not allowed to speak without you.
     Nara: A strange conclusion to reach, since you have not descended from on high to forbid us from conversing without your presence.
     Doubt starts to creep in. Are they right? Are you wrong?
     No, that can’t be it. <i>They</i> betrayed <i>you.</i>
     Kristen: Fine. Let’s talk about it.
-    <<add_points 0>>
+<<add_points 0>>
+
+
 -> Wake up and smile! They seem pretty cool about all of this, so you should be too!
     As you wake up more fully, your brain does too. Cool the paranoia, Applebees - from the context, it seems more like they want to have a conversation <i>with</i> you, not without.
     \\back to manor background
-    You slowly sit up, try your best not to sweat under the weight of both of their eyes suddenly turning towards you. Okay, deep breath. Smile. Yes, you’re about to have the ‘what are we’ conversation with your ex and her ex girlfriend, but you can totally be chill about this - 
+   You slowly sit up, try your best not to sweat under the weight of both of their eyes suddenly turning towards you. Okay, deep breath. Smile. Yes, you’re about to have the ‘what are we’ conversation with your ex and her ex girlfriend, but you can totally be chill about this - 
     Tracker: You’re doing the ‘hey girlie’ face, you know that right? 
     Nara: Yes, your face is practically <i>begging</i> to greet all of the girls before you. 
     Tracker: … You don’t know what it is, do you?
     Nara: No…
     Kristen: We can explain. But honestly… we should probably have <i>this</i> discussion first. Y’know. The one I overheard you guys having just now and was totally chill about.
-    <<add_points 2>>
+<<add_points 2>>
+
+
 -> Keep your eyes closed - you wanna hear more…
     Tracker: Yeah, it’s a little-
     Tracker cuts herself off. Nara doesn’t respond.
@@ -366,7 +376,7 @@ Nara: I see… is this her attempt to initiate a polycule with us? Or does she h
     Tracker: Are you serious? You can have conversations with both of us individually about this, but as soon as we decide to talk to each other alone, it’s forbidden all of a sudden?
     Nara: I have to agree with Tracker. The level of control you wish to impose upon us here is almost disturbing. I admire your freedom from life’s restrictions, but you seem to have no problems reducing the freedom of your partners.
     Tracker: If you want to talk about this, let’s do it while we’re all awake. And participating.
-    <<add_points 0>>
+<<add_points 0>>
 :So. It’s finally time to have The Talk.
 Kristen: Firstly…I’m sorry. 
 Kristen: Wait, not for the… I’m still bad at this. I really do like you both. It’s just, for so long, it’s been… <i>complicated,</i> between the three of us. Then for the last couple of weeks, it suddenly wasn’t.
@@ -381,6 +391,21 @@ Kristen: That’s a great point. We can all just… go with the flow. Support ea
 Tracker: I couldn’t agree more.
 :You all flop onto the bed, limbs tangling together to form a cuddle pile the likes of which the world has never before seen. It’s messy and complicated, but also? Kind of perfect. More than perfect. Finally, the three of you are exactly all where you’re supposed to be.
 :And when you fall asleep this time, it’s with a smile on your face.
+ 
 
+
+I can no longer not be involved in fasting prep gjjg brb in like 10-15 min wait plus when i actually eat. 20 ish at max. See you soon !!
+It’s ok! Take your time!!!!
+
+Hmmmmmmmvnotes and miscellaneous stuff
+I think they could maybe just agree to like. Work it out as they go? They don’t need to define anything right now, they’re all just happy doing stuff together yessssss
+ 
+just wrapping up from here!
+
+Nara has fun, Kristen has fun, Tracker would have fun too I think, it’s not the same type of meditative stuff with another person in the room that got to her about the spa
+Kristen falls asleep midway through and wakes up to a quick conversation between Tracker and Nara (the check-in moment we talked about)
+Choice on how you respond (don’t talk without me - BAD OPTION!!!, pretend to be asleep to eavesdrop more - they call you on it and it’s another bad, actually wake up and dive right into “great we’re on the same page let’s all be more comfortable” and then the joke from above as a NEUTRAL option since like this is after 8 weeks of spending time together, actually wake up and smile at them, happy they’re happy - good option because honesty?) 
+CUDDLE PILE !!!!!!!
+“Just before you go to sleep, [words]”
 <<jump Cassandra>>
 ===
