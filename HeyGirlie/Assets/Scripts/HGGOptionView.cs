@@ -4,7 +4,6 @@ Yarn Spinner is licensed to you under the terms found in the file LICENSE.md.
 
 using System;
 using UnityEngine;
-using System.Collections;
 using UnityEngine.EventSystems;
 using TMPro;
 
@@ -15,10 +14,6 @@ namespace Yarn.Unity
     {
         [SerializeField] TextMeshProUGUI text;
         [SerializeField] bool showCharacterName = false;
-        [SerializeField] GameObject selectionIcon;
-        [SerializeField] GameObject hoverIcon;
-        [SerializeField] Color hoverColor;
-        [SerializeField] Color originalColor;
 
         public Action<DialogueOption> OnOptionSelected;
         public MarkupPalette palette;
@@ -98,25 +93,6 @@ namespace Yarn.Unity
         public override void OnPointerEnter(PointerEventData eventData)
         {
             base.Select();
-            // disable selection indicator
-            selectionIcon.SetActive(false);
-            // enable hover indicator
-            hoverIcon.SetActive(true);
-            text.color = hoverColor;
-            text.fontStyle = FontStyles.Bold;
-            //Debug.Log("hovering " + text.color);
         }
-        
-        public override void OnPointerExit(PointerEventData eventData)
-        {
-            // disable selection indicator
-            selectionIcon.SetActive(true);
-            // enable hover indicator
-            hoverIcon.SetActive(false);
-            text.color = originalColor;
-            text.fontStyle ^= FontStyles.Bold;
-            //Debug.Log("NOT hovering " + text.color);
-        }
-
     }
 }

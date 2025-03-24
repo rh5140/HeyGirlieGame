@@ -22,7 +22,6 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _background;
     [SerializeField] private GameObject _specialInterface; // not always used
     [SerializeField] private GameObject _locationUI;
-    [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
 
     private Dictionary<string, AudioClip> _voicelines;
     private AudioSource _audioSource;
@@ -164,7 +163,6 @@ public class YarnCommands : MonoBehaviour
         // Edit switch cases as needed to account for things like date #
         result = li.SucceedEnding();
         _variableStorage.SetValue("$succeed", result);
-        _variableStorage.SetValue("$date", name);
     }
     
     // Set the sprite for the Kristen/left position by calling the SetSprite function
@@ -176,19 +174,13 @@ public class YarnCommands : MonoBehaviour
     // Set the first (leftmost) sprite in the right position by calling SetSprite function
     private void SetCharLeft(string charSpriteName)
     {
-        if (_multiSprite != null)
-            SetMultiSprite(_charLeftSprite, charSpriteName);
-        else
-            SetSprite(_charLeftSprite, charSpriteName);
+        SetSprite(_charLeftSprite, charSpriteName);
     }
 
     // Set the second (rightmost) sprite in the right position by calling SetSprite function
     private void SetCharRight(string charSpriteName)
     {
-        if (_multiSprite != null)
-            SetMultiSprite(_charRightSprite, charSpriteName);
-        else
-            SetSprite(_charRightSprite, charSpriteName);
+        SetSprite(_charRightSprite, charSpriteName);
     }
 
     private void SetSprite(GameObject charSprite, string charSpriteName)
@@ -200,13 +192,6 @@ public class YarnCommands : MonoBehaviour
                 charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
             else Debug.Log("Sprite " + charSpriteName + " not found!");
         }
-    }
-
-    private void SetMultiSprite(GameObject charSprite, string charSpriteName)
-    {
-        if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
-            charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
-        else Debug.Log("Sprite " + charSpriteName + " not found!");
     }
 
     private void SetBackground(string bgSpriteName)

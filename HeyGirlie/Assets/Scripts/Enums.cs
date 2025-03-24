@@ -29,15 +29,3 @@ public enum liInfo
     DateCount,
     Points
 }
-
-public enum Setting
-{
-    Fullscreen,
-    VSync,
-    Cursor,
-    Music,
-    SFX,
-    Voices,
-    Speed,
-    Autoforward
-}
