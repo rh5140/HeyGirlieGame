@@ -1,8 +1,9 @@
 ﻿title:Date2
 ---
-March 16
-<<location “PLACEHOLDER”>>
-<<set $date_points = 9>>
+March 23
+<<location "Bloodrush Field">>
+<<set $date_points = 0>>
+<<set $date_points_total = 6>>
 <<kristen Neutral>>
 // is kristen getting a cowboy outfit. if so assume everything in this date has kristen in a cowboy outfit
 :Tracker’d said centaur rodeo, and you’d been a little too focused on getting that “yeehaw” off to really focus on it.
@@ -87,7 +88,7 @@ Kristen: Have you done this before?
 Tracker: No, I was too small the last time I was here.
 Kristen: Well…
 Tracker: No more short jokes from you, Applebees.
-:You cut off the joke you were about to make, and instead…
+You cut off the joke you were about to make, and instead…
 -> Ringmaster! Two volunteers right here!
     :Tracker looks delighted, but also a little nervous.
     Tracker: You sure? I mean, I know we were joking, but you could actually get hurt.
@@ -180,7 +181,7 @@ Tracker: Oh?
 Kristen: You’ll seeeeeeeeeee.
 :You were going for mysterious, but the grimace on Tracker’s face tells you you’ve fallen even further into the ‘disorientated person to worry about’ category.
 Tracker: Here. Let me heal you up.
-:Tracker reaches a hand toward your face. Instinctively, you grab it.
+Tracker reaches a hand toward your face. Instinctively, you grab it.
 -> Push it away. You can take care of yourself.
     Kristen: It’s okay, I’ve got this.
     <<char_right TrackerSad_1>>
@@ -218,6 +219,7 @@ Tracker: Here. Let me heal you up.
     :You can’t tell if she’s trying to convince you or herself that all of this is platonic. The weak joke makes you both laugh a little, though.
     <<char_right TrackerHappy_1>>
     <<kristen Happy>>
+	<<add_points 2>>
 :Freshly healed, you settle back into your seats to watch the rest of the show. You can safely say it’s been a hectic, mostly entertaining day, even if the way Tracker’s been stealing small, unreadable glances in your direction is just the slightest bit totally nerve-wracking. The last time, she directly locks eyes with you, and shares a conspiratorial grin.
 <<char_right TrackerHappy>>
 Tracker: Hey, Kristen. Guess what I have?

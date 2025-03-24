@@ -1,8 +1,9 @@
 ﻿title: Date4
 ---
-March 16
-<<location “PLACEHOLDER”>>
-<<set $date_points = 10>>
+March 23
+<<location "Mordred Manor">>
+<<set $date_points = 0>>
+<<set $date_points_total = 10>>
 <<kristen Neutral>>
 :Sighing, you flop back on to your still unmade bed. After a half hour of switching between outfits, making sure there’s nothing stuck in your teeth (Cassandra didn’t help), and pointedly ignoring your deity’s laughter, you’re at theis state of the pre-date jitters; where there’s nothing left to do except <i>wait.</i>
 :You stare at the Immovable Rod attached to your wall.
@@ -111,6 +112,7 @@ Tracker: Kristen, what is this?
 :The host interrupts you before you can answer her, walking you to your table.
 :You pull out her chair for her, and she smiles at you, a little distracted.
 Kristen: So! This is —
+<<location “Black Background”>>
 :The lights all go out, stealing your thunder a bit.
 // sprites disappear? Just eyes? if it’s easier to have sprites we’ll go back and add them in :)
 Kristen: Aw, man. Spoilers. Anyway, ta-da! It's dinner in the dark! It’s supposed to be really fun.
@@ -120,7 +122,7 @@ Tracker: Definitely. But, uh, Kristen —
 :Oh, no. She hates it. Fuuuuuuuck.
 Tracker: You remember I have darkvision, right?
 Kristen: Uh.
-:You did not remember that.
+You did not remember that.
 -> Make up an excuse.
     Kristen: No, I totally remembered!
     Kristen: I, uh…
@@ -257,7 +259,7 @@ Tracker: And I still had fun, so there.
 :You glance at her, just for a second, and see her smiling.
 <<kristen Happy>>
 :You can’t help but smile, too.
-// background changes back to mordred
+<<location “Mordred Manor”>>
 :You’re reluctant to end the night here when you pull up into the driveway.
 Kristen: Hey, let’s make cookies.
 :Tracker pauses, halfway out of the car.
@@ -305,7 +307,7 @@ Tracker: Not <i>all</i> the time. Just, you know, sometimes.
 Tracker: Mostly easy stuff. But cookies can’t be <i>that</i> hard —
 :She goes to pour the flour in the mixing bowl and accidentally knocks the whole thing over onto the counter, flour <i>and</i> batter.
 Tracker: Darn it.
-:You know exactly what to say.
+You know exactly what to say.
 -> FLOUR FIGHT!
     <<char_right TrackerSurprised_1>>
     Tracker: Kristen, what the hell is a flour fight?
