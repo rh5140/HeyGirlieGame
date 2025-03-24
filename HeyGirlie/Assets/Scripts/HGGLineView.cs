@@ -166,8 +166,6 @@ namespace Yarn.Unity
         /// <seealso cref="useTypewriterEffect"/>
         [SerializeField] internal UnityEngine.Events.UnityEvent onPauseEnded;
 
-
-
         /// <summary>
         /// The number of characters per second that should appear during a
         /// typewriter effect.
@@ -238,6 +236,11 @@ namespace Yarn.Unity
         /// A stop token that is used to interrupt the current animation.
         /// </summary>
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
+
+        private void Start(){
+            SettingManager.Instance.SetLineView(this);
+            SettingManager.Instance.UpdateLineView();
+        }
 
         private void Awake()
         {
@@ -658,6 +661,14 @@ namespace Yarn.Unity
                 }
             }
             return pausePositions;
+        }
+
+        public void SetSpeed(float value){
+            typewriterEffectSpeed = value;
+        }
+
+        public void SetAutoAdvanced(bool value){
+            autoAdvance = value;
         }
     }
 }
