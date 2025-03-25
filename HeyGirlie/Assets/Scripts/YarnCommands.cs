@@ -74,6 +74,10 @@ public class YarnCommands : MonoBehaviour
     private void AddPoints(int num)
     {
         _loveInterest.AddPoints(num);
+        // Handling Cassandra
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _variableStorage.SetValue("$date_points", date_points + num);
     }
 
     private void IncrementDateCount()
