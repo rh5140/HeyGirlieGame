@@ -1,6 +1,6 @@
 ﻿title: Date1
 ---
-March 17
+March 17 + Option "type" formatting
 <<location "Aguefort">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 12>>
@@ -22,28 +22,28 @@ Gertie: Ah, my nemesis approaches.
 Kristen: Heyyyyyy Gertie.
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
-  -> Kristen: Damn girl, you’re lookin’ good ;)
+  -> Kristen: "Damn girl, you’re lookin’ good ;)"
     Gertie glares blankly, but is that a hint of red on her face?
     What’s that all about? It’s not as though she declared you as her nemesis or anything.
     Oh wait…
     <<add_points 0>>
-  -> Kristen: It’s so good to see you!
+  -> Kristen: "It’s so good to see you!"
     Gertie nods curtly. Clearly, she doesn’t share the same sentiment.
     <<add_points 1>>
-  -> Kristen: Sorry to interrupt.
+  -> Kristen: "Sorry to interrupt."
     Gertie: I accept and appreciate your gracious apology.
     <<add_points 2>>
 Gertie: President Applebees, I must insist that Apiarists’ Society meetings are only open to those who can actually commit to the club.
 <<voiceline KristenNeutral2>>
 Kristen: Right, um, totally.
-  -> Kristen: What happens in hive stays in the hive, am I right?
+  -> Kristen: "What happens in hive stays in the hive, am I right?"
     Gertie: Well, if you want to know more about hive organization and maintenance, I can actually recommend you some fascinating literature to check out at the library.
     <<add_points 2>>
-  -> Kristen: But what if you’re interested in many different clubs? How’d you know which ones you should actually join if you don’t try them out?
+  -> Kristen: "But what if you’re interested in many different clubs? How’d you know which ones you should actually join if you don’t try them out?"
     <<char_right GertieSad>>
     Gertie: But what if one particular club’s had a crush on you for a long time? What after all this time, you led her to believe you finally liked her back? The club, that is.
     <<add_points 1>>
-  -> Kristen: This again? A kiss doesn’t mean forever!
+  -> Kristen: "This again? A kiss doesn’t mean forever!"
     <<char_right GertieAngry>>
     Gertie: That’s not… I’m not talking about that!
     <<add_points 0>>
@@ -69,16 +69,16 @@ You shuffle toward the door with Riz, already dreaming of pad thai, lo-fi beats,
 But then you turn back to Gertie, whispering to herself (or maybe to the bees) as she removes each box from the hive for inspection.
 If Riz leaves, is Gertie the <i>only</i> member of the Apiarists’ Society?
 Kristen: I don’t want to leave you alone with all this work.
-  -> Kristen: What if Riz and I both stay to help?
+  -> Kristen: "What if Riz and I both stay to help?"
     Kristen: Bet we’d get this done faster with three instead of two.
     Gertie: I appreciate the offer, Miss Applebees.
     <<add_points 2>>
-  -> Kristen: I’ll let you guys finish what you’re doing.
+  -> Kristen: "I’ll let you guys finish what you’re doing."
     Kristen: I’ll catch up with Riz later.
     <<char_right GertieAngry>>
     Gertie: I do not need to be placated, Miss Applebees.
     <<add_points 1>>
-  -> Kristen: What if you come with us?
+  -> Kristen: "What if you come with us?"
     Kristen: Take a break! Come hang out at Seacaster Manor.
     <<char_right GertieAngry>>
     Gertie: Are you suggesting that I abandon the hive, Miss Applebees?
@@ -116,17 +116,17 @@ The swarm condensing around her hoists her already impressive height up an extra
 Was it an annual tradition or something for someone to try and kill the Aguefort student body president? Now you understand how Mazey felt last year.
 How should you respond?
 <<kristen Neutral>>
-  -> Turnabout’s fair play. Attack!
+  -> <i>Turnabout’s fair play. Attack!</i>
     A blade born of the night sky clashes against honey gold steel.
     <<voiceline GertieHappy3>>
     Gertie: Well met, Miss Applebees.
     The duel is on!
     <<add_points 2>>
-  -> Let’s not turn this into a bloodbath. Retreat!
+  -> <i>Let’s not turn this into a bloodbath. Retreat!</i>
     Your prayer to the Goddex of Mystery rings true. In this moment, you’re really doubting whether a duel is a good idea. An air of mystery lifts you up, shepherding you away from the swarm.
     Gertie: Come back and face me!
     <<add_points 1>>
-  -> Try to get in her head. Taunt!
+  -> <i>Try to get in her head. Taunt!</i>
     Kristen: Bumblebee? More like fumble-bee.
     <<voiceline GertieAngry2>>
     Gertie screams, holding her sword aloft. A hurricane of buzzing surrounds you.
@@ -161,18 +161,18 @@ Gertie: I see. This is my sixth nemesis duel in recent times.
 Kristen: Six? In this past year?
 Gertie: In this past week.
 <<kristen Neutral>>
-  -> Kristen: I bet they all had it coming.
+  -> Kristen: "I bet they all had it coming."
     Kristen: You mess with the bee, you get the sting.
     Gertie: Honeybees do not attack unprovoked, only when they perceive their hive to be in danger. In that case, they’ll also releases phermones to alert the others.
     Gertie: It’s also a misconception that a worker bee can sting only once.
     Gertie: It’s only when their target’s skin is sufficiently thick enough, such that the bee cannot easily dislodge its stinger after the attack without tearing off the entire appendage, that the bee will eventually die from the wound.
     <<add_points 1>>
-  -> Kristen: Hey, are you okay?
+  -> Kristen: "Hey, are you okay?"
     <<char_right GertieSurprise>>
     Gertie blinks. Huh. She sure didn’t expect that.
     Around her, the bees falter, turning their attention from you back to their keeper. Is it just you, or does the buzzing sound less menacing and more…reassuring?
     <<add_points 2>>
-  -> Kristen: Hot.
+  -> Kristen: "Hot."
     Gertie’s grip around Stinger tightens. Oh, she’s definitely blushing now, but she’s also definitely <i>not</i> happy about it.
     But who is she angrier at? You… or herself?
     <<add_points 0>>
@@ -211,16 +211,16 @@ Gertie: Come again?
 Kristen: Our business isn’t finished, I mean. I drew first blood, so to speak, but I never said what I want if I win.
 Gertie: Go on…
 Kristen: First, I want to help you clean up this mess.
-  -> Kristen: Then, I want to help you with preparing the hive for spring.
+  -> Kristen: "Then, I want to help you with preparing the hive for spring."
     <<kristen Happy>>
     <<char_right GertieHappy>>
     You make the first effort to start organizing the honey jars on the shelf. The bees around Gertie’s head hiss—you didn’t know bees <i>could</i> hiss, oops, but here they are, hissing. She calms them down with some gentle soothing.
     <<add_points 2>>
-  -> Kristen: Then, I want you to take an actual break.
+  -> Kristen: "Then, I want you to take an actual break."
     Kristen: Come to Seacaster Manor with us. I’ll even banish Fabian if he insults your honey again.
     Gertie: Two nemeses under the same roof? Sounds like trouble.
     <<add_points 0>>
-  -> Kristen: Then, I want to take you out this weekend. How about we go to Basrar’s?
+  -> Kristen: "Then, I want to take you out this weekend. How about we go to Basrar’s?"
     Gertie: I’m not sure if I can get away. There is still too much to do before spring well and truly springs.
     <<add_points 1>>
 <<char_right GertieNeutral>>
