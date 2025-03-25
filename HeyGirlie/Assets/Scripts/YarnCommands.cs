@@ -29,6 +29,7 @@ public class YarnCommands : MonoBehaviour
     private Dictionary<string, AudioClip> _sfx;
     [SerializeField] private AudioSource _voiceSource;
     [SerializeField] private AudioSource _sfxSource;
+    private AudioSource _audioSource;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
@@ -54,8 +55,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
         dialogueRunner.AddCommandHandler<string>("location", SetLocationUI);
 
-        dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
-        dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
+        dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
+        dialogueRunner.AddCommandHandler<string>("sfx", PlayAudioByName);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -68,6 +69,7 @@ public class YarnCommands : MonoBehaviour
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void ChangeScene(string sceneName)
@@ -236,24 +238,35 @@ public class YarnCommands : MonoBehaviour
         // If location is multiple words, put "quotes around location"
     }
     
-    private void PlayVoiceline(string audioName) {
-        if (_voicelines == null) _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
-        PlayAudioByName(_voiceSource, _voicelines, audioName);
-    }
-    private void PlaySFX(string audioName) {
-        PlayAudioByName(_sfxSource, _sfx, audioName);
-    }
+    // private void PlayVoiceline(string audioName) {
+    //     if (_voicelines == null) _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+    //     PlayAudioByName(_voiceSource, _voicelines, audioName);
+    // }
+    // private void PlaySFX(string audioName) {
+    //     PlayAudioByName(_sfxSource, _sfx, audioName);
+    // }
 
-    private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
+    private void PlayAudioByName(string audioName)
     {
-        audioSource.Stop();
-        if (audioClips.ContainsKey(audioName)) 
+        _audioSource.Stop();
+        if (_voicelines.ContainsKey(audioName)) 
         {
-            audioSource.clip = audioClips[audioName];
-            audioSource.Play();
+            _audioSource.clip = _voicelines[audioName];
+            _audioSource.Play();
         }
         else Debug.Log("Audio asset " + audioName + " not found!");
     }
+
+    // private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
+    // {
+    //     audioSource.Stop();
+    //     if (audioClips.ContainsKey(audioName)) 
+    //     {
+    //         audioSource.clip = audioClips[audioName];
+    //         audioSource.Play();
+    //     }
+    //     else Debug.Log("Audio asset " + audioName + " not found!");
+    // }
 
     private void ActivateButtons(int nextWeek)
     {
