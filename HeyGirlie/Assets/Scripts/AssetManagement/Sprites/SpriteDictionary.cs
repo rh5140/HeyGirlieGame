@@ -6,7 +6,7 @@ using System.Collections.Generic;
     [SerializeField] public SpriteDictionaryItem[] spriteArray;
     public Dictionary<string, Sprite> spriteDict;
 
-    public void Awake()
+    public void Start()
     {
         spriteDict = new Dictionary<string, Sprite>();
         foreach (SpriteDictionaryItem s in spriteArray)

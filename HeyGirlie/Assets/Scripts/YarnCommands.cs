@@ -237,6 +237,7 @@ public class YarnCommands : MonoBehaviour
     }
     
     private void PlayVoiceline(string audioName) {
+        if (_voicelines == null) _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
         PlayAudioByName(_voiceSource, _voicelines, audioName);
     }
     private void PlaySFX(string audioName) {

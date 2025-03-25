@@ -6,7 +6,7 @@ using System.Collections.Generic;
     [SerializeField] public VoicelineArrayContainer[] voicelineArrays;
     public Dictionary<string, AudioClip> voicelineDict;
 
-    public void Awake()
+    public void Start()
     {
         voicelineDict = new Dictionary<string, AudioClip>();
         foreach (VoicelineArrayContainer arr in voicelineArrays)
