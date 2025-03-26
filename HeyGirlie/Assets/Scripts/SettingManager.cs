@@ -67,7 +67,7 @@ public class SettingManager : MonoBehaviour
         sfx.volume = value;
     }
 
-    public void ChangeVolVoices(float value){
+    public void ChangeVolVoice(float value){
         volVoices = value;
         voices.volume = value;
     }
@@ -112,7 +112,7 @@ public class SettingManager : MonoBehaviour
         ChangeCursor(cursor);
         ChangeVolMusic(volMusic);
         ChangeVolSFX(volSFX);
-        ChangeVolVoices(volVoices);
+        ChangeVolVoice(volVoices);
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
     }
