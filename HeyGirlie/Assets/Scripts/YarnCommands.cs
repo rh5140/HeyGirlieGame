@@ -70,6 +70,8 @@ public class YarnCommands : MonoBehaviour
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
         _audioSource = GetComponent<AudioSource>();
+        _voiceSource = SettingManager.Instance.voices;
+        _sfxSource = SettingManager.Instance.sfx;
     }
 
     private void ChangeScene(string sceneName)
