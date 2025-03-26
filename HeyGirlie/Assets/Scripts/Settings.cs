@@ -47,10 +47,12 @@ public class Settings : MonoBehaviour
 
     public void ChangeVolSFX(float value){
         PlayerPrefs.SetFloat(nameof(Setting.SFX), value);
+        SettingManager.Instance.ChangeVolSFX(value);
     }
 
     public void ChangeVolVoice(float value){
         PlayerPrefs.SetFloat(nameof(Setting.Voices), value);
+        SettingManager.Instance.ChangeVolVoice(value);
     }
 
     public void ChangeSpeed(float value){
