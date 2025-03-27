@@ -24,6 +24,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _locationUI;
     [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
     [SerializeField] private GameObject _splashContinueButton; // not always used
+    [SerializeField] private GameObject _ui;
 
     private Dictionary<string, AudioClip> _voicelines;
     private Dictionary<string, AudioClip> _sfx;
@@ -63,6 +64,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("spring_fling_selection", SpringFlingInterface);
         
         dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
+        dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
     }
 
     void Start()
@@ -275,5 +277,10 @@ public class YarnCommands : MonoBehaviour
     private void EnableContinue()
     {
         _splashContinueButton.SetActive(true);
+    }
+
+    private void FadeInUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeIn();
     }
 }
