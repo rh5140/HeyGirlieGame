@@ -65,6 +65,8 @@ public class YarnCommands : MonoBehaviour
         
         dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
         dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
+        dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
+        dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
     }
 
     void Start()
@@ -282,5 +284,45 @@ public class YarnCommands : MonoBehaviour
     private void FadeInUI()
     {
         _ui.GetComponent<FadeTransition>().FadeIn();
+    }
+
+    private void BackgroundFilterOn(string color)
+    {
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), "black"));
+    }
+
+    private void BackgroundFilterOff()
+    {
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), "white"));
+    }
+
+    private IEnumerator FadeBGFilter(Image bg, string color)
+    {
+        Color start = bg.color;
+        Color end;
+        switch (color)
+        {
+            case "black": 
+                end = Color.black; 
+                break;
+            case "sepia": 
+                end = new Color(0.8f, 0.7f, 0.6f, 1f); 
+                break;
+            default: 
+                end = Color.white; 
+                break;
+        }
+        float lerpTime = 1f;
+        float time = 0;
+        
+        while (time < lerpTime)
+        {
+            Color currentColor = Color.Lerp(start, end, time / lerpTime);
+            bg.color = currentColor;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        bg.color = end;
     }
 }
