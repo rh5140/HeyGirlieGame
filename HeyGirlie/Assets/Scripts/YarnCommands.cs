@@ -24,6 +24,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _locationUI;
     [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
     [SerializeField] private GameObject _splashContinueButton; // not always used
+    [SerializeField] private GameObject _ui;
 
     private Dictionary<string, AudioClip> _voicelines;
     private Dictionary<string, AudioClip> _sfx;
@@ -63,6 +64,9 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("spring_fling_selection", SpringFlingInterface);
         
         dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
+        dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
+        dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
+        dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
 
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
@@ -290,6 +294,50 @@ public class YarnCommands : MonoBehaviour
     {
         _splashContinueButton.SetActive(true);
     }
+
+    private void FadeInUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeIn();
+    }
+
+    private void BackgroundFilterOn(string color)
+    {
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), color));
+    }
+
+    private void BackgroundFilterOff()
+    {
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), "white"));
+    }
+
+    private IEnumerator FadeBGFilter(Image bg, string color)
+    {
+        Color start = bg.color;
+        Color end;
+        switch (color)
+        {
+            case "black": 
+                end = Color.black; 
+                break;
+            case "sepia": 
+                end = new Color(0.8f, 0.7f, 0.6f, 1f); 
+                break;
+            default: 
+                end = Color.white; 
+                break;
+        }
+        float lerpTime = 1f;
+        float time = 0;
+        
+        while (time < lerpTime)
+        {
+            Color currentColor = Color.Lerp(start, end, time / lerpTime);
+            bg.color = currentColor;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        bg.color = end;
 
     private void SetPolyam(string name)
     {
