@@ -667,6 +667,10 @@ namespace Yarn.Unity
             typewriterEffectSpeed = value;
         }
 
+        public float GetSpeed(){
+            return typewriterEffectSpeed;
+        }
+
         public void SetAutoAdvanced(bool value){
             autoAdvance = value;
         }

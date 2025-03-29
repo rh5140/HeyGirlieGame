@@ -12,6 +12,8 @@ public class SaveProfiles : MonoBehaviour
     [SerializeField] private GameObject[] saves;
     [SerializeField] private Sprite defaultScreenshot;
 
+    private GameObject selected;
+
     private int selectedSave = 0;
     void Awake(){
         loadButton.interactable = false;
@@ -70,7 +72,7 @@ public class SaveProfiles : MonoBehaviour
     }
 
     private void Unselect(bool saveFound){
-        EventSystem.current.SetSelectedGameObject(null);
+        // EventSystem.current.SetSelectedGameObject(null);
 
         loadButton.interactable = saveFound;
         deleteButton.interactable = saveFound;
