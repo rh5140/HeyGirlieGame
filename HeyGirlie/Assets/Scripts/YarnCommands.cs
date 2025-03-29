@@ -11,7 +11,12 @@ using TMPro;
 public class YarnCommands : MonoBehaviour
 {
     // Drag and drop your Dialogue Runner into this variable.
-    public DialogueRunner dialogueRunner;
+    [SerializeField] private DialogueRunner dialogueRunner;
+
+    private bool toggleText = false;
+
+    [SerializeField] private Canvas nonCrystalView;
+    [SerializeField] private Canvas crystalView;
 
     [SerializeField] private Character _character;
     private LoveInterest _loveInterest;
@@ -73,6 +78,9 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
+
+        dialogueRunner.AddCommandHandler("toggleText", ToggleText);
+
     }
 
     void Start()
@@ -103,6 +111,22 @@ public class YarnCommands : MonoBehaviour
     private void IncrementDateCount()
     {
         _loveInterest.IncrementDateCount();
+    }
+
+    private void ToggleText()
+    {
+        toggleText = !toggleText;
+
+        if (toggleText)
+        {
+            crystalView.gameObject.SetActive(true);
+            nonCrystalView.gameObject.SetActive(false);
+        }
+        else
+        {
+            crystalView.gameObject.SetActive(false);
+            nonCrystalView.gameObject.SetActive(true);
+        }
     }
 
     private void IncreaseDatesThisWeek()

@@ -3,6 +3,17 @@ tags:
 ---
 <<kristen Neutral>>
 <<char_right CassandraNeutral>>
+<<toggleText>>
+Cassandra: testing texting
+Kristen: testing Texting
+-> option 1
+-> option 2
+-> option 3
+    Kristen: option 3 text 0
+    Cassandra: option 3 text
+    Kristen: option 3 text 2
+Cassandra: blah
+<<toggleText>>
 <<if get_week() == 1>>
     <<voiceline CassGreeting2>>
     Cassandra: What's the matter, Kristen?
@@ -44,6 +55,8 @@ tags:
     Cassandra: ??? how did u get here
 
 <<endif>>
+
+
 
 Cassandra: Well, why don't you choose where you want to have a meet-cute (or two or three) this week!
 <<change_scene DateSelection>>
