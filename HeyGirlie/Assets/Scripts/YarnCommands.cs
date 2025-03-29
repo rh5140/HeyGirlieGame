@@ -67,6 +67,9 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
         dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
         dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
+
+        dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
+        dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
     }
 
     void Start()
@@ -181,6 +184,17 @@ public class YarnCommands : MonoBehaviour
         result = li.SucceedEnding();
         _variableStorage.SetValue("$succeed", result);
         _variableStorage.SetValue("$date", name);
+    }
+
+    public void CheckPolyamCondition(string polyam)
+    {
+        if (polyam == "FKB") 
+        {
+            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Frostkettle);
+            Polyam p = (Polyam) li;
+            bool result = p.MeetPolyamConditions();
+            _variableStorage.SetValue("$fkb", result);
+        }
     }
     
     // Set the sprite for the Kristen/left position by calling the SetSprite function
@@ -324,5 +338,10 @@ public class YarnCommands : MonoBehaviour
         }
 
         bg.color = end;
+
+    private void SetPolyam(string name)
+    {
+        if (name == "FKB") GameManager.Instance.SetPolyamActive(Character.Frostkettle);
+        else GameManager.Instance.SetPolyamActive(Character.Trackernara);
     }
 }

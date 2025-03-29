@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5197800120273047425}
-  - component: {fileID: 6447756554149253430}
+  - component: {fileID: 6078028717047340186}
   m_Layer: 0
   m_Name: Frostkettle
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8888731270056157808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6447756554149253430
+--- !u!114 &6078028717047340186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,23 +41,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 471637726434602579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9dee6470b2a21540ab35309cadd9dfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c93e7dbfee94184580222f12168cfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: 0
+  _character: 8
   _dateCount: 1
   _points: 0
   _successThreshold: 0
   _datesForSuccess: 0
   dates:
   - region: 1
-    sceneName: FkbDate5
+    sceneName: FrostkettlebeesDate5
   - region: 1
-    sceneName: FkbDate6
+    sceneName: FrostkettlebeesDate6
   - region: 1
-    sceneName: FkbDate7
+    sceneName: FrostkettlebeesDate7
   - region: 3
-    sceneName: FkbDate8
+    sceneName: FrostkettlebeesDate8
+  _li1: {fileID: 7649509627046155477}
+  _li2: {fileID: 4874148012749398893}
+  _li1PointsThreshold: 0
+  _li2PointsThreshold: 0
 --- !u!1 &906419760583492351
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +115,7 @@ MonoBehaviour:
   - {fileID: 4874148012749398893}
   - {fileID: 5053413669965830094}
   - {fileID: 1441611164711895498}
-  - {fileID: 6447756554149253430}
+  - {fileID: 6078028717047340186}
   - {fileID: 2311715904340534290}
   _liQueue: []
   priority: 0
