@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
     public List<LoveInterest> _liQueue;
     public Character priority;
     public Character polyamPartner;
-
+    // Checking for polyam condition
+    private bool _polyamActive;
+    private Character _polyamPair;
 
     // One queue per region
     // Queue of scene names to load
@@ -86,14 +88,6 @@ public class GameManager : MonoBehaviour
             liQueue.Add(GetLoveInterest(polyamPartner));
         }
         liQueue.Add(GetLoveInterest(priority));
-
-
-        //love interest checks are separate and not determined by priority LI; can be triggered by non-prio LI's
-        //if(/*add check for Frostkettle condition  met*/)
-        //    liQueue.Add(GetLoveInterest(Character.Frostkettle));
-        //if (/*add check for 3c condition  met*/)
-        //    liQueue.Add(GetLoveInterest(Character.Trackernara));
-
         liQueue.Reverse();
 
         return liQueue;
@@ -201,5 +195,12 @@ public class GameManager : MonoBehaviour
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);
+    }
+
+    public void SetPolyamActive(Character polyam)
+    {
+        _polyamActive = true;
+        _polyamPair = polyam;
+        _liQueue.Insert(0, GetLoveInterest(polyam)); // Add to start of liQueue
     }
 }
