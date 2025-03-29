@@ -10,6 +10,7 @@ public class FadeTransition : MonoBehaviour
     {
         ui = GetComponent<CanvasGroup>();
         ui.alpha = 0f;
+        FadeIn();
     }
 
     public void FadeIn()

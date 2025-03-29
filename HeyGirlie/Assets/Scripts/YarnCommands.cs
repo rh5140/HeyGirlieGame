@@ -288,7 +288,7 @@ public class YarnCommands : MonoBehaviour
 
     private void BackgroundFilterOn(string color)
     {
-        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), "black"));
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), color));
     }
 
     private void BackgroundFilterOff()
