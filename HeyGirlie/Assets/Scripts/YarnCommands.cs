@@ -25,8 +25,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
     [SerializeField] private GameObject _splashContinueButton; // not always used
 
-    private Dictionary<string, AudioClip> _voicelines;
-    private Dictionary<string, AudioClip> _sfx;
+    private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
     private AudioSource _sfxSource;
     private AudioSource _audioSource;
@@ -68,7 +67,7 @@ public class YarnCommands : MonoBehaviour
     void Start()
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
-        _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
         _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
@@ -241,17 +240,17 @@ public class YarnCommands : MonoBehaviour
     }
     
     private void PlayVoiceline(string audioName) {
-        if (_voicelines == null) _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
-        PlayAudioByName(_voiceSource, _voicelines, audioName);
+        PlayAudioByName(_voiceSource, _audioClips, audioName);
     }
     
     private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
-        PlayAudioByName(_sfxSource, _sfx, audioName);
+        PlayAudioByName(_sfxSource, _audioClips, audioName);
     }
 
     private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
     {
         audioSource.Stop();
+        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
         if (audioClips.ContainsKey(audioName)) 
         {
             audioSource.clip = audioClips[audioName];
