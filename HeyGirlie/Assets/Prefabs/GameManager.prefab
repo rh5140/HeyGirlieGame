@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5197800120273047425}
-  - component: {fileID: 6447756554149253430}
+  - component: {fileID: 6078028717047340186}
   m_Layer: 0
   m_Name: Frostkettle
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8888731270056157808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6447756554149253430
+--- !u!114 &6078028717047340186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,24 +41,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 471637726434602579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9dee6470b2a21540ab35309cadd9dfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c93e7dbfee94184580222f12168cfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: 0
+  _character: 8
   _dateCount: 1
   _points: 0
   _successThreshold: 0
+  _datesForSuccess: 0
   dates:
   - region: 1
-    sceneName: FkbDate5
+    sceneName: FrostkettlebeesDate5
   - region: 1
-    sceneName: FkbDate6
+    sceneName: FrostkettlebeesDate6
   - region: 1
-    sceneName: FkbDate7
+    sceneName: FrostkettlebeesDate7
   - region: 3
-    sceneName: FkbDate8
-  expressions: []
-  voicelines: []
+    sceneName: FrostkettlebeesDate8
+  _li1: {fileID: 7649509627046155477}
+  _li2: {fileID: 4874148012749398893}
+  _li1PointsThreshold: 0
+  _li2PointsThreshold: 0
 --- !u!1 &906419760583492351
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,8 +115,8 @@ MonoBehaviour:
   - {fileID: 4874148012749398893}
   - {fileID: 5053413669965830094}
   - {fileID: 1441611164711895498}
-  - {fileID: 6447756554149253430}
-  - {fileID: 2311715904340534290}
+  - {fileID: 6078028717047340186}
+  - {fileID: 0}
   _liQueue: []
   priority: 0
   polyamPartner: 0
@@ -197,7 +200,8 @@ MonoBehaviour:
   _character: 6
   _dateCount: 1
   _points: 0
-  _successThreshold: 0
+  _successThreshold: 34
+  _datesForSuccess: 0
   dates:
   - region: 1
     sceneName: NaradrielDate1
@@ -215,8 +219,6 @@ MonoBehaviour:
     sceneName: NaradrielDate7
   - region: 3
     sceneName: NaradrielDate8
-  expressions: []
-  voicelines: []
 --- !u!1 &2121089421839208437
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +267,7 @@ MonoBehaviour:
   _dateCount: 1
   _points: 0
   _successThreshold: 0
+  _datesForSuccess: 0
   dates:
   - region: 0
     sceneName: LucyDate1
@@ -282,8 +285,6 @@ MonoBehaviour:
     sceneName: LucyDate7
   - region: 3
     sceneName: LucyDate8
-  expressions: []
-  voicelines: []
 --- !u!1 &2999318125812825097
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +332,8 @@ MonoBehaviour:
   _character: 7
   _dateCount: 1
   _points: 0
-  _successThreshold: 0
+  _successThreshold: 52
+  _datesForSuccess: 7
   dates:
   - region: 0
     sceneName: TrackerDate1
@@ -349,8 +351,6 @@ MonoBehaviour:
     sceneName: TrackerDate7
   - region: 3
     sceneName: TrackerDate8
-  expressions: []
-  voicelines: []
 --- !u!1 &3119712256977787243
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +399,7 @@ MonoBehaviour:
   _dateCount: 1
   _points: 0
   _successThreshold: 0
+  _datesForSuccess: 0
   dates:
   - region: 1
     sceneName: KipperlillyDate1
@@ -416,8 +417,6 @@ MonoBehaviour:
     sceneName: KipperlillyDate7
   - region: 0
     sceneName: KipperlillyDate8
-  expressions: []
-  voicelines: []
 --- !u!1 &7627333045459562457
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 108746899308286095}
-  - component: {fileID: 2311715904340534290}
+  - component: {fileID: 802592137418360283}
   m_Layer: 0
   m_Name: Trackernara
   m_TagString: Untagged
@@ -450,7 +449,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8888731270056157808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2311715904340534290
+--- !u!114 &802592137418360283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,24 +458,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 7627333045459562457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9dee6470b2a21540ab35309cadd9dfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c93e7dbfee94184580222f12168cfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: 0
+  _character: 9
   _dateCount: 1
   _points: 0
   _successThreshold: 0
+  _datesForSuccess: 0
   dates:
   - region: 1
-    sceneName: 3cDate5
-  - region: 3
-    sceneName: 3cDate6
+    sceneName: 3ClericDate5
   - region: 4
-    sceneName: 3cDate7
+    sceneName: 3ClericDate6
   - region: 2
-    sceneName: 3cDate8
-  expressions: []
-  voicelines: []
+    sceneName: 3ClericDate7
+  - region: 2
+    sceneName: 3ClericDate8
+  _li1: {fileID: 1441611164711895498}
+  _li2: {fileID: 5053413669965830094}
+  _li1PointsThreshold: 0
+  _li2PointsThreshold: 0
 --- !u!1 &7675935249089341470
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +563,8 @@ MonoBehaviour:
   _character: 3
   _dateCount: 1
   _points: 0
-  _successThreshold: 0
+  _successThreshold: 60
+  _datesForSuccess: 6
   dates:
   - region: 0
     sceneName: GertieDate1
@@ -579,8 +582,6 @@ MonoBehaviour:
     sceneName: GertieDate7
   - region: 3
     sceneName: GertieDate8
-  expressions: []
-  voicelines: []
 --- !u!1 &8504687439742202742
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +630,7 @@ MonoBehaviour:
   _dateCount: 1
   _points: 0
   _successThreshold: 0
+  _datesForSuccess: 0
   dates:
   - region: 2
     sceneName: FigDate1
@@ -646,13 +648,3 @@ MonoBehaviour:
     sceneName: FigDate7
   - region: 4
     sceneName: FigDate8
-  expressions:
-  - {fileID: -810011818, guid: 0fa16e5421c646b45ac98d40c4515627, type: 3}
-  - {fileID: -1762811555, guid: 0fa16e5421c646b45ac98d40c4515627, type: 3}
-  - {fileID: 190096495, guid: 0fa16e5421c646b45ac98d40c4515627, type: 3}
-  - {fileID: -585758209, guid: 0fa16e5421c646b45ac98d40c4515627, type: 3}
-  voicelines:
-  - {fileID: 8300000, guid: 8ba2a456cae87c247ae335499e9a8914, type: 3}
-  - {fileID: 8300000, guid: bb9160d1c3873ba4bad3046c4f43c982, type: 3}
-  - {fileID: 8300000, guid: 00c82bfd9bf09e6469a9c3932c05f412, type: 3}
-  - {fileID: 8300000, guid: b3ab60fd49a33c946b9215becd2f2e51, type: 3}

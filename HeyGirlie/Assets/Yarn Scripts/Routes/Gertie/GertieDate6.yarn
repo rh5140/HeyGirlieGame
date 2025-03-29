@@ -1,31 +1,32 @@
 ﻿title: Date6
 ---
+March 25
 <<location “PLACEHOLDER”>>
 <<set $date_points = 0>>
+<<set $date_points_total = 12>>
 <<kristen Nervous>>
 Well shit.
 You’re late. Like ROYALLY late.
 Presidentialy late? 
 Running too late to decide.
 You and Gertie were supposed to be at the local drive-in theater… ten minutes ago? And you’re only just now pulling into her driveway. 
-Hangvan: Chillax, Kristen, it’ll be all gravy.
-<<voiceline KristenSad1>> 
+Hangvan: Chillax, Kristen. It’ll be all gravy.
+<<voiceline KristenSad1>>
 You resist the urge to respond violently to the Hangvan’s lax attitude. Gorgug generously donated his wheels to your date and the last thing you’d want is to return him damaged.
 Thought it doesn’t stop the thought from creeping into your mind. 
 Hangvan: You have totally valid reasons, man. Who could blame you?
 Do you? You start to question yourself.
-It had been a hectic day, that’s for sure. You walked into Augefort and got bombarded with an array of presidential duties. Planning for the career fair, decorations for spring fling, a petition to add a new subclass to the bard track for social media influencers - it was enough to throw anyone off balance.
+It had been a hectic day, that’s for sure. You walked into Augefort and got bombarded with an array of presidential duties. Planning for the career fair, decorations decisions for Spring Fling, the petition to add a new bard subclass for social media influencers — it was enough to throw anyone off balance.
 Then to make matters worse, when you get back to Mordred Manor, Riz wanted to pick your brain on a new conspiracy he’s been unraveling, and then Aelwyn was visiting, and then…
 And then…
-And then you forgot. There’s no ifs ands or buts about it. You forgot about your date with the girl with more nemeses than she has strands of hair. 
+And then you forgot. There’s no ifs, ands, or buts about it. You forgot about your date with the girl with more nemeses than she has strands of hair.
 You checked your crystal after a couple hours to see about ten unread texts and five missed calls from Gertie. 
 It didn’t take an oracle to foresee the storm headed your way.
 The gravel of Gertie’s driveway crackles under the wheels of the Hangvan. You stifle a curse as you see Gertie already outside waiting for your date, her arms crossed, her tail coiled around her legs.
 <<char_right GertieSad>>
-<<kristen Awkward>>
 You put on your best smile and roll down the window.
-<<voiceline KristenGreetingGertie1>>
   -> Kristen: Howdy, what’s a fine lady like yourself doing outside all alone?
+    <<voiceline KristenGreeting1>>
     The accent may have been a bad idea. Gertie doesn’t seem as entertained by it as you are.
     <<add_points 1>>
   -> Kristen: Would it help if I said you look beautiful tonight?
@@ -33,20 +34,21 @@ You put on your best smile and roll down the window.
     Gertie: It wouldn’t hurt.
     <<add_points 2>>
   -> Kristen: You wouldn’t believe the traffic at this hour!
+    <<char_right GertieAngry>>
     Gertie: You’d be quite right, Miss Applebees. I wouldn’t.
     <<voiceline KristenDateFailGertie1>>
     <<add_points 0>>
-:The more you inspect Gertie’s expression the more it strikes you: She isn’t mad. She’s sad.
-Unfortunately that just makes the pit in your stomach get bigger.
+<<char_right GertieSad>>
+:The more you inspect Gertie’s expression, the more it strikes you: She isn’t mad. She’s sad.
+Unfortunately, that just makes the pit in your stomach get bigger.
 Kristen: Hop in?
 Gertie makes her way to the passenger door and opens it without so much as a smile.
 Hangvan: Hey guys, just a heads up, I got some groovy tunes if you need to drown out any of that uncomfortable tension you got going on.
 Kristen: Oh uh, thanks Hangvan, maybe not the time.
-<<char_right GertieNeutral>>
-Gertie: Actually, Mr. Van, I wouldn’t mind some soft music.
+Gertie: Actually, Mr. Van, I wouldn’t mind some music.
 Hangvan: Groovy.
 <<voiceline KristenAwkward1>>
-Despite the Hangvan’s efforts, no amount of steel drum can cover the vibes coming off of Gertie. But it does buy you some valuable time to think of excuses.
+Despite the Hangvan’s efforts, no amount of steel drum can cover the bad vibes coming off of Gertie. But it does buy you some valuable time to think of excuses.
   -> Kristen: Want to talk about it?
     <<kristen Soft>>
     <<add_points 2>>
@@ -55,7 +57,6 @@ Despite the Hangvan’s efforts, no amount of steel drum can cover the vibes com
   -> Let the music play.
     <<voiceline GertieDateFail2>>
     <<add_points 0>>
-<<char_right GertieSad>>
 Gertie: Where were you? We were supposed to be at the <i>Poorbehind Hill</i> screening twenty minutes ago. I got those tickets for us…
   -> Kristen: Baxter ate my movie ticket?
     <<kristen Awkward>>
@@ -66,7 +67,7 @@ Gertie: Where were you? We were supposed to be at the <i>Poorbehind Hill</i> scr
   -> Kristen: Truthfully? I forgot. 
     <<kristen Sad>>
     Kristen: I had a long and busy day and it slipped my mind until the last second.
-    Gertie pauses taking in what you have to say. She doesn’t look super pleased, but it seems like your honesty buys some goodwill back. 
+    Gertie pauses, taking in what you have to say. She doesn’t look super pleased, but it seems like your honesty buys some goodwill back.
     <<add_points 2>>
   -> Kristen: Ah you know, presidential duties, helping out friends. 
     <<kristen Nervous>>
@@ -75,55 +76,58 @@ Gertie: Where were you? We were supposed to be at the <i>Poorbehind Hill</i> scr
     <<add_points 1>>
 <<voiceline GertieSad3>>
 Gertie: I started to think you weren’t going to show up at all.
-Gertie’s eyes start swelling before she buries it back down. 
+Gertie’s eyes start swelling, then she buries the tears back down. 
 <<kristen Sad>>
-Gertie: I was worried things were just gonna be how they were before. 
+Gertie: I was worried things were just gonna be how they were before.
 <<voiceline KristenSad2>>
 Kristen: I’m sorry. I am. I didn’t mean to leave you high and dry, and I was never planning on standing you up.
-Kristen: I want you to know I am trying to put my best foot forward, but sometimes I’m going to make mistakes.
+Kristen: I want you to know I am trying to put my best foot forward, but sometimes, I’m afraid I’m going to make mistakes.
 Gertie rests silent. She’s listening to what you have to say, taking it all in. She doesn’t seem any more mad at you at least.
 Kristen: And you’re well within your rights to feel whatever way you want about that.
 <<char_right GertieNeutral>>
 Gertie: But I also don’t have to declare you my nemesis every time you do.
+<<kristen Surprised>>
 Kristen: I didn’t mean it like that.
 <<voiceline GertieNeutral3>>
+<<char_right GertieNeutral>>
+<<kristen Soft>>
 Gertie: I’m not perfect either, Kristen. How about we give each other a bit more slack?
 Kristen: That would be nice.
-<<char_right GertieHappy>>
-<<kristen Happy>>
-Neither of you seemed to notice that, in the midst of your drive, the Hangvan had switched over the music from steel drum to more of a smooth saxophone. 
-By the time you arrive at the drive-in, you’re well past thirty minutes late. You try to discreetly pull up to the ticket booth without alerting the rest of the movie-goers. 
+Neither of you seem to notice that, in the midst of your drive, the Hangvan had switched over the music from steel drum to more of a smooth saxophone. 
+<<kristen Neutral>>
+By the time you arrive at the drive-in, you’re well past thirty minutes late. You try to discreetly pull up to the ticket booth without alerting the rest of the movie-goers.
 But when you’re in a giant sentient van with your headlights on, that becomes a bit harder.
-In the ticket booth you see an extremely disinterested Shellford, the infamous bad boy of the AV Club and the less-well-known neutral boy of the LGBT+ Alliance.
+In the ticket booth you see an extremely disinterested Shellford, the bad boy of the AV Club and the neutral boy of the LGBTQ+ Alliance.
 He doesn’t seem to be paying any mind to you nor the movie. He’s actively playing games on his crystal as you pull up.
 Shellford: No late entry.
-<<char_right GertieNeutral>>
-<<kristen Awkward>>
+<<kristen Nervous>>
 <<voiceline KristenGreeting3>>
 Kristen: Heyyyyy Shellford. Long time no chat.
 Shellford: Yeah. That’s what happens when you don’t show up to our Alliance meetings.
 <<voiceline KristenAwkward2>>
-You laugh it off. Last time you checked in with Shellford, you were on good terms… or so you thought. Now that you think about it - it’s been a while since you last attended one of those meetings. Probably not the best look. 
-<<kristen Nervous>>
+You laugh it off. Last time you checked in with Shellford, you were on good terms… or so you thought. Now that you think about it — it’s been a while since you last attended one of those meetings. Probably not the best look. 
 Kristen: Well, Shelly, you know that’s because I’m a little busy with being student body president.
 Shellford: Are you even an ally anymore?
 At this point Gertie leans over from the passenger seat to address Shellford. You try not to think about how close her head is to you.
 Gertie: I can vouch for her. We’re on a date.
 Shellford: Hmmm…
+<<char_right GertieNervous>>
 Gertie: A gay one?
 Shellford: Still seems suspicious if you ask me.
 <<voiceline KristenAngry2>>
 <<kristen Angry>>
+<<char_right GertieNeutral>>
 Kristen: Can we get in to see the movie or not?
 Shellford: Yeah, no can do. 
-Shellford: It’s just disrespectful. I for one respect the cinematic arts.
+Shellford: It’s just disrespectful. I, for one, respect the cinematic arts.
 He continues playing on his crystal.
 <<char_right GertieAngry>>
 Gertie: Well, I paid money for us to see this movie.
 Shellford shrugs.
 Shellford: Should’ve thought about that before showing up late. 
 <<voiceline GertieAngry5>>
-You hazard a glance over at Gertie. You half expect her to be mad at you for all this for being late, but instead she looks like she’s rearing up to add Shellford of all people to her nemesis list.
+<<kristen Surprised>>
+You hazard a glance over at Gertie. You half expect her to be mad at you for all this, but instead she looks like she’s rearing up to add Shellford of all people to her nemesis list.
 You need to de-escalate and fast.
   -> Flash a fat bag of gold.
     <<kristen Grin>>
@@ -137,18 +141,19 @@ You need to de-escalate and fast.
     <<kristen Awkward>>
     Shellford: Was this before or after you interrogated me in freshman year?
     <<char_right GertieSurprise>>
-    Gertie: You did what?
     <<voiceline GertieSurprised2>>
+    Gertie: You did what?
     Kristen: Hey, it was to save our school! And kill our vice principal.
-    <<add_points 0>> 
+    <<add_points 0>>
   -> Kristen: It’s fine, we’re flexible people! We can make something else work.
     <<kristen Happy>>
+    <<char_right GertieNeutral>>
     Shellford: Ugh. Don’t guilt-trip me by being nice now.
     Is… that what you were doing?
     <<add_points 2>>
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
-Mercifully, Shellford takes some pity on you.    
+Mercifully, Shellford takes some pity on you.
 Shellford: Fine.
 He finally puts down his crystal.
 Shellford: I can’t let you disrupt all the people already watching, but we have a second screening starting in ten minutes. 
@@ -159,49 +164,53 @@ Kristen: Deal.
 <<voiceline GertieSurprised1>>
 Gertie: Kristen?!
 You look over to your date and give a reassuring grin.
-Kristen: C’mon, babe. How bad could it be?
+Kristen: C’mon, honey. How bad could it be?
 TEN MINUTES LATER
 <<kristen Surprised>>
 <<char_right GertieAngry>>
-Movie: “According to all known laws of aviation, there is no way that a bee should be able to fly”
-Oh no. This is somehow worse than no movie. 
-Gertie: Wrong. Wrong. Wrong. Wrong. 
+“According to all known laws of aviation, there is no way that a bee should be able to fly.”
+Oh no.
+This is somehow worse than no movie.
+Gertie: Wrong. Wrong. Wrong. Wrong.
 <<voiceline GertieBee2>>
 Gertie: The “laws of aviation” don’t say anything of the sort! Who was doing their research? Did they even consult an apiarist? It’s all a big disgrace!
-You grimace and put your head in your hands. You didn’t expect to pick the one movie that would piss Gertie off more than you being late.
+You grimace and put your head in your hands. You didn’t expect to pick the <i>one</i> movie that would piss Gertie off more than you being late.
 Gertie: I can’t wait for the credits. I have some new nemeses to declare…
 <<voiceline KristenNeutral2>>
   -> Kristen: It’s okay, I’m sure they just didn’t have the budget for a consultant!
     <<kristen Nervous>>
     <<voiceline GertieAngry1>>
-    Gertie: I know plenty of apiarists who would’ve done it for free!
+    Gertie: I know plenty of apiarists who would’ve done it pro bono!
     <<add_points 1>>
-  -> Kristen: We can divvy them up. No one should attack bees’ right to flight!
+  -> Kristen: We can divvy up the list. No one should attack bees’ right to flight!
     <<kristen Happy>>
     <<char_right GertieHappy>>
     <<voiceline GertieDateSuccess1>>
-    Gertie: You will be a valuable ally against this li-bee-l.
+    Gertie: You will be a valuable ally against this li<i>bee</i>l.
     Kristen: Libel is in print, but I’m happy to fight bee-slander too.
     <<add_points 2>>
-  -> Kristen: I mean it’s just a kids’ movie, it shouldn’t be that big of a deal.
-    <<kristen Neurtral>>
+  -> Kristen: I mean, it’s just a kids’ movie, it’s not that big of a deal.
+    <<kristen Awkward>>
     <<voiceline GertieDateFail1>>
-    Gertie: Not that big of a deal? The kids especially deserve accuracy in their education!
+    Gertie: Not that big of a deal? The kids especially deserve a fair and accurate education!
     Watching the movie unfold, you have a feeling that education wasn’t the goal.
     <<add_points 0>>
-<<char_right GertieSad>>
-Gertie: Ugh, I’m sorry. I specifically wanted to see <i>Poorbehind Hill</i>, the movie about gay beast-herding rangers, to avoid all of this.
-You can feel Gertie’s frustration morph from outward to inward.
 <<kristen Neutral>>
+<<char_right GertieSad>>
+Gertie: Ugh, I’m sorry. I specifically wanted to see <i>Poorbehind Hill</i>, the movie about gay beast-herding cowboy rangers, to avoid all of this.
+You can feel Gertie’s frustration morph from outward to inward.
+<<kristen Surprised>>
 Kristen: What do you mean?
 Gertie: We’ve been so focused on my interests. I wanted to take you out to a nice movie with minimal bee talk.
 Kristen: Minimal?
 <<voiceline GertieBee4>>
-Gertie: Well there was always going to be <i>some</i> bee talk.
+Gertie: Well, there was always going to be <i>some</i> bee talk.
 <<voiceline KristenRomanticGertie2>>
+<<kristen Soft>>
 Kristen: For what it’s worth, I don’t think there’s anything wrong with my Bee Girl.
 <<char_right GertieBlush>>
 Gertie cracks a smile at your old nickname for her. You can almost see her frustration melt off her shoulders.
+<<char_right GertieNeutral>>
 Gertie: Perhaps not, at least not right now, but that can be a bit much in the long run. I want to show equal effort to you and your interests and desires. No matter how un-bee-related they may be.
 <<kristen Grin>>
 Kristen: We’ll have time. Just wait ’til I show you my gym routine.
@@ -214,21 +223,23 @@ You two start to lean in for a perfect movie-like kiss, but before your lips mak
 It startles you and Gertie out of your shared moment as you rush to turn down the volume knob.  
 Kristen: Hangvan? What was that?
 Hangvan: So sorry gang. Trying to connect to the screen. but I seem to be having a bit of trouble.
+<<char_right GertieNervous>>
+<<kristen Nervous>>
 You silently wish more than anything that Gorgug was here to help. This is a little too artificer-y for your taste.
 Gertie tries messing with the knobs too but to no avail. 
 Looking up, it’s clear the movie has no desire to sit around waiting for you to fix your connection. 
 Kristen: Not to worry! I can totally handle this.
-<<char_right GertieNeutral>>
 <<kristen Awkward>>
 <<voiceline KristenAwkward3>>
+<<char_right GertieNeutral>>
 Can you?!
   -> Get your hands dirty and fiddle with the car’s wiring.
-    You’ve watched Gorgug work on this car many times. Did you ever pay attention to what he was doing? No! But how could that be relevant?
-    You don’t get far before you hear a sound you don’t recognize. Better not push it.
+    You’ve watched Gorgug work on this car countless times. Did you ever pay attention to what he was doing? No! But how could that be relevant?
     <<voiceline KristenDateFail3>>
+    You don’t get far before you hear a sound you don’t recognize. Better not push it.
     <<add_points 0>>
   -> Pray.
-   <<kristen Neutral>>
+    <<kristen Nervous>>
     Maybe there’s a long lost god of car radio that you can call on? 
     …
     I guess they’re busy.
@@ -236,47 +247,49 @@ Can you?!
   -> Kristen: Hey, uh Hangvan, got anything for me?
     <<kristen Neutral>>
     <<add_points 2>>
-Hangvan: Sorry, man, I think that the movie’s radio waves don’t like my celestial vibes
+Hangvan: Sorry, man, I think that the movie’s radio waves don’t like my celestial vibes.
 <<kristen Angry>>
-Kristen: So you can turn into a boat and launch a satellite into orbit but FM radio is where you draw the line?
+Kristen: So you can turn into a boat and launch a satellite into orbit, but FM radio is where you draw the line?
 The ultimate feeling that you’ve failed this date over and over again starts to overwhelm you.
 <<voiceline GertieSad1>>
 Gertie: Kristen, it’s okay. You don’t have to fix anything.
 <<voiceline KristenAngry1>>
-Kristen: Of course I do! You were nice enough to buy us tickets to something you thought I’d like, but I’m the reason we’re late, Shellford doesn’t like me, and I can’t even get a car radio to work so we can listen to the backup movie!
-Gertie: If anything, you’re probably saving me from a wave of incorrect facts on bees. 
+Kristen: Of course I do!
+Kristen: You were nice enough to buy us tickets to something you thought I’d like, but I’m the reason we’re late, Shellford doesn’t like me, and I can’t even get a car radio to work so we can listen to the backup movie!
+Gertie: If anything, you’re probably saving me from a wave of incorrect bee facts.
 <<kristen Sad>>
-Kristen: It’s just… What if I am just like this? What if I’m this messy forever? I try to do better but every time I feel like I come up short. 
+Kristen: It’s just… What if I am just like this? What if I’m this messy forever? I try to do better, but every time, I feel like I’m coming up short. 
 Gertie cups your hands while a cascade of yellow and black streams in from the screen.
 Gertie: You’re not a mess, Kristen.
 You raise an eyebrow.
 Gertie: Not anymore than anyone else at least. We all make mistakes.
-Kristen: But what if that’s the problem? If it’s that easy to justify my problems, then how can I get better?
+Kristen: But what if that’s the problem? If it’s that easy to justify and excuse my behavior, then how can I get better?
 Gertie: Through time and effort. Acknowledging the universality of making mistakes doesn’t relieve you of their consequences. It’s a balancing act.
-<<char_right GertieHappy>>
+<<char_right GertieGrin>>
 Gertie: You’ve already made great strides, Kristen. Compared to even just last year. 
-<<kristen Soft>>
-As nice as the sentiment is, you worry that after years of trying to improve, you’ll always fall short. You avert your eyes away from Gertie, but she doesn’t let you. She rests the palm of her hand on your face and brings it back up so you’re eye to eye.
+As nice as the sentiment is, you worry that after years of trying to improve, you’ll always fall short. You avert your eyes away from Gertie, but she doesn’t let you.
+<<kristen Surprised>>
+She rests the palm of her hand on your face and brings it back up so you’re eye to eye.
 <<char_right GertieNeutral>>
+<<kristen Neutral>>
 Gertie: I know earlier I said we’d give each other more slack, but we can also help each other. You’ve already helped me.
 Kristen: You don’t need my help.
 Gertie: Just tonight I was moments away from declaring another nemesis when you de-escalated. Or when you talked me through being used by Porter? Or when you helped me get along with Fabian? You’re helping me handle all my duel-related problems.
-<<char_right GertieBlush>>
 Gertie: We all have problems. It doesn’t mean we have to handle them alone.
 Gertie leans forward and kisses you to accentuate her point.
-<<kristen Surprised>>
+<<kristen Grin>>
 <<voiceline KristenDateSuccess3>>
 Kristen: Well it’s hard to argue with you when you do that.
-<<char_right GertieHappy>>
-<<kristen Grin>>
+<<char_right GertieGrin>>
 She flashes a grin of acknowledgement. You’re lucky that Gertie uses this power for good.
 Having been distracted by your wave of loving character development, it seems the two of you have missed the bulk of the movie. 
 And now there are humans involved?
-Kristen: It seems like we’ve missed quite a bit.
+Kristen: Looks like we’ve missed quite a bit.
 Gertie: It is a shame we can’t hear.
 Kristen: You know what… Why don’t we just do our own version. It’ll probably be better anyway.
 <<voiceline GertieRomantic2>>
-Gertie: A brilliant idea, Miss Applebees. Shall we?
+Gertie: A brilliant idea, Miss Applebees.
+<<char_right GertieHappy>>
 <<kristen Happy>>
 For the rest of the night, the two of you go back and forth playing the different characters of the movie. 
 Was the plot coherent?
@@ -288,15 +301,16 @@ Oh absolutely.
 <<voiceline KristenDateSuccessGertie2>>
 By the time the credits roll, the two of you had entirely forgotten how the night was <i>supposed</i> to go. Who cares when you have something much better right now?
 Kristen: You know, we’re pretty good at this. They should hire <i>us</i> to work on the sequel.
-Gertie: I shudder to think a slanderous movie such as this could ever be successful enough to warrant a sequel. May <i>The Bee Movie</i> die, forgotten and without impact.
+<<char_right GertieNeutral>>
+<<kristen Neutral>>
+Gertie: I shudder to think a slanderous movie such as this could ever be successful enough to warrant a sequel. May this film die, forgotten and without impact.
 Kristen: But if they ever want to reboot the franchise…
 <<voiceline GertieHappy3>>
-Gertie: Oh, we can absolutely take over the writer’s room.
-Gertie: Perhaps we’ll find a Hollywood agent at the career fair next week and make a pitch.
+Gertie: Oh, we can absolutely take over the writer’s room. Perhaps we’ll find a Hollywood agent at the career fair next week and make a pitch.
 Kristen: You bring the bees. I’ll bring the puns.
 <<char_right transparent>>
 <<kristen Soft>>
-As you drive back in comfortable silence, Gertie’s head leans against the window as she falls asleep.
+As you drive back in comfortable silence, Gertie leans her head against the window, falling asleep.
 You keep your eyes on the road, but every once in a while, you glance over to admire her. She’s hardly a graceful sleeper. A little bit of drool trails down the window, but you can’t help but be charmed by it. 
 As you pull into her gravel driveway, she wakes up naturally and stretches out her arms.
 <<char_right GertieBlush>>
@@ -304,7 +318,7 @@ Kristen: I’ll walk you to the door.
 You get to the door and kiss one more time before departing.
 Gertie: Thank you for a lovely night, Kristen. Even if we did get a late start.
 You bow dutifully.
-Kristen: It is my pleasure. 
+Kristen: It is my pleasure.
 <<voiceline KristenFarewellGertie2>>
 <<char_right transparent>>
 You get back in the Hangvan and drive home. If you’re gonna be making mistakes, at least you have the right person by your side to help you through it.

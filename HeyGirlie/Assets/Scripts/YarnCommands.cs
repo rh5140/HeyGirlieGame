@@ -23,8 +23,12 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _specialInterface; // not always used
     [SerializeField] private GameObject _locationUI;
     [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
+    [SerializeField] private GameObject _splashContinueButton; // not always used
+    [SerializeField] private GameObject _ui;
 
-    private Dictionary<string, AudioClip> _voicelines;
+    private Dictionary<string, AudioClip> _audioClips;
+    private AudioSource _voiceSource;
+    private AudioSource _sfxSource;
     private AudioSource _audioSource;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
@@ -51,19 +55,29 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("background", SetBackground);
         dialogueRunner.AddCommandHandler<string>("location", SetLocationUI);
 
-        dialogueRunner.AddCommandHandler<string>("voiceline", PlayAudioByName);
-        dialogueRunner.AddCommandHandler<string>("sfx", PlayAudioByName);
+        dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
+        dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
         dialogueRunner.AddCommandHandler("spring_fling_selection", SpringFlingInterface);
+        
+        dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
+        dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
+        dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
+        dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
+
+        dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
+        dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
     }
 
     void Start()
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
-        _voicelines = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
         _audioSource = GetComponent<AudioSource>();
+        _voiceSource = SettingManager.Instance.voices;
+        _sfxSource = SettingManager.Instance.sfx;
     }
 
     private void ChangeScene(string sceneName)
@@ -74,6 +88,10 @@ public class YarnCommands : MonoBehaviour
     private void AddPoints(int num)
     {
         _loveInterest.AddPoints(num);
+        // Handling Cassandra
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _variableStorage.SetValue("$date_points", date_points + num);
     }
 
     private void IncrementDateCount()
@@ -166,6 +184,23 @@ public class YarnCommands : MonoBehaviour
         _variableStorage.SetValue("$succeed", result);
         _variableStorage.SetValue("$date", name);
     }
+
+    public void CheckPolyamCondition(string polyam)
+    {
+        if (polyam == "FKB") 
+        {
+            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Frostkettle);
+            Polyam p = (Polyam) li;
+            bool result = p.MeetPolyamConditions();
+            _variableStorage.SetValue("$fkb", result);
+        } else if (polyam == "3C") 
+        {
+            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
+            Polyam p = (Polyam) li;
+            bool result = p.MeetPolyamConditions();
+            _variableStorage.SetValue("$tn3c", result);
+        }
+    }
     
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
@@ -228,14 +263,22 @@ public class YarnCommands : MonoBehaviour
         // If location is multiple words, put "quotes around location"
     }
     
+    private void PlayVoiceline(string audioName) {
+        PlayAudioByName(_voiceSource, _audioClips, audioName);
+    }
+    
+    private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
+        PlayAudioByName(_sfxSource, _audioClips, audioName);
+    }
 
-    private void PlayAudioByName(string audioName)
+    private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
     {
-        _audioSource.Stop();
-        if (_voicelines.ContainsKey(audioName)) 
+        audioSource.Stop();
+        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        if (audioClips.ContainsKey(audioName)) 
         {
-            _audioSource.clip = _voicelines[audioName];
-            _audioSource.Play();
+            audioSource.clip = audioClips[audioName];
+            audioSource.Play();
         }
         else Debug.Log("Audio asset " + audioName + " not found!");
     }
@@ -250,5 +293,60 @@ public class YarnCommands : MonoBehaviour
     private void SpringFlingInterface()
     {
         _specialInterface.GetComponent<SpringFling>().ActivateButtons();
+    }
+
+    private void EnableContinue()
+    {
+        _splashContinueButton.SetActive(true);
+    }
+
+    private void FadeInUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeIn();
+    }
+
+    private void BackgroundFilterOn(string color)
+    {
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), color));
+    }
+
+    private void BackgroundFilterOff()
+    {
+        StartCoroutine(FadeBGFilter(_background.GetComponent<Image>(), "white"));
+    }
+
+    private IEnumerator FadeBGFilter(Image bg, string color)
+    {
+        Color start = bg.color;
+        Color end;
+        switch (color)
+        {
+            case "black": 
+                end = Color.black; 
+                break;
+            case "sepia": 
+                end = new Color(0.8f, 0.7f, 0.6f, 1f); 
+                break;
+            default: 
+                end = Color.white; 
+                break;
+        }
+        float lerpTime = 1f;
+        float time = 0;
+        
+        while (time < lerpTime)
+        {
+            Color currentColor = Color.Lerp(start, end, time / lerpTime);
+            bg.color = currentColor;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        bg.color = end;
+
+    private void SetPolyam(string name)
+    {
+        if (name == "FKB") GameManager.Instance.SetPolyamActive(Character.Frostkettle);
+        else GameManager.Instance.SetPolyamActive(Character.Trackernara);
     }
 }

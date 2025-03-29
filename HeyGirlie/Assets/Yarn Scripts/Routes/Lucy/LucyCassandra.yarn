@@ -1,0 +1,45 @@
+﻿title: Cassandra
+tags:
+---
+teehee cass time
+<<sfx ring>>
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Lucy?
+
+
+<<jump EndDate>>
+===
+
+title: EndDate
+tags:
+---
+<<increment_date_count>>
+<<increase_dates_this_week>>
+<<if get_dates_this_week() < 3>>
+    <<change_scene DateSelection>>
+<<elseif get_week() == 2>>
+    end of Week 2 event
+    <<change_scene Week2Event>>
+<<elseif get_week() == 4>>
+    end of Week 4 event
+    <<change_scene Week4Event>>
+<<elseif get_week() == 6>>
+    end of Week 6 event
+    <<change_scene Week6Event>>
+<<elseif get_week() == 8>>
+    spring fling
+    <<change_scene SpringFling>>
+<<else>>
+    <<next_week>>
+    WEEK SHOULD INCREMENT
+    <<change_scene Cassandra>>
+<<endif>>
+===
