@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class MenuButton : MonoBehaviour
 {
-    [SerializeField] private AudioClip _hoverSFX;
-    [SerializeField] private AudioClip _selectSFX;
     private AudioSource _sfxSource;
 
     void Start()
@@ -11,13 +9,10 @@ public class MenuButton : MonoBehaviour
         _sfxSource = SettingManager.Instance.sfx;
     }
 
-    public void ButtonHover()
+    public void PlayAudio(AudioClip audioClip)
     {
-        _sfxSource.PlayOneShot(_hoverSFX);
-    }
-
-    public void ButtonSelect()
-    {
-        _sfxSource.PlayOneShot(_selectSFX);
+        _sfxSource.Stop();
+        _sfxSource.clip = audioClip;
+        _sfxSource.Play();
     }
 }
