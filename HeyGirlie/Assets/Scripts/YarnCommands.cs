@@ -343,6 +343,7 @@ public class YarnCommands : MonoBehaviour
         }
 
         bg.color = end;
+    }
 
     private void SetPolyam(string name)
     {
