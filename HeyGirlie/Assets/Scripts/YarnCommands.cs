@@ -190,6 +190,12 @@ public class YarnCommands : MonoBehaviour
             Polyam p = (Polyam) li;
             bool result = p.MeetPolyamConditions();
             _variableStorage.SetValue("$fkb", result);
+        } else if (polyam == "3C") 
+        {
+            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
+            Polyam p = (Polyam) li;
+            bool result = p.MeetPolyamConditions();
+            _variableStorage.SetValue("$tn3c", result);
         }
     }
     

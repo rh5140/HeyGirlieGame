@@ -80,10 +80,18 @@ title: CassandraWeek5
 ---
 <<declare $fkb = false>>
 <<polyam_condition FKB>>
+<<declare $tn3c = false>>
+<<polyam_condition 3C>>
 <<if $fkb>>
     Cassandra: It looks like you're doing well with Kipperlilly and Lucy! What do you think about... dating them both together at the same time...
     -> Kristen: Heck yeah!
         <<set_polyam FKB>>
+        Cassandra: Excited for this new adventure for the three of you!
+    -> Kristen: I think it's not for me.
+<<elseif $tn3c>>
+    Cassandra: It looks like you're doing well with Tracker and Nara! What do you think about... dating them both together at the same time...
+    -> Kristen: Heck yeah!
+        <<set_polyam 3C>>
         Cassandra: Excited for this new adventure for the three of you!
     -> Kristen: I think it's not for me.
 <<else>>
