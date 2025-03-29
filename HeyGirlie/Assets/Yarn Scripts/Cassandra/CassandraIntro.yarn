@@ -21,6 +21,7 @@ tags:
 
 <<elseif get_week() == 5>>
     Cassandra: WEEK 5 NOW
+    <<jump CassandraWeek5>>
 
 <<elseif get_week() == 6>>
     Cassandra: WEEK 6 NOW
@@ -54,7 +55,7 @@ title: CassandraWeek1
 tags:
 ---
 Cassandra: WEEK 1 NOW
-
+// FOR POLYAM TESTING PURPOSES, cut and paste the CassandraWeek5 content here and play with DateCount sliders
 Cassandra: Who would you want to date?
 
 -> Fig
@@ -73,4 +74,20 @@ Cassandra: Who would you want to date?
 Cassandra: Where do you want to go this week?
 <<change_scene DateSelection>>
 
+===
+
+title: CassandraWeek5
+---
+<<declare $fkb = false>>
+<<polyam_condition FKB>>
+<<if $fkb>>
+    Cassandra: It looks like you're doing well with Kipperlilly and Lucy! What do you think about... dating them both together at the same time...
+    -> Kristen: Heck yeah!
+        <<set_polyam FKB>>
+        Cassandra: Excited for this new adventure for the three of you!
+    -> Kristen: I think it's not for me.
+<<else>>
+    Cassandra: Hmm... never mind.
+<<endif>>
+<<change_scene DateSelection>>
 ===
