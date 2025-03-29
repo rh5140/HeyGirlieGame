@@ -321,19 +321,19 @@ public class YarnCommands : MonoBehaviour
         Color end;
         switch (color)
         {
-            case "black": 
-                end = Color.black; 
+            case "black":
+                end = Color.black;
                 break;
-            case "sepia": 
-                end = new Color(0.8f, 0.7f, 0.6f, 1f); 
+            case "sepia":
+                end = new Color(0.8f, 0.7f, 0.6f, 1f);
                 break;
-            default: 
-                end = Color.white; 
+            default:
+                end = Color.white;
                 break;
         }
         float lerpTime = 1f;
         float time = 0;
-        
+
         while (time < lerpTime)
         {
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
@@ -343,7 +343,7 @@ public class YarnCommands : MonoBehaviour
         }
 
         bg.color = end;
-
+    }    
     private void SetPolyam(string name)
     {
         if (name == "FKB") GameManager.Instance.SetPolyamActive(Character.Frostkettle);
