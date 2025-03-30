@@ -69,6 +69,8 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
+
+        dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
     }
 
     void Start()
@@ -202,6 +204,17 @@ public class YarnCommands : MonoBehaviour
         }
     }
     
+    
+    private void SetAydaCondition()
+    {
+        //variable in AydaLI is true;
+        Debug.Log("Running SetAydaCondition yarn command");
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI) li;
+        aydali.SetAydaDate7True();
+    }
+    
+    
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
     {
@@ -292,7 +305,14 @@ public class YarnCommands : MonoBehaviour
     
     private void SpringFlingInterface()
     {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI)li;
+        bool date7choice = aydali.GetAydaDate7();
         _specialInterface.GetComponent<SpringFling>().ActivateButtons();
+        if (date7choice == false)
+        {
+            _specialInterface.GetComponent<SpringFling>().DeactivateAyda(date7choice);
+        }
     }
 
     private void EnableContinue()
