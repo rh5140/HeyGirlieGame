@@ -1,11 +1,11 @@
 ﻿title: Date4
 ---
-March 15
 //max points 12
 <<location "Bottomless Pit">>
 <<set $date_points = 0>>
 <<set $date_points_total = 12>>
 <<kristen Neutral>>
+March 29
 So here you are. The Bottomless Pit. Former domain of Gorthalax the Insatiable. Current domain of podcasting and rock sensation, Fig.
 <<kristen Surprised>>
 <<voiceline KristenSurprised2>>
@@ -69,6 +69,7 @@ Fig: Do you think it’s cool?
 You both get settled in as she grabs the mic to adjust it.
 Fig: Testing. Testing, can anyone hear me?
 Kristen: Uh.. want me to scream into the mic?
+<<sfx feedback>>
 She flashes a grin at you, then rolls her eyes as quiet whispers start to emanate from the equipment.
 <<kristen Awkward>>
 <<voiceline KristenNeutral3>>
@@ -142,6 +143,7 @@ That was <i>not</i> what you were expecting, and you fight off a laugh.
 <<char_right FigHappy>>
 <<voiceline FigLaugh1>>
 Fig laughs, loudly, and the mic responds with a tiny screech of feedback.
+<<sfx feedback>>
 <<char_right FigNeutral>>
 Fig: Alright, alright, back to serious business. You’re the student body president now. You’re The Man.
 <<kristen Grin>>

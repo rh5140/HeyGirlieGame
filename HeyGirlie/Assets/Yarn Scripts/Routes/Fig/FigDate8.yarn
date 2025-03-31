@@ -1,12 +1,12 @@
 ﻿title: Date8
 ---
-March 23
 //max points 13
 //5k date
 <<location "Bottomless Pit">>
 <<set $date_points = 0>>
 <<set $date_points_total = 13>>
 <<kristen Neutral>>
+March 29
 You step through the shimmering red portal in Figs bedroom and feel the effects of the plane shift immediately. The Bottomless Pit is as dramatic as it always is, with swirling molten cracks in the stone walls and the distant echoes of tormented screams.
 Fig swears they’re just for ambiance, but you’ll never really believe that.
 But right now, all of that seems unimportant as you make your way through the expansive pit. It seems conspicuously empty today. Usually, the place is packed with domain dwellers running this way and that, trying to keep the music production studios running. But as far as you can tell, you’re the only one here.
@@ -93,6 +93,7 @@ Fig: So tell me… is the sweating from the heat, or from being close to me?
   <<add_points 1>>
 -> Now who’s got the big head?
   Kristen: You should be careful. I’m starting to get some real neck pain from carrying around mine every day.
+  <<sfx splash>>
   Fig snorts and scoops a handful of bubbling water. You don’t have the time to dodge before the water hits you square in the face.
   <<kristen Surprised>>
   <<voiceline KristenAngry3>>
@@ -374,9 +375,11 @@ Fig laughs, leaning her head back against the ledge with a sigh.
 Fig: Fuuuuuck. What a mess.
 Kristen: A cute mess, though. Two peas in a pod. Birds of a feather. Perfectly aligned. Divinely connected.
 <<char_right FigSurprised>>
-Fig groans, reaching beneath the water to splash you directly in the face. Again.
+<<sfx splash>>
+Fig groans, reaching beneath the water to splash you directly in the face.
 <<kristen Surprised>>
 Fig: Okay, you <i>have</i> to stop saying things that make my brain melt.
+<<sfx splash>>
 You put on your best shit-eating grin and splash her back.
 <<kristen Grin>>
 Kristen: Make me!
@@ -397,6 +400,7 @@ Fig lunges at you, but you’re ready this time. You see it in her mischievous g
   Fig flails wildly, kicking her legs as she tries to get out of your grip… Until she finally lunges forward, using her momentum to shove you backward instead.
   <<kristen Surprised>>
   <<voiceline KristenSurprised3>>
+  <<sfx splash>>
   You lose balance, splashing down onto the submerged seat. Fig lands on top of you, straddling your lap, hands gripping your shoulders for balance.
   <<add_points 2>>
 -> Go for the tactical takedown!
@@ -406,6 +410,7 @@ Fig lunges at you, but you’re ready this time. You see it in her mischievous g
   <<voiceline FigSurprised4>>
   Fig: OH! Damn it!
   <<kristen Surprised>>
+  <<sfx splash>>
   Her legs go out from under her, and she falls forward, knocking you back onto the submerged seat. Fig topples after you, landing straddled across your lap. Her hands grip your shoulders to steady herself.
   <<add_points 1>>
 
@@ -518,4 +523,3 @@ Fig: Got’cha!
 And then she’s kissing you again.
 <<jump Cassandra>>
 ===
-
