@@ -1,12 +1,12 @@
 ﻿title: Date8Alt
 ---
-March 23
 //max points 18
 //5k date
 <<location "Bottomless Pit">>
 <<set $date_points = 0>>
 <<set $date_points_total = 18>>
 <<kristen Neutral>>
+March 29
 You step through the portal in Fig’s bedroom, feeling your body tingle as the plane shift moves you down into the Bottomless Pit. You may not have spent too much time here, but as soon as you arrive, you can feel that something was different.
 Maybe it was the severe lack of any damned souls running around carrying amps and mics to upkeep the studios… Or maybe it was just because of the nerves fluttering around in your stomach.
 Tonight is going to be a date with Fig <i>and</i> Ayda, which was completely insane to think about, but you went and opened your big mouth about it anyway and now it was happening.
@@ -174,6 +174,7 @@ Ayda: Fig told me it was one of your favorites and generally speaking, one shoul
 Kristen: So like… Should I be real flattered that you guys wanted me in the hot tub, too?
 <<char_right AydaThink>>
 Ayda tilts her head as she contemplates the question, but before she can reply, Fig bursts into laughter and scoops a handful of steaming water to splash you right in the face.
+<<sfx splash>>
 <<kristen Surprised>>
 <<char_left FigHappy>>
 <<voiceline KristenAngry2>>
@@ -189,6 +190,7 @@ Fig: Gotta keep you on your toes, Kristen!
   <<kristen Happy>>
   <<voiceline KristenHappy1>>
   Kristen: Oh, you’re dead!
+  <<sfx splash>>
   You hurl a wave of water at her. Fig yelps, laughing as she ducks under to avoid most of it.
   <<char_left FigHappy>>
   <<voiceline FigAngry2>>
@@ -210,6 +212,7 @@ Fig: Gotta keep you on your toes, Kristen!
   Kristen: Okay, okay. Truce. I won’t—
   <<kristen Happy>>
   <<voiceline KristenHappy1>>
+  <<sfx splash>>
   Then you splash her with everything you’ve got.
   <<char_left FigHappy>>
   <<voiceline FigHappy2>>
@@ -218,6 +221,7 @@ Fig: Gotta keep you on your toes, Kristen!
 
 
 <<char_right AydaNeutral>>
+<<sfx splash>>
 The water sloshes violently as you and Fig start to wrestle like absolute gremlins. It starts simple enough, splash for splash, tugging, shoving, dunking… until suddenly, Fig is on your back, arms locked around your shoulders in an aggressive chokehold.
 <<char_left FigBlush>>
 <<voiceline FigLaugh1>>
@@ -226,6 +230,7 @@ Fig: SUBMIT, APPLEBEES!
 <<voiceline KristenAngry1>>
 Kristen: Fig, you cheating little demon, get OFF me!
 <<char_left FigHappy>>
+<<sfx splash>>
 You flail, trying to shake her off, but Fig clings like a barnacle, half-drowning you in the process. The water surges around you, splashing everywhere. Including directly onto Ayda.
 <<char_right AydaThink>>
 Ayda: It appears I am also under attack.
@@ -344,7 +349,7 @@ Fig: Shit. I didn’t mean to… I just… fuck, Kristen, I’m so sorry. I <i>s
   Fig: Yeah. I know. I know. I just… fuck. I don’t wanna screw this up.
   <<kristen Neutral>>
   Kristen: Then don’t.
-Fig laughs and shakes her head.
+  Fig laughs and shakes her head.
   <<char_left FigNeutral>>
   Fig: I’m trying, okay? I really am… But I can do better.
   <<add_points 2>>
@@ -551,7 +556,7 @@ Fig: Plus, you being totally gagged instead of it always being me is nice for a 
   Fig: Ohhh, this is my favorite day.
   <<char_right AydaThink>>
   Ayda: If this was somehow a competition I was initially unaware of, it does appear that you are losing spectacularly, Kristen.
-You groan dramatically and narrow your eyes at Fig.
+  You groan dramatically and narrow your eyes at Fig.
   <<kristen Angry>>
   Kristen: You’re evil.
   <<voiceline FigLaugh2>>
@@ -684,7 +689,7 @@ You turn back to Fig and honestly? You’re shocked the hot tub hasn’t started
 
 Fig lunges across the water, grabbing your face in both hands and kissing you like she’s making up for lost time.
 <<kristen Nervous>>
-<<voiceline KristenDateSuvvessFig1>>
+<<voiceline KristenDateSuccessFig1>>
 Kristen: Okay, wow… you’re really—
 <<char_right FigBlush>>
 <<voiceline FigSuccess3>>

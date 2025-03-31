@@ -5,7 +5,7 @@
 <<set $date_points = 0>>
 <<set $date_points_total = 5>>
 <<kristen Neutral>>
-March 23
+March 29
 Leviathan is bustling when you arrive, with pirates shouting over one another and shoving into you as you attempt to make your way down the street. Fig didn’t exactly give you directions. Just a note under your door asking you to come to Leviathan after school.
 You sigh, glancing around, half expecting her to just appear out of nowhere. And, as if the universe is determined to keep you on your toes, something collides with you. Hard.
 <<kristen Surprised>>
@@ -19,7 +19,6 @@ Fig: Okay, listen. LISTEN. Ayda has lost her goddamn mind. I am so serious right
 <<voiceline KristenNeutral3>>
 Kristen: Uh… what?
 Fig grabs your shoulders and shakes you. Uh oh… Whatever’s going on can’t be good. Fig is utterly losing it.
-<<voiceline FigGreeting2>>
 <<voiceline FigSurprised4>>
 Fig: I can’t explain! It’s too much! We need to go NOW!
 Before you can ask even a single follow-up question, Fig grabs your wrist and starts dragging you down the street.
@@ -203,7 +202,7 @@ Fig sucks in a breath as Ayda’s words land like they are irrefutable truth.
 But… Sweet Cassandra… <i>Here comes that word vomit again.</i>
 
 
--> Suggest Ayda date you, too!
+-> Yeah but… The more the merrier
   Kristen: What about me?
   <<voiceline KristenRomantic3>>
   <<char_left FigSurprised>>
@@ -221,7 +220,7 @@ But… Sweet Cassandra… <i>Here comes that word vomit again.</i>
     <i>Well shit… This is actually happening, then.</i>
     Fig: Wait… Seriously? Just like that?
     Ayda: I shall accompany the both of you on a date and we shall put it to the test.
-    //<<THIS WILL CAUSE THE POLY DATE 8 AND POLY SPRING FLING>>
+    // <<THIS WILL CAUSE THE POLY DATE 8 AND POLY SPRING FLING>>
   -> Just kidding
     <<kristen Awkward>>
     <i>Oh shit. You just asked Ayda if she would consider dating you too.</i>
@@ -234,9 +233,9 @@ But… Sweet Cassandra… <i>Here comes that word vomit again.</i>
     Ayda: Ah. You were making a jest. It was… an interesting one.
     <<kristen Neutral>>
     Fig shoves you weakly. You shove her back. Ayda remains unshaken, but it’s clear this is the end of that particular conversation.
-    //<<THIS WILL NOT CAUSE POLY ALTS>>
+    // <<THIS WILL NOT CAUSE POLY ALTS>>
   <<add_points 0>>
--> Control your mouth
+-> Agree with Ayda
   <<kristen Soft>>
   <<char_right AydaNeutral>>
   You smile slightly, watching the way Ayda and Fig look at each other. The way Fig’s entire body reacts to Ayda’s words. You get it. Completely.
@@ -332,5 +331,4 @@ You look around the room. And very suddenly realize—
 Kristen: …Wait. Where the fuck are my clothes?
 <<jump Cassandra>>
 ===
-
 
