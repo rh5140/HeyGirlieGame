@@ -4,6 +4,7 @@ tags:
 <<kristen Neutral>>
 <<char_right CassandraNeutral>>
 <<if get_week() == 1>>
+    <<voiceline CassGreeting2>>
     Cassandra: What's the matter, Kristen?
     <<kristen Nervous>>
     <<char_right CassandraSurprised>>
@@ -11,25 +12,32 @@ tags:
     <<jump CassandraWeek1>>
 
 <<elseif get_week() == 2>>
+    <<voiceline CassGreeting1>>
     <<jump CassandraWeek2>>
 
 <<elseif get_week() == 3>>
+    <<voiceline CassGreeting1>>
     Cassandra: WEEK 3 NOW
 
 <<elseif get_week() == 4>>
+    <<voiceline CassGreeting1>>
     Cassandra: WEEK 4 NOW
 
 <<elseif get_week() == 5>>
+    <<voiceline CassGreeting1>>
     Cassandra: WEEK 5 NOW
     <<jump CassandraWeek5>>
 
 <<elseif get_week() == 6>>
+    <<voiceline CassGreeting1>>
     Cassandra: WEEK 6 NOW
 
 <<elseif get_week() == 7>>
+    <<voiceline CassGreeting1>>
     Cassandra: WEEK 7 NOW
 
 <<elseif get_week() == 8>>
+    <<voiceline CassGreeting1>>
     Cassandra: WEEK 8 NOW
 
 <<else>>
@@ -55,7 +63,7 @@ title: CassandraWeek1
 tags:
 ---
 Cassandra: WEEK 1 NOW
-// FOR POLYAM TESTING PURPOSES, cut and paste the CassandraWeek5 content here and play with DateCount sliders
+<<voiceline CassNeutral2>>
 Cassandra: Who would you want to date?
 
 -> Fig
