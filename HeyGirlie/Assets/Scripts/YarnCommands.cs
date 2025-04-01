@@ -179,6 +179,10 @@ public class YarnCommands : MonoBehaviour
                 break;
             case "FigAyda":
                 li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+                // Set Ayda's points to Fig's current points
+                LoveInterest figLI = GameManager.Instance.GetLoveInterest(Character.Fig);
+                li.SetPoints(figLI.GetPoints());
+                //Debug.Log("Ayda points = " + li.GetPoints());
                 break;
             default: // Fig is default
                 break;

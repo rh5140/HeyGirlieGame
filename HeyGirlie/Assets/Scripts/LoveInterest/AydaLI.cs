@@ -20,7 +20,7 @@ public class AydaLI : LoveInterest
     public override bool SucceedEnding()
     {
         // Set Ayda points = Fig points;
-
+    
         // Success ending only if more points than threshold and correct choice was picked in date 7
         //Debug.Log("Calling AydaLI SucceedEnding");
         return (_points >= _successThreshold) && (AydaDate7);
