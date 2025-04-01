@@ -71,6 +71,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
 
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
+        dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
     }
 
     void Start()
@@ -219,6 +220,14 @@ public class YarnCommands : MonoBehaviour
         LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
         AydaLI aydali = (AydaLI) li;
         aydali.SetAydaDate7True();
+    }
+
+    private void GetAydaCondition()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI)li;
+        bool temp = aydali.GetAydaDate7();
+        _variableStorage.SetValue("$ayda8", temp);
     }
     
     
