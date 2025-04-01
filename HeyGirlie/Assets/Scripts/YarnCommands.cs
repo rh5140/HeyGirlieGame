@@ -177,6 +177,9 @@ public class YarnCommands : MonoBehaviour
             case "3C":
                 li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
                 break;
+            case "FigAyda":
+                li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+                break;
             default: // Fig is default
                 break;
         }
@@ -208,7 +211,7 @@ public class YarnCommands : MonoBehaviour
     private void SetAydaCondition()
     {
         //variable in AydaLI is true;
-        Debug.Log("Running SetAydaCondition yarn command");
+        //Debug.Log("Running SetAydaCondition yarn command");
         LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
         AydaLI aydali = (AydaLI) li;
         aydali.SetAydaDate7True();
