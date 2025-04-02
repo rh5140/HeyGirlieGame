@@ -7,6 +7,7 @@ using TMPro;
 public class SaveProfiles : MonoBehaviour
 {
     [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button deleteButton;
     [SerializeField] private GameObject[] saves;
@@ -18,7 +19,9 @@ public class SaveProfiles : MonoBehaviour
     void Awake(){
         loadButton.interactable = false;
         deleteButton.interactable = false;
-        
+        Debug.Log(SceneManager.GetActiveScene());
+        if(SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = false;
+
         SetScreenshots();
         SetNames();
     }
@@ -34,7 +37,7 @@ public class SaveProfiles : MonoBehaviour
     }
 
     public void SaveSave(){
-        Close();
+        GameManager.Instance.Save();
     }
 
     public void LoadSave(){
