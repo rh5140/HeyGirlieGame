@@ -138,6 +138,10 @@ namespace Yarn.Unity
                             lastLineCharacterNameText.text = lastSeenLine.CharacterName;
                         }
                     }
+                    else if (line.Text[0] == ':')
+                    {
+                        line.Text = line.Text.Substring(1);
+                    }
 
                     if (palette != null)
                     {
