@@ -3,16 +3,9 @@ using Yarn.Unity;
 
 public class SpecialEventSelection : MonoBehaviour
 {
-    [SerializeField] private int _nextWeek;
     [SerializeField] protected DialogueRunner _dialogueRunner;
     [SerializeField] protected GameObject[] _buttons; // Set buttons in same order as LoveInterest array in GameManager
     [SerializeField] protected GameObject _buttonContainer;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    // void Start()
-    // {
-    //     ActivateButtons(_nextWeek);
-    // }
 
     // Iterates through buttons and enables if corresonding idx in GameManager LoveInterest array meets threshold 
     // Make sure polyam options have corresponding number
