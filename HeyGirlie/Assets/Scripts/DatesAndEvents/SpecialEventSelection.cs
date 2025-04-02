@@ -27,16 +27,25 @@ public class SpecialEventSelection : MonoBehaviour
             }
             return false;
         }
-        int liIdx = 2; 
+        int liIdx = (int)Character.Fig; // 0=Kristen, 1=Cassandra, 2=Fig, ..., 7=Tracker, 8=Frostkettle, 9=Trackernara
         int buttonsTurnedOff = 0;
+        bool week6 = threshold > 6; // Threshold = 7 in week 6
         // Button array shorter than LI array when no polyam included
         foreach (GameObject button in _buttons)
         {
             // DateCount is 1-indexed
-            if (GameManager.Instance.GetLoveInterest((Character)liIdx).GetDateCount() < threshold)
+            int liDateCount = GameManager.Instance.GetLoveInterest((Character)liIdx).GetDateCount();
+            if (liDateCount < threshold)
             {
-                button.SetActive(false);
-                buttonsTurnedOff++;
+                if (week6 && (liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara) && liDateCount == 2) // True if you've gone on 2 polyam dates by week 6 event
+                {
+                    continue;
+                }
+                else
+                {
+                    button.SetActive(false);
+                    buttonsTurnedOff++;
+                }
             }
             liIdx++;
         }
