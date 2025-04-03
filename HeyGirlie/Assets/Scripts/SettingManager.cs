@@ -36,7 +36,7 @@ public class SettingManager : MonoBehaviour
 
     public void ChangeVSync(bool value){
         vsync = value;
-        Debug.Log("idk what VSync is <3");
+        // Debug.Log("idk what VSync is <3");
     }
 
     public void ChangeCursor(float value){

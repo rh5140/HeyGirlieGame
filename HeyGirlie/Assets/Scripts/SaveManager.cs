@@ -96,7 +96,7 @@ public static class SaveManager
             for(int i = 1; i <= 10; i++){
                 // Regex.Match(files[i])
                 try{
-                    Debug.Log(files[i-1].Name);
+                    // Debug.Log(files[i-1].Name);
                     Match m = Regex.Match(files[i-1].Name, i.ToString("00"));
                     if(!m.Success) return i;
                 } catch (Exception e){

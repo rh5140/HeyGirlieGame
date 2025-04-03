@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Yarn.Unity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -85,6 +86,7 @@ public class YarnCommands : MonoBehaviour
 
     private void ChangeScene(string sceneName)
     {
+        GameManager.Instance.SetLocationName("Spyre");
         SceneManager.LoadScene(sceneName);
     }
 
@@ -287,8 +289,14 @@ public class YarnCommands : MonoBehaviour
     
     private void SetLocationUI(string locationName)
     {
-        TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
-        location.text = locationName;
+        try {
+            TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
+            location.text = locationName;
+        } catch (Exception e) {
+            //do nothing
+        } finally {
+            GameManager.Instance.SetLocationName(locationName);
+        }
         // If location is multiple words, put "quotes around location"
     }
     

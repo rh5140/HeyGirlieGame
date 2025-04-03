@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get {return _instance;}}
 
     private string _playerName = "Kristen";
+    private string _location = "Spyre";
     private int _saveProfile = 0;
 
     // public string _lastMenu = "Main Menu";
@@ -162,6 +163,16 @@ public class GameManager : MonoBehaviour
         _playerName = playerName;
     }
 
+    public string GetLocationName()
+    {
+        return _location;
+    }
+
+    public void SetLocationName(string locationName)
+    {
+        _location = locationName;
+    }
+
     public int GetProfile(){
         return _saveProfile;
     }
@@ -193,7 +204,7 @@ public class GameManager : MonoBehaviour
 
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
-        PlayerData data = new PlayerData(GetPlayerName(), "Spyre", SceneManager.GetActiveScene().name, GetWeek(), GetDatesThisWeek(), _liQueue,
+        PlayerData data = new PlayerData(_playerName, _location, SceneManager.GetActiveScene().name, _week, _datesThisWeek, _liQueue,
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);
