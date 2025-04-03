@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using Yarn.Unity;
 
@@ -7,6 +8,11 @@ public class DialogueUIButtons : MonoBehaviour
     [SerializeField] private GameObject saveProfileMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private HGGLineView hggLineView;
+    [SerializeField] private Toggle fastFowardButton;
+
+    public void Awake(){
+        fastFowardButton.interactable = false;
+    }
 
     public void Save(){
         GameManager.Instance.Save();
