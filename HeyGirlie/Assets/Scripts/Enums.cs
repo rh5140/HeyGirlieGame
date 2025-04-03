@@ -12,6 +12,7 @@ public enum Character
     Tracker,
     Frostkettle,
     Trackernara,
+    Ayda
 }
 
 public enum Region
