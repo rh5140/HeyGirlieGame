@@ -113,6 +113,8 @@ public class GameManager : MonoBehaviour
                 return _loveInterests[6];
             case Character.Trackernara:
                 return _loveInterests[7];
+            case Character.Ayda:
+                return _loveInterests[8];
             default:
                 return null;
         }
