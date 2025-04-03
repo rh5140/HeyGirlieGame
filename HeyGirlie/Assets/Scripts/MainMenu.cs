@@ -19,6 +19,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private GameObject maxProfilePopup;
     [SerializeField] private TMP_InputField playerName;
+    [SerializeField] private AudioClip[] _startupVoicelines;
+
+    void Start() {
+        SettingManager.Instance.voices.PlayOneShot(_startupVoicelines[RandomizeVoiceline()]);
+    }
 
     private void Update(){
         // Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
@@ -72,5 +77,20 @@ public class MainMenu : MonoBehaviour
     
     public void openMaxProfilePopup(){
         maxProfilePopup.SetActive(true);
+    }
+
+    private int RandomizeVoiceline()
+    {
+        // Weighted randomization... equal chance for everyone EXCEPT the weird K2 one
+        int rand = UnityEngine.Random.Range(0, 82);
+        if (rand < 10) return (int)Character.Kristen;
+        else if (rand < 20) return (int)Character.Cassandra;
+        else if (rand < 30) return (int)Character.Fig;
+        else if (rand < 40) return (int)Character.Gertie;
+        else if (rand < 50) return (int)Character.Kipperlilly;
+        else if (rand < 60) return (int)Character.Lucy;
+        else if (rand < 70) return (int)Character.Naradriel;
+        else if (rand < 80) return (int)Character.Tracker;
+        else return 8; // 8 corresponds with K2? voiceline
     }
 }

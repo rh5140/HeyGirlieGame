@@ -69,6 +69,9 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
+
+        dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
+        dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
     }
 
     void Start()
@@ -175,6 +178,13 @@ public class YarnCommands : MonoBehaviour
             case "3C":
                 li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
                 break;
+            case "FigAyda":
+                li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+                // Set Ayda's points to Fig's current points
+                LoveInterest figLI = GameManager.Instance.GetLoveInterest(Character.Fig);
+                li.SetPoints(figLI.GetPoints());
+                //Debug.Log("Ayda points = " + li.GetPoints());
+                break;
             default: // Fig is default
                 break;
         }
@@ -201,6 +211,25 @@ public class YarnCommands : MonoBehaviour
             _variableStorage.SetValue("$tn3c", result);
         }
     }
+    
+    
+    private void SetAydaCondition()
+    {
+        //variable in AydaLI is true;
+        //Debug.Log("Running SetAydaCondition yarn command");
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI) li;
+        aydali.SetAydaDate7True();
+    }
+
+    private void GetAydaCondition()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI)li;
+        bool temp = aydali.GetAydaDate7();
+        _variableStorage.SetValue("$ayda8", temp);
+    }
+    
     
     // Set the sprite for the Kristen/left position by calling the SetSprite function
     private void SetKristenSprite(string charSpriteName)
@@ -292,7 +321,14 @@ public class YarnCommands : MonoBehaviour
     
     private void SpringFlingInterface()
     {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI)li;
+        bool date7choice = aydali.GetAydaDate7();
         _specialInterface.GetComponent<SpringFling>().ActivateButtons();
+        if (date7choice == false)
+        {
+            _specialInterface.GetComponent<SpringFling>().DeactivateAyda(date7choice);
+        }
     }
 
     private void EnableContinue()

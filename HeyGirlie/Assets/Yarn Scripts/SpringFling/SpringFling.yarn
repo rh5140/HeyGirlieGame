@@ -41,6 +41,8 @@ title: Ending
     
     <<if $date == "Fig">>
         <<jump FigEnding>>
+    <<elseif $date == "FigAyda">>
+        <<jump FigAydaEnding>>
     <<elseif $date == "Gertie">>
         <<jump GertieEnding>>
     <<elseif $date == "Kipperlilly">>
