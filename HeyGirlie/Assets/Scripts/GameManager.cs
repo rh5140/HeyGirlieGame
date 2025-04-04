@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     public Character priority;
     public Character polyamPartner;
     // Checking for polyam condition
-    private bool _polyamActive;
-    private Character _polyamPair;
+    [SerializeField] private bool _polyamActive;
+    [SerializeField] private Character _polyamPair;
 
     // One queue per region
     // Queue of scene names to load
@@ -84,11 +84,15 @@ public class GameManager : MonoBehaviour
             liQueue[k] = liQueue[n];
             liQueue[n] = value;
         }
-        if (polyamPartner != Character.Kristen) //Kristen is default for non-polyam routes
-        {
-            liQueue.Add(GetLoveInterest(polyamPartner));
+        //Kristen is default for non-polyam routes
+        if (polyamPartner != Character.Kristen) liQueue.Add(GetLoveInterest(polyamPartner));
+        if(priority != Character.Kristen) liQueue.Add(GetLoveInterest(priority));
+        
+        //love interest checks are separate and not determined by priority LI; can be triggered by non-prio LI's
+        if(_polyamActive){
+            liQueue.Add(GetLoveInterest(_polyamPair));
         }
-        liQueue.Add(GetLoveInterest(priority));
+
         liQueue.Reverse();
 
         return liQueue;
@@ -106,9 +110,9 @@ public class GameManager : MonoBehaviour
                 return _loveInterests[2];
             case Character.Lucy:
                 return _loveInterests[3];
-            case Character.Naradriel:
-                return _loveInterests[4];
             case Character.Tracker:
+                return _loveInterests[4];
+            case Character.Naradriel:
                 return _loveInterests[5];
             case Character.Frostkettle:
                 return _loveInterests[6];
@@ -181,6 +185,38 @@ public class GameManager : MonoBehaviour
         _saveProfile = profileNum;
     }
 
+    public Character GetPriority(){
+        return priority;
+    }
+
+    public void SetPriority(Character priority){
+        this.priority = priority;
+    }
+
+    public Character GetPolyamPartner(){
+        return polyamPartner;
+    }
+
+    public void SetPolyamPartner(Character partner){
+        this.polyamPartner = partner;
+    }
+
+    public bool GetPolyamActive(){
+        return _polyamActive;
+    }
+
+    public void SetPolyamActive(bool active){
+        _polyamActive = active;
+    }
+
+    public Character GetPolyamPair(){
+        return _polyamPair;
+    }
+
+    public void SetPolyamPair(Character pair){
+        _polyamPair = pair;
+    }
+
     public void SetLocationQueues(List<string> schoolDates, List<string> elmvilleDates, List<string> mordredDates, List<string> outdoorsDates, List<string> awayDates){
         this.schoolDates = new Queue<string>(schoolDates);
         this.elmvilleDates = new Queue<string>(elmvilleDates);
@@ -202,9 +238,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SetAyda(bool success){
+        ((AydaLI) GetLoveInterest(Character.Ayda)).SetAydaDate7(success);
+    }
+
     // Calls to save manager and creates a player data object to add relevant info to save file
     public void Save(){
-        PlayerData data = new PlayerData(_playerName, _location, SceneManager.GetActiveScene().name, _week, _datesThisWeek, _liQueue,
+        PlayerData data = new PlayerData(_playerName, _location, SceneManager.GetActiveScene().name, _week, _datesThisWeek, 
+                                            (int)priority, (int)polyamPartner, (_polyamActive ? 1 : 0), (int)_polyamPair, _liQueue, (((AydaLI) GetLoveInterest(Character.Ayda)).GetAydaDate7() ? 1 : 0),
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);

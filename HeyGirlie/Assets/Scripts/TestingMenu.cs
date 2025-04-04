@@ -28,16 +28,6 @@ public class TestingMenu : MonoBehaviour
         string loveInterest = liDropdown.options[liDropdown.value].text;
         
         List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
-        foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
-
-        PlayerData data = new PlayerData("Kristen", "Spyre", loveInterest+"Date"+week, Int32.Parse(week), 0, GameManager.Instance.priorityQueue(),
-                                            GameManager.Instance.schoolDates, GameManager.Instance.elmvilleDates, GameManager.Instance.mordredDates,
-                                            GameManager.Instance.outdoorsDates, GameManager.Instance.awayDates);
-
-        int newProfileNum = SaveManager.getCount();
-        // Debug.Log("newProfileNum = " + newProfileNum);
-        if(newProfileNum <= 10)
-            SaveManager.SaveData(data, newProfileNum);
 
         // if(SaveManager.NewData(null) != null)
         if(loveInterest.Equals("FigAyda (alt date 8)"))
@@ -77,18 +67,5 @@ public class TestingMenu : MonoBehaviour
 
         List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
         foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
-
-        PlayerData data = new PlayerData("Kristen", "Spyre", sceneName, week, 0, GameManager.Instance.priorityQueue(),
-                                            GameManager.Instance.schoolDates, GameManager.Instance.elmvilleDates, GameManager.Instance.mordredDates,
-                                            GameManager.Instance.outdoorsDates, GameManager.Instance.awayDates);
-
-        int newProfileNum = SaveManager.getCount();
-        // Debug.Log("newProfileNum = " + newProfileNum);
-        if(newProfileNum <= 10)
-            SaveManager.SaveData(data, newProfileNum);
-
-        // if(SaveManager.NewData(null) != null)
-            SceneManager.LoadScene(sceneName);
-        // else MainMenu.openMaxProfilePopup();
     }
 }

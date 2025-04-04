@@ -20,8 +20,13 @@ public class PlayerData
     [SerializeField] private string scene;
     [SerializeField] private int week;
     [SerializeField] private int datesThisWeek;
+    [SerializeField] private int priority;
+    [SerializeField] private int polyamPartner;
+    [SerializeField] private int polyamActive;
+    [SerializeField] private int polyamPair;
 
     [SerializeField] private List<LIData> liData = new List<LIData>();
+    [SerializeField] private int ayda;
     
     [SerializeField] private List<string> schoolDates;
     [SerializeField] private List<string> elmvilleDates;
@@ -58,26 +63,14 @@ public class PlayerData
 
     public PlayerData() : this("Kristen") {}
 
-    public PlayerData(string playerName) : this(playerName, "Spyre", "Intro", 1, 0, null, null, null, null, null, null) {
+    public PlayerData(string playerName) : this(playerName, "Spyre", "Intro", 1, 0, 1, 1, 0, 0, null, 0, null, null, null, null, null) {
         for(int i = 2; i < 8; i++){
             addLI((Character)i, 1, 0);
         }
     }
 
-    // public PlayerData(string playerName, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue){
-    //     this.playerName = playerName;
-    //     this.scene = scene;
-    //     this.week = week;
-    //     this.datesThisWeek = datesThisWeek;
-         
-    //     if(liQueue != null){
-    //         foreach(LoveInterest li in liQueue){
-    //             if(li != null) addLI(li.GetCharacter(), li.GetDateCount(), li.GetPoints());
-    //         }
-    //     }
-    // }
-
-    public PlayerData(string playerName, string location, string scene, int week, int datesThisWeek, List<LoveInterest> liQueue,
+    public PlayerData(string playerName, string location, string scene, int week, int datesThisWeek, 
+                        int priority, int polyamPartner, int polyamActive, int polyamPair, List<LoveInterest> liQueue, int ayda,
                         Queue<string> schoolDates, Queue<string> elmvilleDates, Queue<string> mordredDates,
                         Queue<string> outdoorsDates, Queue<string> awayDates){
         this.playerName = playerName;
@@ -85,12 +78,17 @@ public class PlayerData
         this.scene = scene;
         this.week = week;
         this.datesThisWeek = datesThisWeek;
+        this.priority = priority;
+        this.polyamPartner = polyamPartner;
+        this.polyamActive = polyamActive;
+        this.polyamPair = polyamPair;
          
         if(liQueue != null){
             foreach(LoveInterest li in liQueue){
                 if(li != null) addLI(li.GetCharacter(), li.GetDateCount(), li.GetPoints());
             }
         }
+        this.ayda = ayda;
 
         this.schoolDates = (schoolDates != null) ? schoolDates.ToList() : null;
         this.elmvilleDates = (elmvilleDates != null) ? elmvilleDates.ToList() : null;
@@ -144,6 +142,38 @@ public class PlayerData
         this.datesThisWeek = datesThisWeek;
     }
 
+    public int getPriority(){
+        return priority;
+    }
+
+    public void setPriority(int priority){
+        this.priority = priority;
+    }
+
+    public int getPolyamPartner(){
+        return polyamPartner;
+    }
+
+    public void setPolyamPartner(int partner){
+        this.polyamPartner = partner;
+    }
+
+    public int getPolyamActive(){
+        return polyamActive;
+    }
+
+    public void setPolyamActive(int active){
+        this.polyamActive = active;
+    }
+
+    public int getPolyamPair(){
+        return polyamPair;
+    }
+
+    public void setPolyamPair(int pair){
+        this.polyamPair = pair;
+    }
+
     public List<int[]> getLIs(){
         List<int[]> lis = new List<int[]>();
 
@@ -156,6 +186,10 @@ public class PlayerData
         }
 
         return lis;
+    }
+
+    public bool getAyda(){
+        return (ayda == 1 ? true : false);
     }
 
     public List<string> getLocationQueue(Region region){
