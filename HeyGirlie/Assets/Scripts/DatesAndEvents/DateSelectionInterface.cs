@@ -1,14 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class DateSelectionInterface : MonoBehaviour
 {
+    [SerializeField] private Button schoolButton;
+    [SerializeField] private Button homeButton;
+    [SerializeField] private Button downtownButton;
+    [SerializeField] private Button outdoorsButton;
+    [SerializeField] private Button awayButton;
     public void Start()
     {
-        Debug.Log("Start!");
-        Debug.Log("Dates this week: " + GameManager.Instance.GetDatesThisWeek());
+        // Debug.Log("Start!");
+        // Debug.Log("Dates this week: " + GameManager.Instance.GetDatesThisWeek());
         if (GameManager.Instance.GetDatesThisWeek() == 0) SetUpRegions();
+
+        if (GameManager.Instance.schoolDates.Count == 0) schoolButton.interactable = false;
+        if (GameManager.Instance.mordredDates.Count == 0) homeButton.interactable = false;
+        if (GameManager.Instance.elmvilleDates.Count == 0) downtownButton.interactable = false;
+        if (GameManager.Instance.outdoorsDates.Count == 0) outdoorsButton.interactable = false;
+        if (GameManager.Instance.awayDates.Count == 0) awayButton.interactable = false;
     }
 
     public void SetUpRegions()
@@ -55,51 +67,26 @@ public class DateSelectionInterface : MonoBehaviour
     // }
     public void SelectSchoolRegion()
     {
-        if (GameManager.Instance.schoolDates.Count == 0)
-        {
-            Debug.Log("No school dates!");
-            return;
-        }
         string dateScene = GameManager.Instance.schoolDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectElmvilleRegion()
     {
-        if (GameManager.Instance.elmvilleDates.Count == 0)
-        {
-            Debug.Log("No Elmville dates!");
-            return;
-        }
         string dateScene = GameManager.Instance.elmvilleDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectMordredRegion()
     {
-        if (GameManager.Instance.mordredDates.Count == 0)
-        {
-            Debug.Log("No Mordred dates!");
-            return;
-        }
         string dateScene = GameManager.Instance.mordredDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectOutdoorsRegion()
     {
-        if (GameManager.Instance.outdoorsDates.Count == 0)
-        {
-            Debug.Log("No Outdoors dates!");
-            return;
-        }
         string dateScene = GameManager.Instance.outdoorsDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectAwayRegion()
     {
-        if (GameManager.Instance.awayDates.Count == 0)
-        {
-            Debug.Log("No Away dates!");
-            return;
-        }
         string dateScene = GameManager.Instance.awayDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
