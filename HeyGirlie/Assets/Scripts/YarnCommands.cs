@@ -221,7 +221,7 @@ public class YarnCommands : MonoBehaviour
         //Debug.Log("Running SetAydaCondition yarn command");
         LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
         AydaLI aydali = (AydaLI) li;
-        aydali.SetAydaDate7True();
+        aydali.SetAydaDate7(true);
     }
 
     private void GetAydaCondition()

@@ -4,9 +4,9 @@ public class AydaLI : LoveInterest
 {
     public bool AydaDate7; 
 
-    public void SetAydaDate7True()
+    public void SetAydaDate7(bool success)
     {
-        AydaDate7 = true;
+        AydaDate7 = success;
         //Debug.Log("Running SetAydaDate7True. AydaDate7 set to " + AydaDate7);
     }
 
