@@ -58,4 +58,9 @@ public class LoveInterest : MonoBehaviour
     {
         return (_points >= _successThreshold) && (_dateCount >= _datesForSuccess);
     }
+
+    public string GetName()
+    {
+        return _character.ToString();
+    }
 }

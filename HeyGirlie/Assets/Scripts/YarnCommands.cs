@@ -92,6 +92,7 @@ public class YarnCommands : MonoBehaviour
 
     private void AddPoints(int num)
     {
+        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
         _loveInterest.AddPoints(num);
         // Handling Cassandra
         float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)

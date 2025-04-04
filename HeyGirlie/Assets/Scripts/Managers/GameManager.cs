@@ -257,4 +257,9 @@ public class GameManager : MonoBehaviour
         _polyamPair = polyam;
         _liQueue.Insert(0, GetLoveInterest(polyam)); // Add to start of liQueue
     }
+
+    public LoveInterest[] GetLIArray()
+    {
+        return _loveInterests;
+    }
 }
