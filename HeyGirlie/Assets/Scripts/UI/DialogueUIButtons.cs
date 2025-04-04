@@ -1,9 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System;
+using Yarn.Unity;
 
 public class DialogueUIButtons : MonoBehaviour
 {
     [SerializeField] private GameObject saveProfileMenu;
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private HGGLineView hggLineView;
+    [SerializeField] private Toggle fastFowardButton;
+
+    public void Awake(){
+        fastFowardButton.interactable = false;
+    }
 
     public void Save(){
         GameManager.Instance.Save();
@@ -13,11 +22,20 @@ public class DialogueUIButtons : MonoBehaviour
         Instantiate(saveProfileMenu);
     }
 
-    public void FastForward(){
-        Debug.Log("help what is this supposed to do");
+    public void FastForward(bool value){
+        hggLineView.SetAutoAdvanced(value);
+        
+        if(value) hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*2));
+        else hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*0.5));
+
+        hggLineView.UserRequestedViewAdvancement();
     }
 
     public void Settings(){
         Instantiate(settingsMenu);
     }
+
+    // private void Unselect(){
+    //     EventSystem.current.SetSelectedGameObject(null);
+    // }
 }

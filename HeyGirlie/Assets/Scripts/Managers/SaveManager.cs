@@ -60,9 +60,15 @@ public static class SaveManager
             // GameManager.Instance.SetLocation(data.getLocation());
             GameManager.Instance.SetWeek(data.getWeek());
             GameManager.Instance.SetDatesThisWeek(data.getDatesThisWeek());
+
+            GameManager.Instance.SetPriority((Character) data.getPriority());
+            GameManager.Instance.SetPolyamPartner((Character) data.getPolyamPartner());
+            GameManager.Instance.SetPolyamActive(data.getPolyamActive() == 1 ? true : false);
+            GameManager.Instance.SetPolyamPair((Character) data.getPolyamPair());
             
-            List<int[]> lis = data.getLIs();
-            GameManager.Instance.SetLiQueue(lis);
+            // List<int[]> lis = data.getLIs();
+            GameManager.Instance.SetLiQueue(data.getLIs());
+            GameManager.Instance.SetAyda(data.getAyda());
 
             GameManager.Instance.SetLocationQueues(data.getLocationQueue(Region.School), data.getLocationQueue(Region.Elmville),
                                                     data.getLocationQueue(Region.Mordred), data.getLocationQueue(Region.Outdoors),
@@ -96,7 +102,7 @@ public static class SaveManager
             for(int i = 1; i <= 10; i++){
                 // Regex.Match(files[i])
                 try{
-                    Debug.Log(files[i-1].Name);
+                    // Debug.Log(files[i-1].Name);
                     Match m = Regex.Match(files[i-1].Name, i.ToString("00"));
                     if(!m.Success) return i;
                 } catch (Exception e){

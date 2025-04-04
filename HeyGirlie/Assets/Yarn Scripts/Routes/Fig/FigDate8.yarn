@@ -1,5 +1,14 @@
 ﻿title: Date8
 ---
+<<declare $ayda8 = false>>
+//The value of ayda8 is {$ayda8}.
+<<get_ayda8>>
+//The new value of ayda8 is {$ayda8}.
+<<if $ayda8>>
+    <<jump Date8Alt>>
+<<else>>
+    Didn't choose right date 7
+<<endif>>
 //max points 13
 //5k date
 <<location "Bottomless Pit">>

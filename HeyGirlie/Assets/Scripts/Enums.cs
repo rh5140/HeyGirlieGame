@@ -8,10 +8,11 @@ public enum Character
     Gertie,
     Kipperlilly,
     Lucy,
-    Naradriel,
     Tracker,
+    Naradriel,
     Frostkettle,
     Trackernara,
+    Ayda
 }
 
 public enum Region
@@ -27,7 +28,9 @@ public enum liInfo
 {
     CharacterName,
     DateCount,
-    Points
+    Points,
+    AydaSuccess,
+    AydaPriority
 }
 
 public enum Setting

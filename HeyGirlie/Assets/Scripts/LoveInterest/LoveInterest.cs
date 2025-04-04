@@ -7,8 +7,8 @@ public class LoveInterest : MonoBehaviour
 {
     [SerializeField] private Character _character;
     [Range(1,9)][SerializeField] private int _dateCount;
-    [SerializeField] private int _points;
-    [SerializeField] private int _successThreshold;
+    [SerializeField] protected int _points;
+    [SerializeField] protected int _successThreshold;
     [SerializeField] private int _datesForSuccess;
 
     [SerializeField] public Date[] dates;
@@ -54,7 +54,7 @@ public class LoveInterest : MonoBehaviour
     }
 
     // Whether Spring Fling date is successful at the end
-    public bool SucceedEnding()
+    public virtual bool SucceedEnding()
     {
         return (_points >= _successThreshold) && (_dateCount >= _datesForSuccess);
     }
