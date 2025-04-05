@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 
@@ -246,6 +247,14 @@ namespace Yarn.Unity
         {
             canvasGroup.alpha = 0;
             canvasGroup.blocksRaycasts = false;
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                UserRequestedViewAdvancement();
+            }
         }
 
         private void Reset()
@@ -524,6 +533,8 @@ namespace Yarn.Unity
                 // interrupt the line instead.
                 requestInterrupt?.Invoke();
             }
+
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
         /// <summary>
