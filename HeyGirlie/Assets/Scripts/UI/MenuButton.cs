@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class MenuButton : MonoBehaviour
         _sfxSource.Stop();
         _sfxSource.clip = audioClip;
         _sfxSource.Play();
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -3,12 +3,10 @@
 <<wait  0.5>>
 <<declare $date = "none">>
 <<location "Mordred Manor">>
-<<bg_filter_on  sepia>>
 SPRING FLINGGGGGGGGGGGGG it ends here.. time to ask a girlie(s) out
 
 <<spring_fling_selection>>
 <<wait  1>>
-<<bg_filter_off>>
 <<declare $succeed = false>>
 ===
 
@@ -20,10 +18,7 @@ title: Ending
 <<char_right transparent>>
 <<if $succeed is false>>
     you flopped...
-    the end...
-    credits roll...
-    thank you for playing hey, girlie! game courtesy of the hey, girlie! team
-    byebye
+    <<jump EndingForReal>>
 <<else>>
     <<background SpringFling>>
     <<wait  0.5>>
@@ -46,6 +41,8 @@ title: Ending
     
     <<if $date == "Fig">>
         <<jump FigEnding>>
+    <<elseif $date == "FigAyda">>
+        <<jump FigAydaEnding>>
     <<elseif $date == "Gertie">>
         <<jump GertieEnding>>
     <<elseif $date == "Kipperlilly">>
@@ -69,7 +66,7 @@ title: Ending
 title: EndingForReal
 ---
 the end...
-credits roll...
 thank you for playing hey, girlie! game courtesy of the hey, girlie! team
 byebye
+<<change_scene Credits>>
 ===
