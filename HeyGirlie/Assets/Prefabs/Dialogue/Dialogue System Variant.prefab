@@ -1099,6 +1099,7 @@ RectTransform:
   - {fileID: 4694568306897327866}
   - {fileID: 2323238543476861296}
   - {fileID: 8940760899598148290}
+  - {fileID: 7223661945356669311}
   m_Father: {fileID: 6759425271946802466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1935,7 +1936,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2985,6 +2986,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5505025897869802285, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6899852255054571607, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3454,6 +3459,7 @@ MonoBehaviour:
   saveProfileMenu: {fileID: 6524237873561504882, guid: 17e93610f1d6cf447a0f9a5a1ab8d6d9, type: 3}
   settingsMenu: {fileID: 1757103797310101717, guid: 5335224bf8447464b9f71a65658f5d9c, type: 3}
   hggLineView: {fileID: 7104841090414446799}
+  fastFowardButton: {fileID: 0}
 --- !u!4 &6759425271946802466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3183266951831634833, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}

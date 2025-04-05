@@ -87,6 +87,7 @@ public class YarnCommands : MonoBehaviour
     private void ChangeScene(string sceneName)
     {
         GameManager.Instance.SetLocationName("Spyre");
+        _voiceSource.Stop();
         SceneManager.LoadScene(sceneName);
     }
 
