@@ -104,8 +104,6 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
         for(int save = 1; save <= saves.Length; save++){
             Sprite screenshot = SaveManager.getScreenshot(save);
 
-            Debug.Log(save + ": " + screenshot);
-
             saves[save - 1].transform.Find("Image").GetComponent<Image>().sprite = (screenshot != null) ? screenshot : defaultScreenshot;
         }
     }
