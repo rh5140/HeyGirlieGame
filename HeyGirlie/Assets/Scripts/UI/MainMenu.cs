@@ -40,13 +40,12 @@ public class MainMenu : MonoBehaviour
         PlayerData data = (!string.IsNullOrEmpty(playerName.text)) ? SaveManager.NewData(playerName.text) : SaveManager.NewData("Kristen");
         
         if(data != null) SceneManager.LoadScene(data.getScene());
-        else openMaxProfilePopup();
+        else maxProfilePopup.SetActive(true);
     }
 
     public void Back(){
         playerName.text = "";
         newGamePopup.SetActive(false);
-        maxProfilePopup.SetActive(false);
     }
 
     public void LoadGame()
@@ -73,10 +72,6 @@ public class MainMenu : MonoBehaviour
         #else
             Application.Quit();
         #endif
-    }
-    
-    public void openMaxProfilePopup(){
-        maxProfilePopup.SetActive(true);
     }
 
     private int RandomizeVoiceline()

@@ -41,7 +41,8 @@ public static class SaveManager
         string filePath2 = String.Format(dataPath, profileNum.ToString("00"), "png");
         // string filePath2 = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
 
-        ScreenCapture.CaptureScreenshot(filePath2);
+        // ScreenCapture.CaptureScreenshot(filePath2);
+        if(ScreenshotCam.Instance != null) ScreenshotCam.Instance.Screenshot(filePath2);
 
         File.WriteAllText(filePath, jsonData);
     }

@@ -22,6 +22,8 @@ namespace Yarn.Unity
 
         public Action<DialogueOption> OnOptionSelected;
         public MarkupPalette palette;
+        public KeyCode key;
+        public KeyCode keyAlt;
 
         DialogueOption _option;
 
@@ -59,6 +61,14 @@ namespace Yarn.Unity
                 }
 
                 interactable = value.IsAvailable;
+            }
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyUp(key) || Input.GetKeyUp(keyAlt))
+            {
+                InvokeOptionSelected();
             }
         }
 
@@ -103,7 +113,7 @@ namespace Yarn.Unity
             // enable hover indicator
             hoverIcon.SetActive(true);
             text.color = hoverColor;
-            text.fontStyle = FontStyles.Bold;
+            // text.fontStyle = FontStyles.Bold;
             //Debug.Log("hovering " + text.color);
         }
         
@@ -114,7 +124,7 @@ namespace Yarn.Unity
             // enable hover indicator
             hoverIcon.SetActive(false);
             text.color = originalColor;
-            text.fontStyle ^= FontStyles.Bold;
+            // text.fontStyle ^= FontStyles.Bold;
             //Debug.Log("NOT hovering " + text.color);
         }
 

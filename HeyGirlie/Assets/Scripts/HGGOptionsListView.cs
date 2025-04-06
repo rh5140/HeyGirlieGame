@@ -183,6 +183,8 @@ namespace Yarn.Unity
                 optionView.transform.SetAsLastSibling();
 
                 optionView.OnOptionSelected = OptionViewWasSelected;
+                optionView.key = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Alpha" + (optionViews.Count + 1));
+                optionView.keyAlt = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Keypad" + (optionViews.Count + 1));
                 optionViews.Add(optionView);
 
                 return optionView;
