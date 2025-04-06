@@ -243,12 +243,13 @@ public class GameManager : MonoBehaviour
     }
 
     // Calls to save manager and creates a player data object to add relevant info to save file
-    public void Save(){
+    public bool Save(){
         PlayerData data = new PlayerData(_playerName, _location, SceneManager.GetActiveScene().name, _week, _datesThisWeek, 
                                             (int)priority, (int)polyamPartner, (_polyamActive ? 1 : 0), (int)_polyamPair, _liQueue, (((AydaLI) GetLoveInterest(Character.Ayda)).GetAydaDate7() ? 1 : 0),
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);
+        return true;
     }
 
     public void SetPolyamActive(Character polyam)
