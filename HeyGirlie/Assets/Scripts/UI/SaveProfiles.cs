@@ -3,8 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using TMPro;
+using System.Collections;
 
-public class SaveProfiles : MonoBehaviour
+public class SaveProfiles : MonoBehaviour//, IDeselectHandler
 {
     [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private Button saveButton;
@@ -12,6 +13,9 @@ public class SaveProfiles : MonoBehaviour
     [SerializeField] private Button deleteButton;
     [SerializeField] private GameObject[] saves;
     [SerializeField] private Sprite defaultScreenshot;
+    [SerializeField] private GameObject overwritePopup;
+    [SerializeField] private GameObject newGamePopup;
+    [SerializeField] private TMP_InputField playerName;
 
     private GameObject selected;
 
@@ -19,25 +23,64 @@ public class SaveProfiles : MonoBehaviour
     void Awake(){
         loadButton.interactable = false;
         deleteButton.interactable = false;
-        Debug.Log(SceneManager.GetActiveScene());
-        if(SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = false;
+        saveButton.interactable = false;
 
         SetScreenshots();
         SetNames();
+    }
+
+    void Update(){
+        if(EventSystem.current.currentSelectedGameObject == null){
+            loadButton.interactable = false;
+            deleteButton.interactable = false;
+            saveButton.interactable = false;
+        }
     }
 
     public void isSelected(){
         selectedSave = int.Parse(EventSystem.current.currentSelectedGameObject.transform.parent.name);
 
         Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
+        if(!SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = true;
     }
+
+    // public void OnDeselect(BaseEventData data)
+    // {
+    //     loadButton.interactable = false;
+    //     deleteButton.interactable = false;
+    //     saveButton.interactable = false;
+    // }
 
     public void Close(){
         Destroy(saveProfilesMenu);
     }
 
     public void SaveSave(){
-        GameManager.Instance.Save();
+        if(SaveManager.findSave(selectedSave) != null){
+            overwritePopup.SetActive(true);
+        } else {
+            newGamePopup.SetActive(true);
+        }
+    }
+
+    public void OverwriteSave(){
+        overwritePopup.SetActive(false);
+        newGamePopup.SetActive(true);
+    }
+
+    public void NameSave(){
+        if(!string.IsNullOrEmpty(playerName.text)) GameManager.Instance.SetPlayerName(playerName.text);
+        GameManager.Instance.SetProfile(selectedSave);
+        StartCoroutine(Save());
+    }
+
+    public IEnumerator Save(){
+        yield return new WaitUntil(GameManager.Instance.Save);
+        saveButton.interactable = false;
+        overwritePopup.SetActive(false);
+        SetNames();
+        SetScreenshots();
+        newGamePopup.SetActive(false);
     }
 
     public void LoadSave(){
