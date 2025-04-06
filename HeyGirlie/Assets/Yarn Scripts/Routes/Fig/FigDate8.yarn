@@ -1,9 +1,8 @@
 ﻿title: Date8
 ---
+//checks to see if correct date 7 choice was picked
 <<declare $ayda8 = false>>
-//The value of ayda8 is {$ayda8}.
 <<get_ayda8>>
-//The new value of ayda8 is {$ayda8}.
 <<if $ayda8>>
     <<jump Date8Alt>>
 <<else>>
@@ -15,7 +14,7 @@
 <<set $date_points = 0>>
 <<set $date_points_total = 13>>
 <<kristen Neutral>>
-March 29
+April 5
 You step through the shimmering red portal in Figs bedroom and feel the effects of the plane shift immediately. The Bottomless Pit is as dramatic as it always is, with swirling molten cracks in the stone walls and the distant echoes of tormented screams.
 Fig swears they’re just for ambiance, but you’ll never really believe that.
 But right now, all of that seems unimportant as you make your way through the expansive pit. It seems conspicuously empty today. Usually, the place is packed with domain dwellers running this way and that, trying to keep the music production studios running. But as far as you can tell, you’re the only one here.
@@ -27,7 +26,7 @@ Fig: Welcome back to my domain. Where the water’s hot, the pit’s bottomless,
 <i>Okay, Applebees. Be cool about this. It’s not a big deal.</i>
 
 
--> Flirt with her! Just do it!
+-> <i>Flirt with her! Just do it!</i>
   <<kristen Grin>>
   <<voiceline KristenGreeting2>>
   Kristen: Planned to sweep me off my feet with all this, huh? Charm my pants off?
@@ -37,7 +36,7 @@ Fig: Welcome back to my domain. Where the water’s hot, the pit’s bottomless,
   Fig: What? NO. I mean, <i>maybe</i>, but not in, like, a weird way. Shut up and get in the water.
   She sinks lower into the tub, her face redder than usual, but she refuses to break eye contact. A challenge. You like a challenge.
   <<add_points 1>>
--> Make a joke. That’s the vibe… Right?
+-> <i>Make a joke. That’s the vibe… Right?</i>
   <<kristen Grin>>
   <<voiceline KristenGreetingFig2>>
   Kristen: Ooooh, so this is a hardcore date? Should I have brought you a gift?
@@ -47,7 +46,7 @@ Fig: Welcome back to my domain. Where the water’s hot, the pit’s bottomless,
   Fig: And yet, here you are.
   She gestures grandly for you to join her, clearly pleased with herself.
   <<add_points 1>>
--> Oh no, she’s hot. What are… Words?
+-> <i>Oh no, she’s hot. What are… Words?</i>
   <<kristen Nervous>>
   <<voiceline KristenAwkward2>>
   <i>Are you malfunctioning? It’s just two homos hanging in a hot tub. Get over yourself, Applebees!</i>
@@ -84,7 +83,7 @@ You shoot her a glare and resist the urge to splash her… Or drown her. But as 
 Fig: So tell me… is the sweating from the heat, or from being close to me?
 
 
--> Oh, definitely you.
+-> “Oh, definitely you.”
   <<kristen Grin>>
   <<voiceline KristenRomanticFig2>>
   Kristen: I mean, have you seen yourself?
@@ -100,7 +99,7 @@ Fig: So tell me… is the sweating from the heat, or from being close to me?
   Fig leans her elbow against the side of the hot tub and rests her chin against her palm as she smiles at you.
   Either it was the hellish ambience, or her eyes were actually shining.
   <<add_points 1>>
--> Now who’s got the big head?
+-> “Now who’s got the big head?”
   Kristen: You should be careful. I’m starting to get some real neck pain from carrying around mine every day.
   <<sfx splash>>
   Fig snorts and scoops a handful of bubbling water. You don’t have the time to dodge before the water hits you square in the face.
@@ -114,7 +113,7 @@ Fig: So tell me… is the sweating from the heat, or from being close to me?
   You don’t know what to say to that… So you just narrow your eyes at Fig and cross your arms against your chest. She laughs and kicks you below the water.
   Either it was the hellish ambience, or her eyes were actually shining.
   <<add_points 0>>
--> Uh… I’m sorry, what?
+-> “Uh… I’m sorry, what?”
   <<kristen Nervous>>
   <<voiceline KristenAwkward3>>
   Kristen: It’s just the heat… Hot tub. Bottomless pit. Y’know…
@@ -180,7 +179,7 @@ Fig: YES! I <i>dare</i> you to dunk your head under. Just for a second.
 It was a hot tub… Surely nothing bad could happen. <i>Surely</i> Fig wouldn’t risk you actually getting hurt. But then again… This place was just a little cursed.
 
 
--> Why the fuck not!
+-> <i>Why the fuck not!</i>
   <<kristen Happy>>
   Yeehaw! You plunge your head under the water before she can start teasing you for being a chicken.
   <<kristen Surprised>>
@@ -205,7 +204,7 @@ It was a hot tub… Surely nothing bad could happen. <i>Surely</i> Fig wouldn’
   <<voiceline FigAngry3>>
   Fig: That’s not funny! The first time I did that, I was so thoroughly degraded, I had to get a triple serving at Basrar’s.
   <<add_points 1>>
--> Call her bluff! She must be bluffing
+-> <i>Call her bluff! She must be bluffing.</i>
   <<kristen Neutral>>
   Kristen: Nuh-uh! I’m not falling for that. You do it first.
   <<char_right FigNeutral>>
@@ -221,7 +220,7 @@ It was a hot tub… Surely nothing bad could happen. <i>Surely</i> Fig wouldn’
   Kristen: Uh-huh. That’s what I thought.
   Fig: I can’t believe you just reverse uno-ed me in my own domain…
   <<add_points 0>>
--> No way in HELL
+-> <i>No way in HELL!</i>
   <<kristen Awkward>>
   Kristen: Absolutely not. I don’t need eldritch horrors whispering in my brain today.
   Fig rolls her eyes, but you know you made the right decision.
@@ -242,9 +241,9 @@ It was a hot tub… Surely nothing bad could happen. <i>Surely</i> Fig wouldn’
 
 Kristen: Well… That’s why you <i>love</i> me.
 <<voiceline FigSurprised4>>
+<<char_right FigFlustered>>
 Fig immediately bristles. <i>Shit, shit shit!</i>. You immediately regret it and your brain starts going into full spiral mode.
 <<kristen Awkward>>
-<<char_right FigFlustered>>
 It was just a slip of the tongue! You and Fig have been saying you love each other for years. It doesn’t have to be a big thing. You didn’t mean it like that. You didn’t mean it like—
 Kristen: I mean, like… y’know. Like you love Fabian.
 <i>Oh no.</i> That made it worse. Why the hell would you say that? You watch Fig blink once. Then twice. And then… She laughs.
@@ -262,7 +261,7 @@ Her fingers lace with yours under the surface and you finally shut your betrayin
 Fig: There’s a lot of things I love about you.
 
 
--> This is getting a little deep… Be playful!
+-> <i>This is getting a little deep… Be playful!</i>
   <<kristen Grin>>
   Kristen: Oh? Name five.
   You weren’t expecting her to actually do it. It was just a joke… But she shakes her head and moves closer.
@@ -275,7 +274,7 @@ Fig: There’s a lot of things I love about you.
   Fig: And five-How, somehow, no matter what, I always feel better when you’re here.
   <i>…Well, damn. That was actually really sweet.</i>
   <<add_points 2>>
--> Tell her you feel the same, dummy!
+-> <i>Tell her you feel the same, dummy!</i>
   <<kristen Soft>>
   <<voiceline KristenRomantic2>>
   Kristen: I love a lot of things about you too.
@@ -290,7 +289,7 @@ Fig: There’s a lot of things I love about you.
   Fig: This is <i>so</i> weird, huh?
   Kristen: The weirdest.
   <<add_points 2>>
--> You GOTTA deflect, or she’ll ollie right out of the hot tub.
+-> <i>You GOTTA deflect, or she’ll ollie right out of the hot tub.</i>
   <<kristen Grin>>
   Kristen: <i>Wow</i>. The bare minimum. Thanks, Fig.
   Fig laughs, shoving your shoulder with her free hand. But at least she’s still holding yours with the other.
@@ -343,7 +342,7 @@ Fig: I think I need to go be someone else for a while. Maybe, like… break some
 She starts moving to get out of the hot tub. You need to stop this <i>right the fuck now.</i>
 
 
--> Open your mouth and speak
+-> <i>Open your mouth and speak.</i>
   Kristen: Fig… please don’t leave.
   You know you sound like a sad little puppy, but you can’t help it. It kinda burns when she wants to keep leaving you in the dust.
   <<kristen Sad>>
@@ -355,7 +354,7 @@ She starts moving to get out of the hot tub. You need to stop this <i>right the 
   <<voiceline FigSigh1>>
   Fig: Ughhh, Applebees, you can’t just say stuff like that. It makes it so much harder to freak out properly.
   <<add_points 1>>
--> Literally, physically stop her
+-> <i>Literally, physically stop her.</i>
   Your body reacts before your brain can process it. You reach out and grab Fig’s hand, pulling her back before she can get a running start.
   <<kristen Sad>>
   <<voiceline KristenSad3>>
@@ -400,7 +399,7 @@ It starts small. An ill-timed splash, a teasing shove… But within seconds, the
 Fig lunges at you, but you’re ready this time. You see it in her mischievous grin. You only have a split second to react—
 
 
--> Show off that strength!
+-> <i>Show off that strength!</i>
   You brace yourself, hook your hands under Fig’s arms, and lift her up out of the water like she weighs nothing.
   <<char_right FigSurprised>>
   <<voiceline FigSurprised4>>
@@ -412,7 +411,7 @@ Fig lunges at you, but you’re ready this time. You see it in her mischievous g
   <<sfx splash>>
   You lose balance, splashing down onto the submerged seat. Fig lands on top of you, straddling your lap, hands gripping your shoulders for balance.
   <<add_points 2>>
--> Go for the tactical takedown!
+-> <i>Go for the tactical takedown!</i>
   Fig lunges, and at the last second, you sweep your leg beneath the water, hooking behind her knee and pulling.
   <<char_right FigSurprised>>
   <i>NAILED IT!</i>
@@ -434,7 +433,7 @@ Fig swallows, her eyes flicking down to your lips for a fraction of a second. Sh
 Fig: So… does this mean we’re officially a thing now? Because if so, I might need to update the lyrics to, like… Three of my songs.
 
 
--> Focus on the songs
+-> <i>Focus on the songs.</i>
   <<kristen Grin>>
   <<voiceline KristenHappy4>>
   Kristen: Hmm… Depends. Are these love songs or revenge anthems?
@@ -446,7 +445,7 @@ Fig: So… does this mean we’re officially a thing now? Because if so, I might
   Kristen: Fair. As long as I get at least one <i>sexy</i> ballad dedicated to me, and how irresistible I am.
   Fig: Ugh, fine. I’ll write you an entire album, Applebees. Just… shut up and kiss me.
   <<add_points 0>>
--> Focus on being a thing
+-> <i>Focus on being a thing.</i>
   <<kristen Grin>>
   Kristen: Oh, now you want to put a label on it? After weeks of undeniable, overwhelming tension?
   <<voiceline FigLaugh1>>
@@ -457,7 +456,7 @@ Fig: So… does this mean we’re officially a thing now? Because if so, I might
   Kristen: Oh, I know. Now, about those song lyrics…
   Fig: I literally hate you. Just… shut up and kiss me.
   <<add_points 1>>
--> Focus on feels
+-> <i>Focus on feels.</i>
   <<kristen Soft>>
   <<voiceline KristenDateSuccessFig2>>
   Kristen: I want to be. If you do.
@@ -488,7 +487,7 @@ Fig: Okay, well, that… Something. Would rate ten out of ten, five stars.
 You raise an eyebrow, grinning at her obvious attempt to play it casual.
 
 
--> You can’t help it. You gotta tease her
+-> <i>You can’t help it. You gotta tease her.</i>
   <<kristen Grin>>
   <<voiceline KristenDateSuccess3>>
   Kristen: Oh yeah? You gonna write a review, Fig?
@@ -500,7 +499,7 @@ You raise an eyebrow, grinning at her obvious attempt to play it casual.
   Fig: Hate this. Hate you. I’m leaving.
   But she doesn’t. Instead, she presses a kiss to the side of your neck.
   <<add_points 1>>
--> Fuck it, you’re just as into it
+-> <i>Fuck it, you’re just as into it.</i>
   <<kristen Nervous>>
   <<voiceline KristenDateSuccess2>>
   Kristen: Okay, yeah. That was… a lot. Like, I am so hot right now.
