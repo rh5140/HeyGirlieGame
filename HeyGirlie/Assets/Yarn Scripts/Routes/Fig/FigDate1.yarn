@@ -5,7 +5,7 @@
 <<declare $date_points = 0>>
 <<declare $date_points_total = 9>>
 <<kristen Neutral>>
-March 29
+April 5
 At first, you had been excited to get home after a long day at school, but the euphoria was unfortunately short-lived.
 After emptying your school bag on your bed, you stare at the clutter, trying to figure out where to start.
 Kristen: Okay, Applebees, focus. One thing at a time.
@@ -15,24 +15,25 @@ Permission slips for Spring Fling. Meeting notes for the student council. A half
 <<voiceline KristenSad3>>
 Your fingers twitch as you try to sort everything into piles, but it feels like trying to tame a hydra. You organize one thing, and two more pop up and demand your attention.
 Just as you feel your brain is about to melt, there’s a knock on your bedroom door.
+//Knock SFX
 <<kristen Neutral>>
 Kristen: Come in!
 <<char_right FigNeutral>>
 
--> Hey, girlie!
+-> “Hey, girlie!”
   <<char_right FigBlush>>
   <<voiceline FigGreeting2>>
   Fig: Heeeeeey, Kristen.
   Fig throws herself onto your bed, completely scattering your neatly organized papers.
   <<add_points 1>>
--> Hey, Fig!
+-> “Hey, Fig!”
   <<char_right FigHappy>>
   <<voiceline FigGreeting1>>
   Fig: Madame President.
   Fig bows dramatically before flopping onto your bed.
   Fig: At last, I can be blessed with your presence.
   <<add_points 2>>
--> Hey, hottie!
+-> “Hey, hottie!”
   <<kristen Nervous>>
   <<voiceline KristenAwkward1>>
   <i>Why did you say that?!</i>
@@ -80,7 +81,7 @@ Kristen: What about it?
 You already have a lot on your plate right now, but you know that letting Cassandra down again wasn’t an option. Not after what happened last year.
 Fig: Well, our deities are married. And since we’re kind of in charge of their churches, maybe we could combine them? Nothing will get numbers up better than homo divine energy.
 
--> Lean fully into it
+-> <i>Lean fully into it.</i>
   <<kristen Grin>>
   <<voiceline KristenHappy1>>
   Kristen: You’re right. Nothing screams divine worship like gay synergy. Let’s go full power couple aesthetic. Rainbow banners, a giant statue of them making out, maybe even a ‘Best Wife Ever’ mug on the altar.
@@ -91,7 +92,7 @@ Fig: Well, our deities are married. And since we’re kind of in charge of their
   <<voiceline FigLaugh1>>
   She flops back onto your bed, laughing, clearly thrilled that you’re indulging her
   <<add_points 1>>
--> Look at your to-do list
+-> <i>Look at your to-do list.</i>
   <<kristen Sad>>
   <<voiceline KristenSad1>>
   Kristen: Fig, I barely have time to get through all of this stuff for school and student council. Adding a whole church renovation to the list? I don’t know if I can handle that right now.
@@ -117,17 +118,17 @@ Fig: That’s the spirit!
 Fig grins and sits up straighter.
 Fig: Plus, I’ve missed hanging out like we used to. Going between the Bottomless Pit and hanging out with Ayda when she’s not working is cool and all, but I need my Applebees time!
 
--> We <i>are</i> due a Bad Kids movie night.
+-> “We <i>are</i> due a Bad Kids movie night.”
   <<char_right FigNeutral>>
   She tilts her head, pretending to consider it before smirking.
   Fig: Sure, group hang sounds fun. But we should also do something just the two of us. Y’know, keep things balanced.
   <<add_points 0>>
--> I miss you too, Fig
+-> “I miss you too, Fig”
   <<char_right FigNeutral>>
   Her grin softens and she gives you a nudge with her elbow.
   Fig: Well, duh. You’d be lost without me.
   <<add_points 2>>
--> Aww, you starving for attention?
+-> “Aww, you starving for attention?”
   <<kristen Grin>>
   Kristen: Should I book you a playdate?
   <<char_right FigSurprised>>
@@ -174,7 +175,7 @@ Her words hang for half a second before Fig’s eyes go wide with realization.
 <<char_right FigSurprised>>
 Fig: I mean... You know what I mean!
 
--> Tease her
+-> <i>Tease her.</i>
   <<kristen Grin>>
   <<voiceline KristenRomanticFig1>>
   Kristen: Oh, absolutely. We’re basically the divine power couple behind the divine power couple. Should we send out wedding invitations?
@@ -188,7 +189,7 @@ Fig: I mean... You know what I mean!
   <<kristen Neutral>>
   Pillow assault over, Fig relaxes back down on the bed and you both stare up at the ceiling.
   <<add_points 1>>
--> Brush it off
+-> <i>Brush it off.</i>
   Kristen: Yeah, well, we basically saved a divine marriage. That’s pretty fucking sick.
   <<char_right FigNeutral>>
   Fig relaxes and turns over on her back and you both stare up at the ceiling.
@@ -203,7 +204,7 @@ Some of your friends might say that you bring the worst out in each other a lot 
 Fig nudges her shoulder against yours.
 Fig: What’s got you smiling like that, weirdo?
 
--> Just thinking about you
+-> “Just thinking about you.”
   Fig’s eyebrows raise and she smirks at you.
   <<char_right FigBlush>>
   <<voiceline FigRomantic4>>
@@ -218,7 +219,7 @@ Fig: What’s got you smiling like that, weirdo?
   <<kristen Neutral>>
   <i>That was a little… Weird.</i>
   <<add_points 1>>
--> Nothing. Don’t worry about it.
+-> “Nothing. Don’t worry about it.”
   <<kristen Nervous>>
   <<voiceline KristenAwkward2>>
   Fig raises her brow before letting out a sigh.
@@ -245,7 +246,7 @@ You shrug as you struggle to zip your bag closed. Apparently, everything multipl
 <<voiceline FigLaugh2>>
 Fig: Well, just take me. Problem solved, right?
 
--> Oh yeah, that’d go over great!
+-> “Oh yeah, that’d go over great!”
   Kristen: The class president showing up with the dropout.
   Fig smirks and throws her braid over her shoulder.
   Fig: You forgot super hot rockstar and Archdevil of Rebellion.
@@ -257,7 +258,7 @@ Fig: Well, just take me. Problem solved, right?
   <<char_right FigFlustered>>
   Fig: I… Well, I mean as just friends. Obviously. Completely fully no-homo.
   <<add_points 1>>
--> Wait… are you serious?
+-> “Wait… are you serious?”
   Her smirk flickers for just a second, and you wonder if you’re missing something.
   <<char_right FigFlustered>>
   Fig: Pfft! I mean, yeah, obviously, but like… Not in a <i>thing</i> way. Just, you know, as a joke. A really funny, not-at-all-meaningful joke.
@@ -293,7 +294,7 @@ Fig looks up at you and you watch her smirk grow wickedly.
 <i>Uh oh! That’s always a sign of trouble!</i>
 Fig: I think I have some ideas brewing.
 
--> Should I be worried?
+-> “Should I be worried?”
   <<char_right FigNeutral>>
   Fig tilts her head, pretending to think it over before she grins.
   Fig: Maaaaybe. Maybe not. Can’t tell ya. I’m not a psychic, Applebees.
@@ -302,7 +303,7 @@ Fig: I think I have some ideas brewing.
   Fig: Aw, you’re learning!
   Fig hops off the bed to tap you on the tip of your nose and you swat her away.
   <<add_points 0>>
--> Do tell!
+-> “Do tell!”
   <<kristen Grin>>
   <<char_right FigSurprised>>
   Fig gasps dramatically and places a hand on her chest.

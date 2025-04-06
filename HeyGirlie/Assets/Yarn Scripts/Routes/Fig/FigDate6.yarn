@@ -1,12 +1,12 @@
 ﻿title: Date6
 ---
-March 15
 //max points 18
 //5k date
 <<location "Black Pit">>
 <<set $date_points = 0>>
 <<set $date_points_total = 18>>
 <<kristen Neutral>>
+April 5
 You take a deep breath and step foot into the Black Pit.
 It’s just how you remember it, filled with hazy smoke, thumping music and the smell of spilled beer. You glance around, scanning the room. No sign of Fig. Not yet, anyway.
 <<kristen Sad>>
@@ -24,14 +24,14 @@ Fig: Took you long enough, Applebees!
 She gestures to the seat beside her, her grin wider now but still tinged with a nervous edge.
 
 
--> Greet her like a buddy
+-> <i>Greet her like a buddy.</i>
   <<kristen Neutral>>
   Kristen: I kinda thought I’d find you knee deep in the mosh pit by now.
   Fig laughs and rolls her eyes at you as you sit down.
   <<voiceline FigLaugh2>>
   Fig: Wow, you’re already busting my chops, huh? Fine, I’ll allow it—for now.
   <<add_points 0>>
--> Be flirty about it
+-> <i>Be flirty about it.</i>
   <<kristen Grin>>
   Kristen: Wow, Faeth, you actually clean up nice.
   Fig blinks, caught off guard before she recovers with a smirk.
@@ -39,7 +39,7 @@ She gestures to the seat beside her, her grin wider now but still tinged with a 
   <<char_right FigBlush>>
   Fig: Oh, really? Is that your way of saying I look good, or are you just buttering me up?
   <<add_points 2>>
--> Play it cool
+-> <i>Play it cool.</i>
   <<kristen Neutral>>
   Kristen: And here I thought you’d be off causing a scene already.
   Fig gasps in mock offense, placing a hand over her chest.
@@ -66,19 +66,19 @@ Fig smiles and shrugs as she picks up her glass of soda and spins it in her hand
 Fig: What can I say? I’m just that fun to be around. I don’t need a drink to enjoy myself. Especially not tonight.
 
 
--> So, I’m guessing I’m the reason you’ll have such a good time?
+-> “So, I’m guessing I’m the reason you’ll have such a good time?”
   <<kristen Grin>>
   Fig blinks, eyes widening before she lets out a laugh.
   <<char_right FigBlush>>
   <<voiceline FigLaugh2>>
   Fig: Maybe. You gonna do something about it, Madame President?
   <<add_points 1>>
--> Well, someone’s confident. I’ll try to keep up.
+-> “Well, someone’s confident. I’ll try to keep up.”
   <<kristen Grin>>
   Fig grins and leans back against the bar.
   Fig: Good luck with that. Keeping up with me isn’t exactly easy.
   <<add_points 0>>
--> You’re one of a kind, Fig.
+-> “You’re one of a kind, Fig.”
   <<kristen Grin>>
   Kristen: You just... do you. And I think that’s dope.
   Fig: Thanks, Applebees. That means a lot.
@@ -109,7 +109,7 @@ You nod, doing your best to match her enthusiasm as the band launches into their
 She was laughing and having the time of her life, and her joy was absolutely infectious.
 
 
--> Get closer to the stage
+-> <i>Get closer to the stage.</i>
   You grab Fig’s wrist and pull her toward the front until you’re right at the edge of the stage. The music is even louder here and the speakers shake the floor.
   <<voiceline FigHappy2>>
   Fig, of course, immediately starts causing mischief. Her eyes flick to the stage, then back to you. Before you can stop her, she plants a foot on the stage and tries to haul herself up.
@@ -119,7 +119,7 @@ She was laughing and having the time of her life, and her joy was absolutely inf
   You grab the back of her shirt and yank her down before a security guard spots her. Fig cackles as she stumbles back into you, gripping your shoulders for balance.
   Fig: Okay, okay, maybe next song.
   <<add_points 0>>
--> Hang back
+-> <i>Hang back.</i>
   Out of nowhere, Fig grabs your shoulders and jumps onto your back.
   <<kristen Awkward>>
   <<voiceline KristenSurprised3>>
@@ -152,7 +152,7 @@ She turns to you and holds out her hand.
 Fig: Come on, Kristen. This is the fun part!
 
 
--> Take her hand
+-> <i>Take her hand.</i>
   <<kristen Happy>>
   You grab her hand, letting her pull you into the swirl of bodies. At first, you struggle to figure out which way is up and squeeze Fig’s hand tightly.
   But eventually, you start to get into it.
@@ -165,7 +165,7 @@ Fig: Come on, Kristen. This is the fun part!
   <<voiceline FigNeutral3>>
   Fig: Okay, maybe not your scene. But hey, you tried. That’s what counts!
   <<add_points 1>>
--> Stay on the sidelines
+-> <i>Stay on the sidelines.</i>
   You shake your head, stepping back as the pit grows wilder.
   <<kristen Awkward>>
   <<voiceline KristenAwkward2>>
@@ -200,7 +200,7 @@ Fig: Come on, let’s find somewhere a little less... intense. I’d hate to bre
 She leads you further into the venue and you look down at your connected hands.
 
 
--> Comment on it
+-> <i>Comment on it.</i>
   <<kristen Soft>>
   Kristen: You’re still holding my hand, you know.
   <<char_right FigFlustered>>
@@ -212,7 +212,7 @@ She leads you further into the venue and you look down at your connected hands.
   Fig’s blush deepens as she hesitates.
   Fig: Yeah? Well, uh, cool. Me too, I guess.
   <<add_points 0>>
--> Lace your fingers
+-> <i>Lace your fingers.</i>
   <<kristen Soft>>
   Instead of saying anything, you take a leap and slide your fingers between hers to lace them together.
   <i>Huh… You kinda fit really well together. Who would have known?</i>
@@ -260,7 +260,7 @@ Her hands briefly cover yours as she guides the cue into position. You can feel 
 
 
 
--> Take the shot
+-> <i>Take the shot.</i>
   You push all the distracting thoughts aside and focus. Taking a deep breath, you aim and strike. The ball rolls across the table and pockets cleanly.
   <<kristen Happy>>
   <<voiceline KristenHappy1>>
@@ -273,7 +273,7 @@ Her hands briefly cover yours as she guides the cue into position. You can feel 
   Fig falters, her smile turning bashful.
   You raise your eyebrow. Just because it was distracting, doesn’t mean you didn’t like it.
   <<add_points 1>>
--> Mention the elephant in the room
+-> <i>Mention the elephant in the room.</i>
   Kristen: You know you’re really distracting, right?
   <<char_right FigFlustered>>
   Fig freezes. You can see her cheeks flushing out of the corner of your eye.
@@ -295,7 +295,7 @@ Fig: Oh yeah? Let’s see what you’ve got!
 You hand her the cue and step aside, letting her line up her shot. Fig leans forward, her gaze focused on the ball.
 
 
--> Physically distract her
+-> <i>Physically distract her.</i>
   You rest your hand on the table, right in the path of one of the balls.
   <<voiceline KristenNeutral3>>
   Kristen: Oops. My bad. Guess I’m in the way.
@@ -308,7 +308,7 @@ You hand her the cue and step aside, letting her line up her shot. Fig leans for
   Fig throws her head back with a laugh.
   Fig: Unbelievable. You cheated!
   <<add_points 0>>
--> Verbally distract her
+-> <i>Verbally distract her.</i>
   You lean against the table, watching her line up her shot.
   <<voiceline KristenRomanticFig2>>
   Kristen: You’re really cute when you concentrate, you know.
@@ -349,7 +349,7 @@ You watch her, a grin spreading across your face. She’s so focused as she prep
 Not if you can help it.
 
 
--> Physically distract her
+-> <i>Physically distract her.</i>
   You step back, flexing your biceps in an exaggerated pose, and shoot her a wink.
   <<kristen Grin>>
   <<voiceline KristenRomantic3>>
@@ -360,7 +360,7 @@ Not if you can help it.
   Fig: What the hell, Applebees?! I can’t—
   She’s laughing so hard she can’t even finish the sentence. When she finally tries to take the shot, the ball veers completely off course.
   <<add_points 1>>
--> Verbally distract her
+-> <i>Verbally distract her.</i>
   You lean casually against the table as she lines up her shot.
   Kristen: You know, Fig, you should really try aiming for the <i>red</i> ball. Even if it’s stripes. It’s a bold strategy, but I think it’ll pay off.
   Fig stops, glances up at you, and then dissolves into laughter.
@@ -393,7 +393,7 @@ Your breath catches as you realize you’ve trapped her, your body pressing her 
 You’re both panting slightly, faces close.
 
 
--> Say something
+-> <i>Say something.</i>
   <<kristen Soft>>
   Kristen: Hi.
   Fig looks as though she’s trying to bite back a grin.
@@ -407,7 +407,7 @@ You’re both panting slightly, faces close.
   <<voiceline FigRomantic4>>
   Fig: I dunno. I’m feeling like a winner right now.
   <<add_points 1>>
--> Say nothing
+-> <i>Say nothing.</i>
   <<kristen Soft>>
   The words catch in your throat, and you decide not to say anything.
   Fig’s eyes search yours and she finally sighs.
@@ -432,7 +432,7 @@ Fig: Yeah. I guess I really don’t.
 You could kiss her if you wanted to. 
 
 
--> Kiss her
+-> <i>Kiss her.</i>
   <<kristen Soft>>
   You start to lean in, and Fig doesn’t pull away. She’s still smiling.
   And a distant wub-wub-wub of dubstep from another room shakes the ground below your feet.
@@ -440,7 +440,7 @@ You could kiss her if you wanted to.
   Fig: What the <i>hell—</i>
   Her head snaps towards the noise, obviously oblivious of what you were about to do.
   <<add_points 1>>
--> Hesitate
+-> <i>Hesitate.</i>
   <<kristen Soft>>
   You hesitate, unsure if the time is right.
   And a distant wub-wub-wub of dubstep from another room shakes the ground below your feet.
@@ -465,7 +465,7 @@ Fig turns to you, her eyes gleaming with excitement.
 Fig: Now <i>this</i> is what I’m freaking talking about! We <i>have</i> to dance.
 
 
--> Uhhh… Are you sure?
+-> “Uhhh… Are you sure?”
   <<kristen Awkward>>
   Fig rolls her eyes.
   <<char_right FigNeutral>>
@@ -480,7 +480,7 @@ Fig: Now <i>this</i> is what I’m freaking talking about! We <i>have</i> to dan
   Fig: There she is! That’s my president!
   She spins around wildly, bumping into you on purpose, and you bump her right back
   <<add_points 0>>
--> Heeyaw! Let’s do it!
+-> “Yeehaw! Let’s do it!”
   <<kristen Happy>>
   <<voiceline KristenHappy3>>
   You don’t hesitate. If Fig wants to dance, then you’ll go all in.
@@ -512,7 +512,7 @@ Fig raises a brow and moves her body closer.
 Fig: Oh, I am, am I?
 
 
--> Be sincere
+-> <i>Be sincere.</i>
   Kristen: You have Ayda.
   Fig smirks, and there it is again… That wicked glint in her eye.
   <<char_right FigBlush>>
@@ -523,7 +523,7 @@ Fig: Oh, I am, am I?
   Fig: Yeah. I think two’s my limit.
   She winks, but you don’t miss the slight flush to her face.
   <<add_points 1>>
--> Be flirty
+-> <i>Be flirty.</i>
   Kristen: Well, you are <i>my</i> girl for the night, afterall.
   <<kristen Nervous>>
   <<char_right FigFlustered>>
@@ -541,7 +541,7 @@ Fig: Oh, I am, am I?
   Fig: I hate you.
   You know, for a fact, she does not.
   <<add_points 2>>
--> Be funny
+-> <i>Be funny.</i>
   Kristen: Wow, didn’t realize I needed to start making reservations for your attention.
   Fig snorts and rolls her eyes.
   Fig: Well, yeah. You think being this irresistible is easy? Gotta keep a tight schedule.
@@ -584,7 +584,7 @@ Fig: You’re having a good time though, right?
 <i>Phew, panic over!</i>
 
 
--> Time to be romantic!
+-> <i>Time to be romantic!</i>
   <<kristen Soft>>
   Kristen: Yeah. I really am. But, honestly? I think it has more to do with who I’m with.
   Fig blinks, and you watch her brain malfunction for a solid three seconds.
@@ -598,7 +598,7 @@ Fig: You’re having a good time though, right?
   Fig: I hate how much I do like it. You should stop. Immediately.
   She covers her face with her hands, but you can see the ridiculous smile peeking through.
   <<add_points 1>>
--> Funny, but make it flirty
+-> <i>Funny, but make it flirty.</i>
   <<kristen Grin>>
   Kristen: You tell me. I could be anywhere right now, and I chose to be with you. That’s gotta mean something, right?
   <<char_right FigNeutral>>
@@ -626,7 +626,7 @@ And for some reason, that kind of makes it worse. You watch how her fingers twit
 Fig: Which… Makes it all the more complicated.
 
 
--> Press her
+-> <i>Press her.</i>
   <<kristen Neutral>>
   Kristen: Fig… talk to me.
   Fig lets out a quiet sigh and turns to you with a sad little smile.
@@ -638,7 +638,7 @@ Fig: Which… Makes it all the more complicated.
   Kristen: I mean, Ayda told us to try this out so… That’s a good thing, right?
   Fig: Yeah… I guess so.
   <<add_points 0>>
--> Agree with her
+-> <i>Agree with her.</i>
   <<kristen Nervous>>
   Kristen: Yeah… This definitely wasn’t on my senior year bingo card.
   <<char_right FigNeutral>>
@@ -669,7 +669,7 @@ The second the words leave your mouth, you know it was a mistake. Every muscle i
 Shit. Immediate recon needed!
 
 
--> Lighten the mood
+-> <i>Lighten the mood.</i>
   <<kristen Neutral>>
   Kristen: Okay, but picture this: We don’t tell them. We just start aggressively doing couple stuff and see how long it takes before someone cracks.
   <<char_right FigSurprised>>
@@ -680,7 +680,7 @@ Shit. Immediate recon needed!
   Fig: She groans dramatically, throwing her head back against the couch.
   Fig: Okay! We’re done. I’m tapping out. Night’s over!
   <<add_points 1>>
--> Reassure her
+-> <i>Reassure her.</i>
   <<kristen Neutral>>
   Kristen: Hey, we don’t have to tell them right away if you don’t want to.
   Fig: Yeah. Yeah, that’s a good plan. Except… Fuck, what if someone already knows? What if we’re giving off, like, weird energy? Do you think Adaine already knows?!

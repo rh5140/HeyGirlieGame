@@ -5,7 +5,7 @@
 <<set $date_points = 0>>
 <<set $date_points_total = 5>>
 <<kristen Neutral>>
-March 29
+April 5
 Leviathan is bustling when you arrive, with pirates shouting over one another and shoving into you as you attempt to make your way down the street. Fig didn’t exactly give you directions. Just a note under your door asking you to come to Leviathan after school.
 You sigh, glancing around, half expecting her to just appear out of nowhere. And, as if the universe is determined to keep you on your toes, something collides with you. Hard.
 <<kristen Surprised>>
@@ -46,7 +46,7 @@ Ayda: You expressed discomfort regarding your ability to remain calm when discus
 <i>What do you make of that, Applebees?</i>
 
 
--> Y’know what? Why the hell not.
+-> <i>Y’know what? Why the hell not.</i>
   <<kristen Grin>>
   <<voiceline KristenNeutral1>>
   Kristen: Okay, but like… a massage does sound kind of nice.
@@ -57,7 +57,7 @@ Ayda: You expressed discomfort regarding your ability to remain calm when discus
   Kristen: I mean… loosened muscles, a relaxed environment, no awkward tension? Kind of genius.
   Ayda: Precisely.
   <<add_points 0>>
--> You gotta process this.
+-> <i>You gotta process this.</i>
   <<kristen Nervous>>
   <<voiceline KristenAwkward2>>
   Kristen: I… I literally do not know how to react to this.
@@ -92,7 +92,7 @@ Fig: Ayda, can you, like, maybe not say everything that pops into your head? Not
 You can’t help but grin. Honestly, it’s kind of adorable. You turn slightly, glancing over at Ayda, who is watching you with her usual curiosity.
 
 
--> Admit you want it, too
+-> <i>Admit you want it, too.</i>
   <<kristen Soft>>
   <<voiceline KristenRomantic1>>
   Kristen: I’d really love that too. Like… a lot.
@@ -101,7 +101,7 @@ You can’t help but grin. Honestly, it’s kind of adorable. You turn slightly,
   <<voiceline FigBlush2>>
   Fig: …You’re such a loser.
   <<add_points 1>>
--> Actually… You’re a little flustered
+-> <i>Actually… You’re a little flustered.</i>
   <<kristen Nervous>>
   <<voiceline KristenAwkward3>>
   Kristen: Uh. Wow. Okay. That’s… That’s cool. Very cool.
@@ -149,7 +149,7 @@ Watching how safe Fig feels with Ayda and how easily they understand each other 
 Fig: I guess what Ayda and I have talked about is… dating you doesn’t change how much I love her. It’s just… More. Like, this whole thing isn’t about choosing between you guys. It’s about letting myself have more. And I wanna do that.
 
 
--> NOW is the time to be romantic
+-> <i>NOW is the time to be romantic!</i>
   <<kristen Soft>>
   <<voiceline KristenRomanticFig1>>
   Kristen: Well, lucky me. Getting to date you is a hell of a privilege.
@@ -161,7 +161,7 @@ Fig: I guess what Ayda and I have talked about is… dating you doesn’t change
   Ayda smiles at you, nodding in approval.
   Ayda: An excellent response.
   <<add_points 1>>
--> Stick to being goofy. Ayda is the romantic one.
+-> <i>Stick to being goofy. Ayda is the romantic one.</i>
   <<kristen Grin>>
   <<voiceline KristenHappy1>>
   Kristen: So, like… does this mean you get extra gifts on Valentine’s Day now?
@@ -202,15 +202,16 @@ Fig sucks in a breath as Ayda’s words land like they are irrefutable truth.
 But… Sweet Cassandra… <i>Here comes that word vomit again.</i>
 
 
--> Yeah but… The more the merrier
+-> <i>Yeah but… The more the merrier.</i>
   Kristen: What about me?
   <<voiceline KristenRomantic3>>
   <<char_left FigSurprised>>
   Fig’s head snaps toward you and her eyes go wide. Ayda, however, remains composed. Her gaze shifts to you and she considers your words carefully.
   Ayda: Do you believe your light is meant to align with mine?
   You glance at Fig, who still looks stunned, but not against the idea. If anything, she looks like she’s holding her breath.
-  -> Yes
+  -> <i>Yes.</i>
     <<ayda_condition>>
+    //THIS WILL CAUSE THE POLY DATE 8 AND POLY SPRING FLING
     <<kristen Neutral>>
     Kristen: Yeah. I think I do. It just… Makes sense, right?
     Fig makes a noise between a gasp and a squeak. Ayda gives a small nod.
@@ -221,8 +222,9 @@ But… Sweet Cassandra… <i>Here comes that word vomit again.</i>
     <i>Well shit… This is actually happening, then.</i>
     Fig: Wait… Seriously? Just like that?
     Ayda: I shall accompany the both of you on a date and we shall put it to the test.
-    // <<THIS WILL CAUSE THE POLY DATE 8 AND POLY SPRING FLING>>
-  -> Just kidding
+    <<add_points 1>>
+  -> <i>Just kidding.</i>
+    //THIS WILL NOT CAUSE POLY ALTS
     <<kristen Awkward>>
     <i>Oh shit. You just asked Ayda if she would consider dating you too.</i>
     <<voiceline KristenAwkward2>>
@@ -234,9 +236,8 @@ But… Sweet Cassandra… <i>Here comes that word vomit again.</i>
     Ayda: Ah. You were making a jest. It was… an interesting one.
     <<kristen Neutral>>
     Fig shoves you weakly. You shove her back. Ayda remains unshaken, but it’s clear this is the end of that particular conversation.
-    // <<THIS WILL NOT CAUSE POLY ALTS>>
-  <<add_points 0>>
--> Agree with Ayda
+    <<add_points 0>>
+-> <i>Agree with Ayda.</i>
   <<kristen Soft>>
   <<char_right AydaNeutral>>
   You smile slightly, watching the way Ayda and Fig look at each other. The way Fig’s entire body reacts to Ayda’s words. You get it. Completely.
@@ -280,14 +281,14 @@ You raise an eyebrow, smirking slightly. <i>This went from 0 to 100 REAL fast.</
 Fig: I mean! Y'know, it's just a cool place. And I happen to rule it. And, like. It’s kinda romantic. But not in a weird way! Just in a normal, super casual way where we just happen to be alone in a steamy, private hot tub. Together. Totally not weird at all.
 
 
--> Oh, so you’re trying to woo me now, huh?
+-> “Oh, so you’re trying to woo me now, huh?”
   <<kristen Grin>>
   <<char_right FigFlustered>>
   <<voiceline FigSurprised4>>
   Fig: I—WOO YOU?! NO! I mean—YES?! Wait. NO. I mean—OH MY GOD.
   You laugh as she buries her face in her hands, groaning   loudly.
   <<add_points 1>>
--> Oh, yes, of course. The ‘steamy hot tub’ move.
+-> “Oh, yes, of course. The ‘steamy hot tub’ move.”
   <<kristen Grin>>
   Kristen: Timeless. A true classic. No romantic intent whatsoever.
   <<char_right FigAnnoyed>>

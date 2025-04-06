@@ -18,7 +18,6 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     [SerializeField] private TMP_InputField playerName;
 
     private GameObject selected;
-
     private int selectedSave = 0;
     void Awake(){
         loadButton.interactable = false;
