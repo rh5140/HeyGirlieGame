@@ -1,6 +1,6 @@
 ﻿title: Fig
 ---
-March 29
+April 5
 <<kristen Sad>>
 <<voiceline KristenSad2>>
 It kinda sucked that the <i>one</i> person you really wanted to spend the day with was busy being a literal rockstar. She was probably hanging with her band backstage, meeting all the other headliners and enjoying every second of it.
@@ -84,21 +84,21 @@ You move, autopilot carrying you back through the crowd, slipping into the mass 
 <<char_right FigNeutral>>
 <<voiceline FigHappy2>>
 The roar of the audience is massive, but it might as well be white noise, because the second she starts playing, she’s looking right at you. Your stomach flips.
-<<kristen Surprised>>
-Fig: ♪♫ Started out as just a game, a joke we never meant to play.
-<<char_right FigBlush>>
-Fig: ♪♫ Said it didn't mean a thing, but I feel it every day.
-<<kristen Nervous>>
-<i>Is this—?!</i> Fig’s fingers fly over her bass. Your heart is pounding to match the beat of the drums behind her. Fig moves across the stage, but she keeps coming back to you and grinning when she sees your stunned expression.
-<<kristen Soft>>
-<<char_right FigHappy>>
-Fig: ♪♫ ‘Cause I can’t stop writing fucking songs, and I’m running out of ways to say—
-<<char_right FigBlush>>
-Fig: ♪♫ I think I’d die again to make you stay.
 <<kristen transparent>>
 <<char_right transparent>>
 <<background MusicFestival_Fig>>
 <<wait 2>>
+<<fade_in_ui>>
+Fig: ♪♫ Started out as just a game, a joke we never meant to play.
+//<<char_right FigBlush>>
+Fig: ♪♫ Said it didn't mean a thing, but I feel it every day.
+//<<kristen Nervous>>
+<i>Is this—?!</i> Fig’s fingers fly over her bass. Your heart is pounding to match the beat of the drums behind her. Fig moves across the stage, but she keeps coming back to you and grinning when she sees your stunned expression.
+//<<kristen Soft>>
+//<<char_right FigHappy>>
+Fig: ♪♫ ‘Cause I can’t stop writing fucking songs, and I’m running out of ways to say—
+//<<char_right FigBlush>>
+Fig: ♪♫ I think I’d die again to make you stay.
 She’s fully in her element with sweat shining on her forehead. And every time you lock eyes, you swear she’s casting some kind of cantrip on you.
 //<<kristen Happy>>
 //<<char_right FigHappy>>
@@ -106,9 +106,7 @@ She’s fully in her element with sweat shining on her forehead. And every time 
 You dance, you scream along with the lyrics, you laugh when Fig hits a sick note and points directly at you like the little shit she is.
 But you decide not to overthink it all too much. You’re just here with the music, with the crowd, with Fig.
 Right now, nothing else matters.
-//<<wait 2>>
-
-<<jump EndEvent>>
-//<<next_week>>
-//<<change_scene Cassandra>>
+<<kristen transparent>>
+<<char_right transparent>>
+<<enable_continue>>
 ===

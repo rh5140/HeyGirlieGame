@@ -1,6 +1,6 @@
 ﻿title: Fig
 ---
-March 29
+April 5
 <<kristen Neutral>>
 You look around as everyone starts to branch off into different areas of the museum, but nothing really catches your eye.
 The whole place feels too familiar. Probably because half the exhibits are directly linked to your own heroics. It’s hard to get excited about a dusty artifact behind glass when you’re the one who uncovered it.
@@ -48,6 +48,7 @@ Fig: Oh no! What a terrible way to go. Riding off into the sunset with your hot 
 <<char_right transparent>>
 <<background Museum_Fig>>
 <<wait 2>>
+<<fade_in_ui>>
 Fig smirks, hopping onto the daymare’s back with ease, holding out a hand.
 //<<char_right FigHappy>>
 Fig: C’mon, Applebees. Where’s your sense of adventure?
@@ -69,6 +70,7 @@ Kristen: What do you–
 //RETURN TO GENERTIC BACKGROUND (Or outside elmville bg?)
 <<wait 2>>
 <<background CityOutdoors>>
+<<fade_in_ui>>
 <<kristen Surprised>>
 <<char_right FigHappy>>
 <<voiceline KristenSurprised3>>
@@ -101,9 +103,8 @@ Kristen: Never mind. Throw me off.
 <<voiceline FigSuccess2>>
 Fig cackles, the daymare surging forward even faster as the wind howls around you. And despite your protests…
 You wouldn’t trade this moment for anything.
-//<<wait 2>>
-
-<<jump EndEvent>>
-//<<next_week>>
-//<<change_scene Cassandra>>
+<<kristen transparent>>
+<<char_right transparent>>
+<<background Museum_Fig>>
+<<enable_continue>>
 ===
