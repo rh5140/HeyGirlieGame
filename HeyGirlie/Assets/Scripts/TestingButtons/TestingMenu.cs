@@ -64,8 +64,8 @@ public class TestingMenu : MonoBehaviour
                 week = 9;
                 break;
         }
-
-        List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
-        foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
+        SceneManager.LoadScene(sceneName);
+        // List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
+        // foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
     }
 }
