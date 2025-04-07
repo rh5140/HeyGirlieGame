@@ -1,14 +1,13 @@
 ﻿title: Date3
 // max 9 points
 ---
-March 17
-<<location "PLACEHOLDER">>
+<<location "Mordred Manor Kitchen">>
 <<set $date_points = 0>>
 
 <<kristen Sad>>
-
-You’re the worst big sister in the entire world. All this bullshit about dates and the Spring Fling and flirting has somehow distracted you from the things in your life that are actually important, and now you have to fix it. 
 <<voiceline KristenSad2>>
+You’re the worst big sister in the entire world. All this bullshit about dates and the Spring Fling and flirting has somehow distracted you from the things in your life that are actually important, and now you have to fix it. 
+
 Gorgug must recognize something in your expression because he drops everything to give you a ride back to Mordred and doesn’t even pry the way your other friends would. You barely remember to thank him before you’re flying out of the Hangvan, brushing off Sandra Lynn’s concern and Jawbone’s kindness as you sprint to your room.
 
 How the fuck did you forget about Cork’s birthday? You don’t even have a present ready for him.
@@ -19,13 +18,13 @@ It’s not like Cork would care; he’s probably going to scrunch up his nose no
 
 <<kristen Neutral>> 
 Your crystal lies heavy in your pocket.
--> dude i think im having a panic attack over a birthday card lol
+-> KristenText: “dude i think im having a panic attack over a birthday card lol”
   KipperlillyText: ... have you ever had a panic attack before, Applebees? 
   <<add_points 2>>
--> dont laugh but do u know how to draw an ear of corn. or like literally anything a 10yo boy might like its urgent
+-> KristenText: “dont laugh but do u know how to draw an ear of corn. or like literally anything a 10yo boy might like its urgent”
   KipperlillyText: Do I look like the internet to you?
   <<add_points 1>>
--> do u think cork would be ok if i just get him basrars or something
+-> KristenText: “do u think cork would be ok if i just get him basrars or something”
   KipperlillyText: ... okay, I’ll bite. Why would a cork like ice cream?
   <<add_points 1>>
 
@@ -71,13 +70,13 @@ Okay, that sounded pretty desperate, but in your defense, you <i>are</i> despera
 KipperlillyText: Hmm. What do I get out of it?
 
 Rogues and their favors. Surely you can think of something Kipperlilly would consider worth her while.
--> ill steal another one of riz’s books for u
+-> KristenText: “ill steal another one of riz’s books for u”
   KipperlillyText: Ha. You really know how to tempt a girl.
   <<add_points 2>>
--> literally anything u want
+-> KristenText: “literally anything u want”
   KipperlillyText: Aren’t you already doing that for the office key? 
   <<add_points 1>>
--> idk cant u do it for like honor or something
+-> KristenText: “idk cant u do it for like honor or something”
   KipperlillyText: ... wow, you’re REALLY bad at this negotiation thing.
   <<add_points 0>>
 
@@ -183,7 +182,7 @@ Kipperlilly: Unfortunately. Ruben has absolutely no knack for cooking <i>or</i> 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: This recipe is pretty forgiving, though. My mom showed me how to make these cupcakes for my fifth birthday, and we’ve baked them every year since.
 
-<<kristen SoftBlush>>
+<<kristen Soft>>
 Kristen: That’s a cute tradition.
 
 <<char_right KipperlillyBlush>>
@@ -192,15 +191,15 @@ Kipperlilly: Whatever. Put the sprinkles in, Applebees.
 <<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
 You look at the bottle of sprinkles Kipperlilly dug up. It’s around half-full. The recipe calls for a tablespoon, but there are definitely enough for more…
--> What the hell. Dump them all in.
+-> <i>What the hell. Dump them all in.</i>
   <<voiceline KipSurprised1>>
   Kipperlilly: Good grief. You’re worse than I was as a six-year-old.
   <<add_points 1>>
--> Carefully measure out the tablespoon.
+-> <i>Carefully measure out the tablespoon.</i>
   <<voiceline KipNeutral1>>
   Kipperlilly: How precise of you.
   <<add_points 1>>
--> Pour some into your mouth.
+-> <i>Pour some into your mouth.</i>
   <<voiceline KipSurprised1>>
   Kipperlilly: I don’t know what I expected.
   <<add_points 1>>
@@ -243,15 +242,15 @@ Kristen: I don’t really want to talk about it.
 Kipperlilly: I get that, really I do, but you’re the one who dragged me across town on half an hour’s notice to bake these fucking cupcakes. I’d like to know exactly what this actually means to you.
 
 You can’t really argue with that.
--> I don’t really get to see my brothers all that often, so I focus on the big occasions. Like birthdays.
+-> Kristen: “I don’t really get to see my brothers all that often, so I focus on the big occasions. Like birthdays.”
   <<voiceline KipNeutral1>>
   Kipperlilly: Hmm. Makes sense.
   <<add_points 2>>
--> Can’t an older sister want to do something nice for her brothers?
+-> Kristen: “Can’t an older sister want to do something nice for her brothers?”
   <<voiceline KipNeutral1>>
   Kipperlilly: Does an older sister panic that much over something she just randomly chose to do?
   <<add_points 1>>
--> I was gonna try to bean him in the head with them. Target practice!
+-> Kristen: “I was gonna try to bean him in the head with them. Target practice!”
   <<char_right KipperlillyAngry>>
   <<voiceline KipAngry2>>
   Kipperlilly: You realize these are too good for a shitty prank like that? Just go buy yourself some from the fucking grocery store then.
@@ -278,16 +277,16 @@ Kristen: Huh. Do you get to see her much?
 Kipperlilly: Only when she comes to Elmville for the holidays.
 
 You think about how long it’s been since you’ve seen your brothers in person. Sometimes you wonder what they think of you. How often they think of you. If it’s as often as you think of them.
--> You must miss her.
+-> Kristen: “You must miss her.”
   <<char_right KipperlillySad>>
   Kipperlilly: … sometimes. 
   <<add_points 2>>
--> What does she do out there?
+-> Kristen: “What does she do out there?”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipSad1>>
   Kipperlilly: I don’t fucking know. Live her life?
   <<add_points 0>>
--> Is her name as long as yours?
+-> Kristen: “Is her name as long as yours?”
   <<voiceline KipAngry1>>
   <<char_right KipperlillyAngry>>
   Kipperlilly: Why are you so obsessed with my name? It’s fucking weird.
@@ -337,7 +336,7 @@ Kipperlilly: That’s—!
 
 Kipperlilly is struck silent again. You’re getting very good at that. By your third cupcake, you’ve gotten the hang of swirling on <i>just</i> the right amount, and by the fifth she’s regained her voice.
 
-<<char_right KipperlillyBlushing>>
+<<char_right KipperlillyBlush>>
 <<voiceline KipRomantic1>>
 Kipperlilly: A–anyhow! Do these meet your standards, Applebees?
 
@@ -387,3 +386,6 @@ Before you can say anything in response, she turns around and darts down the pat
 
 <<jump Cassandra>>
 ===
+
+
+

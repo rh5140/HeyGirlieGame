@@ -2,8 +2,8 @@
 // max 10 points
 
 ---
-March 17
-<<location "PLACEHOLDER">>
+<<background “AGUEFORT (GENERIC)”>>
+<<location "Aguefort">>
 <<set $date_points = 0>>
 You’ve never been to Gorgug’s senior workshop space before, but you’re pretty sure it doesn’t normally look like this. Pieces of paper have been stuck on the walls next to boxes adorned with various types of locks, the windows are covered by haphazardly taped-up butcher paper, and the toolbench is suspiciously clear of all of Gorgug’s tools.
 
@@ -45,16 +45,16 @@ Kipperlilly jumps at the sound of Gorgug’s voice over the loudspeaker.
 
 Kipperlilly: THISTLESPRING?! WHERE THE FUCK —
 <<kristen Grin>>
--> He’s in the walls.
+-> Kristen: “He’s in the walls.”
   <<voiceline KipAnnoyed2>>
   Kipperlilly: That makes no fucking sense. His voice was nowhere near muffled enough to be in the walls.
   <<add_points 1>>
--> Adaine turned him into that plant over there.
+-> Kristen: “Adaine turned him into that plant over there.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed2>>
   Kipperlilly: I’m not stupid, Applebees; there’s no way Abernant knows how to do that yet. Besides, houseplants can’t talk.
   <<add_points 1>>
--> He’s a ghost now.
+-> Kristen: “He’s a ghost now.”
   <<voiceline KipAnnoyed2>>
   Kipperlilly: No, he absolutely is not, you wouldn’t leave him dead long enough for that.
   <<add_points 1>>
@@ -118,11 +118,11 @@ Gorgug: Any questions?
 <<kristen Happy>>
 <<char_right KipperlillySurprised>>
 For the first time since you’ve started hanging out with her, Kipperlilly is shocked speechless. She looks around almost numbly, clocking the black tape Gorgug pointed out as well as all of the little trinkets he’s arranged with paper signs designating the puzzles he’s come up with. Then she turns to you.
-  -> Surprise!
+  -> Kristen: “Surprise!”
   <<add_points 2>>
-  -> So, what d’you think?
+  -> Kristen: “So, what d’you think?”
   <<add_points 2>>
-  -> Does this earn me any more brownie points?
+  -> Kristen: “Does this earn me any more brownie points?”
   <<add_points 1>>
 
 <<voiceline KipSurprised4>>
@@ -156,14 +156,14 @@ Kipperlilly: …
 Kipperlilly doesn’t respond. In fact, she fully ignores you, completely absorbed by the puzzles neatly taped throughout the room next to different locked boxes that Gorgug has helpfully labeled things like “ALCHEMICAL REAGENT CHEST,” “SAFE,” and “IDK FRIDGE MAYBE.” After a couple tries, you give up on trying to catch her attention. 
 
 You turn to the puzzles. Surely, you can do at least <i>one</i> of these. It’s not like Gorgug was expecting an escape room fanatic as a playtester.
--> The chest is on the rage room side, which means it’s probably not a mental puzzle to solve. Might as well give it a go.
+-> <i>The chest is on the rage room side, which means it’s probably not a mental puzzle to solve. Might as well give it a go.</i>
   Aha! The lid is a wooden frame with paper stapled to make it look more solid. You punch through the top and triumphantly take out a compass that’s been modified to point west.
   <<add_points 2>>
--> The safe might be on the escape room side, but it doesn’t look like it’s got a written puzzle associated with it. Maybe you can break into it?
+-> <i>The safe might be on the escape room side, but it doesn’t look like it’s got a written puzzle associated with it. Maybe you can break into it?</i>
   <<char_right KipperlillyAnnoyed>>
   There are three dials that physically hold the chest closed, and though those dials are covered in symbols, you can just sort of pull at the lid as you rotate them until it opens. You’re about to celebrate when you notice Kipperlilly giving you a dirty look. Maybe you should put some effort into finding a puzzle that matches it, anyways.
   <<add_points 1>>
--> “Hey, Gorgug, any hints on—”
+-> Kristen: “Hey, Gorgug, any hints on—”
   <<kristen Surprised>>
   <<char_right KipperlillyAngry>>
   <<voiceline KipSad1>>
@@ -192,7 +192,7 @@ You’ve gotten very good at catching Kipperlilly off guard. This might be the f
 Kipperlilly: I’ve got to hand it to you, Thistlespring, these puzzles are pretty complex for a newbie to have written. They’re nothing like the ones in a typical room-kit, and they’re not the baby riddles that you’d expect from a non-rogue. 
 
 <<kristen Neutral>>
-Gorgug: Thanks? Riz helped with some of the initial research, but Henry’s the main guy who worked on the rest with me.
+Gorgug: Thanks? Riz helped with some of the initial research, but Mr. Hopclap’s the main guy who worked on the rest with me.
 
 <<char_right KipperlillySmug>>
 Kipperlilly: Pfft, what does Gukgak know? He hasn’t even hit high double-digits on escape room completion yet.
@@ -215,14 +215,14 @@ Kristen: Have you looked at this-
 Kipperlilly: Yes.
 
 You frown a little before putting your hands on your hips and trying to decide what to do next.
--> Open up some drawers in one of the cabinets.
+-> <i>Open up some drawers in one of the cabinets.</i>
   You find a small object glowing a radioactive fuchsia. 
   Gorgug: Oh. Uh. Don’t touch that. I was supposed to move that. Maybe close the drawer too.
   <<add_points 1>>
--> Have a closer look at some of the objects you’ve already checked.
+-> <i>Have a closer look at some of the objects you’ve already checked.</i>
   You double-check to see if you’ve missed something, but don’t turn up anything new. At least you can be confident you don’t need to look at those things again. 
   <<add_points 1>>
--> Try to look over Kipperlilly’s shoulders to see her notes.
+-> <i>Try to look over Kipperlilly’s shoulders to see her notes.</i>
    She’s too distracted to stop you from snooping. They look closer to the kind of deranged conspiracy notes you’re familiar with from Riz’s clue boards. That is, absolutely incomprehensible to anyone except the writer. Maybe to them too, actually.
   <<add_points 0>>
 
@@ -298,7 +298,7 @@ You destroy another vial.
 
 She puts the cipher down and walks over to you as if in a trance.
 
-Kipperlilly: …you can just break things?
+Kipperlilly: … you can just break things?
 
 <<kristen Neutral>>
 Kristen: Uh, yeah, that’s the point of a rage room.
@@ -329,14 +329,14 @@ Kipperlilly laughs again in response. She leaps back across the room and starts 
 <<kristen Neutral>>
 <<char_right KipperlillyHappy>>
 Well, she’s pretty occupied with that. You look around the room for anything else that might help get you out of here.
--> There’s a lamp that hasn’t been turned on yet?
+-> <i>There’s a lamp that hasn’t been turned on yet?</i>
   Oh! There’s a number written on the inside of the lampshade! You don’t know if it’ll help yet, but that’s exciting. 
   <<add_points 2>>
--> One of the desk drawers is still closed…
+-> <i>One of the desk drawers is still closed…</i>
   You find a deck of playing cards. After some further inspection, it seems Kipperlilly already found it and took out the relevant cards. You leave the drawer open so neither of you get confused about it later.
   <<add_points 1>>
--> Maybe Gorgug’s written something on the walls?
-  That’s probably more Riz’s style, anyways. You give up after searching for a bit. 
+-> <i>Maybe Gorgug’s written something on the walls?</i>
+  You give up after searching for a bit. That’s probably more Riz’s style, anyways. 
   <<add_points 0>>
 
 Kipperlilly: How much time do we have left?
@@ -468,27 +468,29 @@ Kristen: “One to hinder, one to help. Go in order.”
 Kipperlilly: And <i>now</i> what the fuck does that mean?
 
 You glance up at the timer. Seven minutes left and ticking. If there’s ever been a time for you to have a breakthrough, now’s your chance.
--> Maybe it’s something to do with us as players?
+-> Kristen: “Maybe it’s something to do with us as players?”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral1>>
   Kipperlilly: A personalized escape-rage room? Would that make sense? Though, I guess Thistlespring knew you’d be the one solving it…
   <<add_points 2>>
--> Okay, hear me out: what if we get Gorgug to <i>lie</i> to us instead of just straight-up giving us a hint?
+-> Kristen: “Okay, hear me out: what if we get Gorgug to <i>lie</i> to us instead of just straight-up giving us a hint?”
   <<voiceline KipAnnoyed2>>
   Kipperlilly: … I suppose it would be like having another puzzle rather than just being given the answer.
   Gorgug: Really? Uhh… okay. If you were in there with any member of our party, Kristen is definitely the worst choice. She wouldn’t have a single idea what that riddle could be about. Even if Fig might.
   <<add_points 1>>
--> We could just try all of the combinations anyways.
+-> Kristen: “We could just try all of the combinations anyways.”
   <<voiceline KipSad1>>
   Kipperlilly: There’s no time for that; some of these safes lock for like, ten minutes. We’d lose if we went in blind. Use your brain, Applebees. Don’t you know <i>anything</i> that could have to do with that stupid riddle?
   <<add_points 0>>
 
 You read the two lines again, over and over. “One to hinder, one to help” …is it meant to be two unrelated things that happen to mirror each other? Kipperlilly looks just as confused as you, but surely it’s a common enough thing that Gorgug felt comfortable writing a puzzle around it… so what would you know better than her? What would you — and Gorgug, for that matter — have studied that she doesn’t have any reason to know more about?
 
+<<kristen Grin>>
 Kristen: I think I’ve got it.
 
 Kipperlilly: Well, spill, then.
 
+<<kristen Neutral>>
 Kristen: I think it’s about spells. Like, parallel spells, y’know? Two versions of a similar spell in concept or name that go hand-in-hand with each other. I’m not that familiar with a lot of spells, but there are a few pairs that clerics can cast. I think Cure Wounds is one, but I don’t remember the other one it’s paired to.
 
 Kipperlilly: That’s pretty useless info, then.
@@ -537,7 +539,7 @@ You think you want to see it again.
 Kipperlilly: We got it, Kristen!
 
 <<char_right KipperlillyHappy>>
-She flings the safes open and extracts a skeleton key from one and a notebook with a piece of masking tape on the cover that reads “SECRET PLANS NO ONE OPEN” from the other.
+She flings the safe doors open and extracts a skeleton key from one and a notebook with a piece of masking tape on the cover that reads “SECRET PLANS NO ONE OPEN” from the other.
 
 <<kristen Neutral>>
 You open it.
@@ -645,7 +647,7 @@ Gorgug: You have to tell me the truth.
 Gorgug: Were you using my final as a date?
 
 <<kristen Surprised>>
-…were you? You didn’t think you were. But if <i>Gorgug</i> thinks you were, then…
+… were you? You didn’t think you were. But if <i>Gorgug</i> thinks you were, then…
 
 Kristen: Holy <i>shit.</i>
 
