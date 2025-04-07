@@ -42,10 +42,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
 
-
         dialogueRunner.AddCommandHandler<int>("setLIPriority", SetLIPriority);
         
-
         // Add Yarn Command to set Kristen sprite by calling "kristen" + sprite file name
         dialogueRunner.AddCommandHandler<string>("kristen", SetKristenSprite);
         // Add Yarn Command to set 1st (leftmost) sprite in right position by calling "char_left" + sprite file name
@@ -73,6 +71,8 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
+
+        dialogueRunner.AddCommandHandler("update_date_points", UpdateDatePoints);
     }
 
     void Start()
@@ -93,13 +93,29 @@ public class YarnCommands : MonoBehaviour
 
     private void AddPoints(int num)
     {
-        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
         _loveInterest.AddPoints(num);
+        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
         // Handling Cassandra
         float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
         _variableStorage.TryGetValue("$date_points", out date_points);
         _variableStorage.SetValue("$date_points", date_points + num);
     }
+
+    private void UpdateDatePoints()
+    {
+        float date_points;
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        float date_points_total;
+        _variableStorage.TryGetValue("$date_points_total", out date_points_total);
+        GameManager.Instance.UpdateDateQuality(GameManager.Instance.GetDatesThisWeek(), (int)date_points, (int)date_points_total);
+    }
+    
+    [YarnFunction("get_date_quality")]
+    public static int GetDateQuality(int weeklyDateNum)
+    {
+        return GameManager.Instance.GetQuality(weeklyDateNum);
+    }
+
 
     private void IncrementDateCount()
     {

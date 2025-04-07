@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour
     public Queue<string> outdoorsDates;
     public Queue<string> awayDates;
 
+    // Tracking date success
+    public int weeklyDate1, weeklyDate2, weeklyDate3;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -262,5 +265,41 @@ public class GameManager : MonoBehaviour
     public LoveInterest[] GetLIArray()
     {
         return _loveInterests;
+    }
+
+    public void UpdateDateQuality(int weeklyDateNum, int earned, int total)
+    {
+        int quality; // Bad = 0, Mid = 1, Good = 2
+        if (earned < total / 3) quality = 0;
+        else if (earned < 2 * total / 3) quality = 1;
+        else quality = 2;
+        switch (weeklyDateNum)
+        {
+            case 0:
+                weeklyDate1 = quality;
+                break;
+            case 1:
+                weeklyDate2 = quality;
+                break;
+            default:
+                weeklyDate3 = quality;
+                break;
+        }
+        Debug.Log(weeklyDateNum + " quality = " + quality);
+    }
+
+    public int GetQuality(int weeklyDateNum)
+    {
+        Debug.Log("GetQuality: " + weeklyDateNum);
+        Debug.Log (weeklyDate1 + " | " + weeklyDate2 + " | " + weeklyDate3);
+        switch (weeklyDateNum)
+        {
+            case 1: // CORRECTLY NUMBERED despite mismatch with UpdateDateQuality (variable update order means this is correct. yes i know it is confusing but it doesn't matter outside of this function so not changing it.)
+                return weeklyDate1;
+            case 2:
+                return weeklyDate2;
+            default:
+                return weeklyDate3;
+        }
     }
 }
