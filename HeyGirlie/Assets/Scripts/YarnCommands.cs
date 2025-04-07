@@ -79,7 +79,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
-        dialogueRunner.AddCommandHandler("toggleText", ToggleText);
+        dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
 
     }
 
@@ -113,17 +113,16 @@ public class YarnCommands : MonoBehaviour
         _loveInterest.IncrementDateCount();
     }
 
-    private void ToggleText()
+    private void ToggleText(string character = "NONE")
     {
-        toggleText = !toggleText;
-
-        if (toggleText)
+        if (character.ToUpper() != "NONE")
         {
             crystalView.gameObject.SetActive(true);
             nonCrystalView.gameObject.SetActive(false);
         }
         else
         {
+            //switch text recipient to whoever character is
             crystalView.gameObject.SetActive(false);
             nonCrystalView.gameObject.SetActive(true);
         }

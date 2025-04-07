@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.EventSystems;
 
 namespace Yarn.Unity.Example
 {
@@ -101,12 +102,55 @@ namespace Yarn.Unity.Example
             dialogueBubblePrefab.SetActive(true);
             UpdateMessageBoxSettings();
         }
+        /// <summary>
+        /// The current <see cref="LocalizedLine"/> that this line view is
+        /// displaying.
+        /// </summary>
+        LocalizedLine currentLine = null;
+
+        /// <summary>
+        /// A stop token that is used to interrupt the current animation.
+        /// </summary>
+        Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
+
+        public override void UserRequestedViewAdvancement()
+        {
+            // We received a request to advance the view. If we're in the middle of
+            // an animation, skip to the end of it. If we're not current in an
+            // animation, interrupt the line so we can skip to the next one.
+
+            // we have no line, so the user just mashed randomly
+            if (currentLine == null)
+            {
+                return;
+            }
+
+            // we may want to change this later so the interrupted
+            // animation coroutine is what actually interrupts
+            // for now this is fine.
+            // Is an animation running that we can stop?
+            if (currentStopToken.CanInterrupt)
+            {
+                // Stop the current animation, and skip to the end of whatever
+                // started it.
+                currentStopToken.Interrupt();
+            }
+            else
+            {
+                // No animation is now running. Signal that we want to
+                // interrupt the line instead.
+                requestInterrupt?.Invoke();
+            }
+
+            EventSystem.current.SetSelectedGameObject(null);
+        }
 
 
         Coroutine currentTypewriterEffect;
 
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
+            currentLine = dialogueLine;
             if(dialogueLine.CharacterName == "Kristen")
             {
                 isRightAlignment = true;
@@ -134,7 +178,7 @@ namespace Yarn.Unity.Example
             {
                 yield return StartCoroutine(Effects.Typewriter(text, lettersPerSecond, null));
                 currentTypewriterEffect = null;
-                yield return new WaitForSeconds(0.5f);
+                yield break;
                 onDialogueLineFinished();
             }
         }
