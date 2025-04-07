@@ -1,6 +1,6 @@
 ﻿title: Intro
-tags:
 ---
+<<declare $date_quality = 0>>
 <<kristen Neutral>>
 <<char_right CassandraNeutral>>
 
@@ -29,28 +29,33 @@ tags:
 
 <<elseif get_week() == 3>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 3 NOW
+    Cassandra: RECAPPING WEEK 2
+    <<jump CassTesting>>
 
 <<elseif get_week() == 4>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 4 NOW
+    Cassandra: RECAPPING WEEK 3
+    <<jump CassTesting>>
 
 <<elseif get_week() == 5>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 5 NOW
+    Cassandra: RECAPPING WEEK 4
     <<jump CassandraWeek5>>
 
 <<elseif get_week() == 6>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 6 NOW
+    Cassandra: RECAPPING WEEK 5
+    <<jump CassTesting>>
 
 <<elseif get_week() == 7>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 7 NOW
+    Cassandra: RECAPPING WEEK 6
+    <<jump CassTesting>>
 
 <<elseif get_week() == 8>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 8 NOW
+    Cassandra: RECAPPING WEEK 7
+    <<jump CassTesting>>
 
 <<else>>
     Cassandra: ??? how did u get here
@@ -63,18 +68,7 @@ Cassandra: Well, why don't you choose where you want to have a meet-cute (or two
 <<change_scene DateSelection>>
 ===
 
-title: CassandraWeek2
-tags:
----
-Cassandra: WEEK 2 NOW
-
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
-===
-
-
 title: CassandraWeek1
-tags:
 ---
 Cassandra: WEEK 1 NOW
 <<voiceline CassNeutral2>>
@@ -97,6 +91,76 @@ Cassandra: Where do you want to go this week?
 <<change_scene DateSelection>>
 
 ===
+
+title: CassTesting
+---
+Cassandra: So... about your first date this week...
+<<if get_date_quality(1) == 0>>
+    Cassandra: You did BAD... Kristen, you need to lock the fuck in. Or else I'LL die too.
+<<elseif get_date_quality(1) == 1>>
+    Cassandra: Well, that wasn't... too bad...
+<<else>>
+    Cassandra: They should call you Rizzsten <3
+<<endif>>
+// Date 2
+Cassandra: And the second...
+<<if get_date_quality(2) == 0>>
+    Cassandra: You did BAD... Kristen, you need to lock the fuck in. Or else I'LL die too.
+<<elseif get_date_quality(2) == 1>>
+    Cassandra: Well, that wasn't... too bad...
+<<else>>
+    Cassandra: They should call you Rizzsten <3
+<<endif>>
+// Date 3
+Cassandra: Saving the best for last...
+<<if get_date_quality(3) == 0>>
+    Cassandra: You did BAD... Kristen, you need to lock the fuck in. Or else I'LL die too.
+<<elseif get_date_quality(3) == 1>>
+    Cassandra: Well, that wasn't... too bad...
+<<else>>
+    Cassandra: They should call you Rizzsten <3
+<<endif>>
+START OF NEXT WEEK NOW
+Cassandra: Where do you want to go this week?
+<<change_scene DateSelection>>
+===
+
+title: CassandraWeek2
+---
+Cassandra: Recapping your week 1...
+// Date 1
+Cassandra: So... about your first date this week...
+<<if get_date_quality(1) == 0>>
+    Cassandra: You did BAD... Kristen, you need to lock the fuck in. Or else I'LL die too.
+<<elseif get_date_quality(1) == 1>>
+    Cassandra: Well, that wasn't... too bad...
+<<else>>
+    Cassandra: They should call you Rizzsten <3
+<<endif>>
+// Date 2
+Cassandra: And the second...
+<<if get_date_quality(2) == 0>>
+    Cassandra: You did BAD... Kristen, you need to lock the fuck in. Or else I'LL die too.
+<<elseif get_date_quality(2) == 1>>
+    Cassandra: Well, that wasn't... too bad...
+<<else>>
+    Cassandra: They should call you Rizzsten <3
+<<endif>>
+// Date 3
+Cassandra: Saving the best for last...
+<<if get_date_quality(3) == 0>>
+    Cassandra: You did BAD... Kristen, you need to lock the fuck in. Or else I'LL die too.
+<<elseif get_date_quality(3) == 1>>
+    Cassandra: Well, that wasn't... too bad...
+<<else>>
+    Cassandra: They should call you Rizzsten <3
+<<endif>>
+
+Cassandra: WEEK 2 NOW
+Cassandra: Where do you want to go this week?
+<<change_scene DateSelection>>
+===
+
 
 title: CassandraWeek5
 ---
@@ -121,5 +185,9 @@ title: CassandraWeek5
 <<else>>
     Cassandra: Hmm... never mind.
 <<endif>>
+
+<<jump CassTesting>>
+
+Cassandra: WEEK 5 NOW
 <<change_scene DateSelection>>
 ===
