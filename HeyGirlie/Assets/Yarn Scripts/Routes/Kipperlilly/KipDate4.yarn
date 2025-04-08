@@ -2,7 +2,7 @@
 // max 16 points perhaps we should lower it lol
 
 ---
-March 17
+<<background “???”>>
 <<location "PLACEHOLDER">>
 <<set $date_points = 0>>
 
@@ -13,18 +13,21 @@ It’s not surprising, but it’s a bit disappointing. You’d like to tell her 
 
 You’re about to give up hope and resign yourself to waiting for a text. Then you remember her mentioning that she was going to the arcade this week. Perfect!
 
+<<background “MALL”>>
+<<location “Arcade”>>
+
 The arcade has been renovated since you helped destroy it in freshman year. Most notably, it’s taken over one of the neighboring storefronts and converted it into a laser tag arena. Teens and tweens are scattered between the rows of games and gachas as you walk through, but not so many that it would be hard to spot Kipperlilly. 
 
 Surely you have more than enough experience rogue-spotting to find her this time, right?
--> The claw machines?
+-> <i>The claw machines?</i>
   Nope, just an overly affectionate couple practically lying on top of each other trying to win an oversized plush. You should give them some privacy. In the middle of this large public space. Surrounded by children.
   <<add_points 1>>
--> The rafters?
-  Not a sneak attack in sight. Probably good that you checked, though.
-  <<add_points 2>>
--> The prize counter?
+-> <i>The prize counter?</i>
   Yeah, Kipperlilly seems like the type to appreciate a cheap plastic finger puppet. You wouldn’t know, though, since she’s not there.
   <<add_points 0>>
+-> <i>The rafters?</i>
+  Not a sneak attack in sight. Probably good that you checked, though.
+  <<add_points 2>>
 
 There! You finally spot her near the entrance to laser tag, talking animatedly to an attendant who seems completely uninterested in whatever she’s going on about. 
 
@@ -37,17 +40,17 @@ Kipperlilly glances over her shoulder in confusion, doing a double take and whir
 <<char_right KipperlillySurprised>>
 <<voiceline KipGreeting2>>
 Kipperlilly: What are you doing here? 
--> You know, just playing some Lagala.
+-> Kristen: “You know, just playing some Lagala.”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipSurprised2>>
   Kipperlilly: Didn’t take you to be a gamer, Applebees.
   <<add_points 1>>
--> What are YOU doing here?
+-> Kristen: “What are YOU doing here?”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral1>>
   Kipperlilly: … I asked first. Spill.
   <<add_points 1>>
--> Waiting for you. You said you were going to be here!
+-> Kristen: “Waiting for you. You said you were going to be here!”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly: Every time I think you’re actually being normal, you prove me wrong.
@@ -108,20 +111,20 @@ Kristen: Okay. Who was that?
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: T100. My greatest competition for the laser tag leaderboard.
--> And so you’re here to… beat them?
+-> Kristen: “And so you’re here to… beat them?”
   <<char_right KipperlillyHappy>>
   <<voiceline KipHappy1>>
   Kipperlilly: With <i>great</i> prejudice.
   <<add_points 2>>
--> Their name is T100?
+-> Kristen: “Their name is T100?”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral1>>
   Kipperlilly: Obviously not, that’s just the handle they use for the arcade leaderboards.
   <<add_points 1>>
--> Wow, I didn’t think you were that lame.
+-> Kristen: “Wow, I didn’t think you were that lame.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed2>>
-  Kipperlilly: You know, you can just leave if you don’t have anything else to tell me.
+  Kipperlilly: You know, you can just leave if you don’t have anything else to say to me.
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
@@ -150,16 +153,16 @@ Kipperlilly: Now. Like you said, I have some serious business to take care of, a
 She waves a hand as if to dismiss you, only to pause and look back thoughtfully.
 
 Kipperlilly: Unless…
--> You like what you see?
+-> Kristen: “You like what you see?”
   <<char_right KipperlillyBlush>>
   <<voiceline KipNeutral2>>
   Kipperlilly: I have no idea what you’re talking about.
   <<add_points 2>>
--> Unless… what?
+-> Kristen: “Unless… what?”
   <<char_right KipperlillyNeutral>>
   Kipperlilly just looks at you up and down, appraising.
   <<add_points 2>>
--> Unless I <i>do</i> get to call you Kip?
+-> Kristen: “Unless I <i>do</i> get to call you Kip?”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed2>>
   Kipperlilly: Ugh, no.
@@ -214,17 +217,17 @@ Kipperlilly: — and as long as you go on my signal, this should be easy. Any qu
 <<kristen Awkward>>
 <<voiceline KristenAwkward2>>
 Uh oh. You must’ve zoned out on the whole plan.
--> Just double-checking, you’re taking the lead?
+-> Kristen: “Just double-checking, you’re taking the lead?”
   <<char_right KipperlillySmug>>
   <<voiceline KipSurprised1>>
   Kipperlilly: Of course. Otherwise I wouldn’t get the points.
   <<add_points 2>>
--> Is this T100 guy a rogue too? Do I need to worry about sneak attacks?
+-> Kristen: “Is this T100 guy a rogue too? Do I need to worry about sneak attacks?”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral1>>
   Kipperlilly: They’re not a rogue yet. Give them a couple of years. Don’t worry, they’re not allowed to jump on you or anything. 
   <<add_points 1>>
--> Uh, nope. I absolutely, one hundred percent, definitely, completely understand the plan.
+-> Kristen: “Uh, nope. I absolutely, one hundred percent, definitely, completely understand the plan.”
   <<char_right KipperlillyAngry>>
   <<voiceline KipAngry2>>
   Kipperlilly: You weren’t listening at all, were you?
@@ -257,17 +260,17 @@ If you lure T100 there, they’ll be a sitting duck. Allegedly.
 A countdown starts, and you watch Kipperlilly settle into battle mode, rolling her shoulders and preparing her laser tag gun to fire immediately.
 
 Any last words?
--> Let’s take this guy down! No mercy!
+-> Kristen: “Let’s take this guy down! No mercy!”
   <<char_right KipperlillyHappy>>
   <<voiceline KipHappy1>>
   Kipperlilly: That’s exactly the kind of energy we need.
   <<add_points 2>>
--> This is still just for fun, right?
+-> Kristen: “This is still just for fun, right?”
   <<voiceline KipNeutral1>>
   <<char_right KipperlillyNeutral>>
   Kipperlilly: Defeating my rivals beyond the point of recovery <i>is</> fun, Applebees. 
   <<add_points 1>>
--> How do I know if my gun is on?
+-> Kristen: “How do I know if my gun is on?”
   <<voiceline KipAnnoyed2>>
   <<char_right KipperlillyAnnoyed>>
   Kipperlilly: It’s on, Applebees. 
@@ -287,25 +290,25 @@ It takes a heroic thirty seconds for you to realize you are incredibly out of yo
 A few seconds later, your vest vibrates and flashes red, a taunting buzz of failure highlighting your incompetence alongside the triumphant laughter of T100. 
 
 Shit. Which way do you go? 
--> Right is always right!
+-> <i>Right is always right!</i>
   Except for this time, in which case right is a dead end.
   <<add_points 0>>
--> West is best! In this case, west means left.
+-> <i>West is best! In this case, west means left.</i>
   If you keep going left, surely you’ll find- nope, you just went in a circle.
   <<add_points 0>>
--> They’ll never expect you to go <i>backwards,</i> right?
+-> <i>They’ll never expect you to go </i>backwards,<i> right?</i>
   Probably because that takes you back to the start, and you have to awkwardly turn around again. 
   <<add_points 0>>
 
 <<kristen Neutral>>
 Okay. You haven’t really been taking this seriously, but now you absolutely <i>have</i> to focus. Where are you trying to go?
--> You need to get to the center! 
+-> <i>You need to get to the center!</i>
   These walls don’t all go to the ceiling, you can sort of tell where the middle is.
   <<add_points 2>>
--> Just keep moving forward! It can’t be worse than the other options.
+-> <i>Just keep moving forward! It can’t be worse than the other options.</i>
   Well, at least you’re going <i>somewhere.</i>
   <<add_points 1>>
--> Just stand right where you are and wait for Kipperlilly to find you.
+-> <i>Just stand right where you are and wait for Kipperlilly to find you.</i>
   Kipperlilly never shows up. T100 hits you like three more times before you realize this is futile.
   <<add_points 0>>
 
@@ -318,13 +321,13 @@ Gathering your wits, you press forward to the centre of the arena. Smoke gathers
 Somewhere in the arena, you hear the sounds of laser guns firing, cursing, and footsteps fleeing the site of battle. Kipperlilly is trying to engage but doesn't seem to be having much luck.
 
 What could you do to help?
--> Call out as a distraction!
+-> <i>Call out as a distraction!</i>
   Kristen: Hey, uh, stupid head! I’m over here, come and get me.
   <<add_points 1>>
--> Knock a wall over!
+-> <i>Knock a wall over!</i>
   You push over the closest barrier. No one ever said you couldn’t.
   <<add_points 1>>
--> FIRE AT WILL!
+-> <i>FIRE AT WILL!</i>
   You have no idea if any of your shots hit, but the “pew pew!” is very satisfying.
   <<add_points 1>>
 
@@ -417,17 +420,17 @@ She grins again.
 
 <<char_right KipperlillyHappy>>
 Kipperlilly: And so do I! Alongside official confirmation of my championship status! 
--> I never doubted you!
+-> Kristen: “I never doubted you!”
   <<char_right KipperlillySmug>>
   <<voiceline KipHappy1>>
   Kipperlilly: Of course you didn’t!
   <<add_points 2>>
--> Does any of that championship status apply to me too?
+-> Kristen: “Does any of that championship status apply to me too?”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipSurprised2>>
   Kipperlilly: Hmm, perhaps I can get you put down as an assist.
   <<add_points 1>>
--> I don’t know if beating a kid is all that impressive.
+-> Kristen: “I don’t know if beating a kid is all that impressive.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly: It is when they’re the only one to ever hold a candle to me.

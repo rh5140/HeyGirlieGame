@@ -17,8 +17,7 @@ title: Ending
 <<char_left transparent>>
 <<char_right transparent>>
 <<if $succeed is false>>
-    you flopped...
-    <<jump EndingForReal>>
+    <<jump FlopEnding>>
 <<else>>
     <<background SpringFling>>
     <<wait  0.5>>
@@ -69,4 +68,31 @@ the end...
 thank you for playing hey, girlie! game courtesy of the hey, girlie! team
 byebye
 <<change_scene Credits>>
+===
+
+title: FlopEnding
+---
+<<background SpringFling>>
+<<kristen  Sad>>
+Oh, shit. Shit! This is really not good.
+Despite your best efforts, you didn’t manage to get a date for the Spring Fling. Aguefort’s voice echoes in your ears…
+<<bg_filter_on sepia>>
+//return to the intro background
+//remove Kristen sprite
+<<kristen transparent>>
+<<background Aguefort>>
+<<char_right AguefortNeutral>>
+Aguefort: Every god represented by our cleric class has to have at least one student with a date to Spring Fling. 
+Aguefort: Or else the contract I have with the celestial plane means I have to kill those cleric students for being, and I quote, “loser virgin nerds.”
+<<bg_filter_off>>
+<<background SpringFling>>
+<<kristen  Surprised>>
+<<char_right  AguefortNeutral>>
+Aguefort: Power word kill.
+You die, and are dead.
+Game over.
+<<kristen transparent>>
+<<char_right transparent>>
+<<background SpringFling_Dead>>
+<<enable_continue>>
 ===

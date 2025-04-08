@@ -1,31 +1,42 @@
 ﻿title: Date3
-// max points:
 
 ---
-March 16
-<<location "PLACEHOLDER">>
+April 7
+<<location "Karaoke Lounge">>
 <<set $date_points = 0>>
+<<set $date_points_total = 5>>
 
+<<kristen Happy>>
 There’s a bounce in your step as you make your way over to the karaoke lounge, and you can’t keep an excited smile off your face. You’re <i>so</i> ready to reconnect with your choir kid roots and sing your heart out. 
 You went the extra mile to get your voice into shape in preparation — you hydrated a ton, stretched your shoulders and back out, and even spent half an hour doing vocal warmups and tongue twisters before you left the house. 
 Not to brag — actually, nah, you’re totally going to brag. You’re kind of a great singer. 
 You’re going to do your best to blow Lucy and Kipperlilly away tonight. Maybe you can even pull off a serenade. You have no idea how they might react to that, but you can’t wait to find out.
+<<char_right KipperlillyNeutral>>
+<<char_left LucyNeutral1>>
 You spot the two waiting outside the lounge for you. Lucy gives you a cheery wave as you approach, and Kipperlilly nods coolly, her expression softening just a little.
+<<voiceline KristenGreeting2>>
 Lucy: Hi, Kristen!
+<<voiceline KipGreeting4>>
 Kipperlilly: You’re almost late again. 
+<<kristen Neutral>>
 Kristen: Still just an “almost!” Besides, I needed to warm up first.
 Kipperlilly stiffens. Lucy raises an eyebrow.
 Lucy: Warm up? That’s pretty intense for karaoke.
 Kristen: Hey, I’m a former choir kid. I always take karaoke seriously.
 Kipperlilly crosses her arms, her trademark competitiveness lighting up her eyes.
+<<char_right KipperlillySmug>>
+<<voiceline KipSmug2>>
 Kipperlilly: Not as seriously as me. 
+<<char_left LucyJoking>>
 Lucy looks amused.
 Lucy: I think this is the first time you’re going to have a challenge at karaoke night.
 Kipperlilly: Yeah, right.
 Kristen: What, the other Rat Grinders don’t get into it?
-Lucy: They do, but obviously Kip has the most, um, spirit.
+<<char_left LucyNeutral1>>
+Lucy: They do; Ruben even has one song he refuses to leave before singing, but obviously Kip has the most, um, spirit.
 Kipperlilly: She’s right, I do. I’m a karaoke champion. 
 You raise an eyebrow. You feel like Lucy cut herself off from saying something else, and you give her a questioning look. She shakes her head and mouths “you’ll see.” 
+<<char_right KipperlillyNeutral>>
 Kristen: What about you, Luce?
 Lucy shrugs.
 Lucy: I’m just happy to be here.
@@ -36,9 +47,16 @@ Kipperlilly: Ugh.
 Kipperlilly rolls her eyes. You note with some surprise that she doesn’t bother to fight your use of her nickname. Progress!
 You step forward and hold the door for them both. You make sure to push the door from above you, showing off your muscles. 
 Kristen: After you, my ladies.
+<<char_left LucyHappy>>
+<<voiceline LucyHappy3>>
 Lucy giggles and gives you a little curtsy.
 Lucy: Why, thank you, good sir.
+<<char_right KipperlillyBlush>>
+<<kristen Grin>>
 Kipperlilly just gives you a long look. You wink at her, and she wrinkles her nose, turning a little pink. You don’t miss the quick glance she gives your bicep. Hell yeah, Applebees. 
+<<char_right KipperlillyNeutral>>
+<<char_left LucyNeutral1>>
+<<kristen Neutral>>
 You reach your assigned karaoke room, which is small and cozy. A raised section of the floor at the end of the room creates a makeshift stage, and a mic rests on a stand near the karaoke machine. A rounded booth with plush red cushions faces the stage, a table placed in front of it.
 Kipperlilly slides into the booth, Lucy following her into the middle. You sit on Lucy’s other side. You can feel all of your knees knock into each other, and you smile to yourself.
 Kipperlilly turns the karaoke machine on and begins to scroll through songs with razor-focus. You and Lucy share a fond look. 
@@ -48,185 +66,285 @@ Nice. You can respect that.
 Lucy picks up a menu on the table and peruses it. You hook your chin over her shoulder to look, and you feel her smile against your cheek.
 Kristen: What’re you feeling?
 Lucy: Hmm, I don’t know. What do you think?
--> Kristen: How about water to start?
+-> Kristen: “How about water to start?”
   Kristen: It’ll keep us hydrated.
   Kipperlilly: I want lemon in mine. It’s good for my voice.
   You hadn’t realized she was still listening.
   Lucy: Water is great. I <i>am</i> thirsty. 
   <<add_points 1>>
--> Kristen: How about something to share, like nachos?
+-> Kristen: “How about something to share, like nachos?”
   Lucy: Ooh, it’s been a while since I’ve had those. I’d love some. Kip?
+  <<voiceline KipHappy1>>
   Kipperlilly: That’s fine.
   Lucy nudges you.
   Lucy: They’re her favorite.
   Kipperlilly looks pleased. She and Lucy exchange little smiles. 
   <<add_points 2>>
--> Kristen: How about milkshakes?
+-> Kristen: “How about milkshakes?”
   Kipperlilly immediately turns to frown at you.
   Kipperlilly: Dairy isn’t good for your voice, Applebees. I thought <i>you</i> would know that.
-  Kristen: Uh, that’s a myth, actually. 
+  Kristen: Uh, that’s a myth, actually.
+  <<char_right KipperlillyAnnoyed>>
   Kipperlilly’s lips tighten. She shoots you an embarrassed glare.
   Lucy: We can ask them to sub the milk out just in case, Kip.
+  <<char_right KipperlillyNeutral>>
+  <<voiceline KipNeutral2>>
   Kipperlilly: Whatever. Fine. 
   <<add_points 0>>
+<<char_left transparent>>
 Lucy goes to place your orders. You figure Kipperlilly won’t relinquish control of the remote anytime soon, so you reach for the binder of songs on the table and flip through it. 
 Kristen: Just so you know, we only have this place booked for an hour, so you should probably pick your song sometime before then.
 Kipperlilly doesn’t respond. You squint at her, both impressed once again at her intense focus and struck with the childish urge to get her attention. Lucy’s not back yet, but you’re pretty sure she’d be encouraging you.
--> Lean your head against her shoulder.
+-> <i>Lean your head against her shoulder.</i>
   Kristen: What’re we looking at?
   Surprisingly, she doesn’t move, just shifts uncomfortably.
+  <<char_right KipperlillyAnnoyed>>
   Kipperlilly: What are you <i>doing</i>, Applebees?
   Kristen: I dunno. You look comfy.
   Kipperlilly: Your head is heavy.
   Kristen: That’s my massive brain.
+  <<char_right KipperlillyBlush>>
   Kipperlilly rolls her eyes and gently pushes you off. You can see a flush on her cheeks. You grin to yourself, victorious.
   <<add_points 1>>     
--> Wrap an arm around her.
+-> <i>Wrap an arm around her.</i>
+  <<char_right KipperlillySurprised>>
+  <<voiceline KipSurprised1>>
   Kipperlilly flinches, turning a wild stare on you. You snuggle closer, leaning into her space. You’re almost nose to nose. 
+  <<voiceline KristenRomanticKip1>>
+  <<char_right KipperlillyBlush>>
   Kipperlilly tries to speak, but her voice comes out a squeak. Your eyes widen in surprise, and her face <i>flames</i>.
   Kipperlilly: Not. A. Word.
   She shrugs your arm off hastily and turns away, still so red that she matches the cushions. Honestly, you feel a little warm yourself. 
   Well, you definitely got her attention.
   <<add_points 2>>  
--> Knock your foot gently against hers.
+-> <i>Knock your foot gently against hers.</i>
   You’re intending for a cute, fun game of footsie. Instead, you accidentally kick her in the ankle, jostling the table.
+  <<char_right KipperlillyAngry>>
+  <<voiceline KipAngry1>>
   Kipperlilly: What the fuck?!
+  <<kristen Awkward>>
+<<voiceline KristenSurprised3>>
   She kicks back <i>hard</i>, and you yelp, falling backwards into the booth.
   Kipperlilly: What the hell are you doing?! Trying to distract me so you can win? That’s not happening.
   Kristen: I was just trying to do something cute!
+  <<char_right KipperlillyAnnoyed>>
   Kipperlilly blinks, absorbing that. Then she goes pink.
   Kipperlilly: Well, stop.
+  <<kristen Sad>>
   You sigh. Well, you tried.
   <<add_points 0>>   
+<<char_right KipperlillyNeutral>>
+<<kristen Neutral>>
 You resume perusing the catalogue in silence. This time, though, you can’t help but notice that Kipperlilly seems distracted. You see her eyes dart towards you, a troubled frown creasing her forehead. Her lips turn down. 
+<<char_left LucyNeutral1>>
 You’re getting a little worried, but before you can check in, Lucy returns. You let her into the booth.
 Kipperlilly: Good, you’re back. Applebees was beginning to irritate me.
 Lucy: Oh?
 Kristen: I was just trying to get Kip’s attention. Besides, when don’t I irritate you?
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: Wow, that’s one of the smartest things I’ve ever heard you say. Miracles do happen.
+<<char_left LucyJoking>>
 Lucy laughs. You shake your head at her, fighting back your own grin.
 Kristen: Okay, I think it’s been long enough. Time to sing! Who’s going first?
+<<char_right KipperlillySmug>>
+<<char_left LucyNeutral1>>
 Kipperlilly: Me, <i>obviously</i>.
 Kipperlilly stands and makes her way onstage, clicking the remote decisively. Strains of music start to play, and you recognize it as an emo song from a few years ago that Fig had blasted on loop for a month.
+<<char_left LucyHappy>>
 Lucy gives a cheer, clapping loudly. Kipperlilly’s back straightens and she tosses Lucy a smirk and a nod at you. She flips her ponytail back and begins to sing. 
+<<char_right KipperlillyHappy>>
 You immediately see what Lucy meant. Kipperlilly’s voice is strong and loud, but it lacks technique. She wobbles off key a few times, and you can see that she needs to refine her breath control. 
 But what she lacks in skill is overshadowed by all other aspects of her performance. Kipperlilly is clearly <i>performing</i>, moving across the stage like she’s giving a concert to thousands of people. There’s not an iota of self-consciousness in her, and her passion is clear. 
 She’s confident and dazzling, and you only realize that you’re grinning widely when Lucy laughs and leans into you companionably.
 Lucy: Impressive, right?
 Kristen: She has incredible stage presence. I think I get how she “wins” at karaoke now. 
 Lucy: That’s our girl.
+<<kristen Soft>>
 Your heart flips. You meet Lucy’s eyes.
 Kristen: Yeah. That’s our girl. 
+<<char_left LucyNeutral1>>
 Kipperlilly’s song comes to a close, and you whistle loudly, clapping so hard your hands turn red. Kipperlilly rejoins you in the booth, smug.
+<<kristen Happy>>
+<<voiceline KristenHappy4>>
 Kristen: That was sick, Kip! You brought the house down. 
+<<char_right KipperlillySmug>>
+<<voiceline KipHappy3>>
 Kipperlilly: I know I did. You can give me the championship title now. 
+<<kristen Neutral>>
 Lucy: Let’s wait until the end to declare a victor, okay? I think I want to go next.
 Kristen: What are you going to sing?
 Lucy: New me, right? I’ll take a page out of Kip’s book and try something totally new.
+<<char_right KipperlillySurprised>>
+<<voiceline KipSurprised3>>
 Kipperlilly: Wait, really? Are you going to sing—
 Lucy: Yeah, I think I’ll try it. 
 To your surprise, you see a look of conflicted pride cross Kipperlilly’s face. 
-Kipperlilly: You’re going to do great, Lucy. Just be strong and confident.
-Lucy: Like you. I know. 
+<<char_right KipperlillyNeutral>>
+Kipperlilly: You’re going to do great, Lucy. Just be confident.
+Lucy: I know. Just like you. 
 Lucy hops up to the stage to up her song. Kipperlilly watches her with a faint little smile, then turns to you, her expression sombering. She seems pensive. 
 Kipperlilly: I hate to say it, but you’ve been good for Lucy.
 Whoa. 
+<<kristen Surprised>>
 Kristen: Wait, what? Did you just give me a genuine compliment?
+<<char_right KipperlillyAnnoyed>>
+<<voiceline KipAnnoyed1>>
 Kipperlilly: Just shut up and listen for a second. 
+<<kristen Neutral>>
 You raise your hands and gesture for her to speak.
+<<char_right KipperlillyNeutral>>
 Kipperlilly watches Lucy for a moment.
-Kipperlilly: Lucy probably already told you this, but things have been  weird between us since the others brought me back from hell. I think she was having a hard time after…  
+Kipperlilly: Lucy probably already told you this, but things have been  weird between us since the others brought me back from Hell. I think she was having a hard time after…  
 She vaguely waves her hand through the air to fill in the dead space.
+
+<<char_right KipperlillySad>>
+<<voiceline KipSad1>>
 Kipperlilly: It was weird for her to talk about. Especially with me.
+<<char_right KipperlillyNeutral>>
 Kipperlilly: But she seems a lot more confident now. Lighter. Freer, even. And that started when you two started talking more, I think.
 Kipperlilly: So. Thanks for looking out for her. Or whatever.
 You stare at her. She stubbornly stares at Lucy. 
 You hadn’t expected this level of vulnerability from Kipperlilly. It seems like something only Lucy can really bring out in her. 
+<<kristen Soft>>
 You swallow down an instinctive joke and look at Kipperlilly closely. For all her apparent gratitude, unease emanates from her. She isn’t quite meeting your eyes.
 Kristen: Lucy is lucky to have you as a friend, Kip. She really, really cares about you.
+<<char_right KipperlillyBlush>>
 Kipperlilly’s cheeks darken.
 Kipperlilly: More than she should sometimes. But… I know.
+<<kristen Nervous>>
+<<voiceline KristenRomantic2>>
 Kristen: And I… I care about you, too. 
+<<char_right KipperlillySurprised>>
+<<voiceline KipRomantic2>>
 Kipperlilly’s gaze snaps up to meet yours for a heartstopping moment. Then, she looks away again.
 Kipperlilly: I… well. 
 Kipperlilly: I suppose you’re not… the worst person ever. 
+<<char_right KipperlillyNeutral>>
+<<kristen Soft>>
 You don’t get a chance to say more before Lucy clears her throat. The music starts, and you hear the latest upbeat Chappell Gnome single start to play.
 Lucy’s voice is sweet and mellow, and she launches into the song with gusto. She’s not quite as immersed in the music as Kipperlilly, but she jumps up and down across the stage and shimmies to the music as she sings. She grins and gives a tiny wave when she notices you watching. 
 Kipperlilly: Y’know, the first time I met Lucy, I thought she was playing up how nice she was. She’d always say “hi” when we passed each other in the hallway, and she’d have everyone’s favorite candy in her pocket to throw at us at a moment’s notice. 
 Kipperlilly: I was convinced it was all an act, because there’s no way someone’s naturally that sweet. Surely she was making up for some sort of skeleton in her closet.
+<<char_right KipperlillySad>>
+<<voiceline KipSad3>>
 Kipperlilly: It took losing her by my own hands to realize that Lucy is just like that. Warm. Kind. Someone to sit next to by the fires her god is so obsessed with. Someone who would set herself on fire if it meant warming everyone around her.
 Kipperlilly’s voice is soft in its wistfulness. 
 Kristen: That’s our girl.
+<<char_right KipperlillyNeutral>>
+<<kristen Neutral>>
 Kipperlilly’s brow furrows.
 Kipperlilly: I wouldn’t say that. No one owns Lucy Frostblade. We’re just lucky she’s willing to share her time with us.
 Kipperlilly: Not even a god can out-stubborn that girl.
 Lucy finishes singing and you clap raucously. Kipperlilly squeezes her shoulder. 
+<<kristen Happy>>
 Kristen: That was amazing, Lucy! 
+<<char_right KipperlillySmug>>
+<<voiceline KipHappy1>>
 Kipperlilly: Yes, you were phenomenal. Well done. You’re in second place.
+<<char_left LucyHappy>>
+<<voiceline LucyHappy3>>
 Lucy laughs. She looks flushed and happy.
 Lucy: Thanks! That was fun! 
+<<char_right KipperlillyNeutral>>
+<<char_left LucyNeutral1>>
 Kipperlilly: Alright, Applebees. It’s your turn. 
 You bounce up onto the stage excitedly. You already know what you’re going to sing — a slow, sweet love song about accepting your feelings. Maybe it’s a little on the nose, but you do love this song, and it sits comfortably in your alto range.
+<<kristen Grin>>
+<<char_left LucyHappy>>
 When you sing the first line, a vibrato rumbling through your core, you feel a thrill of satisfaction as Lucy gasps and Kipperlilly sits up straight. Two pairs of eyes bore into you, one with delight and the other with shock.
 You pour your whole heart into the song, trying to evoke as much tenderness and love from the words as you can. They feel <i>true</i>, somehow, like they’re about Lucy and Kipperlilly.   
 You kind of want them to know that. 
--> Get off the stage and sing to them face-to-face.
+-> <i>Get off the stage and sing to them face-to-face.</i>
+  <<char_right KipperlillyBlush>>
+  <<char_left LucyBlush>>
   Kipperlilly’s eyes widen even further in shock as you approach. Lucy just watches with shy, knowing fondness. You watch as her pinky nudges Kipperlilly’s, who reddens further. This close to them, you make sure to soften your voice, making the song feel even more intimate. 
   <<add_points 1>>
--> Point at them as you sing. 
+-> <i>Point at them as you sing.</i>
+  <<char_right KipperlillyBlush>>
   This feels a little silly, but you know how to make it work. Lucy laughs, charmed, and Kipperlilly leans away, her eyes shining with reluctant amusement even as she frowns.
   <<add_points 1>>
--> Make intense eye contact with both of them as you sing. 
+-> <i>Make intense eye contact with both of them as you sing.</i>
+  <<char_right KipperlillyBlush>>
+  <<char_left LucyBlush>>
   Lucy’s cheeks darken, but she gives you a little wink, which makes <i>you</i> blush. Kipperlilly stares back at you, and you can see her swallow nervously. She looks away and sneaks glances at you, hands going to cover her warm cheeks. 
   <<add_points 1>>
+<<kristen Neutral>>
 When you finish, they’re both silent. Eventually, Lucy speaks.
 Lucy: Kristen, that was beautiful. 
+<<char_right KipperlillyNeutral>>
+<<char_left LucyNeutral1>>
 You smile at her, bashful now that you’re no longer performing.
-Kristen: Thanks, Lucy. You and Kip make for some great Bardic inspiration. 
+Kristen: Aw, thanks a bunch, Lucy. You and Kip make for some great Bardic inspiration. 
 Lucy nudges Kipperlilly at that, playful. 
 Kristen: So, what’s the verdict, Kip? Am I in the running for third place? A participation trophy?
+<<char_right KipperlillySad>>
 Kipperlilly stands abruptly. You realize with a start that she looks <i>upset/i>. 
+<<char_left LucySurprised>>
+<<kristen Surprised>>
 You falter, setting the mic down slowly on the table. Beside Kipperlilly, Lucy’s eyes widen with surprise.
 Lucy: Kipperlilly?
 Kipperlilly: I have to go. 
 Lucy: Are you okay?
 Kipperlilly: Bathroom. I’ll be back. Don’t follow me.
+<<char_right transparent>>
 She rushes out without looking at you. You watch her go in silent shock.
 Kristen: What just happened?
+<<char_left LucySad>>
+<<voiceline LucySad2>>
 Lucy sighs.
 Lucy: She got spooked.
 Kristen: By… me?
 Lucy: By all of this, I think.
 She gestures between you, the empty space Kipperlilly was occupying, and herself.
+<<kristen Nervous>>
 You sink down beside her.
+<<voiceline KristenRomanticLucy2>>
 Kristen: I’m not imagining it, am I? That there’s something between the three of us?
 Lucy puts a hand over yours. 
 Lucy: No, Kristen. You’re not. And this isn’t your fault. Kipperlilly is just…
 Lucy pauses, thinking her words over.
 Lucy: She’s scared, I guess. We’ve just been finding our footing again, and you’re a whole new variable, and there’s just so much history between <i>all</i> of us. It’s not easy to move past everything we’ve been through.
+<<kristen Neutral>>
 You nod.
 Kristen: I get that.
+<<char_left LucyNeutral1>>
 Lucy: I know you do. And thanks to you, I’m figuring out how to move forward. She just needs more time. 
 Kristen: You sound really sure about this. 
+<<char_left LucyBlush>>
 Lucy gives you a smile.
 Lucy: It’s not that I’m not worried, too, sometimes. It’s just that if there’s anything I’ve learned in the last couple of months, it’s that I don’t want to let good things pass by me anymore, especially not out of fear.
 Lucy: And I think we could be a really good thing.
 Your heart warms.
+<<kristen Soft>>
 Kristen: Yeah. I think so, too.
+<<char_left LucyNeutral1>>
 Lucy: So does Kip, I’m pretty sure. She’s just… skittish sometimes. She’ll come around.
 
+<<kristen Neutral>>
 Kristen: Yeah. How long should we wait for her? She said not to follow her, but…
 
 Lucy glances towards the door of the room, humming softly.
 
 Lucy: It hasn’t been very long. If she doesn’t come back in a few minutes, we can text her. 
 
-[something something idk what they can do to wait for a couple of minutes]
+Kristen: Want me to go grab some drinks in the meantime? I don’t know about you but all that singing made me parched.
 
+Lucy: Sure, that would be wonderful, Kristen.
+
+You make sure to place your order quickly and get back to Lucy as soon as possible. When you return, Kipperilly still isn’t back so you set her drink on the table and hand Lucy hers.
+
+Lucy: Thank you
+
+You wink. 
+
+Kristen: Wouldn’t want that lovely singing voice of yours to get hoarse.
+
+<<char_right KipperlillySad>>
 You notice Lucy’s eyes flicking away from you, following her gaze to see Kipperlilly has returned. You hadn’t even heard the door open, but now that she’s been spotted, she strides in. She doesn’t look upset anymore, but you’re not sure if she’s just hiding it. 
 
 Kristen: Hey. Everything okay?
 
+<<voiceline KipDateFailure2>>
 Kipperlilly: Yes.
 
 She sits back down in her previous spot, avoiding eye contact with both of you.
@@ -239,18 +357,21 @@ Kristen: Yeah, no worries. Everyone needs a bathroom break every now and then.
 
 Kristen: Gave Lucy and me a chance to think of one last song we can do.
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly raises an eyebrow at you, but Lucy awkwardly clears her throat, pointing towards the tablet right as it rings out an alarm declaring that your time is up.
 
 Well, shit. So much for that. 
 
 You glare at the tablet for ruining what would’ve been an excellent and incredibly romantic opportunity for the three of you to sing a song together. Kipperlilly snorts.
 
+<<char_right KipperlillySmug>>
 Kipperlilly: I don’t think I have one more song in me, anyway. My first performance was too good. 
 
 Lucy: I suppose we’ll just have to settle for joint second then, Kristen.
 
 Kristen: Sharing your spot with me? Generous.
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly still seems a bit subdued. She takes a slow breath in before looking up at you and Lucy directly. 
 
 Kipperlilly: I’ll pick the next spot.
@@ -265,8 +386,10 @@ Lucy: What kind of place do you have in mind?
 
 Kipperlilly: Somewhere away from here, without a time limit. 
 
+<<voiceline KristenRomantic1>>
 Kristen: Oooh, a surprise? 
 
 Kipperlilly: Sure. I’ll text you.
+
 <<jump Cassandra>>
 ===

@@ -48,6 +48,7 @@ public class YarnCommands : MonoBehaviour
 
         // Add Yarn Command to set Kristen sprite by calling "kristen" + sprite file name
         dialogueRunner.AddCommandHandler<string>("kristen", SetKristenSprite);
+        dialogueRunner.AddCommandHandler<string>("Kristen", SetKristenSprite);
         // Add Yarn Command to set 1st (leftmost) sprite in right position by calling "char_left" + sprite file name
         dialogueRunner.AddCommandHandler<string>("char_left", SetCharLeft);
         // Add Yarn Command to set 2nd (rightmost) sprite in right position by calling "char_right" + sprite file name
