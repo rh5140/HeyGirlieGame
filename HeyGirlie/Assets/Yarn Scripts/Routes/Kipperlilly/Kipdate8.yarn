@@ -1,14 +1,13 @@
-﻿//we did it joe. we are in the president’s office.
-
-title: Date8
+﻿title: Date8
 
 ---
-March 17
-<<location “PLACEHOLDER”>>
+<<background “AGUEFORT PRESIDENT’S OFFICE”>>
+<<location "Aguefort, President’s Office">>
+<<set $date_points = 0>>
 
 <<char_right transparent>>
 <<kristen Neutral>>
-You lean back and look at the fruits of your last two hours of labor. Sure, it felt like everything that could go wrong did — Gorgug forgot to get you the charging cable for the speaker he’s loaning you and it’s almost dead, and you didn’t have time to make sure everything looks perfect the way the situation demands. But you did your best, and you think your best is pretty damn good.
+You lean back and look at the fruits of your last two hours of labor. Sure, it felt like everything that could go wrong did — Gorgug forgot to get you the charging cable for the speaker he’s loaning you and it’s almost dead, and you didn’t have time to make sure everything looks as perfect as you’d like. But you did your best, and you think your best is pretty damn good.
 
 All that’s left is waiting for Riz to drop off one more note and…
 
@@ -18,6 +17,7 @@ Quiet footsteps echo as they approach you and are joined by a voice you’ve mis
 Kipperlilly: Really? A single placement shifted Caesar cipher? We cover this in… freshman…
 
 <<char_right KipperlillySurprised>>
+<<voiceline KipRomantic3>>
 Her words trail off as her eyes widen, taking in the scene in front of her. You wonder if it’s good enough; you’d caved and let Jawbone take over baking the cookies after you’d managed to burn three batches, you hadn’t quite been able to fit Kipperlilly’s full name on the sign haphazardly taped to the front of the office desk so it’s awkwardly trailing off to the side, and you still aren’t sure if she actually likes the lighthearted pop music Ruben told you she does or if he was actively fucking with you.
 
 <<kristen Soft>>
@@ -69,6 +69,7 @@ Kristen: Last week, I asked you to give me a try. You said maybe. I’m not aski
 <<kristen Soft>>
 You finally look up from your note cards. You have no idea how red you’ve turned, but you hope you’re not blushing too hard because you know it clashes with your hair and you want this to be picture perfect.
 
+<<voiceline KipSurprised4>>
 Kipperlilly: You wrote me a speech?
 
 <<voiceline KristenRomantic2>>
@@ -78,6 +79,7 @@ Kristen: Sandra Lynn — Fig’s mom — read it over and gave me some tips, but
 Kristen: Fabian made me watch so many rom-coms to make sure I got the vibe right. I still can’t tell if it was worth it or not.
 
 <<char_right KipperlillyBlush>>
+<<voiceline KipSurprised2>>
 Kipperlilly: Maybe a little.
 
 <<kristen Happy>>
@@ -112,12 +114,13 @@ It looks like she’s going to examine everything on the desk one at a time. May
   Kristen: So Ruben <i>did</i> lie to me.
   Kipperlilly: You asked Ruben?
   Kristen: Well, yeah. I thought he’d pay the most attention to your music tastes and I wanted it to be a surprise. 
+  <<voiceline KipSurprised3>>
   Kipperlilly: Oh. That’s… a lot of unexpected initiative.
 
 Kipperlilly: It’s cute.
 
 <<char_right KipperlillySurprised>>
-Kipperlilly freezes. She slowly puts the half-eaten cookie back in the bowl, dusting the crumbs off of her fingers.
+Kipperlilly freezes. 
 
 Kipperlilly: Sorry, that was—
 
@@ -148,9 +151,9 @@ Kipperlilly blushes.
 Kipperlilly: I — d-don’t…
 
 Her eyes dart up and down all over your face, as if trying to memorize it. You watch her document each freckle on your face, the baby fat still stubbornly clinging to your jawline, and the curve of your cheek. She looks into your eyes, then back down your face. You can tell she’s not going to ask for the invitation.
--> Can I…?
--> Would you…?
--> Is this okay?
+-> Kristen: “Can I…?”
+-> Kristen: “Would you…?”
+-> Kristen: “Is this okay?”
 
 Kipperlilly turns redder, but she still nods.
 
@@ -163,9 +166,9 @@ You cup her cheek with your free hand and close your eyes as you lean in, pressi
 She’d gone stiff when you first made contact, a breath hitching at the back of her throat, but you’re pretty sure it was just from shock because the second you make eye contact after that first kiss, she grins wider than you’ve ever seen her.
 
 Kipperlilly: Is that it?
--> Wanna find out?
--> Of course not.
--> Still doubting me?
+-> Kristen: “Wanna find out?”
+-> Kristen: “Of course not.”
+-> Kristen: “Still doubting me?”
 
 You match her grin, let go of her hand to hold the other side of her face, and dive in again. This time, Kipperlilly’s more than ready for you and it shows in her enthusiasm as she grabs the collar of your shirt for leverage and practically pushes you backwards onto the desk. 
 
@@ -197,6 +200,7 @@ Kristen: Is that a yes?
 <<char_right KipperlillyLaugh>>
 She doesn’t try to hold in her laughter this time, leaning back to look at you again.
 
+<<voiceline KipDateSuccess2>>
 Kipperlilly: It’s a <i>maybe.</i>
 
 There’s a curve to her grin that tells you it’s more than that, but you’ve learned that pushing Kipperlilly just makes her dig her heels in, and you’re too ecstatic about how today turned out to tempt that particular devil.
@@ -222,6 +226,7 @@ Kipperlilly: I bet they’ll still be fun to read.
 Kristen: You’re not going to give this up until I say yes, huh?
 
 <<char_right KipperlillySmug>>
+<<voiceline KipHappy1>>
 Kipperlilly: Ha. You know me so well now, Kristen.
 
 Kristen: I sure hope so. Otherwise, what was this all for?
