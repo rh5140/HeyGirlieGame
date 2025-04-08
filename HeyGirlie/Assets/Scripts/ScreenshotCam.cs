@@ -25,7 +25,7 @@ public class ScreenshotCam : MonoBehaviour
     }
 
     IEnumerator TakeScreenshot(string filepath){
-        yield return new WaitForSeconds(1);
+        yield return null;
 
         // Texture2D tex = new Texture2D(3840, 2160, GraphicsFormatUtility.GetTextureFormat(rTex.graphicsFormat), false, true);
         Texture2D tex = new Texture2D(3840, 2160, TextureFormat.RGB565, false, true);
@@ -38,14 +38,5 @@ public class ScreenshotCam : MonoBehaviour
         // byte[] bytes = ImageConversion.EncodeToTGA(tex);
         Object.Destroy(tex);
         File.WriteAllBytes(filepath, bytes);
-
-        // RenderTexture outputMap = rtex;
-        // outputMap.name = "Whatever";
-        // outputMap.enableRandomWrite = true;
-        // outputMap.Create();
-        // //Put the above stuff in Awake()  if you need to update this every frame...
-        // RenderTexture.active = outputMap;
-        // GL.Clear(true, true, Color.black);
-        // Graphics.Blit(mainTexture, outputMap, rtMat);
     }
 }

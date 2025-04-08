@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using System;
 using System.IO;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
@@ -14,6 +16,11 @@ functionality
 *****************************************************/
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private RectTransform menu;
+    [SerializeField] private GameObject stickerAnimation;
+    [SerializeField] private GameObject titleSticker;
+    [SerializeField] private Image stickerShadow;
+    
     [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject newGamePopup;
@@ -22,7 +29,52 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private AudioClip[] _startupVoicelines;
 
     void Start() {
-        SettingManager.Instance.voices.PlayOneShot(_startupVoicelines[RandomizeVoiceline()]);
+        StartCoroutine(AnimateMenu());
+    }
+
+    IEnumerator AnimateMenu(){
+        float time = 0, lerpTime = 0.5f;
+        while(time < lerpTime){
+            menu.anchoredPosition = new Vector2(0, Mathf.Lerp(-2160, 0, time / lerpTime));
+            time += Time.deltaTime;
+
+            yield return null;
+        }
+
+        time = 0; lerpTime = 0.25f;
+        yield return new WaitForSeconds(lerpTime);
+        stickerAnimation.SetActive(true);
+        
+        while(time < lerpTime){
+            Color c = stickerShadow.color;
+            c.a = Mathf.Lerp(0f, 0.25f, time / lerpTime);
+            stickerShadow.color = c;
+            time += Time.deltaTime;
+
+            yield return null;
+        }
+
+        PlayStartup();
+
+        RectTransform stickerTransform = titleSticker.GetComponent<RectTransform>();
+        Image stickerImage = titleSticker.GetComponent<Image>();
+        time = 0; lerpTime = 0.25f;
+        while(time < lerpTime){
+            Color c = stickerShadow.color;
+            c.a = Mathf.Lerp(0.25f, 0.5f, time / lerpTime);
+            stickerShadow.color = c;
+            
+            c = stickerImage.color;
+            c.a = Mathf.Lerp(0, 1f, time / lerpTime)*2f;
+            stickerImage.color = c;
+
+            stickerTransform.localScale = Mathf.Lerp(5, 1, time / lerpTime)*Vector3.one;
+            time += Time.deltaTime;
+
+            yield return null;
+        }
+
+        stickerTransform.localScale = Vector3.one;
     }
 
     private void Update(){
@@ -72,6 +124,11 @@ public class MainMenu : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    public void PlayStartup(){
+        SettingManager.Instance.voices.Stop();
+        SettingManager.Instance.voices.PlayOneShot(_startupVoicelines[RandomizeVoiceline()]);
     }
 
     private int RandomizeVoiceline()
