@@ -24,7 +24,6 @@ public class SpecialEventSelection : MonoBehaviour
     // Make sure polyam options have corresponding number
     public bool ActivateButtons(int threshold)
     {
-        Debug.Log("ACTIVATE BUTTONS");
         _buttonContainer.SetActive(true);
         if (threshold == 0)
         {   

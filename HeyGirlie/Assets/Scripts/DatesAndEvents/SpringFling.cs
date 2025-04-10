@@ -7,8 +7,7 @@ public class SpringFling : SpecialEventSelection
     
     public void ActivateButtons()
     {
-        _buttonContainer.SetActive(true);
-        // Put all the spring fling conditions here..
+        base.ActivateButtons(4); // 4 date minimum to ask
     }
 
     public void DeactivateAyda(bool date7choice)
