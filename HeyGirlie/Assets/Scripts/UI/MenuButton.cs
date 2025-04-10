@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class MenuButton : MonoBehaviour
 
     public void PlayAudio(AudioClip audioClip)
     {
-        _sfxSource.Stop();
-        _sfxSource.clip = audioClip;
-        _sfxSource.Play();
+        if(gameObject.GetComponent<Toggle>() != null || gameObject.GetComponent<Button>().interactable){
+            _sfxSource.Stop();
+            _sfxSource.clip = audioClip;
+            _sfxSource.Play();
+        }
     }
 
     public void ChangeScene(string sceneName)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class SpecialEventSelection : MonoBehaviour
@@ -7,16 +8,29 @@ public class SpecialEventSelection : MonoBehaviour
     [SerializeField] protected GameObject[] _buttons; // Set buttons in same order as LoveInterest array in GameManager
     [SerializeField] protected GameObject _buttonContainer;
 
+    private int buttonsTurnedOff = 0;
+
+    public bool GetSpecialEventFail(int threshold)
+    {
+        LoveInterest[] loveInterests = GameManager.Instance.GetLIArray();
+        foreach (LoveInterest li in loveInterests)
+        {
+            if (li.GetDateCount() >= threshold) return false;
+        }
+        return true;
+    }
+
     // Iterates through buttons and enables if corresonding idx in GameManager LoveInterest array meets threshold 
     // Make sure polyam options have corresponding number
     public bool ActivateButtons(int threshold)
     {
+        Debug.Log("ACTIVATE BUTTONS");
         _buttonContainer.SetActive(true);
         if (threshold == 0)
         {   
             foreach (GameObject button in _buttons)
             {
-                button.SetActive(true);
+                button.GetComponent<Button>().interactable = true;
             }
             return false;
         }
@@ -36,8 +50,7 @@ public class SpecialEventSelection : MonoBehaviour
                 }
                 else
                 {
-                    button.SetActive(false);
-                    buttonsTurnedOff++;
+                    button.GetComponent<Button>().interactable = false;
                 }
             }
             liIdx++;

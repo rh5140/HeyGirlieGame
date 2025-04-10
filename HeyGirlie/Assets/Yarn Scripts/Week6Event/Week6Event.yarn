@@ -17,9 +17,11 @@ There are so many things here you’d be happy to spend hours doing, but there a
 :The big question is: what do you want to do first?
 
 <<declare $no_special_event = false>>
-<<special_event_selection 7>>
+<<get_special_event_fail 7>>
 <<if $no_special_event>>
     <<jump EventFail>>
+<<else>>
+    <<special_event_selection 7>>
 <<endif>>
 <<kristen transparent>>
 ===

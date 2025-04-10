@@ -81,7 +81,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
-
+        
+        dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
     }
 
     void Start()
@@ -350,7 +351,13 @@ public class YarnCommands : MonoBehaviour
     private void ActivateButtons(int nextWeek)
     {
         SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
-        bool noSpecialEvent = ses.ActivateButtons(nextWeek);
+        ses.ActivateButtons(nextWeek);
+    }
+
+    private void GetSpecialEventFail(int nextWeek)
+    {
+        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
+        bool noSpecialEvent = ses.GetSpecialEventFail(nextWeek);
         _variableStorage.SetValue("$no_special_event", noSpecialEvent);
     }
     
