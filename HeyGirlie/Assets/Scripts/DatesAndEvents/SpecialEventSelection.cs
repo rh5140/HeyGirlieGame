@@ -10,10 +10,21 @@ public class SpecialEventSelection : MonoBehaviour
 
     private int buttonsTurnedOff = 0;
 
+    public bool GetSpecialEventFail(int threshold)
+    {
+        LoveInterest[] loveInterests = GameManager.Instance.GetLIArray();
+        foreach (LoveInterest li in loveInterests)
+        {
+            if (li.GetDateCount() >= threshold) return false;
+        }
+        return true;
+    }
+
     // Iterates through buttons and enables if corresonding idx in GameManager LoveInterest array meets threshold 
     // Make sure polyam options have corresponding number
     public bool ActivateButtons(int threshold)
     {
+        Debug.Log("ACTIVATE BUTTONS");
         _buttonContainer.SetActive(true);
         if (threshold == 0)
         {   

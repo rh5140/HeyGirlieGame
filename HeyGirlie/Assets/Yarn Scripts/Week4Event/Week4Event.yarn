@@ -20,9 +20,11 @@ There’s so much to do! So much to see! So many people to hang out with!
 Who will it be?
 
 <<declare $no_special_event = false>>
-<<special_event_selection 5>>
+<<get_special_event_fail 5>>
 <<if $no_special_event>>
     <<jump EventFail>>
+<<else>>
+    <<special_event_selection 5>>
 <<endif>>
 <<kristen transparent>>
 ===
