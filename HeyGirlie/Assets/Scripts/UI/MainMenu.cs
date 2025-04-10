@@ -33,13 +33,17 @@ public class MainMenu : MonoBehaviour
     }
 
     IEnumerator AnimateMenu(){
+        yield return new WaitForSeconds(1);
+
+        float start = Mathf.Ceil(((gameObject.GetComponent<RectTransform>().rect.height/2) + 1080)*1.1f);
         float time = 0, lerpTime = 0.5f;
         while(time < lerpTime){
-            menu.anchoredPosition = new Vector2(0, Mathf.Lerp(-2160, 0, time / lerpTime));
+            menu.anchoredPosition = new Vector2(0, Mathf.Lerp(-1*start, 0, time / lerpTime));
             time += Time.deltaTime;
 
             yield return null;
         }
+        menu.anchoredPosition = Vector2.zero;
 
         time = 0; lerpTime = 0.25f;
         yield return new WaitForSeconds(lerpTime);
@@ -117,10 +121,10 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        #if UNITY_EDITOR
-        // Application.Quit() does not work in the editor so
-        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+        #if (UNITY_EDITOR)
             UnityEditor.EditorApplication.isPlaying = false;
+        #elif (UNITY_WEBGL)
+            SceneManager.LoadScene("Main Menu");
         #else
             Application.Quit();
         #endif
