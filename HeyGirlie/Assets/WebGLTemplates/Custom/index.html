@@ -15,20 +15,20 @@
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1"></canvas>
       <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
+        <div id="hgg-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="unity-footer">
+      <!-- <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
 #if SHOW_DIAGNOSTICS
         <img id="diagnostics-icon" src="TemplateData/webmemd-icon.png">
 #endif
         <div id="unity-build-title">{{{ PRODUCT_NAME }}}</div>
-      </div>
+      </div> -->
     </div>
     <script>
       var canvas = document.querySelector("#unity-canvas");
@@ -141,41 +141,41 @@
                   unityDiagnostics.openDiagnosticsDiv(unityInstance.GetMetricsInfo);
                 };
 #endif
-                document.querySelector("#unity-fullscreen-button").onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
+//                 // document.querySelector("#unity-fullscreen-button").onclick = () => {
+//                 //   unityInstance.SetFullscreen(1);
+//                 // };
 
-#if DEVELOPMENT_PLAYER
-                // Unloading web content from DOM so that browser GC can run can be tricky to get right.
-                // This code snippet shows how to correctly implement a Unity content Unload mechanism to a web page.
+// #if DEVELOPMENT_PLAYER
+//                 // Unloading web content from DOM so that browser GC can run can be tricky to get right.
+//                 // This code snippet shows how to correctly implement a Unity content Unload mechanism to a web page.
 
-                // Unloading Unity content enables a web page to reclaim the memory used by Unity, e.g. for
-                // the purpose of later loading another Unity content instance on the _same_ web page.
+//                 // Unloading Unity content enables a web page to reclaim the memory used by Unity, e.g. for
+//                 // the purpose of later loading another Unity content instance on the _same_ web page.
 
-                // When using this functionality, take caution to carefully make sure to clear all JavaScript code,
-                // DOM element and event handler references to the old content you may have retained, or
-                // otherwise the browser's garbage collector will be unable to reclaim the old page.
+//                 // When using this functionality, take caution to carefully make sure to clear all JavaScript code,
+//                 // DOM element and event handler references to the old content you may have retained, or
+//                 // otherwise the browser's garbage collector will be unable to reclaim the old page.
 
-                // N.b. Unity content does _not_ need to be manually unloaded when the user is navigating away from
-                // the current page to another web page. The browser will take care to clear memory of old visited
-                // pages automatically. This functionality is only needed if you want to switch between loading
-                // multiple Unity builds on a single web page.
-                var quit = document.createElement("button");
-                quit.style = "margin-left: 5px; background-color: lightgray; border: none; padding: 5px; cursor: pointer";
-                quit.innerHTML = "Unload";
-                document.querySelector("#unity-build-title").appendChild(quit);
-                quit.onclick = () => {
-                  // Quit Unity application execution
-                  unityInstance.Quit().then(() => {
-                    // Remove DOM elements from the page so GC can run
-                    document.querySelector("#unity-container").remove();
-                    canvas = null;
-                    // Remover script elements from the page so GC can run
-                    script.remove();
-                    script = null;
-                  });
-                };
-#endif
+//                 // N.b. Unity content does _not_ need to be manually unloaded when the user is navigating away from
+//                 // the current page to another web page. The browser will take care to clear memory of old visited
+//                 // pages automatically. This functionality is only needed if you want to switch between loading
+//                 // multiple Unity builds on a single web page.
+//                 var quit = document.createElement("button");
+//                 quit.style = "margin-left: 5px; background-color: lightgray; border: none; padding: 5px; cursor: pointer";
+//                 quit.innerHTML = "Unload";
+//                 document.querySelector("#unity-build-title").appendChild(quit);
+//                 quit.onclick = () => {
+//                   // Quit Unity application execution
+//                   unityInstance.Quit().then(() => {
+//                     // Remove DOM elements from the page so GC can run
+//                     document.querySelector("#unity-container").remove();
+//                     canvas = null;
+//                     // Remover script elements from the page so GC can run
+//                     script.remove();
+//                     script = null;
+//                   });
+//                 };
+// #endif
               }).catch((message) => {
                 alert(message);
               });
@@ -186,3 +186,55 @@
     </script>
   </body>
 </html>
+
+<!-- MINIMAL TEMPLATE REFERENCE
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | {{{ PRODUCT_NAME }}}</title>
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+    <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1" style="width: {{{ WIDTH }}}px; height: {{{ HEIGHT }}}px; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
+    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
+
+        document.body.style.textAlign = "left";
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        arguments: [],
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+        workerUrl: "Build/{{{ WORKER_FILENAME }}}",
+#endif
+#if USE_WASM
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
+-->
