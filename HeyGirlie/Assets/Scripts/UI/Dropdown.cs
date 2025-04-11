@@ -11,10 +11,21 @@ public class Dropdown : MonoBehaviour
 {
     [SerializeField] private GameObject overlay;
     [SerializeField] private GameObject paper;
+    [SerializeField] private GameObject hoverArea;
 
     [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject quitPopup;
+
+    public bool pause = false;
+
+    public void HoverArea(){
+        StartCoroutine(HoverDropdown(true));
+    }
+
+    public void UnhoverArea(){
+        StartCoroutine(HoverDropdown(false));
+    }
 
     public void OpenDropdown(){
         StartCoroutine(AnimateDropdown(true));
@@ -24,9 +35,36 @@ public class Dropdown : MonoBehaviour
         StartCoroutine(AnimateDropdown(false));
     }
 
+    IEnumerator HoverDropdown(bool hover){
+        float time = 0, lerpTime = 0.25f;
+        RectTransform paperRect = paper.GetComponent<RectTransform>(); 
+        float pStart = -2220.5f, pEnd = -2385f;
+        if(hover){
+            paper.SetActive(true);
+            pEnd = -2220.5f; pStart = -2385f;
+        }
+        
+
+        while(time < lerpTime){
+            paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        if(!hover){
+            paper.SetActive(false);
+        }
+    }
+
+    public void DisableHover(){
+        hoverArea.SetActive(!hoverArea.activeSelf);
+    }
+
     IEnumerator AnimateDropdown(bool open){
         float time = 0, lerpTime = 0.25f;
-        float start = Mathf.Ceil(((gameObject.GetComponent<RectTransform>().rect.width/2) + (925*2))*1.1f);
+        // float start = Mathf.Ceil(((gameObject.GetComponent<RectTransform>().rect.width/2) + (925*2))*1.1f);
+        float start = 2220.5f;
         Image overlayImg = overlay.GetComponent<Image>();
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
 
@@ -35,7 +73,7 @@ public class Dropdown : MonoBehaviour
             overlay.SetActive(true);
             paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
-        }
+        } else pause = false;
 
         while(time < lerpTime){
             Color c = overlayImg.color;
@@ -51,7 +89,7 @@ public class Dropdown : MonoBehaviour
         if(!open){
             overlay.SetActive(false);
             paper.SetActive(false);
-        }
+        } else pause = true;
     }
 
     public void LoadGame()
