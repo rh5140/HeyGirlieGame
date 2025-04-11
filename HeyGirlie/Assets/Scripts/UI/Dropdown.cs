@@ -18,6 +18,20 @@ public class Dropdown : MonoBehaviour
     [SerializeField] private GameObject quitPopup;
 
     public bool pause = false;
+    private float start = 2220.5f;
+    private bool open = true;
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            if(open) {
+                OpenDropdown();
+                open = false;
+            } else {
+                CloseDropdown();
+                open = true;    
+            }
+        }
+    }
 
     public void HoverArea(){
         StartCoroutine(HoverDropdown(true));
@@ -63,8 +77,6 @@ public class Dropdown : MonoBehaviour
 
     IEnumerator AnimateDropdown(bool open){
         float time = 0, lerpTime = 0.25f;
-        // float start = Mathf.Ceil(((gameObject.GetComponent<RectTransform>().rect.width/2) + (925*2))*1.1f);
-        float start = 2220.5f;
         Image overlayImg = overlay.GetComponent<Image>();
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
 
@@ -90,6 +102,8 @@ public class Dropdown : MonoBehaviour
             overlay.SetActive(false);
             paper.SetActive(false);
         } else pause = true;
+
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void LoadGame()

@@ -10,7 +10,6 @@ public class PauseGame : MonoBehaviour
 
     void Update(){
         if(gameObject.GetComponent<Dropdown>() != null){
-            Debug.Log(gameObject.GetComponent<Dropdown>().pause);
             if(gameObject.GetComponent<Dropdown>().pause) Time.timeScale = 0;
             else Time.timeScale = 1;
         }

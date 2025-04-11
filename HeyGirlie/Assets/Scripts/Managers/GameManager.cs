@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update(){ 
-        if(Input.GetKeyDown(KeyCode.F1)){
+        if(!SceneManager.GetActiveScene().name.Equals("Main Menu") &&
+            Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.LeftControl)){
             Save();
         }
     }
