@@ -20,6 +20,8 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     private GameObject selected;
     private int selectedSave = 0;
     void Awake(){
+        GameManager.Instance.Pause(true);
+
         loadButton.interactable = false;
         deleteButton.interactable = false;
         saveButton.interactable = false;
@@ -36,19 +38,16 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
         }
     }
 
+    void OnDestroy(){
+        GameManager.Instance.Pause(false);
+    }
+
     public void isSelected(){
         selectedSave = int.Parse(EventSystem.current.currentSelectedGameObject.transform.parent.name);
 
         Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
         if(!SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = true;
     }
-
-    // public void OnDeselect(BaseEventData data)
-    // {
-    //     loadButton.interactable = false;
-    //     deleteButton.interactable = false;
-    //     saveButton.interactable = false;
-    // }
 
     public void Close(){
         Destroy(saveProfilesMenu);

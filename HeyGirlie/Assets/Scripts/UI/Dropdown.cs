@@ -62,7 +62,7 @@ public class Dropdown : MonoBehaviour
         while(time < lerpTime){
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
 
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -85,7 +85,7 @@ public class Dropdown : MonoBehaviour
             overlay.SetActive(true);
             paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
-        } else pause = false;
+        } else GameManager.Instance.Pause(false);
 
         while(time < lerpTime){
             Color c = overlayImg.color;
@@ -94,14 +94,14 @@ public class Dropdown : MonoBehaviour
 
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
 
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             yield return null;
         }
 
         if(!open){
             overlay.SetActive(false);
             paper.SetActive(false);
-        } else pause = true;
+        } else GameManager.Instance.Pause(true);
 
         EventSystem.current.SetSelectedGameObject(null);
     }

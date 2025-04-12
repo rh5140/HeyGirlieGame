@@ -64,6 +64,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Pause(bool pause){
+        if(pause) {
+            Time.timeScale = 0;
+            Debug.Log("Pause");
+        } else {
+            Time.timeScale = 1;
+            Debug.Log("Unpause");
+        }
+    }
+
     public List<LoveInterest> priorityQueue()
     {
         List<LoveInterest> liQueue = new List<LoveInterest>();

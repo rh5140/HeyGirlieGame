@@ -20,9 +20,15 @@ public class Settings : MonoBehaviour
     [SerializeField] private Sprite defaultScreenshot;
 
     void Awake() {
+        GameManager.Instance.Pause(true);
+
         SetSettings();
 
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
+    }
+
+    void OnDestroy(){
+        GameManager.Instance.Pause(false);
     }
 
     public void ToggleFullscreen(bool value){
