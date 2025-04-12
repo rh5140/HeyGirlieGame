@@ -15,11 +15,14 @@ public class Dropdown : MonoBehaviour
 
     [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject quitPopup;
 
     public bool pause = false;
     private float start = 2220.5f;
     private bool open = true;
+
+    private bool pauseLock = false;
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -85,7 +88,13 @@ public class Dropdown : MonoBehaviour
             overlay.SetActive(true);
             paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
-        } else GameManager.Instance.Pause(false);
+        } else {
+            // "OnDestroy"
+            if(pauseLock){
+                GameManager.Instance.Pause(false);
+                pauseLock = false;
+            }
+        }
 
         while(time < lerpTime){
             Color c = overlayImg.color;
@@ -101,28 +110,36 @@ public class Dropdown : MonoBehaviour
         if(!open){
             overlay.SetActive(false);
             paper.SetActive(false);
-        } else GameManager.Instance.Pause(true);
+        } else {
+            // "Awake"
+            if(!GameManager.Instance.pauseLock){
+                GameManager.Instance.Pause(true);
+                pauseLock = true;
+            }
+        }
 
         EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void LoadGame()
     {
-        paper.SetActive(false);
-        overlay.SetActive(false);
+        CloseDropdown();
+        DisableHover();
         Instantiate(saveProfilesMenu);
     }
 
     public void Settings()
     {
-        paper.SetActive(false);
-        overlay.SetActive(false);
+        CloseDropdown();
+        DisableHover();
         Instantiate(settingsMenu);
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        CloseDropdown();
+        DisableHover();
+        Instantiate(creditsMenu);
     }
 
     public void ExitPopup(){

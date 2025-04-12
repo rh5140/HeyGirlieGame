@@ -19,8 +19,13 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
 
     private GameObject selected;
     private int selectedSave = 0;
+
+    private bool pauseLock = false;
     void Awake(){
-        GameManager.Instance.Pause(true);
+        if(!GameManager.Instance.pauseLock){
+            GameManager.Instance.Pause(true);
+            pauseLock = true;
+        }
 
         loadButton.interactable = false;
         deleteButton.interactable = false;
@@ -39,7 +44,10 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     }
 
     void OnDestroy(){
-        GameManager.Instance.Pause(false);
+        if(pauseLock){
+            GameManager.Instance.Pause(false);
+            pauseLock = false;
+        }
     }
 
     public void isSelected(){

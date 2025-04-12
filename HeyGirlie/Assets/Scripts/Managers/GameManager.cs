@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     public Queue<string> outdoorsDates;
     public Queue<string> awayDates;
 
+    public bool pauseLock = false;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -67,9 +69,11 @@ public class GameManager : MonoBehaviour
     public void Pause(bool pause){
         if(pause) {
             Time.timeScale = 0;
+            pauseLock = true;
             Debug.Log("Pause");
         } else {
             Time.timeScale = 1;
+            pauseLock = false;
             Debug.Log("Unpause");
         }
     }
