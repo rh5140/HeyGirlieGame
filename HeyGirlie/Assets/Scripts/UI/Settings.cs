@@ -19,10 +19,24 @@ public class Settings : MonoBehaviour
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
 
+    private bool pauseLock = false;
+
     void Awake() {
+        if(!GameManager.Instance.pauseLock){
+            GameManager.Instance.Pause(true);
+            pauseLock = true;
+        }
+
         SetSettings();
 
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
+    }
+
+    void OnDestroy(){
+        if(pauseLock){
+            GameManager.Instance.Pause(false);
+            pauseLock = false;
+        }
     }
 
     public void ToggleFullscreen(bool value){
