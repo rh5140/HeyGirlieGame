@@ -1,6 +1,6 @@
 ﻿title: Date2
 ---
-March 23
+April 13
 <<location "PLACEHOLDER">>
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
@@ -34,21 +34,26 @@ Kristen: Why are you here.
 Nara: Goodness! I do hope you have not already forgotten the invitation you extended to me last we met?
 :You think back to the last time you saw Nara.
 // mall background
+<<kristen Neutral>>
+<<char_right NaraNeutral>>
 Kristen: Just come to my house whenever.
 // (al note: increasingly slow motion) (kirby note: impossible?? What do u Mean) (al note: we eventually agreed to just put like. A sepia filter on the background for the flashback stuff :) )
 Kristen: Whenever.
 Kristen: Wheneverrrrr.
-// (al note: back to regular speed) (kirby note: literally what do you mean. al. al moss. come back. what do you mean.) (al note: no more sepia!)
+// (al note: back to regular speed) (kirby note: literally what do you mean. al. al moss. come back. what do you mean.) 
+<<char_right NaraBlush>>
 Nara: My goodness your muscles are large, Kristen! May I make out with them passionately?
 :Okay, so maybe that part didn’t happen. Probably.
-// manor background
+// manor background (al note: no more sepia!)
 :Oh no. She’s giving you puppy dog eyes. You’re powerless to resist.
 Kristen: Yeah okay come on in.
+<<char_right NaraNeutral>>
 Nara: Wonderful! Do not mind the birds, I lack the trumpets that typically announce my arrival, but Solace is outside their jurisdiction, so I had to make do with these wonderful creatures.
 Kristen: It’s okay, I love birds. One of my best friends is a bird.
 :You’re lying now? Why are you lying? You’re not awake enough to lie. Just stop saying words.
 Nara: Then I guess all of this has worked out splendidly!
 :You watch helplessly as she breezes past you to perch on the edge of your couch, surrounded by a ridiculously thick cloud of feathers, and pats the spot next to her encouragingly.
+<<char_right NaraThink>>
 Nara: So what can this… The Phone… do, exactly?
 Kristen: Anything you want, baby.
 :You wish you hadn’t said it that way. Ugh.
@@ -95,15 +100,30 @@ Kristen: Sure, but maybe we can start with, like, the basic stuff first.
 Nara: Ah! I see you have noticed the engraved model number of my The Phone!
 :Uhhh… do you have a model number on your phone?
 Nara: The vendor was most adamant that this is the very first model of the newest version.
-The sticker is clearly peeling off at the corner. You... think you know what's happened here.
+:The sticker is clearly peeling off at the corner. You... think you know what's happened here.
 -> Nara… that’s clearly a sticker. You got scammed. How did you not notice? It’s super obvious.
-    Nara: Aw man. You have made me feel stupid. Now I am sad.
+    Nara: Scam? I know not what you mean. If your intent was to say that I have been somehow tricked, I’ll have you know that my elf eyes see all, and I would be the very first to pick up on a ruse.
+    Nara: In fact, I am detecting such notes of deceit in your very words! Kristen, darling, you do not have to lie to me just because you are jealous of my exclusive The Phone.
+    :You sigh in defeat. This backfired: now she’s convinced she definitely wasn’t scammed, <i>and</i> you look like a total jerk. Better quit while you’re behind and let this one go.
     <<add_points 0>>
 -> Wow, I’m so jealous. You really have an eye for the finer things in life.
-    Nara: I am happy but I have not learned anything.
+    Nara: Don’t I just?
+    :She bats her eyelashes in a way that makes you feel a little bad for playing along, but what she doesn’t know can’t hurt her. Right?
+    Nara: The purchase was well worth dipping just a smidge into my inheritance.
+    :Oh. Oh, Nara. Oh dear, sweet, innocent, far-too-rich-for-her-own-good Nara. You make a mental note to warn her later against any potential Baronese princes texting her for help reclaiming their riches.
     <<add_points 1>>
 -> I hate to go against the word of a master craftsman, but are we sure that’s an engraving?
-    Nara: I can discover for myself that I have been scammed. This is sad but I will be fine!
+    :Nara takes a closer look at the sticker, and carefully presses her nail against it, as if to feel the texture. Instead, the sticker easily comes off. Nara lets out a dramatic gasp.
+Nara: Kristren! This engraving removed itself!
+Kristen: It's called a sticker. The, uh, guy selling you the phone lied.
+:Nara stares at the sticker in abject disgust.
+Nara: You truly think someone would do that? Just, go to the mall and spread falsehoods?
+Kristen: I have it on very good authority they would. Exhibit A, the sticker in your hand.
+<<char_right NaraSad>>
+Kristen: Hey, it’s okay. Everyone falls for one of these sooner or later. At least you got yours out of the way early? Just gotta be careful who you trust.
+<<char_right NaraBlush>>
+Nara: Indeed. If nothing else, I am glad to know I can trust you.
+<<kristen Soft>>
     <<add_points 2>>
 Kristen: Anyway, all that aside... let’s start by setting up a screensaver.
 :Nara nods approvingly.
@@ -124,15 +144,14 @@ Nara: I see your astonishment, and I must agree. These paintings are the finest 
 Kristen: You have more?!
 Nara: Of course! I have one for each year I have been alive, and several family portraits.
 :Now that the initial shock has worn off, you take a closer look at the paintings. One is of Nara in a forest clearing, rays of sunlight kissing her face, birds perched atop her fingertips as she smiles gently and looks in the exact direction you think the sun would be, for some reason. She must have some strong eyes.
-:The second painting is much colder. Nara and her parents sit in a room with black walls and a red floor, surrounded by random items that you have to assume symbolise wealth in Fallinel somehow. Nara is in the middle, in an armchair that looks both expensive and uncomfortable, surrounded on either side by her parents, each one with a hand on her shoulders. For some reason, it makes you feel as uneasy as everyone in the painting looks.
-:Time to change the subject!
-Kristen: How did you even fit those in your pockets?
-:Nara looks puzzled, as if this was the stupidest question in the world. Which it definitely isn’t. You think.
-Nara: Why, I have pockets of holding, of course. Are you too poor to afford them?
-//kirby note: adaine has the jacket, kristen would be familiar with this.
-:…
-Kristen: Something like that.
-Nara: Ah, my deepest sympathies. Regardless! Which painting do you think I should choose?
+:The second painting is much colder. Nara and her parents sit in a room with black walls and a red floor, surrounded by random items that you have to assume symbolise wealth in Fallinel somehow. 
+:Nara is in the middle, in an armchair that looks both expensive and uncomfortable, surrounded by her parents, each with a hand on her shoulders. For some reason, it makes you feel as uneasy as everyone in the painting looks.
+:You stare at the paintings and zone out so hard you don’t even realize Nara has asked you a question.
+Nara: –ooze?
+Kristen: Buh- wha- huh?
+:Ooze? What’s this about ooze? You briefly imagine what Nara might look like as a plasmoid. Hah. Princess Ooze.
+Nara: I said, which painting do you think I should choose?
+:Oh. Duh. You cast aside all thoughts of slime and try to lock in.
 -> Choose the painting of yourself, you look way too sad with your family. Eat the rich, am I right?
     Nara: Kristen I am very angry right now. This is a placeholder response to reveal to you how much I love my family and my complicated relationship with them. Also I am soooo rich.
     :Narrator part where Kristen feels so bad for Nara. Wow Kristen you’re so insensitive.
@@ -150,18 +169,19 @@ Nara: Ah, my deepest sympathies. Regardless! Which painting do you think I shoul
     :You choose to ignore that last part.
     Kristen: No, you can take pictures with your the ph- with your phone.
     Nara: How wonderful! Let us take this the selfie together!
-    :Narrator thing about a cute pose where Nara gets too close and Kristen blushes. The first picture has Nara looking at entirely the wrong place, so she makes you take at least 10 more until she gets the perfect picture.
+    :Nara pulls you in so your cheeks are squished together. The whole thing feels very teen rom-com, and you can't help but blush a little as you feel her silky soft skin against yours. Sweet Cassandra, what moisturizer does she use???
+ :The first picture has Nara looking at entirely the wrong place, so she makes you take at least 10 more until she gets the perfect picture.
     <<add_points 2>>
 Kristen: You know, there are other things you can change about the phone.
 Nara: Like what?
 Kristen: Size of the text, how the apps are organised, the language.
 :Nara immediately perks up, and tries to play it cool immediately after.
-Nara: Kristen, would it be possible to change the language on my Tthe Pphone to… Elvish?
+Nara: Kristen, would it be possible to change the language on my The Phone to… Elvish?
 -> Why would you need to do that? The phone is already set to Common, and you speak Common very well.
     :I am too tired to write Nara’s paragraph on her feelings on Elvish culture so pretend I did that here for now
     <<add_points 0>>
 -> Uhhh IDK if you can…
-    :Nara does puppy dog eyes until youkristen check,s and at the bottom of the languages list in the settings is Elvish. Which is weird because the rest of the list is in alphabetical order
+    :Nara does puppy dog eyes until you check, and at the bottom of the languages list in the settings is Elvish. Which is weird because the rest of the list is in alphabetical order
     <<add_points 1>>
 -> Sure!
     :You do as she asks without question because you are a hashtag ally.

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6717304234574290660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6980370640556168207}
+  - component: {fileID: 491528706655918614}
+  m_Layer: 5
+  m_Name: Tracker3DSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6980370640556168207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717304234574290660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &491528706655918614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717304234574290660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a46a68b620d9f4192af363ed5f8ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArray:
+  - spriteName: transparent
+    sprite: {fileID: 21300000, guid: 6a07ee8d9cb62974f9eefb2da627748a, type: 3}
+  - spriteName: TrackerAngry_3D
+    sprite: {fileID: 21300000, guid: 541fbdabd355b0e409ba2caf7849e5e8, type: 3}
+  - spriteName: TrackerAwkward_3D
+    sprite: {fileID: 21300000, guid: 94cd70e05c5852943a85ad1ff9d094ae, type: 3}
+  - spriteName: TrackerBlush_3D
+    sprite: {fileID: 21300000, guid: 448089c3fb9fc604a8fdd52b25cc03ee, type: 3}
+  - spriteName: TrackerFlirt_3D
+    sprite: {fileID: 21300000, guid: 8c05335481275ac44b7f09e88272bd63, type: 3}
+  - spriteName: TrackerHappy_3D
+    sprite: {fileID: 21300000, guid: a4ffee9f610fa564281458767df2db24, type: 3}
+  - spriteName: TrackerLaugh_3D
+    sprite: {fileID: 21300000, guid: 9f5c3dc84579b3c40a8310f00e619c08, type: 3}
+  - spriteName: TrackerNeutral_3D
+    sprite: {fileID: 21300000, guid: 4a9fac627a2d8c943bb8632eb0eed155, type: 3}
+  - spriteName: TrackerSad_3D
+    sprite: {fileID: 21300000, guid: cfebe4bf3300a66438d54c9d0ae1c73e, type: 3}
+  - spriteName: TrackerSurprised_3D
+    sprite: {fileID: 21300000, guid: 0adab793a273d2646aef0dd1ffe95862, type: 3}

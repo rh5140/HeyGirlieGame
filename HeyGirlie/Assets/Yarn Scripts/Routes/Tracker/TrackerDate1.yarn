@@ -1,48 +1,51 @@
 ﻿title:Date1
 ---
-March 23
+April 13
 <<location "Gym">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 12>>
 <<kristen Neutral>>
 :It’s a brand new day, and you absolutely can’t let these newfound gains go to waste. You know what that means — GYM TIME, BABY!
-:The gym’s the same as it always is-- which is to say, kinda nasty, but it gets the job done.
+:The gym’s the same as it always is —-- which is to say, kinda nasty, but it gets the job done.
 :The usual crowd is here, too, all the jocks and the adventurers and the people trying to impress the more martial members of their party. Fabian is on a yoga mat in the corner, doing a truly heinous amount of sit ups. Show-off.
 :Oh, yeah. You fit right in among these beefcakes.
 :You know the drill: you grab a wipe and scan the gym for any free equipment.
 :The cable machine’s occupied by… a gelatinous ooze, okay, didn’t know they had muscles, but cool.
 :There’s a bunch of giants you don’t want to mess with crowding the free weights. Besides, you could totally beat their PB.
 :Maybe you could practice climbing, since you keep falling out of windows?
-:It seems like a great decision, until you walk over and see <i>Tracker</i>, which makes it a better decision... or maybe the worst one you’ve made today.
 <<kristen Surprised>>
-:Has she noticed you? Can you sneak away and come back wearing something cooler?
-:Oh, nope, she’s totally noticed you. Great. Is your hat on straight? ...You aren’t even wearing a hat.
-:Her mouth curls upward in a familiar half-smile and she flicks a finger gun in your direction.
-Tracker: …
-<<char_right TrackerNeutral_1>>
-:You walk over, butterflies in your stomach, heart beating a mile a minute, pretty sure you can actually feel Cassandra paying attention, like she always does when it involves your love life.
+:It seems like a great decision, so you make your way over… and see <i>Tracker!?</i>
+<<char_right TrackerNeutral_3A>>
+Tracker: ...
+:Has she noticed you? Can you sneak away and come back wearing something cooler? For a moment, you seriously consider it...
+<<char_right TrackerHappy_3A>>
+:...then her mouth curls upward into that familiar half-smile, and she flicks a finger gun in your direction. Ok, nope, she’s totally noticed you. Great.
+<<char_right TrackerNeutral_3A>> 
+:Is your hat on straight, at least? ... You aren’t even wearing a hat.
 <<kristen Neutral>>
+:You walk over, butterflies in your stomach and heart beating a mile a minute, pretty sure you can actually <i>feel</i> Cassandra paying attention - as always, when it involves your love life, she likes to make her presence known.
 Tracker: Heya, stranger.
 Okay. You’re not gonna mess this up. Again.
--> Go for a hug
-    <<char_right TrackerSurprised_1>>
+-> <i>Go for a hug.</i>
+    <<char_right TrackerSurprised_3A>>
     :Her body stiffens in surprise, briefly, and then she hugs back with warm enthusiasm.
-    <<char_right TrackerHappy_1>>
+    <<char_right TrackerHappy_3A>>
     Tracker: It's really good to see you, Kristen.
     <<kristen Happy>>
     Kristen: It's really good to see you, too.
-    :Do you have to pull back? Do you REALLY have to? Yeah, probably. It’s getting awkward now.
-    :You do, eventually, clearing your throat as you do.
+    :Do you have to pull back? Do you REALLY have to?
+    :Yeah, probably. It’s getting awkward now. 
+    :You do, clearing your throat.
     <<add_points 2>>
--> Hold out your hand for a fist bump
-    :Her eyes soften with a hint of relief, as if she had expected you to do something else and is pleasantly surprised you did not. She bumps your fist with hers.
+-> <i>Hold out your hand for a fist bump.</i>
+    :Tracker’s eyes soften with a hint of relief, as if she had expected you to do something else and is pleasantly surprised you did not. She bumps your fist with hers.
     Tracker: Sup… bro?
     <<kristen Nervous>>
     :You blush a little.
-    Kristen: Hah, sup.
+    Kristen: Hah... sup...
     <<add_points 1>>
--> Kiss her, you fool!
-    <<char_right TrackerAngry_1>>
+-> <i>Kiss her, you fool!</i>
+    <<char_right TrackerAngry_3A>>
     :She turns her cheek to you immediately, as if she saw this move coming. Her face burns red hot and she looks...angry? Disappointed? She sighs heavily.
     Tracker: Kristen… no. We're not <i>together</i> anymore.
     <<kristen Sad>>
@@ -51,58 +54,62 @@ Okay. You’re not gonna mess this up. Again.
     Tracker: It's... Let's just... ugh. Can we... can we start over?
     :She takes a second to compose herself and reset.
     <<add_points 0>>
-<<char_right TrackerNeutral_1>>
+<<char_right TrackerNeutral_3A>>
 Tracker: Uh, so you came here to work out?
 <<kristen Neutral>>
 Kristen: Yeah, gotta maintain these puppies somehow.
-<<kristen Happy>>
-// leaning more towards smug for above, if another sprite fits that vibe better later!
+<<kristen Grin>>
 :You flex.
 :...
-<<kristen Surprised>>
-//leaning more towards embarrassed for above, if blush ends up working better for that!
+<<kristen Nervous>>
 :Why the fuck are you flexing, put those bad boys away.
 :But see if she looks impressed first. Is it just you, or does she look a little impressed? Please be impressed...
 <<kristen Sad>>
-// vibes for above is like. pouty
 :It was just you. Ah, well.
 Tracker: I was gonna go bouldering today, but my spotter kinda ditched last minute. Unless...?
+<<kristen Happy>>
 Kristen: I can spot you!
 :That sounded too eager.
+<<kristen Nervous>>
 Kristen: If, uh, you want.
 :There we go.
 :Tracker gives you a long look, hands on her hips, eyebrow cocked in suspicion.
 Tracker: Have you ever spotted anyone before?
--> How hard can it be?
+-> Kristen: “How hard can it be?”
     Tracker: ...
     Tracker: I mean, you do look like you're strong enough for it, at least.
-    :So she was looking! Ha.
     <<kristen Happy>>
+    :So she was looking! Ha.
     Tracker: Promise you're gonna take this seriously?
     Kristen: I swear.
     <<kristen Neutral>>
     <<add_points 1>>
--> No, but I'm willing to learn.
-    <<char_right TrackerHappy_1>>
+-> Kristen: “…Yeah, no. But I'm happy to learn!”
+    <<kristen Happy>>
+    <<char_right TrackerHappy_3A>>
     :Tracker looks pleasantly surprised.
     Tracker: Okay, cool. Are you sure?
-    :You nod.
+    <<kristen Neutral>>
+    :You nod harder than anybody in the history of nodding ever has before.
     <<add_points 2>>
--> I'm spotting you right now, and DAMN, you look good.
-    <<char_right TrackerAngry_1>>
+-> Kristen: “I'm spotting you right now, and DAMN, you look good.”
+    <<kristen Grin>>
+    <<char_right TrackerAngry_3A>>
     Tracker: Ugh, never mind.
+    <<kristen Awkward>>
     Kristen: Wait, wait, sorry--
-    Tracker: I don't want to get hurt.
+    Tracker: I <i>really</i> don't want to get hurt.
     :Oh, brother. You might have fucked this one up. It’s what you’re best at.
+    <<kristen Neutral>>
     Kristen: I can take this seriously. I promise.
     <<add_points 0>>
 Kristen: Please, I want to help.
-:She looks you up and down, trying to judge the veracity of your words. Finally, she sighs and her expression softens.
-<<char_right TrackerNeutral_1>>
+:She looks you up and down, trying to judge the veracity of your words. Finally, her expression softens.
+<<char_right TrackerNeutral_3A>>
 Tracker: Alright. Just don't let me break my neck, 'kay?
 :She gives you a rundown of how this works. It's a lot more to keep track of (ha) than you thought, but it's not too complicated. You've got a handle on it.
 Kristen: Okay, I'm getting it.
-<<char_right TrackerHappy_1>>
+<<char_right TrackerHappy_3A>>
 :Tracker grins at you. It's familiar. By Cassandra, you missed it.
 :She walks over to a corner near the wall with a couple of random bags, reaching in and...okay, chalk, makes sense.
 :She claps her hands together to get rid of the excess and a little bit of the powder ends up on her nose.
@@ -112,70 +119,76 @@ Kristen: Uh, you've got a little...
 Tracker: Hm?
 :She bats at her nose with her hand...which is still covered in chalk.
 Kristen: Okay, wait.
-<<char_right TrackerBlush_1>>
+<<char_right TrackerBlush_3A>>
 :Without thinking, you lick your finger and wipe it across her nose. Both of you freeze up, suddenly aware of the contact. You cough awkwardly.
 <<kristen Nervous>>
-Kristen: Uh, got it. All clean.
+Kristen: Uh, got it. All clean. Not that you weren’t clean <i>before,</i> just - um. You know.
 Tracker: Thanks.
-:You pull your hand back like you've been burned. Right now would be the perfect time to turn invisible.
-Kristen: It's nothing, dude, don't even worry about it.
-:She looks like she's not sure whether to laugh or say something serious, but she just ends up nodding and saying nothing at all, walking past you towards the wall.
-<<char_right TrackerNeutral_1>>
+:Tracker looks like she's not sure whether to laugh or say something serious. Ultimately, she seems to settle on amusedly shaking her head - though it’s unclear if the action is more directed at you or herself.
+<<char_right TrackerNeutral_3A>>
 <<kristen Neutral>>
+Tracker: Anyway. Let’s keep moving. Climbing time!
 :You stand below her as she makes her way up, ready to catch her in case she slips.
 Man, she looks good up there. And you have the perfect view.
--> Who knows if you'll get a chance like this again? Check her out!
-    :She looks good. Really good.
-    :Her legs look good, her butt looks good, her eyes look good-- shit, her eyes. You're busted.
-    <<char_right TrackerAngry_1>>
+-> <i>Who knows if you'll get a chance like this again? Check her out!</i>
+    :Tracker looks good. Really good. And more importantly, distracted enough for you to fully appreciate the muscular set of her shoulders and arms, her shirt slowly inching further and further upwards... even the glare in her eyes. Wait. Her eyes. 
+    <<char_right TrackerAngry_3A>>
+    <<kristen Awkward>>
+    :You're busted.  
     Tracker: Remember how I said NOT to let me break my neck? I'm putting my trust in you, here. Don't make me regret it.
+    <<kristen Sad>>
     :You gulp, properly chastised, and nod.
     Kristen: Right. Sorry. Aye-aye, captain.
     <<add_points 0>>
--> Playfully wolf-whistle, then lock in.
-    :She freezes where she's climbing. It looks like the tips of her ears are red.
-    <<char_right TrackerBlush_1>>
+-> <i>Playfully wolf-whistle, then lock in.</i>
+    :Tracker freezes at the sound. It’s only for a second - but as she goes back to her climb, you can’t help but notice that the tips of her ears are faintly red.
+    <<char_right TrackerBlush_3A>>
     <<kristen Happy>>
-    :Yup, you've still got it. But you know how important this is to her.
-    :When she glances back at you, you give her a nod, still ready to catch her. She gives you a quick smile back.
-    <<char_right TrackerHappy_1>>
+    :Yup, you've still got it.
+    :But you know how important this is to her, so you make  a conscious effort to reel it in.
+    When Tracker glances back at you, you give her a nod, signalling you’re still ready to catch her. She gives you a quick smile back.
+    <<char_right TrackerHappy_3A>>
     <<add_points 2>>
--> Focus, dummy! This is serious climbing business!
-    :You heroically resist the urge to just ogle her in favor of focusing on, y'know, the job she gave you.
-    :She asked you to take this seriously. You're going to.
+-> <i>Focus, dummy! This is serious climbing business!</i>
+    :You heroically resist the urge to just ogle her in favor of focusing on, y'know, the job she gave you. :Tracker asked you to take this seriously! And you will.
     <<add_points 1>>
-:Tracker's actually pretty good at this. Did she have to climb a lot in Fallinel? You think you might have asked her in one of your letters.
+<<kristen Neutral>>
+:As it turns out though, you don’t really need to do much. Tracker's actually pretty good at this. Did she have to climb a lot in Fallinel? You think you might have asked her in one of your letters.
 <<kristen Sad>>
 :That might have been around when you stopped writing. Or maybe when she stopped responding.
 <<kristen Neutral>>
-:Okay, nope, you're not going there now. You can cry about that over a pint at Basrar's later.
-:Locking in, for REAL this time! Oh, she's at the top. When did that happen?
-<<char_right TrackerHappy_1>>
+:Okay, nope, you're not going there now. You can cry about that over a pint at Basrar's later. Locking in, for REAL this time! 
+<<kristen Surprised>>
+:Oh, she's at the top. When did that happen?
+<<kristen Neutral>>
+<<char_right TrackerHappy_3A>>
 :Tracker grins down at you, face sweaty. Devastatingly, it doesn't make her any less attractive.
 Tracker: How's the weather down there?
 Kristen: A cool 65 and partly cloudy. You sure you're not gonna get altitude sickness up there? I know you're not used to being tall.
 :Tracker rolls her eyes, but she's still smiling.
 Tracker: Low blow, you're BARELY taller than me.
 Kristen: I wouldn't call it barely, but okay.
-:She sticks her tongue out at you, just for a second, before she seems to change her mind, giving you an awkward smile.
-<<char_right TrackerNeutral_1>>
-// maybe tracker blush and then switch to neutral in a line or two? tbd
+:She, very maturely, sticks her tongue out at you.
+<<char_right TrackerNeutral_3A>>
 Tracker: Okay, I'm on my way down.
-:She makes her way down more slowly than she'd made her way up. Once she's about halfway down, she just--oh, shit--
-// sprites disappear. crashing noise? i don't know how to write that function sorry programming team.
+:She makes her way down more slowly than she'd made her way up. Once she's about halfway down, she just — oh, shit —
+<<char_right transparent>>
+<<kristen transparent>>
+<<sfx crash>>// sprites disappear. crashing noise? i don't know how to write that function sorry programming team. the sfx is Crash2, though!
 Tracker: Oof!
 :She lands on her feet. Well, on you.
-// sprites reappear. i also don't know how to write this one
+<<char_right TrackerNeutral_3A>>
+<<kristen Neutral>>// sprites reappear. i also don't know how to write this one
 :But it's okay! You were ready to catch her.
 Tracker: Nice catch.
 Kristen: Nice fall.
-:You stand there holding her for what's probably a little too long. It isn't until someone coughs behind you that you realize you're probably hogging the--uh, wall?
+:You stand there holding her for what's probably a little too long. It isn't until someone coughs behind you that you realize you're probably hogging the—--uh, wall?
 :You put her down gently. Tracker leaves her hands on your waist for a beat longer than she needs to.
 Tracker: Um, thanks. 'Preciate it.
 Kristen: Anytime.
 :She looks you up and down again, this time less assessing and more...interested? Maybe? Is that just you again?
 Tracker: You've got a little...
-<<char_right TrackerBlush_1>>
+<<char_right TrackerBlush_3A>>
 :She gestures to the faint chalk marks on your hips, and her cheeks color a deep red. You don't think it's just you this time.
 <<kristen Nervous>>
 Kristen: Oh!
@@ -183,33 +196,34 @@ Kristen: Oh!
 :...You’re definitely blushing.
 Kristen: Anyway, where were we? I think you were in the middle of saying I'm your hero and I totally saved your life or something?
 :Nice save.
-<<char_right TrackerHappy_1>>
-:Tracker smiles, small, uncertain, but real.
-Tracker: I don't think I said exactly that. I meant it, though. Thank you.
+<<char_right TrackerHappy_3A>>
+:Tracker smiles, small, a little uncertain. But real.
+Tracker: I don't think I said exactly that. 
+Tracker: ...I meant it, though. Thank you.
 <<kristen Neutral>>
 Kristen: I meant it, too. Anytime.
-<<char_right TrackerNeutral_1>>
-:Tracker's smile brightens, then drops, a little furrow in her brows.
+<<char_right TrackerNeutral_3A>>
+:Tracker's smile brightens. Then to your surprise, it just as quickly drops. A furrow emerges in her brow.
 Tracker: Uh, Kristen? Can I ask you something?
 :There's still time to jump out the window.
 :No, wait. Not this time. You’re Responsible Kristen now.
-Kristen: Sure! Yeah, sure, whatever you wa--uh, what's up?
+Kristen: Sure! Yeah, sure, whatever you wa- uh, what's up?
 Tracker: I guess...
-<<char_right TrackerSad_1>>
+<<char_right TrackerSad_3A>>
 Tracker: Why did you come over?
-<<char_right TrackerAwkward_1>>
+<<char_right TrackerAwkward_3A>>
 Tracker: I mean, I know I called you over. But you could've...I don't know, made an excuse and went off to work out.
 Tracker: We haven't exactly been the best of friends lately. So... what? Why'd you hang around with me today?
--> I just like spending time with you.
-    <<char_right TrackerNeutral_1>>
+-> Kristen: “I just like spending time with you.”
+    <<char_right TrackerNeutral_3A>>
     :Tracker doesn't look entirely satisfied, but she nods, a small smile on her face.
     Tracker: Okay. That works for me.
     Tracker: I had fun today, too.
     Kristen: Okay, great.
     :That maybe came out a little too relieved, but you know what? You'll take it.
     <<add_points 1>>
--> I want things to be how they used to be.
-    <<char_right TrackerAngry_1>>
+-> Kristen: “I want things to be how they used to be.”
+    <<char_right TrackerAngry_3A>>
     :Tracker frowns, crossing her arms. She doesn't look surprised.
     Tracker: Kristen...
     Kristen: I mean, I know--
@@ -218,9 +232,10 @@ Tracker: We haven't exactly been the best of friends lately. So... what? Why'd y
     <<kristen Sad>>
     Kristen: ...right. Okay.
     Tracker: If we ever want to have a chance of making this– us– work, you have to figure out what you want. What you <i>really</i> want, Kristen.
+    :Well. She’s not wrong. You think about it.
     <<add_points 0>>
--> I want to do this right this time.
-    <<char_right TrackerBlush_1>>
+-> Kristen: “I want to do this right this time.”
+    <<char_right TrackerBlush_3A>>
     :Tracker's eyes go wide, cheeks going red again.
     Tracker: Oh! That's...
     Tracker: I wasn't expecting that.
@@ -229,17 +244,17 @@ Tracker: We haven't exactly been the best of friends lately. So... what? Why'd y
     Tracker: No. Not in a bad way. I... I think I might want that too.
     <<add_points 2>>
 Kristen: I'd like to hang out again soon, if you're free.
-<<char_right TrackerNeutral_1>>
-:Tracker's eyes crinkle with a hint of...something. You're still not sure what.
+<<char_right TrackerNeutral_3A>>
+:Tracker's eyes crinkle with a hint of...something. You're still not sure what. But you think you’ll really like finding out.
 <<jump Date1Hint>>
 ===
 
 
 title: Date1Hint
 ---
-Tracker: I hear the centaur rodeo's in town.
+Tracker: Well, I hear the centaur rodeo's in town...
 Kristen: Yeehaw!
-<<char_right TrackerSurprised_1>>
+<<char_right TrackerSurprised_3A>>
 <<voiceline TrackerConfused1>>
 Tracker: ...
 <<kristen Nervous>>
