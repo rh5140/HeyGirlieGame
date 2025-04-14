@@ -115,6 +115,7 @@ Tracker: Kristen, what is this?
 :You pull out her chair for her, and she smiles at you, a little distracted.
 Kristen: So! This is —
 <<location "Black Background">>
+<<bg_filter_on black>>
 :The lights all go out, stealing your thunder a bit.
 // sprites disappear? Just eyes? if it’s easier to have sprites we’ll go back and add them in :)
 <<char_right transparent>>
@@ -264,6 +265,7 @@ Tracker: And I still had fun, so there.
 :You glance at her, just for a second, and see her smiling.
 <<kristen Happy>>
 :You can’t help but smile, too.
+<<bg_filter_off>>
 <<location "Mordred Manor">>
 :You’re reluctant to end the night here when you pull up into the driveway.
 Kristen: Hey, let’s make cookies.
@@ -289,6 +291,7 @@ Tracker: Huh. Yeah, okay. Did you have anything in mind?
     Tracker: But honestly, I’d fuck up a peppermint cookie right now.
 :You waggle your eyebrows.
 Kristen: Okay. Let’s fuck up some cookies.
+// note for the future: <<background "Mordred Manor kitchen">>
 :The kitchen’s free, thankfully, so you get everything you need out of the cabinets — ingredients, mixing bowls, measuring cups, the whole nine yards.
 :… 
 :It’s only when all the equipment’s laid out that you remember you’re not entirely sure of how to make cookies.
@@ -348,7 +351,7 @@ You know exactly what to say.
     :Oh, she seems actually pretty upset. Seems like your light-hearted teasing came across meaner than you meant for it to. Will apologizing make it better?
     <<add_points 0>>
 :By the time both of you finish cleaning up the mess, neither of you really feel like another culinary experiment.
-<<char_right TrackerNeutral>>
+<<char_right TrackerNeutral_1>>
 :You decide to watch a movie with a snack that you can <i>actually</i> make — microwave popcorn.
 :Tracker cozies up to you on the couch, just like she did when you were together.
 :The movie’s some straight-to-TV teen romance flick, and it’s terrible.
