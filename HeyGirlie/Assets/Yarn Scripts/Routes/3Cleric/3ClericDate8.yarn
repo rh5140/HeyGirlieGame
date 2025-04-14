@@ -1,11 +1,11 @@
 ﻿title:date8
 ---
 April 13
-<<location "PLACEHOLDER">>
+<<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 0>>
 :A slumber party! What could go wrong?
-<<char_right TrackerAngry_1>>
+<<char_right TrackerAngry_3E>>
 <<char_left NaraDisgust>>
 :Why are they so angry? Why are you so cold? Why are you in your underwear when they’re not?
 <<kristen Awkward>>
@@ -309,7 +309,7 @@ Tracker: Baby, that’s just the <i>start</i> of what Aelwyn said.
 :Eventually, when it feels like you’ve talked for hours, your eyelids start to droop. 
 :For once, you don’t fight back. Something in you seems to recognise, instinctively, that you’re completely safe here. To not worry about what Tracker and Nara will be doing next. To not be ‘on’ 100 percent. To just… be.
 :As you slip away, you barely register the two different hands pulling the blanket tighter for you.
-\\black background
+<<bg_filter_on black>>
 :zzz… 
 :As you gradually start to emerge from your slumber, you start to hear your girlfriends’(?) voices. You keep your eyes closed so you can listen in. Hey, old habits die hard.
 Nara: I have enjoyed this, Tracker.
@@ -319,7 +319,7 @@ Tracker: Huh… she’s had a talk with me as well…
 Nara: I see… is this her attempt to initiate a polycule with us? Or does she have an ulterior motive to reunite us without her?
 :Wait, are they talking about <i>leaving you out?</i>
 -> <i>Wake up and join in! You’re awake and bored! You wanna be involved!</i>
-    //back to manor background
+    <<bg_filter_off>>
    You jolt up from your sleeping position so fast you hear all the bones in your body crack simultaneously. Also, you might just have narrowly missed giving yourself a brain aneurysm.
      Whatever, you have more important things to worry about - like the fact Tracker and Nara are both looking at you in confusion. Right, they don’t understand what you’ve been doing.
     (...Honestly, do <i>you</i> understand what you’ve been doing?) 
@@ -330,12 +330,12 @@ Nara: I see… is this her attempt to initiate a polycule with us? Or does she h
     Kristen: I mean. No! I wanna date both of you!   Preferably at the same time!
     Well, you’ve spat it out now. For better or worse. Tracker gives you an appraising look for a second, then huffs out a breath of laughter at whatever she sees in your face.
     Tracker: Okay. So, for future reference, you should  really think about how you’re gonna end a sentence before you start it, cowboy…
-You wince, but at least she mostly sounds fond.
+    You wince, but at least she mostly sounds fond.
     Tracker: Yeah, it probably is time for us all to address the elephant in the room.
     Nara: I agree. It would be best for us to discuss this sooner rather than later.
     <<add_points 1>>
 -> <i>Wake up and admonish them! There’s no way they’re making any decisions without you!</i>
-    \\back to manor background
+    <<bg_filter_off>>
     Your eyes snap open. You will not let this stand! Not in your house! And also Tracker’s! But mainly yours!
     Kristen: What the fuck! No! Why are you guys talking without me?! What the fuck!!
     The look both Tracker and Nara give you is beyond frosty.
@@ -361,7 +361,7 @@ You wince, but at least she mostly sounds fond.
     A few seconds pass, and you start to get worried. Is something wrong? Has a stranger broken into the manor? Are they in danger???
     Tracker: We know you’re awake, Kristen.
     Ah, fuck.
-    \\back to manor background
+    <<bg_filter_off>>
     You open your eyes and are faced with an annoyed Tracker and a sad Nara. These are your least favourite facial expressions from them.
     Kristen: I just want us all to hang out and date and also kiss…
     Tracker: Are you serious? You can have conversations with both of us individually about this, but as soon as we decide to talk to each other alone, it’s forbidden all of a sudden?
