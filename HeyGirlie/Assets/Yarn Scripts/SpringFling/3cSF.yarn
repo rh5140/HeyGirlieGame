@@ -1,6 +1,5 @@
-﻿title: TrackerNara
+﻿title:TrackerNara
 ---
-March 16
 <<kristen Neutral>>
 :There are so many ways this could go wrong, which is honestly on brand for you. 
 :What if only one of them wants to go? What if <i>neither</i> of them do? What if they decide they want to go with each other instead?
@@ -43,17 +42,11 @@ Kristen: Nara, watching you dive right into discovering the world has made it so
 Kristen: I want — I <i>hope</i> you both feel the same.
 <<kristen Awkward>>
 Kristen: And. Um. Say something before my heart gives out, please.
-
-<<sf_success 3C>>
-
-<<if $succeed>>
-    <<jump TrackerNaraSuccess>>
-<<else>>
-    <<jump TrackerNaraFail>>
-<<endif>>
 ===
 
-title: TrackerNaraSuccess
+
+
+title:TrackerNaraSuccess
 ---
 <<char_left TrackerHappy_1>>
 Tracker: First of all, that makes more sense. Second of all, of course we will!
@@ -91,6 +84,7 @@ Kristen: You’re so mean to meeeee.
 <<jump Ending>>
 ===
 
+
 title: TrackerNaraFail
 ---
 <<char_right NaraDisgust>>
@@ -114,10 +108,4 @@ Nara: I do not think that will be possible, Kristen. The reservation I made is f
 Kristen: Bye, girlies…
 :You run off in shame!
 <<jump Ending>>
-===
-
-title: TrackerNaraEnding
----
-yippee
-<<jump EndingForReal>>
 ===

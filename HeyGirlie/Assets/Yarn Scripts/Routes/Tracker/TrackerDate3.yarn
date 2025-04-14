@@ -1,6 +1,6 @@
 ﻿title: Date3
 ---
-March 23
+April 13
 <<location "School">>
 <<set $date_points = 0>>
 <<set $date_points_total = 12>>
@@ -8,7 +8,8 @@ March 23
 :This isn’t your first time breaking into an office at Aguefort, and it won’t be your last.
 <<char_right TrackerNeutral_1>>
 :It <i>is</i> the first time you’ve had Tracker with you, though.
-:She’s a different partner than you’re used to. When you commit crimes with Fig, she’s usually leading the way, gleefully cackling the whole time; Tracker seems content to just walk alongside you without comment. And sure, she’s scanning the halls as you pass, but not quite asso serious as Riz.
+:She’s a different partner than you’re used to. When you commit crimes with Fig, she’s usually leading the way, gleefully cackling the whole time: Tracker seems content to just walk alongside you without comment. 
+:And sure, the way she’s scanning the halls as you pass through them reminds you of Riz... but she seems far more amused at the prospect of getting caught then he ever would.
 Tracker: Shouldn’t there be more wards on this?
 :You check the knob. It’s not even locked.
 Kristen: Jawbone’s got an open-door policy. He takes it literally.
@@ -35,22 +36,22 @@ Kristen: That’s what I was thinking!
 <<char_right TrackerNeutral_1>>
 :Tracker walks around the office a little aimlessly, smiling softly at a photo on his desk that you can’t see from this angle.
 <<kristen Neutral>>
-:You take the chance to just watch her, like you used to. Not ogling her, exactly, but just… looking at her, ‘cause you can. ‘Cause you missed having the chance to.
+:You take the chance to just watch her. Not ogling her, exactly, but just… looking at her, ‘cause you can. ‘Cause you missed having the chance to.
 :She looks content. No, more than that. She looks happy. She’s not grinning or anything so obvious, but the set of her shoulders is relaxed in a way you don’t remember seeing much sophomore year. Really, you don’t remember it too much from freshman year, either.
 <<kristen Soft>>
-:You’ve definitely got butterflies in your stomach at the realization there’s more left to learn about Tracker. More things to experience for the first time.
-// will fix phrasing, prommy <3
+:There's so much to Tracker you still have yet to experience, and relaxed is apparently part of that. 
+:Still, you get butterflies in your stomach at the thought that maybe, just maybe, you could be a tiny part of the reason she's so happy right now.
 :Tracker claps her hands together, startling you from your reverie.
 Tracker: Okay, Bad Kid. What should I do first?
 Kristen: You’re asking me?
 Tracker: Yeah, why not. Show me what you got, cowboy.
 <<kristen Neutral>>
 Oh, man. Pressure’s on. It’s gotta be something good. Something cowboy-title worthy.
--> We could tidy his desk a bit? Put the mugs away, at least.
+-> Kristen: “We could tidy his desk a bit? Put the mugs away, at least.”
     :Tracker looks surprised by your suggestion.
     Tracker: I guess. Does he have a label maker? I can cover the decal with wolf puns or something.
     <<add_points 1>>
--> I bet there’s a ton of dirt in the student files.
+-> Kristen: “I bet there’s a ton of dirt in the student files.”
     :Tracker cocks an eyebrow and her mouth flattens, unimpressed. Wuh oh.
     Tracker: I’m not gonna risk his job like that, Kristen.
     Kristen: I mean, nothing happened last time…
@@ -60,16 +61,16 @@ Oh, man. Pressure’s on. It’s gotta be something good. Something cowboy-title
     :You look away, unable to face the disappointment in her eyes.
     Tracker: I’m gonna be real with you, Kristen, because I care: that sucks. It sucks for your classmate and it sucks for Jawbone. Let’s just do something more… harmless, ‘kay?
     <<add_points 0>>
--> Pranks! Pranks! Pranks! Pranks! Pranks!
+-> Kristen: “Pranks! Pranks! Pranks! Pranks! Pranks!”
     <<char_right TrackerHappy_1>>
     Tracker: Hell yeah. Any suggestions?
-    :You’re not one of the Bad Kids who goes all out on pranks — that’s Fig, and, surprisingly, Adaine — but you’ve actually got a pretty good idea.
+    :You’re not one of the Bad Kids who goes all out on pranks — that’s Fig and, surprisingly, Adaine — but you’ve actually got a pretty good idea.
     <<add_points 2>>
 Kristen: Okay. Let’s turn everything upside down.
 Tracker: Everything?
 Kristen: <i>Everything</i>.
 <<kristen Happy>>
-:You get to work. Some of it’s easy – the file boxes, the paintings. You make a show of flexing as you pick up Jawbone’s chair, which is rewarded with a fond eye rolleyeroll from Tracker. You can’t miss the way she tries to subtly check out your gains, though. You <i>knew you</i> liked the gym for a reason.
+:You get to work. Some of it’s easy – the file boxes, the paintings. You make a show of flexing as you pick up Jawbone’s chair, which is rewarded with a fond eye roll from Tracker. You can’t miss the way she tries to subtly check out your gains, though. You <i>knew you</i> liked the gym for a reason.
 :One of the paintings Tracker’s being even gentler with than the rest. You give her a questioning look.
 <<char_right TrackerBlush_1>>
 Tracker: Uh, I drew this one as a kid.
@@ -82,23 +83,24 @@ Kristen: Anything left but the desk?
 Tracker: I think we got everything.
 <<char_right TrackerHappy_1>>
 Tracker holds up her palm in your direction.
--> Immediately high five her.
+-> <i>Immediately high five her.</i>
     :You high five her. Tracker grins at you.
     Tracker: Hell yeah.
     Kristen: Hell yeah.
     <<add_points 2>>
--> Go for a fist bump instead, bro.
+-> <i>Go for a fist bump instead, bro.</i>
     :You gently fist bump her open palm. You’re so cool.
     Kristen: Anytime, bro.
     :Tracker rolls her eyes, though she’s still smiling.
     Tracker: You’re ridiculous,<i>bro.</i>
     <<add_points 1>>
--> Freeze. Why is she stopping you?
+-> <i>Freeze. Why is she stopping you?</i>
     <<kristen Awkward>>
     :Tracker’s hand is splayed out in the air, clearly expecting something. Your mind completely blanks, though. Wait - did you do something wrong already? What’s the right move? How do you handle this? You can’t mess this up! Come on, Applebees!
     <<char_right TrackerNeutral_1>>
     Tracker: Uh, are you good?
     Kristen: Yeah! Totally!
+    <<char_right TrackerAwkward_1>>
     :She lowers her hand after a second, rubbing the back of her neck awkwardly.
     Tracker: Okay…
     <<add_points 0>>
@@ -115,15 +117,17 @@ Kristen: Glad you finally hit that height requirement this time.
 Kristen: Barely.
 :Tracker rolls her eyes at your shit-eating grin, placing the photo carefully off to the side.
 Tracker: Only one of us fell off our centaur, I’ll remind you.
+<<kristen Surprised>>
 :You gasp in mock betrayal. It’s VERY dramatic.
 Kristen: Low blow!
+<<kristen Neutral>>
 :You hold Tracker’s stare for a moment before both of you burst out laughing.
-:You’re laughing so hard that you completely miss the sound of the door creaking open.
+:... And, as it turns out, laughing so hard you both completely miss the sound of the door creaking open.
 Jawbone: You kids need any help?
 // i don’t thiiink we’re getting a jawbone sprite but if we are can it just be gomen oof chan pose thank you to our beautiful sprite artists i love you
 :You both yelp in surprise and drop the desk, thankfully not on either of your feet.
 You’ve been caught!!
--> SCATTER!
+-> Kristen: “SCATTER!”
     :Tracker does not, in fact, scatter, which means you fully collide with her and fall to the ground.
     <<kristen Awkward>>
     :Well, at least the rug is comfortable.
@@ -132,7 +136,7 @@ You’ve been caught!!
     :You get up and smile awkwardly at Jawbone.
     Kristen: Hey.
     <<add_points 1>>
--> ‘Sup, Jawbone!
+-> Kristen: “‘Sup, Jawbone!”
     <<kristen Awkward>>
     :Jawbone surveys the state of his own office; the flipped boxes, turned over paintings, and the pièce de résistance, his chair suspended upside down and still somehow managing to swing.
     :He raises an eyebrow at you, the expression uncannily similar to Tracker’s. You barely resist the urge to point finger guns in his direction and make the situation worse.
@@ -145,7 +149,7 @@ You’ve been caught!!
     Tracker: Maybe it’s time to accept that you’re not young and cool anymore.
     Jawbone: Nah, just old and cool, and happy that way.
     <<add_points 2>>
--> Uh… We were just… tidying up!
+-> Kristen: “Uh… We were just… tidying up!”
     <<kristen Awkward>>
     Jawbone: Relax, kiddo. I know a good shenanigan when I see one.
     :He looks around his room appraisingly, taking it all in.
@@ -157,7 +161,7 @@ Jawbone: Well, it’s always nice to see the two of you in my office.
 :He takes a moment, seeming to finally realize that it’s <i>the two of you</i> in his office.
 :He sits in the egg chair - a lot less awkwardly than you, despite it still being upside-down - and sighs a bit, fixing you both with a Look.
 Jawbone: So… we’re doing <i>this</i> now, huh?
-<<char_right TrackerBlush_1>>
+<<char_right TrackerAwkward_1>>
 Tracker: Um.
 :She’s at a loss for words. You can help.
 <<kristen Awkward>>
@@ -180,18 +184,18 @@ Jawbone: I’m all for whatever makes you happy. Both of you. But if you’re re
 :Record scratch. Huh??
 Jawbone: Okay. Phrasing. What I mean is, you have to commit to doing things right. Making it real. Any sort of relationship takes effort…
 <<kristen Awkward>>
-<<char_right TrackerBlush_1>>
+<<char_right TrackerAwkward_1>>
 :Okay, Ankarna? Ruvina? YES!? Can literally any higher power save you from this conversation??
 Jawbone: I love you girls to the moon and back, you know that, right? I don’t like to see either of you hurt.
 <<char_right TrackerSad_1>>
-:Tracker seems to shrink intoin on herself, crossing her arms and avoiding your eyes.
+:Tracker seems to shrink into herself, crossing her arms and avoiding your eyes.
 Jawbone: So if you’re going to do this, make sure you’re on the same page.
 Jawbone: If this is you two being friends, I’m good with that. If this is you… trying again, I’m good with that, too. All I want is for you to be happy.
 Jawbone: Just… talk to each other, alright? I don’t want to see you get your hearts broken again.
 <<kristen Awkward>>
 :The sheer understanding present in his voice makes you want to crawl out of your skin. Oh, man, he sure did see you at your absolute lowest.
 :This is so embarrassing. You’re never going to recover from this. Like, ever.
-<<char_right TrackerBlush_1>>
+<<char_right TrackerAwkward_1>>
 :Actually, Tracker also looks embarrassed. Did she…
 :No, okay, the situation’s awkward enough without you thinking about how she felt after your breakup right now.
 :You spent enough time doing that after it happened, anyway.
@@ -212,35 +216,36 @@ Tracker: OkaybyeJawboneloveyouseeyoulater!
 :You’re out of breath by the time you make it to the lobby. You stop just short of the doorway, doubled over. So close to freedom, yet so far… curse your ragged lungs.
 Kristen: So… that was…
 Tracker: So awkward. So <i>embarrassing!</i> Ughhhhh.
-<<char_right TrackerBlush_1>>
-She holds the bridge of her nose with her free hand, cheeks bright red. 
--> Aw, c’mon, he wasn’t that bad.
+:She holds the bridge of her nose with her free hand, cheeks bright red. 
+-> Kristen: “Aw, c’mon, he wasn’t that bad.”
     Tracker: Not <i>bad</i>, just, I mean. UGHHHHHHHHHHH.
     Kristen: At least it’s behind us. Now we can focus on other stuff.
-    :Tracker waggles her eyebrows.
     Tracker: Other stuff?
+:Tracker waggles her eyebrows meaningfully. It seems the opportunity to tease you has, for a moment, brought her strength back.
     Kristen: Not like that, doofus. Not unless we want to have another, more awkward talk with Jawbone tonight.
     Tracker: Please, no.
     <<add_points 1>>
--> I know. At least you were there with me.
+-> Kristen: “I know. At least you were there with me.”
+    <<char_right TrackerBlush_1>>
     :You watch as Tracker’s blush deepens, and oh, boy, the butterflies in your stomach are back with a <i>vengeance.</i>
-Tracker: UGHHHHHHHHHHH.
+  Tracker: UGHHHHHHHHHHH.
     :You squeeze her hand reassuringly.
     Kristen: Better to get the awkward conversation out now rather than later, yeah?
     :Tracker looks at you for a moment, then squeezes your hand back.
     Tracker: Yeah.
     <<add_points 2>>
--> Let’s never speak of this again.
-    Kristen: Like, never. Under fear of pain, death or torture.
-    :She nods, shuddering, and drops your hand. Despite everything, you find yourself missing the warmth.
+-> Kristen: “Let’s never speak of this again.”
+    Kristen: Like, <i>never.</i< Under fear of pain, death, torture, the Last Stand, midterms...
+    :She nods, shuddering, and drops your hand. Despite everything, you find yourself missing the warmth of her fingers interlaced with yours.
     Tracker: Agreed.
     <<add_points 0>>
-Kristen: Now that we’re not in the thick of it, can I say it was kind of… nice? I dunno, parent vibes.
-:Tracker smiles softly at you, with a deep sense of understanding and kinship.
-Tracker: Yeah. Parent vibes.
-Kristen: I think he was right about being on the same page.
+Kristen: Though… now that we’re not in the thick of it, can I say it was kind of… nice? I dunno, parent vibes.
+:Tracker smiles softly at you. You know she gets it without you having to explain.
+Kristen: I think he was right about one thing there, though.
+:Tracker looks at you, visibly confused. 
+Kristen: About… us being on the same page?
 <<char_right TrackerSurprised_1>>
-Tracker: …what page is that?
+Tracker: ...and what page is that?
 :Okay. Now or never.
 Kristen: Can I take you out?
 Tracker: What, now?

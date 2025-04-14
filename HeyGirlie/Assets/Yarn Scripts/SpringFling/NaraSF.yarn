@@ -1,15 +1,15 @@
 ﻿title: Nara
 ---
-March 16
+April 13
 <<kristen Neutral>>
 :The day to ask Nara to the prom is finally here. Despite all the time you’ve spent together, you’re still not sure whether she’ll say yes.
-:You are. Incredibly worried about whether Nara will accept your invitation.
+:You are… incredibly worried about whether Nara will accept your invitation.
 :You consider buying her a gift to bribe her, but you quickly realise that everything you think she would want is either something she already owns or too expensive (and she probably owns the expensive stuff already too).
 :And honestly, you can’t afford to mess this up. When’s the next time you’re going to date a cute princess who also likes you? Probably never!
 :It’s ok, you still have like 10 minutes before Nara arrives. Plenty of time to come up with the perfect speech, eat breakfast, put on deodorant…
 <<char_right NaraHappy>>
 Nara: Hello!
-\\al note: I forgot the code to add the Kristen voiceline where she says waugh in five syllables or more so pretend that’s here
+//al note: I forgot the code to add the Kristen voiceline where she says waugh in five syllables or more so pretend that’s here
 Kristen: Vampyr!
 Nara: No, I’m Nara, silly!
 Kristen: Right! Right. Hey! Also: how did you get in?
@@ -23,8 +23,10 @@ Kristen: Nara, I know we haven’t know each other for a long time, but I really
 Kristen: Nara, would you like to go to prom with me?
 <<sf_success Naradriel>>
 
-// add an if condition that prompts if you want to ask nara too
+
+// add an if condition that prompts if you want to ask tracker too
 // and if you do, <<jump TrackerNara>>
+
 
 <<if $succeed>>
     <<jump NaraSuccess>>
@@ -32,7 +34,6 @@ Kristen: Nara, would you like to go to prom with me?
     <<jump NaraFail>>
 <<endif>>
 ===
-
 
 title: NaraSuccess
 ---
