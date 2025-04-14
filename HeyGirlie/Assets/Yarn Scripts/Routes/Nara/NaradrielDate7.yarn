@@ -1,7 +1,7 @@
 ﻿title: Date7
 ---
 April 13
-<<location "PLACEHOLDER">>
+<<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 0>>
 //al note: manor background
@@ -25,6 +25,8 @@ Nara: Yes you are. We can simply purchase some sustenance from your local vendor
 Kristen: You mean the supermarket?
 Nara: My goodness, you must hold this market in high esteem to refer to it in such a way. To the market!
 //al note: mall background here
+<<background Mall>>
+<<location "Elm Valley Mall">>
 :Several minutes of travelling you don’t really remember later, you both arrive at the mall, making your way to the Food 4 U (Elmville’s Number One place for Food and also U). 
 :Nara looks around. You try to find the usual spark of wonder in her eyes, but there is only slight confusion.
 Nara: Kristen, this is not a market.
@@ -52,7 +54,7 @@ Nara: Everyone knows me because I am a princess. Everyone knows you because you 
     Nara: Oh. How wonderful it is that you are both well-loved <i>and</i> a hero known throughout the material plane.
     Kristen: Actually, I think I punched a few guys in some of the other planes too.
     Nara: I stand corrected. How wonderful for you.
-:Somehow, that doesn’t make you feel good.
+    :Somehow, that doesn’t make you feel good.
     Kristen: Hey come on. I’m sure people in other planes know you too. Like the Elven plane. That’s a plane right?
     Nara: That is not the point. I will govern an entire kingdom someday, but I have no idea how to protect them like you do. I have no idea if I even have the ability to do so.
     Kristen: So you’re jealous.
@@ -73,12 +75,12 @@ Nara: Everyone knows me because I am a princess. Everyone knows you because you 
     Nara: I know you do not think of me that way. But you used to.
     :You can’t help but silently agree.
     Nara: I love Solace, and I am glad you have helped me realize that. But I will always be a foreigner here. Moving will not solve my problems, it will only create new ones.
-  <<add_points 0>>
+    <<add_points 0>>
 -> It’s pretty cool that a bunch of people like me, but I also have, like, a TON of enemies. 
     Kristen: It’s kind of a privilege that your people aren’t allowed to want to kill you, y’know?
     :Nara hums in thought. This is clearly something that hadn’t occurred to her, which is surprising to you, as someone who has many enemies, all of whom are constantly planning your demise.
     Nara: I suppose you have a point.
-Wow that is so true I can create my own type of satisfaction with the life i have been given! And still have organic relationships like this one! Neat!
+    Wow that is so true I can create my own type of satisfaction with the life i have been given! And still have organic relationships like this one! Neat!
     <<add_points 2>>
 :Arriving at the meat section, Nara gives the meat a concerned look.
 Nara: Kristen, they call this a delicatessen, yet they seem to be handling the meat rather roughly.
@@ -88,6 +90,8 @@ Kristen: They call it that cause they may be butch… but I’m butcher.
 Nara: Kristen your mind is finer than a thousand very fine things.
 :Blushing at the compliment, you grab the nearest packet of meat, dash away, realise you probably don’t want to use chopped liver to make meatballs, replace the packet, and run home, Nara in tow.
 //al note: back to manor BG
+<<location "Mordred Manor">>
+<<background Mordred>> // note: change to "Mordred Kitchen" in the future
 :Back at the manor’s kitchen, you puzzle over the spaghetti. You want to cook all of it at once, but half the noodles are sticking out of the pot. Seems like you need a PhD (Pretty hard Degree) to understand this…
 Kristen: Babe, do you know how to cook this?
 Nara: I am not entirely sure… I do not know Italian cuisine… The average Fallinelven does not even know Italians exist, much less their struggle to gain rights…
