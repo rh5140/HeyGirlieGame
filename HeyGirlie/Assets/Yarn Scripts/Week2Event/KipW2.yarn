@@ -2,9 +2,6 @@
 ---
 <<kristen transparent>>
 
-
-// yes i looked up the font from the other docs to use it here. mental illness or whatever
-
 <<kristen Neutral>>
 You pick up one of the guides off of the floor and flip to the page on special exhibits. You could always come back and look at the museum’s standard collections whenever, but what if you miss out on…
 
@@ -18,7 +15,11 @@ Riz: Rangers, maybe?
 
 You tune out their bickering. The exhibit promises “an eclectic collection of artifacts and recreations to delight anyone looking for a bit of mystery in their lives,” which sounds right up your alley!
 
-The room with the <i>Capers</i> exhibit is dark, mostly lit by display cases tastefully scattered throughout the room to encourage exploration of the space. You see a lot of rogue paraphernalia: the center case has a whole collection of famous thieves’ broken lockpicks painstakingly pieced back together, one wall is covered with scans from various heist-planning journals that somehow look wilder than Riz’s conspiracy board, and there’s a whole corner dedicated to the chemical composition of acids historically used to melt locks off of doors.
+The room with the <i>Capers</i> exhibit is dark, mostly lit by display cases tastefully scattered throughout the room to encourage exploration of the space. 
+
+You see a lot of rogue paraphernalia. The center case has a whole collection of famous thieves’ broken lockpicks painstakingly pieced back together. 
+
+One wall is covered with scans from various heist-planning journals that somehow look wilder than Riz’s conspiracy board. There’s even a whole corner dedicated to the chemical composition of acids historically used to melt locks off of doors.
 
 The real <i>pièce de résistance</i> is in a display case against the wall about halfway down the room. You walk past everything to stare in awe at a large taxidermied raccoon posed as if climbing up a tree trunk. It would fit right into the natural history section if not for the dagger strapped around its midsection.
 
@@ -31,9 +32,11 @@ You jump out of your skin as Kipperlilly practically materializes right behind y
 
 Kristen: Are you <i>trying</i> to give me a heart attack?
 
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: Don’t be silly, your blood pressure is probably too normal for that to be a valid medical concern. Anyhow, move; that’s Callum Thornblight’s first familiar and he’s a big part of my capstone.
 
 <<kristen Neutral>>
+<<char_right KipperlillyNeutral>>
 You budge over to give Kipperlilly space to read the placard on Scout the raccoon.
 
 Kristen: Kind of an uncreative name.
@@ -45,11 +48,13 @@ Kipperlilly: It probably helped him blend in better.
 
 Kipperlilly: Or maybe all raccoon familiars are named Scout because of <i>this</i> Scout. He could be the original Scout.
 
+<<kristen Grin>>
 Kristen: Suuuuure, Kipperlilly.
 
 <<char_right KipperlillyAnnoyed>>
 Kipperlilly: Don’t fucking belittle me, Applebees.
 
+<<kristen Neutral>>
 You shrug as you take a step around Kipperlilly. Maybe you can grab something from the snack shack near the front of the museum and see what the rest of your friends are up to—
 
 Your leg flies out from underneath you.
@@ -69,9 +74,12 @@ Kristen: Kipperlilly! Kipperlilly, North star in my sky, my favorite person in t
 
 She can’t look away from you. Her shoulders start to heave as she curls in on herself. You’re confused; surely, this is mundane for someone as serious about rogue bullshit as she is? It’s not like this is actually a dangerous situation, so she can’t be worried—
 
+<<kristen transparent>>
+<<char_right transparent>>
 <<background Museum_Kipperlilly>>
+<<wait 2>>
+<<fade_in_ui>>
 
-<<char_right KipperlillyLaugh>>
 <<voiceline KipHappy1>>
 Kipperlilly huffs. She does it again. Then her breaths break into quiet cackling that slowly grows in volume until she’s practically bent over, gasping for breath.
 
@@ -84,15 +92,9 @@ You try for a winning smile. Kipperlilly’s too busy laughing at you to notice.
 
 Kipperlilly: YOUR FAAAAAAACE—
 
-<<kristen Neutral>>
 She bursts into another fit of giggles as she points at you. You sigh, rolling your eyes, but the humor of the situation catches up to you. You can’t help but chuckle along with her.
 
-<<kristen Transparent>>
-<<char_right Transparent>>
 <<background Museum_Kipperlilly>>
 <<enable_continue>>
 
-<<background Museum_Kipperlilly>>
-<<wait 2>>
-<<jump EndEvent>>
 ===

@@ -1,5 +1,6 @@
 ﻿title: Kipperlilly
 ---
+
 <<kristen Surprised>>
 Someone short and blonde practically knocks you over as they storm past. You’re just able to catch yourself before you topple over.
 
@@ -11,7 +12,7 @@ Kipperlilly: Don’t call me that.
 
 Oh, right. Awkward.
 
-<<krisen Neutral>>
+<<kristen Neutral>>
 Kristen: How’s your Ghoulapalooza going? Anyone you’re excited to see?
 
 <<char_right KipperlillyAnnoyed>>
@@ -73,10 +74,13 @@ Kristen: I think I’m good down here.
 Kipperlilly: Aw, are you chickening out? It’s such a lovely view up here, too. It would be a shame for you to miss it just because you’re too cowardly to make the attempt.
 
 … and that’s the gauntlet thrown. You don’t think too hard about how easily Kipperlilly convinced you into making a fool of yourself in front of her and give it as good of a try as you can. 
-
+<<kristen transparent>>
+<<char_right transparent>>
 <<background MusicFestival_Kipperlilly>>
+<<wait 2>>
+<<fade_in_ui>>
 
-<<kristen Neutral>>
+
 Pull-ups are easy enough, but a pull-up into a muscle-up and then somehow sitting on the thing sucks. You manage to get halfway up, arms burning, and flop forward so that you don’t fall. When you look up, Kipperlilly is smirking.
 
 Kipperlilly: Problem, Applebees?
@@ -86,13 +90,16 @@ You’re too winded to reply, so you stick your tongue out at her. She snickers 
 <<voiceline KipSurprised2>>
 Kipperlilly: I’m impressed. Everyone else I know would have given up.
 
-<<kristen Grin>>
 Kristen: Kristen Applebees never gives up. Unless the idea sucks absolute ass. 
 
 Which, that one did, but you had something to prove.
 
-<<char_right KipperlillyNeutral>>
 Kipperlilly: You made it in time for the set to start, so who gives a shit?
+//Unsure if you would want the regular background to return here or not? If so, need background change and the sprites to return
+
+<<background MusicFestival>>
+<<kristen Surprised>>
+<<char_right KipperlillyNeutral>>
 
 As if on cue, there’s movement on the stage and everyone below you starts cheering.
 
@@ -122,8 +129,4 @@ The beat kicks in, and Kipperlilly seems to forget that you’re there as she le
 <<background MusicFestival_Kipperlilly>>
 <<enable_continue>>
 
-
-<<background MusicFestival_Kipperlilly>>
-<<wait 2>>
-<<jump EndEvent>>
 ===

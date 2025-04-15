@@ -1,13 +1,14 @@
 ﻿title: Date8
 
 ---
-<<background “AGUEFORT PRESIDENT’S OFFICE”>>
 <<location "Aguefort, President’s Office">>
 <<set $date_points = 0>>
 
 <<char_right transparent>>
 <<kristen Neutral>>
-You lean back and look at the fruits of your last two hours of labor. Sure, it felt like everything that could go wrong did — Gorgug forgot to get you the charging cable for the speaker he’s loaning you and it’s almost dead, and you didn’t have time to make sure everything looks as perfect as you’d like. But you did your best, and you think your best is pretty damn good.
+You lean back and look at the fruits of your last two hours of labor. Sure, it felt like everything that could go wrong did — Gorgug forgot to get you the charging cable for the speaker he’s loaning you and it’s almost dead, and you didn’t have time to make sure everything looks as perfect as you’d like. 
+
+But you did your best, and you think your best is pretty damn good.
 
 All that’s left is waiting for Riz to drop off one more note and…
 
@@ -18,7 +19,13 @@ Kipperlilly: Really? A single placement shifted Caesar cipher? We cover this in�
 
 <<char_right KipperlillySurprised>>
 <<voiceline KipRomantic3>>
-Her words trail off as her eyes widen, taking in the scene in front of her. You wonder if it’s good enough; you’d caved and let Jawbone take over baking the cookies after you’d managed to burn three batches, you hadn’t quite been able to fit Kipperlilly’s full name on the sign haphazardly taped to the front of the office desk so it’s awkwardly trailing off to the side, and you still aren’t sure if she actually likes the lighthearted pop music Ruben told you she does or if he was actively fucking with you.
+Her words trail off as her eyes widen, taking in the scene in front of her. You wonder if it’s good enough. 
+
+You’d caved and let Jawbone take over baking the cookies after you’d managed to burn three batches. 
+
+You hadn’t quite been able to fit Kipperlilly’s full name on the sign haphazardly taped to the front of the office desk so it’s awkwardly trailing off to the side. 
+
+And you still aren’t sure if she actually likes the lighthearted pop music Ruben told you she does or if he was actively fucking with you.
 
 <<kristen Soft>>
 It’s too late to overthink any of that. You have a rogue to wow.
@@ -39,6 +46,7 @@ Kipperlilly: … me?
 
 Kristen: I, er. You— that is—
 
+<<kristen Sad>>
 It’s a bust. You sigh and dig in your pocket for your note cards, silently and simultaneously cursing and thanking Adaine for saying you’d need them.
 
 <<kristen Neutral>>
@@ -55,10 +63,19 @@ Kristen: From the first moment I met you, I knew you were going to ruin my life.
 
 Is it a trick of the light, or is she smiling…?
 
-Kristen: Junior year was a shitshow in a lot of different ways, from the teachers trying to kill everyone to me nearly failing out of school. But I can’t think of it as anything other than one of the best years of my life, because that’s when I got to meet you. I know our dynamic last year wasn’t the best, and I’m sure both your friends and mine are going to say we’re crazy, but I don’t think I really care what other people think. All I care about is what <i>I</i> think, and I think you’re a lot of things. 
+Kristen: Junior year was a shitshow in a lot of different ways, from the teachers trying to kill everyone to me nearly failing out of school. But I can’t think of it as anything other than one of the best years of my life, because that’s when I got to meet you. 
+
+Kristen: I know our dynamic last year wasn’t the best, and I’m sure both your friends and mine are going to say we’re crazy, but I don’t think I really care what other people think. All I care about is what <i>I</i> think, and I think you’re a lot of things. 
 
 <<kristen Soft>>
-Kristen: I think you’re an amazing friend who cares more deeply about her loved ones than she wants anyone to know. I think you’re one of, if not <i>the</i> most competitive person I’ve ever met. I think the way your nose scrunches when you’re really focused on something is really cute. And I think you have a hard time letting yourself be happy, which really sucks because I also think you, more than a lot of people I’ve met, deserve to be happy. 
+Kristen: I think you’re an amazing friend who cares more deeply about her loved ones than she wants anyone to know. 
+
+<<char_right KipperlillyBlush>>
+Kristen: I think you’re one of, if not <i>the</i> most competitive person I’ve ever met. 
+
+Kristen: I think the way your nose scrunches when you’re really focused on something is really cute. 
+
+Kristen: And I think you have a hard time letting yourself be happy, which really sucks because I also think you, more than a lot of people I’ve met, deserve to be happy. 
 
 <<kristen Neutral>>
 Kristen: I don’t know what I can do about any of those things. I don’t know if you count me as a loved one, or a legit good rival, or if you think I’m cute or whatever. But I’d like for you to be happy, and I’d like if you let me stick around so I can see you be happy. I think it’d be an incredible privilege if you did.
@@ -73,12 +90,12 @@ You finally look up from your note cards. You have no idea how red you’ve turn
 Kipperlilly: You wrote me a speech?
 
 <<voiceline KristenRomantic2>>
+<<char_right KipperlillyBlush>>
 Kristen: Sandra Lynn — Fig’s mom — read it over and gave me some tips, but yeah, it was mostly me.
 
 <<kristen Neutral>>
 Kristen: Fabian made me watch so many rom-coms to make sure I got the vibe right. I still can’t tell if it was worth it or not.
 
-<<char_right KipperlillyBlush>>
 <<voiceline KipSurprised2>>
 Kipperlilly: Maybe a little.
 
@@ -103,14 +120,17 @@ It looks like she’s going to examine everything on the desk one at a time. May
   Kristen: …would you believe me if I said I didn’t think of that until right now?
   <<char_right KipperlillyNeutral>>
   Kipperlilly: Shockingly, yeah, I would.
+  <<kristen Nervous>>
   Kristen: Is that the vibe I give off? Clueless and unobservant?
 -> The sign.
   Kipperlilly: Is that a quote from somewhere? I think I recognize it.
   Kristen: It’s from one of the movies Fabian showed me for the speech. Apparently it’s based on some old Elvish play his mom really likes?
+  <<kristen Nervous>>
   Kristen: The first draft just had the word “please” ten times, but Adaine said it sounded desperate and not funny.
   Kipperlilly: … it’s a little funny.
 -> The music.
   Kipperlilly: I don’t think I’ve listened to Lady Gaghost in years.
+  <<kristen Nervous>>
   Kristen: So Ruben <i>did</i> lie to me.
   Kipperlilly: You asked Ruben?
   Kristen: Well, yeah. I thought he’d pay the most attention to your music tastes and I wanted it to be a surprise. 
@@ -138,7 +158,9 @@ Kristen: It kinda is.
 
 Kipperlilly: I don’t…
 
-She trails off, but you have a notion of what she means. You don’t really know what to do either. But Cassandra is a goddess of mystery and uncertainty, and not knowing something isn’t as unmooring for you as it is for someone as obsessed with order and rules as Kipperlilly. That’s how you know better than her that from uncertainty comes compulsion.
+She trails off, but you have a notion of what she means. You don’t really know what to do either. 
+
+But Cassandra is a goddess of mystery and uncertainty, and not knowing something isn’t as unmooring for you as it is for someone as obsessed with order and rules as Kipperlilly. That’s how you know better than her that from uncertainty comes compulsion.
 
 You sit on the desk, nudging the plate of cookies over with your leg. It’s a little short, but that just means you’re practically eye-level with Kipperlilly now. She doesn’t seem to notice how close she’s drifted to you until your foreheads almost knock together. 
 
@@ -150,7 +172,9 @@ Kipperlilly blushes.
 
 Kipperlilly: I — d-don’t…
 
-Her eyes dart up and down all over your face, as if trying to memorize it. You watch her document each freckle on your face, the baby fat still stubbornly clinging to your jawline, and the curve of your cheek. She looks into your eyes, then back down your face. You can tell she’s not going to ask for the invitation.
+Her eyes dart up and down all over your face, as if trying to memorize it. You watch her document each freckle on your face, the baby fat still stubbornly clinging to your jawline, and the curve of your cheek. She looks into your eyes, then back down your face. 
+
+You can tell she’s not going to ask for the invitation.
 -> Kristen: “Can I…?”
 -> Kristen: “Would you…?”
 -> Kristen: “Is this okay?”
@@ -161,6 +185,7 @@ Kipperlilly turns redder, but she still nods.
 <<kristen transparent>>
 // we don’t have to see them rn <3
 
+<<background_filter_on black>>
 You cup her cheek with your free hand and close your eyes as you lean in, pressing your lips against hers for a few seconds before pulling back to see her reaction.
 
 She’d gone stiff when you first made contact, a breath hitching at the back of her throat, but you’re pretty sure it was just from shock because the second you make eye contact after that first kiss, she grins wider than you’ve ever seen her.
@@ -172,11 +197,17 @@ Kipperlilly: Is that it?
 
 You match her grin, let go of her hand to hold the other side of her face, and dive in again. This time, Kipperlilly’s more than ready for you and it shows in her enthusiasm as she grabs the collar of your shirt for leverage and practically pushes you backwards onto the desk. 
 
-You scramble to keep from sliding off of the desk without breaking away from her, the sign crumpling under your thighs. Your teeth click as you fumble backwards to support yourself before finally just putting your hands under Kipperlilly’s arms and pulling her close. She catches on in the next second, clambering onto the desk with you. Somewhere vaguely beside you, the bowl of cookies clatters to the floor, but you can pick them up later. Eventually.
+You scramble to keep from sliding off of the desk without breaking away from her, the sign crumpling under your thighs. Your teeth click as you fumble backwards to support yourself before finally just putting your hands under Kipperlilly’s arms and pulling her close. 
+
+She catches on in the next second, clambering onto the desk with you. Somewhere vaguely beside you, the bowl of cookies clatters to the floor, but you can pick them up later. Eventually.
 
 Kipperlilly pulls back just long enough to give both of you a moment to catch your breath before she twists around, pins you down with a deceptively strong grip, and kisses you again.
 
-You can feel the blood rushing to your head, your brain only able to barely catch up whenever one of you has to pull away to breathe, but even that barely lasts a moment before you keep going. You try your best to give her room to pull back whenever she wants to, but at some point your hands end up at the small of her back and you’re pulling her into your lap and sitting up to meet her. She responds by circling her arms around your neck and pulling herself closer once more, meeting whatever energy you’re giving her.
+You can feel the blood rushing to your head, your brain only able to barely catch up whenever one of you has to pull away to breathe, but even that barely lasts a moment before you keep going. 
+
+You try your best to give her room to pull back whenever she wants to, but at some point your hands end up at the small of her back and you’re pulling her into your lap and sitting up to meet her. 
+
+She responds by circling her arms around your neck and pulling herself closer once more, meeting whatever energy you’re giving her.
 
 Eventually, you break apart and don’t immediately dive back in. Your noses brush against each other as both of you breathe heavily. The dizzy romantic that lives in the back of your head sighs pretty poetry about how you’re sharing each other’s breaths. Maybe you’ve seen one too many rom-coms in the past twenty-four hours.
 
@@ -188,6 +219,7 @@ Kristen: Whoops.
 
 Stifling a giggle, you daringly shuffle a little closer to Kipperlilly, feeling not a little smug when she leans into you. 
 
+<<background_filter_off>>
 <<kristen Happy>>
 <<char_right KipperlillyHappy>>
 Kristen: So…
@@ -220,12 +252,12 @@ Kipperlilly: Do I get to read any of the others?
 <<kristen Nervous>>
 Kristen: They’re reeeeeally bad. Like, so, <i>so</i> bad.
 
+<<char_right KipperlillySmug>>
 Kipperlilly: I bet they’ll still be fun to read.
 
 <<kristen Soft>>
 Kristen: You’re not going to give this up until I say yes, huh?
 
-<<char_right KipperlillySmug>>
 <<voiceline KipHappy1>>
 Kipperlilly: Ha. You know me so well now, Kristen.
 
@@ -250,6 +282,7 @@ Kipperlilly: I didn’t exactly plan for this. The others are expecting me at Ru
 <<kristen Grin>>
 Kristen: Too much spontaneity for you, Kip?
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly: There’s nothing wrong with wanting to keep to a schedule.
 
 She reluctantly slides off of the desk, though her hand lingers on yours for a second longer than strictly necessary.
@@ -257,7 +290,6 @@ She reluctantly slides off of the desk, though her hand lingers on yours for a s
 <<kristen Neutral>>
 Kristen: I really think you should have this, by the way.
 
-<<char_right KipperlillyNeutral>>
 Kipperlilly blinks at the key in your hand.
 
 Kipperlilly: What? No, that’s yours. You earned it.
@@ -288,8 +320,6 @@ Kipperlilly opens her mouth as if to summon another argument, but this time she 
 Kipperlilly: You better be ready to jump when I tell you to.
 
 Kristen: Happily.
-
-
 
 <<jump Cassandra>>
 ===

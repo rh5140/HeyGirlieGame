@@ -73,6 +73,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
         dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
         dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
+        dialogueRunner.AddCommandHandler<string>("background_filter_on", BackgroundFilterOn);
+        dialogueRunner.AddCommandHandler("background_filter_off", BackgroundFilterOff);
 
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);

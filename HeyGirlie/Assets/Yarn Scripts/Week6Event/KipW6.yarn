@@ -1,9 +1,10 @@
 ﻿title: Kipperlilly
 ---
+
 <<kristen Neutral>>
 You wander through the rows of carnival games, each one laden with walls of prizes and workers calling out to convince people that they <i>definitely</i> aren’t rigged. Yeah, right.
 
-At the end, you find a section that looks more promising: claw games. You’ve never really tried one of these, but you think they’re purely luck-based, so you have just as good a chance as anyone at winning. 
+:At the end, you find a section that looks more promising: claw games. You’ve never really tried one of these, but you think they’re purely luck-based, so you have just as good a chance as anyone at winning. 
 
 Standing in front of the biggest one, eyeing the toys inside with a thoughtful expression, is your new game buddy.
 
@@ -20,15 +21,17 @@ Kipperlilly: Kristen. Come to waste your money over here?
 <<kristen Neutral>>
 Kristen: I was just wandering through. You looked pretty set on this one, though.
 
-Kipperlilly glances at the machine, and you get a closer look at what’s inside. There are only a few prizes held within: massive plush cats, pink with purple stripes and easily more than half as tall as Kipperlilly and about as wide.
+Kipperlilly glances at the machine, and you get a closer look at what’s inside. It’s filled with massive plush cats, pink with purple stripes and easily more than half as tall as Kipperlilly and about as wide.
 
 Kristen: Aren’t those from that one kids cartoon? Super Kitten Krew?
 
+<<char_right KipperlillyBlush>>
 <<voiceline KipNeutral1>>
 Kipperlilly: I don’t know. Maybe.
 
 Kristen: You seemed pretty interested in it.
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly: It’s the biggest prize here, I was curious. It’s probably impossible to win.
 
 Kristen: What makes you say that?
@@ -59,20 +62,24 @@ You hit the button right before you run out of time, and the claw lowers directl
 
 Then promptly slips out of the claw’s grip.
 
-You try to get the body on your next attempt, but you mess up your approach, the claw sliding straight past it. Third try.
+You try to get the body on your next attempt, but you mess up your approach, the claw sliding straight past it. 
+
+Third try.
 
 Kipperlilly goes around to the side of the machine, pressing her face against it with steely focus.
 
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: You’re too far forwards. Move back.
 
 With only ten seconds to make your move, you follow the directions without question.
 
 The claw comes down, this time encircling the body perfectly. It lifts up, heading painstakingly slowly towards the drop chute—
 
+<<kristen Nervous>>
 Before dropping again.
 
-<<char_right KipperlillyAnnoyed>>
 <<voiceline KipSad1>>
+<<kristen Neutral>>
 Kipperlilly exhales a frustrated huff, and you frown. Two tries left.
 
 Kristen: Don’t worry. We got this. 
@@ -85,6 +92,7 @@ Kipperlilly: A little left. A little more.
 
 Kipperlilly: You moved right! Go back left!
 
+<<kristen Awkward>>
 Kristen: I’m about to run out of time!
 
 <<char_right KipperlillyAngry>>
@@ -92,6 +100,7 @@ Kipperlilly: Left, LEFT!
 
 With one final jerk of the control stick, the claw bounces from side to side as it drops, and Kipperlilly gasps. Despite the bouncing, it manages to fall on top of the cat's body, two of the claws hooking underneath its arm.
 
+<<kristen Surprised>>
 <<char_right KipperlillySurprised>>
 The cat lifts up at an awkward angle, ready to fall at the slightest nudge. You hold your breath as it reaches the top of the machine, certain the claw finishing its ascent will drop the cat out of its grip.
 
@@ -103,25 +112,21 @@ And tipping over into the drop chute.
 <<char_right KipperlillyHappy>>
 Kipperlilly: <i>YES!</i>
 
+<<kristen transparent>>
+<<char_right transparent>>
 <<background ActivitiesFair_Kipperlilly>>
+<<wait 2>>
+<<fade_in_ui>>
 With far more energy than would be expected from someone who allegedly knows nothing about this cartoon cat, Kipperlilly pulls out the plush cat, nearly vanishing behind it.
 
-<<char_right KipperlillyLaugh>>
 <<voiceline KipHappy3>>
 
-<<kristen Grin>>
 Kristen: My work here is done.
 
-<<char_right KipperlillyHappy>>
-
+<<char_right KipperlillySmug>>
 Kipperlilly: I suppose you do have some talents. 
 
-<<kristen Transparent>>
-<<char_right Transparent>>
 <<background ActivitiesFair_Kipperlilly>>
 <<enable_continue>>
 
-
-<<wait 2>>
-<<jump EndEvent>>
 ===
