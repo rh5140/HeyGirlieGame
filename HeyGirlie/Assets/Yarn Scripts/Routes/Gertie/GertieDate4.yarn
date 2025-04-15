@@ -1,26 +1,25 @@
 ﻿title: Date4
 ---
-March 25
-<<location “PLACEHOLDER”>>
+April 14
+<<location "Apiarists’ Society">>
 <<set $date_points = 0>>
 <<set $date_points_total = 10>>
 <<kristen Neutral>>
 It’s been an exhausting day of cleric classes. Sure, you have experience both killing and birthing new gods (or reforming old ones) but that doesn’t help you write an APA (Adventuring Party Association) formatted paper on the ideal healing practices for a severed limb.
 You desperately need a detox, something to help clear the academia-laced fog sweeping through your brain.
-You start thinking of Gertie — who could blame you? The firbolg ranger has taken over most of your waking thoughts. You consider asking her to go to dinner, or to come over to Mordred Manor. Maybe you guys could bake some baklava? 
-Either way, you at least want to see her, so you make your way over to the Apiarists’ Society — population one.
-With Riz hard at work on his capstone project today, Gertie is devotedly tending to her hives alone, using the smoker to draw the bees out before she begins inspecting the honeycombs.
+You start thinking of Gertie — who could blame you? The firbolg ranger has taken over most of your waking thoughts.
+You make your way over to the Apiarists’ Society — population one. With Riz hard at work on his capstone project today, Gertie is devotedly tending to her hives alone, using the smoker to draw the bees out before she begins inspecting the honeycombs.
 Despite her concentration, she manages to notice you coming and gives you a wide smile.
 <<char_right GertieHappy>>
 <<voiceline GertieGreeting2>>
-Gertie: Ah! Miss Applebees, it’s a pleasure to see you again.
+Gertie: Ah! Miss Applebees.
 <<kristen Happy>>
 <<voiceline KristenGreetingGertie2>>
 Kristen: Hey Gertie.
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
 You came here with the intent to ask Gertie on a date, but now that you’re here, you feel taken with seeing her in action.
-Kristen: You know I just now realized I’ve never actually seen you… you know… do your thing.
+Kristen: I can’t believe we’ve known each for so long, but I’ve still never actually seen you… you know… do your thing.
 Gertie: I suppose in the intense rollercoaster of our courtship, you’ve never had much of a chance to. I don’t typically show my hive to my nemeses.
 <<kristen Nervous>>
 At the mention of the word “nemeses,” you swear you can hear the bees start buzzing slightly louder. It appears Gertie isn’t the only one who remembers your old tension.
@@ -34,17 +33,17 @@ Gertie: Not much else. I’ve spent my whole day here, with the hives.
 <<kristen Surprised>>
 Kristen: The whole day? What about your ranger classes?
 Gertie: Ah, that’s the benefit of an independent study, Miss Applebees. I can count my work with the Apiarists’ Society as academic credit.
-  -> Kristen: Wow, getting class credit to do your own thing? Must be pretty nice.
+  -> Kristen: “Wow, getting class credit to do your own thing? Must be pretty nice.”
     <<char_right GertieAngry>>
     Gertie bristles a bit at your comment. 
     <<add_points 0>>
-  -> Kristen: That’s awesome! For a Swarmkeeper ranger, I can imagine you’ll learn more here than in a classroom.
+  -> Kristen: “That’s awesome! I can imagine you’ll learn more here than in a classroom.”
     <<kristen Happy>>
     <<voiceline GertieDateSuccess1>>
     <<add_points 2>>
-  -> Kristen: But you’re at an adventuring academy? Don’t you ever dream of adventure?
+  -> Kristen: “But you’re at an adventuring academy? Don’t you ever dream of adventure?”
     Gertie: I know what I want, Miss Applebees, I didn’t come here for thrills, I came here to learn about my passion. This <i>is</i> my adventure.
-    <<add_points 1>>
+    <<add_points 0>>
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
 Gertie: The apiary <i>is</i> my classroom. The bees are both my teachers and my party members. There are a lot of druidic literature on bees and how they may be some of the purest manifestations of nature-based magic.
@@ -74,16 +73,16 @@ Kristen: Then I guess it’s a good thing I’m here! Maybe I can help that stud
 Gertie chuckles at your flirting. It’s nice making her laugh — but now’s the time to get to work.
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
-  -> Help by staying as far away from those flying-dagger-wielding insects as you can manage.
+  -> <i>Help by staying as far away from those flying-dagger-wielding insects as you can manage.</i>
     <<kristen Nervous>>
     Gertie can clearly see your hesitation as you skirt around the hives, never getting TOO close.
     Gertie: There’s no need to be afraid, Miss Applebees. I promise you.
     <<add_points 1>>
-  -> Get in there! How hard could apiculture <i>bee</i>?
+  -> <i>Get in there! How hard could apiculture </i>bee<i>?</i>
     You walk forward with a level of confidence that can only come from bravery or stupidity. As you do, the hive buzzes noticeably louder. Gertie stops you short.
     Gertie: Your enthusiasm is appreciated, Miss Applebees, but maybe we should take a gentler approach.
     <<add_points 1>>
-  -> Ask Gertie the best way you can contribute.
+  -> <i>Ask Gertie the best way you can contribute.</i>
     <<char_right GertieGrin>>
     Gertie jumps at the opportunity.
     Gertie: Such a great question, Miss Applebees! It’s all too common for new apiarists to get overwhelmed.
@@ -96,23 +95,25 @@ Gertie goes on to explain the signs of overcrowding and how it can cause the col
 <<kristen Nervous>>
 You listen intently to her explanation, but when it comes time to approach the bees, they still seem less than thrilled to have you onboard. Their noises grow louder, more intense.
 <<voiceline KristenSurprised1>>
+<<sfx bees>>
 It’s the kind of buzzing that one gives when their friend’s ex tries a bit too hard.
 Gertie: Don’t take it personally. But you should put on gloves. Only the most skilled beekeepers approach them uncovered.
-<<kristen Neutral>>
-  -> Who needs gloves? You’ve got good old-fashioned moxie.
+  -> <i>Who needs gloves? You’ve got good old-fashioned moxie.</i>
     You approach with all the gumption and audacity you can muster, but it doesn’t seem to impress the bees very much.
     <<voiceline KristenDateFailGertie1>>
     Gertie stops you short of death by a thousand stings and takes over for you. She doesn’t seem super thrilled.
     <<add_points 0>>
-  -> Take Gertie’s advice. She knows what she’s doing.
+  -> <i>Take Gertie’s advice. She knows what she’s doing.</i>
+    <<kristen Neutral>>
     You put on gloves before your approach. Their buzzing doesn’t cease, but they allow you to check their hive without getting aggressive.
-    <<voiceline GertieHappy3>>
     <<add_points 2>>
-  -> Kristen: Maybe you can come along with me? To put them at ease? 
+  -> Kristen: “Maybe you can come along with me? To put them at ease?”
+    <<kristen Soft>>
     <<char_right GertieGrin>>
     <<voiceline GertieDateSuccess2>>
     Gertie blushes but obliges. She walks over with you to the hive, which continues buzzing, but it almost feels more familial with Gertie next to you.
     <<add_points 2>>
+<<kristen Neutral>>
 Soon enough you check all the hives and feel lucky to find none of them are overcrowded. Gertie lets out a sigh of relief herself.
 <<voiceline GertieHappy3>>
 Gertie: Thank you for your help, Miss Applebees. These bees are important to me. And if they swarmed and left the hive… I don’t know if they would survive.
@@ -125,11 +126,12 @@ Gertie: Then there are those big industries. Mass deforestation. Overharvesting.
 Gertie: Without diverse sources of pollen and nectar, the bees are forced into intense cycles of feast and famine.
 <<kristen Sad>>
 Kristen: Leave it to civilization to fuck up nature…
-<<char_right GertieNeutral>>
+<<char_right GertieNervous>>
 Gertie’s face flashes with a brief look of hesitation.
 <<voiceline GertieNeutral3>>
 Gertie: It’s not just your run of the mill mortal shenanigans. I think there’s more to it.
-Gertie: That theory about bees being a source of druidic magic? I’m not the only one who believes in it. 
+Gertie: That theory about bees being a source of druidic magic? I’m not the only one who believes in it.
+<<char_right GertieSad>>
 Gertie: I think that some <i>other</i> sources of magic may be interested in limiting nature’s power.
 <<kristen Surprised>>
 As Gertie finishes speaking, it all starts to click for you. Single-crop fields… Greedy sources of magic… You know it before Gertie can utter another word.
@@ -140,21 +142,24 @@ Gertie: They’re a way of suppressing druidic magic.
 <<voiceline KristenSad1>>
 An overwhelming sense of guilt washes over you.
 You know Helio isn’t a great god. Or even a great guy for that matter. Yet, there always seems to be more shit to uncover. Like you still can’t escape him. Like Helio will always be a ghost haunting you.
+<<char_right GertieNeutral>>
 Gertie must’ve noticed the look that crosses over your face. She goes to comfort you.
 <<voiceline GertieSad1>>
 Gertie: I know it isn’t your fault, Miss Applebees.
 Gertie lays a hand on your shoulder.
-  -> Shrug it off. You don’t deserve her comfort.
+  -> <i>Shrug it off. You don’t deserve her comfort.</i>
+    <<char_right GertieSad>>
     Gertie holds her hand nearby ever so briefly before letting it fall back to her side.
     <<add_points 0>>
-  -> Do nothing.
+  -> <i>Do nothing.</i>
     You freeze up. You want so much to pull her in, but you just can’t. That doesn’t mean you can’t enjoy her comfort.
     <<add_points 1>>
-  -> Hold her hand.
+  -> <i>Hold her hand.</i>
     You rest your hand on top of hers. After all that Helio and his church have done, she still wants to be there for you. 
     <<add_points 2>>
 <<voiceline KristenSad3>>
-Kristen: I was Helio’s Chosen One, Gertie. I could’ve done more. I could’ve left the church sooner —
+Kristen: I was Helio’s Chosen. I could’ve done more. I could’ve left the church sooner —
+<<char_right GertieNeutral>>
 Gertie: You were a child. You were homeschooled. How could you have possibly left the church?
 You know Gertie is right, but you can’t shake the feeling that somehow this is all on you.
 Gertie: As kids, all we knew was what our parents taught us, Miss Applebees. Chosen or not. 
@@ -162,17 +167,22 @@ It suddenly hits you how deep this impromptu visit has gotten.
 Kristen: No wonder the bees don’t like me. I bet they still smell the corn on me.
 Gertie gives a pitying chuckle.
 Gertie: Would you like to try approaching the bees again?
-  -> Kristen: Haha, definitely not.
+  -> Kristen: “Haha, definitely not.”
+    <<kristen Nervous>>
+    <<char_right GertieSad>>
     <<voiceline GertieDateFail3>>
     Gertie grimaces at your response. Maybe you came off a bit too harsh in your rejection.
     <<add_points 0>>
-  -> Kristen: I don’t think that’s a great idea.
+  -> Kristen: “I don’t think that’s a great idea.”
+    <<kristen Nervous>>
     <<char_right GertieSad>>
     Gertie seems a bit disappointed, but you can tell she doesn’t want to push you too far.
     <<add_points 1>>
-  -> Kristen: Are you sure?
+  -> Kristen: “Are you sure?”
+    <<kristen Surprised>>
     Gertie: I assure you they don’t want to sting you anymore than you want to be stung.
     <<add_points 2>>
+<<char_right GertieNeutral>>
 Gertie: You’ve never struck me as someone capable of fear, Miss Applebees. Not from what I know of you. And certainly not from the stories I hear about your adventures.
 <<kristen Surprised>>
 Kristen: What kind of stories?
@@ -187,14 +197,16 @@ Kristen: Still.
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
 All jokes aside, you knew Gertie had liked you for a long time — long before you liked her, properly liked her, much to the detriment of your previous car crash of a rebound situationship.
-You two have been taking it slow this time, doing it right. But Gertie had crushed on the <i>idea</i> of you for much longer than she liked the <i>reality</i> of you. Can you ever make up for the difference?
 <<kristen Sad>>
+You two have been taking it slow this time, doing it right. But Gertie had crushed on the <i>idea</i> of you for much longer than she liked the <i>reality</i> of you. Can you ever make up for the difference?
 Kristen: <i>Fear</i> isn’t quite the right word. I’m not afraid of the bees. I just don’t like the idea of messing up something you care about so much.
 <<char_right GertieGrin>>
+<<kristen Surprised>>
 She gives you a coy smile. Does she find your hesitation… endearing?
 Gertie: I don’t need you to be Good At Bees. I just ask that you respect them. Make an effort for them.
 <<kristen Nervous>>
 Gertie takes you by the hand and leads you over to the bees. Their buzzing speeds up as you get closer, signaling you to back off.
+<<sfx bees>>
 Gertie, still holding your hand, carries it out toward the bees. You close your eyes and turn your face away, preparing for a billion stings… 
 <<kristen Surprised>>
 But the pain never comes.
@@ -214,22 +226,40 @@ You bask in the array of fuzzy little bees, who carry no ill will toward you.
 You breathe a sigh of relief as you stumble back over to Gertie, doing your best not to disturb any of the bees as they start flying off and heading back toward the hive. 
 Kristen: Okay, <i>maybe</i> it wasn’t so bad —
 <<kristen Surprised>>
+<<char_right GertieBlush>>
 Before you can even finish your thought, Gertie plants a kiss on your mouth.
 <<kristen Soft>>
 <<voiceline KristenRomantic1>>
 After you get over the initial shock, you lean into it. You stay for a couple seconds before you pull back.
-<<char_right GertieBlush>>
 <<voiceline GertieRomantic3>>
 Kristen: I forgot how soft your lips are.
+<<char_right GertieGrin>>
 Gertie: That would be the chapstick.
 She holds out one of her well-known Gert’s Bees lip balms. 
 Kristen: I thought we were taking things slower this time? Getting to know each other better?
+<<char_right GertieNeutral>>
 Gertie: I think I know what I need to, Kristen.
+<<kristen Happy>>
 You perk up at the mention of your name. Your <i>first</i> name.
 You’re unsure if Gertie even realizes the swap. You decide not to make a big deal out of it.
-Kristen: I have to say, I think some of my bee-related anxieties have gone down.
-Gertie: Well I’d certainly hope so. And I hope they only continue to lower. 
-<<voiceline KristenRomanticGertie2>>
-Kristen: With you? I have no doubts.
+<<kristen Grin>>
+Kristen: You know, I <i>think</i> some of my bee-related anxieties have gone down.
+Gertie: I’d certainly hope so.
+Kristen: But maybe, to build that positive association, I can get another treat?
+<<voiceline KristenRomantic3>>
+You lean in, teasing, hoping for another kiss, but Gertie’s eyes light up with inspiration.
+<<char_right GertieHappy>>
+Gertie: Brilliant idea. I’ll bake you a baklava, King of Honeyed Confections.
+Kristen: Or maybe we can bake together?
+Gertie: Oh, that’s all right. I’ve been meaning to recalibrate my recipe anyhow —
+<<char_right GertieBlush>>
+Gertie pauses, taking in what you’ve just said.
+<<char_right GertieBlush>>
+Gertie: <i>Oh</i>.
+<<voiceline GertieRomantic3>>
+<<char_right GertieNeutral>>
+Gertie: Are you asking me on a date, Kristen?
+Kristen. <i>Kristen</i>. <i>KRISTEN</i>.
+Kristen: Come by Mordred Manor, and you’ll find out.
 <<jump Cassandra>>
 ===

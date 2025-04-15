@@ -1,7 +1,7 @@
 ﻿title: Date5
 ---
-March 25
-<<location “PLACEHOLDER”>>
+April 14
+<<location "Mordred Manor Kitchen">>
 <<set $date_points = 0>>
 <<set $date_points_total = 14>>
 It’s your week to fill the snack cupboard at Mordred Manor. 
@@ -22,17 +22,17 @@ Gertie: Do you taste like… butter?
 <<kristen Grin>>
 Kristen: I had a snack before you got here!
 Okay, so you and Gertie had been looking forward to this baking date all week, only to get a little sidetracked after she showed up at Mordred Manor.
-  -> Kristen: Focus up, Bladeshield. We still have to peel all these pistachios.
+  -> Kristen: “Focus up, Bladeshield. We still have to peel all these pistachios.”
     <<kristen Neutral>>
     <<char_right GertieNeutral>>
     <<voiceline GertieHappy1>>
     Gertie: Ah, of course Mrs Applebees. Baking awaits.
-    <<add_points 0>>
-  -> Kristen: Okay okay, if we sample our baking as we go, we can also sample each other.
+    <<add_points 1>>
+  -> Kristen: “Okay okay, if we sample our baking as we go, we can also sample each other.”
     <<voiceline KristenRomantic3>>
     Gertie: And then we’ll both be even sweeter. An excellent idea.
     <<add_points 1>>
-  -> You steal another kiss. What’s five more minutes?
+  -> <i>You steal another kiss. What’s five more minutes?</i>
     You’re just starting to really sink into the kiss when Jawbone walks into the kitchen.
     <<kristen Surprised>>
     <<char_right GertieSurprise>>
@@ -54,32 +54,36 @@ She opens an app on her crystal. You expected a photo of a handwritten index car
 You did not expect a chart.
 Gertie: I’ve been developing this recipe for years, switching out different butter brands, varying the amount of sugar in the honey syrup, debating the pay off of quality vs. convenience in homemade vs. store-brought phyllo sheets.
 Gertie: I’ve taste tested all of the variations against a control batch. Whatever level of sweetness or flavors your housemates prefer, I can fine-tune the ingredient proportions to their liking.
-<<kristen Neutral>>
-  -> Kristen: Whoa! That is… a lot.
+  -> Kristen: “Whoa! That is… a lot.”
     Kristen: How do you even understand all that info?
     Gertie: I assure you, the chart makes complete sense if you know how to read it.
     <<add_points 1>>
-  -> Kristen: Oh wow. That’s so cool, Gertie.
+  -> Kristen: “Oh wow. That’s so cool, Gertie.”
+    <<kristen Happy>>
     <<char_right GertieHappy>>
     Kristen: You’ve really put a lot of thought into this! 
     Gertie: Thank you. I am quite proud of the results myself.
     <<add_points 2>>
-  -> Kristen: You know, it might be easier if we just find a recipe online.
+  -> Kristen: “You know, it might be easier if we just find a recipe online.”
+    <<kristen Nervous>>
     <<char_right GertieAngry>>
     Gertie: Easier does not equal <i>better</i>.
     <<voiceline KristenDateFailGertie2>>
     <<add_points 0>>
+<<kristen Neutral>>
 <<char_right GertieNeutral>>
 You scroll through her findings. She’s even photographed each entry. To capture color variation, of course. Half of taste depends on smell, but the other half depends on sight.
 Gertie: I like to be thorough. It has come to my attention that my product needs perfecting. It’s not good enough to simply be <i>good</i>. There can’t be a single mistake.
-You know what that’s about. The review-bombing on Yelf. It’s totally unfair! Gertie doesn’t deserve that, nor do her honey.
+<<kristen Sad>>
+You know what that’s about. The review-bombing on Yelf. It’s totally unfair! Gertie doesn’t deserve that, nor does her honey.
+<<kristen Neutral>>
 Kristen: There’s a ton of varieties written here. You must have a lot of room in your fridge.
 You can barely fit a box of popsicles in the freezer, with all the meal prep Tupperwares Lydia’s shoved in there.
 Gertie: My parents and brother are always traveling for work — they’re rangers too, you see. But I’m happy to get a nice, empty kitchen to do all my recipe testing.
 Gertie: Now, I should’ve asked if you needed me to bring a food processor, but we can always hand crush the —
-<i>Bang!</i>
 <<kristen Surprised>>
 <<char_right GertieSurprise>>
+<i>Bang!</i>
 The kitchen door bursts open.
 <<voiceline KristenSurprised2>>
 In walks Adaine, soaked head to toe in rainwater.
@@ -90,18 +94,20 @@ Kristen: Oracle bullshit?
 Adaine: Oracle bullshit.
 Sounds like yet another high elf wizard tracked down the People’s Oracle for a prophecy, and did not react well when Adaine shot back that she isn’t a fortune teller machine.
 Jabbing at her crystal with one hand, scooping a fistful of pistachios out of the bag with the other, Adaine grumpily stalks out of the kitchen.
-You go back to de-shelling the pistachios. Gertie takes a second longer to recover from the brief interruption, but soon she’s talking about the different types of honeys she’d brought and how each color, texture, and flavor might complement the baklava in different ways.
+You go back to de-shelling the pistachios. Gertie takes a second longer to recover from the brief interruption, but soon she’s talking about the different types of honeys she’d brought and how each color and flavor might complement the baklava in different ways.
 But as she reaches into her bag for a spare honey dipper, Zayn Darkshadow floats through the kitchen wall.
 Zayn: Is that organic honey?
+<<kristen Surprised>>
 Kristen: Did you smell that through the walls?
 Zayn: I may be dead, but my sense of smell isn’t.
+<<kristen Neutral>>
 You and Zayn get into a brief debate about the nature of death and <i>un</i>death and afterlives and why ghosts have no problem standing on floors but can’t seem to lean against walls without passing through.
 Meanwhile, Gertie quietly assembles a flight of honey on the kitchen counter.
 Kristen: Eh, Zayn? Raincheck on that experiment about “If you laid a chunk of wall down on the floor, can a ghost still phase through it?”
 Zayn shrugs, drifting out of the kitchen as easily as he drifted in.
 <<kristen Nervous>>
 Kristen: Sorry to leave you hanging. There’s always something —
-<<kristen Neutral>>
+<<kristen Surprised>>
 The door opens again. It’s Sandra Lynn, with a basket of laundry at her hips, her work quiver still draped across her back.
 Sandra Lynn: Hey, Kristen. Just a reminder, Sklonda asked if we could push wine club up a bit. Everyone will be here in a little over an hour.
 <<kristen Happy>>
@@ -111,15 +117,15 @@ Kristen: I got it. It’ll be fine. We’ve got a chart and everything!
 <<kristen Neutral>>
 You shoo Sandra Lynn out of the kitchen before she can ask any more questions (“Chart?”).
 Gertie: Your house is very… loud.
-  -> Kristen: So what?
+  -> Kristen: “So what?”
     <<kristen Angry>>
     <<char_right GertieNervous>>
     Gertie: You mistake me, Miss Applebees. I mean it as an expression of my esteem. It’s lovely — and lively — here. I doubt you’d ever get bored.
     <<add_points 0>>
-  -> Kristen: Is that a good thing? Or no.
+  -> Kristen: “Is that a good thing? Or no.”
     Gertie: I won’t fib. I was looking forward to some alone time, but it’s also been fun to see what your housemates are getting up to.
     <<add_points 1>>
-  -> Kristen: I like it here too.
+  -> Kristen: “I like it here too.”
     <<kristen Soft>>
     <<char_right GertieGrin>>
     <<voiceline KristenHappy2>>
@@ -129,12 +135,13 @@ Gertie: Your house is very… loud.
 <<char_right GertieNeutral>>
 Messy, noisy, full of people — in some superficial ways, Mordred Manor is not so different from the house you grew up in.
 In all the important ways, it’s not the same at all. You’re very grateful for the chance to experience this different definition of home.
+<<kristen Grin>>
 Kristen: Now you can see why I can never get any baking done around here…
 Gertie: That’s all right, Miss Applebees. I know how to keep us on track.
-As you begin to sample the flight, Gertie goes to pack up the extraneous honeys she’d brought along with her. Your eyes zero in on the red — you can’t help it.
 <<kristen Surprised>>
+As you begin to sample the flight, Gertie goes to pack up the extraneous honeys she’d brought along with her. Your eyes zero in on the red — you can’t help it.
 Unlike the apple-flavored honey you’d seen at Apiarists’ Society a few weeks ago, this distinctive red hue can’t be mistaken for anything except devil’s honey.
-  -> Kristen: What the devil are you doing, carrying around devil’s honey?
+  -> Kristen: “What the devil are you doing, carrying around devil’s honey?”
     <<kristen Angry>>
     <<char_right GertieAngry>>
     <<voiceline KristenAngry3>>
@@ -142,7 +149,7 @@ Unlike the apple-flavored honey you’d seen at Apiarists’ Society a few weeks
     <<voiceline GertieAngry4>>
     Gertie: What exactly are you accusing me of, Miss Applebees?
     <<add_points 0>>
-  -> Kristen: Careful. That stuff’s dangerous.
+  -> Kristen: “Careful. That stuff’s dangerous.”
     <<kristen Nervous>>
     Gertie: Thank you for your concern, Miss Applebees. But believe or not, I’m aware of the magical properties of my own honey.
     Gertie: Didn’t <i>you</i> come to <i>me</i> to ask about devil’s honey?
@@ -150,7 +157,7 @@ Unlike the apple-flavored honey you’d seen at Apiarists’ Society a few weeks
     <<kristen Awkward>>
     Kristen: Um, haha…
     <<add_points 1>>
-  -> Kristen: Whoa there, what’s the devil honey for?
+  -> Kristen: “Whoa there, what’s the devil honey for?”
     <<kristen Nervous>>
     Kristen: I don’t think I’m so bad at baking that you’ll have to lie to me about it.
     Gertie: Don’t worry, I plan on doing nothing of the sort.
@@ -158,6 +165,7 @@ Unlike the apple-flavored honey you’d seen at Apiarists’ Society a few weeks
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
 Gertie: The Apiarists’ Society produces a variety of magical honeys for tinctures and potions. I suppose I must’ve accidentally packed it with the other samples on my way over here.
+<<kristen Sad>>
 Kristen: Of course. I’m sorry.
 You had panicked, the sight of that blood red substance taking you back to the end of your junior year, back to the battle that’d been months — years — in the making.
 But Gertie wasn’t a part of all that. You try to crack a joke, something to ease the tension and put you both back in a better mood.
@@ -187,23 +195,26 @@ Gertie: I know I’m always so busy with the hive and everything, but I didn’t
 Anger turns inward. Gertie tightens her grip around the knife in her hand, as though she were wielding Stinger in a duel, not cutting baklava into diamonds. What happens when the person that wronged Gertie is… Gertie?
 She can’t declare <i>herself</i> her own nemesis.
 … Can she?
-<<kristen Neutral>>
-  -> Kristen: You were focused on the apiary — that’s more important than anything else.
+  -> Kristen: “You were focused on the apiary — that’s more important than anything else.”
+    <<kristen Nervous>>
     <<char_right GertieSad>>
     Gertie: But the hive would’ve been in danger if a mad god had taken over the world!
     <<add_points 1>>
-  -> Kristen: Sometimes we need to fly away from the hive to get more perspective — or pollen.
+  -> Kristen: “Sometimes we need to fly away from the hive to get more perspective — or pollen.”
+    <<kristen Neutral>>
     <<voiceline KristenRomanticGertie2>>
     Kristen: I really admire how much you care about the bees, but there’s a world outside of the apiary too.
     <<char_right GertieNeutral>>
     Gertie: There is, isn’t there? You’ve certainly shown me that.
     <<add_points 2>>
-  -> You say nothing.
+  -> <i>You say nothing.</i>
+    <<kristen Sad>>
     Gertie: I’ve been so foolish. Why can’t I ever — ?
     Taking deep breaths, she composes herself.
     <<char_right GertieNeutral>>
     Gertie: Breathe. I must breathe. The hive gets agitated when I get worked up. And I’ve messed up enough already.
     <<add_points 0>>
+<<kristen Neutral>>
 Gertie: I just get so consumed by work. Classic Bladeshield, I suppose. My whole family’s the same way.
 Kristen: You did mention your parents travel a lot for work…
 <<kristen Sad>>
@@ -214,24 +225,31 @@ Gertie must’ve read the sadness on your face.
 <<char_right GertieNeutral>>
 <<kristen Neutral>>
 Gertie: It’s not what you think. When we were younger, my parents would switch off their ranger expeditions so someone can always be around for my brother and I.
-Gertie: But Hertie’s graduated now. He’s doing some specialized interplanar training program for Horizon Walkers, and I can take care of myself, so I’ve been encouraging them to go on longer trips.
+Gertie: But Hertie’s graduated now. He’s doing some specialized interplanar training program for kobolds, and I can take care of myself, so I’ve been encouraging them to go on longer trips.
 <<char_right GertieGrin>>
 Gertie: I love my family, but I’ve come to really enjoy my alone time.
 Alone time? You don’t know her! Mordred Manor is always crammed with people. That was true of the Applebees home too. Three brothers and two homebody parents did not leave a lot of room for Me Time. Except…
+<<kristen Sad>>
 Kristen: I was never left alone back when I lived with my parents, but you can be damn sure I felt lonely — even if I didn’t realize it at the time.
+<<kristen Neutral>>
 Kristen: Taking time for yourself, doing what you want, figuring out what that even is — it’s not a bad thing. It’s not selfish. It’s not entitled. It’s survival.
+<<char_right GertieNeutral>>
 Gertie: I wholeheartedly agree. I’m happy to devote 100 percent of my time and energy to the bees. But now and then, I can’t help but think…
 <<char_right GertieNervous>>
 Gertie: 100 percent is a lot to give, even if it’s toward something you truly care about. Sometimes, I can’t help but feel…
 Kristen: Doubt?
 You can understand that.
+<<kristen Nervous>>
 Kristen: Doubt used to freak me out, too. Hell, I used to have doubts about worshipping doubt, but then again, I’d also have doubts about doubting doubt…
 Okay. That was confusing, even for <i>you</i>.
+<<kristen Neutral>>
+<<char_right GertieNeutral>>
 Kristen: All that is to say: Your devotion to the bees is not any less true if you spend some time outside the apiary.
 Kristen: Doubt and Conviction actually make a pretty great pairing.
 <<kristen Happy>>
 <<voiceline KristenHappy1>>
 Kristen: Literally! They’re married!
+<<char_right GertieSad>>
 Gertie frowns, thinking intently as she slides the baklava into the oven. But before you can offer her any more comfort (or kisses), yet another interloper walks into the kitchen.
 <<char_right GertieSurprise>>
 <<kristen Surprised>>
@@ -250,12 +268,12 @@ Fabian: Well, I hope you’ve been practicing your sword form. Maybe you’d las
 <<kristen Awkward>>
 <<voiceline KristenAwkward3>>
 You don’t need to pass an insight check to sense the lingering tension between those two.
-  -> Quick! Distract Gertie with a kiss!
+  -> <i>Quick! Distract Gertie with a kiss!</i>
     <<char_right GertieGrin>>
-    <<kristen Neutral>>
+    <<kristen Grin>>
     You press a quick kiss to her cheek. Gertie smiles at you, though her grin drops when she notices Fabian again.
-    <<add_points 1>>
-  -> Make a joke to break the tension!
+    <<add_points 2>>
+  -> <i>Make a joke to break the tension!</i>
     <<char_right GertieNeutral>>
     <<kristen Grin>>
     Kristen: Hey, what if Jace baked the baklava for Porter? What if he cooks other stuff, like condiments? Do you know what that makes him?
@@ -264,9 +282,8 @@ You don’t need to pass an insight check to sense the lingering tension between
     <<voiceline KristenAwkward2>>
     Fabian and Gertie both let out a noise that was half laugh, half groan, then looked at each other, surprised that the other had the same reaction.
     <<add_points 2>>
-  -> Tell Fabian to get lost!
+  -> Kristen: “Fabian, get lost!”
     <<kristen Angry>>
-    Kristen: Fabian, get lost!
     Fabian: Woah. What’s with the attitude? I just came here to help Adaine.
     Gertie: No need to chase off your friends for my benefit, Miss Applebees.
     <<add_points 0>>
@@ -280,6 +297,7 @@ Gertie and Fabian exchange nods — distant, but respectful — like they’re c
 But… well… why shouldn’t they?
 <<kristen Neutral>>
 Fabian eyes the baklava baking in the oven, breathing in the delicious scent of warm butter.
+<<char_right GertieNervous>>
 Then he glances at Gertie who, while not actively hostile, is pointedly pouring sugar into a pot of water with the general vibe of “When’s this guy gonna get out of here?”
 Fabian: I’ll leave you two —
 Kristen: Come try this honey, Fabian. Tell me if you think it’ll work in a syrup.
@@ -293,7 +311,7 @@ Kristen: Besides, it’s like what the Spice Ghouls say: “If you want to be my
 <<voiceline GertieSurprised3>>
 Gertie: What?
 Kristen: Okay, so that song was translated from some undead language into Common, so the meter’s a bit clunky. But the sentiment stands!
-<<char_right GertieNeutral>>
+<<char_right GertieAngry>>
 Somewhat reluctantly, Gertie passes the honey flight to Fabian, a glint of challenge in her eyes.
 Maybe she’s just waiting for a reason to duel him again, but until then, they’re actually hanging out together, discussing the intricacies of this versus that honey.
 <<char_right GertieSurprise>>
@@ -309,25 +327,25 @@ You taste the orange flower honey too. Delicious, yes, but still, you find yours
 <<kristen Nervous>>
 Gertie and Fabian bicker for a little while longer. Just as you think swords are gonna come out again, Gertie turns to you.
 Gertie: What do you think, Miss Applebees?
-  -> Kristen: Lady, gentleman, both your honeys are very beautiful…
+  -> Kristen: “Lady, gentleman, both your honeys are very beautiful…”
     <<voiceline GertieAngry4>>
     Gertie: There’s no use in being a fence-sitter to keep the peace, Miss Applebees. I’m sure there’s a flavor you favor more.
     <<add_points 0>>
-  -> Kristen: I gotta be honest. I prefer the wildflower honey too.
+  -> Kristen: “I gotta be honest. I prefer the wildflower honey too.”
     <<kristen Neutral>>
     <<char_right GertieSurprise>>
     Gertie: Really?
     She samples the wildflower honey again. The disbelief in her expression gives way to appreciation.
     Gertie: I suppose you have a point, Kristen. Maybe I need to recalibrate the chart…
     <<add_points 2>>
-  -> Kristen: Can’t argue against my girl. Orange blossom for the win.
+  -> Kristen: “Can’t argue against my girl. Orange blossom for the win.”
     <<char_right GertieSad>>
     <<voiceline GertieAngry4>>
     Gertie: No need to fib, Miss Applebees. If you prefer the wildflower honey, just say so.
     <<add_points 1>>
 <<kristen Awkward>>
 Fabian holds out a hand. For a second, you wonder if Gertie’s gonna get her duel after all. But he’s only raising them up in a surrendering gesture.
-<<kristen Surprise>>
+<<kristen Surprised>>
 <<char_right GertieSurprise>>
 Fabian: Your recipe. Your call.
 Fabian: What? I can be a gentleman.
@@ -352,12 +370,13 @@ Kristen: Though you’re always welcome to come back some other day and… add t
 Gertie considers this offer as she pours the honey syrup over the baked baklava.
 A long beat passes.
 <<kristen Awkward>>
-Kristen: If you want. Or we can always hang out somewhere else, just the two of us. I hear they’re setting up a drive-in theater near Aguefort as the weather warms up. Maybe we can —
+Kristen: If you want. Or we can always hang out somewhere else, just the two of us. I hear they’re setting up a drive-in theater in town as the weather warms up. Maybe we can —
 <<char_right GertieGrin>>
 <<voiceline GertieRomantic2>>
 <<kristen Happy>>
 Gertie: Kristen, I’d love to visit Mordred again.
 <<voiceline KristenRomantic2>>
+Kristen: Haha, um... wow, yeah, cool.
 <<kristen Surprised>>
 <<char_right GertieSurprise>>
 Upstairs in the wizard’s tower, Adaine lets out a scream that reverberates through the entire manor. Oracle bullshit has escalated into Oracle calamity.

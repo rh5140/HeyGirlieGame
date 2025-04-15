@@ -1,11 +1,12 @@
 ﻿title: Date3
 ---
-March 25
-<<location “PLACEHOLDER”>>
+April 14
+<<location "Farmer’s Market">>
 <<set $date_points = 0>>
 <<set $date_points_total = 14>>
 <<kristen Neutral>>
-You’re here to do some shopping, that’s all. Pick up some organic fruits. Try out those artisan breads. Stock up on hand-roll truffles for those pre-exam all-nighters. So what if the Little Branch farmer’s market was <i>all the way across town</i>? A little hike was always worth it to support local small businesses.
+You’re here to do some shopping, that’s all. Pick up some organic fruits. Try out those artisan breads. Stock up on hand-roll truffles for those pre-exam all-nighters.
+So what if the farmer’s market was <i>all the way across town</i>? A little hike was always worth it to support local small businesses.
 Then you spot Gertie, tucked in her stall between a table selling candles and another selling fruit leather, arranging an impressive display of vials, jars, and bottles just so.
 <<char_right GertieHappy>>
 <<kristen Soft>>
@@ -19,9 +20,10 @@ You mind blanks for a moment, recalling the taste of citrusy sweetness…
 <<char_right GertieNeutral>>
 <<kristen Neutral>>
 Gertie: Apologies, Miss Applebees. I’d love to show you around the market. Just… give me a second?
-As with everything else she does, Gertie puts 100 percent into the task at hand, tending her stall with a near-militant proficiency. She’s even trained a swarm of honeybees to spell out discounts, deals, and promotions in the air, creating buzz around the market with their dazzling dance routines.
+As with everything else she does, Gertie puts 100 percent into the task at hand, tending her stall with a near-militant proficiency.
+She’s even trained a swarm of honeybees to spell out discounts, deals, and promotions in the air, creating buzz around the market with their dazzling dance routines.
 What do you do?
-  -> A group of tourists stroll by. You jump in and give them a sales pitch.
+  -> <i>A group of tourists stroll by. You jump in and give them a sales pitch.</i>
     You give a hell of a sales pitch (not so different from an inspirational speech, really) to a group of wellness-lifestyle influencers from Bastion City.
     <<kristen Nervous>>
     But then they start drilling you on the health benefits of raw vs. creamed honey, and your start to stutter.
@@ -29,7 +31,7 @@ What do you do?
     <<voiceline GertieBee3>>
     Gertie: I’m so glad you asked. While raw honey is unprocessed and unheated, and thus retains rich nutrients, it does have a comparatively shorter shelf life…
     <<add_points 1>>
-  -> A customer has picked out their purchase. You help ring them up.
+  -> <i>A customer has picked out their purchase. You help ring them up.</i>
     <<voiceline KristenHappy1>>
     You ring up a sweet halfling grandmother, chatting about her plans to bake a loaf of honey cornbread for her granddaughter’s visit.
     <<kristen Happy>>
@@ -37,7 +39,7 @@ What do you do?
     <<char_right GertieGrin>>
     Gertie is busy explaining the properties of fireweed honey to another customer, but once in a while, you catch her stealing glances at you, a small smile playing at the corner of her (beeswaxed) lips.
     <<add_points 2>>
-  -> Gertie’s clearly got her own system. You give her some space.
+  -> <i>Gertie’s clearly got her own system. You give her some space.</i>
     <<kristen Nervous>>
     You stand out of the way as Gertie rings someone up, attaching one of her pre-made handwritten thank-you notes to a jar of blueberry honey.
     <<voiceline KristenAwkward2>>
@@ -46,7 +48,10 @@ What do you do?
     <<add_points 0>>
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
-Gertie flits around the stall, moving from customer to customer, but she always circles back to you during the lulls to chat. On a break, she leads you around the market, showing you the smoothie stand she thinks you’d like and the food trucks with family/friends/fellow vendor discounts.
+Gertie flits around the stall, moving from customer to customer, but she always circles back to you during the lulls to chat.
+On a break, she leads you around the market, showing you the smoothie stand she thinks you’d like and the food trucks with family/friends/fellow vendor discounts.
+<<kristen Surprised>>
+<<char_right GertieSurprise>>
 The crowd dwindles as the day stretches on, and so does Gertie’s inventory. Just as Gertie is packing away the (now empty) plate of free<i>bees</i>, a last-minute customer swoops in, a haughty-looking elf in a powder-blue pantsuit.
 Still on a call on her crystal, the customer gestures wordlessly at Gertie to hand over some of that black locust blossom honey sample.
 <<kristen Nervous>>
@@ -54,12 +59,15 @@ Still on a call on her crystal, the customer gestures wordlessly at Gertie to ha
 Gertie acquiesces, though she does <i>not</i> look happy about being treated like an unheard servant.
 When Ms. Pantsuit’s done with that sample, smacking her lips loudly, she insists on trying the lemon creamed honey… the raspberry rose honey…
 Gertie: Ma’am —
-The customer waves her off, bragging to whomever’s on the other end of that phone call that she’d secured membership to the ever-exclusive Marigold Country Club. Apparently, they’re about to expand their golf course from 9-hole to 18-hole. She gestures at a jar of bamboo honey…
+The customer waves her off, bragging to whomever’s on the other end of that phone call that she’d secured membership to the ever-exclusive Marigold Country Club. Apparently, they’re about to expand their golf course from 9-hole to 18-hole.
+She gestures at a jar of bamboo honey…
 <<char_right GertieAngry>>
 Gertie: Ma’am! I’m afraid there’s a limit on how many samples I can give each customer.
 Gertie: But if you’re interested in purchasing anything to support Aguefort’s Apiarists’ Society, I’ll be happy to help you.
-Finally, Ms. Pantsuit hangs up her phone to address Gertie directly. Only, she then starts going off about how outrageously overpriced this “school project” is, even though she’s wearing a badge that identifies her as an “Executive Spellcaster Consultant” (whatever that means) at KVX, so you know she must be making bank at the bank.
+Finally, Ms. Pantsuit hangs up her phone to address Gertie directly.
+Only, she then starts going off about how outrageously overpriced this “school project” is, even though she’s wearing a badge that identifies her as an “Executive Spellcaster Consultant” (whatever that means) at KVX, so you know she must be making bank at the bank.
 You can tell Gertie’s really trying to keep it together, but each spitting insult is just another spark lighting her already short fuse.
+<<sfx bees>>
 The bees sense this too, flitting around their queen in increasingly frenetic motions. Ms. Pantsuit leans in, jabs a finger to punctuate her point, and accidentally swats the swarm.
 Uh oh.
 <<voiceline GertieAngry3>>
@@ -69,17 +77,19 @@ It all happens so fast.
 <<voiceline GertieDuel2>>
 <<char_right GertieFight>>
 Gertie: Get ready for Bladeshield!
+<<sfx sword>>
 You know you’ve got one chance to say something before the duel begins.
-  -> Kristen: Let this one go, Gertie. Some fights are not worth it.
+  -> Kristen: “Let this one go, Gertie. Some fights are not worth it.”
     <<kristen Awkward>>
     Gertie: And some can’t be avoided.
     <<add_points 0>>
-  -> Kristen: Damn, is that a sword in your hand or are you just happy to see me?
+  -> Kristen: “Damn, is that a sword in your hand or are you just happy to see me?”
     <<kristen Grin>>
     <<char_right GertieGrin>>
     Gertie blushes, momentarily distracted, then shakes her head to refocus on the duel.
     <<add_points 1>>
-  -> Kristen: Give ’em hell, Bladeshield. I’ll watch your back.
+  -> Kristen: “Give ’em hell, Bladeshield. I’ll watch your back.”
+    <<kristen Happy>>
     <<char_right GertieHappy>>
     <<voiceline KristenHappy1>>
     Gertie’s grin widens, your comment bolstering her confidence as she marches toward the duel.
@@ -95,26 +105,26 @@ You see the customer, prone and bloodied on the ground; but you also see her out
 <<kristen Angry>>
 <<voiceline KristenAngry1>>
 A trick! An illusory image! You’ve gotta do something!
-  -> Watch out! You try to warn Gertie.
+  -> <i>Watch out! You try to warn Gertie.</i>
     <<kristen Surprised>>
     Kristen: Oi, on your six!
     <<char_right GertieGrin>>
     Gertie jerks back, barely able to deflect the spell damage. Throwing you a grateful smile, she redoubles her efforts and delivers a finishing blow.
     <<add_points 2>>
-  -> Oh no! You run to protect Gertie.
+  -> <i>Oh no! You run to protect Gertie.</i>
     <<kristen Surprised>>
     <<char_right GertieSurprise>>
     You cast an abjuration ward, weaving a star-studded stream of magic around Gertie as a shield. She blinks, eyes wide with grateful surprise behind her glasses.
     You retreat off the battlefield, but Ms. Pantsuit’s already calling off the duel, citing interference as an excuse to avoid admitting defeat.
     <<add_points 1>>
-  -> Stay put! Gertie’s got this.
+  -> <i>Stay put! Gertie’s got this.</i>
     <<kristen Nervous>>
     <<voiceline GertieSad3>>
     An icy beam of spell attack hits Gertie on the back of her shoulders. She falls to one knee, tanking the damage with a grimace. As Gertie recomposes herself, her gaze darts to you, just for a second, a wounded look in her eyes.
     <<char_right GertieSad>>
     Returning to the duel, Gertie handedly defeats her new nemesis, though you can tell her heart’s not in it anymore.
     <<add_points 0>>
-<<kristen Nervous>>
+<<kristen Angry>>
 <<char_right GertieSad>>
 Yielding the fight, but still refusing to apologize, Ms. Pantsuit throws a nasty glare at Gertie before teleporting away in a huff.
 <<kristen Sad>>
@@ -123,36 +133,36 @@ But that’s a problem for Future Kristen. For now, you focus on Gertie. Your gi
 Gertie catches sight of your worried expression.
 <<char_right GertieNeutral>>
 Gertie: Thank you for your concern, Miss Applebees, but I assure you that I am perfectly fine.
-  -> Kristen: Totally! You were un<i>bee</i>lievable out there.
+  -> Kristen: “Totally! You were un<i>bee</i>lievable out there.”
     <<kristen Grin>>
-    <<add_points 0>>
+    <<add_points 1>>
     You cheer her up as best as you can, gushing over her sword stances while she pops a few goodberries, but it soon becomes clear that she needs some actual clerical attention.
-  -> Kristen: I still need to give you a check-up. Cleric’s Oath, and all that.
+  -> Kristen: “I still need to give you a check-up. Cleric’s Oath, and all that.”
     <<kristen Neutral>>
     <<voiceline GertieNeutral2>>
     Gertie: If you insist. Who am I to keep you from your vow?
     <<add_points 1>>
-  -> Kristen: Are you sure? I was really worried about you for a second…
-    <<kristen Nervous>>
+  -> Kristen: “Are you sure? I was really worried about you for a second…”
+    <<kristen Soft>>
     <<voiceline GertieDateSuccess1>>
     Gertie: That’s very kind of you to say. I will admit, I am feeling a certain soreness in my sword arm.
     <<add_points 2>>
 As you check over Gertie, an alert comes on her crystal.
 <<kristen Surprised>>
 <<char_right GertieSad>>
-  -> Kristen: What’s going on?
+  -> Kristen: “What’s going on?”
     Gertie: Someone left a bad review on my honey.
     Kristen: Where?
     Gertie: Everywhere.
     <<add_points 2>>
-  -> Don’t look!
+  -> <i>Don’t look!</i>
     You (very valiantly) turn your head away as you resume your check-up. Gertie grows more agitated with each second she spends on her screen, until she’s fed up enough to show you what’s going on.
     <<add_points 1>>
-  -> Snoop!
+  -> <i>Snoop!</i>
     Using the excuse of inspecting her for head injuries, you position yourself in the perfect spot to spy on her crystal screen.
     <<add_points 0>>
 <<kristen Sad>>
-You watch her scroll through review after review: DuelAdvisor, RateMyNemeses, Yelf, GoodBees, Letterhivd, all claiming that the honey produced by Aguefort Apiarists’ Society is overpriced and subpar.
+:You watch her scroll through review after review: DuelAdvisor, RateMyNemeses, Yelf, GoodBees, Letterhivd, all claiming that the honey produced by Aguefort Apiarists’ Society is overpriced and subpar.
 There’s even one comment left on the farmer’s market’s website, demanding that Gertie be removed as a vendor!
 <<voiceline KristenSad3>>
 All anonymously published, of course.
@@ -172,19 +182,19 @@ Kristen: — terminal cuteness!
 <<kristen Grin>>
 <<char_right GertieBlush>>
 Kristen: And also, a sprained wrist. That, though, I can fix up quick.
-  -> Heal her quick. Get her back on her feet ASAP.
+  -> <i>Heal her quick. Get her back on her feet ASAP.</i>
     <<kristen Neutral>>
     <<char_right GertieNeutral>>
     You rely on your go-to healing spells to get her up and running. If they’re good enough to keep your party alive and kicking mid-combat, then surely they’ll be good enough to patch up a little duel damage.
     <<add_points 0>>
-  -> Mind your bedside manners. Show off your skills.
+  -> <i>Mind your bedside manners. Show off your skills.</i>
     <<kristen Grin>>
     <<char_right GertieBlush>>
     Like one of those sexy healers from your favorite Faerie medical dramas, your hands linger on hers for a beat longer than is strictly necessary.
     <<voiceline GertieRomantic1>>
     Gertie: Oh, that feels nice. The healing spell, I mean.
     <<add_points 1>>
-  -> Be careful. Neither of you are going anywhere soon.
+  -> <i>Be careful. Neither of you are going anywhere soon.</i>
     <<kristen Soft>>
     <<char_right GertieGrin>>
     <<voiceline GertieDateSuccess1>>
@@ -193,7 +203,8 @@ Kristen: And also, a sprained wrist. That, though, I can fix up quick.
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
 Kristen: You’re all clear. Physically, at least.
-Gertie smiles, pushing her glasses up as she takes you in, as though seeing you in a new light. You can relate to that feeling. Sure, you’ve literally had your tongue in her mouth, but this, taking time to take care of someone, feels much more intimate.
+Gertie smiles, pushing her glasses up as she takes you in, as though seeing you in a new light.
+You can relate to that feeling. Sure, you’ve literally had your tongue in her mouth, but this, taking time to take care of someone, feels much more intimate.
 It seems to take you both by surprise, the strength of your concern for her well-being.
 And it’s not just about worrying over a sprained wrist. Even though Gertie’s all healed up now, you can’t help but fuss over her, wondering just what’s going on in her head.
 <<kristen Nervous>>
@@ -203,22 +214,48 @@ A pause, as Gertie collects her thoughts. It seems she’s not quite used to tal
 <<char_right GertieSad>>
 Gertie: I suppose, whenever I feel something big — anger, outrage, hurt — it’s as though I can barely contain the emotion. I’m compelled by this need to get it out, to do <i>something</i>.
 Gertie: Perhaps I have a tendency to escalate, but is it not better to settle such disputes on the spot, rather than drag out the bitterness?
-  -> Kristen: Well, You can always call Dr. Kristen to patch you up after.
+  -> Kristen: “Well, You can always call Dr. Kristen to patch you up after.”
     <<kristen Grin>>
     <<char_right GertieBlush>>
     Kristen: Just don’t expect me to dress up… unless you’re into that.
     <<add_points 1>>
-  -> Kristen: Hurt begets hurt. You should think before you act.
+  -> Kristen: “Hurt begets hurt. You should think before you act.”
+    <<kristen Nervous>>
     Gertie frowns, looking chastened, but also a little irritated. Who are <i>you</i> to rag on someone else’s impulsiveness?
     <<add_points 0>>
-  -> Kristen: I’m happy to listen if you ever want to talk about it first.
+  -> Kristen: “I’m happy to listen if you ever want to talk about it first.”
     <<kristen Soft>>
     <<char_right GertieNeutral>>
     <<voiceline GertieHappy3>>
     Gertie: Thank you, Miss Applebees.
     <<add_points 2>>
 <<kristen Neutral>>
+<<char_right GertieSad>>
+A beat passes, then Gertie’s looking at her phone again, frowning.
+Kristen: Forget her. I’m serious.
+Kristen: I know I’m not a honey connoisseur or anything, but anyone can see the heart you put into the hive.
+<<kristen Happy>>
+Kristen: If love’s the secret ingredient, it’s no wonder the honey you produce tastes so sweet.
+<<voiceline GertieBee3>>
 <<char_right GertieNeutral>>
+Gertie: Actually, the secret’s in the enzymes, the acidity, the —
+<<kristen Soft>>
+She breaks off when she sees your face, your soft smile at her cute rambling. 
+Gertie: If you ever drop by the Apiarists’ Society again, I can show you the whole operation.
+<<voiceline KristenRomantic1>>
+Kristen: Oh? I thought those meetings were closed? Club members only.
+Gertie: Well, I <i>do</i> know the club leader, or else I can always try calling in a presidential favor.
+<<kristen Grin>>
+Kristen: Oh, I’m quite certain the president will favor <i>you</i>.
+<<voiceline GertieBee4>>
+Gertie: That’s good to know.
+Gertie: I’m at the Society most days after school, if you’re interested. I promise <i>my</i> Stinger will be sheathed this time. My bees, on the other hand…
+<<kristen Happy>>
+<<char_right GertieHappy>>
+You both laugh.
+<<kristen Neutral>>
+<<char_right GertieNeutral>>
+Once you hit a comfortable lull in the conversation, you give Gertie another cleric look-over. She looks much healthier, less bruised, and not <i>just</i> medically speaking.
 Kristen: Are you feeling better now that you’ve successfully — and quite dashingly, if I might add — defended the honor of your bees?
 Gertie: Of course.
 <<char_right GertieNervous>>
