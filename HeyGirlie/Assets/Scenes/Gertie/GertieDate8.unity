@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &106859427 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1185803883299046613, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+  m_PrefabInstance: {fileID: 1888651453317235519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &450148262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,6 +226,66 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9182179604476998553, guid: fde77fa86a5767741a44c0e2f2b9f78c, type: 3}
   m_PrefabInstance: {fileID: 450148262}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &731248385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731248386}
+  - component: {fileID: 731248388}
+  - component: {fileID: 731248387}
+  m_Layer: 5
+  m_Name: Backgrounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &731248386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731248385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 106859427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 3840, y: 2160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &731248387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731248385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a46a68b620d9f4192af363ed5f8ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArray:
+  - spriteName: rain
+    sprite: {fileID: 21300000, guid: 0f738d5b678406149b89867cead000b8, type: 3}
+--- !u!222 &731248388
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731248385}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1883273653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,6 +503,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5513368513654785677, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513368513654785677, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513368513654785677, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513368513654785677, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5620810961950144099, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -470,6 +551,26 @@ PrefabInstance:
       propertyPath: 'scenarios.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[1].voiceline
+      value: 
+      objectReference: {fileID: 8300000, guid: 019698abbfb18be4a8bd583a61855638, type: 3}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[2].voiceline
+      value: 
+      objectReference: {fileID: 8300000, guid: 131333dd7d4831042af33186f36168b3, type: 3}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[1].voicelineName
+      value: bees
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[2].voicelineName
+      value: sword
+      objectReference: {fileID: 0}
     - target: {fileID: 6910515818803609811, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -489,7 +590,7 @@ PrefabInstance:
     - target: {fileID: 7150272833673358374, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38b05877f9992ca43a80f83baebce40f, type: 3}
+      objectReference: {fileID: 21300000, guid: 906ec3ef4a8ff924186ede92a26b3f37, type: 3}
     - target: {fileID: 7287485888817166920, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -578,12 +679,35 @@ PrefabInstance:
       propertyPath: 'voicelineArrays.Array.data[2]'
       value: 
       objectReference: {fileID: 1883273655}
+    - target: {fileID: 9178290472516552735, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178290472516552735, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178290472516552735, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178290472516552735, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183096916159897308, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_text
+      value: Marigold Country Club
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3575105733733479048, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1883273654}
+    - targetCorrespondingSourceObject: {fileID: 1185803883299046613, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731248386}
     - targetCorrespondingSourceObject: {fileID: 3774247342767809106, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 450148263}
