@@ -1,7 +1,8 @@
 ﻿title: Date2
 ---
-<<location "PLACEHOLDER">>
+<<location "Mordred Manor">>
 <<set $date_points = 0>>
+//<<set declare $date_points_total = #>>
 <<kristen Sad>>
 After three hours of staring at a blinking cursor on a blank page, trying desperately to turn the buzz in your head into usable words, you’re a shell of yourself. 
 Okay, maybe three hours is a stretch. Between trying to engage your friends in conversation to distract you, sending increasingly ridiculous prayers to Cassandra, and pacing so many circles around your room that you started to get dizzy, you’ve worked for an hour, max. 
@@ -15,6 +16,8 @@ It doesn’t work. Shocker.
 Your stomach chooses this exact moment to growl. You straighten with a grimace.
 Kristen: Fuck it. I deserve a break. 
 You grab your keys and head out the door. Before you know it, you’re strolling through the entrance to Basrar’s. 
+<<location "Basrar's">>
+<<background Basrars>>
 The djinn himself is busy serving a long line of customers. He catches your eye and sends you a smile, and you wave in response. You’re not sure what you’re in the mood for today, so you hang back.
 As you ponder ice cream flavours, you look around the shop and notice none other than Lucy Frostblade tucked away in a corner booth. 
 <<char_right LucyNeutral1>>
@@ -23,7 +26,7 @@ Curious, you approach her and just kinda stand for a moment by the table. She do
 <<kristen Neutral>>
 -> Kristen: Hey! I had a feeling I’d see you here. 
   <<voiceline KristenGreetingLucy1>>
-  <char_right LucySurprised>>
+  <<char_right LucySurprised>>
   Lucy’s head snaps up, her eyes widening in surprise. She pauses before speaking, visibly processing your words.
   <<voiceline LucyGreeting2>>
   Lucy: Kristen, hi, what a surprise! What do you mean? You knew where to find me?
@@ -32,25 +35,23 @@ Curious, you approach her and just kinda stand for a moment by the table. She do
   You show her your laptop bag, where your own Basrar’s pin proudly sits. She looks mildly impressed.
   Lucy: Wow. That’s surprisingly observant of you. 
   <<char_right LucyNeutral1>>
-
   <<add_points 2>>
 -> Kristen: Hey, Lucy! How’s it hanging?
   <<voiceline LucyGreeting1>>
   Lucy looks up, startled.  
- <<voiceline LucyGreeting2>>
+  <<voiceline LucyGreeting2>>
   Lucy: Kristen! Hi. I’m good, how are you?
   Kristen: I’m great! Nothing brightens my day like getting something at Basrar’s.
   Lucy: You know, I absolutely agree. 
   <<add_points 1>>
-
 ->  Stay silent.
   You stand there, watching her finish writing in her notebook until you’re noticed. 
   Lucy turns slowly to stare back at you. She gives you a weirded-out look.
-   <<voiceline LucyGreeting3>>
+  <<voiceline LucyGreeting3>>
   Lucy: Kristen.
   Kristen: I saw you from across the shop. Thought I’d come and say hello.
   Lucy: …You didn’t say hello, though. 
-   <<voiceline LucyConfused1>>
+  <<voiceline LucyConfused1>>
   <<kristen Awkward>>
   Kristen: Right. Right! I just thought you were… you looked busy and I didn’t want to bother you, so — I mean, I didn’t know if you’d hear me if I — uh. Hi?
   Lucy: …Hi.
@@ -120,7 +121,7 @@ Lucy: So, I was working on Yolanda’s paper.
 You make a face at the unpleasant reminder.
 Kristen: Right.
 Lucy: And I was looking at the questions, and I had this thought. I’ve been having this thought for a while, actually. 
-<<char_right LucyNeutral1>>
+<<char_right LucySad>>
 She pauses. You raise your eyebrows at her, urging her to continue. 
 Lucy: It’s like…
 Lucy pushes her ice cream to the center of the table. You lean closer. 
@@ -146,7 +147,7 @@ Kristen: Okay, so, if I’m understanding this correctly…
   Lucy: Yes! Exactly. I’m having an identity crisis. 
   Hmm. Now that you think about it, this explains her mood at the end of class last week. And besides, it makes a weird kind of sense. You couldn’t have gone through what she did <i>without</i> having some kind of identity crisis. 
   Kristen: You know, I happen to be kind of an expert on those. Tell me about it.
-  <<add_point 2>>
+  <<add_points 2>>
 -> Kristen: …nope. I’ve got nothing, sorry, Lucy. You lost me.
   <<char_right LucySad>> 
   <<voiceline LucySad2>>
@@ -154,7 +155,7 @@ Kristen: Okay, so, if I’m understanding this correctly…
   Lucy: Not just you. I lost <i>myself</i>, too. That’s the whole problem.
   Whoa. That sounds serious. Is this related to everything she went through last year?
   Kristen: Hey, I’m here for you, partner. You said this started with the project, right? Maybe I can help. 
-  <<add_point 1>>
+  <<add_points 1>>
 -> Kristen: You don’t like multi-flavoured ice cream?
   <<char_right LucyAngry>>
   You toss out the joke without thinking, hoping to lighten the mood and make her feel better, but it lands flatly between you. 
@@ -164,8 +165,8 @@ Kristen: Okay, so, if I’m understanding this correctly…
   Kristen: Sorry, that was insensitive. 
   Lucy sighs. She looks tired. 
   Lucy: I guess the ice cream metaphor wasn’t really helping.
-  <<add_point 0>>
-<<char right_LucyNeutral1>>
+  <<add_points 0>>
+<<char_right LucyNeutral1>> 
 <<kristen Neutral>>
 Kristen: What’s going on?
 Lucy chews on her lip while she thinks. You push the mango ice cream over to her, and she gives you a tiny, grateful smile.
@@ -196,16 +197,16 @@ Kristen: What’s on it?
 Lucy hands the notebook over to you. You read through the page.
 First on the list is “Make up with Kipperlilly”, which has been crossed out. 
 You try to keep your face neutral, but you’re pretty sure Lucy has noticed your grimace when she gives you a knowing look.
-Lucy has also written: Find favorite flavor of ice cream. Change up style. Get a different haircut. Get into gardening. Learn more about frost giant culture. Return to Far Haven Woods and make a good memory! Go to a big social event.
+:Lucy has also written: Find favorite flavor of ice cream. Change up style. Get a different haircut. Get into gardening. Learn more about frost giant culture. Return to Far Haven Woods and make a good memory! Go to a big social event.
 <<kristen Happy>>
 Kristen: There’s so much cool stuff here! 
-<<char_right_LucyHappy>>
+<<char_right LucyHappy>>
 Lucy: I’m glad you think so. I tried to add things that would push me out of my comfort zone. 
 <<kristen Neutral>>
-<<char_right_LucyNeutral>>
+<<char_right LucyNeutral1>>
 You read over the list again. An idea strikes you.
 Kristen: Hey, where it says “go to a big social event” — what about Spring Fling?
-<char_right LucySurprised>>
+<<char_right LucySurprised>>
 Lucy: What? That’s… a <i>really</i> big social event.
 Kristen: Yeah, but it sounds really fun! And we’re in our last year, right? We should end it with a bang and not a whimper, or whatever that old poet guy said.
 Lucy: That poem’s about dying, Kristen.
@@ -242,7 +243,7 @@ Kristen: Being a cleric of the literal embodiment of doubt has its moments.
 <<kristen Neutral>>
 You pause. 
 Kristen: And, come on, you can’t eat the entire menu trying to figure this out, right?
-<<char_right LucyNeutral>>
+<<char_right LucyNeutral1>>
 Lucy’s cheeks puff. She looks vaguely nauseous at the thought. 
 Lucy: No. I think I’m all ice-creamed out. 
 Kristen: Okay, then, moment of truth! What flavor are you going to pick?
@@ -253,9 +254,9 @@ That sounds… so gross, actually. But Lucy looks delighted to cross off one ite
 <<kristen Happy>>
 You hold up your ice cream and Lucy follows with hers. You tap them together.
 Kristen: Cheers!
-<<voicelineKristenHappy3>>
+<<voiceline KristenHappy3>>
 Lucy: Cheers. 
-<<voiceline LucyHappy1>>
+<<voiceline LucyHappy>>
 <<kristen Neutral>>
 <<char_right LucyNeutral1>>
 You dig in, a comfortable silence settling over you both.

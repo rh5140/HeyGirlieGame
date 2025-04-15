@@ -1,12 +1,15 @@
 ﻿title: Date3
 ---
-<<location "PLACEHOLDER">>
+<<location "Elm Valley Mall">>
 <<set $date_points = 0>>
+//<<set declare $date_points_total = #>>
 <<kristen Neutral>>
 There’s nothing more overstimulating than the clash of noises, smells, and sights in Elm Valley Mall on a Saturday morning, but you kind of like it. 
-As you walk through the entrance, you take in the sounds of children screaming in the now-rebuilt arcade, the chatter of families shopping, the high ceilings and twinkling lights, and the mingled scents of perfumes and food and the faint lemon cleaner from a janitor mopping nearby.
-You don’t really have the best memories of this mall. The last time you were here had been that big fight against Biz freshman year, after which you’d been arrested. 
-Before that, your family had never really brought you here for fun family outings. The few times you had visited the mall had been to buy tacky corn-themed jewelry and unflattering formal robes for whatever church event you had coming up that week.
+As you walk through the entrance, you take in the sounds of children screaming in the now-rebuilt arcade and the chatter of families shopping.
+The high ceilings and walls are covered in twinkling lights, and you inhale the mingled scents of perfumes and food and the faint lemon cleaner from a janitor mopping nearby.
+You don’t really have the best memories of this mall. You grimace as you remember that fight against Biz freshman year, after which you’d been arrested. 
+Before that, your family had never really brought you here for fun family outings. 
+The few times you had visited the mall had been to buy tacky corn-themed jewelry and unflattering formal robes for whatever church event you had coming up that week.
 You glance upwards, recalling the dusty robes shop on the third floor of the mall. 
 You’ve always gotten the creepiest vibes from that place — the beady-eyed, ancient owner had always seemed to stare into your soul from behind the counter. 
 They’d probably been part of the Harvestmen. Asshole. 
@@ -15,7 +18,7 @@ A little arson never hurt anyone, right?
 Your crystal buzzes. You roll your eyes heavenward, not bothering to check it. 
 Kristen: Cassandra, you can be <i>such</i> a buzzkill.
 Well, whatever. Point is, it’s about time you made some good memories here, and spending a day with Lucy sounds like a great way to start.
-And bonus: going shopping with Fabian’s card is going to <i>rule</i>.
+:And bonus: going shopping with Fabian’s card is going to <i>rule</i>.
 You scan the entrance area as you make your way further in and manage to find Lucy, who sits on a bench, scrolling on her crystal. 
 Kristen: Lucy!
 Lucy looks up. She searches the crowd and when her eyes land on you, she stands up and heads your way. 
@@ -85,7 +88,7 @@ You pause to think about that. It’s a good question.
 Kristen: I don’t know. Guess I’ll have to try it to find out.
 Lucy tilts her head, her gaze intent on yours.
 Lucy: You’re really brave, aren’t you?
-<kristen Nervous>>
+<<kristen Nervous>>
 Your jaw almost drops with how startled you are at the compliment. Your neck feels warm again, and your brain trips over itself. Error 404, composure not found.
 Kristen: I — uh — what?
 Real smooth, Kristen.
@@ -112,7 +115,7 @@ Lucy: I don’t know. Maybe. It’s kind of drastic, isn’t it?
   <<char_right LucyJoking>>
   Lucy laughs, and you realize you’ve just muttered that aloud. You send her a sheepish grin.
   Lucy: Yes, Kristen. My hair will grow back. Hm…
-<<add_points 1>>
+  <<add_points 1>>
 -> Kristen: You should go for it if you like it.
   Lucy sighs. 
   Lucy: You make it sound so easy.
@@ -151,7 +154,7 @@ Lucy: Yeah. I think this looks great. What do you think?
 <<kristen Awkward>>
 Kristen: Me?! Um. 
 -> Kristen: You’re right! It looks great!
-  <kristen Nervous>>
+  <<kristen Nervous>>
   Lucy sends you an inscrutable look.
   Lucy: Are you sure about that?
   <<add_points 0>>
@@ -173,7 +176,8 @@ Lucy: About time you caught on.
 <<char_right LucyNeutral1>>
 She vanishes back into the fitting room, leaving you chuckling under your breath.
 Lucy goes through ten more outfits, and you make sure to give her your honest opinions. She ends up buying a few pastel skirts, sweaters, and cardigans. 
-Your favorite outfit is a long green dress over a white sweater, and by the smile on her face, she loves it, too. You try not to dwell too long on how lovely she looks.  
+Your favorite outfit is a long green dress over a white sweater, and by the smile on her face, she loves it, too. 
+You try not to dwell too long on how lovely she looks.  
 You make her twirl and take dramatic, posed pictures of her like she’s on a runway. By the end, you’re both breathless with laughter.
 Kristen: Oh, hey, we could get our Spring Fling outfits while we’re here!
 Lucy looks uncertain.
@@ -226,11 +230,12 @@ Kristen: Hey, Lucy, could you watch out for our orders? I’ll be right back.
 Lucy: Sure.
 You hurry away from her curious eyes, then circle back through the crowd when she looks away, ducking dramatically behind customers and garbage bins whenever her gaze sweeps out over the food court. 
 At one point, you think she looks straight at you, but there’s no way. You have the perfect hiding spot crouched behind a table of curious children. 
-You blink up at them. They blink down at you. One kicks you in the cheek, and you scowl. The little menace gives you the middle finger. 
+You blink up at them. They blink down at you. 
+One kicks you in the cheek, and you scowl. The little menace gives you the middle finger. 
 All bets are off. You jump into the fray and begin roughhousing with them. 
 You’re a sweaty, laughing mess by the end of it. Kids are the best. 
 Eventually, you make it to Baskin Goblins without being detected by Lucy. You give yourself a high five.
-Note to self: Inform Riz that his rogue lessons have been working. 
+:Note to self: Inform Riz that his rogue lessons have been working. 
 You take a look at the menu. After some deliberation, you pay and make your way back to Lucy.
 Kristen: For you, my lady. 
 To your disappointment, though Lucy looks touched, she doesn’t look that surprised to see you.
@@ -248,7 +253,7 @@ Lucy: Thank you for the ice cream, though! What did you get?
 -> Kristen: Moon Mist.
   It didn’t sound appealing when Lucy described it, but you’re always down to try new things.
   <<char_right LucySurprised>> 
-  <<playvoiceline LucySurprised3>>
+  <<voiceline LucySurprised3>>
   Lucy’s eyes widen in surprise.
   Lucy: Is that Moon Mist? You remembered?
   Kristen: How could I forget? It was a big moment!

@@ -1,7 +1,9 @@
 ﻿title: Date5
 ---
-<<location "PLACEHOLDER">>
+<<location "Mordred Manor">>
 <<set $date_points = 0>>
+//<<set declare $date_points_total = #>>
+//mordred background
 <<kristen Neutral>>
 It’s another slow, lazy morning — without school for once, because Aguefort forgot the keys to the teacher’s lounge, and apparently that was worthy of a whole shutdown. You’re lying in bed, half a blanket draped over you. Your window is open, and a cool, refreshing breeze blows in. 
 There are probably a billion things you could be doing — homework and student council work among them — but you don’t want to. Instead, you’re content to watch the morning sunlight filter through your billowing curtains and land on the wall in golden stripes.
@@ -45,9 +47,12 @@ KristenText: ya i’m down!
 LucyText: great, see you soon!
 KristenText: cant wait to see u :) 
 Lucy heart-reacts your message, and you smile. 
+<<location "PLACEHOLDER">>
+<<background NatureOutdoors>>
+//outdoors background
 It really is a beautiful day, and you enjoy the sunshine, blue sky, and singing birds as you walk to the park. 
 You catch sight of Lucy right away. She’s waiting by the park entrance, a stash of equipment in her hands and a backpack on her shoulder.
-<<char_right LucyHappy>>
+<<char_right LucyHappy3>>
 <<voiceline LucyGreeting2>>
 Lucy: Hi, Kristen! Ready to pick up some trash?
 <<kristen Grin>>
@@ -90,7 +95,7 @@ Lucy: A token of what?
   <<add_points 0>>
 -> Kristen: Us. 
   <<kristen Soft>>
-  <<char_right LucyRomantic>>
+  <<char_right LucyBlush3>>
   Lucy doesn’t seem to have expected that. Her eyes widen, and she blushes.
   Lucy: To us. 
   You click your rocks together.
@@ -123,7 +128,7 @@ Lucy: I’m an expert. Trust me.
 -> Kristen: I do trust you.
   <<kristen Soft>>
   Your voice comes out softer than you expected. It reminds you of the tone Lucy had during her haircut.
-  <<char_right LucyRomantic>>
+  <<char_right LucyBlush3>>
   Lucy goes still. She looks at you, and her cheeks darken. She seems to be remembering that, too.
   She doesn’t look away. Neither do you. You both just stare at each other for a moment, smiling. 
   <<add_points 2>>
@@ -143,13 +148,13 @@ There’s something in the way she says that last part that catches your attenti
 Lucy gives you a wry expression.
 Lucy: It’s a little weird, I guess. You know, I used to have a crush on her.
 <<kristen Surprised>>
-<<voiceline KristenSuprised1>>
+<<voiceline KristenSurprised1>>
 You drop your trash picker. 
 What.
 WHAT.
 You make a noise without meaning to, something between a squawk and a wheeze. Lucy just shrugs, like she hasn’t just turned your entire world upside down.
 Lucy: She’s really kind of great once you get to know her. And… I don’t know.
-<<char_right LucyRomantic>>
+<<char_right LucyBlush3>>
 Lucy drops her gaze, kicking some paper bags closer together so she can spear them with her picker. She seems strangely bashful.
 Lucy: Maybe I just have a habit of falling for my friends.
 <<voiceline LucyRomantic2>>
@@ -191,9 +196,9 @@ Lucy: I’ve just been noticing that… I don’t know. You haven’t really see
   <<add_points 0>>
 -> Kristen: I, uh… I don’t want to kill the vibe. 
   Lucy: Hey, I’m here for you. Partners, remember? If something’s bothering you, I want to hear about it.
- <<add_points 1>>
+  <<add_points 1>>
 -> Kristen: Whoa. I’m kinda surprised you noticed.
-  <<char_right LucySoft>>
+  <<char_right LucySoft3>>
   Lucy: I’d like to think I know you pretty well by now. 
   <<kristen Soft>>
   Kristen: Yeah, I guess you do.
@@ -220,14 +225,22 @@ Lucy: And how many other people do you think would have done what you did?
 You’re surprised into a laugh.
 Kristen: I mean — okay, probably not that many.
 Lucy nods. 
-Lucy: That’s the reason I pick up trash. I care about nature, about the plants and the animals and the life around us, and I act to protect it and nurture it in all the ways I can. That’s what being a good person is to me, and that’s what you are.
+Lucy: That’s the reason I pick up trash. 
+Lucy: I care about nature, about the plants and the animals and the life around us, and I act to protect it and nurture it in all the ways I can. 
+Lucy: That’s what being a good person is to me, and that’s what you are.
 <<kristen Soft>>
 You lean your head against her shoulder, moved. Her words are filled with conviction, as fierce as the day she had spoken to you about Ruvina. She really, truly believes in you.
 And you think maybe you can believe her, too. 
 Kristen: Thank you, Lucy. I mean it.
 Lucy: Of course. Anytime, Kristen.
 <<kristen Neutral>>
-Eventually, you head back to the park and check in with the volunteer coordinator. You and Lucy give each other a quick hug, and then you both head home.
+Eventually, you head back to the park and check in with the volunteer coordinator. You and Lucy give each other a quick hug.
+Lucy: Hey, want to come over to my place next week?
+Kristen: Yeah, sure! What will we be doing?
+Lucy: I’ll think about it and text you. See you then!
+<<char_right transparent>>
+<<location "Mordred Manor">>
+<<background Mordred>>
 When you get back, you flop onto your bed, letting out a deep sigh. You hadn’t expected things to get so introspective today, but you can’t deny that you feel a lot better about yourself.
 It seems that this journey to help Lucy learn more about herself is helping <i>you</i>, too.
 You can’t wait to uncover what you’ll learn next. 
