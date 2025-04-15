@@ -1,8 +1,7 @@
 ﻿title: Date4
 
 ---
-April 7
-<<background “City Outside (Day)”>>
+<<background "City Outside (Day)">>
 <<location "City Center">>
 <<set $date_points = 0>>
 <<set $date_points_total = 4>>
@@ -249,7 +248,7 @@ Lucy smiles sweetly before reaching over to the steering wheel and jerking it sl
 Kipperlilly: WHY. WHY WHY WHY.
 
 <<voiceline LucyHappy2>>
-Lucy: I changed my mind,I <i>do</i> want you dead.
+Lucy: I changed my mind, I <i>do</i> want you dead.
 
 <<char_right KipperlillyAnnoyed>>
 <<char_left LucyNeutral2>>
@@ -311,8 +310,8 @@ Lucy: That’ll make it hard to go on this date, won’t it?
 <<char_left LucyNeutral>>
 Kipperlilly just crosses her arms and sniffs. You and Lucy laugh silently and decide to show her some mercy.
 
-<<background “Nature Outdoors (Day)”>>
-<<location “The Woods”>>
+<<background NatureOutdoors>>
+<<location "The Woods">>
 
 Eventually Kipperlilly guides you off the beaten track and onto a side road that leads into some kind of national forest by the border to the Baronies. 
 
@@ -351,7 +350,7 @@ Kipperlilly rolls her eyes, disbelieving.
 
 Kipperlilly: Whatever. We’re here.
 
-<<location “Berry Patch”>>
+<<location "Berry Patch">>
 Kipperlilly pushes a bush to the side, revealing a surprisingly sunlit clearing. Thorny bushes, laden with the largest raspberries you’ve ever seen, have taken over half of the clearing.
 
 <<char_left LucySurprised>>
@@ -444,21 +443,15 @@ You don’t think she notices at first until suddenly one of your tosses is inte
 
 The three of you stare at each other for a second, shocked by what just happened, before you all burst out into laughter at the same time. 
 
-[ok ok somethin somethin lil list of things i think can go next
-Somethin somethin race to see who can fill their basket faster
-Some or all of them proceeding to eat berries out of each others baskets to cheat. shenanigans.
-i think kristen tries to throw one into her mouth and lucy and kip bat them away every chance they get btw
-Then they chill and chat :)
-
 There’s a lull in the conversation as you all catch your breaths from laughing. You’re warm in ways that are separate from the sunlight shining down on you, and the others are flushing pink from both the effort it takes to fill the baskets and, if they’re on the same page you are, the company. 
 <<kristen Soft>>
 <<voiceline KristenDateSuccessLucy1>>
 -> Kristen: “Today has been perfect.”
-<<add_points 2>>
+  <<add_points 2>>
 -> Kristen: “I really like this.”
-<<add_points 2>>
+  <<add_points 2>>
 -> Kristen: “We should do this again.”
-<<add_points 2>>
+  <<add_points 2>>
 
 <<char_right KipperlillyBlush>>
 <<char_left LucyBlush>>
@@ -554,6 +547,5 @@ For once, there’s no need to speak. You sit there with Lucy and Kipperlilly, t
 
 All is right with the world. 
 
-<<jump Cassandra>>
 ===
 

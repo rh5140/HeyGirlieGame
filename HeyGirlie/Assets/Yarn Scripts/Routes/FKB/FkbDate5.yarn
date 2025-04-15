@@ -1,8 +1,6 @@
 ﻿title: Date1
-
 ---
-April 7
-<<background “Cat Cafe”>>
+<<background "Cat Cafe">>
 <<location "Cat Cafe">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 7>>
@@ -87,18 +85,18 @@ Lucy chuckles a little sheepishly as she nods, drawing both of your attention ba
 Lucy: Yeah. I thought it could be cool if all three of us did something together, you know? Don’t you think?
 
 Kipperlilly’s lips press together like she’s considering disagreeing, but you manage to speak before her.
-  -> Kristen: “Of course! It’s such a cool idea I wish I’d thought of it myself.”
-<<char_left LucyHappy>>
+-> Kristen: “Of course! It’s such a cool idea I wish I’d thought of it myself.”
+  <<char_left LucyHappy>>
   Lucy beams at you, and Kipperlilly’s eyes widen again before she folds her arms, shrugging nonchalantly.
   <<voiceline KipNeutral1>>
   Kipperlilly: Sure, definitely. No problems here. 
   <<add_points 2>>
-  -> Kristen: “It could be pretty fun.”
+-> Kristen: “It could be pretty fun.”
   Lucy: That’s what I thought. Kip?
   <<voiceline KipNeutral2>>
   Kipperlilly: I suppose we’re already here. 
   <<add_points 1>>
-  -> Kristen: “Are you really sure, Lucy?”
+-> Kristen: “Are you really sure, Lucy?”
   <<char_left LucySad>>
   Lucy’s face falls a little, and she scratches behind her ear. Kipperlilly narrows her eyes at you.
   <<char_right KipperlillySmug>>
@@ -143,17 +141,17 @@ But if there’s one thing Kristen Applebees is good at, it’s getting out of a
   Lucy: I can order you something else—
   <<voiceline KipNeutral2>>
   Kipperlilly: No, don’t waste your money. I can have this.
-<<add_points 1>>
+  <<add_points 1>>
 -> Kristen: “You could always drink half of it and then dump an espresso shot into it?”
   <<voiceline KipAnnoyed2>>
   Kipperlilly: That’ll get me wired out of my mind.
   Lucy: When aren’t you wired out of your mind?
-<<add_points 1>>
+  <<add_points 1>>
 -> Kristen: “Do you want to trade with me?”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly glares at you before protectively pulling the drink towards herself. Lucy blinks at her sudden territorial display.
-<<add_points 0>>
+  <<add_points 0>>
 
 <<char_left LucyNeutral2>>
 With the drinks sorted, all three of you take a few sips, waiting for someone to start the conversation. 
@@ -168,15 +166,15 @@ It feels weird to be sitting in awkward silence, especially since you thought yo
 
 <<voiceline KristenAwkward3>>
 Kristen: So… 
-  -> Kristen: “Have either of you been here before?”
+-> Kristen: “Have either of you been here before?”
   They both shake their heads.
   Lucy: It’s only been open a couple of years anyway.
   <<add_points 2>>
-  -> Kristen: “How about something to eat?”
+-> Kristen: “How about something to eat?”
   Kipperlilly: I guess some of the cakes look nice?
   Lucy: I still need to take a look at the menu. I was pretty distracted thinking about drinks.
   <<add_points 1>>
-  -> Kristen: “Who did you invite first?”
+-> Kristen: “Who did you invite first?”
   Kipperlilly narrows her eyes at you again before Lucy clears her throat.
   Lucy: I don’t think that really matters.
   <<add_points 0>>
@@ -224,13 +222,13 @@ Lucy indulges him, scritching the cat between his ears. Kipperlilly sits down ag
 You look around to see if there’s any potential kitty affection heading your way, but most of the other cats appear to be either already occupied with other customers or far more concerned with lying in one of the sunny spots in the cafe. The rules are very clear that you’re supposed to let the cats come to you, so it looks like you’ll just have to share with Lucy for now.
 
 You shuffle a little closer to her, reaching out a hand for the cat to notice and sniff.
-  -> <i>Scratch the top of his head.</i>
- You copy what Lucy had been doing and are rewarded with the cat tilting his head towards you and meowing.
+-> <i>Scratch the top of his head.</i>
+  You copy what Lucy had been doing and are rewarded with the cat tilting his head towards you and meowing.
   <<add_points 1>>
-  -> <i>Stroke his back.</i>
+-> <i>Stroke his back.</i>
   The cat slowly stretches his back before walking around Lucy, winding his tail around your hand as he goes past. 
   <<add_points 1>>
-  -> <i>Keep your hand still.</i>
+-> <i>Keep your hand still.</i>
   After a moment of sniffing, the cat bumps his head against your waiting hand, pushing against it until you start scratching behind his ears.
   <<add_points 1>> 
 
@@ -287,13 +285,13 @@ Kipperlilly: Okay, whatever, I’ll be right back.
 
 <<char_right KipperlillyNeutral>>
 She gives both of you another look. The one she gives to Lucy seems more hesitant, but the one she gives to you is definitely wary. It’s easy enough to read. “Don’t try anything,” you’re pretty sure. You can’t really imagine what Kipperlilly thinks you’re going to do in the two minutes she’s gone, but you can try to reassure her.
-  -> <i>Give her a thumbs up!</i>
+-> <i>Give her a thumbs up!</i>
   She audibly exhales, walking away.
   <<add_points 1>>
-  -> <i>Just smile.</i>
+-> <i>Just smile.</i>
   She doesn’t smile back, but she walks away without any further fuss.
   <<add_points 1>>
-  -> <i>Waggle your eyebrows suggestively.</i>
+-> <i>Waggle your eyebrows suggestively.</i>
 <<kristen Grin>>
 <<char_right KipperlillyBlush>>
   Cheeks going a little red again, Kipperlilly frowns and quickly darts away to the closest worker, asking where the cat toys are. She’s definitely not planning on leaving you two alone for very long.
