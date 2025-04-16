@@ -70,11 +70,9 @@ public class GameManager : MonoBehaviour
         if(pause) {
             Time.timeScale = 0;
             pauseLock = true;
-            Debug.Log("Pause");
         } else {
             Time.timeScale = 1;
             pauseLock = false;
-            Debug.Log("Unpause");
         }
     }
 
