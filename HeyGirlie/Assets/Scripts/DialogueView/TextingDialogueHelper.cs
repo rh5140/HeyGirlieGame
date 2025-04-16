@@ -31,6 +31,8 @@ namespace Yarn.Unity.Example
         // current message bubble styling settings, modified by SetSender
         bool isRightAlignment = true;
         Color currentBGColor = Color.black, currentTextColor = Color.white;
+        Color kristenColor = new Color(0.2980392f, 0.6941177f, 0.9960784f, 1f);
+        Color otherColor = Color.white;
 
         void Awake()
         {
@@ -47,16 +49,18 @@ namespace Yarn.Unity.Example
         public void SetSenderMe()
         {
             isRightAlignment = true;
-            currentBGColor = Color.blue;
-            currentTextColor = Color.white;
+            currentBGColor = kristenColor;
+            // currentBGColor = Color.blue;
+            // currentTextColor = Color.white;
         }
 
         // YarnCommand <<Them>> does not use YarnCommand C# attribute, registers in Awake() instead
         public void SetSenderThem()
         {
             isRightAlignment = false;
-            currentBGColor = Color.white;
-            currentTextColor = Color.black;
+            currentBGColor = otherColor;
+            // currentBGColor = Color.white;
+            // currentTextColor = Color.black;
         }
 
         // when we clone a new message box, re-style the message box based on whether SetSenderMe or SetSenderThem was most recently called
@@ -154,13 +158,13 @@ namespace Yarn.Unity.Example
             if(dialogueLine.CharacterName == "Kristen")
             {
                 isRightAlignment = true;
-                currentBGColor = Color.blue;
+                currentBGColor = kristenColor;
                 currentTextColor = Color.white;
             }
             else
             {
                 isRightAlignment = false;
-                currentBGColor = Color.white;
+                currentBGColor = otherColor;
                 currentTextColor = Color.black;
             }
             if (currentTypewriterEffect != null)
