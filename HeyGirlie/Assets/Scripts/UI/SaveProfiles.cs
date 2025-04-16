@@ -11,8 +11,7 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button deleteButton;
-    [SerializeField] private GameObject[] saves;
-    [SerializeField] private Sprite defaultScreenshot;
+    [SerializeField] private LoadPolaroid[] saves;
     [SerializeField] private GameObject overwritePopup;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private TMP_InputField playerName;
@@ -30,9 +29,6 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
         loadButton.interactable = false;
         deleteButton.interactable = false;
         saveButton.interactable = false;
-
-        SetScreenshots();
-        SetNames();
     }
 
     void Update(){
@@ -84,8 +80,8 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
         yield return new WaitUntil(GameManager.Instance.Save);
         saveButton.interactable = false;
         overwritePopup.SetActive(false);
-        SetNames();
-        SetScreenshots();
+        saves[selectedSave - 1].SetName();
+        saves[selectedSave - 1].SetScreenshot();
         newGamePopup.SetActive(false);
     }
 
@@ -101,26 +97,9 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     public void DeleteSave(){
         if(selectedSave < 1 || selectedSave > 10) return;
         SaveManager.DeleteData(selectedSave);
-        SetScreenshots();
-        SetNames();
+        saves[selectedSave - 1].SetName();
+        saves[selectedSave - 1].SetScreenshot();
         Unselect(false);
-    }
-
-    private void SetScreenshots(){
-        for(int save = 1; save <= saves.Length; save++){
-            Sprite screenshot = SaveManager.getScreenshot(save);
-
-            saves[save - 1].transform.Find("Image").GetComponent<Image>().sprite = (screenshot != null) ? screenshot : defaultScreenshot;
-        }
-    }
-
-    private void SetNames(){
-        for(int save = 1; save <= saves.Length; save++){
-            PlayerData data = SaveManager.findSave(save);
-
-            saves[save - 1].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getPlayerName() : "";
-            saves[save - 1].transform.Find("Location").GetComponent<TextMeshProUGUI>().text = (data != null) ? data.getLocation() : "";
-        }
     }
 
     private void Unselect(bool saveFound){

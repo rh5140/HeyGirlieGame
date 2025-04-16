@@ -15,7 +15,6 @@ public static class SaveManager
 {
     public static string profilePath = Application.persistentDataPath + "/Profiles/";
     public static string dataPath = Application.persistentDataPath + "/Profiles/Girlie{0}.{1}";
-    public static string screenshotPath = Application.persistentDataPath + "/Profiles/Girlie{0}.{1}";
     public static int exampleProfile = 1; // This is for testing the save/load features. will be deleted once that's all done
 
     // Creates new save file

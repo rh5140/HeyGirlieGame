@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private string _playerName = "Kristen";
     private string _location = "Spyre";
     private int _saveProfile = 0;
+    [SerializeField] private GameObject savePopup;
 
     // public string _lastMenu = "Main Menu";
 
@@ -70,11 +71,9 @@ public class GameManager : MonoBehaviour
         if(pause) {
             Time.timeScale = 0;
             pauseLock = true;
-            Debug.Log("Pause");
         } else {
             Time.timeScale = 1;
             pauseLock = false;
-            Debug.Log("Unpause");
         }
     }
 
@@ -264,6 +263,7 @@ public class GameManager : MonoBehaviour
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);
+        Instantiate(savePopup);
         return true;
     }
 
