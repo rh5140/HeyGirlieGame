@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private string _playerName = "Kristen";
     private string _location = "Spyre";
     private int _saveProfile = 0;
+    [SerializeField] private GameObject savePopup;
 
     // public string _lastMenu = "Main Menu";
 
@@ -262,6 +263,7 @@ public class GameManager : MonoBehaviour
                                             schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
 
         SaveManager.SaveData(data, _saveProfile);
+        Instantiate(savePopup);
         return true;
     }
 

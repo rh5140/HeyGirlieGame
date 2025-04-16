@@ -65,7 +65,7 @@ public class Dropdown : MonoBehaviour
         while(time < lerpTime){
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
 
-            time += Time.unscaledDeltaTime;
+            time += Time.deltaTime;
             yield return null;
         }
 
@@ -103,7 +103,7 @@ public class Dropdown : MonoBehaviour
 
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
 
-            time += Time.unscaledDeltaTime;
+            time += Time.deltaTime;
             yield return null;
         }
 
