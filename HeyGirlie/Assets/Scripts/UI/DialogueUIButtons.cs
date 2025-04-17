@@ -6,7 +6,7 @@ using Yarn.Unity;
 public class DialogueUIButtons : MonoBehaviour
 {
     [SerializeField] private GameObject saveProfileMenu;
-    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject characterProfiles;
     [SerializeField] private HGGLineView hggLineView;
     [SerializeField] private Toggle fastFowardButton;
 
@@ -31,8 +31,8 @@ public class DialogueUIButtons : MonoBehaviour
         hggLineView.UserRequestedViewAdvancement();
     }
 
-    public void Settings(){
-        Instantiate(settingsMenu);
+    public void CharacterProfiles(){
+        Instantiate(characterProfiles);
     }
 
     // private void Unselect(){
