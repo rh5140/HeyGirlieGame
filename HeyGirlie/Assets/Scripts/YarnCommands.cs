@@ -198,11 +198,11 @@ public class YarnCommands : MonoBehaviour
             case "Lucy":
                 li = GameManager.Instance.GetLoveInterest(Character.Lucy);
                 break;
-            case "Naradriel":
-                li = GameManager.Instance.GetLoveInterest(Character.Naradriel);
-                break;
             case "Tracker":
                 li = GameManager.Instance.GetLoveInterest(Character.Tracker);
+                break;
+            case "Naradriel":
+                li = GameManager.Instance.GetLoveInterest(Character.Naradriel);
                 break;
             case "FKB":
                 li = GameManager.Instance.GetLoveInterest(Character.Frostkettle);

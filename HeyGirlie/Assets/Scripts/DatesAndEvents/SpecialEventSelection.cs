@@ -33,7 +33,7 @@ public class SpecialEventSelection : MonoBehaviour
             }
             return false;
         }
-        int liIdx = (int)Character.Fig; // 0=Kristen, 1=Cassandra, 2=Fig, ..., 7=Tracker, 8=Frostkettle, 9=Trackernara
+        int liIdx = (int)Character.Fig; // 0=Kristen, 1=Cassandra, 2=Fig, ..., 6=Tracker, 7=Nara, 8=Frostkettle, 9=Trackernara
         int buttonsTurnedOff = 0;
         bool week6 = threshold > 6; // Threshold = 7 in week 6
         // Button array shorter than LI array when no polyam included
