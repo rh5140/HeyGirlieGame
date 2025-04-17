@@ -13,7 +13,6 @@ public class Settings : MonoBehaviour
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider;
     [SerializeField] private Toggle autoforwardToggle;
 
-    [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject saveProfilesMenu;
 
     [SerializeField] private Image screenshot;
@@ -84,7 +83,7 @@ public class Settings : MonoBehaviour
     }
 
     public void Close(){
-        Destroy(settingsMenu);
+        Destroy(gameObject);
     }
 
     private void SetSettings(){
