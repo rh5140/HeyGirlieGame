@@ -86,6 +86,7 @@ public class SettingManager : MonoBehaviour
     
     public void ChangeTextSize(float value)
     {
+        /* This is for if we want the settings to only have 4 text size options
         Dictionary<float, float> tempDict = new Dictionary<float, float>();
         tempDict.Add(1, 50);
         tempDict.Add(2, 60);
@@ -93,12 +94,14 @@ public class SettingManager : MonoBehaviour
         tempDict.Add(4, 80);
         float dictValue;
         tempDict.TryGetValue(value, out dictValue);
-        //need to change this to reference the dialogue system variant gameobject
+        */
         if (hggLineView != null)
         {
             GameObject[] temp = GameObject.FindGameObjectsWithTag("VariableText");
             foreach (GameObject variableText in temp){
-                variableText.GetComponent<TMP_Text>().fontSize = dictValue;
+                variableText.GetComponent<TMP_Text>().fontSize = value;
+                //This is for if we want the settings to only have 4 text size options
+                //variableText.GetComponent<TMP_Text>().fontSize = dictValue;
             }
         }
         //still need to change option text size
@@ -129,9 +132,9 @@ public class SettingManager : MonoBehaviour
 
         if(PlayerPrefs.HasKey(nameof(Setting.Autoforward))) autoforward = PlayerPrefs.GetInt(nameof(Setting.Autoforward)) != 0;
         else autoforward = false;
-        /*
+        
         if (PlayerPrefs.HasKey(nameof(Setting.TextSize))) textSize = PlayerPrefs.GetFloat(nameof(Setting.TextSize));
-        else textSize = 68f;*/
+        else textSize = 68f;
 
         ChangeFullscreen(fullscreen);
         ChangeVSync(vsync);
@@ -141,7 +144,7 @@ public class SettingManager : MonoBehaviour
         ChangeVolVoice(volVoices);
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
-        //ChangeTextSize(textSize);
+        ChangeTextSize(textSize);
     }
 
     public void SetLineView(HGGLineView lineView){
@@ -151,5 +154,6 @@ public class SettingManager : MonoBehaviour
     public void UpdateLineView(){
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
+        ChangeTextSize(textSize);
     }
 }

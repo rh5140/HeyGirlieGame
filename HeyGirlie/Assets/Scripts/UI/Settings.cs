@@ -80,7 +80,7 @@ public class Settings : MonoBehaviour
     
     public void ChangeTextSize(float value)
     {
-        //PlayerPrefs.SetFloat(nameof(Setting.TextSize), value);
+        PlayerPrefs.SetFloat(nameof(Setting.TextSize), value);
         SettingManager.Instance.ChangeTextSize(value);
     }
 
