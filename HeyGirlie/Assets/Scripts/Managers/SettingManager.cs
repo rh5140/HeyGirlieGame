@@ -18,6 +18,7 @@ public class SettingManager : MonoBehaviour
 
     [SerializeField] public AudioSource music, sfx, voices;
     [SerializeField] private HGGLineView hggLineView = null;
+    [SerializeField] private HGGOptionView hggOptionView = null;
 
     void Awake() {
         if (_instance != null && _instance != this)
@@ -95,6 +96,7 @@ public class SettingManager : MonoBehaviour
         float dictValue;
         tempDict.TryGetValue(value, out dictValue);
         */
+        textSize = value;
         if (hggLineView != null)
         {
             GameObject[] temp = GameObject.FindGameObjectsWithTag("VariableText");
@@ -151,9 +153,19 @@ public class SettingManager : MonoBehaviour
         hggLineView = lineView;
     }
 
+    public void SetOptionView(HGGOptionView optionView)
+    {
+        hggOptionView = optionView;
+    }
+
     public void UpdateLineView(){
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
+        ChangeTextSize(textSize);
+    }
+
+    public void UpdateOptionView()
+    {
         ChangeTextSize(textSize);
     }
 }

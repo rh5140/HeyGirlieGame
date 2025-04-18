@@ -64,8 +64,15 @@ namespace Yarn.Unity
             }
         }
 
+        private void Awake()
+        {
+            SettingManager.Instance.SetOptionView(this);
+            SettingManager.Instance.UpdateOptionView();
+        }
+
         void Update()
         {
+            //SettingManager.Instance.UpdateOptionView();
             if (Input.GetKeyUp(key) || Input.GetKeyUp(keyAlt))
             {
                 InvokeOptionSelected();
