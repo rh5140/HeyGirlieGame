@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 using Yarn.Unity;
+using TMPro;
+using System.Collections.Generic;
 
 public class SettingManager : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private CursorMode cursorMode = CursorMode.Auto;
 
     [SerializeField] public bool fullscreen = false, vsync = false;
-    [SerializeField] public float cursor = 0f, volMusic = 1f, volSFX = 1f, volVoices = 1f, speed = 1f;
+    [SerializeField] public float cursor = 0f, volMusic = 1f, volSFX = 1f, volVoices = 1f, speed = 1f, textSize = 68f;
     [SerializeField] public bool autoforward = false;
 
     [SerializeField] public AudioSource music, sfx, voices;
@@ -81,6 +83,27 @@ public class SettingManager : MonoBehaviour
         autoforward = value;
         if(hggLineView != null) hggLineView.SetAutoAdvanced(value);
     }
+    
+    public void ChangeTextSize(float value)
+    {
+        Dictionary<float, float> tempDict = new Dictionary<float, float>();
+        tempDict.Add(1, 50);
+        tempDict.Add(2, 60);
+        tempDict.Add(3, 70);
+        tempDict.Add(4, 80);
+        float dictValue;
+        tempDict.TryGetValue(value, out dictValue);
+        //need to change this to reference the dialogue system variant gameobject
+        if (hggLineView != null)
+        {
+            GameObject[] temp = GameObject.FindGameObjectsWithTag("VariableText");
+            foreach (GameObject variableText in temp){
+                variableText.GetComponent<TMP_Text>().fontSize = dictValue;
+            }
+        }
+        //still need to change option text size
+    }
+    
 
     public void LoadSettings(){
         if(PlayerPrefs.HasKey(nameof(Setting.Fullscreen))) fullscreen = PlayerPrefs.GetInt(nameof(Setting.Fullscreen)) != 0;
@@ -106,6 +129,9 @@ public class SettingManager : MonoBehaviour
 
         if(PlayerPrefs.HasKey(nameof(Setting.Autoforward))) autoforward = PlayerPrefs.GetInt(nameof(Setting.Autoforward)) != 0;
         else autoforward = false;
+        /*
+        if (PlayerPrefs.HasKey(nameof(Setting.TextSize))) textSize = PlayerPrefs.GetFloat(nameof(Setting.TextSize));
+        else textSize = 68f;*/
 
         ChangeFullscreen(fullscreen);
         ChangeVSync(vsync);
@@ -115,6 +141,7 @@ public class SettingManager : MonoBehaviour
         ChangeVolVoice(volVoices);
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
+        //ChangeTextSize(textSize);
     }
 
     public void SetLineView(HGGLineView lineView){
