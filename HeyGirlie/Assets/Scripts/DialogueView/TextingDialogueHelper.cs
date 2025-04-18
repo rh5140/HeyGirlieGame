@@ -45,24 +45,6 @@ namespace Yarn.Unity.Example
             UpdateMessageBoxSettings();
         }
 
-        // YarnCommand <<Me>>, but does not use YarnCommand C# attribute, registers in Awake() instead
-        public void SetSenderMe()
-        {
-            isRightAlignment = true;
-            currentBGColor = kristenColor;
-            // currentBGColor = Color.blue;
-            // currentTextColor = Color.white;
-        }
-
-        // YarnCommand <<Them>> does not use YarnCommand C# attribute, registers in Awake() instead
-        public void SetSenderThem()
-        {
-            isRightAlignment = false;
-            currentBGColor = otherColor;
-            // currentBGColor = Color.white;
-            // currentTextColor = Color.black;
-        }
-
         // when we clone a new message box, re-style the message box based on whether SetSenderMe or SetSenderThem was most recently called
         void UpdateMessageBoxSettings()
         {
@@ -75,14 +57,14 @@ namespace Yarn.Unity.Example
             var layoutGroup = dialogueBubblePrefab.GetComponent<HorizontalLayoutGroup>();
             if (isRightAlignment)
             {
-                layoutGroup.padding.left = 32;
-                layoutGroup.padding.right = 0;
+                // layoutGroup.padding.left = 32;
+                // layoutGroup.padding.right = 0;
                 bg.transform.SetAsLastSibling();
             }
             else
             {
-                layoutGroup.padding.left = 0;
-                layoutGroup.padding.right = 32;
+                // layoutGroup.padding.left = 0;
+                // layoutGroup.padding.right = 32;
                 bg.transform.SetAsFirstSibling();
             }
         }
