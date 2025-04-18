@@ -2,6 +2,8 @@
 ---
 <<wait 0.5>>
 <<kristen Neutral>>
+<<declare $no_special_event = false>>
+<<get_special_event_fail 7>>
 You’ve known for years that Elmville has an annual spring fair, it’s just that you’ve never actually been. Your parents had avoided them like the plague, claiming they were hotbeds of ungodly people, sinful foods, and demonic activities.
 Honestly, those all sound pretty good to you these days, so you’re excited to experience them for the first time. From what you can tell from your friends, going to the spring fair is an incredibly normal part of Elmville life — the sky is blue, Aguefort is crazy, everyone goes to the fair every year.
 You’re a little envious. You’ve been meaning to go for a while, but one thing or another had popped up every single year of high school — jail, the Nightmare King, just being really fucking busy — and you hadn’t made it. You’ve made a solemn vow to yourself that this year’ll be different.
@@ -16,8 +18,6 @@ No time to get maudlin, though! You’ve just gotta make up for lost time by hav
 There are so many things here you’d be happy to spend hours doing, but there are only so many hours in the day.
 :The big question is: what do you want to do first?
 
-<<declare $no_special_event = false>>
-<<get_special_event_fail 7>>
 <<if $no_special_event>>
     <<jump EventFail>>
 <<else>>
