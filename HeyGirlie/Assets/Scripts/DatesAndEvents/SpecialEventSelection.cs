@@ -7,6 +7,7 @@ public class SpecialEventSelection : MonoBehaviour
     [SerializeField] protected DialogueRunner _dialogueRunner;
     [SerializeField] protected GameObject[] _buttons; // Set buttons in same order as LoveInterest array in GameManager
     [SerializeField] protected GameObject _buttonContainer;
+    [SerializeField] protected GameObject _polyamButtonContainer;
 
     private int buttonsTurnedOff = 0;
 
@@ -25,6 +26,7 @@ public class SpecialEventSelection : MonoBehaviour
     public bool ActivateButtons(int threshold)
     {
         _buttonContainer.SetActive(true);
+        if(GameManager.Instance.GetPolyamActive()) _polyamButtonContainer.SetActive(true);
         if (threshold == 0)
         {   
             foreach (GameObject button in _buttons)
@@ -43,14 +45,27 @@ public class SpecialEventSelection : MonoBehaviour
             int liDateCount = GameManager.Instance.GetLoveInterest((Character)liIdx).GetDateCount();
             if (liDateCount < threshold)
             {
-                if (week6 && (liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara) && liDateCount == 2) // True if you've gone on 2 polyam dates by week 6 event
-                {
-                    continue;
-                }
-                else
-                {
+                Debug.Log(week6 + " " + (Character)liIdx + " " + liDateCount);
+                if(liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara){
+                    if(week6 && liDateCount >= 3){
+                        continue;
+                    } else if(liIdx != (int)GameManager.Instance.GetPolyamPair()) {
+                        button.SetActive(false);
+                    } else {
+                        button.GetComponent<Button>().interactable = false;
+                    }
+                } else {
                     button.GetComponent<Button>().interactable = false;
                 }
+                // if (week6 && (liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara) && liDateCount >= 3) // True if you've gone on 2 polyam dates by week 6 event
+                // {
+                //     continue;
+                // }
+                // else
+                // {
+                //     if((liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara) && liIdx != (int)GameManager.Instance.GetPolyamPair()) button.SetActive(false);
+                //     button.GetComponent<Button>().interactable = false;
+                // }
             }
             liIdx++;
         }
