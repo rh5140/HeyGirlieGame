@@ -28,7 +28,7 @@ namespace Yarn.Unity
         [SerializeField] bool showUnavailableOptions = false;
 
         [Header("Last Line Components")]
-        [SerializeField] TextMeshProUGUI lastLineText;
+        [SerializeField] public TextMeshProUGUI lastLineText;
         [SerializeField] GameObject lastLineContainer;
 
         [SerializeField] TextMeshProUGUI lastLineCharacterNameText;
@@ -43,11 +43,20 @@ namespace Yarn.Unity
         // The line we saw most recently.
         LocalizedLine lastSeenLine;
 
+        public void Awake()
+        {
+            SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+            SettingManager.Instance.UpdateOptionView();
+        }
+
         public void Start()
         {
             canvasGroup.alpha = 0;
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
+
+            //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+            //SettingManager.Instance.UpdateOptionView();
         }
 
         public void Reset()
@@ -66,6 +75,9 @@ namespace Yarn.Unity
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
             // If we don't already have enough option views, create more
+            SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+            SettingManager.Instance.UpdateOptionView();
+            Debug.Log("running RunOptions");
             if (dialogueOptions.Length > 3)
             {
                 gridLayout.gameObject.SetActive(true);
@@ -96,6 +108,8 @@ namespace Yarn.Unity
             {
                 var optionView = optionViews[i];
                 var option = dialogueOptions[i];
+                //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+                //SettingManager.Instance.UpdateOptionView();
 
                 if (option.IsAvailable == false && showUnavailableOptions == false)
                 {
@@ -179,6 +193,9 @@ namespace Yarn.Unity
             HGGOptionView CreateNewOptionView(Canvas layout)
             {
                 var optionView = Instantiate(optionViewPrefab);
+                //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+                SettingManager.Instance.UpdateOptionView();
+                Debug.Log("running CreateNewOptionView");
                 optionView.transform.SetParent(layout.gameObject.transform, false);
                 optionView.transform.SetAsLastSibling();
 

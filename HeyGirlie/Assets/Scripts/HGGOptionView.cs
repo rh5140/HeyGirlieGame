@@ -13,7 +13,7 @@ namespace Yarn.Unity
 {
     public class HGGOptionView : UnityEngine.UI.Selectable, ISubmitHandler, IPointerClickHandler, IPointerEnterHandler
     {
-        [SerializeField] TextMeshProUGUI text;
+        [SerializeField] public TextMeshProUGUI text;
         [SerializeField] bool showCharacterName = false;
         [SerializeField] GameObject selectionIcon;
         [SerializeField] GameObject hoverIcon;
@@ -63,13 +63,13 @@ namespace Yarn.Unity
                 interactable = value.IsAvailable;
             }
         }
-
+        /*
         private void Awake()
         {
             SettingManager.Instance.SetOptionView(this);
             SettingManager.Instance.UpdateOptionView();
         }
-
+        */
         void Update()
         {
             //SettingManager.Instance.UpdateOptionView();

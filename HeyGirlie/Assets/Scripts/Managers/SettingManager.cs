@@ -18,7 +18,8 @@ public class SettingManager : MonoBehaviour
 
     [SerializeField] public AudioSource music, sfx, voices;
     [SerializeField] private HGGLineView hggLineView = null;
-    [SerializeField] private HGGOptionView hggOptionView = null;
+    [SerializeField] private List<HGGOptionView> hggOptionViews = null;
+    [SerializeField] private HGGOptionsListView hggOptionsListView = null;
 
     void Awake() {
         if (_instance != null && _instance != this)
@@ -84,7 +85,8 @@ public class SettingManager : MonoBehaviour
         autoforward = value;
         if(hggLineView != null) hggLineView.SetAutoAdvanced(value);
     }
-    
+
+
     public void ChangeTextSize(float value)
     {
         /* This is for if we want the settings to only have 4 text size options
@@ -96,17 +98,37 @@ public class SettingManager : MonoBehaviour
         float dictValue;
         tempDict.TryGetValue(value, out dictValue);
         */
+       
         textSize = value;
+        // change line view font size
         if (hggLineView != null)
         {
-            GameObject[] temp = GameObject.FindGameObjectsWithTag("VariableText");
-            foreach (GameObject variableText in temp){
-                variableText.GetComponent<TMP_Text>().fontSize = value;
-                //This is for if we want the settings to only have 4 text size options
-                //variableText.GetComponent<TMP_Text>().fontSize = dictValue;
+            hggLineView.lineText.fontSize = value;
+        }
+        // change last line & option view font size 
+        if (hggOptionsListView != null)
+        {
+            // change last line font size
+            hggOptionsListView.lastLineText.fontSize = value;
+            // change each option view font size
+            foreach (HGGOptionView option in hggOptionViews)
+            {
+                option.text.fontSize = value;
+                //Debug.Log("changing option font size");
             }
         }
-        //still need to change option text size
+        // change option view font size
+        /*
+        if (hggOptionView != null)
+        {
+            foreach (HGGOptionView option in hggOptionViews)
+            {
+                option.text.fontSize = value;
+            }
+            // hggOptionView.text.fontSize = value;
+        }
+        */
+        
     }
     
 
@@ -153,10 +175,19 @@ public class SettingManager : MonoBehaviour
         hggLineView = lineView;
     }
 
+    /*
     public void SetOptionView(HGGOptionView optionView)
     {
         hggOptionView = optionView;
     }
+    */
+
+    public void SetOptionsListView(HGGOptionsListView optionsListView, List<HGGOptionView> optionViews)
+    {
+        hggOptionsListView = optionsListView;
+        hggOptionViews = optionViews;
+    }
+
 
     public void UpdateLineView(){
         ChangeSpeed(speed);
@@ -167,5 +198,7 @@ public class SettingManager : MonoBehaviour
     public void UpdateOptionView()
     {
         ChangeTextSize(textSize);
+        //Debug.Log("running UpdateOptionView");
     }
+
 }
