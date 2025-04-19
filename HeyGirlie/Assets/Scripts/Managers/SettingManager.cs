@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 using Yarn.Unity;
+using TMPro;
+using System.Collections.Generic;
 
 public class SettingManager : MonoBehaviour
 {
@@ -11,11 +13,13 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private CursorMode cursorMode = CursorMode.Auto;
 
     [SerializeField] public bool fullscreen = false, vsync = false;
-    [SerializeField] public float cursor = 0f, volMusic = 1f, volSFX = 1f, volVoices = 1f, speed = 1f;
+    [SerializeField] public float cursor = 0f, volMusic = 1f, volSFX = 1f, volVoices = 1f, speed = 1f, textSize = 68f;
     [SerializeField] public bool autoforward = false;
 
     [SerializeField] public AudioSource music, sfx, voices;
     [SerializeField] private HGGLineView hggLineView = null;
+    [SerializeField] private List<HGGOptionView> hggOptionViews = null;
+    [SerializeField] private HGGOptionsListView hggOptionsListView = null;
 
     void Awake() {
         if (_instance != null && _instance != this)
@@ -82,6 +86,52 @@ public class SettingManager : MonoBehaviour
         if(hggLineView != null) hggLineView.SetAutoAdvanced(value);
     }
 
+
+    public void ChangeTextSize(float value)
+    {
+        /* This is for if we want the settings to only have 4 text size options
+        Dictionary<float, float> tempDict = new Dictionary<float, float>();
+        tempDict.Add(1, 50);
+        tempDict.Add(2, 60);
+        tempDict.Add(3, 70);
+        tempDict.Add(4, 80);
+        float dictValue;
+        tempDict.TryGetValue(value, out dictValue);
+        */
+       
+        textSize = value;
+        // change line view font size
+        if (hggLineView != null)
+        {
+            hggLineView.lineText.fontSize = value;
+        }
+        // change last line & option view font size 
+        if (hggOptionsListView != null)
+        {
+            // change last line font size
+            hggOptionsListView.lastLineText.fontSize = value;
+            // change each option view font size
+            foreach (HGGOptionView option in hggOptionViews)
+            {
+                option.text.fontSize = value;
+                //Debug.Log("changing option font size");
+            }
+        }
+        // change option view font size
+        /*
+        if (hggOptionView != null)
+        {
+            foreach (HGGOptionView option in hggOptionViews)
+            {
+                option.text.fontSize = value;
+            }
+            // hggOptionView.text.fontSize = value;
+        }
+        */
+        
+    }
+    
+
     public void LoadSettings(){
         if(PlayerPrefs.HasKey(nameof(Setting.Fullscreen))) fullscreen = PlayerPrefs.GetInt(nameof(Setting.Fullscreen)) != 0;
         else fullscreen = false;
@@ -106,6 +156,9 @@ public class SettingManager : MonoBehaviour
 
         if(PlayerPrefs.HasKey(nameof(Setting.Autoforward))) autoforward = PlayerPrefs.GetInt(nameof(Setting.Autoforward)) != 0;
         else autoforward = false;
+        
+        if (PlayerPrefs.HasKey(nameof(Setting.TextSize))) textSize = PlayerPrefs.GetFloat(nameof(Setting.TextSize));
+        else textSize = 68f;
 
         ChangeFullscreen(fullscreen);
         ChangeVSync(vsync);
@@ -115,14 +168,37 @@ public class SettingManager : MonoBehaviour
         ChangeVolVoice(volVoices);
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
+        ChangeTextSize(textSize);
     }
 
     public void SetLineView(HGGLineView lineView){
         hggLineView = lineView;
     }
 
+    /*
+    public void SetOptionView(HGGOptionView optionView)
+    {
+        hggOptionView = optionView;
+    }
+    */
+
+    public void SetOptionsListView(HGGOptionsListView optionsListView, List<HGGOptionView> optionViews)
+    {
+        hggOptionsListView = optionsListView;
+        hggOptionViews = optionViews;
+    }
+
+
     public void UpdateLineView(){
         ChangeSpeed(speed);
         ChangeAutoforward(autoforward);
+        ChangeTextSize(textSize);
     }
+
+    public void UpdateOptionView()
+    {
+        ChangeTextSize(textSize);
+        //Debug.Log("running UpdateOptionView");
+    }
+
 }
