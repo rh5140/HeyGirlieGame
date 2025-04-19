@@ -42,6 +42,7 @@ namespace Yarn.Unity
                 // When we're given an Option, use its text and update our
                 // interactibility.
                 Markup.MarkupParseResult line;
+                SettingManager.Instance.UpdateOptionView();
                 if (showCharacterName)
                 {
                     line = value.Line.Text;
