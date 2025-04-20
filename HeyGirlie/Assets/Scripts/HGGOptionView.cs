@@ -13,7 +13,7 @@ namespace Yarn.Unity
 {
     public class HGGOptionView : UnityEngine.UI.Selectable, ISubmitHandler, IPointerClickHandler, IPointerEnterHandler
     {
-        [SerializeField] TextMeshProUGUI text;
+        [SerializeField] public TextMeshProUGUI text;
         [SerializeField] bool showCharacterName = false;
         [SerializeField] GameObject selectionIcon;
         [SerializeField] GameObject hoverIcon;
@@ -42,6 +42,7 @@ namespace Yarn.Unity
                 // When we're given an Option, use its text and update our
                 // interactibility.
                 Markup.MarkupParseResult line;
+                SettingManager.Instance.UpdateOptionView();
                 if (showCharacterName)
                 {
                     line = value.Line.Text;
@@ -63,9 +64,16 @@ namespace Yarn.Unity
                 interactable = value.IsAvailable;
             }
         }
-
+        /*
+        private void Awake()
+        {
+            SettingManager.Instance.SetOptionView(this);
+            SettingManager.Instance.UpdateOptionView();
+        }
+        */
         void Update()
         {
+            //SettingManager.Instance.UpdateOptionView();
             if (Input.GetKeyUp(key) || Input.GetKeyUp(keyAlt))
             {
                 InvokeOptionSelected();
