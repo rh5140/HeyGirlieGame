@@ -34,8 +34,20 @@ namespace Yarn.Unity.Example
         Color kristenColor = new Color(0.2980392f, 0.6941177f, 0.9960784f, 1f);
         Color otherColor = Color.white;
 
+        bool isActive = false;
+
+        public void SetActiveView(bool isActiveView)
+        {
+            Debug.Log("SetActiveView");
+            Debug.Log("Crystal " + isActiveView);
+            gameObject.GetComponent<Canvas>().enabled = isActiveView;
+            isActive = isActiveView;
+            Debug.Log("SetActiveView isActive =" + isActive);
+        }
+
         void Awake()
         {
+            isActive = true;
             optionsContainer.SetActive(false);
         }
 
@@ -136,6 +148,15 @@ namespace Yarn.Unity.Example
 
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
+            Debug.Log("RunLine in TextingDialogueHelper");
+            Debug.Log("RunLine isActive = " + isActive);
+            if (!isActive)
+            {
+                Debug.Log("CANCELLED LINE");
+                onDialogueLineFinished();
+                return;
+            }
+            Debug.Log("Running Line successfully");
             currentLine = dialogueLine;
             if(dialogueLine.CharacterName == "Kristen")
             {
@@ -171,6 +192,10 @@ namespace Yarn.Unity.Example
 
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
+            if (!isActive)
+            {
+                return;
+            }
             foreach (Transform child in optionsContainer.transform)
             {
                 Destroy(child.gameObject);

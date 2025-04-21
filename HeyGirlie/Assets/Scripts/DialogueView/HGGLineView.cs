@@ -238,6 +238,14 @@ namespace Yarn.Unity
         /// </summary>
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
 
+        bool isActive = true;
+
+        public void SetActiveView(bool isActiveView)
+        {
+            gameObject.GetComponent<Canvas>().enabled = isActiveView;
+            this.isActive = isActiveView;
+        }
+
         private void Start(){
             SettingManager.Instance.SetLineView(this);
             SettingManager.Instance.UpdateLineView();
@@ -346,6 +354,11 @@ namespace Yarn.Unity
         /// <inheritdoc/>
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
+            if (!isActive)
+            {
+                onDialogueLineFinished();
+                return;
+            }
             // Stop any coroutines currently running on this line view (for
             // example, any other RunLine that might be running)
             StopAllCoroutines();

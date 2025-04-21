@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Yarn.Unity;
+using Yarn.Unity.Example;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,10 +14,8 @@ public class YarnCommands : MonoBehaviour
     // Drag and drop your Dialogue Runner into this variable.
     [SerializeField] private DialogueRunner dialogueRunner;
 
-    private bool toggleText = false;
-
-    [SerializeField] private Canvas nonCrystalView;
-    [SerializeField] private Canvas crystalView;
+    [SerializeField] private HGGLineView nonCrystalView;
+    [SerializeField] private TextingDialogueHelper crystalView;
 
     [SerializeField] private Character _character;
     private LoveInterest _loveInterest;
@@ -121,16 +120,20 @@ public class YarnCommands : MonoBehaviour
 
     private void ToggleText(string character = "NONE")
     {
+        Debug.Log("ToggleText " + character);
         if (character.ToUpper() != "NONE")
         {
-            crystalView.gameObject.SetActive(true);
-            nonCrystalView.gameObject.SetActive(false);
+            crystalView.SetActiveView(true);
+            nonCrystalView.SetActiveView(false);
+            // crystalView.gameObject.SetActive(true);
+            // nonCrystalView.gameObject.SetActive(false);
         }
         else
         {
-            //switch text recipient to whoever character is
-            crystalView.gameObject.SetActive(false);
-            nonCrystalView.gameObject.SetActive(true);
+            crystalView.SetActiveView(false);
+            nonCrystalView.SetActiveView(true);
+            // crystalView.gameObject.SetActive(false);
+            // nonCrystalView.gameObject.SetActive(true);
         }
     }
 
