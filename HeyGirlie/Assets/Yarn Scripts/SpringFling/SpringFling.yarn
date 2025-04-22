@@ -16,10 +16,10 @@ title: Ending
 <<kristen transparent>>
 <<char_left transparent>>
 <<char_right transparent>>
+<<background SpringFling>>
 <<if $succeed is false>>
     <<jump FlopEnding>>
 <<else>>
-    <<background SpringFling>>
     <<wait  0.5>>
     <<fade_in_ui>>
     It feels like every moment of the last few months has led up to this, and it’s making you a little nervous. Sure, you’ve saved the world a time or five, and sure, you’ve died and brought yourself back to life, but all of that pales in comparison to the towering threat of high school social functions. 
@@ -79,7 +79,6 @@ title: FlopEnding
 <<elseif $date == "3C">>
     <<set $date = "Tracker and Nara">>
 <<endif>>
-<<background SpringFling>>
 <<kristen  Sad_SF>>
 Oh, shit. Shit! This is really not good.
 Despite your best efforts, {$date} turned you down, and you didn’t manage to get a date for the Spring Fling. Aguefort’s voice echoes in your ears…
