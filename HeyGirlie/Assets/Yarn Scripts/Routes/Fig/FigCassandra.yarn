@@ -1,7 +1,7 @@
 ﻿title: Cassandra
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -18,138 +18,360 @@ Cassandra: Did you notice how I said something depending on how you did with Fig
 
 title: Cassandra1
 ---
+<<char_right transparent>>
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+    <<kristen Happy>>
+    <<voiceline KristenHappy4>>
+    Kristen: You know what… I’ve been so busy with school, I forgot how much fun Fig is to be around!
+    <<char_right CassandraHappy>>
+    <<voiceline CassHappy1>>
+    Cassandra: That’s great, Kristen! I knew this would be good for you.
+    Kristen: We make a great team, for sure.
+    <<kristen Nervous>>
+    Kristen: But like… are you SUPER sure she’s eligible? Before I start messing up one of my favorite friendships by making it weird.
+    <<char_right CassandraBlush>>
+    Cassandra: There’s <i>nothing</i> weird about friends to lovers.
+    <<kristen Surprised>>
+    Kristen: Woah! Slow down! Lovers?
+    <<char_right CassandraHappy>>
+    Cassandra: Proud of you! Seeyalater!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+    Kristen: Great, totally fine. She said she would go with me to Spring Fling if I can't find anyone else, so we’re all good now, right?
+    <<char_right CassandraSurprised>>
+    <<voiceline CassDisappointed1>>
+    Cassandra: That’s… Not how this works, Kristen.
+    <<kristen Grin>>
+    Kristen: It’s called a loophole. ‘Cause you loop it around to make it work and everyone’s happy.
+    <<char_right CassandraAngry>>
+    Cassandra: I’m not! Where’s the <i>romance</i>? My wife has a lot riding on this one so you have to make more of an effort.
+    <<kristen Nervous>>
+    <<voiceline KristenAwkward3>>
+    Kristen: Why do I feel like you and Ankarna are trying to push this on me?
+    <<char_right CassandraNeutral>>
+    Cassandra: Just… Try a little harder please? For me?
+<<else>>
+  //flop
+    Kristen: It was fine. It’s Fig, y’know… We always have a good time.
+    <<char_right CassandraSurprised>>
+    Cassandra: I’m sensing a but…
+    <<kristen Nervous>>
+    Kristen: But she was being awkward. Why was she being awkward?
+    <<kristen Angry>>
+    <<voiceline KristenAngry2>>
+    Kristen: What aren’t you telling me?
+    <<char_right CassandraNeutral>>
+    <<voiceline CassNeutral3>>
+    Cassandra: And just ruin the mystery? Come on Kristen, you’ll figure it out. I believe in you.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 1?
-
 <<jump EndDate>>
 ===
 title: Cassandra2
 ---
+<<char_right  transparent>>
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+<<kristen Happy>>
+Kristen: Chaotic, brilliant, so much fun. I almost forgot how many messes we used to get into together.
+Cassandra: Okay aaaaannnndddd?
+<<kristen Soft>>
+Kristen: And yeah… She looks really good when she’s all in on something rebellious.
+Cassandra: Right!! I knew you would start seeing something there.
+<<kristen Nervous>>
+Kristen: Please don’t start gloating…
+Cassandra: I’m not, promise! This is just really exciting!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+<<kristen Grin>>
+Kristen: We didn’t get caught, and school is going to be a glittery hell tomorrow so I would call that a success.
+Cassandra: Sooo… Think there may be something between you and Fig?
+<<kristen Neutral>>
+Kristen: Oh, uh… I did tell her I wanted to spend more time together just the two of us.
+Cassandra: Okaaaay, in a friend way or in a date way?
+<<kristen Nervous>>
+Kristen: …yes?
+Cassandra: Well… at least we might be getting somewhere!
+<<else>>
+  //flop
+Kristen: There’s a chance I might get kicked out of school tomorrow… so at least we won’t have to worry about finding a date anymore.
+Cassandra: …WHAT?
+<<kristen Grin>>
+Kristen: Just kidding… maybe. But we did mess up the water fountains.
+Cassandra: Not funny, Kristen! I was asking how the date went.
+<<kristen Awkward>>
+Kristen: Oh shit, that was supposed to be a date?
+Cassandra: You really need to start reading the room, but that’s why I’m here!
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 2?
-
 <<jump EndDate>>
 ===
 title: Cassandra3
 ---
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right  transparent>>
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+Kristen: That was… an emotional rollercoaster.
+Cassandra: Yikes… in a good way or a bad way?
+<<kristen Nervous>>
+Kristen: We definitely both have feelings for each other.
+Cassandra: Ohmyme, Kristen! That’s great!
+Cassandra: Don’t get mad, but I was totally spying on the two of you and it was pretty cute!
+<<kristen Soft>>
+Kristen: You really think so?
+Cassandra: Oh totally! The bandaids? Seriously, that was so adorable. I was kicking my feet.
+Kristen: Yeah… she’s the best.
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+<<kristen Awkward>>
+Kristen: I’m never getting on a skateboard again.
+Cassandra: You <i>do</i> have a harder battle with gravity than most people… but did you have fun?
+<<kristen Neutral>>
+Kristen: It was a blast… until it got weird.
+<<kristen Nervous>>
+Kristen: <i>Buuuuuut</i> there’s definitely something going on between us. You were right.
+Cassandra: I usually am!
+<<kristen Grin>>
+Kristen: Whateverrrrr you say.
+<<else>>
+  //flop
+<<kristen Sad>>
+Kristen: I think I messed up.
+Cassandra: Oh no, Kristen… We still have time to figure it out, don’t panic!
+Kristen: No, I mean that I might have completely messed up my friendship with Fig.
+Cassandra: I’m <i>sure</i> it can’t have been <i>that</i> bad…
+Kristen: I’m sure you’ll hear all about it from Ankarna later…
+Cassandra: Yikes…
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 3?
-
 <<jump EndDate>>
 ===
 title: Cassandra4
 ---
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+<<kristen Happy>>
+Kristen: I definitely have feelings for Fig, and she’s definitely into me, too…
+<<kristen Neutral>>
+Kristen: Happy now?
+Cassandra: Of course I am!
+Cassandra: So, spill! Who said what to who? How did we end it?
+Kristen: It’s… complicated. She’s going to talk to Ayda, and then I guess I need to talk to Ayda, too.
+<<kristen Nervous>>
+Kristen: You have my back, right?
+Cassandra: Always… and for the record? I’m really proud of you!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+<<kristen Nervous>>
+Kristen: Fig might have… run away from me at the end.
+<<kristen Neutral>>
+Kristen: But I think it went okay. We laughed a lot, but I think we actually got somewhere with talking about how we feel.
+Cassandra: Glad to hear it, Kristen!
+<<kristen Nervous>>
+Kristen: Ankarna didn’t make those awkward question cards, did she?
+Cassandra: Not that I know of? Maybe it was Ayda?
+<<kristen Neutral>>
+Kristen: Oh yeah, that makes sense.
+Kristen: …
+<<kristen Surprised>>
+Kristen: Shit, Fig is going to talk to Ayda about us!
+Cassandra: Breathe, Kristen! It’s going to be fine. Have a little faith!
+<<else>>
+  //flop
+Kristen: So uh… The Curse is real. With a capitol C.
+Cassandra: You… lost me there, Kristen.
+Kristen: Fig’s podcast studio. It’s cursed.
+Cassandra: And… that’s the part of the date you’re focused on?
+Kristen: Date?
+<<kristen Nervous>>
+Kristen: Oh riiiiight… we’re supposed to be going on dates.
+Cassandra: I love you so much, but you really need to knuckle down and focus.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 4?
-
 <<jump EndDate>>
 ===
 title: Cassandra5
 ---
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left  transparent>>
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+Kristen: Hold your applause, but we’re going on an actual, honest to you, real date. Just the two of us.
+Cassandra: Kristen! You have no idea how happy that makes me!
+Kristen: And get this… Fig’s been talking to Ayda about how much she likes me. I still got it!
+Cassandra: Of course she has, because you’re amazing!
+Cassandra: I take it Ayda is fine with the two of you seeing where it goes?
+Kristen: Sure is! Finally, everything is <i>coming up Kristen.</i>
+Cassandra: I’m going to ignore how silly you sound saying that, because I’m so proud of you!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+Kristen: Don’t yell at me, but Fig might have tried to run away again.
+Kristen: But Ayda stopped her and we planned a <i>real</i> date so it’s aaalllll good.
+Cassandra: Are you sure about that?
+Kristen: Yes!
+Kristen: …
+Kristen: Wait, what do you mean?
+Cassandra: I’m just kidding, sounds like it went okay. Good job Kristen!
+<<else>>
+  //flop
+Kristen: So… If Ayda said she would hunt me down and kill me if I broke Fig’s heart, do you think she might have been joking?
+Cassandra: …what did you do?
+Kristen: Nothing! She seems fine with us going on an actual date so… that’s good right?
+Kristen: …right?
+Cassandra: I’m choosing to trust you on this, Kristen. Because both our lives depend on it.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 5?
-
 <<jump EndDate>>
 ===
 title: Cassandra6
 ---
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+Kristen: We almost kissed…
+Cassandra: Ohemgeeareyouserious? Please, you need to tell me everything absolutely right now, no exceptions!
+Kristen: There was this moment after she chased me around the pool table where I could have. I think she wanted me to.
+Kristen: Oh crap, did I miss my shot?
+Cassandra: No way, there’s still plenty of time to lock that down and get your sweet sappho kisses on.
+Kristen: Gross, please don’t call it that to my face.
+Cassandra: You love me, really!
+Cassandra: But seriously, you got this!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+Kristen: Short story, I should never try and be around a mosh pit again.
+Kristen: Long story, it’s not half bad when Fig can pick me up off the ground.
+Cassandra: You’re so cute when you’re crushing on someone, you know?
+Kristen: …were you spying on me?
+Cassandra: A Goddex should never reveal their secrets, Kristen.
+Kristen: I know, I know… But what did you think? Did I crush it?
+Cassandra: Not your worst, but you missed a shot you should have taken.
+Kristen: Wait… when?
+Cassandra: You’ll figure it out next time.
+<<else>>
+  //flop
+Kristen: <i>I</i> had a good time, but Fig had a freak out about our friends finding out… and now I’m kinda freaking out about it too.
+Kristen: …
+Kristen: Was this all a huge mistake?
+Cassandra: Kristen, seriously… You just thought about this <i>now?</i> It’s been weeks…
+Kristen: I know! I fucked up, mentioned it and now I can’t stop thinking about it.
+Cassandra: Look… I think you’re great, but this really isn’t the time to worry about that.
+Cassandra: After Spring Fling, okay? Can you hold off until then?
+Kristen: I’ll do my best.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 6?
-
 <<jump EndDate>>
 ===
 title: Cassandra7
 ---
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left transparent>>
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+Kristen: I’m not sure how I’m going to survive seeing this really cute, flustered side to Fig.
+Kristen: I’m smitten. This is a disaster.
+Cassandra: Au contraire! Sounds like the date was incredible to have you feeling like <i>that!</i>
+Kristen: AND she kissed me on the cheek!
+Cassandra: Squeeee why didn’t you lead with that!
+Kristen: I’m really taking a leaf out of your book. I can’t go spilling all my secrets all at once, can I?
+Kristen: So… I get a gold star this time?
+Cassandra: I always think you’re a star, but yes. I’m really proud of you.
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+Kristen: Any date that includes nudity is great, right?
+Cassandra: Crude, Kristen! We need to sweep Fig off her feet, not objectify her.
+Kristen: But I’m not—
+Cassandra: I know, I know… You were trying to be funny. I’m just starting to maaaaybe panic a little.
+Kristen: Don’t sweat it, I got this. We had a good time, and Ayda was… a lot, but it worked out.
+Cassandra: I hope so. You had me worried for a moment there.
+Kristen: It’s aaalllll good. You can trust me!
+<<else>>
+  //flop
+Kristen: So…
+Cassandra: Kristen…
+Kristen: Don’t look at me like that! I was naked and face down on a table with two very attractive naked women.
+Kristen: What do you <i>want</i> from me?
+Cassandra: I want you to make sure we <i>both</i> make it to the end of the year.
+Cassandra: But… It’s fine. Everything is fine. I’m sure you didn’t do terribly.
+Kristen: You know what…
+Kristen: I admire the optimism.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 7?
-
 <<jump EndDate>>
 ===
 title: Cassandra8
 ---
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left transparent>>
+<<if $ayda8>>
+    <<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+    Kristen: I… don’t think I could be any gayer than I am now.
+    Kristen: Truly, I have reached an extraordinary peak of lesbianism I didn’t think was possible.
+    Cassandra: Oh wow! <i>That</i> good huh? Gosh, look at you! You’re glowing, Kristen!
+    Kristen: What can I say? I’m somehow stupidly in love with my best friend, and Ayda is…
+    Kristen: Ayda is incredible and when she looks at me, I may or may not forget how to breathe. Which is wild because I only got into this whole thing to… y’know, stay alive.
+    Cassandra: Oh boy, you’re a complete mess aren’t you?
+    Cassandra: And I’ve never been happier to see it! I knew you could do it, Kristen!
+    <<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+    Kristen: Good! I think?
+    Kristen: I’m gonna be honest, I think I blacked out for half of that, but it’s not my fault! Fig was kissing me, and Ayda was… I mean, have you <i>seen</i> her?
+    Cassandra: SO what you’re telling me is…?
+    Kristen: I’m a useless lesbian and I was out maneuvered by two insanely attracted, cool women who take pleasure out of watching me suffer.
+    Cassandra: So… Not too bad?
+    Kristen: Not too bad at all!
+    Cassandra: I can live with that!
+    <<else>>
+    //flop
+    Kristen: …
+    Cassandra: Kristen?
+    Kristen: ……………
+    Cassandra: I know you can hear me.
+    Kristen: I know what you’re going to say, so… better to just not get into it at all, right?
+    Cassandra: …
+    Kristen: Cassandra?
+    Cassandra: …………
+    Kristen: Hello?
+    <<endif>>
+<<else>>
+    <<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+    Kristen: Best night of my life! Fig is…
+    Kristen: She’s everything I’ve been looking for in a person and she’s been right under my nose the whole time.
+    Kristen: I feel like such an idiot. Why didn’t I see it before?
+    Cassandra: The journey is the important part, Kristen. Without all those years of being friends, and these few months of working everything out, do you think you’d be where you are now?
+    Kristen: I guess you’re right… as always. Fig would have jumped on that skateboard and be living off-the-grid in the red waste.
+    Cassandra: And now look at the two of you? Quite the divine couple if I do say so myself.
+    Kristen: …this was your plan all along wasn’t it?
+    Cassandra: Love you!
+    <<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+    Kristen: Let’s just say… I’ll be thinking about that night for a while.
+    Cassandra: Kristen! Seriously?
+    Kristen: What?!
+    Cassandra: A <i>little</i> grace and class would be great. It’s been a long eight weeks and I’m tired!
+    Kristen: Okay, okay… It was good. There were some moments that were a little… awkward but I think we got there in the end.
+    Cassandra: That’s a relief! Do you think she’ll be ready to go to a dance with you? In front of everyone?
+    Kristen: I hope so… I would like that.
+    Cassandra: Me too, Kristen. Let’s hope all your hard work paid off.
+    <<else>>
+    //flop
+    Kristen: …how much of that did you see?
+    Cassandra: More than I would have liked to, Kristen.
+    Kristen: Do we… have to talk about it?
+    Cassandra: I’d rather not.
+    Kristen: Okaaaayyyy…
+    Kristen: Are both me <i>and</i> Fig in the dog house for this one?
+    Cassandra: …
+    Kristen: It just… happened! I don’t know what to tell you. It felt right at the time.
+    Kristen: I’m sure I’ll be able to look Fig in the eye again… soon… probably…
+    Cassandra: I’m not mad, Kristen… I’m just really disappointed.
+    Kristen: I guess I deserve that.
+    <<endif>>
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Fig date 8?
-
 <<jump EndDate>>
 ===
 

@@ -77,7 +77,6 @@ namespace Yarn.Unity
             // If we don't already have enough option views, create more
             //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
             //SettingManager.Instance.UpdateOptionView();
-            Debug.Log("running RunOptions");
             if (dialogueOptions.Length > 3)
             {
                 gridLayout.gameObject.SetActive(true);
@@ -195,7 +194,6 @@ namespace Yarn.Unity
                 var optionView = Instantiate(optionViewPrefab);
                 //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
                 //SettingManager.Instance.UpdateOptionView();
-                Debug.Log("running CreateNewOptionView");
                 optionView.transform.SetParent(layout.gameObject.transform, false);
                 optionView.transform.SetAsLastSibling();
 

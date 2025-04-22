@@ -18,36 +18,76 @@ Cassandra: Did you notice how I said something depending on how you did with Nar
 
 title: Cassandra1
 ---
+<<char_right  transparent>>
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+    Kristen: It was actually, like, really good. We found some clothes she liked and got her ears pierced. 
+    Cassandra: Ooh! Sounds like you had fun!
+    Kristen: … Also she got me a friendship bracelet with a heart on it and I invited her home to hang out again.
+    :Cassandra emits a squeal that could break glass. In fact, your phone does crack a little bit. Damn.
+    Cassandra: EEEEEEEE SO CUTE!!!!
+    Kristen: Okay, okay! It was one date! It’s not like I proposed to her.
+    Cassandra: Fine, I won’t get ahead of myself… yet.
+    Cassandra: I’m glad you had a nice time, Kristen.
+
+
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+    Kristen: It went fine? I think? We went shopping, picked out some school clothes, I got a salsa hat.
+    Cassandra: A salsa hat. You’re the picture of romance, Kristen, you know that?
+    Kristen: I try.
+    Cassandra: Sooooo, did you feel a spark?
+    Kristen: Honestly, I’m not sure yet. The date went fine, but I don’t think I impressed her much?
+    Cassandra: Could be worse! You don’t have to make any decisions now. Just let your heart guide you!
+
+<<else>>
+  //flop
+    Kristen: Um… I think I fucked up.
+    Cassandra: On the first date? How did you manage to mess up a shopping trip with one of the richest girlies you know?
+    Kristen: I don’t know! I carried her bags, I showed her around, I was a perfect gentleman! I just got a vibe, I guess. That I did something wrong.
+    Cassandra: Oh, Kristen…
+    Kristen: Dating is harder than it looks, okay?
+    Cassandra: I know. You’ll figure it out, I believe in you!
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Naradriel date 1?
 
 <<jump EndDate>>
 ===
 title: Cassandra2
 ---
+<<char_right  transparent>>
 <<sfx ring>>
-teehee cass time
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+    Kristen: Holy shit, it was so nice. Like, we didn’t do much, I just set up her phone and showed her some games and stuff. But it almost felt like we were friends?
+    Cassandra: You know, you can’t spell “girlfriends” without “friends!”
+    Kristen: Oh my – <i>Cass</i>. We aren’t – we’re not – it’s way too early for the G-word. It’s our <i>second date</i>.
+    Cassandra: Soooo. I guess the question is, what do you have planned for the third?
+    Kristen: …
+    Kristen: …
+    Kristen: I think she’s taking me horseback riding.
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+    Kristen: Meh. It was a pretty lazy day. We set up her phone, played some Slice the Twine, it was chill.
+    Cassandra: Just… chill?
+    Kristen: Uh… yeah? It was a pretty normal day. 
+    Cassandra: …
+    Kristen: …
+    Cassandra: …
+    Kristen: It was fine! What do you want me to say?
+    Cassandra: I don’t know, Kristen, maybe that you had chemistry? That you like her, that she likes you, that there’s anything to work with? That you <i>tried</i>?
+    Kristen: That’s not fair. I’m doing my best.
+    Cassandra: I know. I’m sorry. I think I’m just freaked out about the whole dying part.
+<<else>>
+  //flop
+    Kristen: On the plus side, her hands weren’t eaten by bears.
+    Cassandra: What.
+    Kristen: What.
+    Cassandra: So… not great, then, huh?
+    Kristen: Yeah. Not great. Ugh, I really don’t know what I have to do to impress her! I set up her phone and I thought that would do it, but apparently I also have to read her mind and stuff!
+    Cassandra: Or maybe just… get to know her? It’s only your second date. You can cut your losses if you want, but I don’t think you’ve totally ruined your chances.
+    Kristen: I hate it when you’re reasonable.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Naradriel date 2?
-
 <<jump EndDate>>
 ===
 title: Cassandra3
