@@ -1,12 +1,11 @@
 ﻿title: Nara
 ---
-<<kristen transparent>>
-<<background Fair_Nara>>
-<<wait 2>>
-April 13
+April 21
+<<kristen Neutral>>
 :Aimless wandering! Your favorite! All these choices seem a little overwhelming, so walking around and taking everything in before you actually try something seems like the best option.
 :Strolling around the fair, you absorb all the sights and sounds (and smells. So many smells) around you. And as you walk, you notice someone else has the same strategy as you.
 Kristen: Nara! Hey!
+<<char_right NaraNeutral>>
 Nara: Kristen! Hello!
 Kristen: I didn’t know you were gonna be here!
 Nara: The feeling is mutual! I had assumed you had grown tired of coming to the same event every year.
@@ -14,8 +13,10 @@ Nara: The feeling is mutual! I had assumed you had grown tired of coming to the 
 :Luckily, you choose not to. Growth!
 Kristen: Actually, I’ve never been to one of these before. My family always thought the fair was sinful, and when I arrived at Aguefort I was always too busy.
 :Nara claps excitedly.
+<<char_right NaraHappy>>
 Nara: Wonderful! This can be a new experience for both of us!
 Kristen: Do you not have fairs in Fallinel?
+<<char_right NaraNeutral>>
 Nara: We do, but they are very different from those you have in Solace.
 Kristen: Like what?
 Nara: Oh, far too many to count! I would be happy to point them out to you as we peruse the wares of this fine fair!
@@ -26,36 +27,50 @@ Kristen: Yeah, you probably have all kinds of weird fantasy creatures.
 Nara: Indeed. Fallinel has many majestic creatures, the most popular of which is quite the attraction at fairs.
 Nara: Many breed them to refine their appearances, and while they tragically lack a gift others of their kind possess, their striking features make them a highly coveted creature among the wealthy.
 Nara: Yes, it truly is a pity you will never get the chance to see a chicken.
+<<kristen Grin>>
 Kristen: No, we have those.
 Nara: No, you do not.
 :You point at the closest pen, which conveniently houses a chicken.
 Kristen: See? Chicken.
+<<char_right NaraShock>>
 Nara: … Is that the Little Chicken I see?!
 :Nara runs off to a different pen, and you follow her over to an area containing what is very much the platonic ideal of a chicken.
+<<kristen SUrprised>>
 Kristen: You know this guy?
+<<char_right NaraHappy>>
 Nara: Of course! He is the Little Man’s prized chicken. He has won Best in Fair many times with this fine animal.
 Kristen: You mean Best in Show?
+<<char_right NaraNeutral>>
 Nara: No, I do not think I do.
+<<kristen Neutral>>
 Kristen: You wanna get something to eat? I think there’s a fried food stall somewhere. Fallinel probably has that.
 Nara: We do not have those in Fallinel.
 Nara: We should probably try it though. Just to be sure.
 Kristen: I couldn’t agree more.
 :Several fried food items later (most of which you noticed Nara discreetly throwing into the trash after a single bite when she thought you weren’t looking), the many rides catch Nara’s eye.
+<<char_right NaraHappy>>
 Nara: Kristren! Look!
 :You follow her gaze to a rollercoaster that looks a lot like a torture device with new life breathed into it.
 Nara: How exhilarating! How dangerous! We simply must ride it!
 :You cannot imagine this will go well.
+<<kristen Nervous>>
 Kristen: You sure you don’t want to try something more… safe?
 Nara: Like what?
+<<kristen Neutral>>
 :You point at the nearby teacup ride.
 Kristen: What about the most sophisticated ride? That could be fun.
+<<char_right NaraThink>>
 Nara: Hmm… alright. I must say, I did not take you for someone who preferred the tamer things in life.
 Kristen: No yeah I love the tame stuff. I’m Team Tame all the way baby.
-// <<background PLACEHOLDER FOR FAIR SPLASH>>
+<<kristen transparent>>
+<<char_right transparent>>
+<<background Fair_Nara>>
+<<wait 2>>
+<<fade_in_ui>>
 :Turns out the teacup ride was a little less tame than you had anticipated. Well, at least for Nara. Maybe you shouldn’t have chosen a ride that spins around right after eating way too much fried food. Whoops!
 Nara: Kristen!! I am overcome with the most uncomfortable affliction!!!!
 Kristen: Yeah that’s my bad. At least this ride only lasts five minutes.
-Nara: How much longer do we have left?
+Nara: How much longer do we have left?!
 Kristen: Four minutes and fifty five seconds.
 <<jump EndEvent>>
 ===
