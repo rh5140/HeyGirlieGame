@@ -2,6 +2,8 @@
 ---
 <<wait 0.5>>
 <<kristen Neutral>>
+<<declare $no_special_event = false>>
+<<get_special_event_fail 5>>
 You, Gorgug, Riz, and Adaine have camped out all night to get the best possible spot for Ghoulapalooza, and the sun is finally rising on what has serious potential to be the best day ever. The festival’s entirely sold-out, and anyone who's anyone is going to be in attendance. Fig’s performing, of course, and she might even take you and the Bad Kids backstage!
 
 The rest of the lineup is <i>unreal</i> this year, too. Chappell Gnome is headlining, along with Cantrip Lamar, Billie Elvish, and Emily Axford. Remi Werewolf, Boygenie, Critski, and Laufaey are performing too, and that’s just on the main stage!
@@ -19,8 +21,6 @@ There’s so much to do! So much to see! So many people to hang out with!
 :Just one problem: your friends are splitting up for the day, so you need to pick a festival buddy, the one person you spend the whole day with.
 Who will it be?
 
-<<declare $no_special_event = false>>
-<<get_special_event_fail 5>>
 <<if $no_special_event>>
     <<jump EventFail>>
 <<else>>

@@ -7,7 +7,6 @@ using System.Collections;
 
 public class SaveProfiles : MonoBehaviour//, IDeselectHandler
 {
-    [SerializeField] private GameObject saveProfilesMenu;
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button deleteButton;
@@ -54,7 +53,7 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     }
 
     public void Close(){
-        Destroy(saveProfilesMenu);
+        Destroy(gameObject);
     }
 
     public void SaveSave(){

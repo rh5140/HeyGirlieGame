@@ -10,10 +10,9 @@ using TMPro;
 public class Settings : MonoBehaviour
 {
     [SerializeField] private Toggle fullscreenToggle, vsyncToggle;
-    [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider;
+    [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
-    [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject saveProfilesMenu;
 
     [SerializeField] private Image screenshot;
@@ -78,13 +77,19 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetInt(nameof(Setting.Autoforward), value ? 1 : 0);
         SettingManager.Instance.ChangeAutoforward(value);
     }
+    
+    public void ChangeTextSize(float value)
+    {
+        PlayerPrefs.SetFloat(nameof(Setting.TextSize), value);
+        SettingManager.Instance.ChangeTextSize(value);
+    }
 
     public void OpenSaves(){
         Instantiate(saveProfilesMenu);
     }
 
     public void Close(){
-        Destroy(settingsMenu);
+        Destroy(gameObject);
     }
 
     private void SetSettings(){
@@ -98,6 +103,7 @@ public class Settings : MonoBehaviour
 
         speedSlider.value = SettingManager.Instance.speed;
         autoforwardToggle.isOn = SettingManager.Instance.autoforward;
+        textSizeSlider.value = SettingManager.Instance.textSize;
     }
 }
 

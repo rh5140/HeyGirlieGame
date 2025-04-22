@@ -1,8 +1,7 @@
 ﻿title: Cassandra
-tags:
 ---
-teehee cass time
 <<sfx ring>>
+teehee cass time
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -17,8 +16,144 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 <<jump EndDate>>
 ===
 
+title: Cassandra1
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 1?
+
+<<jump EndDate>>
+===
+title: Cassandra2
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 2?
+
+<<jump EndDate>>
+===
+title: Cassandra3
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 3?
+
+<<jump EndDate>>
+===
+title: Cassandra4
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 4?
+
+<<jump EndDate>>
+===
+title: Cassandra5
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 5?
+
+<<jump EndDate>>
+===
+title: Cassandra6
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 6?
+
+<<jump EndDate>>
+===
+title: Cassandra7
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 7?
+
+<<jump EndDate>>
+===
+title: Cassandra8
+---
+<<sfx ring>>
+teehee cass time
+<<if $date_points == $date_points_total>>
+    Cassandra: You blew it out of the water!! (earned max points possible)
+<<elseif $date_points == 0>>
+    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
+<<elseif $date_points > $date_points_total / 2>>
+    Cassandra: You blew it out of the water!! (more than half of possible points earned)
+<<else>> // Less than half but not zero
+    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<endif>>
+Cassandra: Did you notice how I said something depending on how you did with Gertie date 8?
+
+<<jump EndDate>>
+===
+
 title: EndDate
-tags:
 ---
 <<increment_date_count>>
 <<increase_dates_this_week>>
