@@ -135,22 +135,15 @@ public class YarnCommands : MonoBehaviour
     }
     #endregion Setup
 
+    #region Updating State
+    /// <summary>
+    /// Supporting Yarn Commands that change the scene and update information like points and week
+    /// </summary>
     private void ChangeScene(string sceneName)
     {
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         SceneManager.LoadScene(sceneName);
-    }
-
-    private void AddPoints(int num)
-    {
-        _loveInterest.AddPoints(num);
-        // Handling Cassandra
-        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
-        _variableStorage.TryGetValue("$date_points", out date_points);
-        _variableStorage.SetValue("$date_points", date_points + num);
-
-        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
     }
 
     private void IncrementDateCount()
@@ -181,6 +174,22 @@ public class YarnCommands : MonoBehaviour
         return GameManager.Instance.GetWeek();
     }
 
+    private void AddPoints(int num)
+    {
+        _loveInterest.AddPoints(num);
+        // Handling Cassandra
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _variableStorage.SetValue("$date_points", date_points + num);
+
+        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
+    }
+    #endregion Updating State
+
+    #region UI
+    /// <summary>
+    /// Supporting Yarn commands that modify UI
+    /// </summary>
     private void SetLocationUI(string locationName)
     {
         try {
@@ -230,6 +239,7 @@ public class YarnCommands : MonoBehaviour
             // nonCrystalView.gameObject.SetActive(true);
         }
     }
+    #endregion UI
 
     #region Polyam Functions
     /// <summary>
