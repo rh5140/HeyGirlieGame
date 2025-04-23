@@ -1,6 +1,6 @@
 ﻿title: Date7
 ---
-April 21
+April 22
 <<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 0>>
@@ -28,7 +28,8 @@ Kristen: And <i>brave</i> and also handsome…
 Nara: Yes you are. We can simply purchase some sustenance from your local vendor.
 Kristen: You mean the supermarket?
 Nara: My goodness, you must hold this market in high esteem to refer to it in such a way. To the market!
-<<location “mall”>>
+<<location  "Food 4 U">>
+<<background Mall>>
 //al note: mall background here
 <<kristen neutral>>
 <<char_right NaraThink2>>
@@ -117,7 +118,8 @@ Nara: Kristen your mind is finer than a thousand very fine things.
 <<kristen Soft>>
 :Blushing at the compliment, you grab the nearest packet of meat, dash away, realise you probably don’t want to use chopped liver to make meatballs, replace the packet, and run home, Nara in tow.
 //al note: back to manor BG
-<<location “manor”>>
+<<location “Mordred Manor”>>
+<<background Manor>>
 <<char_right NaraNeutral2>>
 <<kristen Nervous>>
 :Back at the manor’s kitchen, you puzzle over the spaghetti. You want to cook all of it at once, but half the noodles are sticking out of the pot. Seems like you need a PhD (Pretty hard Degree) to understand this…
