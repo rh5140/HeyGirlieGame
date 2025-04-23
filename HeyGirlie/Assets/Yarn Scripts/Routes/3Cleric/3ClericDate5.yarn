@@ -1,6 +1,6 @@
 ﻿title: Date5
 ---
-April 13
+April 21
 <<location "PLACEHOLDER">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 0>>
@@ -21,6 +21,7 @@ Tracker: Oh, shit! Hey Kristen!
 :Well, at least she seems pleased to see you? Wait, now it’s starting to read a lot more like confusion - you've been silent and staring at her with your jaw halfway open for way too long. Quick, act normal!
 <<kristen Awkward>>
 Kristen: Ahaha yes hi hello it’s me ‘tis I Kristennn Applebees.
+<<voiceline NaraGreeting1>>
 <<char_left NaraHappy>>
 Nara: Yes it <i>is</i> you! How <i>are</i> you doing?
 Kristen: Could not be better nope absolutely not. How about you two? How are you doing and also how do you know each other again?
@@ -40,6 +41,7 @@ Tracker: Maybe you want to join us?
 :Join them? Your ex and <i>her</i> ex? This has a real chance of not ending well. But, Tracker and Nara are smiling at you...
 Kristen: Yeah... sure... why not?
 :Cassandra help you.
+<<voiceline NaraHappy3>>
 <<char_left NaraHappy>>
 Nara: Wonderful! Let us embark upon this grand adventure posthaste!
 :As you walk with them, you notice that Tracker and Nara aren’t carrying anything.
@@ -85,6 +87,7 @@ But you think maybe this time… you can help? Is that crazy? You might be crazy
     <<char_right TrackerSurprised_1>>
     Tracker: Kristen, you <i>gotta</i> stop doing that.
     <<char_left NaraHappy>>
+    <<voiceline NaraHappy1>>
     :Nara applauds.
     Nara: Bravo, Kristen! It is nice to see the Solesian tradition of Eating Shit is alive and well.
     Tracker: I’m not sure that’s a tradition.
@@ -93,7 +96,7 @@ But you think maybe this time… you can help? Is that crazy? You might be crazy
     Tracker: Well, it’s not a tradition for anyone but Kristen, anyway.
     <<kristen Angry>>
     :As she smirks, you glare. Traitor. Nara tilts her head, confused.
-    <<char_left NaraThink>>
+    <<char_right NaraThink>>
     Nara: Then why are there so many videos on the Internet documenting it?
     Tracker: That… is actually a fair point.
     :Great. Glad that broke the tension, but also your entire body hurts now.
@@ -128,6 +131,7 @@ But you think maybe this time… you can help? Is that crazy? You might be crazy
 :It seems like they’re not having quite so much luck with spreading the good word of Galicaea as you are. If you had to guess… it probably has something to do with the moving monoliths of paper striking fear of god(ess) into the hearts of innocent bystanders. Which is kinda the opposite of what they want.
 :It’s kind of a nightmare. Wait, is that why you’re doing so well…?
 <<char_left NaraAngry>>
+<<voiceline NaraAngry3>>
 Nara: This is much more difficult than it was last time. I thought Solesians were an open-minded people.
 :Tracker shrugs.
 Tracker: Last time, we were in Fallinel and everyone was inclined to listen to their princess and her…
@@ -158,7 +162,8 @@ It’s going to be all you, though. Kristen unfiltered. You hope it’s not goin
     Tracker: Kristen, we were just talking.
     Kristen: <i>Sure</i> you were.
     <<char_left NaraAngry>>
-    Nara: Kristen, why are you upset? You joined <i>us</i> on this outing.
+    <<voiceline NaraAngry3>>
+    Nara: Kristen, why are you upset? <i>You</i> joined <i>us</i> on this outing.
     Kristen: Well, I didn’t think you were going to…
     :They really haven’t done much. Some of the wind goes out of your sails at that.
     <<kristen Neutral>>
@@ -186,7 +191,7 @@ It’s going to be all you, though. Kristen unfiltered. You hope it’s not goin
     :It seems a little ridiculous to tell them you’re worried they’re going to leave you, especially when you’re not even officially dating.
     Kristen: Um, just random doubt! You know me! I’m totally fine now.
     <<char_left NaraThink>>
-    <<char_right TrackerNeutral_1>>
+    <<char_right TrackerNeutral>>
     :Neither of them look convinced.
     <<add_points 1>>
 -> Kristen: “You’re both really cute! It’s not fair!”
@@ -198,12 +203,14 @@ It’s going to be all you, though. Kristen unfiltered. You hope it’s not goin
     <<char_right TrackerBlush_1>>
     Tracker: Aww, you too, cowboy.
     :You can tell she’s aiming for nonchalant and teasing, but the blush suggests otherwise.
+    <<voiceline NaraRomantic1>>
     <<char_left NaraBlush>>
     Nara: I <i>am</i> cute, and need no reminder. But thank you for saying so.
     Nara: To both of us!
     :She looks like she genuinely means it, too. And Tracker doesn’t seem all that upset at you flirting with her ex in front of her, either.
     :Maybe you <i>were</i> right when you said adding a third fixes all relationship problems…
     <<add_points 2>>
+<<char_left NaraNeutral>>
 :You help them break the mountain of pamphlets into smaller, much less intimidating piles, still carried around by Nara’s unseen servants.
 Tracker: Hey, Kristen?
 Kristen: Yeah?
@@ -222,6 +229,7 @@ Kristen: You’re <i>so</i> on.
 :You decide to go over and talk to the guy, too. See them in action.
 Nara: Hello. Have you heard about our lady and saviour Galicaea?
 Tracker: Have you ever wanted a more primal connection to your god than just sitting in church?
+<<voiceline NaraNeutral3>>
 Nara: You seem like someone who has nothing left. Organized religion can fix that. 
 :They… sound like sketchy door to door salesmen. 
 Kristen: Uh, hey, guys.
@@ -237,11 +245,13 @@ Nara: How did you do that? I assumed he would have been charmed by our embarrass
 Kristen: Uh… I think you both were being just a little bit too intense, maybe. Like, you were fully blocking him into the wall.
 :Tracker sighs.
 Tracker: Shit. Yeah, you have a point.
+<<voiceline NaraAngry1>>
 <<char_left NaraAngry>>
 Nara: How dare you! How dare the both of you, even! We gave that man more than enough space to flee - oh. I see your point now.
 <<char_left NaraThink>>
 Nara: Please, share the tricks of your trade. How did you persuade that lonely man?
 Kristen: Uh… I just talked to him? You know, a regular conversation. Low pressure. Sometimes I’ll throw a joke or two in there.
+<<voiceline NaraNeutral2>>
 Nara: I will admit to feeling a <i>little</i> bemused by your suggestion I am incapable of … ‘regular conversation.’ Nonetheless..
 <<char_left NaraNeutral>>
 Nara: I see… May I practice performing a classic Solesian joke on you, Tracker?
@@ -261,6 +271,7 @@ Nara: Wait no.
     <<char_right TrackerLaugh_1>>
     :Tracker laughs along, too.
     Tracker: You nearly nailed it, Nara.
+    <<voiceline NaraHappy2>>
     <<char_left NaraHappy>>
     Nara: Which means I am close to perfecting my craft as a canvasser for Galicaea! How exciting!
     <<add_points 2>>
@@ -269,6 +280,7 @@ Nara: Wait no.
     Kristen: Um, what she meant… updog isn’t really a word... but...
     :Your stuttering is rewarded with a singular eyebrow raise from Tracker. She gives you a fond, if mildly exasperated, smile.
     Tracker: I get it, cowboy. It was good.
+    <<voiceline NaraHappy3>>
     <<char_left NaraHappy>>
     Nara: I have yet to reach the summit of the mountain that is mastering the art of the canvasser… So many more skills to acquire… so many tricks that will be learnt…!
     :That is way too many words to say Just One Thing.
@@ -277,6 +289,7 @@ Nara: Wait no.
 -> <i>Tell Nara she beefed it big-time.</i>
     Kristen: Uh, Nara, that’s not… you totally messed that up.
     <<char_left NaraSad>>
+    <<voiceline NaraSad2>>
     Nara: I guess I have much left to learn…
     <<char_right TrackerAngry_1>>
     Tracker: No need to be rude, Kristen. Nara, that was still funny. You’ll get it next time.
@@ -301,11 +314,12 @@ Nara: No, I kid. I am most grateful we have forged such a powerful companionship
 :You think you might be. 
 <<char_right TrackerHappy_1>>
 :From Tracker’s smile, so is she.
-<<char_left NaraNeutral>>
+<<char_right NaraNeutral>>
 Nara: I am also glad to have had a chance to see you two interact with each other. And on good terms, no less!
 Tracker: I, uh, wouldn’t be opposed to doing it again sometime.
 Kristen: Yeah, that’d be cool.
 Tracker: You know, there’s a couple bloodrush games happening at Aguefort over the next few weeks. Could be fun.
+<<voiceline NaraPompous1>>
 <<char_left NaraDisgust>>
 Nara: Tracker, as a member of royalty, I cannot professionally or personally endorse violence.
 <<char_right TrackerLaugh_1>>

@@ -3,7 +3,7 @@
 <<kristen Nervous>>
 Lucy and Kipperlilly arrive, predictably, right on time. 
 You’re practically dripping waterfalls of nervous sweat. Your face feels hot as you open the door.
-<<char_left Lucy Neutral3>>
+<<char_left LucyNeutral3>>
 <<char_right KipperlillyNeutral>>
 Kipperlilly: Hey, Applebees. 
 Lucy: Hi, Kristen!
@@ -42,12 +42,7 @@ They both blush in unison. Lucy puts a hand on Kipperlilly’s arm.
 Kristen: I think about you both, like, all the time. I think we have something really special. So, um, I wanted to ask you officially. 
 Kristen: Would you both go to Spring Fling with me?
 
-
 <<sf_success FKB>>
-
-// add an if condition that prompts if you want to ask lucy too
-// and if you do, <<jump FKB>>
-
 <<if $succeed>>
     <<jump FkbSuccess>>
 <<else>>
@@ -57,6 +52,7 @@ Kristen: Would you both go to Spring Fling with me?
 
 title: FkbSuccess
 ---
+<<background SpringFling>>
 <<char_right KipperlillyBlush>>
 <<char_left LucyBlush>>
 Lucy’s eyes widen and Kipperlilly blushes hard enough to turn pink. 
@@ -149,7 +145,7 @@ You’re about to walk onto the dance floor while you wait for your dates to arr
 
 Kristen: Can’t I get at least one hour at a dance before being kidnapped or whatever?
 
-<<char_right KipperlillyNeutral>>
+<<char_right KipperlillyNeutral1>>
 Kipperlilly: What the fuck are you talking about? 
 
 <<kristen Neutral_FK>>
@@ -166,7 +162,7 @@ Kristen: Is something wrong?
 
 Kipperlilly pops back into the room.
 
-<<char_right KipperlillyHappy>>
+<<char_right KipperlillyHappy1>>
 <<voiceline KipHappy1>>
 Kipperlilly: He’s here! Get back, get back—
 
@@ -174,7 +170,7 @@ Kristen: What is going on?
 
 Lucy just pulls you deeper into the darkness of the room. At this point, you’re pretty sure nothing horrible is happening, so you let her shove you against the wall as Kipperlilly darts next to you. She peers around the doorway.
 
-<<char_right KipperlillyNeutral>>
+<<char_right KipperlillyNeutral1>>
 Kipperlilly: Good, he didn’t see us.
 
 Lucy cautiously peeks around the corner. She’s tall enough that she doesn’t have to lean too far above Kipperlilly.
@@ -187,19 +183,19 @@ You join them at the doorway, sneaking your head between the two of theirs.
 
 <<background SpringFling_FKB>>
 
-<<char_right KipperlillyHappy>>
+<<char_right KipperlillyHappy1>>
 Kipperlilly: Oh, Ivy’s seen her!
 
 You watch speechlessly as Ivy, standing at the side of the dance floor, rolls her eyes and shoves Oisin onto it. He stumbles over his feet.
 
 Lucy: I <i>told</i> her to let him make the first move.
 
-<<char_right KipperlillyAnnoyed>>
+<<char_right KipperlillyAnnoyed1>>
 Kipperlilly: Why would she listen to that? It’s Ivy.
 
 Kristen: Okay, what am I missing?
 
-<<char_right KipperlillyNeutral>>
+<<char_right KipperlillyNeutral1>>
 Oisin glares over his shoulder at Ivy, who smugly waves back from the fringe of the dance floor, before turning to make eye contact with Adaine, who’s watching the whole exchange with her patented “what <i>now?</i>” look. Oisin visibly swallows before digging for something in his pocket.
 
 <<voiceline KristenSurprised1>>
@@ -217,12 +213,12 @@ Lucy: It was a spur of the moment thing.
 
 Oisin takes out something that sparkles in the lights. Adaine suddenly looks like a deer in headlights.
 
-<<char_right KipperlillySurprised>>
+<<char_right KipperlillySurprised1>>
 Lucy: Is that from his grandma’s hoard?
 
 Kipperlilly: I’m kind of impressed that his mom let him take those.
 
-<<char_right KipperlillyHappy>>
+<<char_right KipperlillyHappy1>>
 Adaine gently takes the offered gift. It’s a pair of earrings, which you can only tell because she immediately puts them on. Lucy quietly cheers above you. Kipperlilly’s physically vibrating, now.
 
 <<voiceline KipHappy2>>

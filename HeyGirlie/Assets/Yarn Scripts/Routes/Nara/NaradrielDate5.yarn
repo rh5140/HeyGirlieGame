@@ -1,18 +1,20 @@
 ﻿title: Date5
 ---
-April 13
+April 21
 <<location "Elm Valley Mall">>
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
+<<kristen Neutral>>
 :A few days after the last date, you look around your house and realize that you may or may not have been slacking on your chores. 
 :There’s nothing in the fridge except Jawbone’s Fuckass Pate for Dogs, you’re out of ADHD meds (again), and you have so much mail on your doorstep that isn’t addressed to you or anyone you know.
 :You… may have fucked up a little. And to make matters worse, Nara is coming over. This wouldn’t be a bad thing, but she’s absolutely gonna see what a disaster you are, and maybe never wanna hang out with you again. 
+<<kristen Nervous>>
 :You can practically see the disgusted look on her face now as she tries to think of a compliment that’s actually a thinly-veiled request to leave as soon as possible. You’re doomed.
-:And then the stupid doorbell rings. Fuuuuuuuuck.
 <<kristen Sad>>
-Nara: Kristren!
-<<char_right NaraHappy>>
+:And then the stupid doorbell rings. Fuuuuuuuuck.
+<<char_right NaraHappy3>>
 <<voiceline NaraBespoke4>>
+Nara: Kristren!
 <<voiceline KristenGreetingNara1>>
 Kristen: You’re absolutely doing it on purpose at this point, aren’t you?
 :She smiles coyly. She’s absolutely doing this on purpose.
@@ -21,42 +23,46 @@ Kristen: My name is not Solesian.
 Nara: Which is why I do not respect it :)
 Kristen: How did you make that noise with your mouth.
 Nara: Elvish is such a rich and complicated language, Kristren. It would do you well to appreciate it once in a while.
+<<kristen Neutral>>
 :This is good, this is good. Distracting her from the wreck that is your house is the play right now, and you are going for it.
-<<kristen Nervous>>
-<<char_right NaraNeutral>>
+<<char_right NaraNeutral3>>
 Nara: May I enter?
+<<kristen Nervous>>
 :Uhhhhhh.
 Kristen: Only if you solve my errands three.
 :Solve my errands three? That’s not how errands work. You know that’s not how errands work. Even Nara knows that’s not -
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 Nara: What is an errand? Is that like a riddle of some sort?
 :Saved!
+<<kristen Grin>>
 Kristen: Yyyyyyeah. Yeah, it’s like, uh. It’s like a scavenger hunt of shit you have to do.
 :Nara looks at you softly. She can see through your bullshit with ease.
-<<char_right NaraSad>>
+<<char_right NaraSad3>>
 Nara: Kristen, I am no stranger to falling short of one’s commitments.
 <<kristen Surprised>>
 Kristen: You… you’re not? But you’re a princess?
+<<char_right NaraNeutral3>>
 :She laughs lightly, but the smile does not quite reach her eyes.
 Nara: I did not say I was a particularly good princess.
 <<kristen Nervous>>
 :You fall into an uneasy silence, processing perhaps one of the first genuinely vulnerable things she’s said to you in a while.
-<<char_right NaraNeutral>>
 Nara: No matter. Let us… scavenge, was it? Where to first?
 :You check the ever-increasing pile of sticky notes and gentle reminders Jawbone has so helpfully slid under your door.
 <<kristen Neutral>>
 Kristen: Let’s hit the post office first. Jawbone’s already about five issues of Play, Boy! behind, and he might kill me if I make it six. He loves those double spreads with the newest model of Ball™.
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 Nara: How did you make that sound with your mouth?
+<<kristen Grin>>
 Kristen: The world may never know. Okay, let’s go!
-<<char_right NaraNeutral>>
+<<char_right NaraNeutral3>>
 :You practically drag Nara away from the manor, silently praying that she didn’t see most of the mess. For what it’s worth, she doesn’t mention it as you both head to the mall, but you’re not sure how much of that is just her being polite.
+<<location “mall”>>
 :The two of you navigate the labyrinth that is the Elm Valley Mall, and finally enter the post office. You try very, very hard not to think about how she held your hand the entire way. You fail.
 <<kristen Soft>>
-<<char_right NaraBlush>>
+<<char_right NaraSad3>>
 Nara: Kristen, is there a minotaur contained within this Mall? Its labyrinthine qualities suggest a beast may lurk at the centre of this construction for the damned.
 Kristen: Not unless you count the loyal customers of the Fantasy Hot Topic.
-<<char_right NaraNeutral>>
+<<char_right NaraNeutral3>>
 <<kristen Neutral>>
 :You give a friendly nod and a wave to Bud Cubby, who waves back as he puts packages into lockboxes on the far side of the room.
 <<kristen Sad>>
@@ -66,11 +72,11 @@ Nara: This is… a considerable amount of mail.
 Kristen: Yes.
 Nara: Is it always like this?
 Kristen: It is when you wait two months between pickups.
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 :Nara hums thoughtfully.
 Nara: You must have had a very busy couple of months, to have accumulated so many parcels.
 Kristen: Not… particularly? I’m just kinda lazy. It’s hard to do my chores when I’m supposed to.
-<<char_right NaraSad>>
+<<char_right NaraSad3>>
 Nara: I can sympathise. In Fallinel, I similarly neglected many of my royal duties due to my indolence, and my family would pay the price. 
 Nara: In truth, part of the reason I am studying here is to… escape my father’s frustrations with me.
 -> Stay quiet, and let her share what she wants.
@@ -78,37 +84,49 @@ Nara: In truth, part of the reason I am studying here is to… escape my father�
     Nara: I know my family, and my people, expect much of me. And I will be prepared to give it, someday. Once I have… concluded my studies.
     Nara: I have been speaking at great length about myself. I am going to stop doing that now. Erm, thank you. For listening.
     :You find yourself mirroring her sad smile.
+    <<kristen Neutral>>
     Kristen: Anytime. I mean it.
     <<add_points 1>>
 -> You can relate to complicated family dynamics. Share the pain.
+    <<kristen Neutral>>
     Kristen: Hey, I get it. Sometimes, family can be tough. Lots of people expecting lots of things from you, and it’s like. I dunno, it’s hard to catch a break.
     Kristen: And it builds and builds and builds, ‘til you don’t want anything but to get away from it all.
     Kristen: But sometimes you meet people who give you the space to figure out if what people expect from you is actually what you want, and sometimes it is and sometimes it isn’t and they love you anyway. And if they don’t… fuck ‘em.
+    <<char_right NaraNeutral3>>
     :Nara smiles, eyes wet.
     Nara: While I cannot be quite so cavalier about my own bloodline, I do… understand what you mean. And in a perfect world, I would agree wholeheartedly.
     Nara: Thank you, Kristen. You have given me much to consider.
     <<add_points 2>>
 -> Man. Good thing she’s here and not there, that sounds like a nightmare.
+    <<kristen Grin>>
     Kristen: If they treated you like that, fuck ‘em, and fuck that place. I’m glad you’re here with me instead.
     <<char_right NaraDisgust>>
+    <<kristen Nervous>>
     :You meant it as a comfort, but Nara looks deeply uncomfortable. Was it the cussing? Do you need to tone down the cussing?
     Nara: Kristen. I understand that you are attempting to empathise with me. But Fallinel is my home, and you are not even trying to understand the conflicting feelings I have. Have you never suffered from the weight of others’ expectations for you?
     :You think about when you were younger, a bright-eyed Chosen One of Helio. How everyone in your life looked at you like you were going to save them.
     Kristen: I mean yeah maybe.
+    <<kristen Sad>>
     Nara: Then please make use of your emotional intelligence. You are a cleric. Perhaps it is time you acted like one.
     <<add_points 0>>
+<<char_right NaraNeutral3>>
+<<kristen Neutral>>
 Nara: If our business is concluded here, shall we move on?
 Kristen: Yeah. Yeah, okay, let’s go pick up my meds next. That’ll help me out a lot, probably.
+<<kristen Nervous>>
 :Your stomach churns as you remember all the prescription refill notifications, and emails, and calls… it is <i>way</i> past time to pick them up. It’s not like living without them is the reason you’re such a disaster right now, but it definitely doesn’t help.
+<<char_right NaraShock3>>
 Nara: Oh no! Are you sick? Perhaps I can heal you.
 Kristen: It’s not really something you can cure with a healing spell. Do you know what ADHD is?
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 :Nara hums in thought.
 Nara: I am not sure we have one HD in Fallinel, let alone eighty of them. Is this related to the Solesian device commonly known as a TV? Do you have an allergy, perhaps?
 :Man, is it cute when she doesn’t know things.
+<<kristen Neutral>>
 Kristen: Not exactly. Actually, not even a little bit. Basically, it’s like, some of the parts of my brain don’t work the same way as other people, so it makes it harder to pay attention to stuff, or remember the things I have to do, or break away from the things I want to do.
 Nara: Are these not mere quirks of personality? I have often been described as one who embarks on flights of fancy, or, erm… “outward zones?”
 Kristen: Zoning out?
+<<char_right NaraNeutral3>>
 Nara: That is what I said.
 Kristen: Yeah, I mean, if it’s just a normal amount then it’s just who you are. But if it’s like, ruining your life by making the people you care about the most completely unable to rely on you for anything…
 :You trail off. You really didn’t mean to say that, but it sure is out there. You hope she doesn’t think you suck now. Fuuuuuck, what if she thinks you suck now??
@@ -116,15 +134,22 @@ Kristen: Yeah, I mean, if it’s just a normal amount then it’s just who you a
 Nara: But Kristen, you have accomplished so much with your party. They must have relied on you on countless occasions to keep them alive. Are you quite sure you have this… ADHD?
 Kristen: That’s… actually a pretty good point. I do have a doctor’s note though.
 :You dig through your pockets and grab an embarrassingly crumpled piece of paper that says DOCTOR’S NOTE: IF YOU CAN READ THIS YOU HAVE ADHD. It’s in the doctor’s own handwriting though, so you kind of can’t actually read it.
+<<char_right NaraShock3>>
 :Nara gasps.
 Nara: Kristen! I can read the note! Do… <i>I</i> have ADHD?
+<<kristen Grin>>
 Kristen: Maybe! You’ll have to get your own doctor’s note though. It’s kind of illegal for me to give you mine.
+<<char_right NaraThink3>>
 Nara: I see… Much to consider…
 :You, characteristically, weren’t really paying attention to where you two were walking, so it’s as much a surprise to you as anyone to find you’ve actually made it to the pharmacy.
+<<kristen Surprised>>
 :Before you can make it inside, though, someone barrels directly into you with a massive package of medications and the gnarliest case of owlbear-pox you’ve ever seen.
 :Ah. It’s Gilear. Of course it is. He bows his head at you – in shame or in recognition, you cannot tell – and you give him an awkward little wave in return.
+<<char_right NaraDisgust3>>
 Nara: That strange Elven man has less hair than he should. And far more stains.
+<<kristen Neutral>>
 Kristen: Yeah. That’s Gilear. We try not to worry about it. Also as a general rule, maybe don’t point out things you don’t like about people’s appearances in public?
+<<char_right NaraNeutral3>>
 :Picking up your medication is pretty easy. You stand in a line, the lady rings you up, and now you have your pay-attention-pills. You can’t imagine any reality in which the system for obtaining them is any more complicated than that.
 :Hooray for Fantasy Ritalin!
 :Nara squints at the label. It reads IF YOU TAKE THESE, YOU HAVE ADHD STILL BUT WITH FEWER SYMPTOMS.
@@ -132,39 +157,51 @@ Nara: I see now what you mean by “no cure.” This package clearly states you 
 Kristen: Yeah…
 :If you play up your sadness for pity points, you feel like she might love you more. This is how relationships work right?
 -> It really, really sucks. I don’t want to be like this.
-    <<char_right NaraSad>>
+    <<char_right NaraSad3>>
     :Nara’s face does the little pouty thing it does whenever she’s really sad.
+    <<kristen Awkward>>
     :Man, you didn’t mean to make her sad! Are those tears?? Fix it! Fix it now!!!!
     Kristen: But hey! Uh, the meds do help! When I remember to take them… which isn’t super often…
     Kristen: So there’s that?
     :You offer an extremely awkward smile. She seems to give all your words a lot more gravity than you thought she would. Is she okay?
+    <<char_right NaraNeutral3>>
     :But before you can ask, she forces her face back into its normal, composed expression.
     <<add_points 1>>
 -> It’s not curable, but… it gets more manageable. With practice.
     :Nara’s eyes sparkle hopefully.
     Nara: Is it? Truly? Do you have coaching, to manage your ailment?
+    <<kristen Neutral>>
     Kristen: I go to a therapist, if that’s what you mean. She helps me with strategies and reminders and stuff. Jawbone’s been reading up on it too. And my party, of course, Riz put a whole bunch of alarms on my crystal for classes and clubs and stuff…
     :You trail off, fondly thinking about all the people in your life that make living like this easier for you.
+    <<kristen Soft>>
     Kristen: Man. I’m really lucky. This would be a lot harder without support.
     :Nara’s expression turns indecipherable.
     Nara: It… yes, it seems it would be.
     <<add_points 2>>
 -> I am in constant agony… I am so inattentive and I need a little kiss… maybe also a fainting couch… for my ADHD…
+    <<char_right NaraShock3>>
     :Nara immediately pulls a fainting couch out of her pockets. How? You don’t know.
     Nara: Quickly, Kristen! Faint here so that I may catch you with my fainting couch!
+    <<kristen Sad>>
     :Sure, you’ll play along. You collapse onto the couch with the grace and finesse of someone who faked a lot of sick days when they were younger because they forgot to do their homework.
     Kristen: Ooooh, my bones, they hurt from all the ADHD I have…
     Nara: Oh no! The illness is spreading!
     :Okay, this is a good bit, but you have shit to do. You get up off the couch and dust yourself off.
     <<add_points 0>>
+<<char_right NaraNeutral3>>
+<<kristen Neutral>>
+<<sfx nara_text>>
 :You turn to leave the pharmacy and are instantly interrupted by an all-too familiar chanting from within Nara’s pocket.
 Nara: Ah, I have received a text message on my crystal! I am becoming ever more popular these days.
+<<char_right NaraShock3>>
 :You watch as Nara’s face knits into an expression of confusion, then concern.
 Nara: Kristen. Kristen, we need to return to the post office at once.
 :She turns her screen to face you. On it, is a message from an unknown number that reads: “The USPS (United Solace Postal Service) package has arrived at the warehouse and cannot be delivered due to incomplete address information. Please confirm your address in the link.”
 :This is so, so obviously a scam.
 :You take some time to explain scams, fraud, and phishing (smishing?), and Nara seems to understand.
+<<char_right NaraBlush3>>
 Nara: It appears you have come to my rescue once again.
+<<kristen Soft>>
 :Then, she gives you a tiny little kiss on the cheek. Aw, cute! You’re not blushing even a little bit! This is a lie! You’re blushing so much!
 Kristen: Uh – oh! Anyways, uh, um, time to go to…
 :Where were you going to go next? Home, probably. You can’t think straight anymore.

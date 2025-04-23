@@ -46,10 +46,6 @@ Kristen: Like… You’re my best friend but now I have all these feelings for y
 Kristen: This might be dumb, but I feel as though this is divine fate… Or something.
 
 <<sf_success Fig>>
-
-// add an if condition that prompts if you want to ask ayda too
-// and if you do, <<jump FigAyda>>
-
 <<if $succeed>>
     <<jump FigSuccess>>
 <<else>>
@@ -153,6 +149,7 @@ You turn tail and run away.
 title: FigEnding
 tags:
 ---
+<<background SpringFling>>
 April 18
 <<kristen Neutral_Fig>>
 As soon as you spot Fig, your heart hammers in your chest. You’re just staring at her like an idiot. You know you are. But how can you not? Fig looks—

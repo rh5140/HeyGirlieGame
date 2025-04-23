@@ -1,6 +1,6 @@
 ﻿title: Nara
 ---
-April 13
+April 21
 <<kristen Neutral>>
 :The day to ask Nara to the prom is finally here. Despite all the time you’ve spent together, you’re still not sure whether she’ll say yes.
 :You are… incredibly worried about whether Nara will accept your invitation.
@@ -10,8 +10,10 @@ April 13
 <<char_right NaraHappy>>
 Nara: Hello!
 //al note: I forgot the code to add the Kristen voiceline where she says waugh in five syllables or more so pretend that’s here
+<<kristen Awkward>>
 Kristen: Vampyr!
 Nara: No, I’m Nara, silly!
+<<kristen Neutral>>
 Kristen: Right! Right. Hey! Also: how did you get in?
 <<char_right NaraNeutral>>
 Nara: Your front door was fully open. I assumed this was an intentional choice on your part.
@@ -24,7 +26,7 @@ Kristen: Nara, would you like to go to prom with me?
 <<sf_success Naradriel>>
 
 
-// add an if condition that prompts if you want to ask tracker too
+// add an if condition that prompts if you want to ask nara too
 // and if you do, <<jump TrackerNara>>
 
 
@@ -37,6 +39,7 @@ Kristen: Nara, would you like to go to prom with me?
 
 title: NaraSuccess
 ---
+April 21
 <<char_right NaraShock>>
 Nara: Kristren!
 :Is this it? Is this the moment where she makes your dreams come true?
@@ -56,7 +59,6 @@ Nara: Well, I have much to consider. One one hand, I have only known you for a m
 <<char_right NaraThink>>
 Nara: Unless…
 Kristen: Unless?
-\\al note: that line might not stay lmao
 Nara: We throw caution to the wind.
 <<kristen Surprised>>
 <<char_right NaraNeutral>>
@@ -72,6 +74,7 @@ Nara: Yes, Kristen. I would love nothing more than to go to the School Dance wit
 
 title: NaraFail
 ---
+April 21
 <<char_right NaraShock>>
 Nara: Gasp!
 :Did… did she just say the word gasp?
@@ -96,31 +99,35 @@ Kristen: Sure… bye girlie…
 
 title: NaraEnding
 ---
-<<kristen transparent>>
-<<background MusicFestival_Nara>>
-<<wait 2>>
+<<background SpringFling>>
+April 21
 <<kristen Nervous_Nara>>
 :The moment? Is here. The time? Is now. And you? Are definitely not pissing your pants about it.
 :It’s not because you’ve spent all year planning for this as President of Solace(‘s Number One High School), even though it probably should be. It’s more about making sure Nara has a good time.
 :Is she going to enjoy all of this? Is she going to enjoy <i>any</i> of this???
 :Ok ok, calm down. Take a few breaths. If you panic, your super sick and metropolitan bolo tie is gonna look so off balance and Nara is gonna make <i>so</i> much fun of you for it - 
-<<char_right NaraNeutral4>>
+<<char_right NaraHappy4>>
 Nara: Kristen!!!!!
 <<kristen Surprised_Nara>>
 Kristen: HAH!
 :Your body, mistaking Nara for a bear of the hand-eating variety, decides to karate chop in her vague direction.
 Nara: I would join in, but unfortunately my clothes are too expensive to return your… Solesian? Greeting?
+<<kristen Nervous_Nara>>
 Kristen: Nah you’re good, it’s a. A Kristenian greeting. From. Me. Kristen. Me Kristen.
 :Halfway through talking to Nara, you realise what she’s wearing, and it’s. The prettiest thing you’ve ever seen. And the goofiest. You’re so in love right now. With her, specifically. Did you need to clarify? You did it anyway.
 Nara: Are you alright, darling?
+<<kristen Soft_Nara>>
 Kristen: I uhhh
 Kristen: You uhhhhh
 Kristen: Hot.
 Nara: Yes, that adjective does describe my appearance at any given time. I am glad you like my outfit, though.
 Kristen: Mhm uh huh yeah no problem. Should I like. Show you around?
 Nara: Yes, that would be lovely.
+<<kristen Neutral_Nara>>
 :Trying not to sweat too much because you’re linking arms with the most beautiful girl in the world, you both enter the main area of the prom.
-:This currently consists of dozens of students singing along to Whitney Hasten’s ‘I Wanna Cast With Somebody.’ :Nara looks… stressed? Oh no.
+:This currently consists of dozens of students singing along to Whitney Hasten’s ‘I Wanna Cast With Somebody.’
+:Nara looks… stressed? Oh no.
+<<char_right NaraSad4>>
 Nara: The people here are dressed in… very informal outfits.
 Kristen: Uh huh.
 Nara: The music is kind of fast and also loud and modern and Solesian.
@@ -130,11 +137,15 @@ Kristen: Finger food, baby.
 Nara: Right. Yes… of course.
 You take her arm gently.
 Kristen: You gonna be okay? Cause we can leave if it’s too much. I know I’m the president or whatever and I kind of have to be here or I’ll die but like, I just want you t–
+<<char_right NaraBlush4>>
 Nara: I want to be here. With you. I will be okay.
+<<kristen Soft_Nara>>
 :You have never felt so loved, so cherished. You gently lead Nara over to a nearby table and decide to do something nice for her.
-<<background PLACEHOLDER FOR FAIR SPLASH>>
 <<kristen transparent>>
 <<char_right transparent>>
+<<background SpringFling_Nara>>
+<<wait 2>>
+<<fade_in_ui>>
 :As Nara sits at the table, you pour two glasses of punch and drape the smallest tissue you’ve ever seen on your arm. You are nothing if not a gentleman of chivalrous bravery. Braverous chivalry. You’re good guy.
 :Returning a champion, you place one goblet in front of your princess, the other arm bent like you’re a waiter.
 Kristen: Milady.

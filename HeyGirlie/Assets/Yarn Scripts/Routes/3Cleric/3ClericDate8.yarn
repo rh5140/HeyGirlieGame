@@ -1,12 +1,12 @@
 ﻿title:date8
 ---
-April 13
-<<location "Mordred Manor">>
+April 21
+<<location "PLACEHOLDER">>
 <<set $date_points = 0>>
 <<set $date_points_total = 0>>
 :A slumber party! What could go wrong?
-<<char_right TrackerAngry_3E>>
-<<char_left NaraDisgust>>
+<<char_right TrackerAngry_1>>
+<<char_left NaraAngry>>
 :Why are they so angry? Why are you so cold? Why are you in your underwear when they’re not?
 <<kristen Awkward>>
 <<voiceline NaraBespoke3>>
@@ -107,11 +107,6 @@ Tracker: I’m kind of excited for it.
     Tracker: Just be yourself, cowboy. No need to overthink it.
     You don’t know if that’s physically possible. But you can try.
     <<add_points 1>>
--> Um. Let’s change the topic to literally anything else.
-<<voiceline TrackerSad2>>
-    Tracker sighs.
-    Tracker: Okay, Kristen. Let’s talk about something else.
-    <<add_points 0>>
 Kristen: What time did Nara say she was getting here?
 Tracker: I think she was just planning on showing up —
 <<char_left NaraHappy>>
@@ -128,10 +123,11 @@ Nara: Kristen, my commiseration on the persistence of your perpetual inability t
 :Aw, man. You really did clean this time!
 <<char_right TrackerNeutral_3E>>
 Tracker: This is pretty standard for a Solesian slumber party, actually.
-<<char_left NaraShock>>
+<<char_left NaraThink>>
 Nara: Really? My room has never been as filthy as this.
 :You didn’t even leave any laundry on the floor! Except that one sock. But everything else is picked up!
 Tracker: Well, yeah, but you had unseen servants cleaning up after you, right?
+<<char_left NaraNeutral>>
 Nara: I did not.
 <<char_right TrackerSurprised_3E>>
 Tracker: Wait, really?
@@ -139,24 +135,26 @@ Nara: Really and truly! My childhood bedroom would always clean itself when I le
 Tracker: Are you sure that wasn’t the unseen servants working while you were gone?
 Nara: Of course not, silly, those are more seen than you think. No, it was something else.
 Kristen: Like what?
+<<char_left NaraThink>>
 Nara: I do not know. I was never able to catch them in the act, as it were. But I could always sense a foreign presence when I entered my room…
 :Nara’s said a lot of creepy shit. But this might be the creepiest.
 Tracker: Um. 
 Kristen: Uh.
 Tracker: Hey, I’ve got an idea. Let’s do anything else.
-Kristen: Please, Cassandra, let’s.
+Kristen: Please, dear Cassandra, let’s.
 <<char_left NaraHappy>>
 Nara: Of course! I am excited to enjoy Solesian Slumber Party Ritual Activities!
 Nara: I am familiar with the Pillow Fight, but I am woefully unaware of what other items on the agenda will fill the rest of our time.
 :Your childhood slumber parties had mostly involved prayers to Helio and painting corn cobs, but one of the basic essentials was —
 Kristen: Uh, board games.
+<<char_left NaraThink>>
 Nara: Why are the games bored? Must we entertain them?
 Tracker: Different kind of “bored”, babe.
 Kristen: We could do each other’s nails?
 <<char_left NaraDisgust>>
 Nara: Kristen, that is what we paid the manicurists for last week. Is this what poor people who cannot afford that do?
 Tracker: Little bit.
-Kristen: Yeah, not inaccurate. Um, I don’t know. Other than pillow fighting, the only thing I can think of is teenagers in horror movies summoning some otherworldly evil.
+Kristen: Yeah, pretty much. Um, I don’t know. Other than pillow fighting, the only thing I can think of is teenagers in horror movies summoning some otherworldly evil.
 <<kristen Grin>>
 Kristen: But I’ve kinda beaten them all already.
 :You flex and show off your huge guns. 
@@ -170,7 +168,9 @@ Tracker: Honestly, it might be fun. Summoning something. Let’s get up to stupi
 Nara: I agree!
 <<kristen Neutral>>
 Kristen: Y’know what, fuck it. Let’s just make sure it’s nothing so bad Riz is gonna yell at me about it later.
+<<char_left NaraThink>>
 Nara: Riz? Is that the nickname of the Ball?
+<<char_left NaraNeutral>>
 :You find a ritual on The Phone that doesn’t require a grocery run. It’s for some sort of bird king, which is probably just the Vulture King again, right? You can totally handle the Vulture King.
 :The three of you chant in union.
 Kristen: Vulturis Emergis…
@@ -183,7 +183,6 @@ Nara: Vulturis Emergis!
 Nara: Kristren! How many times have I told you-
 :The Vulture King looks down at Nara. It’s hard to read bird facial expressions, but you think he’s nervous.
 Vulture King: My deepest apologies, Princess Naradriel. It is the height of rudeness for a member of royalty to sully the robes of another. Here, allow me.
-<<char_left NaraShock>>
 \\vulture noise sfx?
 :The Vulture King squawks, and Nara is suddenly spotless.
 <<char_left NaraHappy>>
@@ -197,7 +196,7 @@ Tracker: Living in Solace is really weird sometimes. Is that clean up spell for 
 The Vulture Queen: I only grant this privilege once a day.
 Tracker: Yeah, okay. Best to save for Nara, then.
 :Nara beams at Tracker giving in immediately. Fuck, you should’ve thought of that.
-The Vulture Queen: Princess Naradriel, your choice in paramours is befitting your station. I bless this yurion.
+The Vulture Queen: Princess Naradriel, your choice in paramours is befitting of your station. I bless this yurion.
 :Yuri union…
 The Vulture Queen: Though your memory leaves something to be desired, Kristen Applebees. We have met before.
 :Wait, huh?
@@ -303,23 +302,24 @@ Tracker: Baby, that’s just the <i>start</i> of what Aelwyn said.
     Kristen: Harsh. But fair. Sorry.
     :Nara makes a little 'hmph' noise that you take as her unique way of indicating she's begrudgingly going to let you move on from this one.
     <<add_points 0>> 
-:Now all pretense of sleeping is gone, you all return to that old-but-gold tradition of sleepovers: swapping ridiculous rumours about the people you know. 
-:As you’re (spilling the tea?) with your (girl?)friends, you come to realise something - for the first time since the three of you have started hanging out, <i>all</i> of you are having fun. 
+<<char_left NaraNeutral>>
+:Now all pretense of sleeping is gone, you all return to that old-but-gold tradition of sleepovers: swapping ridiculous rumors about the people you know. 
+:As you’re (spilling the tea?) with your (girl?)friends, you come to realize something - for the first time since the three of you have started hanging out, <i>all</i> of you are having fun. 
 :You’re not freaked out by the idea of your exes dating (right now, anyway), there’s no mud for Nara’s… mudphobia… to come out, and Tracker is free from being forcibly tended to by crazy intense werewolf-specialist manicurists.
 :Eventually, when it feels like you’ve talked for hours, your eyelids start to droop. 
-:For once, you don’t fight back. Something in you seems to recognise, instinctively, that you’re completely safe here. To not worry about what Tracker and Nara will be doing next. To not be ‘on’ 100 percent. To just… be.
+:For once, you don’t fight back. Something in you seems to recognize, instinctively, that you’re completely safe here. To not worry about what Tracker and Nara will be doing next. To not be ‘on’ 100 percent. To just… be.
 :As you slip away, you barely register the two different hands pulling the blanket tighter for you.
-<<bg_filter_on black>>
+\\black background
 :zzz… 
 :As you gradually start to emerge from your slumber, you start to hear your girlfriends’(?) voices. You keep your eyes closed so you can listen in. Hey, old habits die hard.
 Nara: I have enjoyed this, Tracker.
 Tracker: Me too, but we still need to talk, just the two of us. I would feel better after a check-in, y’know?
 Nara: I agree. Kristen has already approached me about the subject.
-Tracker: Huh… she’s had a talk with me as well…
-Nara: I see… is this her attempt to initiate a polycule with us? Or does she have an ulterior motive to reunite us without her?
+Tracker: Huh… she’s had a talk with me, too…
+Nara: I see… is this her attempt to initiate a polycule with us? Or does she have some ulterior motive, perhaps an attempt to reunite us without her?
 :Wait, are they talking about <i>leaving you out?</i>
 -> <i>Wake up and join in! You’re awake and bored! You wanna be involved!</i>
-    <<bg_filter_off>>
+    //back to manor background
    You jolt up from your sleeping position so fast you hear all the bones in your body crack simultaneously. Also, you might just have narrowly missed giving yourself a brain aneurysm.
      Whatever, you have more important things to worry about - like the fact Tracker and Nara are both looking at you in confusion. Right, they don’t understand what you’ve been doing.
     (...Honestly, do <i>you</i> understand what you’ve been doing?) 
@@ -330,15 +330,15 @@ Nara: I see… is this her attempt to initiate a polycule with us? Or does she h
     Kristen: I mean. No! I wanna date both of you!   Preferably at the same time!
     Well, you’ve spat it out now. For better or worse. Tracker gives you an appraising look for a second, then huffs out a breath of laughter at whatever she sees in your face.
     Tracker: Okay. So, for future reference, you should  really think about how you’re gonna end a sentence before you start it, cowboy…
-    You wince, but at least she mostly sounds fond.
+You wince, but at least she mostly sounds fond.
     Tracker: Yeah, it probably is time for us all to address the elephant in the room.
     Nara: I agree. It would be best for us to discuss this sooner rather than later.
     <<add_points 1>>
 -> <i>Wake up and admonish them! There’s no way they’re making any decisions without you!</i>
-    <<bg_filter_off>>
+    \\back to manor background
     Your eyes snap open. You will not let this stand! Not in your house! And also Tracker’s! But mainly yours!
     Kristen: What the fuck! No! Why are you guys talking without me?! What the fuck!!
-    The look both Tracker and Nara give you is beyond frosty.
+    The look both Tracker and Nara share is beyond frosty.
     Tracker: Oh, I’m <i>sorry,<i> Kristen. I wasn’t aware we’re not allowed to speak without you.
     Nara: A strange conclusion to reach, since you have not descended from on high to forbid us from conversing without your presence.
     Doubt starts to creep in. Are they right? Are you wrong?
@@ -355,19 +355,7 @@ Nara: I see… is this her attempt to initiate a polycule with us? Or does she h
     Nara: No…
     Kristen: We can explain. But honestly… we should probably have <i>this</i> discussion first. Y’know. The one I overheard you guys having just now and was totally chill about.
     <<add_points 2>>
--> <i>Keep your eyes closed - you wanna hear more…</i>
-    Tracker: Yeah, it’s a little-
-    Tracker cuts herself off. Nara doesn’t respond.
-    A few seconds pass, and you start to get worried. Is something wrong? Has a stranger broken into the manor? Are they in danger???
-    Tracker: We know you’re awake, Kristen.
-    Ah, fuck.
-    <<bg_filter_off>>
-    You open your eyes and are faced with an annoyed Tracker and a sad Nara. These are your least favourite facial expressions from them.
-    Kristen: I just want us all to hang out and date and also kiss…
-    Tracker: Are you serious? You can have conversations with both of us individually about this, but as soon as we decide to talk to each other alone, it’s forbidden all of a sudden?
-    Nara: I have to agree with Tracker. The level of control you wish to impose upon us here is almost disturbing. I admire your freedom from life’s restrictions, but you seem to have no problems reducing the freedom of your partners.
-    Tracker: If you want to talk about this, let’s do it while we’re all awake. And participating.
-    <<add_points 0>>
+<<char_left NaraNeutral>>
 :So. It’s finally time to have The Talk.
 Kristen: Firstly…I’m sorry. 
 Kristen: Wait, not for the… I’m still bad at this. I really do like you both. It’s just, for so long, it’s been… <i>complicated,</i> between the three of us. Then for the last couple of weeks, it suddenly wasn’t.

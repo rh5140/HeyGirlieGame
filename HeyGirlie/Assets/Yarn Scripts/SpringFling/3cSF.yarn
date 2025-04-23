@@ -42,6 +42,12 @@ Kristen: Nara, watching you dive right into discovering the world has made it so
 Kristen: I want — I <i>hope</i> you both feel the same.
 <<kristen Awkward>>
 Kristen: And. Um. Say something before my heart gives out, please.
+<<sf_success 3C>>
+<<if $succeed>>
+    <<jump TrackerNaraSuccess>>
+<<else>>
+    <<jump TrackerNaraFail>>
+<<endif>>
 ===
 
 
@@ -112,6 +118,7 @@ Kristen: Bye, girlies…
 
 title: TrackerNaraEnding
 ---
+<<background SpringFling>>
 :You’re waiting anxiously by the entrance for Tracker or Nara to show up.
 :You’d wanted to pick them up yourself, but alas, presidential duties called. Despite objectively knowing the two of them agreed to come to this event with you, however, the longer you wait, the more your brain keeps helpfully turning over that one nightmare you had at the Manor sleepover.
 :Cassandra swore like a billion times that was not a prophetic dream. Your goddess wouldn’t <i>lie</i> to you, right…?

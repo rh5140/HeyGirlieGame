@@ -42,5 +42,6 @@ public enum Setting
     SFX,
     Voices,
     Speed,
-    Autoforward
+    Autoforward,
+    TextSize
 }
