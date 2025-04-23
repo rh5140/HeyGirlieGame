@@ -100,6 +100,7 @@ public class YarnCommands : MonoBehaviour
     {
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
+        _sfxSource.Stop();
         SceneManager.LoadScene(sceneName);
     }
 
