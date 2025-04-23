@@ -42,6 +42,12 @@ Kristen: Nara, watching you dive right into discovering the world has made it so
 Kristen: I want — I <i>hope</i> you both feel the same.
 <<kristen Awkward>>
 Kristen: And. Um. Say something before my heart gives out, please.
+<<sf_success 3C>>
+<<if $succeed>>
+    <<jump TrackerNaraSuccess>>
+<<else>>
+    <<jump TrackerNaraFail>>
+<<endif>>
 ===
 
 
