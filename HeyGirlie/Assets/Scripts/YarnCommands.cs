@@ -55,6 +55,7 @@ public class YarnCommands : MonoBehaviour
     {
         dialogueRunner.AddCommandHandler<string>("change_scene", ChangeScene);
         dialogueRunner.AddCommandHandler<int>("add_points", AddPoints);
+        dialogueRunner.AddCommandHandler("update_points", UpdatePointsInGameManager);
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
@@ -177,13 +178,19 @@ public class YarnCommands : MonoBehaviour
 
     private void AddPoints(int num)
     {
-        _loveInterest.AddPoints(num);
         // Handling Cassandra
         float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
         _variableStorage.TryGetValue("$date_points", out date_points);
         _variableStorage.SetValue("$date_points", date_points + num);
 
-        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
+        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints((int)date_points+num, _loveInterest); // Slow but only used for testing... 
+    }
+
+    private void UpdatePointsInGameManager()
+    {
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _loveInterest.AddPoints((int)date_points);
     }
     #endregion Updating State
 
