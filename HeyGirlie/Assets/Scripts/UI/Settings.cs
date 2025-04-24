@@ -31,6 +31,10 @@ public class Settings : MonoBehaviour
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
     }
 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape)) Close();
+    }
+
     void OnDestroy(){
         if(pauseLock){
             GameManager.Instance.Pause(false);

@@ -12,6 +12,10 @@ public class Credits : MonoBehaviour
         }
     }
 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape)) Close();
+    }
+
     void OnDestroy(){
         if(pauseLock){
             GameManager.Instance.Pause(false);

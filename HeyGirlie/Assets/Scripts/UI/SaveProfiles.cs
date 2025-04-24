@@ -14,6 +14,7 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     [SerializeField] private GameObject overwritePopup;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private TMP_InputField playerName;
+    [SerializeField] private GameObject background;
 
     private GameObject selected;
     private int selectedSave = 0;
@@ -36,6 +37,8 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
             deleteButton.interactable = false;
             saveButton.interactable = false;
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape)) Close();
     }
 
     void OnDestroy(){
@@ -99,11 +102,10 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
         saves[selectedSave - 1].SetName();
         saves[selectedSave - 1].SetScreenshot();
         Unselect(false);
+        EventSystem.current.SetSelectedGameObject(background);
     }
 
     private void Unselect(bool saveFound){
-        // EventSystem.current.SetSelectedGameObject(null);
-
         loadButton.interactable = saveFound;
         deleteButton.interactable = saveFound;
     }

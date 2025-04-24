@@ -124,7 +124,7 @@ public class Dropdown : MonoBehaviour
         }
 
         animationLock = false;
-        EventSystem.current.SetSelectedGameObject(null);
+        // EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void LoadGame()
