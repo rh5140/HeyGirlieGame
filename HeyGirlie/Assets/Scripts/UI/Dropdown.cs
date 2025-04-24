@@ -23,9 +23,10 @@ public class Dropdown : MonoBehaviour
     private bool open = true;
 
     private bool pauseLock = false;
+    private bool animationLock = false;
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && !animationLock){
             if(open) {
                 OpenDropdown();
                 open = false;
@@ -82,9 +83,12 @@ public class Dropdown : MonoBehaviour
         float time = 0, lerpTime = 0.25f;
         Image overlayImg = overlay.GetComponent<Image>();
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
+        
+        animationLock = true;
 
         float cEnd = 0f, cStart = 1f, pEnd = -1*start, pStart = -1457.5f;
         if(open){
+            hoverArea.SetActive(false);
             overlay.SetActive(true);
             paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
@@ -110,6 +114,7 @@ public class Dropdown : MonoBehaviour
         if(!open){
             overlay.SetActive(false);
             paper.SetActive(false);
+            hoverArea.SetActive(true);
         } else {
             // "Awake"
             if(!GameManager.Instance.pauseLock){
@@ -118,6 +123,7 @@ public class Dropdown : MonoBehaviour
             }
         }
 
+        animationLock = false;
         EventSystem.current.SetSelectedGameObject(null);
     }
 
