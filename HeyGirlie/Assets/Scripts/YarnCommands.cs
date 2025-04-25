@@ -365,14 +365,9 @@ public class YarnCommands : MonoBehaviour
     
     private void SpringFlingInterface()
     {
-        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
-        AydaLI aydali = (AydaLI)li;
-        bool date7choice = aydali.GetAydaDate7();
         _specialInterface.GetComponent<SpringFling>().ActivateButtons();
-        if (date7choice == false)
-        {
-            _specialInterface.GetComponent<SpringFling>().DeactivateAyda(date7choice);
-        }
+        _specialInterface.GetComponent<SpringFling>().ActivateAyda();
+        
     }
 
     private void EnableContinue()
