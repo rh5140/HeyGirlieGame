@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class FadeTransition : MonoBehaviour
 {
@@ -37,5 +38,25 @@ public class FadeTransition : MonoBehaviour
         }
 
         cg.alpha = end;
+    }
+
+    public void FadeOutAndChangeScene(string sceneName)
+    {
+        StartCoroutine(FadeOutAndChangeSceneHelper(sceneName, ui, 1f, 0, fadeTime));
+    }
+
+    IEnumerator FadeOutAndChangeSceneHelper(string sceneName,CanvasGroup cg, float start, float end, float lerpTime)
+    {
+        float time = 0;
+        while (time < lerpTime)
+        {
+            float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
+            cg.alpha = currentAlpha;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        cg.alpha = end;
+        SceneManager.LoadScene(sceneName);
     }
 }
