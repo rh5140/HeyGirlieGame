@@ -84,6 +84,7 @@ public class YarnCommands : MonoBehaviour
         
         dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
         dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
+        dialogueRunner.AddCommandHandler("fade_out_ui", FadeOutUI);
         dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
         dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
         dialogueRunner.AddCommandHandler<string>("background_filter_on", BackgroundFilterOn);
@@ -145,7 +146,8 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
-        SceneManager.LoadScene(sceneName);
+        _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
+        // SceneManager.LoadScene(sceneName);
     }
 
     private void IncrementDateCount()
@@ -214,6 +216,11 @@ public class YarnCommands : MonoBehaviour
     private void FadeInUI()
     {
         _ui.GetComponent<FadeTransition>().FadeIn();
+    }
+
+    private void FadeOutUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeOut();
     }
 
     private void ToggleText(string character = "NONE")
