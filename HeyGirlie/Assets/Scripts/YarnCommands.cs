@@ -318,7 +318,19 @@ public class YarnCommands : MonoBehaviour
         if (sd != null)
         {
             if (sd.spriteDict.ContainsKey(charSpriteName))
+            {
+                if (charSprite.GetComponent<Image>().sprite.name == "transparent")
+                {
+                    // Fade in
+                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+                }
+                else if (charSpriteName == "transparent")
+                {
+                    // fade out
+                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 1f, 0, 0.5f)); // hardcoded to spend half a second fading
+                }
                 charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+            }
             else Debug.Log("Sprite " + charSpriteName + " not found!");
         }
     }
@@ -326,8 +338,33 @@ public class YarnCommands : MonoBehaviour
     private void SetMultiSprite(GameObject charSprite, string charSpriteName)
     {
         if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
+        {
+            if (charSprite.GetComponent<Image>().sprite.name == "transparent")
+            {
+                // Fade in
+                StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+            }
+            else if (charSpriteName == "transparent")
+            {
+                // fade out
+                StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 1f, 0, 0.5f)); // hardcoded to spend half a second fading
+            }
             charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
+        }
         else Debug.Log("Sprite " + charSpriteName + " not found!");
+    }
+
+    private IEnumerator FadeSprite(Image sprite, float start, float end, float lerpTime)
+    {
+        float time = 0;
+        
+        while (time < lerpTime)
+        {
+            float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, currentAlpha);
+            time += Time.deltaTime;
+            yield return null;
+        }
     }
     #endregion Sprite Functions
 
