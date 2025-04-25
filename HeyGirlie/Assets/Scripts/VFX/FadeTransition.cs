@@ -1,11 +1,17 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FadeTransition : MonoBehaviour
 {
     private CanvasGroup ui;
     public float fadeTime = 1f;
+
+    public Image kristenSprite;
+    public Image leftSprite;
+    public Image rightSprite;
+    public Image background; // in case we want to... do something with that
 
     public void Start()
     {
@@ -52,6 +58,9 @@ public class FadeTransition : MonoBehaviour
         {
             float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
             cg.alpha = currentAlpha;
+            kristenSprite.color = new Color(kristenSprite.color.r, kristenSprite.color.g, kristenSprite.color.b, currentAlpha);
+            leftSprite.color = new Color(leftSprite.color.r, leftSprite.color.g, leftSprite.color.b, currentAlpha);
+            rightSprite.color = new Color(rightSprite.color.r, rightSprite.color.g, rightSprite.color.b, currentAlpha);
             time += Time.deltaTime;
             yield return null;
         }
