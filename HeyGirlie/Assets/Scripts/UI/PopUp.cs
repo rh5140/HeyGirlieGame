@@ -12,12 +12,14 @@ public class PopUp : MonoBehaviour
     [SerializeField] private TMP_InputField playerName;
 
     void OnEnable(){
+        Debug.Log("AHHHHH");
         StartCoroutine(SelectInput());
     }
 
     IEnumerator SelectInput(){
         yield return new WaitForSeconds(0.25f);
 
+        Debug.Log("BEEEEEEEE");
         EventSystem.current.SetSelectedGameObject(textInput);
     }
 

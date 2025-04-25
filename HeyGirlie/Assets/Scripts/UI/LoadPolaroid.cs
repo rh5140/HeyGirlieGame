@@ -12,6 +12,10 @@ public class LoadPolaroid : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private TMP_Text name;
     [SerializeField] private TMP_Text location;
+
+    [SerializeField] private Button saveButton;
+    [SerializeField] private Button loadButton;
+    [SerializeField] private Button deleteButton;
     void Awake()
     {
         SetName();
@@ -29,5 +33,17 @@ public class LoadPolaroid : MonoBehaviour
         
         name.text = (data != null) ? data.getPlayerName() : "";
         location.text = (data != null) ? data.getLocation() : "";
+    }
+
+    public void Selected(bool toggle){
+        if(toggle){
+            loadButton.interactable = true;
+            deleteButton.interactable = true;
+            saveButton.interactable = true;
+        } else {
+            loadButton.interactable = false;
+            deleteButton.interactable = false;
+            saveButton.interactable = false;
+        }
     }
 }

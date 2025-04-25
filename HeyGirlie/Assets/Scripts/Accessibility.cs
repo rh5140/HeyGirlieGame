@@ -12,12 +12,12 @@ public class Accessibility : MonoBehaviour
 
     void OnEnable(){
         arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
-        EventSystem.current.SetSelectedGameObject(arrowKeyStart);
-        Debug.Log(EventSystem.current.currentSelectedGameObject);
+        if(arrowKeyStart != null) EventSystem.current.SetSelectedGameObject(arrowKeyStart);
+        // Debug.Log(EventSystem.current.currentSelectedGameObject);
     }
 
     void Update(){
-        Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
+        // Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
     }
 
     void OnDisable(){
