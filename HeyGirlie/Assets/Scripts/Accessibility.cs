@@ -21,7 +21,7 @@ public class Accessibility : MonoBehaviour
     }
 
     void OnDisable(){
-        EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
+        if(arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
     }
 
     // void OnDestroy(){

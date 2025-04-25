@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections;
 
-public class SaveProfiles : MonoBehaviour//, IDeselectHandler
+public class SaveProfiles : Menu
 {
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
@@ -19,12 +19,9 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     private Toggle selected;
     private int selectedSave = 0;
 
-    private bool pauseLock = false;
     void Awake(){
-        if(!GameManager.Instance.pauseLock){
-            GameManager.Instance.Pause(true);
-            pauseLock = true;
-        }
+        LockEsc(EscLock.Gallery);
+        Pause();
 
         loadButton.interactable = false;
         deleteButton.interactable = false;
@@ -32,20 +29,12 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     }
 
     void Update(){
-        // if(EventSystem.current.currentSelectedGameObject == null){
-        //     loadButton.interactable = false;
-        //     deleteButton.interactable = false;
-        //     saveButton.interactable = false;
-        // }
-
-        if(Input.GetKeyDown(KeyCode.Escape)) Close();
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Gallery) Close();
     }
 
     void OnDestroy(){
-        if(pauseLock){
-            GameManager.Instance.Pause(false);
-            pauseLock = false;
-        }
+        Unpause();
+        UnlockEsc();
     }
 
     public void isSelected(bool toggle){

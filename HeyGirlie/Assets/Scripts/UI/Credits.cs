@@ -1,26 +1,23 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Credits : MonoBehaviour
+public class Credits : Menu
 {
-    private bool pauseLock = false;
     [SerializeField] private GameObject creditsMenu;
     void Awake(){
-        if(!SceneManager.GetActiveScene().name.Equals("Credits") && !GameManager.Instance.pauseLock){
-            GameManager.Instance.Pause(true);
-            pauseLock = true;
+        if(!SceneManager.GetActiveScene().name.Equals("Credits")){
+            Pause();
         }
+        LockEsc(EscLock.Credits);
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape)) Close();
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Credits) Close();
     }
 
     void OnDestroy(){
-        if(pauseLock){
-            GameManager.Instance.Pause(false);
-            pauseLock = false;
-        }
+        Unpause();
+        UnlockEsc();
     }
 
     public void Close(){
