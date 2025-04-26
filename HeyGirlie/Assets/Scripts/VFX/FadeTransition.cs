@@ -58,9 +58,9 @@ public class FadeTransition : MonoBehaviour
         {
             float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
             cg.alpha = currentAlpha;
-            kristenSprite.color = new Color(kristenSprite.color.r, kristenSprite.color.g, kristenSprite.color.b, currentAlpha);
-            leftSprite.color = new Color(leftSprite.color.r, leftSprite.color.g, leftSprite.color.b, currentAlpha);
-            rightSprite.color = new Color(rightSprite.color.r, rightSprite.color.g, rightSprite.color.b, currentAlpha);
+            if (kristenSprite.color.a != 0) kristenSprite.color = new Color(kristenSprite.color.r, kristenSprite.color.g, kristenSprite.color.b, currentAlpha);
+            if (leftSprite.color.a != 0) leftSprite.color = new Color(leftSprite.color.r, leftSprite.color.g, leftSprite.color.b, currentAlpha);
+            if (rightSprite.color.a != 0) rightSprite.color = new Color(rightSprite.color.r, rightSprite.color.g, rightSprite.color.b, currentAlpha);
             time += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }

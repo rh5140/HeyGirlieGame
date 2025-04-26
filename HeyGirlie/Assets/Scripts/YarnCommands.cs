@@ -357,13 +357,13 @@ public class YarnCommands : MonoBehaviour
         if (curSprite.sprite.name == "transparent" || curSprite.color.a == 0)
         {
             // Fade in
-            StartCoroutine(FadeSprite(curSprite, 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+            StartCoroutine(FadeSprite(curSprite, curSprite.color.a, 1f, 0.5f)); // hardcoded to spend half a second fading
             curSprite.sprite = nextSprite;
         }
         else if (charSpriteName == "transparent")
         {
             // fade out
-            StartCoroutine(FadeSprite(curSprite, 1f, 0, 0.5f)); // hardcoded to spend half a second fading
+            StartCoroutine(FadeSprite(curSprite, curSprite.color.a, 0, 0.5f)); // hardcoded to spend half a second fading
         }
         else curSprite.sprite = nextSprite;
     }
