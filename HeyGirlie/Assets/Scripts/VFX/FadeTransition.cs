@@ -22,13 +22,13 @@ public class FadeTransition : MonoBehaviour
 
     public void FadeIn()
     {
-        StartCoroutine(FadeCanvasGroup(ui, 0, 1f, fadeTime));
+        StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 1f, fadeTime));
     }
 
     public void FadeOut()
     {
 
-        StartCoroutine(FadeCanvasGroup(ui, 1f, 0, fadeTime));
+        StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 0, fadeTime));
     }
 
     IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime)
@@ -39,8 +39,8 @@ public class FadeTransition : MonoBehaviour
         {
             float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
             cg.alpha = currentAlpha;
-            time += Time.deltaTime;
-            yield return null;
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
 
         cg.alpha = end;
@@ -48,7 +48,7 @@ public class FadeTransition : MonoBehaviour
 
     public void FadeOutAndChangeScene(string sceneName)
     {
-        StartCoroutine(FadeOutAndChangeSceneHelper(sceneName, ui, 1f, 0, fadeTime));
+        StartCoroutine(FadeOutAndChangeSceneHelper(sceneName, ui, ui.alpha, 0, fadeTime));
     }
 
     IEnumerator FadeOutAndChangeSceneHelper(string sceneName,CanvasGroup cg, float start, float end, float lerpTime)
@@ -61,8 +61,8 @@ public class FadeTransition : MonoBehaviour
             kristenSprite.color = new Color(kristenSprite.color.r, kristenSprite.color.g, kristenSprite.color.b, currentAlpha);
             leftSprite.color = new Color(leftSprite.color.r, leftSprite.color.g, leftSprite.color.b, currentAlpha);
             rightSprite.color = new Color(rightSprite.color.r, rightSprite.color.g, rightSprite.color.b, currentAlpha);
-            time += Time.deltaTime;
-            yield return null;
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
 
         cg.alpha = end;

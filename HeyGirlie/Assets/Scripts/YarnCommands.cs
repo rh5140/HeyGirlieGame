@@ -336,12 +336,12 @@ public class YarnCommands : MonoBehaviour
                 if (charSprite.GetComponent<Image>().sprite.name == "transparent")
                 {
                     // Fade in
-                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), charSprite.GetComponent<Image>().color.a, 1f, 0.5f)); // hardcoded to spend half a second fading
                 }
                 else if (charSpriteName == "transparent")
                 {
                     // fade out
-                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 1f, 0, 0.5f)); // hardcoded to spend half a second fading
+                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), charSprite.GetComponent<Image>().color.a, 0, 0.5f)); // hardcoded to spend half a second fading
                 }
                 charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
             }
@@ -353,17 +353,18 @@ public class YarnCommands : MonoBehaviour
     {
         if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
         {
-            if (charSprite.GetComponent<Image>().sprite.name == "transparent")
+            if (charSprite.GetComponent<Image>().sprite.name == "transparent" || charSprite.GetComponent<Image>().color.a == 0)
             {
                 // Fade in
                 StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+                charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
             }
             else if (charSpriteName == "transparent")
             {
                 // fade out
                 StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 1f, 0, 0.5f)); // hardcoded to spend half a second fading
             }
-            charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
+            else charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
         }
         else Debug.Log("Sprite " + charSpriteName + " not found!");
     }
@@ -376,9 +377,10 @@ public class YarnCommands : MonoBehaviour
         {
             float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, currentAlpha);
-            time += Time.deltaTime;
-            yield return null;
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
+        sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, end);
     }
     #endregion Sprite Functions
 
