@@ -479,7 +479,9 @@ public class YarnCommands : MonoBehaviour
     private void EnableContinue()
     {
         _splashContinueButton.SetActive(true);
+        StartCoroutine(FadeSprite(_splashContinueButton.GetComponentInChildren<Image>(), 0, 1f, 1f));
     }
+    
     #endregion Special Event
 
     #region Background Functions
@@ -530,8 +532,8 @@ public class YarnCommands : MonoBehaviour
         {
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
-            time += Time.deltaTime;
-            yield return null;
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
 
         bg.color = end;

@@ -12,11 +12,15 @@ SPRING FLINGGGGGGGGGGGGG it ends here.. time to ask a girlie(s) out
 
 title: Ending
 ---
-<<location "Aguefort Gym">>
-// <<kristen transparent>>
-<<char_left transparent>>
+<<kristen transparent>>
 <<char_right transparent>>
+<<char_left transparent>>
+<<fade_out_ui>>
+<<wait  1>>
+<<location "Aguefort Gym">>
 <<background SpringFling>>
+<<fade_in_ui>>
+<<wait  1>>
 <<if $succeed is false>>
     <<jump FlopEnding>>
 <<else>>
@@ -64,6 +68,7 @@ title: Ending
 
 title: EndingForReal
 ---
+<<fade_in_ui>>
 the end...
 thank you for playing hey, girlie! game courtesy of the hey, girlie! team
 byebye
@@ -88,9 +93,11 @@ Despite your best efforts, {$date} turned you down, and you didn’t manage to g
 <<kristen transparent>>
 <<background Aguefort>>
 <<char_right AguefortNeutral>>
+<<wait  1>>
 Aguefort: Every god represented by our cleric class has to have at least one student with a date to Spring Fling. 
 Aguefort: Or else the contract I have with the celestial plane means I have to kill those cleric students for being, and I quote, “loser virgin nerds.”
 <<bg_filter_off>>
+<<wait  1>>
 <<background SpringFling>>
 <<kristen  Surprised_SF>>
 <<char_right  AguefortNeutral>>
@@ -99,8 +106,15 @@ Annnnnd back to the present.
 Aguefort: Power word kill.
 You die, and are dead.
 Game over.
+<<bg_filter_on black>>
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait  2>>
+<<bg_filter_off>>
 <<background SpringFling_Dead>>
+<<wait  2>>
+<<background SpringFling_DeadText>>
+<<wait  2>>
 <<enable_continue>>
 ===
