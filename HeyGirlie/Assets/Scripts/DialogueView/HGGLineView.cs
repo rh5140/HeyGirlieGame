@@ -238,6 +238,8 @@ namespace Yarn.Unity
         /// </summary>
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
 
+        internal bool menuOpen = false;
+
         private void Start(){
             SettingManager.Instance.SetLineView(this);
             SettingManager.Instance.UpdateLineView();
@@ -251,7 +253,7 @@ namespace Yarn.Unity
 
         void Update()
         {
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) && !GameManager.Instance.pauseLock)
             {
                 UserRequestedViewAdvancement();
             }

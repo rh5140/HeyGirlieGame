@@ -130,48 +130,49 @@ namespace Yarn.Unity
             }
 
             // Update the last line, if one is configured
-            if (lastLineContainer != null)
-            {
-                if (lastSeenLine != null)
-                {
-                    // if we have a last line character name container
-                    // and the last line has a character then we show the nameplate
-                    // otherwise we turn off the nameplate
-                    var line = lastSeenLine.Text;
-                    if (lastLineCharacterNameContainer != null)
-                    {
-                        if (string.IsNullOrWhiteSpace(lastSeenLine.CharacterName))
-                        {
-                            lastLineCharacterNameContainer.SetActive(false);
-                        }
-                        else
-                        {
-                            line = lastSeenLine.TextWithoutCharacterName;
-                            lastLineCharacterNameContainer.SetActive(true);
-                            lastLineCharacterNameText.text = lastSeenLine.CharacterName;
-                        }
-                    }
-                    else if (line.Text[0] == ':')
-                    {
-                        line.Text = line.Text.Substring(1);
-                    }
+            // if (lastLineContainer != null)
+            // {
+            //     if (lastSeenLine != null)
+            //     {
+            //         // if we have a last line character name container
+            //         // and the last line has a character then we show the nameplate
+            //         // otherwise we turn off the nameplate
+            //         var line = lastSeenLine.Text;
+            //         if (lastLineCharacterNameContainer != null)
+            //         {
+            //             if (string.IsNullOrWhiteSpace(lastSeenLine.CharacterName))
+            //             {
+            //                 lastLineCharacterNameContainer.SetActive(false);
+            //             }
+            //             else
+            //             {
+            //                 line = lastSeenLine.TextWithoutCharacterName;
+            //                 lastLineCharacterNameContainer.SetActive(true);
+            //                 lastLineCharacterNameText.text = lastSeenLine.CharacterName;
+            //             }
+            //         }
+            //         else if (line.Text[0] == ':')
+            //         {
+            //             line.Text = line.Text.Substring(1);
+            //         }
 
-                    if (palette != null)
-                    {
-                        lastLineText.text = HGGLineView.PaletteMarkedUpText(line, palette);
-                    }
-                    else
-                    {
-                        lastLineText.text = line.Text;
-                    }
+            //         if (palette != null)
+            //         {
+            //             lastLineText.text = HGGLineView.PaletteMarkedUpText(line, palette);
+            //         }
+            //         else
+            //         {
+            //             lastLineText.text = line.Text;
+            //         }
 
-                    lastLineContainer.SetActive(true);
-                }
-                else
-                {
-                    lastLineContainer.SetActive(false);
-                }
-            }
+            //         lastLineContainer.SetActive(true);
+            //     }
+            //     else
+            //     {
+            //         lastLineContainer.SetActive(false);
+            //     }
+            // }
+            lastLineContainer.SetActive(false);
 
             // Note the delegate to call when an option is selected
             OnOptionSelected = onOptionSelected;
