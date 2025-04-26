@@ -329,21 +329,13 @@ public class YarnCommands : MonoBehaviour
     private void SetSprite(GameObject charSprite, string charSpriteName)
     {
         SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
+        Image curSprite = charSprite.GetComponent<Image>();
         if (sd != null)
         {
             if (sd.spriteDict.ContainsKey(charSpriteName))
             {
-                if (charSprite.GetComponent<Image>().sprite.name == "transparent")
-                {
-                    // Fade in
-                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), charSprite.GetComponent<Image>().color.a, 1f, 0.5f)); // hardcoded to spend half a second fading
-                }
-                else if (charSpriteName == "transparent")
-                {
-                    // fade out
-                    StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), charSprite.GetComponent<Image>().color.a, 0, 0.5f)); // hardcoded to spend half a second fading
-                }
-                charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+                Sprite nextSprite = sd.spriteDict[charSpriteName];
+                ChangeSprite(curSprite, nextSprite, charSpriteName);
             }
             else Debug.Log("Sprite " + charSpriteName + " not found!");
         }
@@ -351,22 +343,29 @@ public class YarnCommands : MonoBehaviour
 
     private void SetMultiSprite(GameObject charSprite, string charSpriteName)
     {
+        Image curSprite = charSprite.GetComponent<Image>();
         if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
         {
-            if (charSprite.GetComponent<Image>().sprite.name == "transparent" || charSprite.GetComponent<Image>().color.a == 0)
-            {
-                // Fade in
-                StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 0, 1f, 0.5f)); // hardcoded to spend half a second fading
-                charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
-            }
-            else if (charSpriteName == "transparent")
-            {
-                // fade out
-                StartCoroutine(FadeSprite(charSprite.GetComponent<Image>(), 1f, 0, 0.5f)); // hardcoded to spend half a second fading
-            }
-            else charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
+            Sprite nextSprite = _multiSprite.multiSpriteDict[charSpriteName];
+            ChangeSprite(curSprite, nextSprite, charSpriteName);
         }
         else Debug.Log("Sprite " + charSpriteName + " not found!");
+    }
+
+    private void ChangeSprite(Image curSprite, Sprite nextSprite, string charSpriteName)
+    {
+        if (curSprite.sprite.name == "transparent" || curSprite.color.a == 0)
+        {
+            // Fade in
+            StartCoroutine(FadeSprite(curSprite, 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+            curSprite.sprite = nextSprite;
+        }
+        else if (charSpriteName == "transparent")
+        {
+            // fade out
+            StartCoroutine(FadeSprite(curSprite, 1f, 0, 0.5f)); // hardcoded to spend half a second fading
+        }
+        else curSprite.sprite = nextSprite;
     }
 
     private IEnumerator FadeSprite(Image sprite, float start, float end, float lerpTime)
