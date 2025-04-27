@@ -9,6 +9,7 @@ public class Credits : Menu
             Pause();
         }
         LockEsc(EscLock.Credits);
+        ArrowKeyStart();
     }
 
     void Update(){
@@ -18,6 +19,7 @@ public class Credits : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
+        ArrowKeyEnd();
     }
 
     public void Close(){

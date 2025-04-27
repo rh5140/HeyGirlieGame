@@ -46,6 +46,7 @@ public class Dropdown : Menu
 
     public void OpenDropdown(){
         StartCoroutine(AnimateDropdown(true));
+        
     }
 
     public void CloseDropdown(){
@@ -94,6 +95,7 @@ public class Dropdown : Menu
             // "OnDestroy"
             Unpause();
             UnlockEsc();
+            ArrowKeyEnd();
         }
 
         while(time < lerpTime){
@@ -115,6 +117,7 @@ public class Dropdown : Menu
             // "Awake"
             Pause();
             LockEsc(EscLock.Dropdown);
+            ArrowKeyStart();
         }
 
         animationLock = false;

@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 208663460291887251}
   - component: {fileID: 5935405526530508582}
   - component: {fileID: 4531351938926972419}
-  - component: {fileID: 2083509776184076941}
   m_Layer: 5
   m_Name: Save Profiles Menu
   m_TagString: Untagged
@@ -327,6 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89bc06594e8a8cd499a0c27ce0db4f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowKeyStart: {fileID: 3792275122998258532}
+  arrowKeyPrevious: {fileID: 0}
   saveButton: {fileID: 4129396706518061749}
   loadButton: {fileID: 6147171262074439516}
   deleteButton: {fileID: 4414923951371027086}
@@ -345,20 +346,6 @@ MonoBehaviour:
   newGamePopup: {fileID: 3723025955169232564}
   playerName: {fileID: 4550667548193109673}
   background: {fileID: 3792275122998258532}
---- !u!114 &2083509776184076941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6524237873561504882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04137021217ac68408987d8ce1c0f180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrowKeyStart: {fileID: 3792275122998258532}
-  arrowKeyPrevious: {fileID: 0}
 --- !u!1 &7321165370037358447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2279,18 @@ PrefabInstance:
     - target: {fileID: 1987402988382531984, guid: 27731964bae1a19498609d53712e8882, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973258874971660801, guid: 27731964bae1a19498609d53712e8882, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4531351938926972419}
+    - target: {fileID: 2973258874971660801, guid: 27731964bae1a19498609d53712e8882, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OverwriteSave
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973258874971660801, guid: 27731964bae1a19498609d53712e8882, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SaveProfiles, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3421616375529616777, guid: 27731964bae1a19498609d53712e8882, type: 3}
       propertyPath: m_AnchorMax.y

@@ -91,12 +91,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 8219084281132015333}
+    m_SelectOnDown: {fileID: 8219084281132015333}
+    m_SelectOnLeft: {fileID: 8219084281132015333}
+    m_SelectOnRight: {fileID: 8219084281132015333}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796a271c38144ac439984c153f7e7c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSelect: 0
 --- !u!114 &9136238664810978538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,7 +937,6 @@ GameObject:
   - component: {fileID: 7069147828152037147}
   - component: {fileID: 3926752965679717223}
   - component: {fileID: 5720439318083070592}
-  - component: {fileID: 6654979736770494684}
   m_Layer: 5
   m_Name: Paper
   m_TagString: Untagged
@@ -1007,20 +1007,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6654979736770494684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5008938899149744429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04137021217ac68408987d8ce1c0f180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrowKeyStart: {fileID: 8018786209157576910}
-  arrowKeyPrevious: {fileID: 0}
 --- !u!1 &5405484751331647039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c80eaa7f30c844aa64fac56c7f4e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowKeyStart: {fileID: 8018786209157576910}
+  arrowKeyPrevious: {fileID: 0}
   overlay: {fileID: 1448900173471446142}
   paper: {fileID: 5008938899149744429}
   hoverArea: {fileID: 384783288028514789}
@@ -1432,6 +1420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796a271c38144ac439984c153f7e7c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSelect: 1
 --- !u!114 &6781615710474264550
 MonoBehaviour:
   m_ObjectHideFlags: 0

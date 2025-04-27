@@ -22,6 +22,7 @@ public class SaveProfiles : Menu
     void Awake(){
         LockEsc(EscLock.Gallery);
         Pause();
+        ArrowKeyStart();
 
         loadButton.interactable = false;
         deleteButton.interactable = false;
@@ -35,6 +36,7 @@ public class SaveProfiles : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
+        ArrowKeyEnd();
     }
 
     public void isSelected(bool toggle){

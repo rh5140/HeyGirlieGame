@@ -5,10 +5,6 @@ public class Accessibility : MonoBehaviour
 {
     [SerializeField] private GameObject arrowKeyStart;
     [SerializeField] private GameObject arrowKeyPrevious;
-    // void Awake() {
-    //     arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
-    //     EventSystem.current.SetSelectedGameObject(arrowKeyStart);
-    // }
 
     void OnEnable(){
         arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;

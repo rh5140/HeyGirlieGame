@@ -28,6 +28,11 @@ public class PopUp : Menu
         EventSystem.current.currentSelectedGameObject.transform.name == "Input") okayButton.onClick.Invoke();
     }
 
+    // Doesnt work ??
+    // void OnSubmit(){
+    //     if(EventSystem.current.currentSelectedGameObject.transform.name == "Input") okayButton.onClick.Invoke();
+    // }
+
     void OnDisable(){
         UnlockEsc();
     }

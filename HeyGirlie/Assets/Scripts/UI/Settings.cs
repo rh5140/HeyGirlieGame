@@ -21,6 +21,7 @@ public class Settings : Menu
     void Awake() {
         LockEsc(EscLock.Settings);
         Pause();
+        ArrowKeyStart();
 
         SetSettings();
 
@@ -34,6 +35,7 @@ public class Settings : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
+        ArrowKeyEnd();
     }
 
     public void ToggleFullscreen(bool value){
