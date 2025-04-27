@@ -24,6 +24,7 @@ namespace Yarn.Unity
         public MarkupPalette palette;
         public KeyCode key;
         public KeyCode keyAlt;
+        public int order;
 
         DialogueOption _option;
 
@@ -51,6 +52,7 @@ namespace Yarn.Unity
                 {
                     line = value.Line.TextWithoutCharacterName;
                 }
+                line.Text = order + ". " + line.Text;
 
                 if (palette != null)
                 {
@@ -64,13 +66,7 @@ namespace Yarn.Unity
                 interactable = value.IsAvailable;
             }
         }
-        /*
-        private void Awake()
-        {
-            SettingManager.Instance.SetOptionView(this);
-            SettingManager.Instance.UpdateOptionView();
-        }
-        */
+        
         void Update()
         {
             //SettingManager.Instance.UpdateOptionView();
@@ -85,6 +81,7 @@ namespace Yarn.Unity
         public void OnSubmit(BaseEventData eventData)
         {
             InvokeOptionSelected();
+            TextNormal();
         }
 
         public void InvokeOptionSelected()
@@ -111,29 +108,36 @@ namespace Yarn.Unity
             InvokeOptionSelected();
         }
 
+        public override void OnSelect(BaseEventData eventData){
+            TextHover();
+        }
+
+        public override void OnDeselect(BaseEventData eventData){
+            TextNormal();
+        }
+
         // If we mouse-over, we're telling the UI system that this element is
         // the currently 'selected' (i.e. focused) element. 
         public override void OnPointerEnter(PointerEventData eventData)
         {
             base.Select();
+        }
+
+        private void TextHover(){
             // disable selection indicator
             selectionIcon.SetActive(false);
             // enable hover indicator
             hoverIcon.SetActive(true);
             text.color = hoverColor;
-            // text.fontStyle = FontStyles.Bold;
-            //Debug.Log("hovering " + text.color);
         }
-        
-        public override void OnPointerExit(PointerEventData eventData)
-        {
+
+        private void TextNormal(){
             // disable selection indicator
             selectionIcon.SetActive(true);
             // enable hover indicator
             hoverIcon.SetActive(false);
             text.color = originalColor;
-            // text.fontStyle ^= FontStyles.Bold;
-            //Debug.Log("NOT hovering " + text.color);
+
         }
 
     }

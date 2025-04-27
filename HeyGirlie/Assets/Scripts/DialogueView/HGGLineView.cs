@@ -536,7 +536,7 @@ namespace Yarn.Unity
                 requestInterrupt?.Invoke();
             }
 
-            EventSystem.current.SetSelectedGameObject(null);
+            // EventSystem.current.SetSelectedGameObject(null);
         }
 
         /// <summary>
