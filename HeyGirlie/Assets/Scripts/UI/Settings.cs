@@ -13,7 +13,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
-    public static float maxMusicVol = 0.2f, maxSfxVol = 0.4f, maxVoiceVol = 1f;
+    public static float maxMusicVol, maxSfxVol, maxVoiceVol;
 
     [SerializeField] private GameObject saveProfilesMenu;
 
@@ -28,9 +28,9 @@ public class Settings : MonoBehaviour
             pauseLock = true;
         }
 
-        musicSlider.maxValue = maxMusicVol;
-        sfxSlider.maxValue = maxSfxVol;
-        voicesSlider.maxValue = maxVoiceVol;
+        maxMusicVol = musicSlider.maxValue;
+        maxSfxVol = sfxSlider.maxValue;
+        maxVoiceVol = voicesSlider.maxValue;
 
         SetSettings();
 
