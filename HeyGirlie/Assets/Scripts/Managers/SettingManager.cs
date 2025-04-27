@@ -21,6 +21,8 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private List<HGGOptionView> hggOptionViews = null;
     [SerializeField] private HGGOptionsListView hggOptionsListView = null;
 
+    public bool fastForwardActive;
+
     void Awake() {
         if (_instance != null && _instance != this)
         {

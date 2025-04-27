@@ -8,7 +8,9 @@ public class DialogueUIButtons : MonoBehaviour
     [SerializeField] private GameObject saveProfileMenu;
     [SerializeField] private GameObject characterProfiles;
     [SerializeField] private HGGLineView hggLineView;
-    [SerializeField] private Toggle fastFowardButton;
+    [SerializeField] private Button fastFowardButton;
+
+    private bool ffActive = false;
 
     public void Awake(){
         fastFowardButton.interactable = false;
@@ -22,10 +24,13 @@ public class DialogueUIButtons : MonoBehaviour
         Instantiate(saveProfileMenu);
     }
 
-    public void FastForward(bool value){
-        hggLineView.SetAutoAdvanced(value);
+    public void FastForward(){
+        ffActive = !ffActive;
+        SettingManager.Instance.fastForwardActive = ffActive;
+
+        hggLineView.SetAutoAdvanced(ffActive);
         
-        if(value) hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*2));
+        if(ffActive) hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*2));
         else hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*0.5));
 
         hggLineView.UserRequestedViewAdvancement();

@@ -58,10 +58,6 @@ public class CharacterProfiles : Menu
         SetButtons();
     }
 
-    public void Close(){
-        Destroy(gameObject);
-    }
-
     private void SetButtons(){
         if(character == (int)Character.Kristen) backButton.interactable = false;
         else backButton.interactable = true;
