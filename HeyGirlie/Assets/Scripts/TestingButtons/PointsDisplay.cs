@@ -10,7 +10,7 @@ public class PointsDisplay : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UpdatePoints();
+        UpdatePoints(0, null);
     }
 
     public void TogglePanel()
@@ -19,18 +19,23 @@ public class PointsDisplay : MonoBehaviour
         panel.SetActive(panelActive);
     }
 
-    public void UpdatePoints()
+    public void UpdatePoints(int date_points, LoveInterest character)
     {
-        displayText.text = OutputPoints();
+        displayText.text = OutputPoints(date_points, character);
     }
 
-    string OutputPoints()
+    string OutputPoints(int date_points, LoveInterest character)
     {
         string tmp = "";
         LoveInterest[] liQueue = GameManager.Instance.GetLIArray();
         foreach (LoveInterest li in liQueue)
         {
-            tmp += li.GetName() + ": " + li.GetPoints() + "           ";
+            if (li == character)
+            {
+                int displayed_total = li.GetPoints() + date_points;
+                tmp += li.GetName() + ": " + displayed_total + "           ";
+            }
+            else tmp += li.GetName() + ": " + li.GetPoints() + "           ";
         }
         return tmp;
     }

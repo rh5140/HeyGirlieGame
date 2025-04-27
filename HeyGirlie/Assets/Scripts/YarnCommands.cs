@@ -55,6 +55,7 @@ public class YarnCommands : MonoBehaviour
     {
         dialogueRunner.AddCommandHandler<string>("change_scene", ChangeScene);
         dialogueRunner.AddCommandHandler<int>("add_points", AddPoints);
+        dialogueRunner.AddCommandHandler("update_points", UpdatePointsInGameManager);
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
@@ -83,6 +84,7 @@ public class YarnCommands : MonoBehaviour
         
         dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
         dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
+        dialogueRunner.AddCommandHandler("fade_out_ui", FadeOutUI);
         dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
         dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
         dialogueRunner.AddCommandHandler<string>("background_filter_on", BackgroundFilterOn);
@@ -144,7 +146,8 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
-        SceneManager.LoadScene(sceneName);
+        _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
+        // SceneManager.LoadScene(sceneName);
     }
 
     private void IncrementDateCount()
@@ -177,13 +180,19 @@ public class YarnCommands : MonoBehaviour
 
     private void AddPoints(int num)
     {
-        _loveInterest.AddPoints(num);
         // Handling Cassandra
         float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
         _variableStorage.TryGetValue("$date_points", out date_points);
         _variableStorage.SetValue("$date_points", date_points + num);
 
-        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
+        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints((int)date_points+num, _loveInterest); // Slow but only used for testing... 
+    }
+
+    private void UpdatePointsInGameManager()
+    {
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _loveInterest.AddPoints((int)date_points);
     }
     #endregion Updating State
 
@@ -207,6 +216,11 @@ public class YarnCommands : MonoBehaviour
     private void FadeInUI()
     {
         _ui.GetComponent<FadeTransition>().FadeIn();
+    }
+
+    private void FadeOutUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeOut();
     }
 
     private void ToggleText(string character = "NONE")
@@ -315,19 +329,57 @@ public class YarnCommands : MonoBehaviour
     private void SetSprite(GameObject charSprite, string charSpriteName)
     {
         SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
+        Image curSprite = charSprite.GetComponent<Image>();
         if (sd != null)
         {
             if (sd.spriteDict.ContainsKey(charSpriteName))
-                charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
+            {
+                Sprite nextSprite = sd.spriteDict[charSpriteName];
+                ChangeSprite(curSprite, nextSprite, charSpriteName);
+            }
             else Debug.Log("Sprite " + charSpriteName + " not found!");
         }
     }
 
     private void SetMultiSprite(GameObject charSprite, string charSpriteName)
     {
+        Image curSprite = charSprite.GetComponent<Image>();
         if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
-            charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
+        {
+            Sprite nextSprite = _multiSprite.multiSpriteDict[charSpriteName];
+            ChangeSprite(curSprite, nextSprite, charSpriteName);
+        }
         else Debug.Log("Sprite " + charSpriteName + " not found!");
+    }
+
+    private void ChangeSprite(Image curSprite, Sprite nextSprite, string charSpriteName)
+    {
+        if (curSprite.sprite.name == "transparent" || curSprite.color.a == 0)
+        {
+            // Fade in
+            StartCoroutine(FadeSprite(curSprite, 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+            curSprite.sprite = nextSprite;
+        }
+        else if (charSpriteName == "transparent")
+        {
+            // Fade out
+            StartCoroutine(FadeSprite(curSprite, curSprite.color.a, 0, 0.5f)); // hardcoded to spend half a second fading
+        }
+        else curSprite.sprite = nextSprite;
+    }
+
+    private IEnumerator FadeSprite(Image sprite, float start, float end, float lerpTime)
+    {
+        float time = 0;
+        
+        while (time < lerpTime)
+        {
+            float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, currentAlpha);
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, end);
     }
     #endregion Sprite Functions
 
@@ -427,7 +479,9 @@ public class YarnCommands : MonoBehaviour
     private void EnableContinue()
     {
         _splashContinueButton.SetActive(true);
+        StartCoroutine(FadeSprite(_splashContinueButton.GetComponentInChildren<Image>(), 0, 1f, 1f));
     }
+    
     #endregion Special Event
 
     #region Background Functions
@@ -478,8 +532,8 @@ public class YarnCommands : MonoBehaviour
         {
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
-            time += Time.deltaTime;
-            yield return null;
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
 
         bg.color = end;
