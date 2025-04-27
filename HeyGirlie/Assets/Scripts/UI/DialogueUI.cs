@@ -8,12 +8,13 @@ public class DialogueUIButtons : MonoBehaviour
     [SerializeField] private GameObject saveProfileMenu;
     [SerializeField] private GameObject characterProfiles;
     [SerializeField] private HGGLineView hggLineView;
-    [SerializeField] private Button fastFowardButton;
+    [SerializeField] private GameObject optionsFFButton;
 
     private bool ffActive = false;
 
     public void Awake(){
-        fastFowardButton.interactable = false;
+        optionsFFButton.GetComponent<Button>().interactable = false;
+        optionsFFButton.transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(0, (SettingManager.Instance.fastForwardActive) ? 80f : 0f);
     }
 
     public void Save(){
@@ -39,8 +40,4 @@ public class DialogueUIButtons : MonoBehaviour
     public void CharacterProfiles(){
         Instantiate(characterProfiles);
     }
-
-    // private void Unselect(){
-    //     EventSystem.current.SetSelectedGameObject(null);
-    // }
 }
