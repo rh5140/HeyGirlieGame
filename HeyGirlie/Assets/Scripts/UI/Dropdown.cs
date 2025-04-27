@@ -7,7 +7,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Dropdown : MonoBehaviour
+public class Dropdown : Menu
 {
     [SerializeField] private GameObject overlay;
     [SerializeField] private GameObject paper;
@@ -21,17 +21,17 @@ public class Dropdown : MonoBehaviour
     public bool pause = false;
     private float start = 2220.5f;
     private bool open = true;
-
-    private bool pauseLock = false;
+    
+    private bool animationLock = false;
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && !animationLock && GameManager.Instance.escLock == EscLock.Dropdown){
             if(open) {
                 OpenDropdown();
                 open = false;
             } else {
                 CloseDropdown();
-                open = true;    
+                open = true;
             }
         }
     }
@@ -46,6 +46,7 @@ public class Dropdown : MonoBehaviour
 
     public void OpenDropdown(){
         StartCoroutine(AnimateDropdown(true));
+        
     }
 
     public void CloseDropdown(){
@@ -60,7 +61,6 @@ public class Dropdown : MonoBehaviour
             paper.SetActive(true);
             pEnd = -2220.5f; pStart = -2385f;
         }
-        
 
         while(time < lerpTime){
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
@@ -82,18 +82,20 @@ public class Dropdown : MonoBehaviour
         float time = 0, lerpTime = 0.25f;
         Image overlayImg = overlay.GetComponent<Image>();
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
+        
+        animationLock = true;
 
         float cEnd = 0f, cStart = 1f, pEnd = -1*start, pStart = -1457.5f;
         if(open){
+            hoverArea.SetActive(false);
             overlay.SetActive(true);
             paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
         } else {
             // "OnDestroy"
-            if(pauseLock){
-                GameManager.Instance.Pause(false);
-                pauseLock = false;
-            }
+            Unpause();
+            UnlockEsc();
+            ArrowKeyEnd();
         }
 
         while(time < lerpTime){
@@ -110,15 +112,16 @@ public class Dropdown : MonoBehaviour
         if(!open){
             overlay.SetActive(false);
             paper.SetActive(false);
+            hoverArea.SetActive(true);
         } else {
             // "Awake"
-            if(!GameManager.Instance.pauseLock){
-                GameManager.Instance.Pause(true);
-                pauseLock = true;
-            }
+            Pause();
+            LockEsc(EscLock.Dropdown);
+            ArrowKeyStart();
         }
 
-        EventSystem.current.SetSelectedGameObject(null);
+        animationLock = false;
+        // EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void LoadGame()

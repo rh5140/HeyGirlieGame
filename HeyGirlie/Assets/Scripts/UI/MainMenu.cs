@@ -81,12 +81,6 @@ public class MainMenu : MonoBehaviour
         stickerTransform.localScale = Vector3.one;
     }
 
-    private void Update(){
-        // Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
-        if (Input.GetKeyUp(KeyCode.Return) &&
-        EventSystem.current.currentSelectedGameObject.transform.name == "Input") Continue();
-    }
-
     public void NewGame()
     {
         newGamePopup.SetActive(true);

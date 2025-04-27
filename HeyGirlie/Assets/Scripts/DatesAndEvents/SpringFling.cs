@@ -9,11 +9,15 @@ public class SpringFling : SpecialEventSelection
     {
         base.ActivateButtons(5); // 4 date minimum to ask
     }
-
-    public void DeactivateAyda(bool date7choice)
+    
+    // checks whether ayda date 7 condition is true and turns button on
+    public void ActivateAyda()
     {
-        Debug.Log("running Deactivate Ayda. date7choice = " + date7choice);
-        FigAydaButton.SetActive(false);
-        Debug.Log("setting ayda button to " + date7choice);
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI)li;
+        bool date7choice = aydali.GetAydaDate7();
+
+        if (date7choice) _polyamButtonContainer.SetActive(true);
+        FigAydaButton.SetActive(date7choice);
     }
 }

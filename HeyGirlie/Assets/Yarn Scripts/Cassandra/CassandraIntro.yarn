@@ -1,26 +1,7 @@
 ﻿title: Intro
 tags:
 ---
-<<kristen Neutral>>
-<<char_right CassandraNeutral>>
-
-//<<toggleText cassandra>>
-//Cassandra: testing texting
-//Kristen: testing Texting
-//-> option 1
-//-> option 2
-//-> option 3
-//    Kristen: option 3 text 0
-//    Cassandra: option 3 text
-//    Kristen: option 3 text 2
-//Cassandra: blah
-//<<toggleText none>>
 <<if get_week() == 1>>
-    <<voiceline CassGreeting2>>
-    Cassandra: What's the matter, Kristen?
-    <<kristen Nervous>>
-    <<char_right CassandraSurprised>>
-    Kristen: I need a date to the Spring Fling...
     <<jump CassandraWeek1>>
 
 <<elseif get_week() == 2>>
@@ -63,23 +44,100 @@ Cassandra: Well, why don't you choose where you want to have a meet-cute (or two
 <<change_scene DateSelection>>
 ===
 
-title: CassandraWeek2
-tags:
----
-Cassandra: WEEK 2 NOW
-
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
-===
-
-
 title: CassandraWeek1
-tags:
 ---
-Cassandra: WEEK 1 NOW
-<<voiceline CassNeutral2>>
-Cassandra: Who would you want to date?
-
+:Pretty much as soon as Aguefort finishes giving you the lowdown on the whole Spring Fling prophecy, you race home to talk to Cassandra about it. 
+:This concerns her too, after all, and you’ve been trying to communicate better with her lately. So you figure you should probably let her know that, like, her life is at stake if you stay as single as you currently are.
+:Plus, she’s happily married! Maybe she’ll have good advice!
+:You… bump directly into her partially-corporeal form, basically as soon as you walk in the door.
+<<char_right CassandraSurprised>>
+<<voiceline CassGreeting2>>
+Cassandra: Oh! Hi, Kristen! Funny running into you, um… two hours before the end of your school day?
+Cassandra: Everything okay?
+<<Kristen Nervous>>
+:You’d hightailed it out of there so quickly you might have forgotten school wasn’t actually over for the day. Oh, well, future-you will deal with the consequences if she’s alive to see them.
+<<voiceline KristenAwkward2>>
+Kristen: Yyyyeah, except for we might both die if I don’t get a date to the Spring Fling?
+Cassandra: Oh! Um. Okay! How long do I have to get my affairs in order?
+Kristen: Eight weeks. Wait a minute. Get your affairs —
+<<Kristen Angry>>
+Kristen: Hey! I can totally land a date in eight weeks!
+<<char_right CassandraHappy>>
+:Cass laughs at you. You roll your eyes and stick out your tongue, super maturely. Having a goddex who’s also your friend is kind of great, but right now, you need her to maybe stop making fun of you for being a loser.
+Cassandra: I’m sure you can! I’m just teasing, Kristen.
+<<Kristen Neutral>>
+Cassandra: So, how can I help?
+Kristen: Huh? Help? Uh, Cass, it’s my <i>love life</i>. It’s kinda personal. Like, private.
+Cassandra: Uh-huh. Because you were soooooooo private when you were dating Tracker. Or when you were trying to get over Tracker by dating Gertie. Or when you broke up with Gertie because you still liked Tracker. Or when –
+Kristen: Okay, okay! Mercy! You win! I get it, you know a lot about my love life!
+Cassandra: I also might know a liiiittle bit about the love lives of some other girls in town. And I might <i>happen</i> to know that six of those girls are your friends and classmates, and also totally eligible! You could always ask one of them out!
+<<Kristen Surprised>>
+<<voiceline KristenSurprised1>>
+Kristen: Six friends? Who are they? Also, how the fuck do you know about <i>other people’s</i> love lives??
+Cassandra: Oh, y’know, gods talk.
+:You try to imagine what weird, crazy gossip circle your beloved goddex might have with Ankarna, and Galicaea, and Ruvina, and Cassandra-knows who else.
+:You hope she hasn’t revealed anything embarrassing about you. You also sincerely doubt she hasn’t revealed anything embarrassing about you.
+<<char_right CassandraNeutral>>
+<<voiceline CassNeutral1>>
+Cassandra: Anyway, let’s see… well, obviously, Tracker is single now. Nara, too.
+Kristen: Nara’s in town??
+Cassandra: Yep! She’s a foreign exchange student at BCU right now, same school as Tracker! They both hang around Elmville a lot, actually, but not together. At least, Galicaea hasn’t seen them together.
+:So that’s one confirmed member of the godly gossip circle. The godssip circle. Heehee.
+Cassandra: So you could talk to either one of them! Or, well, you obviously know Gertie is single, since you…
+<<Kristen Nervous>>
+Kristen: Broke up with her? And then she declared me her nemesis? Yeah, I remember.
+<<char_right CassandraBlush>>
+Cassandra: Well, if you’ve changed your mind about her… I’m just saying, you might get a second chance. It worked out with Ankarna and me, right?
+:Once they kissed and made up and stopped being uber-destructive rage entities… Cassandra and Ankarna got back into their “old married couple” schtick pretty dang quickly. You like to pretend it grosses you out, but you really are happy for them.
+Kristen: I’ll keep that in mind. Who else you got?
+<<char_right CassandraNeutral>>
+Cassandra: There’s Lucy! You know Lucy. She’s in your cleric classes, my wife brought her back from the dead, et cetera et cetera… oh, and Kipperlilly is single, too!
+<<Kristen Awkward>>
+<<voiceline KristenAngry2>>
+Kristen: Hold on. You think I should try courting <i>Kipperlilly</i>?! After she spent all of last year trying to steal the election and also LITERALLY kill me?!?! And also steal the election??????
+Cassandra: We should maybe work on your priorities a little. But, yeah! Sure, it’s a weird match on paper, but… maybe she changed after going to hell and back?
+<<Kristen Neutral>>
+Kristen: Hmph. Maybe… Wait – you said six. That was only five.
+Cassandra: Oh! Right! Well, there’s also Fig!
+Kristen: Fig’s… <i>not</i> single. Fig’s, like, <i>super</i> not single.
+:Cassandra’s grin turns super big and smug, like she knows a secret. Well, you’re sure she knows a ton of secrets. But this one might actually be about you, or Fig, or whatever.
+Cassandra: I never said she was single, I said she was <i>eligible</i>.
+:You narrow your eyes at her. She sticks her tongue out at you.
+<<Kristen Surprised>>
+<<voiceline KristenNeutral3>>
+Kristen: What do you know…………
+Cassandra: Only what my wife tells me! Which is that yes, Fig may not be single, but that doesn’t mean you don’t have a shot! If you want it, that is.
+Kristen: Okay, so. What, do I just, like, text one of them? Or call? Or, like, show up somewhere and hope they eventually find me so I can ask them out?
+<<char_right CassandraBlush>>
+Cassandra: I… may or may not have also found out where they’re each gonna be hanging out this week.
+Kristen: You have. So. Much. Information in your brain.
+:Cassandra flips her hair, looking very pleased with herself.
+Cassandra: It’s what I do. Anyway! You’ve probably got time to set yourself up on <b>three dates per week</b>. And once you get there, all you gotta do is show up and be your very best self!
+<<char_right CassandraNeutral>>
+<<Kristen Neutral>>
+Kristen: Alright, I’m ready. Lay it on me.
+Cassandra: Okie doke!
+Cassandra: Fig’s pretty easy to find, she usually hangs out at <b>home</b> these days. In fact, we were actually just chatting before you got here!
+Kristen: What were you talking about? Was it about me?
+Cassandra: A goddex never tells! Mysteryyyyyyyy…
+:It was absolutely about you. Dammit, Cass.
+Cassandra: Anyway, Gertie’s got her <b>Apiarist Society</b> meetings, so you’ll be able to spot her there!
+Cassandra: Lucy is obviously gonna be in <b>class</b>, y’know, the one you’re in? With her?
+Kristen: Right. The one I’d be going to anyway. That class.
+<<char_right CassandraHappy>>
+Cassandra: Exactly!
+Cassandra: Then, I’ve got it on good authority that Nara will be out at the <b>mall</b>, and Tracker is almost definitely working out at the <b>gym</b>.
+<<Kristen Grin>>
+Kristen: Hope she’s not trying to beat <i>these</i> gains.
+:You flex your muscles and Cass giggles at you. You have been working out a little more lately, so you’re pretty proud of the biceps you’re sporting right now.
+:Hopefully, the ladies will be equally impressed.
+Cassandra: And that leaves Kipperlilly! She’ll be in the great <b>outdoors</b>, doing some volunteer work.
+<<Kristen Neutral>>
+<<char_right CassandraNeutral>>
+Kristen: Right. Cause everything about Kipperlilly screams “upstanding citizen.”
+Cassandra: Okay, so maybe the volunteer work is mandatory from the whole “doing a bunch of murderous plots” thing. Either way, that’s where you’ll find her.
+Cassandra: And, that’s everyone! So, what’ll it be, Kristen? Where to first?
+radish: hi kirby we're going to have to incorporate choosing a love interest priority somewhere. dropping it here for now.
 -> Fig
     <<setLIPriority 2>>
 -> Gertie
@@ -92,10 +150,16 @@ Cassandra: Who would you want to date?
     <<setLIPriority 6>>
 -> Naradriel
     <<setLIPriority 7>>
+<<change_scene DateSelection>>
+===
+
+
+title: CassandraWeek2
+---
+Cassandra: WEEK 2 NOW
 
 Cassandra: Where do you want to go this week?
 <<change_scene DateSelection>>
-
 ===
 
 title: CassandraWeek5

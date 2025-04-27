@@ -45,7 +45,6 @@ public class SpecialEventSelection : MonoBehaviour
             int liDateCount = GameManager.Instance.GetLoveInterest((Character)liIdx).GetDateCount();
             if (liDateCount < threshold)
             {
-                Debug.Log(week6 + " " + (Character)liIdx + " " + liDateCount);
                 if(liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara){
                     if(week6 && liDateCount >= 3){
                         continue;

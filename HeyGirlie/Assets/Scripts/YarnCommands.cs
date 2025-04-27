@@ -13,10 +13,18 @@ public class YarnCommands : MonoBehaviour
     // Drag and drop your Dialogue Runner into this variable.
     [SerializeField] private DialogueRunner dialogueRunner;
 
-    private bool toggleText = false;
+    #region Crystal UI variables
+    // private bool toggleText = false;
 
-    [SerializeField] private Canvas nonCrystalView;
-    [SerializeField] private Canvas crystalView;
+    // [SerializeField] private Canvas nonCrystalView;
+    // [SerializeField] private Canvas crystalView;
+    public GameObject[] crystalUI;
+    public Image lineViewBackground;
+    public TextMeshProUGUI lineViewText;
+    public TextMeshProUGUI characterName;
+    private Color _textColor;
+
+    #endregion Crystal UI
 
     [SerializeField] private Character _character;
     private LoveInterest _loveInterest;
@@ -39,10 +47,15 @@ public class YarnCommands : MonoBehaviour
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
+    #region Setup
+    /// <summary>
+    /// Supporting adding Yarn Commands, initializing values, and setting LI priority
+    /// </summary>
     void Awake()
     {
         dialogueRunner.AddCommandHandler<string>("change_scene", ChangeScene);
         dialogueRunner.AddCommandHandler<int>("add_points", AddPoints);
+        dialogueRunner.AddCommandHandler("update_points", UpdatePointsInGameManager);
         dialogueRunner.AddCommandHandler("increment_date_count", IncrementDateCount);
         dialogueRunner.AddCommandHandler("increase_dates_this_week", IncreaseDatesThisWeek);
         dialogueRunner.AddCommandHandler("next_week", NextWeek);
@@ -71,6 +84,7 @@ public class YarnCommands : MonoBehaviour
         
         dialogueRunner.AddCommandHandler("enable_continue", EnableContinue);
         dialogueRunner.AddCommandHandler("fade_in_ui", FadeInUI);
+        dialogueRunner.AddCommandHandler("fade_out_ui", FadeOutUI);
         dialogueRunner.AddCommandHandler<string>("bg_filter_on", BackgroundFilterOn);
         dialogueRunner.AddCommandHandler("bg_filter_off", BackgroundFilterOff);
         dialogueRunner.AddCommandHandler<string>("background_filter_on", BackgroundFilterOn);
@@ -94,55 +108,12 @@ public class YarnCommands : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
-    }
-
-    private void ChangeScene(string sceneName)
-    {
-        GameManager.Instance.SetLocationName("Spyre");
-        _voiceSource.Stop();
-        SceneManager.LoadScene(sceneName);
-    }
-
-    private void AddPoints(int num)
-    {
-        _loveInterest.AddPoints(num);
-        // Handling Cassandra
-        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
-        _variableStorage.TryGetValue("$date_points", out date_points);
-        _variableStorage.SetValue("$date_points", date_points + num);
-
-        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints(); // Slow but only used for testing... 
-    }
-
-    private void IncrementDateCount()
-    {
-        _loveInterest.IncrementDateCount();
-    }
-
-    private void ToggleText(string character = "NONE")
-    {
-        if (character.ToUpper() != "NONE")
-        {
-            crystalView.gameObject.SetActive(true);
-            nonCrystalView.gameObject.SetActive(false);
-        }
-        else
-        {
-            //switch text recipient to whoever character is
-            crystalView.gameObject.SetActive(false);
-            nonCrystalView.gameObject.SetActive(true);
-        }
-    }
-
-    private void IncreaseDatesThisWeek()
-    {
-        GameManager.Instance.IncreaseDatesThisWeek();
+        _textColor = lineViewText.color;
     }
 
     private void SetLIPriority(int li)
     {
         GameManager.Instance.priority = (Character)li;
-
 
         switch (GameManager.Instance.priority)
         {
@@ -164,6 +135,30 @@ public class YarnCommands : MonoBehaviour
         }
         GameManager.Instance._liQueue = GameManager.Instance.priorityQueue();
     }
+    #endregion Setup
+
+    #region Updating State
+    /// <summary>
+    /// Supporting Yarn Commands that change the scene and update information like points and week
+    /// </summary>
+    private void ChangeScene(string sceneName)
+    {
+        GameManager.Instance.SetLocationName("Spyre");
+        _voiceSource.Stop();
+        _sfxSource.Stop();
+        _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
+        // SceneManager.LoadScene(sceneName);
+    }
+
+    private void IncrementDateCount()
+    {
+        _loveInterest.IncrementDateCount();
+    }
+
+    private void IncreaseDatesThisWeek()
+    {
+        GameManager.Instance.IncreaseDatesThisWeek();
+    }
 
     [YarnFunction("get_dates_this_week")]
     public static int GetDatesThisWeek()
@@ -183,7 +178,254 @@ public class YarnCommands : MonoBehaviour
         return GameManager.Instance.GetWeek();
     }
 
-    public void SetSF(string name)
+    private void AddPoints(int num)
+    {
+        // Handling Cassandra
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _variableStorage.SetValue("$date_points", date_points + num);
+
+        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints((int)date_points+num, _loveInterest); // Slow but only used for testing... 
+    }
+
+    private void UpdatePointsInGameManager()
+    {
+        float date_points; // Yarn Spinner works better with float than int for some reason (throws errors if I try to make this int)
+        _variableStorage.TryGetValue("$date_points", out date_points);
+        _loveInterest.AddPoints((int)date_points);
+    }
+    #endregion Updating State
+
+    #region UI
+    /// <summary>
+    /// Supporting Yarn commands that modify UI
+    /// </summary>
+    private void SetLocationUI(string locationName)
+    {
+        try {
+            TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
+            location.text = locationName;
+        } catch (Exception e) {
+            //do nothing
+        } finally {
+            GameManager.Instance.SetLocationName(locationName);
+        }
+        // If location is multiple words, put "quotes around location"
+    }
+
+    private void FadeInUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeIn();
+    }
+
+    private void FadeOutUI()
+    {
+        _ui.GetComponent<FadeTransition>().FadeOut();
+    }
+
+    private void ToggleText(string character = "NONE")
+    {
+        if (character.ToUpper() != "NONE")
+        {
+            lineViewBackground.enabled = false;
+            characterName.enabled = false;
+            if (character == "KristenText" || character == "Kristen")
+            {
+                crystalUI[0].SetActive(true);
+                lineViewText.color = Color.white;
+            }
+            else
+            {
+                crystalUI[1].SetActive(true);
+                lineViewText.color = Color.black;
+            }
+            // crystalView.gameObject.SetActive(true);
+            // nonCrystalView.gameObject.SetActive(false);
+        }
+        else
+        {
+            lineViewBackground.enabled = true;
+            characterName.enabled = true;
+            lineViewText.color = _textColor;
+            crystalUI[0].SetActive(false);
+            crystalUI[1].SetActive(false);
+            //switch text recipient to whoever character is
+            // crystalView.gameObject.SetActive(false);
+            // nonCrystalView.gameObject.SetActive(true);
+        }
+    }
+    #endregion UI
+
+    #region Polyam Functions
+    /// <summary>
+    /// Supporting Yarn Commands for Frostkettle, 3Cleric, and Figayda
+    /// </summary>
+    private void SetPolyam(string name)
+    {
+        if (name == "FKB") GameManager.Instance.SetPolyamActive(Character.Frostkettle);
+        else GameManager.Instance.SetPolyamActive(Character.Trackernara);
+    }
+
+    public void CheckPolyamCondition(string polyam)
+    {
+        if (polyam == "FKB") 
+        {
+            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Frostkettle);
+            Polyam p = (Polyam) li;
+            bool result = p.MeetPolyamConditions();
+            _variableStorage.SetValue("$fkb", result);
+        } else if (polyam == "3C") 
+        {
+            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
+            Polyam p = (Polyam) li;
+            bool result = p.MeetPolyamConditions();
+            _variableStorage.SetValue("$tn3c", result);
+        }
+    }
+    
+    private void SetAydaCondition()
+    {
+        //variable in AydaLI is true;
+        //Debug.Log("Running SetAydaCondition yarn command");
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI) li;
+        aydali.SetAydaDate7(true);
+    }
+
+    private void GetAydaCondition()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
+        AydaLI aydali = (AydaLI)li;
+        bool temp = aydali.GetAydaDate7();
+        _variableStorage.SetValue("$ayda8", temp);
+    }
+    #endregion Polyam
+    
+    #region Sprite Functions
+    /// <summary>
+    /// Supporting Yarn Commands for setting sprites (Kristen -- CharLeft -- CharRight)
+    /// </summary>
+    private void SetKristenSprite(string charSpriteName)
+    {
+        SetSprite(_kristenSprite, charSpriteName);
+    }
+
+    private void SetCharLeft(string charSpriteName)
+    {
+        if (_multiSprite != null)
+            SetMultiSprite(_charLeftSprite, charSpriteName);
+        else
+            SetSprite(_charLeftSprite, charSpriteName);
+    }
+
+    private void SetCharRight(string charSpriteName)
+    {
+        if (_multiSprite != null)
+            SetMultiSprite(_charRightSprite, charSpriteName);
+        else
+            SetSprite(_charRightSprite, charSpriteName);
+    }
+
+    private void SetSprite(GameObject charSprite, string charSpriteName)
+    {
+        SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
+        Image curSprite = charSprite.GetComponent<Image>();
+        if (sd != null)
+        {
+            if (sd.spriteDict.ContainsKey(charSpriteName))
+            {
+                Sprite nextSprite = sd.spriteDict[charSpriteName];
+                ChangeSprite(curSprite, nextSprite, charSpriteName);
+            }
+            else Debug.Log("Sprite " + charSpriteName + " not found!");
+        }
+    }
+
+    private void SetMultiSprite(GameObject charSprite, string charSpriteName)
+    {
+        Image curSprite = charSprite.GetComponent<Image>();
+        if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
+        {
+            Sprite nextSprite = _multiSprite.multiSpriteDict[charSpriteName];
+            ChangeSprite(curSprite, nextSprite, charSpriteName);
+        }
+        else Debug.Log("Sprite " + charSpriteName + " not found!");
+    }
+
+    private void ChangeSprite(Image curSprite, Sprite nextSprite, string charSpriteName)
+    {
+        if (curSprite.sprite.name == "transparent" || curSprite.color.a == 0)
+        {
+            // Fade in
+            StartCoroutine(FadeSprite(curSprite, 0, 1f, 0.5f)); // hardcoded to spend half a second fading
+            curSprite.sprite = nextSprite;
+        }
+        else if (charSpriteName == "transparent")
+        {
+            // Fade out
+            StartCoroutine(FadeSprite(curSprite, curSprite.color.a, 0, 0.5f)); // hardcoded to spend half a second fading
+        }
+        else curSprite.sprite = nextSprite;
+    }
+
+    private IEnumerator FadeSprite(Image sprite, float start, float end, float lerpTime)
+    {
+        float time = 0;
+        
+        while (time < lerpTime)
+        {
+            float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, currentAlpha);
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, end);
+    }
+    #endregion Sprite Functions
+
+    #region Audio Functions
+    /// <summary>
+    /// Supporting Yarn commands for voicelines and SFX
+    /// </summary>    
+    private void PlayVoiceline(string audioName) {
+        PlayAudioByName(_voiceSource, _audioClips, audioName);
+    }
+    
+    private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
+        PlayAudioByName(_sfxSource, _audioClips, audioName);
+    }
+
+    private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
+    {
+        audioSource.Stop();
+        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        if (audioClips.ContainsKey(audioName)) 
+        {
+            audioSource.clip = audioClips[audioName];
+            audioSource.Play();
+        }
+        else Debug.Log("Audio asset " + audioName + " not found!");
+    }
+    #endregion Audio
+
+    #region Special Event Functions
+    /// <summary>
+    /// Supporting Yarn Commands for Special Events, including Spring Fling
+    /// </summary>
+    private void ActivateButtons(int nextWeek)
+    {
+        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
+        ses.ActivateButtons(nextWeek);
+    }
+
+    private void GetSpecialEventFail(int nextWeek)
+    {
+        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
+        bool noSpecialEvent = ses.GetSpecialEventFail(nextWeek);
+        _variableStorage.SetValue("$no_special_event", noSpecialEvent);
+    }
+
+        public void SetSF(string name)
     {
         bool result = false;
         LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
@@ -226,85 +468,26 @@ public class YarnCommands : MonoBehaviour
         _variableStorage.SetValue("$succeed", result);
         _variableStorage.SetValue("$date", name);
     }
-
-    public void CheckPolyamCondition(string polyam)
+    
+    private void SpringFlingInterface()
     {
-        if (polyam == "FKB") 
-        {
-            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Frostkettle);
-            Polyam p = (Polyam) li;
-            bool result = p.MeetPolyamConditions();
-            _variableStorage.SetValue("$fkb", result);
-        } else if (polyam == "3C") 
-        {
-            LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Trackernara);
-            Polyam p = (Polyam) li;
-            bool result = p.MeetPolyamConditions();
-            _variableStorage.SetValue("$tn3c", result);
-        }
+        _specialInterface.GetComponent<SpringFling>().ActivateButtons();
+        _specialInterface.GetComponent<SpringFling>().ActivateAyda();
+        
+    }
+
+    private void EnableContinue()
+    {
+        _splashContinueButton.SetActive(true);
+        StartCoroutine(FadeSprite(_splashContinueButton.GetComponentInChildren<Image>(), 0, 1f, 1f));
     }
     
-    
-    private void SetAydaCondition()
-    {
-        //variable in AydaLI is true;
-        //Debug.Log("Running SetAydaCondition yarn command");
-        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
-        AydaLI aydali = (AydaLI) li;
-        aydali.SetAydaDate7(true);
-    }
+    #endregion Special Event
 
-    private void GetAydaCondition()
-    {
-        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
-        AydaLI aydali = (AydaLI)li;
-        bool temp = aydali.GetAydaDate7();
-        _variableStorage.SetValue("$ayda8", temp);
-    }
-    
-    
-    // Set the sprite for the Kristen/left position by calling the SetSprite function
-    private void SetKristenSprite(string charSpriteName)
-    {
-        SetSprite(_kristenSprite, charSpriteName);
-    }
-
-    // Set the first (leftmost) sprite in the right position by calling SetSprite function
-    private void SetCharLeft(string charSpriteName)
-    {
-        if (_multiSprite != null)
-            SetMultiSprite(_charLeftSprite, charSpriteName);
-        else
-            SetSprite(_charLeftSprite, charSpriteName);
-    }
-
-    // Set the second (rightmost) sprite in the right position by calling SetSprite function
-    private void SetCharRight(string charSpriteName)
-    {
-        if (_multiSprite != null)
-            SetMultiSprite(_charRightSprite, charSpriteName);
-        else
-            SetSprite(_charRightSprite, charSpriteName);
-    }
-
-    private void SetSprite(GameObject charSprite, string charSpriteName)
-    {
-        SpriteDictionary sd = charSprite.GetComponentInChildren<SpriteDictionary>();
-        if (sd != null)
-        {
-            if (sd.spriteDict.ContainsKey(charSpriteName))
-                charSprite.GetComponent<Image>().sprite = sd.spriteDict[charSpriteName];
-            else Debug.Log("Sprite " + charSpriteName + " not found!");
-        }
-    }
-
-    private void SetMultiSprite(GameObject charSprite, string charSpriteName)
-    {
-        if (_multiSprite.multiSpriteDict.ContainsKey(charSpriteName))
-            charSprite.GetComponent<Image>().sprite = _multiSprite.multiSpriteDict[charSpriteName];
-        else Debug.Log("Sprite " + charSpriteName + " not found!");
-    }
-
+    #region Background Functions
+    /// <summary>
+    /// Yarn commands for changing the background art or color filter
+    /// </summary>
     private void SetBackground(string bgSpriteName)
     {
         SpriteDictionary sd = _background.GetComponentInChildren<SpriteDictionary>();
@@ -314,75 +497,6 @@ public class YarnCommands : MonoBehaviour
                 _background.GetComponent<Image>().sprite = sd.spriteDict[bgSpriteName];
             else Debug.Log("Sprite " + bgSpriteName + " not found!");
         }
-    }
-
-    
-    private void SetLocationUI(string locationName)
-    {
-        try {
-            TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
-            location.text = locationName;
-        } catch (Exception e) {
-            //do nothing
-        } finally {
-            GameManager.Instance.SetLocationName(locationName);
-        }
-        // If location is multiple words, put "quotes around location"
-    }
-    
-    private void PlayVoiceline(string audioName) {
-        PlayAudioByName(_voiceSource, _audioClips, audioName);
-    }
-    
-    private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
-        PlayAudioByName(_sfxSource, _audioClips, audioName);
-    }
-
-    private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
-    {
-        audioSource.Stop();
-        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
-        if (audioClips.ContainsKey(audioName)) 
-        {
-            audioSource.clip = audioClips[audioName];
-            audioSource.Play();
-        }
-        else Debug.Log("Audio asset " + audioName + " not found!");
-    }
-
-    private void ActivateButtons(int nextWeek)
-    {
-        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
-        ses.ActivateButtons(nextWeek);
-    }
-
-    private void GetSpecialEventFail(int nextWeek)
-    {
-        SpecialEventSelection ses = _specialInterface.GetComponent<SpecialEventSelection>();
-        bool noSpecialEvent = ses.GetSpecialEventFail(nextWeek);
-        _variableStorage.SetValue("$no_special_event", noSpecialEvent);
-    }
-    
-    private void SpringFlingInterface()
-    {
-        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Ayda);
-        AydaLI aydali = (AydaLI)li;
-        bool date7choice = aydali.GetAydaDate7();
-        _specialInterface.GetComponent<SpringFling>().ActivateButtons();
-        if (date7choice == false)
-        {
-            _specialInterface.GetComponent<SpringFling>().DeactivateAyda(date7choice);
-        }
-    }
-
-    private void EnableContinue()
-    {
-        _splashContinueButton.SetActive(true);
-    }
-
-    private void FadeInUI()
-    {
-        _ui.GetComponent<FadeTransition>().FadeIn();
     }
 
     private void BackgroundFilterOn(string color)
@@ -418,16 +532,11 @@ public class YarnCommands : MonoBehaviour
         {
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
-            time += Time.deltaTime;
-            yield return null;
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
 
         bg.color = end;
     }
-
-    private void SetPolyam(string name)
-    {
-        if (name == "FKB") GameManager.Instance.SetPolyamActive(Character.Frostkettle);
-        else GameManager.Instance.SetPolyamActive(Character.Trackernara);
-    }
+    #endregion Background Functions
 }
