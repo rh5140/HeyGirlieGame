@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
 
     public bool pauseLock = false;
 
+    public EscLock escLock = EscLock.Dropdown;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)

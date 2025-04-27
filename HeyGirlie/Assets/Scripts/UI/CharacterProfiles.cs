@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-public class CharacterProfiles : MonoBehaviour
+public class CharacterProfiles : Menu
 {
     [SerializeField] private GameObject[] profiles;
     [SerializeField] private GameObject[] progress;
@@ -15,13 +15,12 @@ public class CharacterProfiles : MonoBehaviour
     [SerializeField] private Button nextButton;
 
     private int character = (int)Character.Kristen;
-    private bool pauseLock = false;
+    
     void Awake()
     {
-        if(!GameManager.Instance.pauseLock){
-            GameManager.Instance.Pause(true);
-            pauseLock = true;
-        }
+        LockEsc(EscLock.Profiles);
+        Pause();
+        ArrowKeyStart();
 
         string scene = SceneManager.GetActiveScene().name;
         string pattern = @"(.+)Date\d+|(Cassandra)";
@@ -35,11 +34,16 @@ public class CharacterProfiles : MonoBehaviour
         SetButtons();
     }
 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Profiles) Close();
+        if(Input.GetKeyDown(KeyCode.LeftArrow) && character != (int)Character.Kristen) Back();
+        if(Input.GetKeyDown(KeyCode.RightArrow) && character != (int)Character.Naradriel) Next();
+    }
+
     void OnDestroy(){
-        if(pauseLock){
-            GameManager.Instance.Pause(false);
-            pauseLock = false;
-        }
+        Unpause();
+        UnlockEsc();
+        ArrowKeyEnd();
     }
 
     public void Back(){

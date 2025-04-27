@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections;
 
-public class SaveProfiles : MonoBehaviour//, IDeselectHandler
+public class SaveProfiles : Menu
 {
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
@@ -14,16 +14,15 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     [SerializeField] private GameObject overwritePopup;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private TMP_InputField playerName;
+    [SerializeField] private GameObject background;
 
-    private GameObject selected;
+    private Toggle selected;
     private int selectedSave = 0;
 
-    private bool pauseLock = false;
     void Awake(){
-        if(!GameManager.Instance.pauseLock){
-            GameManager.Instance.Pause(true);
-            pauseLock = true;
-        }
+        LockEsc(EscLock.Gallery);
+        Pause();
+        ArrowKeyStart();
 
         loadButton.interactable = false;
         deleteButton.interactable = false;
@@ -31,25 +30,24 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
     }
 
     void Update(){
-        if(EventSystem.current.currentSelectedGameObject == null){
-            loadButton.interactable = false;
-            deleteButton.interactable = false;
-            saveButton.interactable = false;
-        }
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Gallery) Close();
     }
 
     void OnDestroy(){
-        if(pauseLock){
-            GameManager.Instance.Pause(false);
-            pauseLock = false;
-        }
+        Unpause();
+        UnlockEsc();
+        ArrowKeyEnd();
     }
 
-    public void isSelected(){
-        selectedSave = int.Parse(EventSystem.current.currentSelectedGameObject.transform.parent.name);
+    public void isSelected(bool toggle){
+        if(toggle){
+            if(selected != null) selected.isOn = false;
+            selectedSave = int.Parse(EventSystem.current.currentSelectedGameObject.transform.parent.name);
+            selected = EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>();
 
-        Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
-        if(!SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = true;
+            Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
+            if(!SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = true;
+        }
     }
 
     public void Close(){
@@ -99,11 +97,11 @@ public class SaveProfiles : MonoBehaviour//, IDeselectHandler
         saves[selectedSave - 1].SetName();
         saves[selectedSave - 1].SetScreenshot();
         Unselect(false);
+        selected.isOn = false;
+        EventSystem.current.SetSelectedGameObject(background);
     }
 
     private void Unselect(bool saveFound){
-        // EventSystem.current.SetSelectedGameObject(null);
-
         loadButton.interactable = saveFound;
         deleteButton.interactable = saveFound;
     }
