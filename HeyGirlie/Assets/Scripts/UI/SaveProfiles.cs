@@ -50,10 +50,6 @@ public class SaveProfiles : Menu
         }
     }
 
-    public void Close(){
-        Destroy(gameObject);
-    }
-
     public void SaveSave(){
         if(SaveManager.findSave(selectedSave) != null){
             overwritePopup.SetActive(true);
