@@ -20,11 +20,21 @@ public class Settings : Menu
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
 
+    [SerializeField] private CanvasGroup autoforward, textSpeed;
+
     void Awake() {
         LockEsc(EscLock.Settings);
         Pause();
         ArrowKeyStart();
 
+        if(SettingManager.Instance.fastForwardActive){
+            speedSlider.interactable = false;
+            autoforwardToggle.interactable = false;
+
+            autoforward.alpha = 0.5f;
+            textSpeed.alpha = 0.5f;
+        }
+        
         maxMusicVol = musicSlider.maxValue;
         maxSfxVol = sfxSlider.maxValue;
         maxVoiceVol = voicesSlider.maxValue;
@@ -92,10 +102,6 @@ public class Settings : Menu
 
     public void OpenSaves(){
         Instantiate(saveProfilesMenu);
-    }
-
-    public void Close(){
-        Destroy(gameObject);
     }
 
     private void SetSettings(){
