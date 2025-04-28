@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeTransition : MonoBehaviour
 {
-    private CanvasGroup ui;
+    protected CanvasGroup ui;
     public float fadeTime = 1f;
 
     public Image kristenSprite;
@@ -13,25 +13,25 @@ public class FadeTransition : MonoBehaviour
     public Image rightSprite;
     public Image background; // in case we want to... do something with that
 
-    public void Start()
+    public virtual void Start()
     {
         ui = GetComponent<CanvasGroup>();
         ui.alpha = 0f;
         FadeIn();
     }
 
-    public void FadeIn()
+    public virtual void FadeIn()
     {
         StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 1f, fadeTime));
     }
 
-    public void FadeOut()
+    public virtual void FadeOut()
     {
 
         StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 0, fadeTime));
     }
 
-    IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime)
+    public virtual IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime)
     {
         float time = 0;
         

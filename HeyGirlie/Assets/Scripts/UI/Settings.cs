@@ -111,14 +111,24 @@ public class Settings : Menu
 
     public void OpenSettings()
     {
-        settingsContainer.SetActive(true);
-        controlsContainer.SetActive(false);
+        if (settingsContainer.activeSelf == false && controlsContainer.activeSelf == true)
+        {
+            settingsContainer.SetActive(true);
+            settingsContainer.GetComponent<FadeSettings>().FadeIn();
+            controlsContainer.GetComponent<FadeSettings>().FadeOut();
+            controlsContainer.SetActive(false);
+        }
     }
 
     public void OpenControls()
     {
-        settingsContainer.SetActive(false);
-        controlsContainer.SetActive(true);
+        if (settingsContainer.activeSelf == true && controlsContainer.activeSelf == false)
+        {
+            controlsContainer.SetActive(true);
+            controlsContainer.GetComponent<FadeSettings>().FadeIn();
+            settingsContainer.GetComponent<FadeSettings>().FadeOut();
+            settingsContainer.SetActive(false);
+        }
     }
 }
 
