@@ -34,6 +34,13 @@ As the number comes to an end, you kneel down on the ground as the bees spell ou
 <<voiceline KristenAwkward3>>
 <<kristen Nervous>>
 You catch your breath and glance upward, anticipating Gertie’s response. 
+<<sf_success Gertie>>
+
+<<if $succeed>>
+    <<jump GertieSuccess>>
+<<else>>
+    <<jump GertieFail>>
+<<endif>>
 ===
 
 title: GertieFail
@@ -58,6 +65,7 @@ Gertie: Good day to you, Miss Applebees.
 <<sfx bees>>
 As Gertie exits, the bees buzz a note of pity.
 <<voiceline KristenDateFail3>>
+<<jump Ending>>
 ===
 
 title: GertieSuccess
@@ -106,4 +114,111 @@ Incredible. She’s just… incredible.
 Gertie: Would it be too much if I wore a corsage to the dance?
 <<voiceline KristenRomanticGertie2>>
 Kristen: Gertie, if I could, I’d gift you a whole damn garden.
+<<jump Ending>>
+===
+
+title: GertieEnding
+---
+<<location "Aguefort">>
+<<kristen Soft_Gertie>>
+<<char_right GertieNeutral1>>
+The sight of her pierces you like a stinger to the heart — Gertie Bladeshield, in that gorgeous dress, bees buzzing around her wildflower corsage.
+<<char_right GertieGrin1>>
+You meet her eyes. Her grin widens as you saddle up to her side.
+<<voiceline KristenGreeting1>>
+Kristen: Howdy there, Gertie.
+<<voiceline GertieHappy3>>
+Gertie: Well met, Miss Applebees.
+<<kristen Happy_Gertie>>
+<<char_right GertieHappy1>>
+You both burst into bouts of giggles. Were it mere months ago when you were trading barbs, not kisses, and brandishing swords, not bouquets?
+Rising on your tippy toes, you press a quick kiss to her lips, then pulls her onto the dance floor by the hand.
+<<char_right GertieGrin1>>
+The other Bad Kids are already tearing it up, everyone thrashing, wiggling, spinning, sashaying, rocking out, doing their own thing to the same song. 
+Gertie’s grip around your hand tightens as you swirl her into the eye of the hurricane (also known as the center of a dance circle).
+You squeeze back, assuring, and nods encouragingly as she begins to sways to the DJ.
+Bees really are onto something. When words are inadequate, why not just dance it out?
+Lost amid the revelry, the music, the sea of sweaty teenagers, you and Gertie cling to each other, a whole conversation passing through your eyes and body language.
+You watch her as Fabian approaches, laughing as he mournfully twirls around her with his elven battle sheet. You watch her jump along with Riz as the bass drops, their arms slung around each other.
+<<kristen Soft_Gertie>>
+<<char_right GertieGrin1>>
+When the music fades out to a slow song, you watch her come down from the high, her smile tired, but satisfied. The bees around her buzz lazily, drowsily tracing flight paths along her corsage.
+Kristen: Want some air?
+<<voiceline GertieHappy4>>
+Gertie: Please.
+<<background BloodrushField>>
+Leaning against each other, you duck out of the gym hand in hand.
+The spring air, bracing and fresh, cools the sweat on your skin. Out in the distance, you think you recongize a couple Aguefort Owlbears in rented tuxes, trying to set off fireworks on the bloodrush field.
+Finding a spot to be thankfully, blissfully alone, you and Gertie chatter about nothing and everything.
+<<kristen Surprised_Gertie>>
+<<char_right GertieHappy1>>
+Gertie: — and that’s when I realized they weren’t wild-shaped druids — they were just bears!
+<<voiceline KristenSurprised1>>
+Kristen: Blimey. Honeycon sounds wild.
+<<voiceline GertieBee1>>
+<<kristen Soft_Gertie>>
+Gertie: Oh, you should see the keynote speakers they’ve lined up for next year’s convention.
+<<char_right GertieNeutral1>>
+You fall into companionable silence, leaning against each other, looking up at the night sky.
+Stars wink, or maybe that’s just Cassandra; their lights are only briefly outshone by the flare of the Owlbears’ out-of-control sparklers.
+Gertie: Kristen?
+Kristen: Hmm?
+Gertie: You’re… quiet.
+Kristen: I’m thinking. See, as student body president, I should probably be responsible and cast a spell to douse those Owlbears.
+<<kristen Happy_Gertie>>
+Kristen: Then again, maybe we can steal their sparklers and sneak them into the gym. A grand finale, or something.
+Gertie: No, I mean…
+Gertie: You <i>feel</i> quiet.
+Gertie: When I’m with you, I <i>feel</i> as though I am alone.
+<<kristen Surprised_Gertie>>
+<<char_right GertieSurprise1>>
+Panic strickens Gertie’s face, as she realizes what she just said.
+Gertie: My apologies, Miss Applebees. That sounded awfully disrespectful. I only mean to say —
+<<char_right GertieNeutral1>>
+<<kristen Soft_Gertie>>
+Kristen: It’s okay. I get it.
+A few months ago, you’d been so anxious to run into Gertie at the Apiarists’ Society, your mind crashing out at the sight of the girl who’d declared you her nemesis. 
+Now, knowing her, her knowing <i>you</i>, you’re filled with a certain sense of peace — and a certainty about that peace.
+Now, with Gertie, you feel utterly free to be unguarded, unabashed, unfiltered, and unapologetically yourself.
+<<voiceline GertieDateSuccess2>>
+<<char_right GertieBlush1>>
+Gertie: I suppose I’m trying to say that you feel very familiar to me. I’ve really enjoyed getting to know you, and now, I’m really enjoying <i>knowing you</i>.
+Gertie: Of course, you’re also constantly surprising me, everywhere, in every way, all the time.
+She gestures at your intwined hands.
+<<char_right GertieHappy1>>
+Gertie: <i>This</i> surprised me! Just ask the bees. They’ll probably dig up a dartboard with your face on it.
+<<kristen Grin_Gertie>>
+<<char_right GertieGrin1>>
+<<voiceline KristenDateSuccess3>>
+Kristen: I guess you just can’t resist my sick moves.
+<<voiceline GertieRomantic1>>
+Gertie: Your sick moves?
+<<Kristen transparent>>
+<<char_left transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<background SpringFling_Gertie>> 
+<<fade_in_ui>>
+Kristen: Of course! I put in a lot of hours to learn that bee choreography to ask you to the Spring Fling.
+Kristen: And it worked, didn’t it?
+<<fade_out_ui>>
+<<wait 2>>
+<<background BloodrushField BG>>
+<<fade_in_ui>>
+<<kristen Happy_Gertie>>
+<<char_right GertieBlush1>>
+Gertie’s smile turns teasing.
+Gertie: I mean, that was a commendable attempt at a waggle, for a beginner. But to an expert apiarist’s eye, there’s clearly much room for improvement.
+<<voiceline KristenRomantic1>>
+Kristen: Oh yeah? Why don’t you show me <i>your</i> moves then, Bee Girl?
+<<voiceline GertieNeutral2>>
+Gertie: If you insist, my dear nemesis.
+<<kristen transparent>>
+<<char_left transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<background SpringFling_Gertie>>
+<<enable_continue>>
 ===
