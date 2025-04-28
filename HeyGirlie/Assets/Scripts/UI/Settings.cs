@@ -13,6 +13,8 @@ public class Settings : Menu
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
+    public static float maxMusicVol, maxSfxVol, maxVoiceVol;
+
     [SerializeField] private GameObject saveProfilesMenu;
 
     [SerializeField] private Image screenshot;
@@ -32,6 +34,11 @@ public class Settings : Menu
             autoforward.alpha = 0.5f;
             textSpeed.alpha = 0.5f;
         }
+        
+        maxMusicVol = musicSlider.maxValue;
+        maxSfxVol = sfxSlider.maxValue;
+        maxVoiceVol = voicesSlider.maxValue;
+
         SetSettings();
 
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
