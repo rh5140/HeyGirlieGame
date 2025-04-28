@@ -18,6 +18,9 @@ public class Settings : Menu
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
 
+    [SerializeField] private GameObject settingsContainer;
+    [SerializeField] private GameObject controlsContainer;
+
     void Awake() {
         LockEsc(EscLock.Settings);
         Pause();
@@ -104,6 +107,18 @@ public class Settings : Menu
         speedSlider.value = SettingManager.Instance.speed;
         autoforwardToggle.isOn = SettingManager.Instance.autoforward;
         textSizeSlider.value = SettingManager.Instance.textSize;
+    }
+
+    public void OpenSettings()
+    {
+        settingsContainer.SetActive(true);
+        controlsContainer.SetActive(false);
+    }
+
+    public void OpenControls()
+    {
+        settingsContainer.SetActive(false);
+        controlsContainer.SetActive(true);
     }
 }
 
