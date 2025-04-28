@@ -13,7 +13,7 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private CursorMode cursorMode = CursorMode.Auto;
 
     [SerializeField] public bool fullscreen = false, vsync = false;
-    [SerializeField] public float cursor = 0f, volMusic = 1f, volSFX = 1f, volVoices = 1f, speed = 1f, textSize = 68f;
+    [SerializeField] public float cursor, volMusic, volSFX, volVoices, speed, textSize;
     [SerializeField] public bool autoforward = false;
 
     [SerializeField] public AudioSource music, sfx, voices;
@@ -143,13 +143,13 @@ public class SettingManager : MonoBehaviour
         else cursor = 0f;
 
         if(PlayerPrefs.HasKey(nameof(Setting.Music))) volMusic = PlayerPrefs.GetFloat(nameof(Setting.Music));
-        else volMusic = 1f;
+        else volMusic = Settings.maxMusicVol;
 
         if(PlayerPrefs.HasKey(nameof(Setting.SFX))) volSFX = PlayerPrefs.GetFloat(nameof(Setting.SFX));
-        else volSFX = 1f;
+        else volSFX = Settings.maxSfxVol;
 
         if(PlayerPrefs.HasKey(nameof(Setting.Voices))) volVoices = PlayerPrefs.GetFloat(nameof(Setting.Voices));
-        else volVoices = 1f;
+        else volVoices = Settings.maxVoiceVol;
 
         if(PlayerPrefs.HasKey(nameof(Setting.Speed))) speed = PlayerPrefs.GetFloat(nameof(Setting.Speed));
         else speed = 1f;

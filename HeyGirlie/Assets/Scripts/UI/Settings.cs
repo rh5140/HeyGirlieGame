@@ -13,6 +13,8 @@ public class Settings : Menu
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
+    public static float maxMusicVol, maxSfxVol, maxVoiceVol;
+
     [SerializeField] private GameObject saveProfilesMenu;
 
     [SerializeField] private Image screenshot;
@@ -22,6 +24,10 @@ public class Settings : Menu
         LockEsc(EscLock.Settings);
         Pause();
         ArrowKeyStart();
+
+        maxMusicVol = musicSlider.maxValue;
+        maxSfxVol = sfxSlider.maxValue;
+        maxVoiceVol = voicesSlider.maxValue;
 
         SetSettings();
 
