@@ -7,7 +7,7 @@ using System.IO;
 using System.Collections.Generic;
 using TMPro;
 
-public class Settings : MonoBehaviour
+public class Settings : Menu
 {
     [SerializeField] private Toggle fullscreenToggle, vsyncToggle;
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
@@ -20,13 +20,10 @@ public class Settings : MonoBehaviour
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
 
-    private bool pauseLock = false;
-
     void Awake() {
-        if(!GameManager.Instance.pauseLock){
-            GameManager.Instance.Pause(true);
-            pauseLock = true;
-        }
+        LockEsc(EscLock.Settings);
+        Pause();
+        ArrowKeyStart();
 
         maxMusicVol = musicSlider.maxValue;
         maxSfxVol = sfxSlider.maxValue;
@@ -37,11 +34,14 @@ public class Settings : MonoBehaviour
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
     }
 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Settings) Close();
+    }
+
     void OnDestroy(){
-        if(pauseLock){
-            GameManager.Instance.Pause(false);
-            pauseLock = false;
-        }
+        Unpause();
+        UnlockEsc();
+        ArrowKeyEnd();
     }
 
     public void ToggleFullscreen(bool value){

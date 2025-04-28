@@ -45,3 +45,13 @@ public enum Setting
     Autoforward,
     TextSize
 }
+
+public enum EscLock
+{
+    Dropdown,
+    Gallery,
+    Settings,
+    Profiles,
+    Credits,
+    Popup
+}

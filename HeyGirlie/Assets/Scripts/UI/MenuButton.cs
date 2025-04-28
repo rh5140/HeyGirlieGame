@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
-public class MenuButton : MonoBehaviour
+public class MenuButton : MonoBehaviour, IPointerEnterHandler
 {
     private AudioSource _sfxSource;
+
+    public bool hoverSelect = true;
 
     void Start()
     {
@@ -23,5 +27,15 @@ public class MenuButton : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData){
+        if(hoverSelect){
+            Button button = gameObject.GetComponent<Button>();
+            if(button != null) button.Select();
+            else {
+                gameObject.GetComponent<Toggle>().Select();
+            }
+        }
     }
 }
