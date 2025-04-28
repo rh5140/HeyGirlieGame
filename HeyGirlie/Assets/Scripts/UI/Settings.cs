@@ -21,18 +21,22 @@ public class Settings : Menu
     [SerializeField] private GameObject settingsContainer;
     [SerializeField] private GameObject controlsContainer;
 
+    [SerializeField] private Button settingsButton;
+    [SerializeField] private Button controlsButton;
+
     void Awake() {
         LockEsc(EscLock.Settings);
         Pause();
         ArrowKeyStart();
 
         SetSettings();
-
+        settingsButton.interactable = false;
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
     }
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Settings) Close();
+
     }
 
     void OnDestroy(){
@@ -114,9 +118,11 @@ public class Settings : Menu
         if (settingsContainer.activeSelf == false && controlsContainer.activeSelf == true)
         {
             settingsContainer.SetActive(true);
+            settingsButton.interactable = false;
             settingsContainer.GetComponent<FadeSettings>().FadeIn();
             controlsContainer.GetComponent<FadeSettings>().FadeOut();
             controlsContainer.SetActive(false);
+            controlsButton.interactable = true;
         }
     }
 
@@ -125,9 +131,11 @@ public class Settings : Menu
         if (settingsContainer.activeSelf == true && controlsContainer.activeSelf == false)
         {
             controlsContainer.SetActive(true);
+            controlsButton.interactable = false;
             controlsContainer.GetComponent<FadeSettings>().FadeIn();
             settingsContainer.GetComponent<FadeSettings>().FadeOut();
             settingsContainer.SetActive(false);
+            settingsButton.interactable = true;
         }
     }
 }
