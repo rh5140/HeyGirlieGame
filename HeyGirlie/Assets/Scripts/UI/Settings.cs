@@ -21,8 +21,9 @@ public class Settings : Menu
     [SerializeField] private GameObject settingsContainer;
     [SerializeField] private GameObject controlsContainer;
 
-    [SerializeField] private Button settingsButton;
-    [SerializeField] private Button controlsButton;
+    [SerializeField] private GameObject settingsButton;
+    [SerializeField] private GameObject controlsButton;
+    [SerializeField] private GameObject controlsScroll;
 
     void Awake() {
         LockEsc(EscLock.Settings);
@@ -30,7 +31,8 @@ public class Settings : Menu
         ArrowKeyStart();
 
         SetSettings();
-        settingsButton.interactable = false;
+        settingsButton.GetComponent<Button>().interactable = false;
+        controlsContainer.SetActive(false);
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
     }
 
@@ -118,11 +120,12 @@ public class Settings : Menu
         if (settingsContainer.activeSelf == false && controlsContainer.activeSelf == true)
         {
             settingsContainer.SetActive(true);
-            settingsButton.interactable = false;
+            settingsButton.GetComponent<Button>().interactable = false;
+            EventSystem.current.SetSelectedGameObject(controlsButton);
             settingsContainer.GetComponent<FadeSettings>().FadeIn();
             controlsContainer.GetComponent<FadeSettings>().FadeOut();
             controlsContainer.SetActive(false);
-            controlsButton.interactable = true;
+            controlsButton.GetComponent<Button>().interactable = true;
         }
     }
 
@@ -131,11 +134,12 @@ public class Settings : Menu
         if (settingsContainer.activeSelf == true && controlsContainer.activeSelf == false)
         {
             controlsContainer.SetActive(true);
-            controlsButton.interactable = false;
+            controlsButton.GetComponent<Button>().interactable = false;
+            EventSystem.current.SetSelectedGameObject(controlsScroll);
             controlsContainer.GetComponent<FadeSettings>().FadeIn();
             settingsContainer.GetComponent<FadeSettings>().FadeOut();
             settingsContainer.SetActive(false);
-            settingsButton.interactable = true;
+            settingsButton.GetComponent<Button>().interactable = true;
         }
     }
 }
