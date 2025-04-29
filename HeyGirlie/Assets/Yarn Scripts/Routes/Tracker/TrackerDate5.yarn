@@ -1,6 +1,6 @@
 ﻿title: Date5
 ---
-April 13
+April 28
 <<location "Gym">>
 <<set $date_points = 0>>
 <<set $date_points_total = 8>>
@@ -14,6 +14,7 @@ Tracker: Kristen, hey! Over here!
 :Oh, thank Cassandra.
 :You see the thighs in her running shorts before you see her face. Oh yeah, she runs alright.
 <<kristen Grin>>
+<<voiceline KristenRomanticTracker2>>
 Kristen: Come here often?
 Tracker: Actually, yes. I’ve kinda done this run every year since I moved in with Jawbone. Gotta give back somehow, y’know?
 <<kristen Neutral>>
@@ -21,13 +22,17 @@ Tracker: Actually, yes. I’ve kinda done this run every year since I moved in w
 :She’s in a small group of people next to a table with enough bibs and water bottles that you’re surprised it’s still standing.
 :Tracker motions toward you, introducing you to the small crowd.
 Tracker: This is Kristen. She’s… well, she’s…
--> <i>Introduce yourself as Tracker’s friend.</i>
+-> <i>Make sure they know you’re <i>not</i> dating each other!</i>
+    <<voiceline KristenAwkward2>>
     Kristen: Just her friend!
     :Okay, you said that <i>way</i> too loudly. And guiltily. You can see two of them exchange looks.
+    <<char_right TrackerSad_3B>>
     :You didn’t want to put Tracker in a difficult position... But from her hurt expression, you can tell you just might have anyway.
     Tracker: …Yeah. She’ll be helping out today.
+    <<add_points 0>>
 -> <i>Say you’re here to help.</i>
     <<char_right TrackerHappy_3B>>
+    <<voiceline KristenGreeting3>>
     :Tracker beams at you.
     Tracker: Couldn’t have said it better myself.
     :She bumps your shoulder with hers affectionately before turning back to everyone else.
@@ -36,19 +41,12 @@ Tracker: This is Kristen. She’s… well, she’s…
     <<kristen Happy>>
     Kristen: I’m Tracker’s girlfriend!
     <<char_right TrackerAwkward_3B>>
+    <<voiceline TrackerSad2>>
     :Tracker sighs, looking equal parts unsurprised and disappointed.
-    Tracker: She’ll be helping out today.
+    Tracker: ...She’ll be helping out today.
     <<kristen Awkward>>
     :Uh-oh. You maybe should have asked about that first.
     <<add_points 1>>
--> Let her continue for herself.
-    <<char_right TrackerAwkward_3B>>
-    Tracker: Well, she’s Kristen. Nuff said? Anyway, she’ll be helping out today.
-    Kristen: Just put me anywhere you need me.
-    <<char_right TrackerFlirt_3B>>
-    Tracker: <i>Anywhere?</i>
-    :Tracker grins at you, waggling her eyebrows, before turning back to everyone else.
-    <<add_points 2>>
 :Everyone else quickly introduces themselves. You do your best, but you’ve forgotten every single name by the time Tracker’s guiding you to another table.
 <<char_right TrackerNeutral_3B>>
 <<kristen Neutral>>
@@ -59,12 +57,14 @@ Tracker’s handing out bibs as people walk up, and then suddenly she’s lookin
     :Wait, why is she staring at you, she’s already got the bibs from this station handled. Think, think… well, they’ll probably need water too?
     :You hesitate after grabbing the first bottle, unsure if you’re messing up, but Tracker gives you a thumbs up, so you keep going.
     <<char_right TrackerHappy_3B>>
+    <<voiceline TrackerSurprised1>>
     :Tracker smiles at you as you do. Hell yes.
     <<add_points 2>>
 -> <i>Wait for Tracker to tell you what to do.</i>
     <<char_right TrackerSurprised_3B>>
     :Tracker looks at you for a moment, seemingly just as confused until her expression clears up.
     <<char_right TrackerNeutral_3B>>
+    <<voiceline TrackerNeutral1>>
     Tracker: Uh, you can help me hand out bibs? It doesn’t matter what number.
     Kristen: Perfect! I can do that.
     :You help her hand them out, speeding up the process.
@@ -74,6 +74,7 @@ Tracker’s handing out bibs as people walk up, and then suddenly she’s lookin
     Tracker: Hey… you, uh, kinda had to register beforehand if you wanted to actually run today. Sorry if I was unclear.
     :You gulp hard, and feel your face flush. This is not your day, huh?
     <<kristen Awkward>>
+    <<voiceline KristenNeutral2>>
     Kristen: Right. Sorry. Stupid, stupid.
     :She smiles at you reassuringly and gently takes back the bib.
     Tracker: It’s alright. Now you’ll know for next time.
@@ -98,8 +99,10 @@ Tracker: Well, I learned from the best.
 Kristen: Aww!
 Tracker: I meant Jawbone, but feel as flattered as you want.
 <<kristen Sad>>
+<<voiceline KristenSad2>>
 Kristen: Aw. I thought what we had was special…
 <<char_right TrackerLaugh_3B>>
+<<voiceline TrackerHappy2>>
 :Tracker snorts out a laugh.
 Tracker: Does it help if you’re my favorite?
 <<kristen Soft>>
@@ -124,10 +127,12 @@ Tracker: I was a little worried when I saw you at the gym a few weeks ago, you k
 <<char_right TrackerAwkward_3B>>
 Tracker: I just… I didn’t want this place to get wrapped up in all those weird vibes. I think the whole “exes” thing really got to me.
 :You squeeze her hand supportively. Her eyes crinkle in that way they do, and she begins tracing small circles idly with her thumb.
+<<voiceline TrackerDateSuccess3>>
 Tracker: But it’s been really nice spending time with you.
 <<char_right TrackerBlush_3B>>
 Tracker: Wait, um. It’s always been nice. But this time, it feels... <i>real</i>. Like it can actually last.
 Tracker: And I haven’t said it yet, and you deserved to hear it, so. There.
+<<voiceline TrackerRomantic1>>
 :You lean forward, tenderly, and kiss her cheek. She turns her head and suddenly – oh – you’re kissing her mouth.
 <<kristen Surprised>>
 <<char_right TrackerFlirt_3B>>
@@ -142,6 +147,7 @@ Kristen: Yeah. Yeah, probably.
 :You’re not going to stop, though. Tracker O’Shaughnessey just kissed you! On purpose! Who wouldn’t smile like this in your shoes?
 <<char_right TrackerHappy_3B>>
 :Tracker asks you to wait by the finish line, which is also the starting line - there’s a certain number of laps they need to run - and you’ll be there to offer water or a quick healing spell to whoever needs it.
+<<kristen Neutral>>
 Kristen: And I’ll cheer you on, obviously. You’re gonna win. Is this a thing you can win?
 Tracker: Oh, just <i>watch me.</i>
 :You raise an eyebrow in amusement.
@@ -150,10 +156,11 @@ Tracker: Nah, not really, but thanks for the support.
 <<char_right TrackerHappy_3B>>
 Tracker: Alright, see you in a bit!
 :And then she’s off.
-<<char_right transparent>>// no more tracker sprite idk how to format this lolz
+<<char_right transparent>>
 :Damn, you hate to see her go, but boy do you love to watch her leave. The urge to wolf whistle is so strong… but you figure that’s more her speed.
 <<kristen Grin>>
 :Heh. Wolf joke.
+<<kristen Neutral>>
 :You start to get a little dizzy watching the runners go around and around like this, but you do your job diligently. So what if you pour a little extra water when Tracker comes around? So what if there’s a little extra <i>oomph</i> to your heals?
 :The next time she jogs your way, she gives you a little wink. Your heart does a flip in your stomach.
 <<char_right TrackerFlirt_3B>>
@@ -162,10 +169,10 @@ Tracker: Last lap, baby!
 <<kristen Soft>>
 :Which is what you’d say if you were lying. Man. You’re down so bad. You couldn’t be down badder… You’re the baddest down?? None of these sound grammatically correct.
 :She jogs off, apparently oblivious to the dangerous things her smile can do to your nervous system. All you can do now is awkwardly pat down your flushing cheeks.
-<<char_right transparent>>//tracker gone again teehee
+<<char_right transparent>>
 <<kristen Neutral>>
-:Watching the race is... honestly  more fun than you would have expected?
-:Okay, maybe not exactly the whole standing to the side handing out water bottles aspect of it all, but getting to see Tracker like <i>this</i>; so completely in her element. Your stomach is doing just as many laps as the runners. //coming back
+:Watching the race is... honestly  more entertaining than you would have expected? Okay, maybe not exactly the whole standing to the side handing out water bottles aspect of it all, but getting to see Tracker like <i>this</i>: so completely in her element. 
+:She’s literally running circles around pretty much everyone else. It’s fun watching her have fun. //coming back
 <<voiceline TrackerHappy3>>
 :The racetrack at this gym is remarkably short, so it’s not too long before the first few racers burst through the finish line. Show-offs.
 :You offer them a polite congratulations, but you’re still scanning the crowd for Tracker, because of course you are.
@@ -180,6 +187,7 @@ Tracker: Last lap, baby!
     <<kristen Soft>>
     :She sighs contentedly against your neck.
     <<char_right TrackerBlush_3B>>
+    <<voiceline TrackerRomantic3>>
     Tracker: I’m really glad you’re here, Kristen.
     <<add_points 2>>
 -> <i>Go for a high-five!</i>
@@ -188,6 +196,7 @@ Tracker: Last lap, baby!
     Tracker: I think we’re a little past the high fives and fistbumps stage, eh cowboy?
     <<kristen Nervous>>
     <<char_right TrackerNeutral_3B>>
+    <<voiceline KristenRomanticTracker1>>
     Tracker: It’s alright. You’re right. Let’s take it slow.
     <<add_points 1>>
 -> <i>Kiss her, you fool!</i>
@@ -201,7 +210,7 @@ Tracker: Last lap, baby!
     <<add_points 0>>
 :Suddenly, her mouth quirks up in amusement.
 <<char_right TrackerHappy_3B>>
-Tracker: You know, it's funny. I could’ve sworn that someone healed me longer than the others...
+Tracker: You know, it's funny. I could’ve sworn that someone healed me longer than they should have...
 <<kristen Nervous>> // could also be awkward but i think nervous is cuuuute for this and also we use awkward a lot already
 :Uh oh. Busted.
 Tracker: Did you think you were sneaky? I’d know your magic anywhere.
@@ -226,6 +235,7 @@ title: Date5Hint
 ---
 <<char_right TrackerAwkward_3B>>
 Tracker: Um, anyway, do you have plans next week? 
+<<kristen Neutral>>
 Tracker: They do this meditative yoga thing — well, hot yoga, technically, but it <i>is</i> very meditative, as a cleric, and…
 <<char_right TrackerNeutral_3B>>
 Tracker: Ugh. Okay. We’re past this awkward bit!
@@ -235,6 +245,7 @@ Tracker: Would you want to join me?
     :Tracker raises an eyebrow, clearly amused.
     Tracker: Oh, really? I have it on good information someone used to skip all her classes…
     <<kristen Surprised>>
+    <<voiceline KristenAngry1>>
     Kristen: Rude!
     <<kristen Neutral>>
     Kristen: But I’ve actually been trying a lot harder this year.
@@ -254,6 +265,7 @@ Tracker: Would you want to join me?
 -> Kristen: “Waaaaaait, how hot is hot yoga?”
     <<kristen Grin>>
     <<char_right TrackerBlush_3B>>
+    <<voiceline TrackerSurprised2>>
     Tracker: Kristen…
     :Her tone is definitely warning you away from getting <i>too</i> flirty in public, but she’s also blushing. Heh. Still got it.
     Tracker: It’s pretty hot. In both senses of the word.
@@ -270,5 +282,5 @@ Kristen: Well, I always wanna see you.
 <<voiceline TrackerRomantic3>>
 <<kristen Happy>>
 :Yup. You’ve still got it.
-<<jump Cassandra>>
+<<jump Cassandra5>>
 ===
