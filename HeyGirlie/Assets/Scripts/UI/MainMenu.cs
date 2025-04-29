@@ -1,11 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 
 /*****************************************************
@@ -27,6 +28,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject maxProfilePopup;
     [SerializeField] private TMP_InputField playerName;
     [SerializeField] private AudioClip[] _startupVoicelines;
+    
+    [SerializeField] private UnityEvent animateCursor;
 
     void Start() {
         StartCoroutine(AnimateMenu());
@@ -110,7 +113,8 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        animateCursor.Invoke();
+        // SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()

@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
     public Queue<string> awayDates;
 
     public bool pauseLock = false;
-
     public EscLock escLock = EscLock.Dropdown;
 
     private void Awake()
