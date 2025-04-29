@@ -1,36 +1,34 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class FadeSettings : FadeTransition
+public class FadeSettings : MonoBehaviour
 {
-    public override void Start()
-    {
-        // this is empty so FadeIn() isn't called on Start
-    }
+    private CanvasGroup ui;
+    public float fadeTime = 1f;
 
-    public override void FadeIn()
+    public void FadeIn()
     {
-        // the difference from base class is line 14
+        
         ui = GetComponent<CanvasGroup>();
         StartCoroutine(FadeCanvasGroup(ui, 0f, 1f, fadeTime));
     }
 
-    public override void FadeOut()
+    public void FadeOut()
     {
-        // the difference from base class is line 21
         ui = GetComponent<CanvasGroup>();
         StartCoroutine(FadeCanvasGroup(ui, 1f, 0, fadeTime));
     }
 
-    public override IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime)
+    IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime)
     {
         float time = 0;
         while (time < lerpTime)
         {
             float currentAlpha = Mathf.Lerp(start, end, time / lerpTime);
             cg.alpha = currentAlpha;
-            time += Time.fixedDeltaTime;
-            // the difference from base class is line 34
+            time += Time.unscaledDeltaTime;
             yield return null;
         }
 
