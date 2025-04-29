@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FadeSettings : MonoBehaviour
 {
     private CanvasGroup ui;
-    public float fadeTime = 1f;
+    private float fadeTime = 0.5f;
 
     public void FadeIn()
     {
@@ -18,7 +18,7 @@ public class FadeSettings : MonoBehaviour
     public void FadeOut()
     {
         ui = GetComponent<CanvasGroup>();
-        StartCoroutine(FadeCanvasGroup(ui, 1f, 0, fadeTime));
+        StartCoroutine(FadeCanvasGroup(ui, 1f, 0f, fadeTime));
     }
 
     IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime)
