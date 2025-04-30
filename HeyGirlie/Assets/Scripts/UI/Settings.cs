@@ -13,7 +13,8 @@ public class Settings : Menu
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
-    public static float maxMusicVol, maxSfxVol, maxVoiceVol;
+    // these values determine the default volume when a player loads the game for the very first time; match to max slider value in inspector once music is finalized
+    public static float maxMusicVol = 0.2f, maxSfxVol = 0.4f, maxVoiceVol = 1f; 
 
     [SerializeField] private GameObject saveProfilesMenu;
 
