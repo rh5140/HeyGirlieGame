@@ -9,6 +9,8 @@ using TMPro;
 
 public class Settings : Menu
 {
+    [SerializeField] private GameObject background; 
+
     [SerializeField] private Toggle fullscreenToggle, vsyncToggle;
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
@@ -31,8 +33,10 @@ public class Settings : Menu
         ArrowKeyStart();
 
         SetSettings();
+        // Turn the settings tab/page on and the controls tab/page off
         settingsButton.GetComponent<Button>().interactable = false;
         controlsContainer.SetActive(false);
+
         screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
     }
 
@@ -115,13 +119,15 @@ public class Settings : Menu
         textSizeSlider.value = SettingManager.Instance.textSize;
     }
 
+    //Open the settings tab/page
     public void OpenSettings()
     {
         if (settingsContainer.activeSelf == false && controlsContainer.activeSelf == true)
         {
             settingsContainer.SetActive(true);
             settingsButton.GetComponent<Button>().interactable = false;
-            EventSystem.current.SetSelectedGameObject(controlsButton);
+            // Set current selected to background since explicit navigation doesn't skip past uninteractable objects
+            EventSystem.current.SetSelectedGameObject(background);
             settingsContainer.GetComponent<FadeSettings>().FadeIn();
             controlsContainer.GetComponent<FadeSettings>().FadeOut();
             controlsContainer.SetActive(false);
@@ -129,12 +135,14 @@ public class Settings : Menu
         }
     }
 
+    //Open the controls tab/page
     public void OpenControls()
     {
         if (settingsContainer.activeSelf == true && controlsContainer.activeSelf == false)
         {
             controlsContainer.SetActive(true);
             controlsButton.GetComponent<Button>().interactable = false;
+            // Set current selected to controls scrollbar since explicit navigation doesn't skip past uninteractable objects
             EventSystem.current.SetSelectedGameObject(controlsScroll);
             controlsContainer.GetComponent<FadeSettings>().FadeIn();
             settingsContainer.GetComponent<FadeSettings>().FadeOut();
