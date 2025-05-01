@@ -218,8 +218,9 @@ Kristen: Crystal clear.
 <<char_left transparent>>
 <<kristen transparent>>
 //SPLASH HERE!
-<<background SpringFling_FigAyda>>
+<<fade_out_ui>>
 <<wait 2>>
+<<background SpringFling_FigAyda>>
 <<fade_in_ui>>
 You all try. You truly do. For a moment, you manage to link hands in a triangle and step in something almost resembling rhythm… until Fig accidentally steps on your foot, Ayda bumps someone with her wing, and all three of you nearly topple over.
 //<<char_left FigHappy2>>
@@ -246,6 +247,7 @@ Ayda smiles at you and squeezes your fingers. Fig leans in and presses her foreh
 <<voiceline FigRomantic2>>
 Fig: This is stupid. And I’ve never been happier.
 //BACKGROUND RETURNS POSSIBLY HERE!
+<<fade_out_ui>>
 <<wait 2>>
 <<background SpringFling>>
 <<fade_in_ui>>
@@ -292,6 +294,8 @@ Kristen: Thanks, Cassandra.
 <<kristen transparent>>
 <<char_right transparent>>
 <<char_left transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background SpringFling_FigAyda>>
 <<enable_continue>>
 ===

@@ -86,8 +86,9 @@ You move, autopilot carrying you back through the crowd, slipping into the mass 
 The roar of the audience is massive, but it might as well be white noise, because the second she starts playing, she’s looking right at you. Your stomach flips.
 <<kristen transparent>>
 <<char_right transparent>>
-<<background MusicFestival_Fig>>
+<<fade_out_ui>>
 <<wait 2>>
+<<background MusicFestival_Fig>>
 <<fade_in_ui>>
 Fig: ♪♫ Started out as just a game, a joke we never meant to play.
 //<<char_right FigBlush>>
@@ -108,5 +109,7 @@ But you decide not to overthink it all too much. You’re just here with the mus
 Right now, nothing else matters.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<enable_continue>>
 ===

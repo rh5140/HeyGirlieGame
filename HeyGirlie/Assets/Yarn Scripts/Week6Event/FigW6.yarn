@@ -67,8 +67,9 @@ Fig: No…
 Kristen: Oh, absolutely not…
 <<kristen transparent>>
 <<char_right transparent>>
-<<background ActivitiesFair_Fig>>
+<<fade_out_ui>>
 <<wait 2>>
+<<background ActivitiesFair_Fig>>
 <<fade_in_ui>>
 A clown steps out of the shadows.
 Not a fun clown.
@@ -95,6 +96,7 @@ You make a break for it, still attached to each other, careening through the maz
 <i>Which, you actually might be.</i>
 The clown’s giggle follows you and you don’t stop until you see the neon glow of the EXIT sign up ahead.
 //RETURN TO GENERIC BG HERE
+<<fade_out_ui>>
 <<wait 2>>
 <<background ActivitiesFair>>
 <<fade_in_ui>>
@@ -112,6 +114,8 @@ Fig: If you tell anyone we screamed like that, I will smite you.
 Kristen: Oh, Fig. We both know I’m telling <i>everyone</i>.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background ActivitiesFair_Fig>>
 <<enable_continue>>
 ===
