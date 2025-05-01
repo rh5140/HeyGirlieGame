@@ -1,14 +1,17 @@
 ﻿title: Date4
 ---
-April 14
+April 27
 <<location "Apiarists’ Society">>
 <<set $date_points = 0>>
 <<set $date_points_total = 10>>
 <<kristen Neutral>>
-It’s been an exhausting day of cleric classes. Sure, you have experience both killing and birthing new gods (or reforming old ones) but that doesn’t help you write an APA (Adventuring Party Association) formatted paper on the ideal healing practices for a severed limb.
+It’s been an exhausting day of cleric classes. 
+Sure, you have experience both killing and birthing new gods (or reforming old ones).
+But that doesn’t help you write an APA (Adventuring Party Association) formatted paper on the ideal healing practices for a severed limb.
 You desperately need a detox, something to help clear the academia-laced fog sweeping through your brain.
 You start thinking of Gertie — who could blame you? The firbolg ranger has taken over most of your waking thoughts.
-You make your way over to the Apiarists’ Society — population one. With Riz hard at work on his capstone project today, Gertie is devotedly tending to her hives alone, using the smoker to draw the bees out before she begins inspecting the honeycombs.
+You make your way over to the Apiarists’ Society — population one.
+With Riz hard at work on his capstone project today, Gertie is devotedly tending to her hives alone, using the smoker to draw the bees out before she begins inspecting the honeycombs.
 Despite her concentration, she manages to notice you coming and gives you a wide smile.
 <<char_right GertieHappy>>
 <<voiceline GertieGreeting2>>
@@ -26,28 +29,34 @@ At the mention of the word “nemeses,” you swear you can hear the bees start 
 You subconsciously take a step back from the buzzing bees. Gertie notices your careful movements but waves it away. 
 <<voiceline GertieBee4>>
 Gertie: Don’t worry, Miss Applebees. Bees don’t attack unprovoked.
-You briefly wonder about their definition of “provocation.” You shake off your concern. Gertie knows these bees well. She won’t let you get hurt.
+You briefly wonder about their definition of “provocation.”
+You shake off your concern. Gertie knows these bees well. She won’t let you get hurt.
 <<kristen Neutral>>
 Kristen: So, what else have you been up to today?
 Gertie: Not much else. I’ve spent my whole day here, with the hives.
 <<kristen Surprised>>
 Kristen: The whole day? What about your ranger classes?
-Gertie: Ah, that’s the benefit of an independent study, Miss Applebees. I can count my work with the Apiarists’ Society as academic credit.
-  -> Kristen: “Wow, getting class credit to do your own thing? Must be pretty nice.”
+Gertie: Ah, that’s the benefit of an independent study, Miss Applebees.
+Gertie: I can count the Apiarists’ Society as academic credit.
+  -> Kristen: “Must be nice to get class credit to do your own thing.”
     <<char_right GertieAngry>>
     Gertie bristles a bit at your comment. 
     <<add_points 0>>
-  -> Kristen: “That’s awesome! I can imagine you’ll learn more here than in a classroom.”
+  -> Kristen: “Awesome! I’m sure you’ll learn more here than in a classroom.”
     <<kristen Happy>>
     <<voiceline GertieDateSuccess1>>
     <<add_points 2>>
-  -> Kristen: “But you’re at an adventuring academy? Don’t you ever dream of adventure?”
-    Gertie: I know what I want, Miss Applebees, I didn’t come here for thrills, I came here to learn about my passion. This <i>is</i> my adventure.
+  -> Kristen: “But don’t you ever dream of adventure?”
+    Kristen: Aguefort is an adventuring academy, after all.
+    Gertie: I know what I want, Miss Applebees.
+    Gertie: I didn’t come here for thrills, I came here to learn about my passion. This <i>is</i> my adventure.
     <<add_points 0>>
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
-Gertie: The apiary <i>is</i> my classroom. The bees are both my teachers and my party members. There are a lot of druidic literature on bees and how they may be some of the purest manifestations of nature-based magic.
-Gertie continues working on her hives as she speaks. The way her hands move, her deliberate movements, you’re mesmerized by the level of care she puts into each action. 
+Gertie: The apiary <i>is</i> my classroom. The bees are both my teachers and my party members.
+Gertie: There are a lot of druidic literature on bees and how they may be some of the purest manifestations of nature-based magic.
+Gertie continues working on her hives as she speaks.
+The way her hands move, her deliberate movements, you’re mesmerized by the level of care she puts into each action. 
 Gertie: Some even theorize that bees themselves can be their own source of magic. And pretty powerful magic at that. I explained this all to Principal Aguefort.
 Kristen: Let me guess, he went off about Chronomancy?
 <<char_right GertieSurprise>>
@@ -64,22 +73,25 @@ She’s not wrong. From a lot of perspectives, Gertie’s dedication to her bees
 <<kristen Nervous>>
 But you can’t deny her conviction is somewhat terrifying.
 You’re the cleric to the Goddex of Doubt and Mystery. Hell, you alone have worshipped more than a couple gods.
-But looking at Gertie? You can see she’s always been this dedicated to the apiary. It’s always been a part of her. And she’s never had reasons to doubt it’s where she belongs. You can’t help but feel a strange mix of admiration and jealousy.
+But looking at Gertie? You can see she’s always been this dedicated to the apiary. It’s always been a part of her. And she’s never had reasons to doubt it’s where she belongs.
+You can’t help but feel a strange mix of admiration and jealousy.
 <<voiceline KristenRomantic3>>
 <<kristen Grin>>
 Kristen: Then I guess it’s a good thing I’m here! Maybe I can help that study of yours be a little less independent.
 <<voiceline GertieRomantic1>>
 <<char_right GertieGrin>>
-Gertie chuckles at your flirting. It’s nice making her laugh — but now’s the time to get to work.
+Gertie chuckles at your flirting.
+It’s nice making her laugh — but now’s the time to get to work.
 <<kristen Neutral>>
 <<char_right GertieNeutral>>
-  -> <i>Help by staying as far away from those flying-dagger-wielding insects as you can manage.</i>
+  -> <i>Help by staying far, far away from those flying, dagger-wielding insects.</i>
     <<kristen Nervous>>
     Gertie can clearly see your hesitation as you skirt around the hives, never getting TOO close.
     Gertie: There’s no need to be afraid, Miss Applebees. I promise you.
-    <<add_points 1>>
+    <<add_points 0>>
   -> <i>Get in there! How hard could apiculture </i>bee<i>?</i>
-    You walk forward with a level of confidence that can only come from bravery or stupidity. As you do, the hive buzzes noticeably louder. Gertie stops you short.
+    You walk forward with a level of confidence that can only come from bravery or stupidity.
+    As you do, the hive buzzes noticeably louder. Gertie stops you short.
     Gertie: Your enthusiasm is appreciated, Miss Applebees, but maybe we should take a gentler approach.
     <<add_points 1>>
   -> <i>Ask Gertie the best way you can contribute.</i>
@@ -93,11 +105,13 @@ Gertie chuckles at your flirting. It’s nice making her laugh — but now’s t
 Gertie: It’s too early for any honey extraction, but it would be a major help if you could inspect the hives and see which ones are overcrowded — we want to prevent any swarming.
 Gertie goes on to explain the signs of overcrowding and how it can cause the colony to abandon the hive. 
 <<kristen Nervous>>
-You listen intently to her explanation, but when it comes time to approach the bees, they still seem less than thrilled to have you onboard. Their noises grow louder, more intense.
+You listen intently to her explanation, but when it comes time to approach the bees, they still seem less than thrilled to have you onboard.
+Their noises grow louder, more intense.
 <<voiceline KristenSurprised1>>
 <<sfx bees>>
 It’s the kind of buzzing that one gives when their friend’s ex tries a bit too hard.
-Gertie: Don’t take it personally. But you should put on gloves. Only the most skilled beekeepers approach them uncovered.
+Gertie: Don’t take it personally. But you should put on gloves.
+Gertie: Only the most skilled beekeepers approach them uncovered.
   -> <i>Who needs gloves? You’ve got good old-fashioned moxie.</i>
     You approach with all the gumption and audacity you can muster, but it doesn’t seem to impress the bees very much.
     <<voiceline KristenDateFailGertie1>>
@@ -116,12 +130,14 @@ Gertie: Don’t take it personally. But you should put on gloves. Only the most 
 <<kristen Neutral>>
 Soon enough you check all the hives and feel lucky to find none of them are overcrowded. Gertie lets out a sigh of relief herself.
 <<voiceline GertieHappy3>>
-Gertie: Thank you for your help, Miss Applebees. These bees are important to me. And if they swarmed and left the hive… I don’t know if they would survive.
+Gertie: Thank you for your help, Miss Applebees. 
+Gertie: These bees are important to me. And if they swarmed and left the hive… I don’t know if they would survive.
 <<char_right GertieSad>>
 <<kristen Surprised>>
 Gertie speaks with a deep sadness in her voice, like she’s in mourning.
 <<voiceline GertieSad2>>
-Gertie: Did you hear about that country club that’s planning to expand its golf course into Far Haven Woods? They’d have to flatten arces of woodlands, not to mention pump all that water and pesticides to keep the golf turfs green.
+Gertie: Did you hear about that country club that’s planning to expand its golf course into Far Haven Woods?
+Gertie: They’d have to flatten arces of woodlands, not to mention pump all that water and pesticides to keep the golf turfs green.
 Gertie: Then there are those big industries. Mass deforestation. Overharvesting. Monoculture farms, destroying biodiversity in local ecosystems.
 Gertie: Without diverse sources of pollen and nectar, the bees are forced into intense cycles of feast and famine.
 <<kristen Sad>>
@@ -141,7 +157,8 @@ Gertie: They’re a way of suppressing druidic magic.
 <<kristen Sad>>
 <<voiceline KristenSad1>>
 An overwhelming sense of guilt washes over you.
-You know Helio isn’t a great god. Or even a great guy for that matter. Yet, there always seems to be more shit to uncover. Like you still can’t escape him. Like Helio will always be a ghost haunting you.
+You know Helio isn’t a great god. Or even a great guy for that matter.
+Yet, there always seems to be more shit to uncover. Like you still can’t escape him. Like Helio will always be a ghost haunting you.
 <<char_right GertieNeutral>>
 Gertie must’ve noticed the look that crosses over your face. She goes to comfort you.
 <<voiceline GertieSad1>>
@@ -261,5 +278,5 @@ Gertie: <i>Oh</i>.
 Gertie: Are you asking me on a date, Kristen?
 Kristen. <i>Kristen</i>. <i>KRISTEN</i>.
 Kristen: Come by Mordred Manor, and you’ll find out.
-<<jump Cassandra>>
+<<jump Cassandra4>>
 ===

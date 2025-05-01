@@ -22,7 +22,7 @@ public class Credits : Menu
         ArrowKeyEnd();
     }
 
-    public void Close(){
+    public override void Close(){
         if(!SceneManager.GetActiveScene().name.Equals("Credits")) Destroy(creditsMenu);
         else {
             #if (UNITY_EDITOR)

@@ -15,10 +15,14 @@ public class Settings : Menu
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
+    // these values determine the default volume when a player loads the game for the very first time; match to max slider value in inspector once music is finalized
+    public static float maxMusicVol = 0.2f, maxSfxVol = 0.4f, maxVoiceVol = 1f; 
+
     [SerializeField] private GameObject saveProfilesMenu;
 
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
+
 
     [SerializeField] private GameObject settingsContainer;
     [SerializeField] private GameObject controlsContainer;
@@ -27,10 +31,25 @@ public class Settings : Menu
     [SerializeField] private GameObject controlsButton;
     [SerializeField] private GameObject controlsScroll;
 
+    [SerializeField] private CanvasGroup autoforward, textSpeed;
+
+
     void Awake() {
         LockEsc(EscLock.Settings);
         Pause();
         ArrowKeyStart();
+
+        if(SettingManager.Instance.fastForwardActive){
+            speedSlider.interactable = false;
+            autoforwardToggle.interactable = false;
+
+            autoforward.alpha = 0.5f;
+            textSpeed.alpha = 0.5f;
+        }
+        
+        maxMusicVol = musicSlider.maxValue;
+        maxSfxVol = sfxSlider.maxValue;
+        maxVoiceVol = voicesSlider.maxValue;
 
         SetSettings();
         // Turn the settings tab/page on and the controls tab/page off
@@ -99,10 +118,6 @@ public class Settings : Menu
 
     public void OpenSaves(){
         Instantiate(saveProfilesMenu);
-    }
-
-    public void Close(){
-        Destroy(gameObject);
     }
 
     private void SetSettings(){

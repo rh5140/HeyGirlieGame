@@ -1,0 +1,53 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System;
+using Yarn.Unity;
+
+public class DialogueUIButtons : MonoBehaviour
+{
+    [SerializeField] private GameObject saveProfileMenu;
+    [SerializeField] private GameObject characterProfiles;
+    [SerializeField] private HGGLineView hggLineView;
+    [SerializeField] private GameObject optionsFFButton;
+    [SerializeField] private GameObject lineFFButton;
+
+    private bool ffActive = false;
+
+    public void Awake(){
+        optionsFFButton.GetComponent<Button>().interactable = false;
+        SettingManager.Instance.fastForwardActive = false;
+
+        // if we wanna preserve FF across scenes - BUT this doesnt work </3
+        // if(SettingManager.Instance.fastForwardActive){
+        //     ffActive = false;
+        //     lineFFButton.GetComponent<DialogueUIButton>().Selected();
+        //     FastForward();
+        //     lineFFButton.transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(0, (ffActive) ? 0f : 80f);
+        // }
+    }
+
+    public void Save(){
+        GameManager.Instance.Save();
+    }
+
+    public void Load(){
+        Instantiate(saveProfileMenu);
+    }
+
+    public void FastForward(){
+        ffActive = !ffActive;
+        SettingManager.Instance.fastForwardActive = ffActive;
+        optionsFFButton.transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(0, (ffActive) ? 0f : 80f);
+
+        hggLineView.SetAutoAdvanced(ffActive);
+        
+        if(ffActive) hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*2));
+        else hggLineView.SetSpeed((float) (hggLineView.GetSpeed()*0.5));
+
+        hggLineView.UserRequestedViewAdvancement();
+    }
+
+    public void CharacterProfiles(){
+        Instantiate(characterProfiles);
+    }
+}

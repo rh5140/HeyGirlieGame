@@ -1,19 +1,26 @@
 ﻿title: Date6
 ---
-April 21
+April 28
 <<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 12>>
 <<kristen Neutral>>
 :You’re kinda just… sat at home. Your last date with Nara ended without deciding what to do this week, so you’re just… here.
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
 :Should you text her? Should you call her? Should you send her a messenger pigeon? Maybe that’s how they communicate in Fallinel -
 <<sfx knock>>
+<<kristen Surprised>>
+<<voiceline KristenSurprised3>>
 :Or maybe she’s here! Right now!
+<<kristen Neutral>>
 :You open the door, but it’s just a regular mailman with regular maiiiilwait who’s that with the pointy ears behind the mailman?
 <<char_right NaraHappy>>
+<<voiceline NaraBespoke4>>
 Nara: Kristren!
 :You see the upper half of Nara’s head peer out from behind the mailman, who is a few inches shorter than her.
 <<kristen Surprised>>
+<<voiceline KristenSurprised1>>
 Kristen: Nara! I didn’t know you had a job!
 Nara: Oh no, I was simply using the postman as a clever disguise to surprise you. Did you like it?
 :The mailman starts to look a little sheepish, wedged between the two of you. You don’t blame him.
@@ -22,7 +29,9 @@ Kristen: I loved it. I would also love it if you had my mail…?
 Nara: No, I just paid this man to stop in front of your house so I could execute my cunning plan.
 Kristen: Soooo true. You could have dressed up like a mailman instead though. And also have my mail.
 <<char_right NaraNeutral>>
+<<voiceline NaraConfused2>>
 Nara: Kristen. If I ever wear those shorts with that shirt, I am under the effects of an enchantment most sinister, and you must assassinate me at your earliest convenience.
+<<kristen Neutral>>
 Kristen: Got it. Wanna come in?
 Nara: Yes please.
 :Nara steps around the mailman, freeing him from his social prison, and enters the manor.
@@ -30,21 +39,25 @@ Kristen: So what do you want to do today?
 Nara: I am so glad you asked. There is something I need to prepare you for.
 Kristen: What’s that?
 Nara: Meeting my parents.
-<<kristen Neutral>>
 Kristen: …
+<<kristen Awkward>>
+<<voiceline KristenNeutral3>>
 Kristen: What.
 Nara: Well, we have been courting for over a month now.
 <<kristen Nervous>>
 Kristen: Yeah, but-
+<<voiceline NaraNeutral3>>
 Nara: As such, my parents will want to meet you eventually, and when they do, I think it best we start developing your etiquette skills. Because right now you have none.
 :There’s a lot to unpack there.
 <<kristen Grin>>
+<<voiceline KristenNeutral1>>
 Kristen: How do you know I have no etiquette? Maybe I have a shit ton of etiquette that you don’t know about.
 Nara: Kristen, I can see the protein bar wrapper emerging from your left pocket.
 Kristen: That’s a fluke. A one time mistake.
 Nara: And the one in your right pocket?
-:Whoops. Maybe she has a point.
 <<kristen Nervous>>
+<<voiceline KristenAwkward1>>
+:Whoops. Maybe she has a point.
 Kristen: No comment.
 :You’ll admit nothing. You have rights. Where the fuck is your attorney.
 Nara: Shall we get started?
@@ -56,6 +69,7 @@ Nara: Let us begin.
 :It’s fine. She’s so rich she probably only uses any of this stuff once before replacing it with even fancier stuff.
 Nara: I hope you appreciate the family heirlooms I am borrowing from the royal castle for this task.
 <<kristen Nervous>>
+<<voiceline KristenAwkward2>>
 :Uh oh.
 Nara: Now, can you name any of these utensils?
 <<kristen Grin>>
@@ -70,12 +84,16 @@ Kristen: Spoon.
 Kristen: This is… a lobster hammer, I think?
 Nara: That is a plate.
 :You point at a fifth.
+<<kristen Surprised>>
+<<voiceline KristenSurprised1>>
 Kristen: How did you get on the table without me noticing?
 Nara: Another plate, but reflective. An easy mistake to make.
+<<kristen Neutral>>
 Kristen: Okay, well, I’m sure at least one of those first ones was a fork. So that’s a point for me, right?
 <<kristen Sad>>
 Nara: No.
 <<char_right NaraDisgust>>
+<<voiceline NaraAngry3>>
 Nara: Kristen, do you know how to eat without using your bare hands?
 <<kristen Neutral>>
 Kristen: Pretty sure you don’t need any of that for a protein bar.
@@ -85,8 +103,10 @@ Nara: But, darling, you worship Cassandra. Not Helio.
 <<kristen Grin>>
 Kristen: Cowgirls make do.
 <<char_right NaraThink>>
+<<voiceline NaraCurious1>>
 Nara: I see… should I hold classes for Solesian cowgirls to learn about etiquette, then?
 <<kristen Awkward>>
+<<voiceline KristenNeutral2>>
 :No, no, wait! Individual lessons, please! You don’t wanna share Nara with random Solesian cowgirls, they might be cooler than you!!!!
 Kristen: Um… no. I’m sure they’re fine. Just me is good, thanks.
 <<char_right NaraNeutral>>
@@ -95,33 +115,31 @@ Kristen: Uhhh yeah me too for sure yes.
 <<kristen Neutral>>
 Nara: Let us start with utensils, then.
 //[https://en.wikipedia.org/wiki/Fork#Types_of_forks]
+<<kristen Awkward>>
 :Ohhh that is way too much for your ADHD-riddled brain to handle.
 Nara: Now. Which fork would you use to eat salad?
+<<kristen Nervous>>
 Kristen: Uhhhh… the salad fork.
 <<char_right NaraHappy>>
+<<voiceline NaraHappy1>>
 Nara: Brilliant! Next, what fork would you use to eat crab?
 Kristen: … Crab fork?
 Nara: Right again! I could not be prouder! Now… What fork would you use to eat a protein bar covered in syrup?
+<<kristen Grin>>
+<<voiceline KristenHappy4>>
 :Oh, you’ve got this on lock.
 Kristen: Easy. The protein-bar-covered-in-syrup fork.
 <<char_right NaraNeutral>>
+<<kristen Neutral>>
 :You wait to be showered with praise again, but Nara isn’t applauding for you. Why isn’t she applauding for you?
 Nara: Oh, dear. Do you want to… try again, perhaps?
--> No, you’re pretty sure you’re right. 
-    :Fuck it, you’re locking it in, final answer.
-    <<kristen Grin>>
-    Kristen: Nope. That’s my answer, baby. The protein-bar-covered-in-syrup fork, now gimme those sweet sweet points!
-    <<char_right NaraSad>>
-    :Somehow, Nara’s face falls even further. Aw, man. You had kinda been hoping you were funny or charming enough to magically make your wrong answer right, but now it seems like maybe not.
-    Nara: No matter. We will simply have to keep working. This one was the Sucket fork, can you remember that, darling?
-    :Never in your life did you think you’d be embarrassed about not knowing what a Sucket fork was.
-    <<kristen Sad>>
-    Kristen: Uh… yeah. Yeah, I’ll remember.
-    <<add_points 0>>
--> Ah, shit. It’s a different fork, huh.
+
+
+-> <i>Ah, shit. It’s a different fork, huh.</i>
     <<kristen Sad>>
     Kristen: I’m sorry babe, I have no idea.
     <<char_right NaraSad>>
+    <<voiceline NaraSad2>>
     :Nara’s face falls, but she tries not to let it show. Wow, this must mean a lot to her.
     Nara: No matter, it is a rarely used fork. I merely wished to test your aptitude.
     :You feel a strong urge to at least feign interest.
@@ -135,10 +153,25 @@ Nara: Oh, dear. Do you want to… try again, perhaps?
     :Heehee. Sucket.
     Kristen: Great. I’ll try to remember it next time.
     <<add_points 2>>
--> It’s not your fault! She tricked you with the easy ones! 
+-> <i>No, you’re pretty sure you’re right.</i>
+    :Fuck it, you’re locking it in, final answer.
+    <<kristen Grin>>
+    Kristen: Nope. That’s my answer, baby. The protein-bar-covered-in-syrup fork, now gimme those sweet sweet points!
+    <<char_right NaraSad>>
+    <<voiceline NaraSad2>>
+    :Somehow, Nara’s face falls even further. Aw, man. You had kinda been hoping you were funny or charming enough to magically make your wrong answer right, but now it seems like maybe not.
+    Nara: No matter. We will simply have to keep working. This one was the Sucket fork, can you remember that, darling?
+    <<kristen Sad>>
+    <<voiceline KristenSad3>>
+    :Never in your life did you think you’d be embarrassed about not knowing what a Sucket fork was.
+    Kristen: Uh… yeah. Yeah, I’ll remember.
+    <<add_points 0>>
+-> <i>It’s not your fault! She tricked you with the easy ones!</i>
     <<kristen Angry>>
+    <<voiceline KristenAngry2>>
     Kristen: Hey, I never asked for this! All these confusing forks with their confusing names. Y’know what, Princess? You can <i>suck it!</i>
     <<char_right NaraHappy>>
+    <<voiceline NaraHappy2>>
     <<kristen Surprised>>
     :Wait… why is Nara so happy?
     Nara: Oh Kristen, I knew you could do it! It <i>is</i> the Sucket fork!
@@ -147,11 +180,15 @@ Nara: Oh, dear. Do you want to… try again, perhaps?
     Kristen: Haha yeah all in a day’s work for me, the cutlery masteress.
     Nara: Master, actually, but no matter. We shall make an aristocrat of you yet!
     <<add_points 1>>
+
+
 <<char_right NaraNeutral>>
-<<kristen Neutral>>
 Nara: Shall we move on?
+<<kristen Surprised>>
+<<voiceline KristenSurprised2>>
 Kristen: There’s more???
 Nara: Of course! I underwent many years of etiquette lessons before I mastered the art of manners.
+<<kristen Neutral>>
 Kristen: Did the Little Man teach you?
 Nara: Of course not, silly! The Little Man only knows what he has been paid to learn.
 Nara: Now, onto seating.
@@ -159,83 +196,106 @@ Kristen: Aren’t your parents supposed to tell us where to sit?
 Nara: That would be true for larger functions. Unfortunately, this dinner is designed to be a test of your social awareness and maturity. I am sure you have the ability to pass with flying colours.
 Kristen: Aha yeah I’m a big girlie, I can do this.
 Nara: Yes! Yes, you can. Alright. Now, where you sit in relation to my parents depends on your relationship to them.
+<<kristen Nervous>>
 Kristen: If I have no relationship with them, do I sit on the floor?
 Nara: Not unless you wish to be seen as an animal.
+<<kristen Neutral>>
 Kristen: If I want to have a relationship with your parents, can I sit reeeeally close to them?
 Nara: … how close?
 :You scootch yourself forward on the couch so that your nose is almost touching Nara’s nose. She blushes a little. It’s very cute.
+<<kristen Grin>>
+<<voiceline KristenRomanticNara1>>
 Kristen: This close.
 Nara: Absolutely not. Well, not unless you want to imply… an incredibly <i>untoward</i> desire for relations with them.
 <<char_right NaraBlush>>
+<<voiceline NaraRomantic1>>
 Nara: Which… I hope you do not. For my sake.
 <<kristen Soft>>
 Kristen: Don’t worry, you’re the only Fathlellasomethingorother I want to have relations with.
+<<kristen Nervous>>
 Kristen: I mean. Um. What was the question?’-
 <<char_right NaraNeutral>>
 <<kristen Neutral>>
 Nara: Where would you sit at a dining table with my parents and myself?
--> Right next to them! Gotta show how close I wanna be with them!
-    <<char_right NaraAngry>>
-    :Nara pinches the bridge of her nose. This can’t be good.
-    Nara: Kristen, you <i>just</i> asked me about this.
-    <<kristen Awkward>>
-    Kristen: No, I asked you about sitting <i>really</i> close to them! Totally different thing!
-    Nara: Not to my parents. Just… avoid sitting next to them on the day. Or near them.
-    Kristen: Or at the same table?
-    Nara: … unfortunately, you will have to sit in the same general area as them, so.
-    <<add_points 0>>
--> Next to you <3
-    <<char_right NaraBlush>>
-    :Nara’s cheeks are bright red.
-    Nara: Kristen…
-    Nara: That was a perfect answer! You truly are a model student!
-    <<kristen grin>>
-    Kristen: What can I say, I’m just that good.
-    :Oh, you have the perfect catch-phrase to use here.
-    Kristen: Bazi–
-    <<char_right NaraNeutral>>
-    Nara: If you finish that word the way I think you are going to finish that word, this date is over.
-    Kristen: …
-    Kristen: …
-    <<kristen Neutral>>
-    Kristen: Aw, man.
-    <<add_points 2>>
--> I’m gonna crawl under the table and cry.
+
+
+-> “I’m gonna crawl under the table and cry.”
     <<char_right NaraDisgust>>
+    <<voiceline NaraAngry2>>
     Nara: Kristen please do not do that.
     <<kristen Sad>>
     Kristen: But your parents are gonna see me and they’re gonna think ‘who the fuck is this’ and ‘why the fuck is she here’ and ‘why are there four protein bars actively falling out of her pockets’ and then they’re gonna hate meeeeeeee.
     <<char_right NaraNeutral>>
     Nara: Kristen. I know you can do this. You must simply pull yourself together.
+    <<voiceline KristenSad1>>
     Kristen: I caaaaan’t.
     Nara: Who is my little Kristren?
     Kristen: I am…
     Nara: Yes you are. You are my little Kristen who will sit at the table rather than under it.
     Kristen: Okay…
     <<add_points 1>>
+-> “Right next to them! Gotta show how close I wanna be with them!”
+    <<char_right NaraAngry>>
+    <<voiceline NaraAngry2>>
+    :Nara pinches the bridge of her nose. This can’t be good.
+    Nara: Kristen, you <i>just</i> asked me about this.
+    <<kristen Awkward>>
+    <<voiceline KristenDateFailNara1>>
+    Kristen: No, I asked you about sitting <i>really</i> close to them! Totally different thing!
+    Nara: Not to my parents. Just… avoid sitting next to them on the day. Or near them.
+    Kristen: Or at the same table?
+    Nara: … unfortunately, you will have to sit in the same general area as them, so.
+    <<add_points 0>>
+-> “Next to you <3”
+    <<char_right NaraBlush>>
+    <<voiceline NaraRomantic2>>
+    :Nara’s cheeks are bright red.
+    Nara: Kristen…
+    Nara: That was a perfect answer! You truly are a model student!
+    <<kristen Grin>>
+    <<voiceline KristenHappy4>>
+    Kristen: What can I say, I’m just that good.
+    :Oh, you have the perfect catch-phrase to use here.
+    Kristen: Bazi–
+    <<char_right NaraNeutral>>
+    <<voiceline NaraNeutral2>>
+    Nara: If you finish that word the way I think you are going to finish that word, this date is over.
+    Kristen: …
+    Kristen: …
+    <<kristen Neutral>>
+    Kristen: Aw, man.
+    <<add_points 2>>
+
+
 <<char_right NaraNeutral>>
-<<kristen Neutral>>
 Nara: Darling, I fear you are not blossoming in this lesson as much as I had hoped.
+<<kristen Neutral>>
 Kristen: How much do you think I’m blossoming?
 Nara: None. If anything, you are wilting.
+<<kristen Nervous>>
 Kristen: Does wilting maybe mean something different in Elven than it does in Common…?
 Nara: No.
 Nara: I recommend we try the art of roleplay.
 <<kristen Happy>>
+<<voiceline KristenHappy2>>
 Kristen: Great! Who are we playing?
 Nara: I will play the role of my parents, and you will play the role of someone who knows how to behave appropriately in public.
 <<kristen Sad>>
+<<voiceline KristenDateFail1>>
 :Fuck, it seems like you aren’t nailing this as well as you thought… this is your chance… your moment to prove yourself worthy of Nara and this relationship…
 <<kristen Neutral>>
 Kristen: Okay, yeah, sure, let’s start.
 <<char_right NaraDisgust>>
+<<voiceline NaraAngry3>>
 :Nara’s expression immediately changes, becoming far colder and more distant. She looks down at you. 
 Nara(‘s mom): Welcome to our castle, Ms. Applebees. I would introduce myself, but I assume my reputation precedes me. That, and the servants outside the door that announce our entrance.
 <<kristen Nervous>>
+<<voiceline KristenAwkward2>>
 Kristen: Please, Ms. Applebees is my mother. Call me Kristren. I mean Kristen. I mean - yeah, just call me Kristen.
 :Nara doesn’t seem as amused as you’d like her to be. Or talkative. She’s really locked in on this whole roleplay thing, huh?
 Nara(‘s mom): This is the part where you kneel.
 :Ah. Right. Kneeling. Something you definitely knew about. Is this a royal thing? Does she want you to propose? Maybe you have to propose to Nara’s mom so you can get her blessing to propose to Nara. Eventually.
+<<voiceline KristenFarewellNara1>>
 :You drop to one knee.
 Kristen: Sorry, I didn’t know I was supposed to bring a ring.
 :Nara extends her hand.
@@ -248,23 +308,38 @@ Kristen: Has she at least told you… good things? About me?
 Nara(‘s mom): … Yes.
 :That is the least promising silence you’ve ever heard. Nara(‘s mom) is for sure lying. This is great news for you, someone who is famously good at first impressions.
 Nara(‘s mom): So tell me. What makes you a suitable match for my daughter?
+<<kristen Awkward>>
 :Wow, that was fast. Good thing you have an answer! Oh, you don’t? Well! Better come up with one quickly!
--> My impressively huge gains. And by gains I mean money. And by money I mean muscles. And by muscles I mean gains.
+
+
+-> “My impressively huge gains. And by gains I mean money.”
+    <<kristen Grin>>
+    Kristen: And by money I mean muscles. And by muscles I mean gains.
     :Nara(‘s mom)’s brow furrows.
     Nara(‘s mom): And how does that help exactly?
     Kristen: Well, I’d be able to, um… provide for her?
     Nara(‘s mom): You… want to provide.
+    <<kristen Neutral>>
     Kristen: Yes.
     Nara(‘s mom): For a princess.
     Kristen: Yes.
     Nara(‘s mom): Who has everything she could ever need.
+    <<kristen Nervous>>
     Kristen: … Yes.
     Nara(‘s mom): With your <i>muscles?</i>
     Kristen: … Yyyyes?
     Nara(‘s mom): My daughter has no need for additional bodyguards.
+    <<kristen Sad>>
+    <<voiceline KristenFateFail3>>
     :Nara(‘s mom)’s face remains stony. Aw, man. Looks like your muscles can’t get you outta this one.
     <<add_points 1>>
--> … Has anyone ever told you how beautiful you are?
+-> “I like her and she likes me, I guess. That’s all you really need in a relationship.”
+    :Nara(‘s mom) nods in a way that you assume says ‘I don’t respect this answer because it is clearly wrong, but it is the answer I expect a Solesian to give, so I will begrudgingly accept it.’
+    <<kristen Happy>>
+    <<voiceline KristenHappy3>>
+    :Score!
+    <<add_points 2>>
+-> “… Has anyone ever told you how beautiful you are?”
     Nara(‘s mom): You wish to court me instead of my daughter?
     Kristen: No! No. I just thought that - 
     Nara(‘s mom): Kristen Chilis Applebees. Allow me to be very clear with you.
@@ -273,20 +348,23 @@ Nara(‘s mom): So tell me. What makes you a suitable match for my daughter?
     Nara(‘s mom): Sorcerous powers.
     :Nara gives you a little wink, and you remember that it’s still her in there. But she returns to regal form unnervingly quickly, and now you’re all intimidated again. And maybe a little hot under the collar.
     <<char_right NaraDisgust>>
+    <<voiceline NaraAngry2>>
     Nara(‘s mom): Many have tried to seduce me in the past, for many reasons. All have failed. Do not think of yourself as the exception to the rule.
     Kristen: Um. Yes, ma’am.
     <<add_points 0>>
--> I like her and she likes me, I guess. That’s all you really need in a relationship.
-    :Nara(‘s mom) nods in a way that you assume says ‘I don’t respect this answer because it is clearly wrong, but it is the answer I expect a Solesian to give, so I will begrudgingly accept it.’
-    :Score!
-    <<add_points 2>>
-<<kristen Neutral>>
+
+
 Nara(‘s mom): Very well. Our pre-dining pleasantries have concluded.
+<<kristen Neutral>>
 :You’re not sure you would call that experience pleasant. You kinda spent the whole time being stared down by Nara(‘s mom) in a way that makes you feel like you’re under a microscope. It’s… uncomfortable, to say the least.
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
 :If it’s this scary with Nara impersonating her parents, you can’t help but quake in your little cowboy boots as you wonder how it compares to the real thing.
 Nara(‘s mom): Please, to the table. Sit.
+<<kristen Neutral>>
 :While you were talking, it looks like Nara’s unseen servant(s?) had set your coffee table for four. Two faint, illusory elves are seated across from each other– they look like Nara and her father.
 :You remember what you were taught, and dutifully take your place next to holo-Nara. Real-Nara-who-is-currently-her-mom nods with a hint of pride, and sits across from you.
+<<kristen Grin>>
 :Ohhhh, you’re <i>so</i> good at etiquette. Who’s the best at etiquette? You’re pretty sure it’s you.
 Nara(‘s mom): Do you enjoy salad, Ms. Applebees? I am told this particular dish is quite popular in Solace, especially among its more… muscular citizens, such as yourself.
 <<kristen Nervous>>
@@ -299,6 +377,7 @@ Nara(‘s mom): Do you enjoy salad, Ms. Applebees? I am told this particular dis
 :You can do this. You know your forks. Well, at least two of them. And you remember this one! You pick up the salad fork with confidence. When you look back up, Nara(‘s mom) is wearing a small, proud smile. Hell yeah.
 :For a minute, you just kinda… mime eating the illusory salad. You feel a little silly, but it’s also making Nara happy, so you try not to ham it up too hard.
 Kristen: Mmmm, good salad– great salad. My compliments to the chef.
+<<voiceline NaraNeutral2>>
 Nara(‘s mom): You are quite welcome.
 :And then she just. Sits there, hands folded. You get the impression you’re maybe supposed to put your fork back somewhere.
 :Your hand hovers over the plate. Nara(‘s mom)’s eyebrow raises. You move it to a random empty spot on the table. The eyebrow continues its ascent.
@@ -306,10 +385,13 @@ Nara(‘s mom): You are quite welcome.
 :Nope, the eyebrow has somehow disappeared into her hair.
 :You end up swapping your own fork out for another fork, which you just sort of… hold in your hand? You know it’s maybe probably almost definitely not the right answer, but you’re all out of guesses.
 <<char_right NaraSad>>
+<<voiceline NaraSad3>>
 :You look back up and all coldness has vanished from Nara’s expression. Which would be a small victory, except for the fact that she looks like she might cry. 
+<<kristen Surprised>>
 :Her bottom lip is wobbling dangerously, and even though she still looks very, <i>very</i> cute, you feel soooo bad. 
 :You switch the forks back apologetically.
 <<kristen Awkward>>
+<<voiceline KristenDateFailNara1>>
 Kristen: Sorrysorrysorry–
 Nara: Are you even trying?
 Kristen: Huh?
@@ -321,11 +403,17 @@ Kristen: Of course I did, Nara–
 :Wait! This is not the time, Applebees! Get it together! Your girlfriend(????) is in CRISIS.
 :Nara sighs, and composes herself. This emotional rollercoaster is starting to give you whiplash.
 Nara: I fear I have made a mistake.
+<<kristen Nervous>>
 Kristen: Oh. Um, so, was I right about the fork, or…
 Nara: No. No, you were not. That was not my mistake. I think that perhaps… <i>this</i> was a mistake.
 :She’s gesturing around the air, as if– oh. It’s you. You’re the mistake.
 :Where do you even go from here?
--> Today wasn’t a mistake. We’re not a mistake. I really want to learn. It’s important to you, so it’s important to me.
+
+
+-> “Today wasn’t a mistake. We’re not a mistake.”
+    <<kristen Sad>>
+    <<voiceline KristenSad3>>
+    Kristen: I really want to learn. It’s important to you, so it’s important to me.
     :Nara blinks back the last of the tears, still looking tense, but… a little less like she wants to immediately break up with you. …Score?
     Nara: Very well. You have at least proven that you are not unteachable. And, you care. Which is nice.
     :She sighs heavily, but it’s not at you. It’s just kinda… at the air.
@@ -336,36 +424,48 @@ Nara: No. No, you were not. That was not my mistake. I think that perhaps… <i>
     :That gets you a small smile. There’s your Nara!
     Nara: I know.
     <<add_points 2>>
--> All these forks look identical, no one would even notice where I put a random salad fork. Like, who cares??
+-> “All these forks look identical.”
     <<kristen Angry>>
+    <<voiceline KristenDateFailNara2>>
+    Kristen: No one would even notice where I put a random salad fork. Like, who cares??
     :You know as soon as the words leave your mouth that you fucked up, but you can’t help it. You’re just so <i>frustrated</i>. Can’t she see how hard you’ve been trying here??? It’s not your fault there are a million forks everywhere and they’re all bullshit.
     Nara: I care.
+    <<kristen Awkward>>
     Kristen: Sorry, I didn’t mean–
     Nara: My parents care. My country cares. <i>I</i> care. I thought you cared as well.
+    <<voiceline NaraDateFail1>>
     Nara: It seems I was wrong about you, Kristen.
     :Her tone makes it very clear that she isn’t just talking about today.
-    <<kristen Awkward>>
+    <<kristen Sad>>
+    <<voiceline KristenSad1>>
     :Shit.
     Kristen: Shit. Look, I didn’t mean that. I’m really, really sorry, Nara, I’ll try to do better, I promise. Can I convince you to give me just, like, one last shot, maybe?
     :You give her your best puppy-dog eyes and hope they work on her as easily as hers work on you. After what feels like an hour, she softens just a little bit.
     Nara: One. One chance. Do not squander it.
     Kristen: Yes, ma’am.
     <<add_points 0>>
--> I’m sorry I fucked up. I’m just not used to all these rules. That’s not how I do things, really.
+-> “I’m sorry I fucked up. I’m just not used to all these rules.”
+    Kristen: That’s not how I do things, really.
    :Nara looks like she’s trying to wrestle, like, five different emotions. You hope anger isn’t one of them, but you really can’t be sure. She <i>did</i> just yell at you about forks.
     <<char_right NaraNeutral>>
+    <<voiceline NaraBespoke3>>
     Nara: That is… a fair point. Your country is rather lawless.
+    <<kristen Nervous>>
     Kristen: Oh, yeah. It’s a fun way to live, but. It doesn’t help much with fork stuff. Doesn’t make me, like, an impressive date or whatever. So, I’m still sorry.
     Nara: Thank you. For apologizing, and for trying. I know what I ask of you does not come naturally. Of all people, I should be understanding of this. Like you were, when I arrived here.
     <<kristen Surprised>>
+    <<voiceline KristenSurprised3>>
     Kristen: Woah, wait, <i>you</i> want to be more like <i>me??</i>
     Nara: Believe me, I am as surprised as you are.
     <<add_points 4>>
+
+
 <<char_right NaraNeutral>>
-<<kristen Neutral>>
+<<voiceline NaraNeutral2>>
 :Then, Nara scrunches her face for a long time, in a way that you have come to recognize as her thinking Very Hard about something important. You wait in silence, and surprisingly, it’s not an uncomfortable one.
 Nara: It seems I did make a mistake. But, not the one I thought I had. This is not easy for me to say, Kristen, and it cannot leave this room. Do you understand?
 <<kristen Awkward>>
+<<voiceline KristenAwkward2>>
 :You nod and try not to panic. Is she pregnant?? You haven’t even kissed her, but you also fell asleep in Humanoid Biology, so maybe this is how elves work???? Oh, Cassandra, did you get your maybe-hopefully-girlfriend ELF PREGNANT????????
 :Suddenly, her face twists in a way that looks like she’s trying to swallow a brick. Is she okay? Is this a symptom of elf-pregnancy? <i>Did</i> she eat a brick when you weren’t looking?
 Nara: I… apologize. For my outburst.
@@ -375,6 +475,7 @@ Kristen: No big deal, babe. I get it. Seriously, if I was in your shoes I would 
 <<char_right NaraBlush>>
 :She blushes for a second when you say ‘girlfriend,’ but then her face scrunches up in adorable confusion.
 <<char_right NaraDisgust>>
+<<voiceline NaraAngry3>>
 Nara: Kristen, darling, you would <i>not<i/> fit in my shoes.
 :Don’t laugh, don’t laugh, you know she gets self conscious about not understanding idioms, DON’T LAUGH.
 :You laugh a little. Dammit.
@@ -386,6 +487,7 @@ Nara: Thank you. Thank you for everything, I mean to say. For doing all of this,
 <<kristen Soft>>
 :But man are you gay and man is she cute.
 <<char_right NaraSad>>
+<<voiceline NaraSad2>>
 Nara: Do you resent me?
 <<kristen Surprised>>
 :Well, that pops your hazy little bubble of lesbianism pretty quickly.
@@ -396,14 +498,17 @@ Nara: All afternoon, I have been making attempts to mold you into a version of y
 Nara: Their ideal version of you would have table manners and speak in Elvish and have a posture that does not look like a shrimp doing a somersault.
 :You suddenly become very very intensely aware of just how wiggly your spine is. You straighten up a bit and Nara gives you a little smile.
 <<kristen Nervous>>
+<<voiceline KristenNeutral1>>
 Kristen: So, uh, am I getting any better at it? The etiquette stuff? Or do you think we’re kinda… doomed.
 Nara: You are… doing your best.
 :Okay. Ouch. You thought you were getting the hang of things at least a little.
 Nara: But darling, that is what <i>I</i> enjoy about you. Your pedigree may leave much to be desired, but you care and you try. You may be the most sincere person I have ever met, Kristen Applebees.
+<<kristen Neutral>>
 Nara: You did not change a single thing about yourself before I fell for you just as you are. My parents have high expectations for my suitors, but to me, you are easy to love. I only wish…
 She trails off, but you think you understand.
+
+
 -> <i>Say nothing. Just hug her.</i>
-    <<kristen Neutral>>
     :You open your arms, and Nara practically collapses into you. It feels familiar, in a way, even if the two of you have never hugged like this before. You hear her sniffle a little bit into your shoulder.
     <<kristen Soft>>
     :Is it weird to notice that she smells really, really good? Like vanilla and lavender. Princesses, man.
@@ -412,19 +517,9 @@ She trails off, but you think you understand.
     <<char_right NaraNeutral>>
     :After a moment, Nara straightens up and composes herself, nodding at you gratefully. Her eyes are a little red and your shirt is a little wet. You don’t mention it.
     <<add_points 2>>
--> Kristen: “I get it. Parent stuff, I mean.”
-    <<char_right NaraShock>>
-    :Nara’s eyes grow impossibly wide.
-    Nara: You do? Truly? But Jawbone seems so… indulgent.
-    <<kristen Neutral>>
-    Kristen: Oh, he is! He’s great. But, uh, Jawbone’s not, like, my dad? I mean. I live with him and I love him and stuff, but like, the family I grew up with was…
-    Kristen: Well, long story short, they had a lot of expectations for me that I just couldn’t meet. And didn’t wanna meet, after a while. So, like, I get it.
-    Kristen: Parent stuff is complicated.
-    :Nara is looking you over like she’s seeing a whole new person. And you guess, in a sense, she is.
-    Nara: Indeed it is.
-    <<add_points 2>>
--> Kristen: “That you weren’t a princess?”
+-> “That you weren’t a princess?”
     <<char_right NaraAngry>>
+    <<voiceline NaraAngry1>>
     Nara: <i>No!!</i> Kristen, after all this time, do you really think –
     <<kristen Awkward>>
     :She looks appalled. Wuh oh.
@@ -432,37 +527,56 @@ She trails off, but you think you understand.
     Kristen: No, wait, sorry, I just meant with like. Expectations and stuff?
     Nara: My path is not an easy one. I shoulder a great deal of responsibility, and I know many think I must wish I was a normal teenager.
     Nara: But I do not. This is the life I have inherited, and it is the life I have chosen.
+    <<kristen Nervous>>
     Kristen: Then, uh. What were you gonna wish?
     :She looks at you with patented irritation.
     Nara: I only meant to say that I wish you slotted a bit more easily into the life I am destined to lead.
-    <<kristen Nervous>>
     :Oh. You feel kinda stupid now.
     <<add_points 0>>
+-> “I get it. Parent stuff, I mean.”
+    <<char_right NaraShock>>
+    <<voiceline NaraConfused2>>
+    :Nara’s eyes grow impossibly wide.
+    Nara: You do? Truly? But Jawbone seems so… indulgent.
+    Kristen: Oh, he is! He’s great. But, uh, Jawbone’s not, like, my dad? I mean. I live with him and I love him and stuff, but like, the family I grew up with was…
+    <<kristen Sad>>
+    <<voiceline KristenSad2>>
+    Kristen: Well, long story short, they had a lot of expectations for me that I just couldn’t meet. And didn’t wanna meet, after a while. So, like, I get it.
+    <<kristen Neutral>>
+    Kristen: Parent stuff is complicated.
+    :Nara is looking you over like she’s seeing a whole new person. And you guess, in a sense, she is.
+    Nara: Indeed it is.
+    <<add_points 2>>
+
+
 <<char_right NaraBlush>>
 <<kristen Neutral>>
+<<voiceline NaraRomantic3>>
 Nara: Despite what my parents may think of you, and perhaps despite my better judgement, I really do like you, Kristen.
 :Uh… yay? And also, ouch? But mostly, yay.
 <<kristen Soft>>
 Kristen: I like you too. Like, a lot. Like, a lot a lot.
+<<kristen Nervous>>
 Kristen: And actually, um, I’ve kinda been thinking…
 Nara: Yes?
-<<jump Date6Hint>>
-===
-
-
-title: Date6Hint
----
 Kristen: That weird holo-salad from earlier made me kinda hungry. Not for salad, but like, um. What I’m trying to say is. Uh.
+<<kristen Awkward>>
 Kristen: DoyouwannacometomyhouseagainandIcanmakeusdinner.
 :Nara blinks, pauses, processes your insane jumble of words that you had to get out of your head right then immediately before you chickened out, and smiles.
 <<char_right NaraHappy>>
+<<voiceline NaraHappy1>>
 Nara: I would <i>love</i> to come to your house again and also you can make us dinner.
+<<kristen Soft>>
+<<voiceline KristenRomantic2>>
 Kristen: And maybe also watch a movie?
 Nara: And maybe also watch a movie.
 Kristen: Aaaaand maybe even teach me some Elvish cusses?
 <<char_right NaraNeutral>>
 Nara: Do not push your luck, darling.
 <<kristen Happy>>
+<<voiceline KristenHappy1>>
 Kristen: Dinner and a movie it is!
-<<jump Cassandra>>
+<<voiceline NaraBespoke1>>
+Nara: Stupendous!
+<<jump Cassandra6>>
 ===

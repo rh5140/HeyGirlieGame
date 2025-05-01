@@ -17,7 +17,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler
 
     public void PlayAudio(AudioClip audioClip)
     {
-        if(gameObject.GetComponent<Toggle>() != null || gameObject.GetComponent<Button>().interactable){
+        if(_sfxSource != null && (gameObject.GetComponent<Toggle>() != null || gameObject.GetComponent<Button>().interactable)){
             _sfxSource.Stop();
             _sfxSource.clip = audioClip;
             _sfxSource.Play();
