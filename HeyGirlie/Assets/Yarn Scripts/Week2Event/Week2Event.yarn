@@ -1,6 +1,6 @@
 title: EventDefault
 ---
-<<wait 0.5>>
+//<<wait 0.5>>
 <<kristen Neutral>>
 <<declare $no_special_event = false>>
 <<get_special_event_fail 3>>
@@ -28,8 +28,10 @@ Where do you want to go?
     <<jump EventFail>>
 <<else>>
     <<special_event_selection 3>>
+    <<fade_out_ui>>
+    <<kristen transparent>>
 <<endif>>
-<<kristen transparent>>
+//<<kristen transparent>>
 ===
 
 title: EventFail

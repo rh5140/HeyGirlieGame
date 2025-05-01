@@ -176,12 +176,35 @@ title: CassandraWeek5
         Cassandra: I think you'll be pleasantly surprised heading downtown this week!
     -> Kristen: I think it's not for me.
 <<elseif $tn3c>>
-    Cassandra: It looks like you're doing well with Tracker and Nara! What do you think about... dating them both together at the same time...
-    -> Kristen: Heck yeah!
+    <<kristen Neutral>>
+    <<char_right CassandraHappy>>
+    Cassandra: Hi, Kristen! I missed you!
+    Kristen: Aw. That’s —
+    Cassandra: No time for small talk! I have a <i>very</i> important question to ask you.
+    <<kristen Nervous>>
+    Kristen: Wait, don’t tell me I have to ask someone to Spring Fling right now! I’m still deciding! I mean, every date has been so…
+    <<kristen Soft>>
+    Kristen: Nice. Really nice. I’ve got four more weeks, right?
+    Cassandra: You do! And maybe you don’t have to choose!
+    <<kristen Surprised>>
+    Cassandra: I just noticed... you’ve been getting along really well with Nara <i>and</i> Tracker.
+    <<kristen Nervous>>
+    Cassandra: How would you feel about seeing them both... together?
+    <<kristen Surprised>>
+    Kristen: And <i>they’d</i> be okay with that? I remember Nara looking pretty upset when Tracker and I just hugged last year.
+    Cassandra: I think she’s willing to give it a shot now that she knows you actually respect her!
+    <<kristen Neutral>>
+    Cassandra: And Tracker wants to trust you, as long as you keep acting like someone she actually <i>can</i> trust.
+    Cassandra: So? What do you say?
+    -> Two girlfriends?! Sign me up!
+        <<char_right CassandraHappy>>
+        Cassandra: Yay! I think you should check out the mall soon. 
+        <<char_right CassandraBlush>>
+        Cassandra: For... reasons!
         <<set_polyam 3C>>
-        Cassandra: Excited for this new adventure for the three of you!
-        Cassandra: I think you'll be pleasantly surprised heading downtown this week!
-    -> Kristen: I think it's not for me.
+    -> My ex and my ex’s ex? Uh, no.
+        Cassandra: You got it!
+        Cassandra: Just remember you’ll have to choose between them eventually.
 <<else>>
     Cassandra: Hmm... never mind.
 <<endif>>

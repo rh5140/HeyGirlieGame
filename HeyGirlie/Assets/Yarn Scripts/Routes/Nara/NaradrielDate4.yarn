@@ -1,6 +1,6 @@
 ﻿title: Date4
 ---
-April 21
+April 28
 <<location "Basrar’s">>
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
@@ -9,68 +9,91 @@ April 21
 :You sent Nara the location before the date, you chose a place that’s at least somewhat fancy, and you finally remembered to check your pockets for protein bar wrappers before you go on a date with a fancy foreign princess.
 :And yet, for some reason, you’re still worried.
 <<char_right NaraHappy2>>
+<<voiceline NaraGreeting1>>
 Nara: Kristen! Salutations!
 :Thankfully your train of thought is interrupted by her arrival.
-<<char_right KristenNeutral>>
+<<kristen Neutral>>
+<<voiceline KristenGreetingNara2>>
 Kristen: Hey! Glad you managed to find this place.
 <<char_right NaraNeutral2>>
 Nara: Me too! I have not heard of this establishment before.
 Kristen: Yeah, it’s probably pretty different from what you’re used to back in Fallinel.
 Nara: Kristen, <i>everything</i> in Solace is different from what I am used to in Fallinel. I think I will be fine.
 <<sfx nara_ring>>
+<<kristen Awkward>>
 //al note: play Nara’s ringtone. Nav knows what it is
 :Suddenly, your conversation is interrupted by… is that a Gregorian chant?
 <<char_right NaraShock2>>
+<<voiceline NaraSurprised1>>
 Nara: Oh! You will have to excuse me for a moment, Kristen. It appears I am receiving a call.
 <<kristen Surprised>>
+<<voiceline KristenSurprised3>>
 :No way. How did she learn about calls? You didn’t teach her that.
 Kristen: Of course! Take your time.
 <<kristen Neutral>>
-:She steps to the side, and speaks in hushed tones into the crystal. Meanwhile, you decide to make your way into the diner so you can reserve a table. 
-<<location "diner">>
+:She steps to the side, and speaks in hushed tones into the crystal. Meanwhile, you decide to make your way into the diner so you can reserve a table.
 :After a few minutes, Nara comes back and sits down with you, staring at the table in confusion.
 <<char_right NaraThink2>>
+<<voiceline NaraNeutral2>>
 Nara: Kristen, I am not sure this table has been prepared adequately for our arrival.
 :You look down. You see all the things a table usually has.
+<<kristen Nervous>>
+<<voiceline KristenNeutral3>>
 Kristen: Uhhh… what’s missing?
 Nara: Where are the rest of the utensils? Where is the silk napkin? Where are the butlers?
+<<kristen Neutral>>
 Kristen: Okay, so, diners don’t have any of those. I’m not sure there’s any restaurant in Elmville that fancy.
+<<voiceline NaraConfused2>>
 Nara: But how will I be served without the serving fork? How will I dip my food without the dipping fork? How will I dispose of those forks without the fork fork?
+<<kristen Nervous>>
 Kristen: I hate to break it to you, but you’re only gonna get one fork. You're lucky it’s clean.
 Nara: This is where a fork fork would come in handy…
+<<kristen Neutral>>
 Kristen: Look, just be glad you’re not using that.
 :You point to a used spork on another table.
 <<char_right NaraDisgust2>>
+<<voiceline NaraAngry3>>
 Nara: What is That.
+<<kristen Grin>>
 Kristen: That, Nara, is a spork.
 Nara: Galicaea has forsaken me…
 Kristen: No, it’s great! It’s a spoon and a fork all in one.
 Nara: How very… economical.
+<<kristen Neutral>>
 :She says that like it’s a slur.
 Nara: Where is the spork fork? I must dispose of this immediately.
 Kristen: Buddy we just went over this. They don’t have forks like that.
 <<char_right NaraSad2>>
+<<voiceline NaraSad2>>
 :Nara pouts.
 :Soon, a waitress comes over and tries to hand both of you the menus, but you raise a hand to stop her. You know what you want.
 <<kristen Grin>>
+<<voiceline KristenHappy4>>
 Kristen: I’ll have the cottage cheese, please. A la mode.
 :The waitress nods with the resignation of someone who has seen you order this before, and knows she can’t talk you out of it. She turns to Nara, who is too stunned by what you just said to even register the fact that there’s a menu in front of her.
+<<kristen Neutral>>
 <<char_right NaraDisgust2>>
+<<voiceline NaraBespoke6>>
 Nara: I will have Anything Else. A la mode.
 :With another nod, the waitress leaves with the menus.
+<<voiceline NaraConfused1>>
 Nara: Kristen. I do not wish to disparage Solesian cuisine. But what the fuck was that.
 Kristen: Well you see, cottage cheese is a-
 Nara: I know what cottage cheese is, Kristen. That is not my issue here.
 Kristen: It’s less of a Solesian thing and more of a me thing. You see, I have lactose hypertolerance.
 <<char_right NaraThink2>>
+<<voiceline NaraNeutral2>>
 Nara: What does that mean?
 Kristen: It means I have a biological need for cottage cheese, Nara. My body is in a constant state of yearning, and the only thing that can satiate it is that sweet, sweet cheese.
 <<char_right NaraShock2>>
+<<voiceline NaraSurprised1>>
 :Nara stands up.
 Nara: Servant! Bring my paramour her cheese posthaste! She will die without it!
 <<kristen Awkward>>
+<<voiceline KristenAwkward2>>
 Kristen: You can’t talk to the waitress like that!
 Nara: But Kristen! You are in grave danger!
+<<kristen Neutral>>
 :Another waitress comes over, sighing and carrying two plates. You glance at the name tag, and are pleased to discover that your waitress is – oh, hey! It’s Daisy Cubby! Daisy seems less enthused by this fact. You make a mental note to apologize later.
 :In one hand, she has cottage cheese. A la mode. It looks like The Blob if The Blob was made exclusively of wallpaper paste. And also cottage cheese.
 :In the other hand, she has fries (ice cream on the side). She sets them down and hurries off before Nara can complain about her apparent lack of regard for your deadly, life-threatening condition.
@@ -89,26 +112,35 @@ Nara: No, silly! I am not asking for your hand in marriage. Galicaea knows how l
 <<kristen Neutral>>
 Kristen: How much stuff do you keep in your pockets?
 Nara: I use them to store all of my daily necessities. My scroll, my The Phone, my money -
+<<kristen Surprised>>
+<<voiceline KristenSurprised2>>
 Kristen: You keep all of your money in your pockets? What if someone tries to steal from you?
 Nara: Kristen, I am the princess of Fallinel. Who would dare steal from a member of royalty?
+<<kristen Neutral>>
 Kristen: Fair.
 :You make a mental note not to commit any crimes in front of Nara. You must preserve her innocence.
 Nara: Anyway! I have found thirty-six questions that are guaranteed to make you fall in love, and I am intrigued to see if it actually works. What do you think?
 <<kristen Nervous>>
+<<voiceline KristenAwkward2>>
 :You don’t know how to tell Nara you’re already like 60% of the way to totally and completely falling in love with her.
 Kristen: No yeah that sounds so cool let’s do it.
 <<char_right NaraHappy2>>
+<<voiceline NaraHappy1>>
 Nara: Wonderful! Let us begin.
+<<kristen Neutral>>
 <<char_right NaraNeutral2>>
 Nara: Question one: Given the choice of anyone in the world, whom would you want as a dinner guest?
 <<kristen Grin>>
 Kristen: Probably you.
 :That answer came out of you so fucking quickly. You cover up your weird, forward vulnerability with what you hope is a winning smile.
 <<char_right NaraBlush2>>
+<<voiceline NaraRomantic1>>
 Nara: Awww!
 :Score!
+<<kristen Neutral>>
 Kristen: What about you?
 <<char_right NaraThink2>>
+<<voiceline NaraNeutral2>>
 Nara: Hmmm…
 <<char_right NaraNeutral2>>
 Nara: Princess Buttercup.
@@ -116,14 +148,15 @@ Nara: Princess Buttercup.
 :Buttercup? That doesn’t sound like an Elven name. It’s not your name either. Does she hate you? Is this her way of telling you she hates you?
 Kristen: I thought you were an only child.
 <<char_right NaraHappy2>>
+<<voiceline NaraBespoke4>>
 Nara: Oh Kristren, you do make me laugh! No, Princess Buttercup is my childhood horse.
-<<kristen Neutral>>
 :Ohhh, that explains why she named her new horse Madame Buttercup…
 <<char_right NaraNeutral2>>
 Nara: She is resting in Fallinel at the moment. I do miss her, though.
 Kristen: Wow, yeah, she must have lived a long and happy life.
 Nara: No, she is still alive.
 <<kristen Surprised>>
+<<voiceline KristenSurprised1>>
 :Wait… how many horse years are in one human year?
 Kristen: How does that work? Isn’t she, like, really old?
 Nara: Well, yes, but thanks to advanced Elven magic, Princess Buttercup has survived well beyond any other horse I have ever known!
@@ -132,13 +165,16 @@ Nara: Well, yes, but thanks to advanced Elven magic, Princess Buttercup has surv
 Kristen: Nnnno yeah that’s great I’m so happy for you and your horse also as well.
 Nara: Thank you! She was actually who I was calling earlier. You know, with my The Phone?
 <<kristen Surprised>>
+<<voiceline KristenSurprised2>>
 Kristen: Wh… horses in Fallinel can talk?
 Nara: No, no. It is simply a side effect of the spells. They were crafted for humans, you see. Not for horse.
 Nara: Now, question two: for what in your life do you feel most grateful?
+<<kristen Neutral>>
 Kristen: My friends, probably. I’ve grown so much with them, and they’ve supported me more than anyone else.
 Nara: I see! For me, it would be the Little Man.
 :That is an incredibly sinister sentence.
 <<kristen Nervous>>
+<<voiceline KristenNeutral3>>
 Kristen: The who?
 Nara: The Little Man! You met him at the stables?
 :Ohhhh the guy who cleaned you up and then left.
@@ -148,6 +184,7 @@ Nara: Oh, the Little Man does more than that. He has been there for me my whole 
 Kristen: Like, hiding in a corner so he can watch you from afar, or…?
 Nara: Exactly! He used to sit in the corner during my classes and would clap whenever I answered correctly - which happened often, by the way.
 <<kristen Nervous>>
+<<voiceline KristenNeutral2>>
 Kristen: Wh- what did everyone else in your class think…?
 Nara: The only other people in the room were myself and my tutors, all of whom seemed very amenable to the situation.
 :Your first thought is: how? That is the creepiest shit you’ve ever heard.
@@ -158,56 +195,71 @@ Nara: As am I! He was also present for a great deal of other daily events - the 
 Kristen: He was in your <i>bedroom?</i>
 Nara: Of course! Who else would be up to the task of protecting me against all the monsters of my nightmares?
 :You cannot stop thinking about this guy standing in the corner of little Nara’s bedroom and staring at her intensely while she sleeps.
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
 Kristen: Wow y- he’s so… brave?
 Nara: He really is.
 Kristen: What’s his name again?
 Nara: I have no idea. I have no need for it, and neither does he.
 Nara: Next question: do you have a secret hunch about how you will die?
-:Probably at the hands of the Little Man.
+<<voiceline KristenAwkward1>>
+:<i>Probably at the hands of the Little Man.</i>
 <<kristen Neutral>>
 Kristen: Uhhhh I don’t think so.
 <<char_right NaraShock2>>
+<<voiceline NaraSurprised3>>
 Nara: You have no ideas as to how you might die? None at all?!
 Kristen: Not really. I’m pretty healthy.
 Nara: Kristen, you are an adventurer. You embark upon extremely dangerous adventures. The kind where the world is at stake. 
 <<char_right NaraAngry2>>
+<<voiceline NaraAngry3>>
 Nara: Your life is constantly at risk! Do you not think about this at all?!
--> Yeah, sometimes. Tracker’s gotten me out of a <i>lot</i> of scrapes.
+
+
+-> “Yeah, sometimes. Tracker’s gotten me out of a <i>lot</i> of scrapes.”
     <<char_right NaraNeutral2>>
     :Nara has a completely indecipherable look on her face, and that’s when you realize that ohhhhhh shit, you just brought up your mutual ex and maybe you weren’t supposed to do that??
     <<kristen Nervous>>
+    <<voiceline KristenAwkward2>>
     Kristen: Um. My other friends have too, also.
     :You emphasize the word “friends” maybe a little too hard. Leave it to Tracker to make you forget how to talk like a person.
     Nara: I understand. She… she was like that for me, too. Much of the time. Getting me “out of scrapes.”
     Kristen: Oh! You did adventuring stuff with her?
     Nara: No.
     Kristen: She saved your life?
+    <<voiceline NaraNeutral2>>
     Nara: No.
     Kristen: Should we… maybe stop talking about her now?
     Nara: Yes.
     <<add_points 1>>
--> Sure, it’s dangerous. But I have friends in my party who will always look out for me, and I’ll always look out for them.
+-> “Sure, it’s dangerous. But I have friends in my party who will always look out for me, and I’ll always look out for them.”
     <<char_right NaraThink2>>
+    <<voiceline NaraNeutral2>>
     :Nara hums in thought.
     Nara: I <i>suppose</i> you have a point…
     Kristen: I do! You’ve met them, you know they’re cool.
     <<char_right NaraNeutral2>>
     Nara: They are indeed…
     <<kristen Grin>>
+    <<voiceline KristenHappy4>>
     Kristen: So there’s no problem!
     Nara: Well, the problem of you being in constant danger has not changed. But I will trust you to rely on your friends for support.
     <<kristen Soft>>
     :She trusts you………
     <<add_points 2>>
--> <i>…</i>
+-> “<i>…</i>”
     <<kristen Sad>>
+    <<voiceline KristenSad3>>
     <<char_right NaraSad2>>   
     :You don’t think you’re quite ready to talk about this yet. Nara’s sad face disagrees, but it’s not like there’s anything she can do about it.
     <<add_points 0>>
+
+
 <<char_right NaraNeutral2>>
 <<kristen Neutral>>
 Nara: How close are you to your family?
 <<kristen Awkward>>
+<<voiceline KristenSurprised1>>
 Kristen: What?
 Nara: Sorry, it is one of the questions.
 <<kristen Neutral>>
@@ -218,76 +270,100 @@ Nara: I can go first, if you would like.
 Kristen: Sure, yeah, if you want.
 :She draws herself up in her chair a bit, and sighs.
 <<char_right NaraSad2>>
+<<voiceline NaraSad2>>
 Nara: My parents and I are not on the best of terms. 
 <<kristen Surprised>>
 Nara: Being a princess comes with many expectations. And no one has more expectations than my parents. I understand why. I am their only child and I will be queen one day. But all of this still weighs on me.
 Nara: So no, I am not close with my parents.
 Kristen: …
 Nara: What about you? You do not have to answer if you prefer not to.
+
+
 -> <i>You REALLY don’t wanna burden Nara with family stuff. She’s got enough on her plate already.</i>
     <<kristen Nervous>>
+    <<voiceline KristenAwkward3>>
     Kristen: Yeah, I’m good, thanks.
     :Nara’s expression changes for a moment, too quickly for you to make out what it was.
     Nara: Alright. I will not pry, then.
     <<add_points 1>>
--> Your parents were… not the best. Seems like you have that in common. You should talk about that.
-    <<kristen Neutral>>
-    Kristen: Y’know, it’s kinda hard to say. Like, they raised me, and I feel like we <i>used</i> to be close, but. We only really got along when I let them decide who I was? Once I chose for myself, they kinda… I dunno, they didn’t like me so much anymore.
-    Kristen: I think I still love them? Maybe? I still love my brothers, for sure. So there’s that. But trying to get anywhere with my parents these days really fucking sucks.
-    Nara: So, then, your relationship with your family was predicated on their control of your fate.
-    <<char_right NaraNeutral2>>
-    She smiles, but it kind of looks more like a grimace.
-    Nara: I understand that more than you know.
-    Nara: I hope this is not overstepping my bounds, but I am glad you were able to break free of them. And, if it is something you want, I hope… I hope they find their way back to you. On your terms.
-    <<add_points 2>>
--> FUCK that. She’s not the only one who’s gone through some shit.
-    <<kristen Angry>>  
+-> <i>FUCK that! She’s not the only one who’s gone through some shit.</i>
+    <<kristen Angry>>
+    <<voiceline KristenAngry2>>  
     Kristen: Fuck you.
     <<char_right NaraShock2>>
+    <<voiceline NaraSurprised1>>
     Nara: What?
     Kristen: You heard me. FUCK you. You’re not the only one who has shitty parents. Other people also have problems! And somehow you haven’t figured out that at the end of the day, you’re still royalty. You still have something even remotely positive your parents can still pass onto you. Some of us get nothing.
     <<char_right NaraSad2>>
     :Nara’s face contorts into an expression you’re too angry to decipher. Not that you care, anyway.
     <<add_points 0>>
+-> <i>Your parents were… not the best. Seems like you have that in common. You should talk about that.</i>
+    <<kristen Neutral>>
+    Kristen: Y’know, it’s kinda hard to say. Like, they raised me, and I feel like we <i>used</i> to be close, but. We only really got along when I let them decide who I was? Once I chose for myself, they kinda… I dunno, they didn’t like me so much anymore.
+    <<kristen Sad>>
+    <<voiceline KristenSad1>>
+    Kristen: I think I still love them? Maybe? I still love my brothers, for sure. So there’s that. But trying to get anywhere with my parents these days really fucking sucks.
+    Nara: So, then, your relationship with your family was predicated on their control of your fate.
+    <<char_right NaraNeutral2>>
+    <<voiceline NaraNeutral2>>
+    She smiles, but it kind of looks more like a grimace.
+    Nara: I understand that more than you know.
+    <<kristen Neutral>>
+    Nara: I hope this is not overstepping my bounds, but I am glad you were able to break free of them. And, if it is something you want, I hope… I hope they find their way back to you. On your terms.
+    <<add_points 2>>
+
+
 <<char_right NaraNeutral2>>
 <<kristen Neutral>>
 :After a while, the waitress returns with the check. Now this is a pickle. Do you pay? Does she pay? She’s a princess, but you’re opinionated. And in your humble opinion, the gentleman should pay (i.e. you. You should pay). 
 :What will you do?
--> Let her pay. She is literally so fucking rich.
+
+
+-> <i>Let her pay. She is literally so fucking rich.</i>
     Okay, you can do this tactfully. You’ve got this. Even though it goes against everything you stand for. If only you had money…
     <<kristen Nervous>>
+    <<voiceline KristenAwkward2>>
     You look at Nara. You look at the check. Now back at Nara. Now back at the check. And the check. And still the check. You’re too ashamed to look back at her.
     The sound of clinking coins makes you look up, and you see Nara grabbing a fistful of coins from one of her pockets and gently placing them on the table. Oh thank Cassandra.
     <<add_points 1>>
--> Pay for it all. You’re nothing if not a gentleman.
+-> <i>Pay for it all. You’re nothing if not a gentleman.</i>
     <<kristen Grin>>
     :You smirk at the check as the waitress places it on the table. Maybe Nara has paid for the bracelet and the horse ride, but this is your opportunity to provide for her. Yes. This is healthy.
     :Grabbing the check before Nara has the opportunity to look at it, you glance at the number at the bottom with all the smugness in the world…
     <<kristen Neutral>>
     : … and immediately exhale. Thank Cassandra it’s what you can afford…
     <<kristen Sad>>
+    <<voiceline KristenDateFail1>>
     : … Unless you misread the check. Which is what you did. Fuck!
     :Nara must notice that you’re about to shit yourself.
     Nara: Would you like me to…?
     Kristen: Yes please.
     <<add_points 0>>
--> Split it 50-50, maybe? Like normal people?
+-> <i>Split it 50-50, maybe? Like normal people?</i>
     :You see Nara reaching for her pocket, and you decide, for once in your life, to compromise.
     Kristen: Maybe we could split the check?
     <<char_right NaraShock2>>
+    <<voiceline NaraSurprised2>>
     Nara: But-
     Kristen: I know you can pay for all of it. But I want to pay for my own stuff sometimes.
     Nara: Of course, if that is what you think is best.
     <<kristen Grin>>
+    <<voiceline KristenDateSuccess2>>
     :You feel a little pleased with yourself as you both put your money on the table. Sure, your small pile of change looks kinda lame next to her stack of gold coins, but at least it’s <i>your</i> pile.
     <<add_points 2>>
+
+
+<<char_right NaraNeutral2>>
 :As the waitress collects the cash, Nara looks at you like she’s about to say something.
+<<voiceline NaraDateSuccess2>>
 Nara: I think we should talk about our next date.
 <<kristen Soft>>
+<<voiceline KristenDateSuccess3>>
 Kristen: Oh? Next date?
 Nara: Yes. Do you have any ideas?
 Kristen: Well, I have some stuff I need to do at home. Wanna join me?
 <<char_right NaraHappy2>>
+<<voiceline NaraHappy2>>
 Nara: An opportunity to experience daily Solesian life first hand? Yes, please!
-<<jump Cassandra>>
+<<jump Cassandra4>>
 ===

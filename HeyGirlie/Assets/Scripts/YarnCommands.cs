@@ -14,16 +14,12 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private DialogueRunner dialogueRunner;
 
     #region Crystal UI variables
-    // private bool toggleText = false;
-
-    // [SerializeField] private Canvas nonCrystalView;
-    // [SerializeField] private Canvas crystalView;
     public GameObject[] crystalUI;
     public Image lineViewBackground;
+    public Image optionViewBackground;
     public TextMeshProUGUI lineViewText;
     public TextMeshProUGUI characterName;
     private Color _textColor;
-
     #endregion Crystal UI
 
     [SerializeField] private Character _character;
@@ -229,30 +225,38 @@ public class YarnCommands : MonoBehaviour
         if (character.ToUpper() != "NONE")
         {
             lineViewBackground.enabled = false;
+            optionViewBackground.enabled = false;
             characterName.enabled = false;
             if (character == "KristenText" || character == "Kristen")
             {
                 crystalUI[0].SetActive(true);
+                crystalUI[1].SetActive(false);
                 lineViewText.color = Color.white;
+            }
+            else if (character[0] == '2') // hardcoding
+            {
+                crystalUI[0].SetActive(false);
+                crystalUI[1].SetActive(false);
+                crystalUI[2].SetActive(true);
+                lineViewText.color = Color.black;
             }
             else
             {
+                crystalUI[0].SetActive(false);
                 crystalUI[1].SetActive(true);
                 lineViewText.color = Color.black;
             }
-            // crystalView.gameObject.SetActive(true);
-            // nonCrystalView.gameObject.SetActive(false);
         }
         else
         {
             lineViewBackground.enabled = true;
+            optionViewBackground.enabled = true;
             characterName.enabled = true;
             lineViewText.color = _textColor;
-            crystalUI[0].SetActive(false);
-            crystalUI[1].SetActive(false);
-            //switch text recipient to whoever character is
-            // crystalView.gameObject.SetActive(false);
-            // nonCrystalView.gameObject.SetActive(true);
+            foreach (GameObject element in crystalUI)
+            {
+                element.SetActive(false);
+            }
         }
     }
     #endregion UI

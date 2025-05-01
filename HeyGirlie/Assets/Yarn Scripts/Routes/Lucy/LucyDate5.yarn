@@ -16,40 +16,58 @@ You know she’d mentioned being busier this week, but she <i>had</i> said she�
 You didn’t want to seem clingy or pushy by texting her first, so now you’re just lying here, waiting, your crystal by your head near the pillow. 
 <i>Ding!</i>
 You scramble upright and grab at your crystal, swearing when it slides off the bed. You just barely catch it and look at the screen.
+<<toggleText Lucy>> 
 LucyText: hi kristen! 
+<<toggleText none>>
 <<kristen Happy>>
 You let out a squeak of happiness, then clap a hand over your mouth. There’s no one here to witness that embarrassing show of emotion, but you look around anyway, your face burning, just to be sure.
 You try to think of a good way to respond. 
+<<toggleText Kristen>>
 -> KristenText: heyyyy
-  <<kristen Nervous>>
-  Fuck. That’s too many ‘y’s! You’re being <i>way</i> too flirty! But you’ve already sent it. 
-  Lucy texts back a blushing, wide-eyed emoji. Your jaw drops. She’s onto you! She’s <i>into</i> you!
-  Or, more likely, she’s pulling your leg again. You send back a winky face, leaning into it, and she laugh-reacts your message.
-  <<add_points 2>>
+ <<kristen Nervous>>
+ Fuck. That’s too many ‘y’s! You’re being <i>way</i> too flirty! But you’ve already sent it. 
+ Lucy texts back a blushing, wide-eyed emoji. Your jaw drops. She’s onto you! She’s <i>into</i> you!
+ Or, more likely, she’s pulling your leg again. 
+ <<kristen Grin>>
+ You send back a winky face, leaning into it, and she laugh-reacts your message.
+ <<add_points 2>>
 -> KristenText: heyy i was waiting for ur msg!!
-  LucyText: oh!! sorry i didn’t message earlier, i wasn’t sure of my plans yet.
-  Uh-oh, you’ve missed casual by a mile and landed fully in clingy territory. 
-  KristenText: no no ur good whats up
-  <<add_points 0>>
+ <<toggleText Lucy>>
+ LucyText: oh!! sorry i didn’t message earlier, i wasn’t sure of my plans yet.
+ <<toggleText none>>
+ Uh-oh, you’ve missed casual by a mile and landed fully in clingy territory. 
+ <<toggleText Kristen>>
+ KristenText: no no ur good whats up
+ <<add_points 0>>
 -> KristenText: hey lucy! how’s it hanging
-  LucyText: pretty great! how are you?
-  KristenText: gr8 thx! whats up
-  Casual, interested but unclingy. Applebees, you’re nailing it!
-  <<add_points 1>>
-LucyText: i’m volunteering to pick up trash at the park today and i’d love some company. do you want to come?
+ <<toggleText Lucy>>
+ LucyText: pretty great! how are you?
+ <<toggleText Kristen>>
+ KristenText: gr8 thx! whats up
+ Casual, interested, but unclingy. Applebees, you’re nailing it!
+ <<add_points 1>>
 <<kristen Neutral>>
+<<toggleText Lucy>>
+LucyText: i’m volunteering to pick up trash at the park today and i’d love some company. do you want to come?
+<<toggleText none>>
 <<voiceline KristenNeutral1>>
 Oh. You… hadn’t quite expected to be asked to join in on <i>that</i> sort of thing. You bite your lip.
+<<toggleText Lucy>>
 LucyText: it would be super great to hang out!
+<<toggleText none>>
 You take a second to think about it. 
-Community service hasn’t historically been the most… emotionally safe activity for you, and even though you’ve dabbled in it now and again, you still feel kind of strange about intentionally participating in it again. 
+Community service hasn’t historically been the most… emotionally safe activity for you, and even though you’ve dabbled in it now and again, you still feel kind of strange about intentionally participating in it.
 But it’s just picking up trash, and it’s with <i>Lucy</i>. You’re not going to miss out on a chance to hang out with her.
 It’s fine. You’ll be fine.
+<<toggleText Kristen>>
 KristenText: ya i’m down! 
+<<toggleText Lucy>>
 LucyText: great, see you soon!
+<<toggleText Kristen>>
 KristenText: cant wait to see u :) 
+<<toggleText none>>
 Lucy heart-reacts your message, and you smile. 
-<<location "PLACEHOLDER">>
+<<location "Park">>
 <<background NatureOutdoors>>
 //outdoors background
 It really is a beautiful day, and you enjoy the sunshine, blue sky, and singing birds as you walk to the park. 
@@ -114,7 +132,7 @@ You and Lucy work in tandem for a few minutes in silence. It’s surprisingly me
 Your mind flashes to Kipperlilly, whom you’ve seen picking up trash for community service with her perpetual pissed-off expression. You chuckle under your breath at the memory.
 Lucy: Copper for your thoughts?
 Kristen: I was just thinking about Kipperlilly.
-<<char_rigt LucySurprised3>>
+<<char_right LucySurprised3>>
 Lucy’s eyebrows rise in surprise. 
 Lucy: Oh?
 Kristen: She picks up trash for her community service requirement, right?
@@ -147,7 +165,8 @@ Lucy: I’m an expert. Trust me.
   Lucy shakes her head, amused. 
   Lucy: Let’s get back to work. 
   <<add_points 1>>
-You get back to it, falling into a rhythm. Lucy’s right; with the two of you working together, the grove quickly looks cleaner and cleaner. It’s encouraging. 
+You get back to it, falling into a rhythm. 
+Lucy’s right; with the two of you working together, the grove quickly looks cleaner and cleaner. It’s encouraging. 
 You try to pick up the thread of the conversation.
 Kristen: So what’s it like picking up trash with Kipperlilly? She doesn’t exactly seem like she’d be a ray of sunshine about it.
 Lucy laughs.
@@ -164,8 +183,9 @@ You make a noise without meaning to, something between a squawk and a wheeze. Lu
 Lucy: She’s really kind of great once you get to know her. And… I don’t know.
 <<char_right LucyBlush3>>
 Lucy drops her gaze, kicking some paper bags closer together so she can spear them with her picker. She seems strangely bashful.
-Lucy: Maybe I just have a habit of falling for my friends.
 <<voiceline LucyRomantic2>>
+Lucy: Maybe I just have a habit of falling for my friends.
+<<kristen Nervous>>
 It feels like the world falls silent around you. You stare at Lucy, tongue-tied, your heart leaping into your throat. Your face blazes with heat. 
 The tips of Lucy’s ears darken, and she swallows.
 She still isn’t meeting your eyes.
@@ -175,6 +195,7 @@ You clear your throat and open your mouth to speak, but nothing comes out. You c
 After another long silence, she finally looks at you. Whatever she sees in your face must reassure her somehow, because she cracks a smile.
 <<char_right LucyNeutral3>>
 Lucy: Come on. We’re almost done. Let’s finish up and take a break. I brought snacks.
+<<kristen Neutral>>
 You blink, the moment broken. You take a few deep breaths to calm down. 
 Kristen: Uh. Yeah. Okay.  
 When you finish, Lucy leads you to a bench you hadn’t seen before, which faces the fountain. 
@@ -198,9 +219,10 @@ Lucy clears her throat nervously, but a determined expression crosses her face.
 Lucy: Kristen, are you okay?
 <<kristen Surprised>>
 Kristen: What?
-Lucy: I’ve just been noticing that… I don’t know. You haven’t really seemed comfortable doing this. You seem kind of jumpy. Is something wrong?
+Lucy: I’ve just been noticing that… I don’t know. You haven’t really seemed comfortable doing this community service stuff today. You seem kind of jumpy. Is something wrong?
 -> Kristen: Whaaaat? No, I’m totally fine. Don’t worry about it. 
   <<char_right LucySad>>
+  <<voiceline LucySad1>>
   Lucy: Oh, okay. If you’re sure…
   <<add_points 0>>
 -> Kristen: I, uh… I don’t want to kill the vibe. 
@@ -254,5 +276,5 @@ Lucy: I’ll think about it and text you. See you then!
 When you get back, you flop onto your bed, letting out a deep sigh. You hadn’t expected things to get so introspective today, but you can’t deny that you feel a lot better about yourself.
 It seems that this journey to help Lucy learn more about herself is helping <i>you</i>, too.
 You can’t wait to uncover what you’ll learn next. 
-<<jump Cassandra>>
+<<jump Cassandra5>>
 ===

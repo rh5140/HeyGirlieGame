@@ -10,17 +10,20 @@ The high ceilings and walls are covered in twinkling lights, and you inhale the 
 You don’t really have the best memories of this mall. You grimace as you remember that fight against Biz freshman year, after which you’d been arrested. 
 Before that, your family had never really brought you here for fun family outings. 
 The few times you had visited the mall had been to buy tacky corn-themed jewelry and unflattering formal robes for whatever church event you had coming up that week.
+<<kristen Angry>>
 You glance upwards, recalling the dusty robes shop on the third floor of the mall. 
 You’ve always gotten the creepiest vibes from that place — the beady-eyed, ancient owner had always seemed to stare into your soul from behind the counter. 
 They’d probably been part of the Harvestmen. Asshole. 
 You wonder if the store is still in business. If it is, maybe you should pay it a discreet visit before you leave. 
 A little arson never hurt anyone, right? 
 Your crystal buzzes. You roll your eyes heavenward, not bothering to check it. 
-Kristen: Cassandra, you can be <i>such</i> a buzzkill.
+Kristen: Cass, you can be <i>such</i> a buzzkill.
+<<kristen Neutral>>
 Well, whatever. Point is, it’s about time you made some good memories here, and spending a day with Lucy sounds like a great way to start.
 :And bonus: going shopping with Fabian’s card is going to <i>rule</i>.
 You scan the entrance area as you make your way further in and manage to find Lucy, who sits on a bench, scrolling on her crystal. 
 Kristen: Lucy!
+<<char_right LucyNeutral1>>
 Lucy looks up. She searches the crowd and when her eyes land on you, she stands up and heads your way. 
 You make your way over to meet her halfway.
 -> Give her a fist bump.
@@ -41,12 +44,15 @@ You make your way over to meet her halfway.
 -> Give her a side hug.
   <<voiceline KristenGreetingLucy1>>
   You step closer and wrap your arm around her shoulders, giving her a quick, friendly squeeze.
+  <<char_right LucySurprised>>
+  <<voiceline LucySurprised3>>
   Lucy looks startled.
   Lucy: Oh!
   Just as you begin to think that you’ve screwed up, her arm sneaks around yours and hugs you back. She lets go with another squeeze. 
   <<voiceline LucyGreeting1>>
   Lucy: It’s so good to see you.
   <<add_points 2>>
+<<char_right LucyNeutral1>>
 Kristen: It’s a perfect day for shopping!
 
 Lucy: Thanks again for coming with me.
@@ -89,6 +95,7 @@ Kristen: I don’t know. Guess I’ll have to try it to find out.
 Lucy tilts her head, her gaze intent on yours.
 Lucy: You’re really brave, aren’t you?
 <<kristen Nervous>>
+<<voiceline KristenAwkward1>>
 Your jaw almost drops with how startled you are at the compliment. Your neck feels warm again, and your brain trips over itself. Error 404, composure not found.
 Kristen: I — uh — what?
 Real smooth, Kristen.
@@ -100,6 +107,7 @@ Lucy: Just… you’re so nonchalant about doing new things and having new exper
 Kristen: Well, three years of nonstop existential crises help you learn to adapt real quick. Wouldn’t recommend that, though. 
 Lucy: I guess that’s fair.
 <<kristen Grin>>
+<<voiceline KristenHappy2>>
 You nudge her shoulder with yours and flex a little to be silly.
 Kristen: Hey, like I said, I’m a pro at this stuff. Which means you’re in good hands. With me helping you, we’ll get that list done in no time.
 <<char_right LucyHappy>>
@@ -202,7 +210,7 @@ Lucy: A what?
 <<voiceline KristenHappy1>>
 Kristen: You get to smash and destroy shit with a bat! Let out your anger and rage and all those negative emotions in a healthy way. 
 Kristen: So I’ve heard, anyway. I’ve never been to one before.
-Lucy: That sounds… intense 
+Lucy: That sounds… intense. 
 Kristen: We gotta check it out!
 <<char_right LucySad>>
 Lucy: Um…
@@ -246,7 +254,7 @@ Lucy: Thank you for the ice cream, though! What did you get?
 -> Kristen: A new ice cream flavor that you haven’t tried yet.
   Kristen: It’s on the secret item menu. Unicorn Essence, apparently. They didn’t have this at Basrar’s, so I thought it might be fun to try something new. Maybe it’ll be your new favorite flavour. 
   Lucy: Let’s try it.
-    In unison, you take a bite. The ice cream melts in your mouth, sweet and creamy with a surprising tang of something that reminds you of finding treasure at the end of a rainbow. 
+  In unison, you take a bite. The ice cream melts in your mouth, sweet and creamy with a surprising tang of something that reminds you of finding treasure at the end of a rainbow. 
   Lucy: This is great! I’ll definitely get this again.
   You grin, satisfied.
   <<add_points 1>>
@@ -300,5 +308,5 @@ You’re not an idiot, Kristen Applebees. You know what’s happening.
 <<kristen Neutral>>
 But this isn’t about you, for once. This is about Lucy, and you’re going to follow her lead.
 And from the incredible time you had with her today, you’re pretty sure her lead is going to be a great one. 
-<<jump Cassandra>>
+<<jump Cassandra3>>
 ===
