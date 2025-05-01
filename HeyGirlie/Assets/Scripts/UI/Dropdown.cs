@@ -13,7 +13,7 @@ public class Dropdown : Menu
     [SerializeField] private GameObject paper;
     [SerializeField] private GameObject hoverArea;
 
-    [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject quitPopup;
@@ -128,7 +128,7 @@ public class Dropdown : Menu
     {
         CloseDropdown();
         DisableHover();
-        Instantiate(saveProfilesMenu);
+        Instantiate(saveGalleryMenu);
     }
 
     public void Settings()

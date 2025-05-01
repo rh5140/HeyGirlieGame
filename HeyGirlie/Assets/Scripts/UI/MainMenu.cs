@@ -22,14 +22,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject titleSticker;
     [SerializeField] private Image stickerShadow;
     
-    [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private GameObject maxProfilePopup;
     [SerializeField] private TMP_InputField playerName;
     [SerializeField] private AudioClip[] _startupVoicelines;
-    
-    [SerializeField] private UnityEvent animateCursor;
 
     void Start() {
         StartCoroutine(AnimateMenu());
@@ -103,7 +101,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-       Instantiate(saveProfilesMenu);
+        CursorManager.Instance.WaitCursor(() => {
+            Instantiate(saveGalleryMenu);
+            return true;
+        });
     }
 
     public void Settings()
@@ -113,7 +114,7 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        animateCursor.Invoke();
+        CursorManager.Instance.Load(true);
         // SceneManager.LoadScene("Credits");
     }
 

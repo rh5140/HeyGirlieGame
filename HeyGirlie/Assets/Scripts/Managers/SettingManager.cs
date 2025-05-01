@@ -47,20 +47,22 @@ public class SettingManager : MonoBehaviour
 
     public void ChangeCursor(float value){
         cursor = value;
-        switch((int)Math.Ceiling(value)){
-            case 0:
-                Cursor.SetCursor(appleCursor, Vector2.zero, cursorMode);
-                break;
-            case 1:
-                Cursor.SetCursor(applebeeCursor, Vector2.zero, cursorMode);
-                break;
-            case 2:
-                Cursor.SetCursor(beeCursor, Vector2.zero, cursorMode);
-                break;
-            default:
-                Cursor.SetCursor(null, Vector2.zero, cursorMode);
-                break;
-        }
+        // switch((int)Math.Ceiling(value)){
+        //     case 0:
+        //         Cursor.SetCursor(appleCursor, Vector2.zero, cursorMode);
+        //         break;
+        //     case 1:
+        //         Cursor.SetCursor(applebeeCursor, Vector2.zero, cursorMode);
+        //         break;
+        //     case 2:
+        //         Cursor.SetCursor(beeCursor, Vector2.zero, cursorMode);
+        //         break;
+        //     default:
+        //         Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        //         break;
+        // }
+
+        CursorManager.Instance.ChangeCursor(value);
     }
 
     public void ChangeVolMusic(float value){

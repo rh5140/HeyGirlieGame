@@ -15,7 +15,7 @@ public class Settings : Menu
 
     public static float maxMusicVol, maxSfxVol, maxVoiceVol;
 
-    [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private GameObject saveGalleryMenu;
 
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
@@ -101,7 +101,7 @@ public class Settings : Menu
     }
 
     public void OpenSaves(){
-        Instantiate(saveProfilesMenu);
+        Instantiate(saveGalleryMenu);
     }
 
     private void SetSettings(){
