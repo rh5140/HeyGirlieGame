@@ -525,6 +525,9 @@ public class YarnCommands : MonoBehaviour
             case "sepia": 
                 end = new Color(0.8f, 0.7f, 0.6f, 1f); 
                 break;
+            case "purple":
+                end = new Color(0.85f, 0.62f, 1f, 1f);
+                break;
             default: 
                 end = Color.white; 
                 break;
