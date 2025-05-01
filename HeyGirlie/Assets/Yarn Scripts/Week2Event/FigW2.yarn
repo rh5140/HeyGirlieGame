@@ -47,8 +47,9 @@ Kristen: Fig… There is a very high probability of me dying if I get on that th
 Fig: Oh no! What a terrible way to go. Riding off into the sunset with your hot best friend.
 <<kristen transparent>>
 <<char_right transparent>>
-<<background Museum_Fig>>
+<<fade_out_ui>>
 <<wait 2>>
+<<background Museum_Fig>>
 <<fade_in_ui>>
 Fig smirks, hopping onto the daymare’s back with ease, holding out a hand.
 //<<char_right FigHappy>>
@@ -69,6 +70,7 @@ Fig: Right?! That’s what I’ve been saying!
 Fig: You better hold on tight, spider monkey.
 Kristen: What do you–
 //RETURN TO GENERTIC BACKGROUND (Or outside elmville bg?)
+<<fade_out_ui>>
 <<wait 2>>
 <<background CityOutdoors>>
 <<fade_in_ui>>
@@ -106,6 +108,8 @@ Fig cackles, the daymare surging forward even faster as the wind howls around yo
 You wouldn’t trade this moment for anything.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background Museum_Fig>>
 <<enable_continue>>
 ===
