@@ -9,7 +9,7 @@ using TMPro;
 
 public class Settings : Menu
 {
-    [SerializeField] private Toggle fullscreenToggle, vsyncToggle;
+    [SerializeField] private Toggle fullscreenToggle;
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
@@ -59,11 +59,6 @@ public class Settings : Menu
         SettingManager.Instance.ChangeFullscreen(value);
     }
 
-    public void ToggleVSync(bool value){
-        PlayerPrefs.SetInt(nameof(Setting.VSync), value ? 1 : 0);
-        SettingManager.Instance.ChangeVSync(value);
-    }
-
     public void ChangeCursor(float value){
         PlayerPrefs.SetFloat(nameof(Setting.Cursor), value);
         SettingManager.Instance.ChangeCursor(value);
@@ -106,7 +101,6 @@ public class Settings : Menu
 
     private void SetSettings(){
         fullscreenToggle.isOn = SettingManager.Instance.fullscreen;
-        vsyncToggle.isOn = SettingManager.Instance.vsync;
         cursorSlider.value = SettingManager.Instance.cursor;
 
         musicSlider.value = SettingManager.Instance.volMusic;

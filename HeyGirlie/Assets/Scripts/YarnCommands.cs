@@ -207,6 +207,7 @@ public class YarnCommands : MonoBehaviour
             location.text = locationName;
         } catch (Exception e) {
             //do nothing
+            Debug.Log("help");
         } finally {
             GameManager.Instance.SetLocationName(locationName);
         }
