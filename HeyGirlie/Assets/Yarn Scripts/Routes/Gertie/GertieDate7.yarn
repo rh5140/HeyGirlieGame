@@ -1,6 +1,6 @@
 ﻿title: Date7
 ---
-April 14
+April 27
 <<location "Aguefort">>
 <<set $date_points = 0>>
 <<set $date_points_total = 18>>
@@ -11,7 +11,7 @@ Probably.
 Still, when that bell rings to signal the end of morning classes, you find yourself happy to be summoned for lunch.
 If only you actually got to eat…
 <<char_right GertieNeutral>>
-<<voiceline KristenGreetingGertie1>>
+<<voiceline KristenGreetingGertie2>>
 Gertie meets you at your locker, but as you walk down the hallway together toward the cafeteria, your conversation becomes drowned out by a wave of noise.
 <<kristen Nervous>>
 Kristen: Oh right. It’s career day.
@@ -32,7 +32,8 @@ Gertie, on the other hand, is peering at the booths curiously.
     Gertie laughs, taking your hand as you stroll down the hallway together.
     <<add_points 2>>
 <<kristen Neutral>>
-All the top adventuring universities are represented, of course, with their giant posters, thick pamphlets, and lanyard-wearing recruitment reps, but there are more booths here than you’d thought could fit into a hallway, advertising more careers than you’d thought existed.
+All the top adventuring universities are represented, of course, with their giant posters, thick pamphlets, and lanyard-wearing recruitment reps.
+But there are more booths here than you’d thought could fit into a hallway, advertising more careers than you’d thought existed.
 <<char_right GertieHappy>>
 Gertie: Hey, that’s my parents’ ranger conclave!
 Today is not the day for you to Meet the Parents, who are still off patrolling the edges of the Thorn Coast, west of the Forest of Sylvaire.
@@ -40,7 +41,8 @@ But with pamphlets printed on recycled paper, you learn a decent bit about what 
 <<voiceline KristenSurprised2>>
 <<char_right GertieNeutral>>
 <<kristen Surprised>>
-Kristen: Oh wow. Here it says you can sometimes spend <i>weeks</i>, even months, alone in the wilds, with no one other than your adventuring party for companionship…
+Kristen: Here it says you can sometimes spend <i>weeks</i>, even months, alone in the wilds, with no one other than your adventuring party for companionship…
+Kristen: Wow.
   -> Kristen: “That sounds really challenging.”
     Gertie: It is rough, but it can also be really rewarding. Being out in nature. Taking stewardship of the world we live in.
     Kristen: I can see that.
@@ -87,20 +89,16 @@ Ranger: Our conclave stands guard at far reaches of the Material Plane. We often
 Ranger: Sometimes, we are even called upon not just to solve magical problems, but also social ones. It’s not enough to simply be good with nature — you must also be good-natured.
 <<char_right GertieSad>>
 <<voiceline GertieSad3>>
-The slight is subtle, but you and Gertie both pick it up easily enough. But what in the world could make this random recruiter think Gertie is anything <i>less</i> than pleasant? She hasn’t even dueled anyone all week…
+The slight is subtle, but you and Gertie both pick it up easily enough. But what in the world could make this random recruiter think Gertie is anything <i>less</i> than pleasant?
+She hasn’t even dueled anyone all week…
 <<kristen Angry>>
 Then you catch a glimpse of his crystal, opened to a Yelf review, and everything makes sense.
 That KVX spellcaster consultant — a.k.a. Gertie’s farmer’s market nemesis — is damaging more than just Gertie’s reputation as a honey vendor. She’s jeopardizing Gertie’s entire future!
 <<char_right GertieNeutral>>
 <<kristen Neutral>>
-Kristen: As student body president, I can confidently vouch for Miss Bladeshield’s ranger skills.
-  -> Kristen: “I know she’ll put her all into whatever path she chooses to pursue.”
-    <<kristen Soft>>
-    <<char_right GertieBlush>>
-    <<voiceline GertieRomantic1>>
-    Gertie looks at you, her eyes soft. You’d kiss her right there and then, if it wouldn’t seem so unprofessional…
-    Fuck it. You kiss her anyways.
-    <<add_points 2>>
+<<voiceline KristenGreeting3>>
+Kristen: Hello, have we met? I’m President Kristen Applebees.
+Kristen: I can confidently vouch for Miss Bladeshield’s ranger skills.
   -> Kristen: “In fact, I think she can do a lot better than your conclave.”
     Gertie: The same one my parents are in?
     <<kristen Awkward>>
@@ -108,6 +106,13 @@ Kristen: As student body president, I can confidently vouch for Miss Bladeshield
     Kristen: Oh, um…
     Gertie: ’Twas a joke, Miss Applebees.
     <<add_points 1>>
+  -> Kristen: “I know she’ll put her all into whatever path she chooses to pursue.”
+    <<kristen Soft>>
+    <<char_right GertieBlush>>
+    <<voiceline GertieRomantic1>>
+    Gertie looks at you, her eyes soft. You’d kiss her right there and then, if it wouldn’t seem so unprofessional…
+    Fuck it. You kiss her anyways.
+    <<add_points 2>>
   -> Kristen: “Why are you, a grown man, taking Yelf reviews so seriously?”
     <<voiceline KristenAngry2>>
     The recruiter’s face glows red. Embarrassment or anger? You can’t be sure.
@@ -123,7 +128,7 @@ Agent Clark: Miss Applebees, is it? My colleagues in the Ministry of Adventuring
 Kristen: Eh, thanks?
 Agent Clark: Student body president, an adventurer whose party saved the world thrice over —
 Kristen: Thrice? I’m sure it’s been more than that.
-Agent Clark: — and a cleric gifted enough to revive a goddess, no less! I’m sure I’m not the first to be curious about where you’re planning to study next year.
+Agent Clark: — and a cleric gifted enough to revive a goddex, no less! I’m sure I’m not the first to be curious about where you’re planning to study next year.
 Next <i>year</i>? You haven’t even given any thought to what you’re going to eat for dinner tonight.
 Kristen: Aren’t you like a secret agent or something? What are you doing here?
 <<kristen Neutral>>
@@ -138,7 +143,8 @@ Kristen: Honor the CoC, you say?
 Agent Clark: I’m sorry?
 Kristen: Don’t worry about it.
 <<kristen Nervous>>
-Agent Clark flits away to track down some other promising student the CoC wants to poach. As soon as he’s out of your line of vision, you crumple the pamphlet up in your hand, shoving it into your pockets.
+Agent Clark flits away to track down some other promising student the CoC wants to poach.
+As soon as he’s out of your line of vision, you crumple the pamphlet up in your hand, shoving it into your pockets.
 <<char_right GertieSurprise>>
 Gertie: What’s wrong?
 <<voiceline KristenSad1>>
@@ -148,9 +154,11 @@ Kristen: Nothing. I just can’t picture myself as some Council stooge, you know
 Gertie: I can understand that. It’s just… It feels like this whole fair’s got you on edge.
 <<kristen Sad>>
 “On edge” is an understatement. Back in the church, your whole future was already written. 
-Now you’ve got the power to write it yourself. But you know what they say about power and responsibility. Your future isn’t just about <i>your</i> future either. It’s about the other Bad Kids. It’s about Cassandra.
+Now you’ve got the power to write it yourself. But you know what they say about power and responsibility.
+Your future isn’t just about <i>your</i> future either. It’s about the other Bad Kids. It’s about Cassandra.
 It’s about your brothers, too. What if you decide to leave Elmville, and they’re stuck here all alone with your awful parents?
-It’s hard to make sense of all this. It’s even harder to talk about it, even to Gertie.
+It’s hard to make sense of all this.
+It’s even harder to talk about it, even to Gertie.
 <<char_right GertieNeutral>>
   -> Kristen: “Why worry about the future when we can just live in the moment?”
     <<kristen Nervous>>
@@ -168,7 +176,9 @@ It’s hard to make sense of all this. It’s even harder to talk about it, even
     <<add_points 2>>
 <<kristen Neutral>>
 <<char_right GertieGrin>>
-Gertie: I just want to say, even though I’m not the student body president or anything, that I vouch for your skills too. As a cleric. As a leader. As a… friend. You’ve got so much passion for what you care about: your adventuring party, Cassandra…
+Gertie: I just want to say, even though I’m not the student body president or anything, that I vouch for your skills too.
+Gertie: As a cleric. As a leader. As a… friend.
+Gertie: You’ve got so much passion for what you care about: your adventuring party, Cassandra…
 <<kristen Grin>>
 Kristen: You?
 <<char_right GertieBlush>>
@@ -186,13 +196,16 @@ Where do you go next?
   -> <i>You approach the envoys from the Pirate City of Leviathan.</i>
     <<kristen Surprised>>
     But closing in, you realize that these pirate recruiters are not just locked in an argument — they’re a second away from an all-out brawl.
-    One of the pirates — an aarakocra paladin with her feathers pulled back into a ponytail — holds out her staff, declaring that anyone who joins her crew in this fight will earn a summer internship aboard Levithan itself.
+    One of the pirates — an aarakocra paladin with her feathers pulled back into a ponytail — holds out her staff.
+    She declares that anyone who joins her crew in this fight will earn a summer internship aboard Levithan itself.
     A couple bloodrush players join in, eager to bash some heads. Huh. Looks like a pirate brawl is quite a good recruitment strategy after all.
   -> <i>You approach a recruiter from the Nine Hells.</i>
     Vraz, the Devil Queen of Mean and arch secretary to Blozo the Undiminished, is pitching an internship to a young warlock student.
-    Hands on adventuring experience, a generous travel stipend, plus access to the employee lounge. It all sounds pretty good. But then you look over the poor kid’s shoulder to read between the fine lines on the contract…
+    Hands on adventuring experience, a generous travel stipend, plus access to the employee lounge. It all sounds pretty good.
+    But then you look over the poor kid’s shoulder to read between the fine lines on the contract…
     Ah, there it is, the hidden clause to sell your soul to the Nine Hells in exchange for college credit.
-    Vraz the Mean looks even Meaner when you point this out to the warlock student, who immediately drops the contract like it’s on hellfire. But hey, even if the rest of this career fair is a bust, at least you can say you saved a soul today.
+    Vraz the Mean looks even Meaner when you point this out to the warlock student, who immediately drops the contract like it’s on hellfire.
+    But hey, even if the rest of this career fair is a bust, at least you can say you saved a soul today.
   -> <i>You approach an empty booth.</i>
     There’s nothing but a stack of business cards on the table.
     You pick one up. It’s blank.
@@ -200,7 +213,8 @@ Where do you go next?
     <<kristen Surprised>>
     ???: That there’s printed with illusory ink.
     ???: It’s just one of the many tricks you’ll learn as a rogue in the Society of Shadows.
-    You turn to the right. It’s Penny Luckstone! The halfling Aguefort alumni — and Riz’s former babysitter — is dressed in the camouflage colors befitting a world-class rogue, though the smile on her face is nearly blinding.
+    You turn to the right. It’s Penny Luckstone!
+    The halfling Aguefort alumni — and Riz’s former babysitter — is dressed in the camouflage colors befitting a world-class rogue, though the smile on her face is nearly blinding.
     <<kristen Neutral>>
     Kristen: Hey, Penny! If you don’t mind me asking, isn’t a recruitment booth sort of missing the point to the <i>secret</i> part of <i>secret</i> society.
     Penny: Like I’d pass up on a chance to visit my alma mater and influence some young, impressionable minds. Besides, these days, it’s more of an <i>open</i> secret.
@@ -214,18 +228,19 @@ You turn to ask Gertie where she’d like to go next, only to realize that she�
 It’s not hard to find her, one of the tallest girls in your grade, in the hallway. Your dopey smile fades quickly once you see which college rep she’s speaking to.
 <<kristen Surprised>>
 <<voiceline KristenSurprised3>>
-You hurry over to the booth for Lord Salazar Edge's College of Lone Adventurers and…
-  -> <i>Pull her away.</i>
+Oh no! Not Lord Salazar Edge's College of Lone Adventurers!
+You hurry over to the booth and…
+  -> <i>… pull her away.</i>
     <<char_right GertieSurprise>>
     <<voiceline GertieSurprised3>>
     Gertie: Hey, I was in the middle of a conversation!
     <<add_points 1>>
-  -> <i>Ask to speak to her.</i>
+  -> <i>… ask to speak to her.</i>
     <<char_right GertieSurprise>>
     <<voiceline GertieSurprised1>>
     Gertie: Kristen, what’s wrong?
     <<add_points 2>>
-  -> <i>Smack the pamphlet out of her hands.</i>
+  -> <i>… smack the pamphlet out of her hands.</i>
     <<char_right GertieAngry>>
     <<voiceline GertieSurprised2>>
     Gertie: What the hell?
@@ -249,14 +264,16 @@ Gertie: Maybe I am.
     <<add_points 2>>
 <<kristen Nervous>>
 You peel Gertie off to the side, away from the hustle and bustle of the career fair.
-Gertie: Lord Salazar has a good ranger program. It’s close to Elmville, so I can continue my work with the hive. Why wouldn’t I want to apply?
+Gertie: Lord Salazar has a good ranger program. It’s close to Elmville, so I can continue my work with the hive.
+Gertie: Why wouldn’t I want to apply?
   -> Kristen: “But isn’t the point of college to try something new?”
     Kristen: If you go to Lord Salazar’s, you’ll just be doing what you’ve always been doing at Aguefort.
     Gertie: What’s wrong with that?
     <<add_points 1>>
   -> Kristen: “But what if we end up going to different colleges?”
     <<char_right GertieAngry>>
-    Gertie: I’d never ask you to apply to Lord Salazar if you feel so strongly against it… Just as you can’t stop me from applying either.
+    Gertie: I’d never ask you to apply to Lord Salazar if you feel so strongly against it…
+    Gertie: Just as you can’t stop me from applying either.
     <<add_points 0>>
   -> Kristen: “That… actually makes a lot of sense.”
     <<char_right GertieNeutral>>
@@ -271,7 +288,7 @@ Gertie: Kristen, I…
 She takes your hand.
 <<char_right GertieGrin>>
 Gertie: I really like you. I like how much you love your friends, and I even <i>like</i> your friends. But truly, I <i>am</i> happy to be a lone adventurer.
-You still can’t fully wrap your mind around this, not when your own adventuring party spent the entirety of your junior year working your asses off to avoid the absolute <i>nightmare</i> that’d be going your separate ways.
+You still can’t fully wrap your mind around this, not when your own adventuring party spent all of junior year working your asses off to <i>avoid</i> going your separate ways.
 But you don’t have to understand this to understand Gertie.
 Gertie: Besides, I’d only really be on my own when I’m working. As for the rest of my life, I’d happily spend it with you.
 Kristen: The rest of your life, huh?
@@ -318,8 +335,8 @@ Kristen: I like you too.
     <<voiceline GertieHappy4>>
     Gertie: I find you aesthetically attractive as well.
     <<add_points 0>>
-  -> Kristen: “You may jest, but say the word, and I’ll prepare Ceremony as a spell.”
-    Kristen: As a cleric, I can do that. Though, I’m actually not sure what the laws are about a cleric marrying themselves…
+  -> Kristen: “You jest, but say the word, and I’ll prepare the spell.”
+    Kristen: Though, I’m actually not sure what the laws are about a cleric casting Ceremony on themselves…
     You ramble on a bit about archaic cleric laws. Luckily, Gertie looks more charmed than confused.
     <<add_points 1>>
   -> Kristen: “I like that you know who you are and what you want.”
@@ -354,5 +371,5 @@ Kristen: Exactly. If your nemesis’s favorite country club wants to expand into
 <<voiceline GertieRomantic2>>
 Gertie: Why, Miss Applebees, that sounds like a lovely date-night plan.
 And so, the two of you find a place to eat and, over lunch, hash out the details for this next adventure you’ll take together.
-<<jump Cassandra>>
+<<jump Cassandra7>>
 ===
