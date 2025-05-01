@@ -2,7 +2,6 @@
 ---
 <<location "Aguefort">>
 <<declare $date_points = 0>>
-//<<declare $date_points_total = #>>
 <<kristen Neutral>>
 It’s a beautiful Monday morning. The sky is blue, the sun is shining, the birds are chirping… and you’re trying really hard not to fall asleep in cleric class. 
 This isn’t like last year where you were at constant risk of expulsion. Senior year is a fresh start! For one thing, you’re student council president now; you have an example to set, and that means paying attention in class. 
@@ -13,15 +12,12 @@ She’s sent you a threatening emoji of a cat holding a knife, a clear message t
 You wonder how she would take it if you sent an emoji of a middle finger back. It’s not your fault that lecture days make you sleepy.
 …Probably not well.
 You sigh and look around the room, trying to wake yourself up. 
-Yolanda is in the middle of a passionate lecture, which almost makes you feel bad about how little attention you’re paying to it. 
-She seems to have recovered from her ordeal last year pretty well, at least to your eyes. You wouldn’t have blamed her for leaving, but you’re glad she’s decided to stick around at Aguefort. For a teacher, she’s pretty cool.
+Yolanda is in the middle of a passionate lecture, which almost makes you feel bad about how little atten tion you’re paying to it. She seems to have recovered from her ordeal last year pretty well, at least to your eyes. You wouldn’t have blamed her for leaving, but you’re glad she’s decided to stick around at Aguefort. For a teacher, she’s pretty cool.
 Some students are sitting upright, rapt with attention. Nerds. Others are doodling as they listen, or texting surreptitiously under their desks, which seems far more normal to you.
 Eventually your eyes fall on the desk next to you, where Lucy Frostblade sits. 
 <<char_right LucyNeutral1>>
 
-She’s diligently taking notes, hunching over a desk that is slightly too small for her. 
-Her sweater sleeves are pulled over her hands, and her hair falls into her eyes as she leans over her notebook. 
-Her backpack is by her feet, and you notice that she has various buttons and pins on it, including one for Basrar’s. 
+She’s diligently taking notes, hunching over a desk that is slightly too small for her. Her sweater sleeves are pulled over her hands, and her hair falls into her eyes as she leans over her notebook. Her backpack is by her feet, and you notice that she has various buttons and pins on it, including one for Basrar’s. 
 It’s strange to think about how much history you and Lucy share without ever having spoken more than a few words to each other. 
 You wonder if she’s doing okay after the whole being betrayed and dying thing. You didn’t take your own death — death<i>s</i> — very well, after all, and without your friends, you would have been lost. 
 A vague sense of guilt fills you. Maybe you should have reached out, as one of the few people at this school who knows what dying is really like. 
@@ -38,9 +34,9 @@ You straighten quickly. For once, you’re grateful for the need to pay attentio
 <<char_right LucyNeutral1>>
 <<kristen Neutral>>
 Yolanda begins speaking. 
-Yolanda: As you approach graduation, it will be increasingly important to build reflective practice into your daily life.”
-Yolanda: As clerics, your relationships with your deities are crucial to cement your gods’ legacies and worship and maintain your own power. That means you also need to examine your relationships with <i>yourselves</i>.”
-Yolanda: Your major assignment for this term is to write a five-page paper answering these questions.”
+“As you approach graduation, it will be increasingly important to build reflective practice into your daily life.”
+“As clerics, your relationships with your deities are crucial towards both maintaining your own power and cementing your gods’ legacies and worship. That means you also need to examine your relationships with <i>yourselves</i>.”
+“Your major assignment for this term is to write a five-page paper answering these questions.”
 :Yolanda writes three questions on the board: 
 <i>Who are you?</i>
 <i>How does your deity reflect your identity?</i>
@@ -51,22 +47,22 @@ And maybe you’ll get to know her a bit better.
 You notice that Lucy is looking back at you from the corner of her eye. 
 Kristen: So…
 -> Kristen: Let’s do this, partner!
-  <<kristen Happy>>
-  <<voiceline KristenGreeting2>>	
-  Lucy looks surprised but pleased. 
-  Lucy: Oh, sure!
-  <<add_points 2>>
+    <<kristen Happy>>
+    <<voiceline KristenGreeting2>>	
+    Lucy looks surprised but pleased. 
+    Lucy: Oh, sure!
+    <<add_points 2>>
 -> Kristen: Maybe we should…?
-  <<kristen Nervous>>
-  <<voiceline KristenGreeting1>>
-  Lucy tucks her hair behind an ear, nodding.
-  Lucy: Yeah…
-  <<add_points 1>>
+    <<kristen Nervous>>
+    <<voiceline KristenGreeting1>>
+    Lucy tucks her hair behind an ear, nodding.
+    Lucy: Yeah…
+    <<add_points 1>>
 -> Kristen: …
-  You stare at each awkwardly. You clear your throat.
-  She looks at you cautiously.
-  Lucy: …
-  <<add_points 0>>
+    You stare at each awkwardly. You clear your throat.
+    She looks at you cautiously.
+    Lucy: …
+    <<add_points 0>>
 
 <<kristen Neutral>>
 Kristen: So, these questions. Wow. 
@@ -183,7 +179,7 @@ Lucy looks baffled at that, which is fair. The last few years have been so wild 
 
 <<char_right LucyNeutral1>>
 
-Kristen: Cassandra’s great, though! She’s really active in my life and actually cares about me — which is pretty great, considering my old god cared more about his frat bro aesthetic than me. I feel like Cassandra and I have got a really strong connection.
+Kristen: Cassandra’s great, though! She’s really active in my life and cares about me — which is great considering my old god is kind of a frat bro, you know? I feel like we’ve got a really strong connection.
 
 Lucy still looks confused but interested.
 
@@ -265,11 +261,9 @@ Her voice drops to a whisper.
 
 Lucy: I’m the one who’s changed.
 
-You don’t know if she meant to say that out loud. 
+You don’t know if she meant to say that out loud. You’re about to ask what she means when the bell rings.
 
-You’re about to ask what she means when the bell rings.
-
-<<char_right LucySurprised>>
+<<char_left LucySurprised>>
 <<kristen Surprised>>
 
 You and Lucy jump in unison, then exchange awkward smiles, the sound breaking the intensity of the moment and snapping you both back to reality.
@@ -291,20 +285,18 @@ title: Date1Hint
 Lucy: This was a great conversation. About the project, I mean. Do you want to continue it later?
 
 ->Kristen: Hell, yeah, partner! We gotta hang out sometime.
-  Lucy: Hang out? I’d love to. 
+  Lucy: Hang out? I’d love to. Maybe over some ice cream?
   Kristen: Sounds great!
   <<voiceline KristenHappy2>>
   <<add_points 2>>
 ->Kristen: Sure, let’s kick this project’s ass! 
-  Lucy: Cool, we’ll get it done in no time. 
+  Lucy: Cool, we’ll get it done in no time.
   <<add_points 1>>
 ->Kristen: Nah, I’m feeling good about this. I think we got it covered.
   Lucy: Oh, okay. Good luck with the project.
   <<add_points 0>>
 
-Lucy: Let me know if you want to talk about this more sometime. Maybe we can get ice cream?
-
-Kristen: Great idea! See you later, Lucy!
+Kristen: Later! 
 
 Lucy: Bye, Kristen.
 
@@ -312,5 +304,6 @@ You watch her go, satisfied. You have a good feeling about this project.
 
 A+ in Cleric Class, here you come!
 
-<<jump Cassandra1>>
+<<jump Cassandra>>
 ===
+

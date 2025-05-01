@@ -1,6 +1,6 @@
 ﻿title:Date2
 ---
-April 28
+April 13
 <<location "Bloodrush Field">>
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
@@ -12,11 +12,10 @@ April 28
 :If only you could have found it...
 :You settle in on the sidelines, close enough to see one of the centaurs wrangling another but not so close as to risk getting kicked.
 :There’s a few clerics you recognize from class on standby, so nothing you need to worry about. Oh, wait, it looks like Aguefort’s sponsoring this.
-:Not the school itself, just your principal, personally. Good for him, you guess. 
+:Not the school itself, just your principal, personally. Good for him, you guess.
 <<char_right TrackerHappy_1>>
-<<voiceline TrackerGreeting3>>
 :Tracker settles down next to you, smiling widely. She’s got a whole turkey leg in one hand and a corn dog in the other, handing the latter to you.
- Tracker: Figured you might not have grabbed something to eat on the way.
+Tracker: Figured you might not have grabbed something to eat on the way.
 :Oh, nice, a corn dog. There’s a lot of things you don’t enjoy so much from your Helioic childhood, but your love for a good corn dog might just be eternal.
 :You take it.
 Kristen: Thanks!
@@ -24,7 +23,6 @@ Kristen: Thanks!
 :It’s easier than normal, because Corn Camp never had centaurs doing agility courses.
 :…How do they move like that?
 Kristen: I could never do that.
-<<voiceline TrackerHappy2>>
 :Tracker laughs, the sound almost startled out of her.
 Tracker: Well, yeah, you’re human.
 Tracker: And, uh, not the most agile person I’ve ever met.
@@ -32,11 +30,11 @@ Kristen: I have a ribbon wand that’d say otherwise.
 :Tracker groans, but she’s smiling. So you take that as a win.
 Tracker: Gods, not the ribbon wands. That’s something I’m okay leaving behind. 
 Kristen: Oh! Well…
--> Kristen: “Is that… the only thing about us you want to leave behind?”
+-> Kristen: “:Is that… the only thing about us you want to leave behind?”
     <<char_right TrackerAngry_1>>
     <<voiceline TrackerAngry1>>
     :You regret the sentence almost as soon as you finish saying it - because Tracker’s easy smile is gone, all the warmth and ease replaced by a borderline frosty and pointed look in your direction.
-    : Ah, there it is. The patented ‘Kristen, you fucked up again’ look. You can’t help a small wince.
+    :The patented ‘Kristen, you fucked up again’ look. You can’t help a small wince, stomach swirling with mild panic.
     Tracker: We were having such a <i>good day</i>. Why did you have to…
     :She stops herself just short of a yell, conscious of the fact that you’re in a crowd. You wince again.
     Tracker: Ugh, just. We’re not doing this right now.
@@ -46,19 +44,18 @@ Kristen: Oh! Well…
     Kristen: Sorry. I just -
     Tracker: I know. Let’s just get back to watching the rodeo for a bit.
     <<add_points 0>>
--> Kristen: “I guess I’ll have to ribbon dance right now to prove you wrong.”
+-> Kristen: “:I guess I’ll have to ribbon dance right now to prove you wrong.”
     Kristen: This rodeo could use a bit more flair.
-    :You stand up, making a show of going for your pocket, which doesn’t even have your ribbon wand in it. Tracker laughs and grabs for your arm anyway, pulling you back down.
+    :You stand up, going for your pocket, which doesn’t even have your ribbon wand in it. Tracker laughs and grabs for your arm anyway, pulling you back down.
     <<voiceline TrackerHappy2>>
     Tracker: You’re ridiculous.
     Kristen: You love it.
-    :The minute you say it you freeze, worried you’ve pushed too far. But Tracker just grins.
+    :You freeze, worried you’ve pushed too far, but Tracker just grins.
     Tracker: Maybe. But seriously, don’t go on the course, I don’t have a diamond ready if you get brained by a centaur cowboy.
     Kristen: Centaurboy?
-    Tracker: Pfft, ridiculous. Cowcentaur, obviously.
+    Tracker: Pfft. Cowcentaur, obviously.
     <<add_points 2>>
--> Kristen: “Fine, if you insist.”
-    <<voiceline TrackerNeutral1>>
+-> Kristen: “:Fine, if you insist.”
     <<char_right TrackerNeutral_1>>
     Tracker: Oh. Okay.
     :She doesn’t look... mad, but she doesn’t exactly look thrilled, either.
@@ -86,28 +83,25 @@ Tracker: Yeah!
 :The ringmaster — another centaur, but this one’s strangely got an Arthur Aguefort face cut-out stamped to his bright purple top hat (which is super uncanny and kind of creepy) — calls out for audience volunteers.
 :Tracker sits up, eyes bright.
 Kristen: Have you done this before?
-Tracker: No, I didn’t make the height requirement last time I was here.
+Tracker: No, I was too small the last time I was here.
 Kristen: Well…
-Tracker: Ha ha. No more short jokes from you, Applebees.
+Tracker: No more short jokes from you, Applebees.
 You cut off the joke you were about to make, and instead…
 -> Kristen: “Ringmaster! Two volunteers right here!”
-    <<voiceline TrackerSurprised2>>
     :Tracker looks delighted, but also a little nervous.
     Tracker: You sure? I mean, I know we were joking, but you could actually get hurt.
     Kristen: Pfft. Double clerics, baby, we’re good.
-    :Tracker’s responding smile is a little softer. Gentler. Your heart thuds in your chest.
+    :Tracker’s responding smile’s a little softer. Gentler. Your heart thuds in your chest.
     Tracker: Yeah. Okay, hell yes, let’s do it!
     <<add_points 2>>
 -> <i>Bravely volunteer all on your own.</i>
     <<char_right TrackerNeutral_1>>
-    <<voiceline TrackerSurprised3>>
     :The ringmaster brightens at the sound of your voice, and points a hoof in your direction. Does Tracker look… a little put out for a second? Whatever expression she just made, it’s quickly replaced by determination. Her hand launches into the air.
     Tracker: Here!
     :The ringmaster picks her out as well, and she smiles at you.
     <<add_points 1>>
 -> <i>Sink into your seat. You don’t want to embarrass Tracker.</i>
     <<char_right TrackerSurprised_1>> 
-    <<voiceline KristenSad2>>
     :Tracker notices you hiding from the ringmaster and rolls her eyes at your cowardice.
     Tracker: Come on, live a little. You’re an <i>adventurer,</i> Kristen!
     :She grabs your wrist and rockets it into the air to get the attention of the ringmaster.
@@ -115,7 +109,6 @@ You cut off the joke you were about to make, and instead…
     <<add_points 0>>
 Tracker: Let’s go ride some centaurs.
 :You can’t stop yourself. You must embrace the cowboy vibes.
-<<voiceline KristenHappy1>>
 Kristen: Yeehaw!
 :This time, Tracker isn’t surprised, and doesn’t hesitate to join in.
 Tracker: Yeehaw!
@@ -127,9 +120,7 @@ Tracker: Yeehaw!
 Tracker: We can heal ourselves just fine.
 :It’s a little…possessive, almost? And hot.
 <<kristen Nervous>>
-<<voiceline KristenRomantic2>>
 Kristen: Y-yeah. We can.
-<<voiceline TrackerConfused1>>
 :Tracker looks at you, a little confused by your sudden inability to look her in the eyes, before she seems to connect the dots.
 <<char_right TrackerBlush_1>>
 Tracker: Just regular… normal… healing. For bros. Bro-healing.
@@ -139,13 +130,10 @@ Kristen: Right.
 :You both desperately pretend not to be thinking about Sandralynn catching you ‘healing’ each other back in Mordred Manor.
 :...
 :You’re pretty sure you’re still blushing when you get on the centaur.
-<<char_right TrackerHappy_1>>
-:Tracker climbs on the centaur in a single swift, easy movement, like she’s been doing this her entire life. It takes you... a little longer.
-<<voiceline KristenSad1>>
-:Eventually the centaur you’re riding takes pity on you and helps you up, in front of everyone here. So cool and not embarrassing.
-<<char_right TrackerNeutral_1>>
+:Tracker climbs on the centaur in a single swift, easy movement, like she’s been doing this her entire life. It takes you a little longer.
+:The centaur you’re riding takes pity on you and helps you up, in front of everyone here. So cool and not embarrassing.
 :The goal is to stay on for six seconds. Six seconds is nothing! You could maybe cast one spell in that entire time!
-<<kristen Surprised>>
+<<kristen Surprised>> // whichever one looks nervous
 :You’ve got this. You’ve totally got this.
 :Tracker sees you very much looking like you don’t got this, and makes the first move.
 Tracker: I’ll go first!
@@ -160,27 +148,22 @@ Tracker: I’ll go first!
 :You cheer her on too, obviously. It’s maybe not a great sign that just moving your hands enough to clap has you almost falling off.
 :Okay. You can do this.
 <<kristen Neutral>>
-:You’re going to do great. Tracker’s going to be so impressed. Really, how hard can it be —
+:You’re going to do great. Tracker’s going to be so impressed. Really, how hard can it be–--
 <<kristen transparent>>
-<<char_right TrackerSurprised_1>>
-<<sfx crash>>
+<<sfx  crash>>
+// kristen sprite disappears and/or goes flying off the screen. crashing noise. screen goes black. crash sfx is Crash2
 :…ow.
+// IDEA. background shows back up with a close up of tracker’s face as she helps kristen up IF IT’S EASY TO IMPLEMENT i love you dev team MWAH MWAH MWAH
 <<voiceline KristenAngry1>>
-<<kristen Awkward>>
+<<kristen Neutral>>
 Kristen: Ow.
 :Your head aches and you definitely bruised <i>something</i>. All in all, though, not the worst wipe-out you've had. At least you didn't end up back in corn heaven.
 Kristen: Did it look cool?
-<<voiceline TrackerNeutral1>>
-<<char_right TrackerNeutral_1>>
 Tracker: Um.
 :Not a great sign. You groan, half in pain and half in embarrassment.
-<<kristen Sad>>
 Kristen: C’mon. Gimme something here.
-<<char_right TrackerHappy_1>>
 :Tracker smiles at you, reassuringly.
-<<voiceline TrackerDateSuccess1>>
 Tracker: I’m glad you did this with me.
-<<kristen Neutral>>
 :You’ll take it.
 :The ringmaster escorts you off the arena grounds, looking a little put out as he leads you towards the other clerics.
 <<jump Date2Hint>>
@@ -194,17 +177,14 @@ title: Date2Hint
 Tracker: Next time we can do something less dangerous, maybe.
 Tracker: See what Jawbone’s up to or something.
 Kristen: I think I have an idea.
-Tracker: ...why do I have the feeling your idea is something more reckless than saying hi to him at home? 
+Tracker: Oh?
 :You do a painful, awkward pirouette.
-<<voiceline KristenAwkward3>>
 Kristen: You’ll seeeeeeeeeee.
-<<char_right TrackerNeutral_1>>
 :You were going for mysterious, but the grimace on Tracker’s face tells you you’ve fallen even further into the ‘disorientated person to worry about’ category.
 Tracker: Here. Let me heal you up.
 Tracker reaches a hand toward your face. Instinctively, you grab it.
 -> <i>Push it away. You can take care of yourself.</i>
     Kristen: It’s okay, I’ve got this.
-    <<voiceline TrackerSad3>>
     <<char_right TrackerSad_1>>
     Tracker: I don’t mind.
     Kristen: It’s fine.
@@ -214,19 +194,17 @@ Tracker reaches a hand toward your face. Instinctively, you grab it.
     <<add_points 0>>
 -> <i>Let her do her thing, dummy.</i>
     <<char_right TrackerBlush_1>>
-    <<voiceline KristenRomantic2>>
     :Tracker blushes a little at the sudden contact, but pulls her focus together and mutters a quick healing spell. A pleasant warmth washes over you. It almost definitely rises into your cheeks.
     <<kristen Soft>>
     Kristen: Thanks.
     <<char_right TrackerHappy_1>>
-    :Tracker’s lips curl into that classic smile as she drops your hand.
+    :Tracker’s lips curl into that classic smile.
     Tracker: ‘Course. Anytime.
     <<add_points 1>>
 -> <i>Press a quick kiss to the palm of her hand before she heals you.</i>
     <<char_right TrackerSurprised_1>>
-    :It’s impulsive, and more than a little insane, but so are you. Tracker freezes as you gently take her palm and press it against your lips. 
-:And oh, what a fucking mistake. Because you remember this, how warm Tracker’s skin is: because,if you’re being honest, you’ve never truly forgotten. And now - her eyes fixed on yours, her hand against your mouth - you probably never will.
-:You suddenly realise the distant prickling sensation is actually the magic making your bruises starting to heal. It snaps you back into reality. You drop her hand.
+    :It’s impulsive, and more than a little insane, but so are you. Tracker freezes as you gently take her palm and press it against your lips. Her skin is warm.
+    :You feel your bruises starting to heal before you drop her hand, abashed.
     Tracker: …
     Tracker: Why?
     :You… don't actually have an answer to that.
@@ -243,10 +221,9 @@ Tracker reaches a hand toward your face. Instinctively, you grab it.
     <<char_right TrackerHappy_1>>
     <<kristen Happy>>
 	<<add_points 2>>
-<<kristen Neutral>>
 :Freshly healed, you settle back into your seats to watch the rest of the show. 
 :You can safely say it’s been a hectic, mostly entertaining day, even if the way Tracker’s been stealing small, unreadable glances in your direction is just the slightest bit totally nerve-wracking. The last time, she directly locks eyes with you, and shares a conspiratorial grin.
-<<char_right TrackerHappy>>
+<<char_right TrackerHappy_1>>
 Tracker: Hey, Kristen. Guess what I have?
 -> <i>Another turkey leg.</i>
     Kristen: Uh…another turkey leg?
@@ -257,7 +234,6 @@ Tracker: Hey, Kristen. Guess what I have?
     Tracker: I wish. But no, my prize is <i>far</i> cooler than that.
 -> <i>The Crown of the Nightmare King himself.</i>
     Kristen: The Crown of the Nightmare King……… 2!!
-    <<sfx Vibrate>>
     :You feel a series of very angry vibrations in your pocket. Sore subject for Cassandra.
     Kristen: Or, uh, something else.
     :Tracker’s barely holding back laughter at your expense.
@@ -267,18 +243,16 @@ Tracker: Hey, Kristen. Guess what I have?
 <<kristen Surprised>>
 Kristen: Wait, where’d you get that? Were they giving out cowboy hats?!
 :Tracker smirks at the look on your face. She puts the hat on her head and tips it in your direction.
-Tracker: I may have grabbed it off my centaur’s head while he was distracted. Yee, now wait for it… haw.
+Tracker: I may have grabbed it off my centaur’s head while he was distracted. Yee, wait for it… haw.
 :Did she just...?
 Kristen: Hey, don’t steal my thing! That’s <i>my</i> thing! <i>I’m</i> the yeehaw guy!
 Tracker: Where’s your proof? I don’t see a cowboy hat on your head.
 :You yoink the cowboy hat and place it back on your head, where it belongs. At her incredulous expression, you lean smugly back into your chair.
-<<kristen Grin>>
 Kristen: Now you do. Yeehaw, motherfucker.
-<<voiceline TrackerHappy2>>
 :She laughs, her eyes crinkling in the cutest way. She gives you a long, tender stare.
 Tracker: Huh. Looks better on you.
 <<kristen Soft>>
-<<voiceline TrackerFarewell3>>
 Tracker: Now let’s get me another turkey leg.
-<<jump Cassandra2>>
+<<voiceline TrackerFarewell3>>
+<<jump Cassandra>>
 ===

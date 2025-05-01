@@ -1,60 +1,43 @@
 ﻿title: Date7
 ---
-April 28
+April 21
 <<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 0>>
 //al note: manor background
 <<kristen Sad>>
-<<voiceline KristenSad3>>
 :You fucked up. 
 :After last week, you were <i>so</i> sure you were going to remember to buy some groceries to make the spaghetti from Lady and the Tramp but They’re Both Bugbears that you could use to <i>finally</i> kiss Nara.
 :You were supposed to do all that two weeks ago when you were running errands, but then Nara gave you the smallest of cheek kisses and you Panicked and got So Distracted and - what were you supposed to do again? Lament the loss of your groceries to the power of love? Right.
-<<kristen Nervous>>
-<<voiceline KristenDateFail3>>
 :Unfortunately, you have ADHD. So you forgot to take your meds. And then realized you had to take your meds. And then remembered you hadn’t gone to the grocery store to get something to eat with your meds. 
-<<kristen Sad>>
 :In short: you’re unmedicated and panicking. And Nara is going to show up any minute now.
 //al note: could have a texting scene where Kristen tries to convince Nara not to come, only for Nara to reveal she’s right outside the door. Just to fill word count.
 <<sfx knock>>
-<<kristen Surprised>>
 :Or right now! By the sound of the enthusiastic knocking on the door of the manor, you’d guess she’s right outside, eagerly waiting for you. Fuck she’s cute.
 :You gingerly open the door.
 <<char_right NaraShock2>>
-<<voiceline NaraSurprised1>>
 Nara: Kri- oh no!
-<<kristen Sad>>
-<<voiceline KristenGreetingNara1>>
 Kristen: Nara I forgorrrrr…
 <<char_right NaraNeutral2>>
 Nara: Oh, um, it is quite alright Kristen, we can always make use of what is already in your fridge - 
-<<kristen Awkward>>
 Kristen: That’s the problem! I forgor the ingredience, Nara! How am I supposed to make the best spaghetti you’ve ever had ever if I don’t have the ingredience???
 Nara: That is not a problem, darling. I know living with so many HDs must be quite overwhelming at times.
-<<kristen Neutral>>
 Kristen: It is… I’m so strong and <i>brave…</i>
 Nara: …
-<<kristen Grin>>
-<<voiceline KristenRomantic3>>
 Kristen: And <i>brave</i> and also handsome…
 Nara: Yes you are. We can simply purchase some sustenance from your local vendor.
-<<kristen Neutral>>
 Kristen: You mean the supermarket?
-<<voiceline NaraNeutral1>>
 Nara: My goodness, you must hold this market in high esteem to refer to it in such a way. To the market!
-<<location “Food 4 U”>>
-<<background Mall>>
+<<location “mall”>>
 //al note: mall background here
-<<kristen Neutral>>
+<<kristen neutral>>
 <<char_right NaraThink2>>
 :Several minutes of travelling you don’t really remember later, you both arrive at the mall, making your way to the Food 4 U (Elmville’s Number One place for Food and also U).
 :Nara looks around. You try to find the usual spark of wonder in her eyes, but there is only slight confusion.
-<<voiceline NaraSurprised2>>
 Nara: Kristen, this is not a market.
 <<kristen Grin>>
 Kristen: You’re right, it’s not a market. It’s a <i>super</i> market.
 Nara: I see… a <i>superb</i> market…
-<<voiceline KristenNeutral3>>
 Kristen: Yyyyyyes.
 Nara: But where are the vendors, hawking their wares? Where are the magical items of everyday importance? What is a Disc, and why do <i>I</i> have to be the one who Counts it?
 <<kristen Neutral>>
@@ -70,19 +53,15 @@ Kristen: Wow let’s focus on anything else. Like meat! I need that! Let’s go 
 :Nara looks at you strangely, which is becoming a bit of a pattern.
 Nara: Kristen, I did not know you were a socialite.
 <<char_right NaraSad2>>
-<<voiceline NaraSad2>>
 :Nara’s ears droop.
 Kristen: Why the long face?
 Nara: It seems as if everyone in Solace adores you.
 Kristen: Don’t Fallinelven people love you too? I think I’ve seen a couple of elves bow deeply in your general direction when they see you coming.
 Nara: As they should, but…
-<<voiceline NaraSad2>>
 :Nara sighs.
 Nara: Everyone knows me because I am a princess. Everyone knows you because you are Kristen.
-
--> “I mean, I did also save the world a couple times? So that’s definitely part of it.”
+-> I mean, I did also save the world a couple times? So that’s definitely part of it.
     <<char_right NaraDisgust2>>
-    <<voiceline NaraAngry3>>
     Nara: Oh. How wonderful it is that you are both well-loved <i>and</i> a hero known throughout the material plane.
     <<kristen Grin>>
     Kristen: Actually, I think I punched a few guys in some of the other planes too.
@@ -91,154 +70,125 @@ Nara: Everyone knows me because I am a princess. Everyone knows you because you 
     :Somehow, that doesn’t make you feel good.
     Kristen: Hey come on. I’m sure people in other planes know you too. Like the Elven plane. That’s a plane right?
     Nara: That is not the point. I will govern an entire kingdom someday, but I have no idea how to protect them like you do. I have no idea if I even have the ability to do so.
-    <<voiceline KristenDateSuccess3>>
     Kristen: So you’re jealous.
     Nara: Absolutely not. I think I have sufficiently established over the course of our courtship that I am significantly better than you in every way.
     Kristen: …
     :So she’s a little jealous. Which is really rare for Nara.
     <<add_points 1>>
--> “It’s pretty cool that a bunch of people like me, but I also have, like, a TON of enemies.”
-    Kristen: It’s kind of a privilege that your people aren’t allowed to want to kill you, y’know?
-    <<char_right NaraThink2>>
-    <<voiceline NaraNeutral2>>
-    :Nara hums in thought. This is clearly something that hadn’t occurred to her, which is surprising to you, as someone who has many enemies, all of whom are constantly planning your demise.
-    Nara: I suppose you have a point… perhaps I could create my own type of satisfaction with the life I have been given… and still have organic relationships with others…
-    :Wow that’s a lot of breakthroughs all at once.
-    <<char_right NaraHappy2>>
-    <<voiceline NaraHappy2>>
-    Nara: And perhaps I might not! Who is to say!
-    :Aaaand she’s back.
-    <<add_points 2>>
--> “You know, you could build a life here too, if you wanted.”
+-> You know, you could build a life here too, if you wanted.
     <<char_right NaraDisgust2>>
-    <<voiceline NaraAngry3>>
     :Nara’s brows immediately furrow.
     Nara: No, I cannot. And you know that.
     :Uh oh.
     <<kristen Awkward>>
     Kristen: No, I didn’t mean it like - 
     <<char_right NaraAngry2>>
-    <<voiceline NaraAngry1>>
     Nara: Oh, I know how you meant it. Kristen, I am Fallinelven. I was born there. I grew up there. One day, I will be singlehandedly responsible for its future.
     Kristen: Yeah, but what about all that stuff you said before about your parents and how much you hate it there? Don’t you want to leave it all behind?
     <<char_right NaraSad2>>
-    <<voiceline NaraSad2>>
     :Nara sighs.
     Nara: Kristen. When I am here, I am a foreigner.
     Kristen: But I -
     Nara: I know you do not think of me that way. But you used to.
     :You can’t help but silently agree.
-    <<voiceline NaraSad1>>
     Nara: I love Solace, and I am glad you have helped me realize that. But I will always be a foreigner here. Moving will not solve my problems, it will only create new ones.
     <<add_points 0>>
-
+-> It’s pretty cool that a bunch of people like me, but I also have, like, a TON of enemies. 
+    Kristen: It’s kind of a privilege that your people aren’t allowed to want to kill you, y’know?
+    <<char_right NaraThink2>>
+    :Nara hums in thought. This is clearly something that hadn’t occurred to her, which is surprising to you, as someone who has many enemies, all of whom are constantly planning your demise.
+    Nara: I suppose you have a point… perhaps I could create my own type of satisfaction with the life I have been given… and still have organic relationships with others…
+    :Wow that’s a lot of breakthroughs all at once.
+    <<char_right NaraHappy2>>
+    Nara: And perhaps I might not! Who is to say!
+    :Aaaand she’s back.
+    <<add_points 2>>
 <<char_right NaraThink2>>
 <<kristen Neutral>>
 :Arriving at the meat section, Nara gives the meat a concerned look.
 Nara: Kristen, they call this a delicatessen, yet they seem to be handling the meat rather roughly.
 Kristen: In other areas, they call it a butcher, so…
 <<char_right NaraDisgust2>>
-<<voiceline NaraAngry3>>
 Nara: Kristen why is the butcher a heterosexual-looking man. Where are the butches.
 <<kristen Grin>>
 Kristen: They call it that cause they may be butch… but I’m butcher.
 <<char_right NaraBlush2>>
-<<voiceline NaraRomantic1>>
 Nara: Kristen your mind is finer than a thousand very fine things.
 <<kristen Soft>>
 :Blushing at the compliment, you grab the nearest packet of meat, dash away, realise you probably don’t want to use chopped liver to make meatballs, replace the packet, and run home, Nara in tow.
-
 //al note: back to manor BG
-<<location “Mordred Manor”>>
-<<background Manor>>
+<<location “manor”>>
 <<char_right NaraNeutral2>>
 <<kristen Nervous>>
-<<voiceline KristenAwkward2>>
 :Back at the manor’s kitchen, you puzzle over the spaghetti. You want to cook all of it at once, but half the noodles are sticking out of the pot. Seems like you need a PhD (Pretty hard Degree) to understand this…
 Kristen: Babe, do you know how to cook this?
 <<char_right NaraThink2>>
-<<voiceline NaraCurious1>>
 Nara: I am not entirely sure… I do not know Italian cuisine… The average Fallinelven does not even know Italians exist, much less their struggle to gain rights…
 Kristen: How do you know more about Italians than supermarkets?
 <<char_right NaraNeutral2>>
 Nara: Of course I do. I am an anthropologist, not an ignoramus.
-<<kristen Surprised>>
-<<voiceline KristenSurprised1>>
 Kristen: You’re an anthropologist?
 Nara: Yes, it is my area of study. Did you not know that?
 Kristen: …
-<<kristen Nervous>>
 Kristen: Where <i>is</i> Italy, anyway?
 Nara: I believe it is a province in the Baronies.
 :Was… <i>Baron</i> Italian? Wait, you have no time for this! 
 <<kristen Neutral>>
 :How long should you wait for the pasta to boil so it can cook properly?
-
--> <i>Set a timer on your crystal. A recipe is a recipe, no matter how small.</i>
-    :You’ve got this pasta stuff on lock. You even have time for at least one or two smooches before it’s ready.
-    <<kristen Nervous>>
-    :Orrr maybe just some winks. You’re too nervous to kiss her just yet. Plus, the romantic dinner you’re making should create juuust the right ambiance.
-    <<char_right NaraShock2>>
-    <<voiceline NaraSurprised1>>
-    Nara: Kristen, your eye! Is this one of the symptoms of your lactose hypertolerance???
-    :... you are such a coward.
-    Kristen: No, it’s just regular tolerance… to life…
-    <<kristen Happy>>
-    <<voiceline KristenHappy4>>
-    :But when you check the pasta, it’s perfect! Great job, you!
-    :You make a mental note to learn more about Italian cuisine. If it’s so easy even you can do it, maybe it’s worth researching…
-    <<add_points 2>>
--> <i>Watch the pot until it boils. You think that’s the expression.</i>
+-> Watch the pot until it boils. You think that’s the expression.
     :You stare at the pot, hoping that your secret telekinetic mind powers of heat will kick in just like you always wanted.
     :The seconds stretch into minutes stretch into hours, at least in your mind. After an amount of time that could have been anything from two minutes to twenty-four hours, you pull the pot off the stovetop and open the lid.
     :You stare down at hundreds of tiny noodles.
     <<kristen Surprised>>
-    <<voiceline KristenSurprised2>>
     :Uh oh.
     <<char_right NaraNeutral2>>
     Nara: Kristen, it appears the pasta has shrunk in the wash.
     :You consider tying the noodles together, but you aren’t exactly the most dextrous (see: everything you’ve ever done ever).
     Kristen: So do you wanna - 
-    <<voiceline NaraAngry2>>
     Nara: Absolutely not.
     <<kristen Sad>>
     Kristen: … right. Guess I’ll start again.
     :You start again with a fresh batch, this time breaking the pasta before you cook it and setting a timer. Take that, Italians!
     <<add_points 0>>
--> <i>You don’t have time blindness, you have time foresight. The foresight to take the pot off the stovetop right now because the pasta is ready!</i>
+-> Set a timer on your crystal. A recipe is a recipe, no matter how small.
+    :You’ve got this pasta stuff on lock. You even have time for at least one or two smooches before it’s ready.
+    <<kristen Nervous>>
+    :Orrr maybe just some winks. You’re too nervous to kiss her just yet. Plus, the romantic dinner you’re making should create juuust the right ambiance.
+    <<char_right NaraShock2>>
+    Nara: Kristen, your eye! Is this one of the symptoms of your lactose hypertolerance???
+    :... you are such a coward.
+    Kristen: No, it’s just regular tolerance… to life…
+    <<kristen Happy>>
+    :But when you check the pasta, it’s perfect! Great job, you!
+    :You make a mental note to learn more about Italian cuisine. If it’s so easy even you can do it, maybe it’s worth researching…
+    <<add_points 2>>
+-> You don’t have time blindness, you have time foresight. The foresight to take the pot off the stovetop right now because the pasta is ready!
     <<kristen Surprised>>
     :Okay, maybe it’s a little more than ready. Why is it a circle. You don’t think it started as a circle.
     <<char_right NaraShock2>>
-    <<voiceline NaraSurprised3>>
     Nara: The Blessed Orb of Sustenance… Kristen, we must not touch it, lest we disturb its beauty.
-    Kristen: Why is it Orb?
+    Kristen: Why is it Orb
     <<char_right NaraThink2>>
-    <<voiceline NaraCurious1>>
     Nara: I know not the ways of the kitchen, but I do know you have fucked up somehow. You have been cooking the pasta for an hour, was this not the intended result?
     <<kristen Nervous>>
-    <<voiceline KristenAwkward3>>
     Kristen: … yeah no totally intentional actually… to make Orb… we can’t eat it though, it’s too pretty.
     Nara: Yes, you must start again. We must find a way to preserve the Orb later, though.
     :You decide to start again with a fresh batch, this time breaking the pasta before you cook it and setting a timer. Take that, Italians!
     <<add_points 1>>
-
 <<char_right NaraNeutral2>>
 <<kristen Neutral>>
 :As you finish preparing the pasta and the stuff that goes with it, you take the dishes over to the table Nara has set (there’s no way either of you are trusting you with anything etiquette-related ever again).
 <<kristen Happy>>
-<<voiceline KristenHappy2>>
 :And… wow. This is <i>good,</i> as long as you avoid the vegetables. So much better than fake magic salad. You wonder if there’s a pasta-flavored protein bar.
 Nara: I do not think that is the best idea.
 <<kristen Awkward>>
 :Shit. Did you say that out loud? You think you might have said that out loud.
 Kristen: No you’re totally right actually. Your illusion salad tastes so good.
 <<char_right NaraHappy2>>
-<<voiceline NaraHappy3>>
 :Nara giggles.
 Nara: Not to worry, Kristen. I can see you enjoying your pasta. The greenery, on the other hand… would it kill you to eat a vegetable once in a blue moon, darling?
 Kristen: N- yes…
 <<char_right NaraShock2>>
-<<voiceline NaraCurprised1>>
 Nara: Oh no! Is there yet another intolerance lurking beneath your physically healthy surface?
 <<kristen Grin>>
 Kristen: Yes. I will die if I eat a single vegetable ever.
@@ -248,8 +198,6 @@ Kristen: Yes… so strong… and <i>brave</i>, even…
 Nara: Well I, for one, enjoy all of your cooking. It reminds me of this classic Solesian film…
 :You cross your fingers under the table and hope for a romantic movie to come out of Nara’s mouth.
 Nara: Lady and the Tramp but with Bugbears.
-<<kristen Surprised>>
-<<voiceline KristenNeutral3>>
 Kristen: The children’s movie? For children?
 Nara: The Nara movie, actually. For Nara.
 <<kristen Awkward>>
@@ -264,7 +212,7 @@ Nara: Brokeback Mountain but with centaurs.
 Kristen: I’m surprised you watched it.
 <<char_right NaraHappy2>>
 Nara: Of course I did! It is a classic.
-Kristen: What was your favorite part?
+Kristen: What was your favourite part?
 <<voiceline NaraBespoke8>>
 Nara: When they said ‘I wish I knew how to abdicate you…’
 <<kristen Happy>>
@@ -276,45 +224,35 @@ Kristen: Yes please and also thank you.
 <<kristen Soft>>
 :The two of you settle down on the sofa and watch (D)20 Things I Hate About You, a classic romcom that is comedic and also romantic and oh shit this is the <i>perfect</i> time to kiss Nara.
 :As the main couple on the screen kiss passionately, Nara’s hand kinda… nudges closer to yours. You take it. Is this a sign??
-
--> <i>No no no be SO COOL AND NORMAL. She probably just wants to hold your hand.</i>
+-> No no no be SO COOL AND NORMAL. She probably just wants to hold your hand.
     <<char_right NaraBlush2>>
-    <<voiceline NaraRomantic3>>
     Nara: I think this is the part where we are supposed to kiss. If that is… okay?
     :HELL YES!!!! THIS IS EVERYTHING YOU’VE EVER WANTED!!!!!!
 	Kristen: Yeah…
     :You both lean in…
     <<add_points 0>>
--> <i>YEAH SHE WANTED TO YIPPEE!</i>
+-> YEAH SHE WANTED TO YIPPEE
     :For once, giving into your impulses is the right move. Thank god your ADHD is finally useful.
     Kristen: Do you wanna…?
     <<char_right NaraBlush2>>
-    <<voiceline NaraRomantic3>>
     Nara: Yes please…
     :Your lips move closer and closer towards each other…
     <<add_points 2>>
--> <i>It’s sweet that you asked but also she looks SO ready to kiss you it’s not even funny. Could you have been doing this the whole time??</i>
+-> It’s sweet that you asked but also she looks SO ready to kiss you it’s not even funny. Could you have been doing this the whole time??
     Kristen: Have you - 
     <<char_right NaraBlush2>>
     Nara: Yes.
-    <<kristen Nervous>>
-    <<voiceline KristenRomantic1>>
     Kristen: So should we - 
     Nara: Yes.
     :Both of you lean forward…
     <<add_points 1>>
-
 //al note: either fade to black or Kirby can insert a paragraph about kissing and how great it is
-
-<<kristen Soft>>
 :After a few minutes, you pull back and look at her. How is she so cute up close <i>and</i> far away… you’re so lucky……
-<<voiceline NaraDateSuccess1>>
 Nara: I thoroughly enjoyed our date today.
-<<voiceline KristenDateSuccess2>>
-Kristen: Yeah no me also yes I agree yes.
+Kristen: Yeah no me also yes I agree yes
 Nara: I think, next time, we should perhaps conduct our date outdoors.
 Kristen: Next date? Getting a little presumptuous, are we?
 Nara: I see the tables have turned at my own expense. I can rectify this… but it means we will have to kiss again…
 Kristen: Oh no what will I do…
-<<jump Cassandra7>>
+<<jump Cassandra>>
 ===

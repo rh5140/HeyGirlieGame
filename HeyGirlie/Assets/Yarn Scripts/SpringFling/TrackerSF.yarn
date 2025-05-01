@@ -36,6 +36,9 @@ Kristen: Hey, Tracker. Will you go to Spring Fling with me?
 :Would it be too desperate to say please?
 <<sf_success Tracker>>
 
+// add an if condition that prompts if you want to ask nara too
+// and if you do, <<jump TrackerNara>>
+
 <<if $succeed>>
     <<jump TrackerSuccess>>
 <<else>>

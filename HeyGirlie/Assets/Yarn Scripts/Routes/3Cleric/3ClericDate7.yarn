@@ -1,14 +1,14 @@
 ﻿title: Date7
 ---
-April 28
+April 21
 <<location "PLACEHOLDER">>
 <<set $date_points = 0>>
-<<set $date_points_total = 6>>
+<<set $date_points_total = 0>>
 <<kristen Neutral>>
 :You’re standing in front of the finest spa in Elmville.
 :Well, the finest spa in your budget, which means you’d had to toss out the first twelve of Fabian’s fifteen suggestions and go to this place in the mall instead.
 :Yeah, you know Nara <i>could</i> have paid for those, but this is supposed to be your treat!
-<<char_right TrackerAwkward_3A>>
+<<char_right TrackerAwkward_1>>
 :Yours and Tracker’s, and if you’re a teensy bit nervous, she’s actively panicking right now.
 Tracker: Galicaea, I hope this’ll be up to Nara’s standards. 
 Kristen: I mean, she did come to a bloodrush game with us. Compared to that, this isn’t exactly roughing it.
@@ -19,44 +19,44 @@ Tracker: Yeah, I guess. Or even compared to Wolfsong, really. I just… I want t
 :You nod, knowing she’s talking about more than just this date. You’d really like all this to go well, too.
 Kristen: It’ll be okay! It’ll be <i>good</i>, actually. 
 :You give her a reassuring smile, which you mean, and a bro-ey light punch on the shoulder, which is mostly just a joke.
-<<char_right TrackerNeutral_3A>>
+<<char_right TrackerNeutral_1>>
 :Which works, by the way! She’s not freaking out anymore.
 Tracker: Thanks, Kristen.
 Kristen: Anytime.
 Tracker: So which package did we end up go—
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 Nara: I have some thoughts!
-<<char_right TrackerSurprised_3A>>
+<<char_right TrackerSurprised_1>>
 <<kristen Surprised>>
 <<voiceline KristenSurprised3>>
 Kristen: Uwauhgah!
 <<voiceline TrackerConfused1>>
 :You don’t jump so much as collapse into Tracker in your  shock. Tracker keeps you on your feet, which is good, because you really don’t want to eat shit <i>again</i>. Her hands feel warm as they slide against your back, then shoulders, gently maneuvering you back up - and you should probably stop thinking about this right now.
 Nara: Yes! Please contain your excitement.
-<<char_left NaraThink2>>
+<<char_left NaraThink>>
 Nara: I must say, I am pleasantly surprised at your choice of establishment. And it actually looks clean! It is almost as if you two actually put effort into your appearance and hygiene…
 Kristen: Hey! We shower!
 Nara: <i>Do</i> you though?
 Kristen: I —
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 Nara: Kristen, I have visited your house. Do not lie to me.
-<<char_right TrackerHappy_3A>>
+<<char_right TrackerHappy_1>>
 Tracker: Y’know, maybe she has a point.
 :She’s smirking, the traitor. Doesn’t she realise Nara’s also suggesting she doesn’t shower either? And also —
 Kristen: It’s also <i>your</i> house?!
 Tracker: Wait, shit, yeah. I should probably be defending Mordred’s honor, right?
-<<char_left NaraShock2>>
+<<char_left NaraShock>>
 Nara: My goodness, you both move quickly!
-<<char_right TrackerSurprised_3A>>
+<<char_right TrackerSurprised_1>>
 Tracker: Uh —
 <<kristen Awkward>>
 Kristen: No, it’s not because we’re —
 Nara: It is quite alright. I would never live there myself.
-<<char_left NaraDisgust2>>
+<<char_left NaraDisgust>>
 Nara: The mess alone…
-<<char_right TrackerNeutral_3A>>
+<<char_right TrackerNeutral_1>>
 Tracker: Where <i>do</i> you live, anyway?
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 Nara: To the spa!
 <<kristen Neutral>>
 :Used to this, you just follow her inside without another question. Tracker still looks a little baffled, but she falls in step next to you a moment later.
@@ -69,7 +69,7 @@ Wait, what? This was your thing! You were supposed to do this for her! And now s
     :You look at Tracker and shrug. Tracker shrugs back.
     Tracker: You know more about this than we do, Nara. I’m down to follow your lead.
     Kristen: What she said.
-    <<char_left NaraHappy2>>
+    <<char_left NaraHappy>>
     Nara: Excellent!
     <<add_points 2>>
 -> <i>Pull Nara aside and nervously ask how much this is going to cost.</i>
@@ -85,17 +85,17 @@ Wait, what? This was your thing! You were supposed to do this for her! And now s
     <<add_points 1>>
 -> <i>Tell the receptionist that you’re going to stick with the original package, thanks.</i>
     :The receptionist gives you the side-eye of someone who has just spent the last five minutes listening to an incredibly complicated request and now has to redo everything.
-    <<char_left NaraAngry2>>
+    <<char_left NaraAngry>>
     Nara: Kristen, I do not think you understand how much more I know about this than you. It is in your best interest to let me take the lead.
     Tracker: She’s got a point, Kristen.
     Kristen: Wha — you’re supposed to be on my side!
-    <<char_right TrackerAngry_3A>>
+    <<char_right TrackerAngry_1>>
     Tracker: Not when you’re being rude! Look, <i>we’re</i> taking <i>Nara</i> out. Let the lady choose, Kristen!
-    <<char_left NaraNeutral2>>
+    <<char_left NaraNeutral>>
     Nara: Thank you, Tracker. I am glad at least one of you is on my side.
     :You’re going to be stewing about this for the rest of the date, you just know it.
     <<add_points 0>>
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 :Nara pays for the new package she’s selected and the three of you are escorted past the lobby in the spa. The attendant seems way nicer now that Nara’s paid a dragon’s hoard worth of gold in one go via shoveling coins onto the desk with her hands.
 Kristen: So what are we doing first?
 :Nara laughs.
@@ -109,20 +109,20 @@ Tracker: Damn, those massage tables look pretty big.
 :She’s smiling, but she looks a little tense. When you give her a concerned look, though, she shakes her head at your wordless question.
 Tracker: Nah, I’m fine. Just not used to places like… this.
 :Nara looks her up and down. Her face screws up a bit, like she's come up with something a little mean to say but thought better of it. Then, she softens, and breaks into a bright smile.
-<<char_left NaraHappy2>>
+<<char_left NaraHappy>>
 Nara: Well then, I am delighted to accompany you to your first.
 :Tracker’s smile softens into something a little more genuine when she looks at Nara. Maybe you should be jealous, but you’re just happy to see Tracker happy. Happier? Whatever, you get it.
 :Nara pulls an entire bag out of one of her pockets of holding and looks at you questioningly.
-<<char_left NaraThink2>>
+<<char_left NaraThink>>
 Nara: Kristen, where is your spa bag? I know this is a new experience for Tracker, but I assume you have at least taken advantage of one of your gym’s many spas.
 Kristen: Spa bag?
 :Nara sighs.
 Nara: I should not be surprised. Sigh… I suppose you will have to content yourselves with what the spa provides.
 :What the spa provides is honestly nicer than anything you own, so this should be an improvement for you both.
-<<char_left NaraNeutral2>> 
+<<char_left NaraNeutral>> 
 :After slipping on the most soft and expensive bathrobe you’ve ever worn in your life, you head into the main room with Nara and Tracker. 
 :Okay, yes you knew going into this it would be a group massage, but actually <i>seeing</i> the massage tables lined up next to each other is doing funny things to your insides. There’s tasteful instrumental music playing in the background. There are <i>scented</i> candles. It’s all very… intimate.
-<<char_right TrackerAwkward_3A>>
+<<char_right TrackerAwkward_1>>
 :Nara’s bathrobe is very clearly made of the finest fabrics Fallinel has to offer, and she looks entirely at ease as she settles onto the massage table.
 :In contrast, Tracker looks a little like she might throw up.
 :You try to give her a reassuring look. From the responding amusement in her expression, you don’t exactly nail it.
@@ -131,7 +131,7 @@ Nara: I should not be surprised. Sigh… I suppose you will have to content your
 :She’s normally so poised  - even in the bloodrush field, completely covered in mud, she’d still somehow managed to radiate an air of regal dignity. Here, all that tension seems to completely leave her body - still Nara, just a little less polished and perfect.
 :...Still extremely pretty though.
 :You are staring. You should probably stop staring.
-<<char_left NaraHappy2>>
+<<char_left NaraHappy>>
 Nara: I have missed this…
 Kristen: Now that I know it’s here, we can come back, if you want. We could, uh, make it a regular thing?
 :Nara makes a noise that vaguely sounds like agreement, though she’s still got her eyes closed. She reminds you a little of a cat napping in a sunbeam — calm and lazy and unwilling to be roused.
@@ -155,7 +155,7 @@ Tracker: Right. Easy peasy, thanks, Kristen. // TRACKER can be a little mean as 
     Tracker: Yeah, okay. Sorry.
     Kristen: It’s cool. I get it.
     :You take a deep breath and Tracker does the same. After a few repetitions of that, Tracker doesn’t look quite so tense.
-    <<char_right TrackerNeutral_3A>>
+    <<char_right TrackerNeutral_1>>
     Tracker: Thanks, Kristen.
     Kristen: No worries.
     Nara: I am glad you two are finally relaxing. Can you do so quietly now? I am attempting to Chill Out.
@@ -168,64 +168,63 @@ Tracker: Right. Easy peasy, thanks, Kristen. // TRACKER can be a little mean as 
     Nara: You seemed so eager to help… I could not tell you the truth…
     Tracker: Okay, can we hurry this up?
     <<add_points 0>>
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 :You’re not sure if the massage is at all relaxing, but your muscles do feel a little less tense when you’re finally done, even if you’re antsy to do something besides just sitting still.
 :Nara looks like she could stay there forever, but she’s organized so much and you’re kinda curious to find out what else she has in store.
 :Manicures are next, it seems. Though two immediate problems present themselves: you’ve never had your nails painted professionally, and Tracker’s nails are probably impervious to the humble nail clipper.
 Tracker: It’s fine, don’t worry about me. You two can get pampered and I can just hang out.
-<<char_left NaraSad2>>
+<<char_left NaraSad>>
 Nara: Tracker! The purpose of a spa is to relax! And if you are not relaxing, I am unable to relax!
 Tracker: You seemed pretty relaxed earlier…
 Nara: Not as relaxed as I could have been! Can you at least <i>try?</i> Please? For me? 
 :Tracker clearly wrestles with herself, but in the end, Nara’s puppy eyes win.
-<<char_right TrackerNeutral_3A>>
+<<char_right TrackerNeutral_1>>
 Tracker: Okay. I’ll try.
 Tracker: But I still might have to skip this part, unless they’ve got silver nail clippers.
-<<char_left NaraHappy2>>
+<<char_left NaraHappy>>
 Nara: Yippee!
 :As it turns out, when the manicure team finally does arrive and you explain Tracker’s situation, they don’t even blink. In fact, the head manicurist seems to gain a steely look of determination.
 :They start small, with reinforced nail clippers, before scaling up to kitchen scissors, gardening shears, and finally, a car buffer twice the size of Tracker’s head.
 :But nothing works.
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 :Eventually, Nara huffs and pulls a pair of silver clippers out of her own spa bag. The squadron of nail technicians accept it gratefully.
 Tracker: Thanks, Nara.
 Nara: You do not have to thank me. All I wish is for you to enjoy yourself here.
-<<char_right TrackerBlush_3A>>
+<<char_right TrackerBlush_1>>
 :Tracker smiles at her before letting the staff back at her hands, a lot less trepidatiously than she had with the buffer.
 :It’s more relaxing than the massage, but it’s still not exactly your idea of a good, chill time. Even if your hands <i>do</i> look really nice when they’re done.
 :Nara’s look as perfect as ever, of course, and it’s weird seeing Tracker with short nails again.
-<<char_right TrackerNeutral_3A>>
 :You remember her claws grow back fast. They’ll be back to normal by the end of the day, probably.
 :Nara’s excited about whatever the last thing she has planned for your spa date, though. She practically leaps out of her seat once they’re finished with all three of your manicures.
 :The staff leads you towards another room past an array of zen gardens and crystal grids and all manner of things that are spa-related, presumably. You have no clue what half of it is, but Nara doesn’t look even a little surprised, so maybe you’re just uneducated.
 :The last room is just… wood. Wooden walls and benches and nothing that seems especially relaxing to you.
 :Tracker immediately brightens up when you walk in, though.
-<<char_right TrackerHappy_3A>>
+<<char_right TrackerHappy_1>>
 Tracker: I didn’t realize they had a sauna here!
 :Oh, wait, you’d forgotten those existed. That makes more sense.
-<<char_left NaraHappy2>>
+<<char_left NaraHappy>>
 Nara: Welcome to the sauna! I suppose I need not explain the purpose of this place to athletes like yourselves. I trust this one lives up to your standards?
 Tracker: Just perfectly. But you already know I’m a cheap date, Nara. 
 :And oh Cassandra help you, she <i>winks.</i> It’s not even <i>directed</i> at you, Applebees, why are you this flustered???
 :Okay, so you know. But you reserve the right to be disappointed at your own predictability. Turns out, grappling with jealousy is just as bad as confronting yourself for <i>not</i> being jealous… 
-<<char_left NaraBlush2>>
+<<char_left NaraBlush>>
 :At least Nara seems pleased - though you can’t tell if it’s due to the implications of that last comment, or just her natural reaction to Tracker being happy. (Cute.)
 Nara: Wonderful! I am delighted to learn they still bring you joy. It is why I rearranged the traditional spa itinerary in the first place.
 :Aw. That’s even cuter, actually.
 :You find it a lot easier to relax in here too, actually. Maybe it’s the steam, or maybe it’s the fact that it’s just the three of you and not a bunch of attendants, or maybe it’s that Tracker’s finally relaxed, too. 
-<<char_left NaraHappy2>>
+<<char_left NaraHappy>>
 :If you’d thought Nara was content during the massage, she’s practically euphoric now, watching both you and Tracker with an easy fondness that makes your heart skip a beat.
 :The three of you chat quietly about nothing in particular. Nothing too heavy or loaded or wild, just light and simple. 
 :The new things Nara’s noticed about Solace this week, how Tracker’s cleric classes at Bastion City University are going, how you’re tackling your senior year at Aguefort. 
 :Underneath the warm low-light of the spa, their faces both transform into something softer, more vulnerable. It kinda makes your chest hurt. In a good way, of course.
 Tracker: This was really nice.
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 Nara: Of course it was! I enjoyed an opportunity to show you both the finer things in life.
-<<char_left NaraThink2>>
+<<char_left NaraThink>>
 Nara: Though I do wonder what contract this spa has struck with infernals to maintain this heat so consistently…
 Tracker: Babe, it’s arcanotech. 
 :Nara, predictably, ignores this entirely.
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 :After a little more chatter, Tracker falls quiet and then fully asleep. She even snores a little.
 Kristen: Cute.
 Nara: Unbelievably cute.
@@ -236,12 +235,11 @@ Nara: Sure! What should we discuss?
 Kristen: Are you... cool with me and Tracker?
 Nara: Of course, why would I not be?
 Kristen: No, I mean are you cool with all three of us being a thing. Together, I mean.
-<<char_right NaraThink2>>
-Nara: I am not sure I understand you correctly, Kristen. I love you. I love Tracker. I know those feelings are mutual, and I know you both love each other. I know all of this, and it makes me love the both of you even more.
-Nara: I must admit, I had my reservations in the past regarding relationships involving more than one paramour. But being with both of you… together… there is nothing in the world that I want more. 
+<<char_right NaraThink>>
+Nara: I am not sure I understand you correctly, Kristen. I love you. I love Tracker. I know those feelings are mutual, and I know you both love each other. I know all of this, and it makes me love the both of you even more. 
 Nara: Why? Are… <i>you</i> not cool with us?
 Kristen: No! No, I am. I’m sorry for asking, Nara.
-<<char_right NaraNeutral2>>
+<<char_right NaraNeutral>>
 Nara: I forgive you. To be honest, I appreciate the frankly unnecessary concern. Of course I want to spend time with the two of you.
 Tracker: Hrm?
 :You snort as Tracker stirs.
@@ -252,25 +250,25 @@ You turn to Tracker, half-expecting her to have a suggestion all ready. But she 
 -> <i>Suggest something more fun and cool and sexy. Like the Vulture Dimension.</i>
     Kristen: What if we go to the Vulture Dimension? That’ll get our heart rates up after relaxing so much.
     :Tracker is intrigued. Nara is not.
-    <<char_left NaraDisgust2>>
+    <<char_left NaraDisgust>>
     Nara: The What.
     :For a second, you actually think before you speak, and try to imagine explaining to <i>Nara</i> - who just learnt how Solesian microwaves work - that there’s an entire parallel dimension you once discovered because you had to fuck with a bird during a pivotal battle.
-    <<char_left NaraShock2>>
+    <<char_left NaraShock>>
     Nara: You fucked a what?
     <<kristen Awkward>>
     :Oh shit you said that last bit out loud.
     Kristen: No, I didn’t - 
-    <<char_left NaraNeutral2>>
+    <<char_left NaraNeutral>>
     Nara: Of course, I knew of your principal’s extensive lobbying in support of the pro avian intercourse community, Kristren. I am greatly surprised to learn of your personal support for him, though! Tell me, was the bird a longtime committed partner, or -
     Kristen: NARA, I HAVE NEVER FUCKED A BIRD IN MY LIFE EVER. 
-    <<char_right TrackerLaugh_3A>>
+    <<char_right TrackerLaugh_1>>
     Tracker: Are you sure about that?
     :You have never wanted to disappear more.
     <<add_points 2>>
 -> Kristen: “I’m okay with anything as long as it’s with you two.”
     :Tracker smiles at you.
     Tracker: Sap. But seriously, is there anything you’d wanna do?
-    <<char_left NaraNeutral2>>
+    <<char_left NaraNeutral>>
     Nara: It is difficult to plan for ‘anything’, Kristen.
     Kristen: Um, I’m not picky. I’ll go anywhere.
     Nara: But where do you <i>want</i> to go?
@@ -278,21 +276,21 @@ You turn to Tracker, half-expecting her to have a suggestion all ready. But she 
     <<add_points 1>>
 -> Kristen: “I don’t know. Let’s just see what happens.”
     Kristen: You know, just roll with the punches. I’ll see you when I see you.
-    <<char_left NaraDisgust2>>
+    <<char_left NaraDisgust>>
     Nara: Kristren, this is most unhelpful.
     Tracker: If you’re too busy to spend time together soon, we can plan something further out. 
     Kristen: I mean, whatever works is fine.
     Tracker: Do you <i>want</i> to hang out again?
     Kristen: Of course!
-    <<char_left NaraNeutral2>>
+    <<char_left NaraNeutral>>
     :Nara doesn’t look quite so upset anymore, but neither of them look thrilled with your easy-going nature. You thought the whole point was to relax and be chill, though?
     <<add_points 0>>
-<<char_left NaraNeutral2>>
+<<char_left NaraNeutral>>
 Kristen: I really don’t know, though. Normally I just meet up with people wherever they happen to be going.
 :You’ve been doing that for nearly two months now, actually. That’s wild.
 Kristen: Uh, you can come over to my place?
 Tracker: Which is also my place. But yeah, I’d be down to hang out at home.
-<<char_left NaraHappy2>>
+<<char_left NaraHappy>>
 Nara: Are you inviting me to the beloved Solesian ritual commonly known as a Slumber Party?
 Kristen: Um.
 :You’d mostly meant they could come over and sit on the couch to watch trashy TV with you, but…
@@ -303,5 +301,5 @@ Nara: I accept your invitation! I will come prepared with only the finest of nig
 <<kristen Happy>>
 :This actually sounds like a lot of fun. It’s been ages since you’ve hosted a slumber party! Like, more than a year. 
 :You remember the face Nara made when she saw your room for the first time. Eesh. You might have to actually do something about the perpetual disaster zone that is Mordred Manor if you want your next date to go well...
-<<jump Cassandra3>>
+<<jump Cassandra>>
 ===

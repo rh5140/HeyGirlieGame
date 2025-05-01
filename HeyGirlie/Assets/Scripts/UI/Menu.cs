@@ -9,10 +9,6 @@ public abstract class Menu : MonoBehaviour
     [SerializeField] private GameObject arrowKeyStart;
     [SerializeField] private GameObject arrowKeyPrevious;
 
-    public virtual void Close(){
-        Destroy(gameObject);
-    }
-
     protected void Pause(){
         if(!GameManager.Instance.pauseLock){
             GameManager.Instance.Pause(true);

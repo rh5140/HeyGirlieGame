@@ -1,6 +1,6 @@
 ﻿title: Date6
 ---
-April 27
+April 14
 <<location "Gertie’s House">>
 <<set $date_points = 0>>
 <<set $date_points_total = 12>>
@@ -23,10 +23,8 @@ And then…
 And then you forgot. There’s no ifs, ands, or buts about it. You forgot about your date with the girl who’s got more nemeses than strands of hair.
 You checked your crystal after a couple hours to see about ten unread texts and five missed calls from Gertie. 
 Whoops. It didn’t take an oracle to foresee the storm headed your way.
-The gravel of Gertie’s driveway crackles under the wheels of the Hangvan.
-You stifle a curse as you see Gertie already outside waiting for your date, her arms crossed, her tail coiled around her legs.
+The gravel of Gertie’s driveway crackles under the wheels of the Hangvan. You stifle a curse as you see Gertie already outside waiting for your date, her arms crossed, her tail coiled around her legs.
 <<char_right GertieSad>>
-<<voiceline KristenGreetingGertie1>>
 You put on your best smile and roll down the window.
   -> Kristen: “Howdy, what’s a fine lady like yourself doing outside all alone?”
     <<voiceline KristenGreeting1>>
@@ -51,8 +49,7 @@ Kristen: Oh uh, thanks Hangvan, maybe not the time.
 Gertie: Actually, Mr. Van, I wouldn’t mind some music.
 Hangvan: Groovy.
 <<voiceline KristenAwkward1>>
-Despite the Hangvan’s efforts, no amount of steel drum can cover the bad vibes coming off of Gertie.
-But it does buy you some valuable time to think of excuses.
+Despite the Hangvan’s efforts, no amount of steel drum can cover the bad vibes coming off of Gertie. But it does buy you some valuable time to think of excuses.
   -> Kristen: “Want to talk about it?”
     Gertie: Fine.
     <<add_points 2>>
@@ -62,8 +59,7 @@ But it does buy you some valuable time to think of excuses.
   -> <i>Let the music play.</i>
     <<voiceline GertieDateFail2>>
     <<add_points 0>>
-Gertie: Where were you? We were supposed to be at the <i>Poorbehind Hill</i> screening twenty minutes ago.
-Gertie: I got those tickets for us…
+Gertie: Where were you? We were supposed to be at the <i>Poorbehind Hill</i> screening twenty minutes ago. I got those tickets for us…
   -> Kristen: “Baxter ate my movie ticket?”
     <<kristen Awkward>>
     Gertie continues to look unimpressed. You’re striking out here, Applebees.
@@ -100,7 +96,7 @@ Kristen: I didn’t mean it like that.
 Gertie: I’m not perfect either, Kristen. How about we give each other a bit more slack?
 Kristen: That would be nice.
 Neither of you to notice that, in the middle of your drive, the Hangvan had switched over the music from steel drum to more of a smooth sax. 
-<<location "Drive-In">>
+<<location "Drive-In Theatre">>
 <<kristen Nervous>>
 By the time you arrive at the drive-in, you’re well past thirty minutes late. You try to stealthily pull up to the ticket booth without alerting the rest of the movie-goers.
 But when you’re in a giant sentient van with your headlights on, that becomes a bit harder.
@@ -111,9 +107,7 @@ Shellford: No late entry.
 Kristen: Heyyyyy Shellford. Long time no chat.
 Shellford: Yeah. That’s what happens when you don’t show up to our Alliance meetings.
 <<voiceline KristenAwkward2>>
-You laugh it off. Last time you checked in with Shellford, you were on good terms… or so you thought. 
-Now that you think about it, it has been a while since you last attended one of those meetings.
-Probably not the best look.
+You laugh it off. Last time you checked in with Shellford, you were on good terms… or so you thought. Now that you think about it — it’s been a while since you last attended one of those meetings. Probably not the best look. 
 Kristen: Well, Shelly, you know that’s because I’m a little busy with being student body president.
 Shellford: Are you even an ally anymore?
 At this point Gertie leans over from the passenger seat to address Shellford. You try not to think about how close her head is to you.
@@ -175,15 +169,14 @@ Kristen: C’mon, honey. How bad could it be?
 TEN MINUTES LATER
 <<kristen Surprised>>
 <<char_right GertieAngry>>
-Movie: According to all known laws of aviation, there is no way that a bee should be able to fly.
+“According to all known laws of aviation, there is no way that a bee should be able to fly.”
 Oh no. Oh <i>Cassandra</i> no.
 This is somehow worse than no movie.
 Gertie: Wrong. Wrong. Wrong. Wrong.
 <<voiceline GertieBee2>>
 Gertie: The “laws of aviation” don’t say anything of the sort! Who was doing their research? Did they even consult an apiarist? It’s all a big disgrace!
 You grimace and drop your head into your hands. You didn’t expect to pick the <i>one</i> movie that would piss Gertie off more than you being late.
-Gertie: I can’t wait for the credits.
-Gertie: I have some new nemeses to declare…
+Gertie: I can’t wait for the credits. I have some new nemeses to declare…
 <<voiceline KristenNeutral2>>
   -> Kristen: “I’m sure they just didn’t have the budget for a consultant!”
     <<kristen Nervous>>
@@ -323,8 +316,7 @@ Kristen: You bring the bees. I’ll bring the puns.
 <<char_right transparent>>
 <<kristen Soft>>
 As you drive back in comfortable silence, Gertie leans her head against the window, falling asleep.
-You keep your eyes on the road, but every once in a while, you glance over to admire her. She’s hardly a graceful sleeper.
-A little bit of drool trails down the window, but you can’t help but be charmed by it. 
+You keep your eyes on the road, but every once in a while, you glance over to admire her. She’s hardly a graceful sleeper. A little bit of drool trails down the window, but you can’t help but be charmed by it. 
 <<location "Gertie’s House">>
 As you pull into her gravel driveway, she wakes up naturally and stretches out her arms.
 <<char_right GertieBlush>>
@@ -338,5 +330,5 @@ Kristen: Of course. Got to get a jump on writing that pitch for the career fair!
 <<voiceline KristenFarewellGertie2>>
 <<char_right transparent>>
 You get back in the Hangvan and drive home. If you’re gonna be making mistakes, at least you have the right person by your side to help you through it.
-<<jump Cassandra6>>
+<<jump Cassandra>>
 ===

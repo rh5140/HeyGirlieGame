@@ -6,8 +6,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using TMPro;
 
 
@@ -77,6 +75,8 @@ namespace Yarn.Unity
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
             // If we don't already have enough option views, create more
+            //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+            //SettingManager.Instance.UpdateOptionView();
             if (dialogueOptions.Length > 3)
             {
                 gridLayout.gameObject.SetActive(true);
@@ -98,12 +98,10 @@ namespace Yarn.Unity
 
             }
 
+
             // Set up all of the option views
             int optionViewsCreated = 0;
 
-            HGGOptionView prev = null;
-            Navigation nav = new Navigation();
-            nav.mode = Navigation.Mode.Explicit;
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
@@ -118,20 +116,9 @@ namespace Yarn.Unity
                     continue;
                 }
                 optionView.gameObject.SetActive(true);
-                
-                optionView.key = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Alpha" + (i + 1));
-                optionView.keyAlt = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Keypad" + (i + 1));
-                optionView.order = i+1;
 
                 optionView.palette = this.palette;
                 optionView.Option = option;
-
-                if(prev != null){
-                    nav.selectOnDown = optionView;
-                    prev.navigation = nav;
-                    nav.selectOnUp = prev;
-                }
-                prev = optionView;
 
                 // The first available option is selected by default
                 if (optionViewsCreated == 0)
@@ -142,55 +129,49 @@ namespace Yarn.Unity
                 optionViewsCreated += 1;
             }
 
-            nav.selectOnDown = null;
-            prev.navigation = nav;
-
             // Update the last line, if one is configured
-            // if (lastLineContainer != null)
-            // {
-            //     if (lastSeenLine != null)
-            //     {
-            //         // if we have a last line character name container
-            //         // and the last line has a character then we show the nameplate
-            //         // otherwise we turn off the nameplate
-            //         var line = lastSeenLine.Text;
-            //         if (lastLineCharacterNameContainer != null)
-            //         {
-            //             if (string.IsNullOrWhiteSpace(lastSeenLine.CharacterName))
-            //             {
-            //                 lastLineCharacterNameContainer.SetActive(false);
-            //             }
-            //             else
-            //             {
-            //                 line = lastSeenLine.TextWithoutCharacterName;
-            //                 lastLineCharacterNameContainer.SetActive(true);
-            //                 lastLineCharacterNameText.text = lastSeenLine.CharacterName;
-            //             }
-            //         }
-            //         else if (line.Text[0] == ':')
-            //         {
-            //             line.Text = line.Text.Substring(1);
-            //         }
+            if (lastLineContainer != null)
+            {
+                if (lastSeenLine != null)
+                {
+                    // if we have a last line character name container
+                    // and the last line has a character then we show the nameplate
+                    // otherwise we turn off the nameplate
+                    var line = lastSeenLine.Text;
+                    if (lastLineCharacterNameContainer != null)
+                    {
+                        if (string.IsNullOrWhiteSpace(lastSeenLine.CharacterName))
+                        {
+                            lastLineCharacterNameContainer.SetActive(false);
+                        }
+                        else
+                        {
+                            line = lastSeenLine.TextWithoutCharacterName;
+                            lastLineCharacterNameContainer.SetActive(true);
+                            lastLineCharacterNameText.text = lastSeenLine.CharacterName;
+                        }
+                    }
+                    else if (line.Text[0] == ':')
+                    {
+                        line.Text = line.Text.Substring(1);
+                    }
 
-            //         if (palette != null)
-            //         {
-            //             lastLineText.text = HGGLineView.PaletteMarkedUpText(line, palette);
-            //         }
-            //         else
-            //         {
-            //             lastLineText.text = line.Text;
-            //         }
+                    if (palette != null)
+                    {
+                        lastLineText.text = HGGLineView.PaletteMarkedUpText(line, palette);
+                    }
+                    else
+                    {
+                        lastLineText.text = line.Text;
+                    }
 
-            //         lastLineContainer.SetActive(true);
-            //     }
-            //     else
-            //     {
-            //         lastLineContainer.SetActive(false);
-            //     }
-            // }
-            
-            // disable last line from appearing
-            lastLineContainer.SetActive(false);
+                    lastLineContainer.SetActive(true);
+                }
+                else
+                {
+                    lastLineContainer.SetActive(false);
+                }
+            }
 
             // Note the delegate to call when an option is selected
             OnOptionSelected = onOptionSelected;
@@ -217,7 +198,8 @@ namespace Yarn.Unity
                 optionView.transform.SetAsLastSibling();
 
                 optionView.OnOptionSelected = OptionViewWasSelected;
-
+                optionView.key = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Alpha" + (optionViews.Count + 1));
+                optionView.keyAlt = (KeyCode) System.Enum.Parse(typeof(KeyCode), "Keypad" + (optionViews.Count + 1));
                 optionViews.Add(optionView);
 
                 return optionView;

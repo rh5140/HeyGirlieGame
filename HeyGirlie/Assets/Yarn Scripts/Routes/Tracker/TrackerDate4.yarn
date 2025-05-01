@@ -1,12 +1,11 @@
 ﻿title: Date4
 ---
-April 28
+April 13
 <<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 10>>
 <<kristen Neutral>>
 :Sighing, you flop back on to your still unmade bed. After a half hour of switching between outfits, making sure there’s nothing stuck in your teeth (Cassandra didn’t help), and pointedly ignoring your deity’s laughter, you’re at the state of the pre-date jitters where there’s nothing left to do except... <i>wait.</i>
-<<voiceline KristenSad2>>
 :You stare at the Immovable Rod attached to your wall. This. Is. Torture.
 :But. Date night! With Tracker!
 :It’s been a while.
@@ -15,7 +14,6 @@ April 28
 <<kristen Awkward>>
 :Okay, a lot nervous. What if you mess this up and Tracker decides she never wants to date you again?
 <<kristen Neutral>>
-<<voiceline KristenAwkward2>>
 :Pull yourself together, Applebees. The time for freaking out has passed. It’s the night of your reservation — yeah, you made a <i>reservation</i>, you’re in it to win it — and you’re going to have a nice time with Tracker.
 :You like Tracker! She likes you! She said yes! How bad could it go?
 :…
@@ -36,16 +34,13 @@ April 28
 <<kristen Awkward>>
 :Well, until you got caught by Sandra Lynn.
 :Might be a little too forward to use the passage right now, anyway. You leave it and take the long way around.
-<<kristen Neutral>>
 :You knock rather than barging in.
-<<voiceline TrackerGreeting1>>
 Tracker: Come in!
 :You open the door and see Tracker lying back on her bed, much like you were.
 <<char_right TrackerBlush_1>>
 :When she sees you, she scrambles to her feet. Tracker runs a hand through her hair, idly mussing it up in an unfairly distracting way.
 :You both speak at the same time.
 Tracker: Hey.
-<<voiceline KristenGreetingTracker2>>
 Kristen: Hey!
 :There’s a pause, and then Tracker laughs, a little shyly, and Cassandra she’s so cute you could explode.
 Tracker: Is this okay for whatever you have planned?
@@ -56,23 +51,19 @@ Kristen: What you’re wearing is fine.
 Kristen: More than fine! You look good! Great, even!
 :You think you hear Cassandra laughing at you from down the hall. Traitor.
 <<char_right TrackerLaugh_1>>
-<<voiceline TrackerHappy2>>
 :Tracker laughs too, but it doesn’t feel mean.
 Tracker: I got what you meant, Kristen, don’t worry.
-<<kristen Neutral>>
 <<char_right TrackerHappy_1>>
 Tracker: Let’s just relax, have a good time tonight.
 -> <i>Smile at her. She’s right! Let’s just have fun!</i>
     <<kristen Happy>>
-    <<voiceline KristenHappy4>>
     Kristen: Yeah, okay.
     :Tracker’s smile widens.
-    Tracker: Besides, it’s not like tonight’s our only chance. We can always... I don’t know, head back to the centaur rodeo and steal me another hat.
-    :Fuck, you should’ve worn the hat. It’s still sitting on your dresser.
+    Tracker: Besides, you’ve got that salsa hat to spice things up, if we need to... I’m turning into Jawbone, aren’t I.
+    :Fuck, you should’ve worn the hat.
     :It’s okay, though! Next time.
     <<add_points 2>>
 -> <i>If she’s not nervous, you won’t be either. Relax.</i>
-    <<voiceline KristenNeutral1>>
     <<kristen Neutral>>
     :You take a breath, and steel yourself. Okay. If she believes you won’t fuck this up, you can too. Tracker smiles.
     Tracker: ‘Attagirl.
@@ -84,14 +75,13 @@ Tracker: Let’s just relax, have a good time tonight.
     :Doesn’t she get this is your <i>entire future</i> you’re talking about? Everything the two of you might be from now on hinges on this!
     Tracker: Kristen. I’m serious.
     Tracker: Don’t freak out.
+    <<char_right TrackerSad_1>>
     Tracker: I mean… we can still have fun, can’t we?
-    <<voiceline TrackerDateFail3>>
     Kristen: ...
     <<add_points 0>>
 :Tracker reaches for your hand and squeezes it reassuringly.
 Tracker: Hey. I’m a little nervous, too.
 <<char_right TrackerBlush_1>>
-<<voiceline TrackerBespoke2>>
 Tracker: But then I remember… it’s just me and you.
 :You squeeze her hand back.
 Kristen: Anything you need to grab before we head out?
@@ -100,16 +90,13 @@ Tracker: Nope! I’m all yours.
 :You walk Tracker out and hold open the passenger side door of Jawbone’s car for her.
 Kristen: M’lady.
 <<char_right TrackerLaugh_1>>
-<<voiceline TrackerHappy2>>
 :Tracker rolls her eyes before dissolving into laughter.
 Tracker: Dork.
 <<char_right TrackerHappy_1>>
 <<kristen Happy>>
 :You talk about everything and nothing on the way to the restaurant. 
-<<voiceline KristenHappy2>>
 :Tracker’s coursework — cleric stuff at BCU’s apparently not too bad in the first semester, noted — and what you’re working on with Cassandra and the other people you’ve both hung out with over the past few weeks.
 :She still seems to find the idea of you being president hilarious.
-<<voiceline TrackerNeutral2>>
 Tracker: Weren’t you in detention literally on the first day of school?
 Kristen: Hey, I had to beg for that! That... actually sounds really lame in retrospect, forget that I said that.
 :You’re having such a good time just talking with her, you’re surprised to look up and suddenly find you’ve arrived at your destination.
@@ -117,11 +104,9 @@ Kristen: Hey, I had to beg for that! That... actually sounds really lame in retr
 Tracker: I don’t recognize this place.
 Kristen: Trust me, you’re gonna love it.
 <<char_right TrackerHappy_1>>
-<<voiceline TrackerSuccess1>>
 Tracker: Okay, cowboy, let’s see what you’ve got.
 :She rushes out of the car to hold the door open for <i>you</i> this time, and takes your arm with a smile when you offer it to her.
 :You proudly walk her up to the hostess.
-<<voiceline KristenGreeting1>>
 Kristen: Reservation for two under Applebees, please!
 :Tracker looks at the decor, the menus, and blinks a couple times.
 <<char_right TrackerSurprised_1>>
@@ -129,15 +114,16 @@ Tracker: Kristen, what is this?
 :The host interrupts you before you can answer her, walking you to your table.
 :You pull out her chair for her, and she smiles at you, a little distracted.
 Kristen: So! This is —
-<<location "Dinner in the Dark">>
+<<location "Black Background">>
+<<bg_filter_on black>>
 :The lights all go out, stealing your thunder a bit.
+// sprites disappear? Just eyes? if it’s easier to have sprites we’ll go back and add them in :)
 <<char_right transparent>>
 <<kristen transparent>>
 Kristen: Aw, man. Spoilers. Anyway, ta-da! It's dinner in the dark! It’s supposed to be really fun.
 Kristen: And the food’s good, from what I could find.
 Kristen: Plus, it’s kind of on theme for us, huh? Darkness, twilight, et cetera? // Kristen’s eyes just start sweating somehow in the dark here
 Tracker: Definitely. But, uh, Kristen —
-<<voiceline KristenAwkward1>>
 :Oh, no. She hates it. Fuuuuuuuck.
 Tracker: You remember I have darkvision, right?
 Kristen: Uh.
@@ -152,12 +138,10 @@ Kristen: Uh.
     Tracker: And I thought we were going to be honest with each other from now on.
     Tracker: You know, be on the same page?
     Kristen: Right. Sorry.
-    <<voiceline TrackerSad2>>
     :Tracker sighs, but doesn’t make any motions to leave. At least, none that you can hear.
     :Silver linings?
     <<add_points 0>>
 -> <i>Apologize profusely and beg for forgiveness.</i>
-    <<voiceline KristenDateFail3>>
     Kristen: I am so, so sorry.
     Kristen: I don’t know how I forgot! I’m the worst.
     Tracker: Kristen, it’s not a big deal!
@@ -168,7 +152,6 @@ Kristen: Uh.
     Tracker: Let’s just relax and enjoy the food.
     <<add_points 1>>
 -> <i>Admit you forgot.</i>
-    <<voiceline KristenNeutral3>>
     :You sigh.
     Kristen: I… forgot. Sorry. This probably was a bad idea.
     :You wrack your brain for a silver lining to this situation.
@@ -177,7 +160,6 @@ Kristen: Uh.
     Kristen: Yeah, I always have fun with you. // we can’t see it but tracker blushes when kristen says this. and that’s important to me
     Kristen: Even if you’re going to make faces at me the whole time.
     Tracker: Oh, absolutely.
-    <<voiceline TrackerRomantic3>>
     :You can hear the smile in her voice. Maybe this isn’t the worst idea you’ve ever had.
     <<add_points 2>>
 :You both wait for the servers to arrive. It's kinda weird, the way your eyes are refusing to adjust.
@@ -187,7 +169,6 @@ Tracker: You’d think they’d give you a minute or two to read the menu first,
 Kristen: No, that’s part of it. The server reads it to you.
 Tracker: Ah, I get it, obvious now. Wait, better question - how are you planning on eating?
 Kristen: Carefully.
-<<voiceline TrackerHappy2>>
 :Tracker laughs again.
 Tracker: You’re so lucky I’m here.
 :You really are.
@@ -196,7 +177,6 @@ Kristen: I am.
 :Lump in your throat, you do your best not to think about what her reaction to that might be. Okay. Keep it playful, keep it playful…
 Kristen: Promise to make sure I don’t choke on a breadstick?
 Tracker: I even promise to only slightly laugh.
-<<voiceline KristenDateSuccess3>>
 :You pick up right where you left off, just drinking each other in, chatting about school and cleric stuff and life and whatever else comes to mind.
 :Both of you order and get your food quickly enough, and you breathe a small sigh of relief because it’s actually good. Fantasy Yelp didn’t fail you.
 <<kristen Surprised>>
@@ -209,12 +189,11 @@ Tracker: Everything okay?
     Tracker: Okay. You sound a little freaked out, do we need to leave?
     Kristen: No, it’s okay. It’s Bucky, I just want to make sure it’s not an emergency.
     :You can vaguely see the outline of Tracker nodding as you pick up the call.
-    <<voiceline TrackerNeutral2>>
     Tracker: Okay. Just tell me if we have to head out early.
+    // tracker voiceline here? we do have a neutral "okay" one  
     <<add_points 4>>
 -> <i>Turn your phone off and say everything’s fine.</i>
     :It’s a kneejerk reaction. You press decline before you can even think about it.
-    <<voiceline KristenAwkward2>>
     Kristen: Everything's fine. It's fine!
     :Tracker narrows her eyes in suspicion. Fuck, the guilt is going to eat you alive. You should call him back.
     :Your phone lights up again, and you nearly drop it in your scramble to pick up.
@@ -234,7 +213,6 @@ Bucky: Can you come get me?
 Kristen: Um, let me see. Can you text me where you’re at?
 Bucky: Sure. Thanks, Kristen.
 :You end the call and sigh heavily.
-<<voiceline KristenAwkward3>>
 Kristen: Um, would you be okay if we head out a little early?
 Kristen: Bucky asked me to pick him up.
 :Tracker goes quiet for a second.
@@ -242,20 +220,16 @@ Tracker: Yeah, of course. Go ahead and get the car ready, I’ll be out with to-
 :You could cry with relief.
 Kristen: Thank you.
 Tracker: Hey. Anytime.
-<<voiceline TrackerDateSuccess2>>
 <<kristen Neutral>>
 <<char_right TrackerNeutral_1>>
-<<location "Driving">>
-:This time, the drive with Tracker feels longer, quieter, but still... comfortable. Easy.
+:This time, driving with Tracker feels much longer and quieter.
 :You keep your eyes on the road, not willing to be the one who breaks the silence just yet. Bucky’s not far, thank goodness. Only about a five minute drive from the restaurant, and from there about ten minutes back to your parents’ house.
 :Red light. You tap your fingers against the steering wheel, impatient to start moving again - and catch a glimpse of Tracker through your peripheral vision.
 :She’s… just looking at you. She smiles a little, when she sees you notice her. Then, she gives you a gentle nudge.
 <<char_right TrackerHappy_1>>
-<<voiceline TrackerGreeting2>>
 Tracker: Hey. Cowboy. Light’s green.
 :Ah shit, it is. You speed off.
 :Bucky’s waiting outside the house when you pull up, shield and backpack and sword still <i>way</i> too big for him. He grins and waves, as you slow to a stop and unlock the doors for him.
-<<char_right TrackerNeutral_1>>
 :He clambers into the backseat.
 Bucky: Hi! Thanks again for this.
 Kristen: No worries. Did you have fun with your party?
@@ -263,15 +237,12 @@ Bucky: We were working on a school project! …But yeah, we had fun.
 Kristen: Good.
 :You realize you didn’t introduce Tracker, and also that now you have to introduce Tracker and Bucky to each other.
 :Seeming to sense your stress, Tracker turns to look in the backseat and smiles at Bucky.
-<<voiceline TrackerGreeting2>>
-<<char_right TrackerHappy_1>>
 Tracker: Hey, I’m Tracker.
 :Bucky nods, still a little shy.
 Bucky: I’m Bucky. Kristen’s brother.
 Kristen: Go on, <i>buck</i>-le up.
 Bucky: That was worse than usual.
 Tracker: Agreed.
-<<char_right TrackerNeutral_1>>
 :He does buckle up, though, and you drive him on the vaguely-familiar ride back to your place.
 :Bucky tells you about how his sophomore year is going — a lot chiller than yours, which you’re thankful for — and his friends’ drama and even Bricker and Cork.
 :It’s nice to hear how they’re doing, even if it’s all secondhand.
@@ -284,7 +255,6 @@ Kristen: Hey. You call me, and I’ll come. Always. Okay?
 Bucky: Okay. Thanks.
 Bucky: It was nice to meet you, Tracker.
 Tracker: Nice to meet you!
-<<voiceline KristenFarewell2>>
 :Bucky gets out of the car. You wait to be sure he’s inside the house before driving off again.
 Tracker: He’s a sweet kid. Reminds me of someone.
 Kristen: Yeah.
@@ -295,15 +265,13 @@ Tracker: And I still had fun, so there.
 :You glance at her, just for a second, and see her smiling.
 <<kristen Happy>>
 :You can’t help but smile, too.
-<<kristen Neutral>>
+<<bg_filter_off>>
 <<location "Mordred Manor">>
 :You’re reluctant to end the night here when you pull up into the driveway.
 Kristen: Hey, let’s make cookies.
-<<char_right TrackerNeutral_1>>
 :Tracker pauses, halfway out of the car.
 Tracker: Is that… a euphemism?
 <<kristen Awkward>>
-<<voiceline KristenNeutral3>>
 Kristen: No! No, I mean — literally, let’s bake something.
 Tracker: Huh. Yeah, okay. Did you have anything in mind?
 -> Kristen: “Chocolate chip cookies? Honestly, the people’s cookie.”
@@ -312,7 +280,6 @@ Tracker: Huh. Yeah, okay. Did you have anything in mind?
     Kristen: Wait, really?
     <<char_right TrackerLaugh_1>>
     Tracker: No, I’m fucking with you. Yeah, let’s do it!
-    <<char_right TrackerNeutral_1>>
 -> Kristen: “S’mores cookies! Those probably exist, right?”
     Tracker: I don’t think I’ve ever had a s’mores cookie.
     Kristen: Really? I love s’mores. Have you ever had one with caramel?
@@ -322,17 +289,15 @@ Tracker: Huh. Yeah, okay. Did you have anything in mind?
     Kristen: Oh, please, as if you didn’t drink half of Mordred’s hot cocoa last week.
     Tracker: That was Aelwyn! Ugh, and when Adaine called her out she put these weird seeds in the cocoa we had left.
     Tracker: But honestly, I’d fuck up a peppermint cookie right now.
-    :You waggle your eyebrows.
-    Kristen: Okay. Let’s fuck up some cookies.
-<<kristen Neutral>>
+:You waggle your eyebrows.
+Kristen: Okay. Let’s fuck up some cookies.
+// note for the future: <<background "Mordred Manor kitchen">>
 :The kitchen’s free, thankfully, so you get everything you need out of the cabinets — ingredients, mixing bowls, measuring cups, the whole nine yards.
 :… 
 :It’s only when all the equipment’s laid out that you remember you’re not entirely sure of how to make cookies.
 <<kristen Awkward>>
-<<voiceline KristenAwkward3>>
 Kristen: Sooo, I don't exactly know the 'how to' part of 'how to bake cookies'. Should I find a recipe?
 Tracker: Nah, who needs recipes? We’ve got this.
-<<kristen Neutral>>
 :You can almost see her figurative tail wagging with excitement. Well, at least <i>she</i> seems to know what you’re both doing?
 Kristen: Okay, cool.
 :The batter’s a little too liquid on your first attempt, more like pancake batter than cookie batter.
@@ -342,16 +307,13 @@ Tracker: It’s okay! We can just add more flour.
 Kristen: Awesome! I didn’t know you knew how to bake.
 Tracker: I know my way around a kitchen.
 :There’s a brief pause while she measures out another cup of flour.
-<<char_right TrackerNeutral_1>>
-<<voiceline TrackerNeutral1>>
 Tracker: I, uh, used to cook for Jawbone a lot. Before we moved in here.
 <<kristen Surprised>>
 :You nod slowly, not wanting to break the silence with the wrong thing.
-<<kristen Neutral>>
+<<char_right TrackerNeutral_1>>
 Tracker: Not <i>all</i> the time. Just, you know, sometimes.
 Tracker: Mostly easy stuff. But cookies can’t be <i>that</i> hard —
 :She goes to pour the flour in the mixing bowl and accidentally knocks the whole thing over onto the counter, flour <i>and</i> batter.
-<<voiceline TrackerAngry2>>
 Tracker: Darn it.
 You know exactly what to say.
 -> Kristen: “FLOUR FIGHT!”
@@ -359,24 +321,22 @@ You know exactly what to say.
     Tracker: Kristen, what the hell is a flour fight?
     <<kristen Grin>>
     Kristen: This, obviously.
-    :You grab a handful of flour and throw it at her. Surprise attack!
-    :...It’s flour, so the effect is spoiled a little by how it mostly just wafts into the air and leaves a light dusting on her face. 
-:Tracker sneezes, then blinks. It clearly takes a second for her to process what just happened.
+    :You grab a handful of flour and throw it at her.
+    :It’s flour, so it mostly just wafts into the air and leaves a light dusting on her face, making her sneeze.
     <<voiceline TrackerBespoke4>>
+    //I feel like tracker sneezes like a wolf howl. like  maybe we get an awoo here
     :There’s a pause…
     <<char_right TrackerHappy_1>>
     Tracker: Oh, it’s on.
-    :The two of you take glee in making the mess much, <i>much</i> worse. The Mordred Manor kitchen, which is usually filed under the category of ‘mostly clean’, descends into a place of complete cookie anarchy. :Candyland is in shambles. Aelwyn will shriek. Sandra Lynn might actually kill you. You’ll be scrubbing sugar out of the cupboards for weeks.
-    :But... you don’t think you’ve ever seen Tracker smile so much. So it’s all worth it.
+    :The two of you make the mess much, <i>much</i> worse. The Mordred Manor kitchen, usually filed under the category of ‘mostly clean’, descends into a place of complete cookie anarchy. Candyland is in shambles. Aelwyn will shriek. Sandra Lynn might actually kill you. You’ll be scrubbing sugar out of the cupboards for weeks.
+    :But you don’t think you’ve ever seen Tracker smile so much.
     <<add_points 2>>
 -> Kristen: “Hey, don’t worry, I’ll help you clean it up.”
     <<kristen Happy>>
-    
     Kristen: No sweat! This kitchen’s seen worse.
     :Between Adaine, Aelwyn, Zayn, and Ragh, that’s an understatement.
     Kristen: We can try again after if we want.
     <<char_right TrackerBlush_1>>
-    <<voiceline TrackerSurprised1>>
     Tracker: Okay. Thanks, Kristen.
     <<add_points 1>>
 -> Kristen: “Oh, what happened to knowing your way around a kitchen?”
@@ -386,14 +346,12 @@ You know exactly what to say.
     Kristen: You talked a big game about it —
     Tracker: I said <i>one thing</i> —
     Kristen: And then knocked it over right away.
-    <<voiceline TrackerAngry3>>
     Tracker: Ugh, whatever. Let’s just clean this up.
     <<kristen Surprised>>
     :Oh, she seems actually pretty upset. Seems like your light-hearted teasing came across meaner than you meant for it to. Will apologizing make it better?
     <<add_points 0>>
-<<kristen Neutral>>
 :By the time both of you finish cleaning up the mess, neither of you really feel like another culinary experiment.
-<<char_right TrackerNeutral>>
+<<char_right TrackerNeutral_1>>
 :You decide to watch a movie with a snack that you can <i>actually</i> make — microwave popcorn.
 :Tracker cozies up to you on the couch, just like she did when you were together.
 :The movie’s some straight-to-TV teen romance flick, and it’s terrible.
@@ -409,12 +367,10 @@ You know exactly what to say.
 :When the movie ends, you turn off the TV and both keep sitting there.
 :You take Tracker’s hand, lacing your fingers with hers.
 :Tracker makes a quiet, contented sound.
-<<voiceline TrackerRomantic3>>
 Tracker: I’m glad we did this.
 Kristen: I am too.
 :Tracker looks up at you, head still resting on your shoulder. 
 Kristen: And thanks again, for sticking with me through… you know.
-<<voiceline TrackerBespoke3>>
 Tracker: Anytime, Kristen. I’m here for you. I <i>want</i> to be here for you.
 Kristen: I want to be here for you, too.
 :Tracker squeezes your hand. 
@@ -429,29 +385,27 @@ Kristen: You can pick this time. I’ll still pay.
 
 title: Date4Hint
 ---
-Tracker: Mm. My schedule’s kinda packed, I got this charity run thing going on at the gym. 
+Tracker: Mm. Next week’s kinda packed, I got this charity run thing going on at the gym. 
 Tracker: You could join me, if you wanted?
 <<kristen Neutral>>
 Kristen: I’ll see if I can swing it.
 Tracker: It’d be nice to have you there.
-<<kristen Soft>>
 Tracker: And then we can have dinner another time, I promise.
 Tracker: <i>My</i> treat. Place can be as fancy as you want.
 Kristen: I’m okay with, like, Krom’s or something if you’re with me.
 <<char_right TrackerBlush_1>>
-:Tracker’s quiet for a second. When you look at her, though, you see she’s smiling. 
+:Tracker’s quiet for a second, but when you look at her, she’s smiling.
 Tracker: Hey, Kristen?
 Kristen: Yeah?
 <<kristen Soft>>
-:Tracker pushes herself up and kisses you.
-:It’s a sweet kiss, for how sudden it is: soft and careful and feather-light. You want to be all of those things with Tracker, too. To reach up and gently cup her face with your hand, hold her closer. To kiss her back. Even if it might destroy you. Even if it already has.
-:So, you do.
-:You never want to stop. Eventually though, you do need to breathe, so you reluctantly pull away. Tracker grins at you - so if your brain wasn’t short circuited already, now it definitely is.
+:Tracker pushes herself up and kisses you. You kiss her back.
+:It’s a sweet kiss. You reach up to cup her face, to hold her closer to you.
+:She leans into it, and you swear your heart skips a beat or seven.
+:You pull away just to breathe, your brain completely short-circuiting.
 Kristen: Yeehaw…
-:Tracker rolls her eyes, but she’s still smiling softly at you.
-<<voiceline TrackerBespoke3>>
+:Tracker rolls her eyes, but she’s smiling softly at you.
 Tracker: You’re so stupid.
 :And then she kisses you again. And it rules. 
 :Yee. Fucking. Haw.
-<<jump Cassandra4>>
+<<jump Cassandra>>
 ===
