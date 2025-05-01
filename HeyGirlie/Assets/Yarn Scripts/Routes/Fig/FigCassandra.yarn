@@ -670,100 +670,6 @@ title: Cassandra8
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left transparent>>
-<<if $ayda8>>
-    <<if $date_points >= (2/3) * $date_points_total>>
-    // slay
-        <<kristen Surprised>>
-        <<char_right CassandraSurprised>>
-        <<voiceline CassPhone2>>
-        Cassandra: Kristen! Finally! I’ve been trying to be real cool about this, but the waiting is killing me!
-        Kristen: How… long was I down there?
-        Cassandra: All night…
-        <<kristen Awkward>>
-        Kristen: Oh shit, really?
-        Cassandra: I assume you weren’t held down there against your will?
-        <<kristen Nervous>>
-        Kristen: Not… exactly…
-        <<char_right CassandraBlush>>
-        Cassandra: Ohh la la! Now you <i>have</i> to tell me everything!
-        Kristen: I… don’t think I could be any gayer than I am now.
-        <<kristen Soft>>
-        Kristen: Truly, I have reached an extraordinary peak of lesbianism I didn’t think was possible.
-        <<char_right CassandraHappy>>
-        <<voiceline CassHappy2>>
-        Cassandra: Oh wow! <i>That</i> good huh? Gosh, look at you! You’re glowing, Kristen!
-        <<kristen Nervous>>
-        Kristen: What can I say? I’m somehow stupidly in love with my best friend, and Ayda is…
-        <<kristen Soft>>
-        <<voiceline KristenRomantic2>>
-        Kristen: Ayda is incredible and when she looks at me, I may or may not forget how to breathe. Which is wild because I only got into this whole thing to… y’know, stay alive.
-        <<char_right CassandraBlush>>
-        Cassandra: Oh boy, you’re a complete mess aren’t you?
-        <<char_right CassandraHappy>>
-        <<voiceline CassHappy1>>
-        Cassandra: And I’ve never been happier to see it! I knew you could do it, Kristen!
-    <<elseif $date_points >= (1/3) * $date_points_total>>
-    // mid
-        <<kristen Surprised>>
-        <<char_right CassandraSurprised>>
-        <<voiceline CassPhone2>>
-        Cassandra: Kristen! Finally! I’ve been trying to be real cool about this, but the waiting is killing me!
-        Kristen: How… long was I down there?
-        Cassandra: All night…
-        <<kristen Awkward>>
-        Kristen: Oh shit, really?
-        Cassandra: I assume you weren’t held down there against your will?
-        <<kristen Nervous>>
-        Kristen: Not… exactly…
-        <<char_right CassandraBlush>>
-        Cassandra: Ohh la la! Now you <i>have</i> to tell me how it went!
-        <<kristen Neutral>>
-        Kristen: Good! I think?
-        <<kristen Nervous>>
-        <<voiceline KristenAwkward2>>
-        Kristen: I’m gonna be honest, I think I blacked out for half of that, but it’s not my fault! Fig was kissing me, and Ayda was… I mean, have you <i>seen</i> her?
-        <<char_right CassandraSurprised>>
-        Cassandra: So what you’re telling me is…?
-        <<kristen Sad>>
-        Kristen: I’m a useless lesbian and I was outmaneuvered by two insanely attractive, cool women who take pleasure out of watching me suffer.
-        <<char_right CassandraNeutral>>
-        <<voiceline CassNeutral3>>
-        Cassandra: So… Not too bad?
-        <<kristen Soft>>
-        Kristen: Not too bad at all!
-        <<char_right CassandraHappy>>
-        Cassandra: I can live with that!
-    <<else>>
-    //flop
-        <<kristen Awkward>>
-        <<char_right CassandraAngry>>
-        <<voiceline CassPhone3>>
-        Cassandra: Finally! I’ve been trying to contact you all night!
-        Kristen: Whaaaaaat? I was busy!
-        Cassandra: Doing what?
-        <<kristen Nervous>>
-        Kristen: …
-        <<char_right CassandraSurprised>>
-        <<voiceline CassDisappointed1>>
-        Cassandra: Kristen?
-        Kristen: ……………
-        <<char_right CassandraAngry>>
-        <<voiceline CassDisappointed3>>
-        Cassandra: I know you can hear me.
-        <<kristen Sad>>
-        <<voiceline KristenDateFail3>>
-        Kristen: I know what you’re going to say, so… better to just not get into it at all, right?
-        <<char_right CassandraSad>>
-        Cassandra: …
-        <<kristen Surprised>>
-        Kristen: Cassandra?
-        <<char_right transparent>>
-        Cassandra: …………
-        <<kristen Awkward>>
-        <<voiceline KristenSurprised3>>
-        Kristen: Hello?
-    <<endif>>
-<<else>>
     <<if $date_points >= (2/3) * $date_points_total>>
     // slay
         <<kristen Neutral>>
@@ -872,10 +778,104 @@ title: Cassandra8
         <<voiceline KristenDateFail3>>
         Kristen: I guess I deserve that.
     <<endif>>
-<<endif>>
 <<jump EndDate>>
 ===
-
+title: Cassandra8Alt
+---
+<<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+        <<kristen Surprised>>
+        <<char_right CassandraSurprised>>
+        <<voiceline CassPhone2>>
+        Cassandra: Kristen! Finally! I’ve been trying to be real cool about this, but the waiting is killing me!
+        Kristen: How… long was I down there?
+        Cassandra: All night…
+        <<kristen Awkward>>
+        Kristen: Oh shit, really?
+        Cassandra: I assume you weren’t held down there against your will?
+        <<kristen Nervous>>
+        Kristen: Not… exactly…
+        <<char_right CassandraBlush>>
+        Cassandra: Ohh la la! Now you <i>have</i> to tell me everything!
+        Kristen: I… don’t think I could be any gayer than I am now.
+        <<kristen Soft>>
+        Kristen: Truly, I have reached an extraordinary peak of lesbianism I didn’t think was possible.
+        <<char_right CassandraHappy>>
+        <<voiceline CassHappy2>>
+        Cassandra: Oh wow! <i>That</i> good huh? Gosh, look at you! You’re glowing, Kristen!
+        <<kristen Nervous>>
+        Kristen: What can I say? I’m somehow stupidly in love with my best friend, and Ayda is…
+        <<kristen Soft>>
+        <<voiceline KristenRomantic2>>
+        Kristen: Ayda is incredible and when she looks at me, I may or may not forget how to breathe. Which is wild because I only got into this whole thing to… y’know, stay alive.
+        <<char_right CassandraBlush>>
+        Cassandra: Oh boy, you’re a complete mess aren’t you?
+        <<char_right CassandraHappy>>
+        <<voiceline CassHappy1>>
+        Cassandra: And I’ve never been happier to see it! I knew you could do it, Kristen!
+    <<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+        <<kristen Surprised>>
+        <<char_right CassandraSurprised>>
+        <<voiceline CassPhone2>>
+        Cassandra: Kristen! Finally! I’ve been trying to be real cool about this, but the waiting is killing me!
+        Kristen: How… long was I down there?
+        Cassandra: All night…
+        <<kristen Awkward>>
+        Kristen: Oh shit, really?
+        Cassandra: I assume you weren’t held down there against your will?
+        <<kristen Nervous>>
+        Kristen: Not… exactly…
+        <<char_right CassandraBlush>>
+        Cassandra: Ohh la la! Now you <i>have</i> to tell me how it went!
+        <<kristen Neutral>>
+        Kristen: Good! I think?
+        <<kristen Nervous>>
+        <<voiceline KristenAwkward2>>
+        Kristen: I’m gonna be honest, I think I blacked out for half of that, but it’s not my fault! Fig was kissing me, and Ayda was… I mean, have you <i>seen</i> her?
+        <<char_right CassandraSurprised>>
+        Cassandra: So what you’re telling me is…?
+        <<kristen Sad>>
+        Kristen: I’m a useless lesbian and I was outmaneuvered by two insanely attractive, cool women who take pleasure out of watching me suffer.
+        <<char_right CassandraNeutral>>
+        <<voiceline CassNeutral3>>
+        Cassandra: So… Not too bad?
+        <<kristen Soft>>
+        Kristen: Not too bad at all!
+        <<char_right CassandraHappy>>
+        Cassandra: I can live with that!
+    <<else>>
+    //flop
+        <<kristen Awkward>>
+        <<char_right CassandraAngry>>
+        <<voiceline CassPhone3>>
+        Cassandra: Finally! I’ve been trying to contact you all night!
+        Kristen: Whaaaaaat? I was busy!
+        Cassandra: Doing what?
+        <<kristen Nervous>>
+        Kristen: …
+        <<char_right CassandraSurprised>>
+        <<voiceline CassDisappointed1>>
+        Cassandra: Kristen?
+        Kristen: ……………
+        <<char_right CassandraAngry>>
+        <<voiceline CassDisappointed3>>
+        Cassandra: I know you can hear me.
+        <<kristen Sad>>
+        <<voiceline KristenDateFail3>>
+        Kristen: I know what you’re going to say, so… better to just not get into it at all, right?
+        <<char_right CassandraSad>>
+        Cassandra: …
+        <<kristen Surprised>>
+        Kristen: Cassandra?
+        <<char_right transparent>>
+        Cassandra: …………
+        <<kristen Awkward>>
+        <<voiceline KristenSurprised3>>
+        Kristen: Hello?
+    <<endif>>
+<<jump EndDate>>
+===
 title: EndDate
 ---
 <<update_points>>
