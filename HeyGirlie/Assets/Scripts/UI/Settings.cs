@@ -21,6 +21,13 @@ public class Settings : Menu
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
 
+    [SerializeField] private GameObject settingsContainer;
+    [SerializeField] private GameObject controlsContainer;
+
+    [SerializeField] private GameObject settingsButton;
+    [SerializeField] private GameObject controlsButton;
+    [SerializeField] private GameObject controlsScroll;
+
     [SerializeField] private CanvasGroup autoforward, textSpeed;
 
     void Awake() {
