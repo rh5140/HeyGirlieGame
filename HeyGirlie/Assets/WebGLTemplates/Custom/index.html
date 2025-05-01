@@ -3,31 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | {{{ PRODUCT_NAME }}}</title>
+    <title>Hey, Girlie! A Kristen Applebees Dating Sim</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-#if SHOW_DIAGNOSTICS
-    <link rel="stylesheet" href="<<<TemplateData/diagnostics.css>>>">
-    <script src="<<<TemplateData/diagnostics.js>>>"></script>
-#endif
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=540 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
-        <div id="hgg-logo"></div>
+        <div id="hgg-logo"><img src = "TemplateData/LogoAnimation.gif" class="logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
+        <div id="loading-text">LOADING</div>
       </div>
       <div id="unity-warning"> </div>
       <!-- <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-#if SHOW_DIAGNOSTICS
-        <img id="diagnostics-icon" src="TemplateData/webmemd-icon.png">
-#endif
-        <div id="unity-build-title">{{{ PRODUCT_NAME }}}</div>
+        <div id="unity-build-title">HeyGirlie</div>
       </div> -->
     </div>
     <script>
@@ -59,24 +56,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var loaderUrl = buildUrl + "/GzipTest.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
-        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
-#if USE_THREADS
-        workerUrl: buildUrl + "/{{{ WORKER_FILENAME }}}",
-#endif
-#if USE_WASM
-        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
-#endif
-#if SYMBOLS_FILENAME
-        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
-#endif
+        dataUrl: buildUrl + "/GzipTest.data.br",
+        frameworkUrl: buildUrl + "/GzipTest.framework.js.br",
+        codeUrl: buildUrl + "/GzipTest.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
-        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
-        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        companyName: "HGG",
+        productName: "HeyGirlie",
+        productVersion: "0.12",
         showBanner: unityShowBanner,
       };
 
@@ -110,23 +99,13 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
-#if SHOW_DIAGNOSTICS
-        // position the diagnostics icon in the corner on the canvas
-        diagnostics_icon.style.position = "fixed";
-        diagnostics_icon.style.bottom = "10px";
-        diagnostics_icon.style.right = "0px";
-        canvas.after(diagnostics_icon);
-#endif
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "{{{ WIDTH }}}px";
-        canvas.style.height = "{{{ HEIGHT }}}px";
+        canvas.style.width = "960px";
+        canvas.style.height = "540px";
       }
 
-#if BACKGROUND_FILENAME
-      canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
-#endif
       document.querySelector("#unity-loading-bar").style.display = "block";
 
       var script = document.createElement("script");
@@ -136,11 +115,6 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
-#if SHOW_DIAGNOSTICS
-                document.getElementById("diagnostics-icon").onclick = () => {
-                  unityDiagnostics.openDiagnosticsDiv(unityInstance.GetMetricsInfo);
-                };
-#endif
 //                 // document.querySelector("#unity-fullscreen-button").onclick = () => {
 //                 //   unityInstance.SetFullscreen(1);
 //                 // };
@@ -193,11 +167,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | {{{ PRODUCT_NAME }}}</title>
+    <title>Unity Web Player | HeyGirlie</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1" style="width: {{{ WIDTH }}}px; height: {{{ HEIGHT }}}px; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
-    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <canvas id="unity-canvas" width=960 height=540 tabindex="-1" style="width: 960px; height: 540px; background: #633380"></canvas>
+    <script src="Build/GzipTest.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -216,21 +190,13 @@
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/{{{ DATA_FILENAME }}}",
-        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
-#if USE_THREADS
-        workerUrl: "Build/{{{ WORKER_FILENAME }}}",
-#endif
-#if USE_WASM
-        codeUrl: "Build/{{{ CODE_FILENAME }}}",
-#endif
-#if SYMBOLS_FILENAME
-        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
-#endif
+        dataUrl: "Build/GzipTest.data.br",
+        frameworkUrl: "Build/GzipTest.framework.js.br",
+        codeUrl: "Build/GzipTest.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
-        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
-        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        companyName: "HGG",
+        productName: "HeyGirlie",
+        productVersion: "0.12",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });

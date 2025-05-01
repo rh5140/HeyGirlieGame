@@ -2,16 +2,22 @@ body { padding: 0; margin: 0 }
 #unity-container { position: absolute }
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
-#unity-canvas { background: {{{ BACKGROUND_COLOR }}} }
-.unity-mobile #unity-canvas { width: 100%; height: 100% }
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
-#hgg-logo { width: 154px; height: 152px; background: url('hgg-logo.png') no-repeat center }
-/* #unity-logo { width: 154px; height: 130px; background: url('unity-logo-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center } */
-#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center }
+#unity-canvas { background: #E64C49;}
+.unity-mobile #unity-canvas { width: 100%; height: 100%; }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)}
+#hgg-logo {margin: 0 auto; width: 60%; height: 60%; align-self: center;}
+#unity-progress-bar-empty { width: 800px; height: 25px; margin-top: 10px; background: #DFC6FF; outline: 5px solid white;}
+#unity-progress-bar-full { width: 0%; height: 25px; margin-top: 10px; background:#552D87}
 #unity-footer { position: relative }
 .unity-mobile #unity-footer { display: none }
 #unity-logo-title-footer { float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center }
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+.bungee-regular {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+#loading-text {margin-top: 20px; color: white; font-size: 2em; text-align: center; font-family: "Bungee";}
+.logo {width: 100%; height: 100%; object-fit: contain;}
