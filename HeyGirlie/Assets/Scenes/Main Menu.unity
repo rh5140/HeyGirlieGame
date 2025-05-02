@@ -996,6 +996,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &628535353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4881004158902538598, guid: e16a63b7546de694cb35ee70ac85bada, type: 3}
+  m_PrefabInstance: {fileID: 6888259811504002904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &695137431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,6 +3449,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 862776319}
     - target: {fileID: 6068026243883579466, guid: c6460511b5375c946a72fbeb6483bc73, type: 3}
+      propertyPath: _settingsManager
+      value: 
+      objectReference: {fileID: 628535353}
+    - target: {fileID: 6068026243883579466, guid: c6460511b5375c946a72fbeb6483bc73, type: 3}
       propertyPath: cursors.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -3483,10 +3492,14 @@ PrefabInstance:
     - target: {fileID: 671049842738995243, guid: e16a63b7546de694cb35ee70ac85bada, type: 3}
       propertyPath: appleCursor
       value: 
-      objectReference: {fileID: 2800000, guid: 8c934b3943977ff4ca9c7bda013f3d61, type: 3}
+      objectReference: {fileID: 2800000, guid: e4205fc4bc169a1478d6a8fc0732859d, type: 3}
     - target: {fileID: 4881004158902538598, guid: e16a63b7546de694cb35ee70ac85bada, type: 3}
       propertyPath: m_Name
       value: SettingManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881004158902538598, guid: e16a63b7546de694cb35ee70ac85bada, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7029805737718204716, guid: e16a63b7546de694cb35ee70ac85bada, type: 3}
       propertyPath: m_LocalPosition.x

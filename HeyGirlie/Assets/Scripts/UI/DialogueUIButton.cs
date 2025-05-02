@@ -32,7 +32,7 @@ public class DialogueUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     IEnumerator AnimateButton(bool open){
         float time = 0, lerpTime = 0.25f;
-        float start = 80f, end = 0f;
+        float start = 65f, end = 0f;
 
         while(time < lerpTime){
             transform.anchoredPosition = new Vector2(0, (open) ? Mathf.Lerp(start, end, time / lerpTime) : Mathf.Lerp(end, start, time / lerpTime));

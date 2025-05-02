@@ -9,9 +9,6 @@ public class SettingManager : MonoBehaviour
     private static SettingManager _instance;
     public static SettingManager Instance {get {return _instance;}}
 
-    [SerializeField] private Texture2D appleCursor, applebeeCursor, beeCursor;
-    [SerializeField] private CursorMode cursorMode = CursorMode.Auto;
-
     [SerializeField] public bool fullscreen = false;
     [SerializeField] public float cursor, volMusic, volSFX, volVoices, speed, textSize;
     [SerializeField] public bool autoforward = false;
@@ -23,7 +20,7 @@ public class SettingManager : MonoBehaviour
 
     public bool fastForwardActive;
 
-    void Awake() {
+    void OnEnable() {
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -43,7 +40,7 @@ public class SettingManager : MonoBehaviour
     public void ChangeCursor(float value){
         cursor = value;
 
-        CursorManager.Instance.ChangeCursor(value);
+        if(CursorManager.Instance != null) CursorManager.Instance.ChangeCursor(value);
     }
 
     public void ChangeVolMusic(float value){

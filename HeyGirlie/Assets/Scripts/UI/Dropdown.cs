@@ -6,12 +6,14 @@ using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class Dropdown : Menu
 {
     [SerializeField] private GameObject overlay;
     [SerializeField] private GameObject paper;
     [SerializeField] private GameObject hoverArea;
+    [SerializeField] private TMP_Text tabText;
 
     [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject settingsMenu;
@@ -19,7 +21,7 @@ public class Dropdown : Menu
     [SerializeField] private GameObject quitPopup;
 
     public bool pause = false;
-    private float start = 2220.5f;
+    private float start = 2588f;
     private bool open = true;
     
     private bool animationLock = false;
@@ -56,10 +58,10 @@ public class Dropdown : Menu
     IEnumerator HoverDropdown(bool hover){
         float time = 0, lerpTime = 0.25f;
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
-        float pStart = -2220.5f, pEnd = -2385f;
+        float pStart = -2220.5f, pEnd = -2588f;
         if(hover){
-            paper.SetActive(true);
-            pEnd = -2220.5f; pStart = -2385f;
+            // paper.SetActive(true);
+            pEnd = -2220.5f; pStart = -2588f;
         }
 
         while(time < lerpTime){
@@ -70,7 +72,7 @@ public class Dropdown : Menu
         }
 
         if(!hover){
-            paper.SetActive(false);
+            // paper.SetActive(false);
         }
     }
 
@@ -89,7 +91,7 @@ public class Dropdown : Menu
         if(open){
             hoverArea.SetActive(false);
             overlay.SetActive(true);
-            paper.SetActive(true);
+            // paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
         } else {
             // "OnDestroy"
@@ -111,17 +113,23 @@ public class Dropdown : Menu
 
         if(!open){
             overlay.SetActive(false);
-            paper.SetActive(false);
+            // paper.SetActive(false);
             hoverArea.SetActive(true);
+            ChangeTab("Menu");
         } else {
             // "Awake"
             Pause();
             LockEsc(EscLock.Dropdown);
             ArrowKeyStart();
+            ChangeTab("Close");
         }
 
         animationLock = false;
         // EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void ChangeTab(string value){
+        tabText.text = value;
     }
 
     public void LoadGame()

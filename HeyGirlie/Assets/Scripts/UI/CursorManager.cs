@@ -16,6 +16,12 @@ public class CursorManager : MonoBehaviour
         set { _eventSystem = value; }
     }
 
+    [SerializeField] private GameObject _settingsManager;
+    public GameObject SettingsManager {
+        get {return _settingsManager;}
+        set { _settingsManager = value; }
+    }
+
     private Func<bool> _action;
     public Func<bool> Action {
         get {return _action;}
@@ -40,6 +46,7 @@ public class CursorManager : MonoBehaviour
         _instance = this;
 
         DontDestroyOnLoad(this.gameObject);
+        _settingsManager.SetActive(true);
     }
 
     void Update(){
