@@ -239,17 +239,18 @@ public class YarnCommands : MonoBehaviour
             {
                 crystalUI[(int)CrystalUI.KristenText].SetActive(true);
                 crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
+                if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
             }
             else if (character[0] == '2') // hardcoding
             {
                 crystalUI[(int)CrystalUI.KristenText].SetActive(false);
-                crystalUI[(int)CrystalUI.KristenTextOptions].SetActive(false);
                 crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
                 crystalUI[(int)CrystalUI.OtherText2].SetActive(true);
             }
             else
             {
                 crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
                 crystalUI[(int)CrystalUI.OtherText1].SetActive(true);
             }
         }

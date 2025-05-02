@@ -63,5 +63,6 @@ public enum CrystalUI
     KristenText,
     KristenTextOptions,
     OtherText1,
-    OtherText2
+    OtherText2,
+    MaxLength
 }
