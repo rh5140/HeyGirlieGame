@@ -55,3 +55,13 @@ public enum EscLock
     Credits,
     Popup
 }
+
+public enum CrystalUI
+{
+    Crystal,
+    CrystalPing,
+    KristenText,
+    KristenTextOptions,
+    OtherText1,
+    OtherText2
+}

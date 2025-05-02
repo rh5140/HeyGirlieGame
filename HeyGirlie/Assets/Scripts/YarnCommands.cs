@@ -91,7 +91,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
-        dialogueRunner.AddCommandHandler("crystal_ping", CrystalPing);
+        dialogueRunner.AddCommandHandler<bool>("crystal_ping", CrystalPing);
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
@@ -219,36 +219,38 @@ public class YarnCommands : MonoBehaviour
         _ui.GetComponent<FadeTransition>().FadeOut();
     }
 
-    private void CrystalPing()
+    private void CrystalPing(bool isPinging)
     {
-        crystalUI[0].SetActive(false);
-        crystalUI[1].SetActive(true);
+        crystalUI[(int)CrystalUI.Crystal].SetActive(!isPinging);
+        crystalUI[(int)CrystalUI.CrystalPing].SetActive(isPinging);
     }
 
     private void ToggleText(string character = "NONE")
     {
         if (character.ToUpper() != "NONE")
         {
-            crystalUI[0].SetActive(false);
-            crystalUI[1].SetActive(false);
+            crystalUI[(int)CrystalUI.Crystal].SetActive(false);
+            crystalUI[(int)CrystalUI.CrystalPing].SetActive(false);
+            crystalUI[(int)CrystalUI.KristenTextOptions].SetActive(true);
             lineViewBackground.enabled = false;
             optionViewBackground.enabled = false;
             characterName.enabled = false;
             if (character == "KristenText" || character == "Kristen")
             {
-                crystalUI[2].SetActive(true);
-                crystalUI[3].SetActive(false);
+                crystalUI[(int)CrystalUI.KristenText].SetActive(true);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
             }
             else if (character[0] == '2') // hardcoding
             {
-                crystalUI[2].SetActive(false);
-                crystalUI[3].SetActive(false);
-                crystalUI[4].SetActive(true);
+                crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                crystalUI[(int)CrystalUI.KristenTextOptions].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText2].SetActive(true);
             }
             else
             {
-                crystalUI[2].SetActive(false);
-                crystalUI[3].SetActive(true);
+                crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(true);
             }
         }
         else
