@@ -235,13 +235,13 @@ public class YarnCommands : MonoBehaviour
             lineViewBackground.enabled = false;
             optionViewBackground.enabled = false;
             characterName.enabled = false;
-            if (character == "KristenText" || character == "Kristen")
+            if (character == "KristenText" || character == "Kristen" || character == "MaryAnn")
             {
                 crystalUI[(int)CrystalUI.KristenText].SetActive(true);
                 crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
                 if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
             }
-            else if (character[0] == '2') // hardcoding
+            else if (character[0] == '2') // 2 prepended to the 3rd character texting
             {
                 crystalUI[(int)CrystalUI.KristenText].SetActive(false);
                 crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
