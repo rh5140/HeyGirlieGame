@@ -11,14 +11,14 @@ public class Settings : Menu
 {
     [SerializeField] private GameObject background;
     
-    [SerializeField] private Toggle fullscreenToggle, vsyncToggle;
+    [SerializeField] private Toggle fullscreenToggle;
     [SerializeField] private Slider cursorSlider, musicSlider, sfxSlider, voicesSlider, speedSlider, textSizeSlider; 
     [SerializeField] private Toggle autoforwardToggle;
 
     // these values determine the default volume when a player loads the game for the very first time; match to max slider value in inspector once music is finalized
     public static float maxMusicVol = 0.2f, maxSfxVol = 0.4f, maxVoiceVol = 1f; 
 
-    [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private GameObject saveGalleryMenu;
 
     [SerializeField] private Image screenshot;
     [SerializeField] private Sprite defaultScreenshot;
@@ -72,11 +72,6 @@ public class Settings : Menu
         SettingManager.Instance.ChangeFullscreen(value);
     }
 
-    public void ToggleVSync(bool value){
-        PlayerPrefs.SetInt(nameof(Setting.VSync), value ? 1 : 0);
-        SettingManager.Instance.ChangeVSync(value);
-    }
-
     public void ChangeCursor(float value){
         PlayerPrefs.SetFloat(nameof(Setting.Cursor), value);
         SettingManager.Instance.ChangeCursor(value);
@@ -114,12 +109,11 @@ public class Settings : Menu
     }
 
     public void OpenSaves(){
-        Instantiate(saveProfilesMenu);
+        Instantiate(saveGalleryMenu);
     }
 
     private void SetSettings(){
         fullscreenToggle.isOn = SettingManager.Instance.fullscreen;
-        vsyncToggle.isOn = SettingManager.Instance.vsync;
         cursorSlider.value = SettingManager.Instance.cursor;
 
         musicSlider.value = SettingManager.Instance.volMusic;

@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections;
 
-public class SaveProfiles : Menu
+public class SaveGallery : Menu
 {
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
@@ -20,6 +20,18 @@ public class SaveProfiles : Menu
     private int selectedSave = 0;
 
     void Awake(){
+        // LockEsc(EscLock.Gallery);
+        // Pause();
+        // ArrowKeyStart();
+
+        // loadButton.interactable = false;
+        // deleteButton.interactable = false;
+        // saveButton.interactable = false;
+
+        StartCoroutine(WaitAwake());
+    }
+
+    protected IEnumerator WaitAwake(){
         LockEsc(EscLock.Gallery);
         Pause();
         ArrowKeyStart();
@@ -27,6 +39,9 @@ public class SaveProfiles : Menu
         loadButton.interactable = false;
         deleteButton.interactable = false;
         saveButton.interactable = false;
+
+        yield return null;
+        CursorManager.Instance.Load(false);
     }
 
     void Update(){

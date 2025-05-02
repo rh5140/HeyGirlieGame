@@ -14,7 +14,6 @@ contains all relevant information for a player save.
 [Serializable]
 public class PlayerData
 {
-    // private int saveProfile;
     [SerializeField] private string playerName;
     [SerializeField] private string location;
     [SerializeField] private string scene;

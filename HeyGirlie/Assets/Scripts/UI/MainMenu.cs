@@ -1,11 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 
 /*****************************************************
@@ -21,7 +22,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject titleSticker;
     [SerializeField] private Image stickerShadow;
     
-    [SerializeField] private GameObject saveProfilesMenu;
+    [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private GameObject maxProfilePopup;
@@ -100,7 +101,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-       Instantiate(saveProfilesMenu);
+        CursorManager.Instance.WaitCursor(() => {
+            Instantiate(saveGalleryMenu);
+            return true;
+        });
     }
 
     public void Settings()
@@ -110,7 +114,8 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        CursorManager.Instance.Load(true);
+        // SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()

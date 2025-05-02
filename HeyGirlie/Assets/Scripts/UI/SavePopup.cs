@@ -42,6 +42,8 @@ public class SavePopup : MonoBehaviour
             yield return null;
         }
         paper.anchoredPosition = new Vector2(start, y);
+        
+        CursorManager.Instance.Load(false);
 
         Destroy(gameObject);
     }

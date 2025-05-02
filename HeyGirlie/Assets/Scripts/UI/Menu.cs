@@ -37,11 +37,13 @@ public abstract class Menu : MonoBehaviour
     }
 
     protected void ArrowKeyStart(){
-        arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
-        if(arrowKeyStart != null) EventSystem.current.SetSelectedGameObject(arrowKeyStart);
+        if(EventSystem.current != null) {
+            arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
+            if(arrowKeyStart != null) EventSystem.current.SetSelectedGameObject(arrowKeyStart);
+        }
     }
 
     protected void ArrowKeyEnd(){
-        if(arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
+        if(EventSystem.current != null && arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
     }
 }

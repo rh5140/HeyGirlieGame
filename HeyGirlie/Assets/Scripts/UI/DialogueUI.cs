@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 using Yarn.Unity;
 
 public class DialogueUIButtons : MonoBehaviour
 {
-    [SerializeField] private GameObject saveProfileMenu;
+    [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject characterProfiles;
     [SerializeField] private HGGLineView hggLineView;
     [SerializeField] private GameObject optionsFFButton;
@@ -27,11 +28,11 @@ public class DialogueUIButtons : MonoBehaviour
     }
 
     public void Save(){
-        GameManager.Instance.Save();
+        CursorManager.Instance.WaitCursor(GameManager.Instance.Save);
     }
 
     public void Load(){
-        Instantiate(saveProfileMenu);
+        Instantiate(saveGalleryMenu);
     }
 
     public void FastForward(){
