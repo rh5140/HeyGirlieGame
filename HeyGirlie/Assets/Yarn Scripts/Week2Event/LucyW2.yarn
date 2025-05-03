@@ -2,11 +2,11 @@
 ---
 <<fade_in_ui>>
 <<kristen Grin>>
+<<char_right LucyNeutral1>>
 You catch sight of Lucy lingering near the exhibit map, a thoughtful frown on her face. You tiptoe up on her right side and, feeling impish, tap her on her left shoulder. 
 When she turns to look, you jump to her left, but not before she spins around and catches you. 
 Lucy doesn’t look very surprised, to your disappointment. But you think she’s smiling a little as she shakes her head at you, so you win anyway.
 <<kristen Neutral>>
-<<char_right LucyNeutral1>>
 <<voiceline LucyGreeting3>>
 Lucy: Hi, Kristen. You seem like you’re in a good mood. 
 <<voiceline KristenGreeting2>>
@@ -60,6 +60,7 @@ You’re suddenly struck with a memory.
 Kristen: Wait, Starscape! Gorgug and I watched the first two movies a couple years ago. 
 Lucy’s eyes widen. You blanch. Did you say something wrong?
 Kristen: Uh… Lucy? 
+<<char_right LucyAngry>>
 <<voiceline LucyAngry2>>
 Lucy: Those movies are an <i>affront</i> to the legacy of the original series. 
 Lucy: They completely mischaracterize Captain Guinevere’s passion for learning and discovery into a desire for colonization that is completely antithetical to who she is in the show.
@@ -67,8 +68,10 @@ Lucy: And they shoehorn her into a totally uninspired romance with her male firs
 She drags you over to another model, which seems to be a giant ornament of some kind, blue with a gold top. You follow her, bemused.
 //splash art museum fadein
 <<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<background Museum_Lucy>>
+<<fade_out_ui>>
+<<background Museum_Lucy>> 
 <<wait 2>>
 <<fade_in_ui>>
 Lucy: <i>This</i> is the treasured memento from Guinevere’s wife, Alira, that forms the foundation of the best arc in the series in Season 3. It gets stolen in the first episode…
@@ -77,14 +80,15 @@ Lucy: Kristen, you have to watch the original. You <i>have</i> to. Tell me you w
 You throw your hands up.
 Kristen: I will! I swear!
 //background returns
+<<fade_out_ui>>
 <<wait 2>>
 <<background Museum>>
 <<fade_in_ui>>
-Lucy pauses. 
+<<kristen Neutral>>
 <<char_right LucyBlush>>
+Lucy pauses. 
 Lucy: Oh! Um. 
 Lucy: Kristen, I’m so sorry. I… I really care about this show and I get so carried away talking about it. I didn’t mean to shout.
-<<kristen Neutral>>
 You laugh.
 Kristen: Don’t even worry about it, Lucy. I like that you care about this so much. It’s a part of you. And that’s, like, the whole point of our paper and your list, right?
 <<char_right LucyNeutral1>>
@@ -95,7 +99,10 @@ For the rest of the trip, Lucy pulls you from display to display, chattering awa
 The afternoon flies by, and you leave to meet up with your friends with a warm glow in your chest. 
 Today was a good day, and you’re glad to have spent some more time with Lucy. You get the feeling that she’s going to become a really good friend. 
 <<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<background Museum_Lucy>>
-<<enable_continue>>
+<<fade_out_ui>>
+<<wait 2>>
+<<background Museum_Lucy>> // Set up your splash again
+<<enable_continue>> // Enables a continue button that lets people choose when to move on from the splash
 ===

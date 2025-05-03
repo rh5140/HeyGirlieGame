@@ -7,6 +7,7 @@ Someone short and blonde practically knocks you over as they storm past. You’r
 <<char_right KipperlillyNeutral>>
 Kristen: We really have to stop meeting like this, Kip.
 
+<<char_right KipperlillyAnnoyed>>
 <<voiceline KipGreeting3>>
 Kipperlilly: Don’t call me that.
 
@@ -15,7 +16,6 @@ Oh, right. Awkward.
 <<kristen Neutral>>
 Kristen: How’s your Ghoulapalooza going? Anyone you’re excited to see?
 
-<<char_right KipperlillyAnnoyed>>
 Her expression sours.
 
 <<voiceline KipAnnoyed1>>
@@ -30,7 +30,7 @@ Kipperlilly: I’ll deal with the indignity of staring at someone’s back the w
 
 Kristen: Damn… shot through the heart…
 
-Kipperlilly rolls her eyes. No pleasing your critics. Maybe you can charm this one?
+Kipperlilly rolls her eyes. No pleasing your critics. Though, maybe you can charm this one?
 
 <<kristen Neutral>>
 Kristen: Actually—
@@ -48,7 +48,7 @@ Kipperlilly: … well, you know what they say about broken clocks.
 Kristen: That you can fix them?
 
 <<char_right KipperlillyAnnoyed>>
-Now <i>that</i> earns you a glare. 
+Now <i>that</i> earns you a burning glare. 
 
 <<voiceline KipAnnoyed2>>
 Kipperlilly: I stand immediately corrected.
@@ -73,7 +73,9 @@ Kristen: I think I’m good down here.
 <<voiceline KipSmug2>>
 Kipperlilly: Aw, are you chickening out? It’s such a lovely view up here, too. It would be a shame for you to miss it just because you’re too cowardly to make the attempt.
 
-… and that’s the gauntlet thrown. You don’t think too hard about how easily Kipperlilly convinced you into making a fool of yourself in front of her and give it as good of a try as you can. 
+… and that’s the gauntlet thrown. 
+
+You don’t think too hard about how easily Kipperlilly convinced you into making a fool of yourself in front of her and give it as good of a try as you can. 
 <<kristen transparent>>
 <<char_right transparent>>
 <<background MusicFestival_Kipperlilly>>
@@ -96,10 +98,12 @@ Which, that one did, but you had something to prove.
 
 Kipperlilly: You made it in time for the set to start, so who gives a shit?
 //Unsure if you would want the regular background to return here or not? If so, need background change and the sprites to return
-
+<<fade_out_ui>>
+<<wait 2>>
 <<background MusicFestival>>
+<<fade_in_ui>>
 <<kristen Surprised>>
-<<char_right KipperlillyNeutral>>
+<<char_right KipperlillySmug>>
 
 As if on cue, there’s movement on the stage and everyone below you starts cheering.
 
@@ -120,13 +124,18 @@ Kipperlilly: She never really wanted to be an actor, so after sequel plans fizzl
 
 All too soon, the set draws to an end. Hayley Kiyokobold takes an opportunity to talk to her audience as musicians scramble behind her to set up for her final song.
 
-Hayley Kiyokobold: Thanks for sticking around, y’all. If you get anything from my music, I hope it’s this: you’re all stronger than you think. Growing up’s hard, and our brains are all messed up, and sometimes we don’t think we deserve anything. But here’s the thing: you fucking deserve it. You deserve everything. Thank you for being a wonderful audience, and happy Ghoulapalooza!
+Hayley Kiyokobold: Thanks for sticking around, y’all. If you get anything from my music, I hope it’s this: you’re all stronger than you think. 
+
+Hayley Kiyokobold: Growing up’s hard, and our brains are all messed up, and sometimes we don’t think we deserve anything. But here’s the thing: you fucking deserve it. You deserve everything. 
+
+Hayley Kiyokobold: Thank you for being a wonderful audience, and happy Ghoulapalooza!
 
 The beat kicks in, and Kipperlilly seems to forget that you’re there as she leaps to her feet and sings along. You marvel both at how well she knows the lyrics and how she hasn’t fallen off of the bar yet, and if her eyes are a little wetter than they were before the singer spoke, you won’t tell.
 
-<<kristen Transparent>>
-<<char_right Transparent>>
+<<kristen transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background MusicFestival_Kipperlilly>>
 <<enable_continue>>
-
 ===

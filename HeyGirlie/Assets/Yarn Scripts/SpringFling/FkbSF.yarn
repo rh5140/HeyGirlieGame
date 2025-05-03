@@ -143,7 +143,8 @@ Lucy: Yeah, exactly.
 
 title: FrostkettleEnding
 ---
-
+<<background SpringFling>>
+<<fade_in_ui>>
 You’re about to walk onto the dance floor while you wait for your dates to arrive when you’re suddenly pulled into the dark side room you spent two hours shoving all of the school’s dodgeballs and wall pads into. 
 
 Kristen: Can’t I get at least one hour at a dance before being kidnapped or whatever?
@@ -157,7 +158,7 @@ Speak of the devil. Or devils, as it were. Kipperlilly darts back out and inexpl
 <<kristen Happy_FK>>
 Kristen: You look great! Love the boots—
 
-<<char_left LucyNeutral2>>
+<<char_left LucyNeutral4>>
 Lucy: Shh, keep your voice down.
 
 <<kristen Neutral_FK>>
@@ -185,52 +186,58 @@ Kristen: What does Adaine have to do with anything?
 You join them at the doorway, sneaking your head between the two of theirs.
 
 <<background SpringFling_FKB>>
+<<kristen transparent>>
+<<char_left transparent>>
+<<char_right transparent>>
 
-<<char_right KipperlillyHappy1>>
+//<<char_right KipperlillyHappy>>
 Kipperlilly: Oh, Ivy’s seen her!
 
 You watch speechlessly as Ivy, standing at the side of the dance floor, rolls her eyes and shoves Oisin onto it. He stumbles over his feet.
 
 Lucy: I <i>told</i> her to let him make the first move.
 
-<<char_right KipperlillyAnnoyed1>>
+//<<char_right KipperlillyAnnoyed>>
 Kipperlilly: Why would she listen to that? It’s Ivy.
 
 Kristen: Okay, what am I missing?
 
-<<char_right KipperlillyNeutral1>>
+//<<char_right KipperlillyNeutral>>
 Oisin glares over his shoulder at Ivy, who smugly waves back from the fringe of the dance floor, before turning to make eye contact with Adaine, who’s watching the whole exchange with her patented “what <i>now?</i>” look. Oisin visibly swallows before digging for something in his pocket.
 
 <<voiceline KristenSurprised1>>
 Kristen: Wait—
 
-<<char_left LucyHappy>>
+//<<char_left LucyHappy4>>
 Lucy: He’s so, <i>so</i> close.
 
 Kipperlilly: If he fucks this up somehow, I’m never talking to him again.
 
 Kristen: Did you all plan this without me?
 
-<<char_left LucyNeutral2>>
+//<<char_left LucyNeutral4>>
 Lucy: It was a spur of the moment thing.
 
 Oisin takes out something that sparkles in the lights. Adaine suddenly looks like a deer in headlights.
 
-<<char_right KipperlillySurprised1>>
+//<<char_right KipperlillySurprised>>
 Lucy: Is that from his grandma’s hoard?
 
 Kipperlilly: I’m kind of impressed that his mom let him take those.
 
-<<char_right KipperlillyHappy1>>
+//<<char_right KipperlillyHappy>>
 Adaine gently takes the offered gift. It’s a pair of earrings, which you can only tell because she immediately puts them on. Lucy quietly cheers above you. Kipperlilly’s physically vibrating, now.
 
 <<voiceline KipHappy2>>
 Kipperlilly: Mission success, motherfuckers.
 
-<<char_left LucyHappy>>
+//<<char_left LucyHappy>>
 <<voiceline LucyHappy1>>
 Lucy: I do love a happy ending.
-
+<<background SpringFling>>
+<<kristen Neutral_FK>>
+<<char_right KipperlillyNeutral1>>
+<<char_left LucyHappy4>>
 Kipperlilly goes to walk out of the room, but you grab her shoulder before she can leave. 
 
 Kipperlilly: What now?
@@ -238,7 +245,7 @@ Kipperlilly: What now?
 <<kristen Grin_FK>>
 Kristen: The two of you dragged me into a dark room and <i>didn’t</i> expect me to take advantage of it?
 
-<<char_left LucyBlush>>
+<<char_left LucyBlush4>>
 <<voiceline LucyRomantic2>>
 You can just barely make out both of them blushing in the light filtering in from the Spring Fling. You sit down on a pile of mats and wait for their response.
 
@@ -251,19 +258,23 @@ Kipperlilly’s phone buzzes in a pocket you didn’t realize she had. She lazil
 
 Kipperlilly: Ugh, they’ve noticed we’re missing.
 
-<<char_left LucyNeutral2>>
+<<char_left LucyNeutral4>>
 Lucy: We <i>have</i> been here for a while.
 
 <<kristen Neutral_FK>>
 Kristen: Wanna head out, then?
 
-As you stand, your hand finds Kipperlilly’s and Lucy’s lands on the small of both of your backs. Lucy and Kipperlilly lace their fingers together as you step out of the side room and into the mayhem of the Spring Fling. Maybe you’ll matchmake two of your other friends. Maybe you’ll spend the entire night in their orbit, not quite able to step away from either girl. Maybe another dragon will crash into the gym and you’ll have to go fight it with your party.
+As you stand, your hand finds Kipperlilly’s and you kiss Lucy’s cheek. Lucy and Kipperlilly lace their fingers together as you step out of the side room and into the mayhem of the Spring Fling. 
 
-You squeeze Kipperlilly’s hand and lean back into Lucy. They turn to you with matching smiles. Whatever happens, you’re determined to keep this for as long as you can.
+Maybe you’ll matchmake two of your other friends. Maybe another dragon will crash into the gym and you’ll have to go fight it with your party. Maybe you’ll get to spend the entire night in Lucy and Kipperlilly’s orbit, not quite able to step away from either girl.
+
+You squeeze Kipperlilly’s hand and exchange a smile with Lucy. They turn to you with warm expressions. Whatever happens, you’re determined to keep this for as long as you can.
 
 <<kristen transparent>>
 <<char_left transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background SpringFling_FKB>>
 <<enable_continue>>
 ===

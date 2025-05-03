@@ -14,6 +14,7 @@ Riz: Rangers, maybe?
 
 You tune out their bickering. The exhibit promises “an eclectic collection of artifacts and recreations to delight anyone looking for a bit of mystery in their lives,” which sounds right up your alley!
 
+<<background_filter_on black>>
 The room with the <i>Capers</i> exhibit is dark, mostly lit by display cases tastefully scattered throughout the room to encourage exploration of the space. 
 
 You see a lot of rogue paraphernalia. The center case has a whole collection of famous thieves’ broken lockpicks painstakingly pieced back together. 
@@ -32,7 +33,9 @@ You jump out of your skin as Kipperlilly practically materializes right behind y
 Kristen: Are you <i>trying</i> to give me a heart attack?
 
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly: Don’t be silly, your blood pressure is probably too normal for that to be a valid medical concern. Anyhow, move; that’s Callum Thornblight’s first familiar and he’s a big part of my capstone.
+Kipperlilly: Don’t be silly, your blood pressure is probably too normal for that to be a valid medical concern. 
+
+Kipperlilly: Anyhow, move; that’s Callum Thornblight’s first familiar and he’s a big part of my capstone.
 
 <<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
@@ -66,15 +69,19 @@ You valiantly try to regain your balance but end up tripping into a series of ro
 
 Kristen: WHAT IS HAPPENING TO ME.
 
-Kipperlilly stares at you, frozen. You watch her gaze dart across your chest and down your body. In any other situation, you’d say something about taking a picture if she wanted to admire you, but now really doesn’t feel like the time. You get to groveling.
+Kipperlilly stares at you, frozen. You watch her gaze dart across your chest and down your body. In any other situation, you’d say something about taking a picture if she wanted to admire you for longer, but now really doesn’t feel like the time. 
+
+You get to groveling.
 
 <<kristen Awkward>>
 Kristen: Kipperlilly! Kipperlilly, North star in my sky, my favorite person in the whole world, the light in my darkness, can you please get me the fuck out of here?
 
 She can’t look away from you. Her shoulders start to heave as she curls in on herself. You’re confused; surely, this is mundane for someone as serious about rogue bullshit as she is? It’s not like this is actually a dangerous situation, so she can’t be worried—
 
+<<bg_filter_off>>
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background Museum_Kipperlilly>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -93,7 +100,7 @@ Kipperlilly: YOUR FAAAAAAACE—
 
 She bursts into another fit of giggles as she points at you. You sigh, rolling your eyes, but the humor of the situation catches up to you. You can’t help but chuckle along with her.
 
-<<background Museum_Kipperlilly>>
+<<fade_out_ui>>
+<<wait 2>>
 <<enable_continue>>
-
 ===

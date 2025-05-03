@@ -22,12 +22,13 @@ public class FadeTransition : MonoBehaviour
 
     public void FadeIn()
     {
+        if (ui.alpha == 1f) return;
         StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 1f, fadeTime));
     }
 
     public void FadeOut()
     {
-
+        if (ui.alpha == 0) return;
         StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 0, fadeTime));
     }
 
