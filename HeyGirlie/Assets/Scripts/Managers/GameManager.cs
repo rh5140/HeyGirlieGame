@@ -61,13 +61,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Update(){ 
-        if(!SceneManager.GetActiveScene().name.Equals("Main Menu") &&
-            Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.LeftControl)){
-            Save();
-        }
-    }
-
     public void Pause(bool pause){
         if(pause) {
             Time.timeScale = 0;

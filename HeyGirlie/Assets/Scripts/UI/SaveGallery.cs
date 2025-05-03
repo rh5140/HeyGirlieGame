@@ -62,7 +62,8 @@ public class SaveGallery : Menu
             selected = EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>();
 
             Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
-            if(!SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = true;
+            string sceneName = SceneManager.GetActiveScene().name;
+            if(!sceneName.Equals("Main Menu") && !sceneName.Equals("DateSelection")) saveButton.interactable = true;
             loadButton.Select();
         }
     }

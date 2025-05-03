@@ -9,10 +9,12 @@ public class DialogueUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField] private UnityEvent buttonAction;
     [SerializeField] private KeyCode buttonKey;
     private RectTransform transform;
+    private EventTrigger eventTrigger;
     private bool selected = false;
     [SerializeField] private bool stayOpen = false;
     void Awake(){
         transform = button.GetComponent<RectTransform>(); 
+        eventTrigger = gameObject.GetComponent<EventTrigger>();
     }
 
     void Update(){
@@ -23,11 +25,12 @@ public class DialogueUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
             }
             else StartCoroutine(AnimateButton(false));
 
-            gameObject.GetComponent<EventTrigger>().OnSubmit(null);
+            eventTrigger.OnSubmit(null);
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData){
+        eventTrigger.OnSelect(null);
         if(!selected) StartCoroutine(AnimateButton(true));
     }
 

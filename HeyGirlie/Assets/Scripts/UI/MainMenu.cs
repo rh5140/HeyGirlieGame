@@ -80,6 +80,9 @@ public class MainMenu : MonoBehaviour
         }
 
         stickerTransform.localScale = Vector3.one;
+
+        yield return null;
+        gameObject.GetComponent<ArrowNavigation>().EnableEventSystem();
     }
 
     public void NewGame()

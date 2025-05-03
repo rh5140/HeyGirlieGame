@@ -19,22 +19,20 @@ public class Dropdown : Menu
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject quitPopup;
+    [SerializeField] private EventTrigger eventTrigger;
 
     public bool pause = false;
     private float start = 2588f;
-    private bool open = true;
+    private bool isOpen = false;
     
     private bool animationLock = false;
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape) && !animationLock && GameManager.Instance.escLock == EscLock.Dropdown){
-            if(open) {
-                OpenDropdown();
-                open = false;
-            } else {
-                CloseDropdown();
-                open = true;
-            }
+            eventTrigger.OnPointerClick(null);
+
+            if(!isOpen) OpenDropdown();
+            else CloseDropdown();
         }
     }
 
@@ -47,11 +45,13 @@ public class Dropdown : Menu
     }
 
     public void OpenDropdown(){
+        isOpen = true;
         StartCoroutine(AnimateDropdown(true));
         
     }
 
     public void CloseDropdown(){
+        isOpen = false;
         StartCoroutine(AnimateDropdown(false));
     }
 
@@ -81,6 +81,9 @@ public class Dropdown : Menu
     }
 
     IEnumerator AnimateDropdown(bool open){
+        gameObject.GetComponent<ArrowNavigation>().DisableEventSystem();
+        yield return null;
+
         float time = 0, lerpTime = 0.25f;
         Image overlayImg = overlay.GetComponent<Image>();
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
@@ -124,7 +127,9 @@ public class Dropdown : Menu
             ChangeTab("Close");
         }
 
+        yield return null;
         animationLock = false;
+        gameObject.GetComponent<ArrowNavigation>().EnableEventSystem();
         // EventSystem.current.SetSelectedGameObject(null);
     }
 
