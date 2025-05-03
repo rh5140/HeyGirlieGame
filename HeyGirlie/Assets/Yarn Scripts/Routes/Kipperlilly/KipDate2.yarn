@@ -123,7 +123,7 @@ It’s also something you have absolutely nothing to do with. He might get suspi
 
 <<kristen Awkward>>
 <<voiceline KristenAwkward2>>
-<<toggleText Riz>>
+<<toggleText Kristen>>
 Kristen: hey riz :) big favor to ask
 
 -> Kristen: “does ur project have anything about getting around magic detection? tryin to get my president shit done lol”
@@ -245,32 +245,36 @@ Kristen: u also told me not to get u kicked out of the library
 <<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
 Kipperlilly pointedly stands one of her books up so it blocks her from your view. Good thing you don’t need line of sight to send a text.
-<<toggleText 2Kipperlilly>>
+<<toggleText Kristen>>
 -> Kristen: “what if he doesn’t reply today”
+  <<toggleText 2Kipperlilly>>
   Kipperlilly: Then you’ll have to get it another way, won’t you?
   <<add_points 1>>
 -> Kristen: “so hows the heisting going :)”
+  <<toggleText 2Kipperlilly>>
   Kipperlilly: It would be going perfectly if I had those photos.	  
   <<add_points 1>>
 -> Kristen: “do u think dimweather would actually kick us out if i screamed”
+  <<toggleText 2Kipperlilly>>
   <<char_right KipperlillyAnnoyed>>
   Kipperlilly: You are actually the worst.
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
+<<toggleText Kristen>>
 Kristen: so
 
 Kristen: besides this how has school been :)
 
 <<char_right KipperlillyAnnoyed>>
+<<toggleText 2Kipperlilly>>
 Kipperlilly: You are incorrigible.
-<<toggleText none>>
 
 <<kristen Soft>>
 <<voiceline KipSad1>>
 You heart-react that one. Kipperlilly audibly scoffs.
 
-<<toggleText 2Kipperlilly>>
+<<toggleText Kristen>>
 Kristen: thanks!
 <<toggleText none>>
 
@@ -300,7 +304,7 @@ Kipperlilly: Shut the fuck up, Applebees.
 
 <<kristen Grin>>
 She doesn’t even bother making eye contact, typing out a rushed reply, but you simply grab your crystal.
-<<toggleText 2Kipperlilly>>
+<<toggleText Kristen>>
 -> Kristen: “no need to be embarrassed <3”
   Kipperlilly: I’m not.
   <<add_points 1>>
@@ -310,9 +314,10 @@ She doesn’t even bother making eye contact, typing out a rushed reply, but you
 -> Kristen: “thats a lot of emojis for one message”
   Kipperlilly: It’s rude to look at someone else’s texts.
   <<add_points 0>>
-
+<<toggleText Kristen>>
 <<char_right KipperlillyNeutral>>
 Kristen: so whats up kip? u getting picked up or something?
+<<toggleText 2Kipperlilly>>
 
 <<char_right KipperlillyAngry>>
 Kipperlilly: Don’t call me that.
@@ -320,6 +325,7 @@ Kipperlilly: Don’t call me that.
 <<char_right KipperlillyNeutral>>
 Kipperlilly: She was asking what I wanted for dessert tonight, if you must know. 
 
+<<toggleText Kristen>>
 Kristen: awwww its sweet that shes checking in
 <<toggleText none>>
 
@@ -327,6 +333,7 @@ Kristen: awwww its sweet that shes checking in
 Kipperlilly scoffs and rolls her eyes before pointedly clicking her crystal off and putting it face-down on the table. 
 
 <<kristen Neutral>> 
+<<crystal_ping true>>
 Before you can come up with another banger text to prod her with, you get a notification of your own, followed by six more. 
 
 <<kristen Happy>>

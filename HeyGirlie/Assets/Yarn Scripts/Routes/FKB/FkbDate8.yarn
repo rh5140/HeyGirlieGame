@@ -1,7 +1,7 @@
 ﻿title: Date4
 
 ---
-<<background "City Outside (Day)">>
+//<<background "City Outside (Day)">>
 <<location "City Center">>
 <<set $date_points = 0>>
 <<set $date_points_total = 4>>
@@ -14,7 +14,7 @@ You’re honestly still not sure where exactly you’re going. You’re just kin
 <<char_right KipperlillyNeutral>>
 Kipperlilly arrives first, dropped off by who you assume to be one of her parents. She taps her foot impatiently as she says a few final words to whoever drove her over through an open window, though she still waves after the car as it leaves. She notices you awkwardly leaning against a streetlight.
 
-Kipperlilly: …what are you doing?
+Kipperlilly: … what are you doing?
 
 <<kristen Grin>>
 <<voiceline KristenGreeting4>>
@@ -50,28 +50,32 @@ Kipperlilly: NOTHING.
 <<char_right KipperlillyNeutral>>
 She shoves her crystal into her pocket before you can snatch it out of her hand. You’d be offended if Riz didn’t do the exact same thing every lunch period. <i>Rogues.</i>
 
-<<char_left LucyNeutral2>>
+<<char_left LucyNeutral3>>
 Lucy arrives in a slightly beat-up silver minivan a few minutes later. She very cautiously pulls up to the side of the street that you two are on.
 
 Kristen: Is this where you call us losers and tell us to get in?
 
 Lucy: What? No, I was going to ask if either of you knew how to parallel park.
 
+<<kristen Surprised>>
+<<char_right KipperlillySurprised>>
 You stare at her. You can see Kipperlilly doing the same out of the corner of your eye.
 
 Kipperlilly: They gave you a license without seeing if you could parallel park?
 
 Lucy: I mean, I know how to parallel park, I just don’t <i>know</i> how to do it, y’know?
 
+<<kristen Neutral>>
 You don’t, in fact, know. 
 
 Kipperlilly: … right.
 
+<<char_right KipperlillyNeutral>>
 Kristen: So, <i>can</i> we get in?
 
 Kipperlilly: I mean. Lucy, do you feel comfortable driving for an hour?
 
-<<char_left LucySurprised>>
+<<char_left LucySurprised3>>
 <<voiceline LucySurprised2>>
 Lucy: An <i>hour?</i> Where are we going, Kip?
 
@@ -81,21 +85,21 @@ Kipperlilly: Trust the process, Luce.
 
 You’re all for trusting processes, but Lucy doesn’t seem immediately confident in her ability to road trip. 
 
-That being said, most of your road trips are spent throwing popcorn at the back of Gorgug’s head as he tries to stay in the right lane, so maybe you’re not that much of an expert, either. 
+That being said, most of your road trips are spent throwing popcorn at the back of Gorgug’s head as he tries to stay in the right lane, so there’s a chance you’re not much of an expert, either. 
 
 Maybe if you weigh in, you can get this show on the road and not have to spend the next half an hour teaching Lucy how to parallel park for real.
 
--> Lucy’s got this. Where we’re going, we don’t need to parallel park… right, Kip?
+-> Kristen: “Lucy’s got this. Where we’re going, we don’t need to parallel park… right, Kip?”
   <<char_right KipperlillyNeutral>>
   Kipperlilly: Well, I suppose that’s true…
   Lucy: I still don’t know about driving for an hour.
   Kristen: If you get tired, we can always swap out.
-  <<char_left LucyNeutral2>>
+  <<char_left LucyNeutral3>>
   Lucy: That’s true. Alright, let’s get going, then.
   Kipperlilly hops into the passenger seat and pulls it forward, giving you all of the leg room you’d want in the back. 
   You completely ignore that to lean forward and wrap your arms around the passenger seat, just managing to balance a forearm across her shoulders. She scowls at you but doesn’t move. 
   <<add_points 1>>
--> Why don’t you drive, Kip? You know where we’re going, right?
+-> Kristen: “Why don’t you drive, Kip? You know where we’re going, right?”
   <<char_right KipperlillyNeutral>>
   Kipperlilly: I mean, yeah, but I have to be in shotgun to navigate. Obviously.
   Kristen: Right, right. How could I have been so silly?
@@ -104,8 +108,9 @@ Maybe if you weigh in, you can get this show on the road and not have to spend t
   Kipperlilly hops into the passenger seat and pulls it forward, giving you all of the leg room you’d want in the back. 
   You completely ignore that to lean forward and wrap your arms around the passenger seat, just managing to balance a forearm across her shoulders. She scowls at you but doesn’t move. 
   <<add_points 0>>
--> Toss me the keys, babe.
+-> Kristen: “Toss me the keys, babe.”
   <<voiceline KristenHappy1>>
+  <<kristen Grin>>
   Lucy: Well, they’re currently in the car, so I’d have to park first.
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed2>>
@@ -114,7 +119,8 @@ Maybe if you weigh in, you can get this show on the road and not have to spend t
   Lucy hops out of the driver’s seat and lets you sit. Kipperlilly climbs into the passenger seat as Lucy ducks in the back, though she forgoes putting her seatbelt on to lean onto the center console between the two of you.
   <<add_points 1>>
 
-<<char_left LucyNeutral2>>
+<<kristen Neutral>>
+<<char_left LucyNeutral3>>
 <<char_right KipperlillyNeutral>>
 When you’re all settled, you’re off! Kipperlilly navigates with precision, warning about every turn and lane change far earlier than the driver actually needs to start worrying about it. 
 
@@ -143,7 +149,9 @@ She folds her arms with a smug grin, so you figure you’re not going to get any
 
 Kristen: You ever heard of this berry picking spot, Lucy?
 
-Lucy: Nope. Must be a trade secret. 
+Lucy: Nope. She’s been holding out.
+
+Kristen: Damn. She’s full of trade secrets, huh? 
 
 <<char_right KipperlillyBlush>>
 Kipperlilly doesn’t deny it.
@@ -163,17 +171,17 @@ Kipperlilly: I’ll never tell.
 Lucy: Well, I’ve got plenty of road trip-worthy songs on my playlists.
 
 Which should you start with?
-  -> It’s Lucy’s car, so it’s only fair she gets first dibs on music.
+-> <i>It’s Lucy’s car, so it’s only fair she gets first dibs on music.</i>
   <<char_right KipperlillyNeutral>>
-  The crystal is passed to Kipperlilly, who expertly navigates to the chosen playlist and hits shuffle. She perks up when the first song, a ukulele cover of a rock song, starts playing.
+  The crystal is passed to Kipperlilly, who navigates to the chosen playlist and hits shuffle. She perks up when the first song, a ukulele cover of a rock song, starts playing.
   Kipperlilly: Is this one of Ruben’s old covers? I thought he deleted everything from before My Clerical Gnomance went big.
   Lucy: Don’t tell him I still listen to them; he’ll spend the next month trying to steal my phone to delete them again.
   <<add_points 1>>
-  -> Kipperlilly sounds like she’s planned everything out. Why mess that up?
+-> <i>Kipperlilly sounds like she’s planned everything out. Why mess that up?</i>
   <<voiceline KipHappy2>>
-  Obviously pleased, Kipperlilly connects her crystal and almost immediately hits play on her playlist, starting up a high energy pop song with lyrics you don’t understand. She must’ve had it locked and loaded and ready to go.
+  Obviously pleased, Kipperlilly connects her crystal and almost immediately hits play on her playlist, starting up a high energy pop song with lyrics you don’t understand. She must’ve had it ready to go.
   <<add_points 1>>
-  -> I know my music is <i>perfect</i> to set the mood!
+-> <i>I know my music is </i>perfect<i> to set the mood!</i>
   <<char_right KipperlillyNeutral>>
   Your crystal is handed to Kipperlilly, who hits shuffle on the playlist you point out. She wrinkles her nose when one of Fig’s old demos comes up first and skips to the next song without commenting.
   <<add_points 1>>
@@ -181,7 +189,7 @@ Which should you start with?
 <<char_right KipperlillyNeutral>>
 With an epic soundtrack, there’s nothing that can stop you now! 
 
-Lucy: Oh, Kip, did you ever reply to Oisin in the groupchat, by the way?
+Lucy: Oh, Kip, did you ever reply to Mary Ann in the groupchat, by the way?
 
 <<char_right KipperlillyBlush>>
 <<voiceline KipNeutral1>>
@@ -191,11 +199,11 @@ Kipperlilly: Why would I reply to that fucking nerd?
 
 Lucy: I thought it was a kind sentiment, personally.
 
-Kipperlilly: He asked if —
+Kipperlilly: She said it was —
 
 She abruptly cuts herself off, very noticeably glancing at you.
 
-<<char_left LucyJoking>>
+<<char_left LucyJoking3>>
 Lucy: Yeah? What did he ask?
 
 Kipperlilly: I hate you.
@@ -211,21 +219,24 @@ Kipperlilly: “Very nice things,” my ass. If you send Ruben any photos, I’m
 
 Kristen: Were they making fun of you?
 
-<<char_left LucyNeutral>>
+<<char_left LucyNeutral3>>
 Lucy: Ivy and Oisin are <i>always</i> making fun of the rest of us, and Mary Ann and Ruben can give as good as they get, even if they don’t always try to.
 
 For a second, you wonder what kind of sick, twisted definition of friendship Lucy and Kipperlilly have been putting up with. 
 
-Then you remember that Fabian has spent the past four years calling Riz “The Ball” and that Fig regularly puts on an illusory version of your face and pretends to come out as straight to your loved ones. Maybe your definition of friendship is just as sick and twisted.
+Then you remember that Fabian has spent the past four years calling Riz “The Ball” and that Adaine sometimes puts Boggy on chairs and makes him croak loudly when people are about to sit on him. Maybe your definition of friendship is just as sick and twisted.
 
 Kristen: Fair enough. What did he say?
 
 Kipperlilly throws her hands in the air with a huff, but she doesn’t stop Lucy from handing her crystal over to you. You manage a glance at it as the car rumbles over a shallow pothole.
 
-<<toggleText Rat Grinders>>
-Oisin: Have fun on your date don’t do anything i wouldn’t do ;) And don’t get arrested i would do that but you shouldn’t
+<<toggleText MaryAnn>>
+Mary Ann: if you get arrested on your date we’re not coming to get you
 
-Lucy: thanks! we’ll do our best to make sure our bail is $0 :)
+Mary Ann: have fun tho don’t fall in
+
+<<toggleText Lucy>>
+Lucy: thanks!!! we’ll lyk if we need oisin to pay bail :)
 <<toggleText none>>
 
 Kristen: That’s the most normal text I’ve ever seen.
@@ -234,14 +245,14 @@ Lucy: Right?
 
 <<char_right KipperlillyAnnoyed>>
 <<voiceline KipDateFailure1>>
-Kipperlilly: He wants me dead. All of them do.
+Kipperlilly: She wants me dead. All of them do.
 
 Lucy: I don’t.
 
 Kipperlilly: For now.
 
-<<char_left LucyJoking>>
-Lucy smiles sweetly before reaching over to the steering wheel and jerking it slightly to the right. It’s not enough to pull you to a different lane, but it’s more than enough to fling all of you to one side as Kipperlilly loudly swears.
+<<char_left LucyJoking3>>
+Lucy smiles sweetly before quickly jerking the steering wheel slightly to the right. It’s not enough to pull you to a different lane, but it’s more than enough to fling all of you to one side as Kipperlilly loudly swears.
 
 <<char_right KipperlillyAngry>>
 <<voiceline KipAngry1>>
@@ -251,22 +262,22 @@ Kipperlilly: WHY. WHY WHY WHY.
 Lucy: I changed my mind, I <i>do</i> want you dead.
 
 <<char_right KipperlillyAnnoyed>>
-<<char_left LucyNeutral2>>
-Kipperlilly: Oh, great, just one more thing to tell my fucking therapist about. “Yeah, the girls that I’m into tend to be actively trying to kill me at all times. There’s still nothing wrong with me, though.”
+<<char_left LucyNeutral3>>
+Kipperlilly: Oh, great, just one more thing to tell my fucking therapist about. “Yeah, the girls I’m into tend to be actively trying to kill me at all times. There’s still nothing wrong with me, though.”
 
 Her eyes fly open with mortification the second she processes what she said. She glances at the window.
 
 <<kristen Awkward>>
 Kristen: Pleeeeease don’t jump out of the window of a moving car.
 
-<<char_left LucyFlirty>>
+<<char_left LucyFlirty3>>
 Lucy: We love you too, Kip.
 
 <<char_right KipperlillyBlush>>
 Kipperlilly makes an incoherent series of half-choked sounds as she sinks onto the floor under her seat.
 
 <<kristen Grin>>
-<<voiceline KristenSuccessDate3>>
+<<voiceline KristenDateSuccess3>>
 You and Lucy exchange a mischievous glance.
 
 Kristen: So, Kip, what exactly is it about us that you’re into?
@@ -275,8 +286,8 @@ Kristen: Is it my dazzling charm? My unparalleled sense of humour? My smokin’ 
 
 <<char_right KipperlillyAngry>>
 Kipperlilly: NONE OF THOSE THINGS. You repulse me, Applebees. I’m going to throw up.
-<<char_left LucySad>>
-Lucy pouts at her through the rearview mirror.
+<<char_left LucySad3>>
+Lucy pouts at her, leaning over to catch Kipperlilly’s eye.
 
 Lucy: I don’t repulse you, do I?
 
@@ -284,7 +295,7 @@ Lucy: I don’t repulse you, do I?
 <<voiceline KipSad1>>
 Kipperlilly glares at Lucy. She opens her mouth, but words fail to come out. 
 
-<<char_left LucyFlirty>>
+<<char_left LucyFlirty3>>
 Lucy: What is it you like about <i>me</i>? My morbid sense of humour? My tenacity? 
 
 She slides you a grin.
@@ -294,7 +305,7 @@ Lucy: My smokin’ hot bod?
 <<char_right KipperlillyBlush>>
 You can almost see the steam coming off Kipperlilly’s face. You could probably fry an egg on her head, although that would get her hair on it and probably be gross.
 
-<<char_left LucyJoking>>
+<<char_left LucyJoking3>>
 Lucy: I think we broke her, Kristen.
 
 Kristen: Don’t worry. We can always kiss it better later. 
@@ -307,7 +318,7 @@ Kipperlilly: I’m never talking to either of you ever again.
 Lucy: That’ll make it hard to go on this date, won’t it?
 
 <<kristen Neutral>>
-<<char_left LucyNeutral>>
+<<char_left LucyNeutral3>>
 Kipperlilly just crosses her arms and sniffs. You and Lucy laugh silently and decide to show her some mercy.
 
 <<background NatureOutdoors>>
@@ -334,12 +345,12 @@ Kipperlilly leads you and Lucy down a trail that you can barely see. It’s more
 
 Kristen: So… do you two do this often?
 
-<<char_left LucyJoking>>
+<<char_left LucyJoking3>>
 Lucy: Walk around the woods? Famously, yes.
 
 Kipperlilly swats at her arm.
 
-<<char_left LucyNeutral>>
+<<char_left LucyNeutral3>>
 Kipperlilly: We haven’t gone to the Far Haven woods <i>once</i> this year.
 
 Lucy: Maybe <i>you</i> haven’t. I’ve been there a bunch, I love it. It feels like part of my soul is just tethered there now. 
@@ -348,12 +359,12 @@ Kristen: It <i>is</i> pretty nice. There are some really cool trees.
 
 Kipperlilly rolls her eyes, disbelieving.
 
-Kipperlilly: Whatever. We’re here.
+Kipperlilly: Both of you are absolute weirdos. Anyway, we’re here.
 
 <<location "Berry Patch">>
 Kipperlilly pushes a bush to the side, revealing a surprisingly sunlit clearing. Thorny bushes, laden with the largest raspberries you’ve ever seen, have taken over half of the clearing.
 
-<<char_left LucySurprised>>
+<<char_left LucySurprised3>>
 <<kristen Surprised>>
 <<voiceline LucySurprised1>>
 Lucy: Kip, this is…
@@ -364,17 +375,19 @@ Kipperlilly: Awesome? Amazing? The coolest thing you’ve ever seen? Yeah, I kno
 
 Kristen: How’d you find this?
 
-Kipperlilly: My mom’s been coming here all her life. She makes a lot of jams and compotes.
+Kipperlilly: Mom’s been coming here all her life. She makes a lot of jams and compotes.
 
-Lucy: I thought your mom never even leaves Elmville. She hikes this far into the woods for raspberries?
+Lucy: I’ve heard you complain so many times that your parents don’t even like leaving Elmville for vacation. Your mother hikes this far into the woods for raspberries?
 
 Kipperlilly: My mom is a multifaceted person who likes to forage in exactly one place outside of Elmville in her spare time. 
 
-Lucy seems to be having a small mental breakdown over this revelation. You kind of feel like having one too. Kip’s mom? The nice lady who made you brownies just because her daughter started talking about you more? 
+Lucy seems to be having a small mental breakdown over this revelation. You kind of feel like having one too. 
+
+You haven’t actually met Kipperlilly’s mom yet, but all signs point to her being the kind of woman to buy the berries for her jam from the local supermarket. <i>Maybe</i> the weekend farmer’s market if she was feeling particularly adventurous.
 
 <<char_right KipperlillyNeutral>>
 <<kristen Neutral>>
-Kipperlilly: I think her mom used to take her when she was a kid, so it’s like a family thing. Hardly counts as leaving town.
+Kipperlilly: I think her mom used to take her when she was a kid, so it’s like a family thing. Hardly counts as leaving town to her.
 
 Kristen: Like the funfetti recipe? Are you gonna get in trouble for showing us the secret Copperkettle berry-picking spot? 
 
@@ -383,8 +396,8 @@ Kipperlilly rolls her eyes. Lucy looks startled.
 Lucy: You told Kristen your mom’s secret funfetti recipe? The one you still refuse to give to Ivy’s dads?
 
 <<voiceline KipNeutral1>>
-<<char_left LucyNeutral2>>
-Kipperlilly: I didn’t tell her <i>shit,</i> we just made them a few weeks ago at her place and I had to send her the recipe to make sure she didn’t fuck them up.
+<<char_left LucyNeutral3>>
+Kipperlilly: I didn’t tell her <i>shit,</i> we just made them a while ago at her place and I had to send her the recipe to make sure she didn’t fuck them up.
 
 <<kristen Grin>>
 You realize with a sudden giddiness that the photo you still haven’t deleted from your text thread could give you a lot of leverage with the rest of the Rat Grinders. Is this why Riz and Kipperlilly are so obsessed with bartering for information?
@@ -403,30 +416,28 @@ Kipperlilly: So, I figured we fill the baskets first and then sit down somewhere
 <<kristen Surprised>>
 Kristen: Wait, were we supposed to bring something too?
 
-Kipperlilly blinks at the interruption to her presumably rehearsed explanation, before shaking her head.
-
 Kipperlilly: No, I would’ve told you if you were. 
 
 Considering you all split the bill at the other places no matter whose idea it was to go there, it feels a little unfair to not have something to contribute. 
 
 <<kristen Neutral>>
-<<char_left LucyHappy>>
-You’re about to protest, maybe insist on paying her back for the food, but Lucy shakes her head at you. She squeezes Kipperlilly’s shoulder, giving her a gentle smile.
+<<char_left LucyHappy3>>
+You’re about to protest, but Lucy shakes her head at you. She squeezes Kipperlilly’s shoulder, giving her a gentle smile.
 
 <<voiceline LucyDateSuccess3>>
 Lucy: You put a lot of thought into this. We really appreciate it, Kip.
 
-Kipperlilly’s face warms, and a tiny, surprisingly shy smile curls her lips. You can’t help but smile in response, and you give Lucy a small nod.
+Kipperlilly’s face warms as she gives a tiny, surprisingly shy smile. You can’t help but smile in response, and you give Lucy a small nod.
 
 <<kristen Soft>>
-Kristen: Yeah, thanks, Kip. You’ve planned a perfect date. 
+Kristen: Yeah, thanks Kip. You’ve planned a perfect date. 
 
 <<char_right KipperlillyHappy>>
 <<voiceline KipHappy1>>
 Kipperlilly’s smile widens. You all bask in the warmth of the moment a little longer. 
 
 <<kristen Neutral>>
-<<char_left LucyNeutral2>>
+<<char_left LucyNeutral3>>
 Lucy: So, are we supposed to pick these in a particular way so we don’t wreck the berries?
 
 Kipperlilly: Oh, yeah, you have to be really gentle, and if they’re not coming off easily, they’re probably not ripe enough. Come look.
@@ -435,15 +446,98 @@ Kipperlilly gives you both a quick berry-picking demonstration, pointing out all
 
 It’s all pretty straightforward, so soon enough the three of you are off. 
 
-You all work diligently at first, simply picking the berries and place them into the baskets, but soon enough that becomes boring and the need to shake it up a little overwhelms you.
+You all work diligently at first, picking berries and putting them into the baskets, but soon enough that starts getting boring. The need to shake it up a little overwhelms you.
 
-Instead of placing the berries into your basket you start trying to toss them into Lucy’s. She notices soon enough and with a giggle tosses hers back at you. Then the two of you stealthily try to make baskets into Kipperlilly’s while keeping up a casual and totally nonsuspicious conversation.
+<<kristen Grin>>
+Instead of carefully dropping berries into your basket you start trying to toss them into Lucy’s. She notices soon enough and with a giggle tosses some into your basket. One bounces off of the handle into the basket and Lucy pumps her fist. You do your best to stifle your laughter.
 
-You don’t think she notices at first until suddenly one of your tosses is intercepted by her whipping around and snatching it out of the air with her teeth, easily catching it in her mouth.
+Lucy presses her lips together as she points at Kipperlilly’s basket. You nod enthusiastically.
+
+Kristen: Race to see who fills their basket first? 
+
+Kipperlilly snorts as she digs through the bush in front of her, not even glancing at the two of you.
+
+<<char_right KipperlillySmug>>
+Kipperlilly: It would hardly be a race.
+
+Lucy manages to throw a whole handful of berries into Kipperlilly’s basket while she’s not looking.
+
+Kristen: You that confident that you can win? What do you think, Lucy?
+
+You nail three berries into Kipperlilly’s basket in quick succession.
+
+Lucy: Well, that’s not fair. She’s got years of practice.
+
+Kristen: Passed down by the daughters of the Copperkettle line.
+
+Five more berries make it in. A sixth bounces out. You’ll get it next time.
+
+Lucy: An honored tradition that we’re privileged enough to be let in on.
+
+<<kristen Surprised>>
+<<char_left LucySurprised3>>
+<<char_right KipperlillySmug>>
+Lucy tries to throw another berry into Kipperlilly’s basket as she speaks, but it’s intercepted by her whipping around and snatching it out of the air with her teeth, easily catching it in her mouth.
 
 The three of you stare at each other for a second, shocked by what just happened, before you all burst out into laughter at the same time. 
 
-There’s a lull in the conversation as you all catch your breaths from laughing. You’re warm in ways that are separate from the sunlight shining down on you, and the others are flushing pink from both the effort it takes to fill the baskets and, if they’re on the same page you are, the company. 
+Kristen: Okay, do you guys want to race for real, now?
+
+Kipperlilly: Ha! Prepare to be completely—
+
+Lucy: Okay, three, two, one, GO!
+
+<<char_right KipperlillySurprised>>
+<<char_left transparent>>
+Lucy darts off before either of you can react, giggling as she jogs towards one of the largest bushes. Kipperlilly shrieks and bolts a second later, leaving you the slowest to respond. 
+
+<<char_right transparent>>
+Maybe it’s not exactly lowkey or relaxing, but it’s definitely fun, trying to fill up your basket. You find opportunities to sidle up next to Lucy to compare, and maybe reach across to try grabbing the same berries she was going for.
+
+//<<char_left LucySomething3>>
+Lucy: I see what you’re doing!
+
+<<kristen Grin>>
+Kristen: Yeah? You gonna do something about it?
+
+Lucy looks like she’s about to say something, but she just shakes her head laughing as she darts off to another bush nearby.
+
+<<char_left transparent>>
+Kipperlilly’s harder to keep track of, predictably focused on winning the impromptu competition, but she pops up every now and then to taunt you about how empty your basket is even though you <i>swear</i> it looked fuller before. 
+
+//<<char_left Lucy
+Lucy: Done! Mine’s full!
+
+<<kristen Surprised>>
+<<char_right KipperlillyAnnoyed>>
+Kipperlilly: Aw, really?
+
+She appears out of nowhere to inspect Lucy’s basket, her own very nearly full as well.
+
+Kipperlilly: There’s like, half an inch left to the rim!
+
+<<kristen Neutral>>
+Kristen: Well, it’s way fuller than mine.
+
+Lucy: You know that’s because Kip was stealing your berries, right? 
+
+<<kristen Surprised>>
+You stare at Lucy for a moment, then down at your basket. You’ve <i>definitely</i> picked more berries than what are currently in there. 
+
+<<char_right KipperlillyLaugh>>
+You look at Kipperlilly, who looks back at you innocently for exactly three seconds before bursting out into snickers. Lucy joins in shortly after, and then it catches you too.
+
+<<kristen Happy>>
+Kristen: I’ll never get used to rogue antics.
+
+Kipperlilly: I’d be offended if it didn’t pay off so well for me in the end.
+
+Lucy: I still beat you!
+
+<<char_right KipperlillySmug>>
+Kipperlilly: Second place is better than last.
+
+The flagrant cheating is forgotten as you all catch your breaths from laughing. You’re warm in ways that are separate from the sunlight shining down on you, and the others are flushing pink from both the effort it takes to fill the baskets and, if they’re on the same page you are, the company. 
 <<kristen Soft>>
 <<voiceline KristenDateSuccessLucy1>>
 -> Kristen: “Today has been perfect.”
@@ -454,7 +548,7 @@ There’s a lull in the conversation as you all catch your breaths from laughing
   <<add_points 2>>
 
 <<char_right KipperlillyBlush>>
-<<char_left LucyBlush>>
+<<char_left LucyBlush3>>
 Lucy’s expression softens. Kipperlilly averts her gaze but isn’t quite able to push down her grin.
 
 Lucy: Yeah, I think so too.
@@ -462,22 +556,22 @@ Lucy: Yeah, I think so too.
 <<voiceline KipDateSuccess1>>
 Kipperlilly: I suppose it could have gone worse.
 
-<<char_left LucyNeutral2>>
+<<char_left LucyNeutral3>>
 <<kristen Neutral>>
 Kipperlilly pauses, twining a berry stalk between her fingers, then looks up at you and Lucy. You and Lucy straighten in tandem at the nervousness on her face.
 
 <<char_right KipperlillyNeutral>>
-Kipperlilly: I know I’ve taken a little longer to come around on the whole —
+Kipperlilly: I know I’ve taken a little longer to come around on this whole —
 
 She clears her throat and gestures between the three of you. 
 
-Kipperlilly: Situation. But spending the last few weeks with you two has been a lot of fun. And I know things are weird and maybe this’ll turn out to be an unmitigated disaster, but…
+Kipperlilly: Situation, I guess. But spending the last few weeks with you two has been a lot of fun. And I know things are weird and maybe this’ll turn out to be an unmitigated disaster, but…
 
 She takes a deep breath and lifts her chin.
 
 Kipperlilly: I want to do this for real. 
 
-<<char_left LucyBlush>>
+<<char_left LucyBlush3>>
 Your heart is beating out of your chest. Lucy exhales quietly.
 
 Lucy: Do what for real?
@@ -522,9 +616,7 @@ Kristen: “Adequate.” Yeah, right. Man, I feel like my heart just stopped.
 
 Lucy: You’re not the only one.
 
-Lucy’s voice is faint, and her cheeks are flushed when you look at her. This time, you and Kipperlilly exchange a knowing glance. 
-
-She shifts off your lap, and you scoot towards Lucy.
+Lucy’s voice is faint, and her cheeks are flushed when you look at her. Kipperlilly glances at you knowingly, raising an eyebrow, before shifting off your lap. You scoot towards Lucy.
 
 Kristen: May I, my lady?
 
@@ -539,7 +631,9 @@ There’s a pause as Kipperlilly and Lucy gaze at each other. You feel the weigh
 
 Lucy reaches forward and brushes a strand of hair back from Kipperlilly’s face. Kipperlilly’s eyes soften in that special way they always seem to do for Lucy. 
 
-Your chest swells with joy and tenderness as their lips finally meet, years of complicated longing finally coming to fruition.
+You don’t know everything that happened between the two of them. You don’t think you ever will. There are some things that they deserve to keep between the two of them, even if all three of you are doing “this,” as Kipperlilly put it. 
+
+But that doesn’t mean the moment feels any less sweet when they lean into each other, and the moment is as joyful and tender as your moments with them felt.
 
 When they turn to you, you reach out with both of your hands and take theirs. Their fingers intertwine with yours. 
 
@@ -547,5 +641,6 @@ For once, there’s no need to speak. You sit there with Lucy and Kipperlilly, t
 
 All is right with the world. 
 
+<<jump Cassandra4>>
 ===
 

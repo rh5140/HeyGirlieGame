@@ -17,7 +17,6 @@ public class YarnCommands : MonoBehaviour
     public GameObject[] crystalUI;
     public Image lineViewBackground;
     public Image optionViewBackground;
-    public TextMeshProUGUI lineViewText;
     public TextMeshProUGUI characterName;
     private Color _textColor;
     #endregion Crystal UI
@@ -92,6 +91,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
+        dialogueRunner.AddCommandHandler<bool>("crystal_ping", CrystalPing);
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
@@ -104,7 +104,6 @@ public class YarnCommands : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
-        _textColor = lineViewText.color;
     }
 
     private void SetLIPriority(int li)
@@ -220,31 +219,39 @@ public class YarnCommands : MonoBehaviour
         _ui.GetComponent<FadeTransition>().FadeOut();
     }
 
+    private void CrystalPing(bool isPinging)
+    {
+        crystalUI[(int)CrystalUI.Crystal].SetActive(!isPinging);
+        crystalUI[(int)CrystalUI.CrystalPing].SetActive(isPinging);
+    }
+
     private void ToggleText(string character = "NONE")
     {
         if (character.ToUpper() != "NONE")
         {
+            crystalUI[(int)CrystalUI.Crystal].SetActive(false);
+            crystalUI[(int)CrystalUI.CrystalPing].SetActive(false);
+            crystalUI[(int)CrystalUI.KristenTextOptions].SetActive(true);
             lineViewBackground.enabled = false;
             optionViewBackground.enabled = false;
             characterName.enabled = false;
-            if (character == "KristenText" || character == "Kristen")
+            if (character == "KristenText" || character == "Kristen" || character == "MaryAnn")
             {
-                crystalUI[0].SetActive(true);
-                crystalUI[1].SetActive(false);
-                lineViewText.color = Color.white;
+                crystalUI[(int)CrystalUI.KristenText].SetActive(true);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
+                if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
             }
-            else if (character[0] == '2') // hardcoding
+            else if (character[0] == '2') // 2 prepended to the 3rd character texting
             {
-                crystalUI[0].SetActive(false);
-                crystalUI[1].SetActive(false);
-                crystalUI[2].SetActive(true);
-                lineViewText.color = Color.black;
+                crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText2].SetActive(true);
             }
             else
             {
-                crystalUI[0].SetActive(false);
-                crystalUI[1].SetActive(true);
-                lineViewText.color = Color.black;
+                crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(true);
             }
         }
         else
@@ -252,11 +259,11 @@ public class YarnCommands : MonoBehaviour
             lineViewBackground.enabled = true;
             optionViewBackground.enabled = true;
             characterName.enabled = true;
-            lineViewText.color = _textColor;
             foreach (GameObject element in crystalUI)
             {
                 element.SetActive(false);
             }
+            crystalUI[0].SetActive(true);
         }
     }
     #endregion UI
