@@ -34,14 +34,15 @@ public class SaveGallery : Menu
     protected IEnumerator WaitAwake(){
         LockEsc(EscLock.Gallery);
         Pause();
-        ArrowKeyStart();
 
-        loadButton.interactable = false;
         deleteButton.interactable = false;
+        loadButton.interactable = false;
         saveButton.interactable = false;
 
         yield return null;
         CursorManager.Instance.Load(false);
+        yield return null;
+        ArrowKeyStart();
     }
 
     void Update(){
@@ -62,6 +63,7 @@ public class SaveGallery : Menu
 
             Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
             if(!SceneManager.GetActiveScene().name.Equals("Main Menu")) saveButton.interactable = true;
+            loadButton.Select();
         }
     }
 

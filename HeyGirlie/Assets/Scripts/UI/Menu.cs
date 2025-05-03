@@ -36,7 +36,7 @@ public abstract class Menu : MonoBehaviour
         GameManager.Instance.escLock = escLock;
     }
 
-    protected void ArrowKeyStart(){
+    public void ArrowKeyStart(){
         if(EventSystem.current != null) {
             arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
             if(arrowKeyStart != null) EventSystem.current.SetSelectedGameObject(arrowKeyStart);
