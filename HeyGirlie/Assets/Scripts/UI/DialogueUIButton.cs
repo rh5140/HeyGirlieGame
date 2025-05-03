@@ -7,11 +7,24 @@ public class DialogueUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
 {
     [SerializeField] private GameObject button;
     [SerializeField] private UnityEvent buttonAction;
+    [SerializeField] private KeyCode buttonKey;
     private RectTransform transform;
     private bool selected = false;
     [SerializeField] private bool stayOpen = false;
     void Awake(){
         transform = button.GetComponent<RectTransform>(); 
+    }
+
+    void Update(){
+        if(Input.GetKeyUp(buttonKey)) {
+            if(stayOpen) {
+                selected = !selected;
+                StartCoroutine(AnimateButton(selected));
+            }
+            else StartCoroutine(AnimateButton(false));
+
+            gameObject.GetComponent<EventTrigger>().OnSubmit(null);
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData){
@@ -24,7 +37,6 @@ public class DialogueUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void Selected(){
         if(stayOpen || !selected) buttonAction.Invoke();
-        // if(!selected) buttonAction.Invoke();
 
         if(stayOpen) selected = !selected;
         else StartCoroutine(AnimateButton(false));

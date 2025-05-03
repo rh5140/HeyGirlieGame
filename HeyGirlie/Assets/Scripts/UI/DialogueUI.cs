@@ -11,6 +11,7 @@ public class DialogueUIButtons : MonoBehaviour
     [SerializeField] private HGGLineView hggLineView;
     [SerializeField] private GameObject optionsFFButton;
     [SerializeField] private GameObject lineFFButton;
+    [SerializeField] private KeyCode saveKey, historyKey, ffKey, charProfileKey;
 
     private bool ffActive = false;
 
@@ -27,12 +28,20 @@ public class DialogueUIButtons : MonoBehaviour
         // }
     }
 
-    public void Save(){
-        CursorManager.Instance.WaitCursor(GameManager.Instance.Save);
+    void Update(){
+        if(Input.GetKeyUp(saveKey)) {
+            Save();
+        } else if(Input.GetKeyUp(historyKey)) {
+            //nothing yet
+        } else if(Input.GetKeyUp(ffKey)) {
+            FastForward();
+        } else if(Input.GetKeyUp(charProfileKey)) {
+            CharacterProfiles();
+        }
     }
 
-    public void Load(){
-        Instantiate(saveGalleryMenu);
+    public void Save(){
+        CursorManager.Instance.WaitCursor(GameManager.Instance.Save);
     }
 
     public void FastForward(){
