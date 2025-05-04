@@ -3,10 +3,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using TMPro;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SaveGallery : Menu
 {
+    [SerializeField] private List<Button> buttons;
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
     [SerializeField] private Button deleteButton;
@@ -18,8 +21,10 @@ public class SaveGallery : Menu
 
     private Toggle selected;
     private int selectedSave = 0;
+    private ArrowNavigation arrowNavigation;
 
     void Awake(){
+        arrowNavigation = gameObject.GetComponent<ArrowNavigation>();
         StartCoroutine(WaitAwake());
     }
 
@@ -30,11 +35,12 @@ public class SaveGallery : Menu
         deleteButton.interactable = false;
         loadButton.interactable = false;
         saveButton.interactable = false;
+        arrowNavigation.ArrowNav(buttons);
 
         yield return null;
         CursorManager.Instance.Load(false);
         yield return null;
-        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
+        arrowNavigation.ArrowKeyStart();
     }
 
     void Update(){
@@ -44,7 +50,7 @@ public class SaveGallery : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
+        arrowNavigation.ArrowKeyEnd();
     }
 
     public void isSelected(bool toggle){
@@ -54,9 +60,12 @@ public class SaveGallery : Menu
             selected = EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>();
 
             Unselect((SaveManager.findSave(selectedSave) != null) ? true : false);
+            
             string sceneName = SceneManager.GetActiveScene().name;
-            if(!sceneName.Equals("Main Menu") && !sceneName.Equals("DateSelection")) saveButton.interactable = true;
-            loadButton.Select();
+            if(!sceneName.Equals("Main Menu") && !sceneName.Equals("DateSelection")) {
+                saveButton.interactable = true;
+                arrowNavigation.ArrowNav(buttons);
+            }
         }
     }
 
@@ -81,7 +90,10 @@ public class SaveGallery : Menu
 
     public IEnumerator Save(){
         yield return new WaitUntil(GameManager.Instance.Save);
+
         saveButton.interactable = false;
+        arrowNavigation.ArrowNav(buttons);
+
         overwritePopup.SetActive(false);
         saves[selectedSave - 1].SetName();
         saves[selectedSave - 1].SetScreenshot();
@@ -110,5 +122,6 @@ public class SaveGallery : Menu
     private void Unselect(bool saveFound){
         loadButton.interactable = saveFound;
         deleteButton.interactable = saveFound;
+        arrowNavigation.ArrowNav(buttons);
     }
 }

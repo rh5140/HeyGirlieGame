@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DateSelectionInterface : MonoBehaviour
 {
-    [SerializeField] private Button[] regions;
+    [SerializeField] private List<Button> regions;
     [SerializeField] private Button schoolButton;
     [SerializeField] private Button homeButton;
     [SerializeField] private Button downtownButton;
@@ -26,25 +26,27 @@ public class DateSelectionInterface : MonoBehaviour
             else valid.Add(regions[(int)region]);
         }
 
-        Navigation nav = background.navigation;
-        nav.selectOnDown = valid[0];
-        nav.selectOnUp = valid[0];
-        nav.selectOnLeft = valid[0];
-        nav.selectOnRight = valid[0];
-        background.navigation = nav;
+        gameObject.GetComponent<ArrowNavigation>().ArrowNav(regions);
 
-        for(int i = 0; i < valid.Count; i++){
-            nav = valid[i].navigation;
+        // Navigation nav = background.navigation;
+        // nav.selectOnDown = valid[0];
+        // nav.selectOnUp = valid[0];
+        // nav.selectOnLeft = valid[0];
+        // nav.selectOnRight = valid[0];
+        // background.navigation = nav;
 
-            nav.selectOnUp = (i == 0) ? null : valid[i-1];
-            nav.selectOnDown = (i == valid.Count-1) ? null : valid[i+1];
+        // for(int i = 0; i < valid.Count; i++){
+        //     nav = valid[i].navigation;
 
-            valid[i].navigation = nav;
-        }
+        //     nav.selectOnUp = (i == 0) ? null : valid[i-1];
+        //     nav.selectOnDown = (i == valid.Count-1) ? null : valid[i+1];
+
+        //     valid[i].navigation = nav;
+        // }
     }
 
     void Update(){
-        Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
+        // Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
     }
 
     public void SetUpRegions()
