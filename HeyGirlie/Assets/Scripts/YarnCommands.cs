@@ -523,6 +523,9 @@ public class YarnCommands : MonoBehaviour
 
     private IEnumerator FadeBGFilter(Image bg, string color)
     {
+        Image kristenSprite = _kristenSprite.GetComponent<Image>(),
+                leftSprite = _charLeftSprite.GetComponent<Image>(),
+                rightSprite = _charRightSprite.GetComponent<Image>();
         Color start = bg.color;
         Color end;
         switch (color)
@@ -547,6 +550,11 @@ public class YarnCommands : MonoBehaviour
         {
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
+            if(color.Equals("sepia") || color.Equals("white")){
+                kristenSprite.color = currentColor;
+                leftSprite.color = currentColor;
+                rightSprite.color = currentColor;
+            }
             time += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }

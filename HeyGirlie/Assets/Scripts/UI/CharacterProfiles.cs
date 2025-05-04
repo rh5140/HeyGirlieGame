@@ -20,7 +20,7 @@ public class CharacterProfiles : Menu
     {
         LockEsc(EscLock.Profiles);
         Pause();
-        ArrowKeyStart();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
 
         string scene = SceneManager.GetActiveScene().name;
         string pattern = @"(.+)Date\d+|(Cassandra)";
@@ -43,7 +43,7 @@ public class CharacterProfiles : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public void Back(){

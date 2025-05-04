@@ -9,7 +9,7 @@ public class Credits : Menu
             Pause();
         }
         LockEsc(EscLock.Credits);
-        ArrowKeyStart();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
     }
 
     void Update(){
@@ -19,7 +19,7 @@ public class Credits : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public override void Close(){

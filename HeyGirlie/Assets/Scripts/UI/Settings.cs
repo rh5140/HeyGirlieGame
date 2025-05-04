@@ -35,7 +35,7 @@ public class Settings : Menu
     void Awake() {
         LockEsc(EscLock.Settings);
         Pause();
-        ArrowKeyStart();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
 
         if(SettingManager.Instance.fastForwardActive){
             speedSlider.interactable = false;
@@ -54,7 +54,8 @@ public class Settings : Menu
         settingsButton.GetComponent<Button>().interactable = false;
         controlsContainer.SetActive(false);
 
-        screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
+        Debug.Log(GameManager.Instance.GetProfile());
+        screenshot.sprite = (SceneManager.GetActiveScene().name.Equals("Main Menu")) ? defaultScreenshot : SaveManager.getScreenshot(GameManager.Instance.GetProfile());
     }
 
     void Update(){
@@ -64,7 +65,7 @@ public class Settings : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public void ToggleFullscreen(bool value){
@@ -109,7 +110,14 @@ public class Settings : Menu
     }
 
     public void OpenSaves(){
-        Instantiate(saveGalleryMenu);
+        if(SceneManager.GetActiveScene().name.Equals("Main Menu")) Instantiate(saveGalleryMenu);
+        else {
+            CursorManager.Instance.WaitCursor(() => {
+                Debug.Log("rahh");
+                Instantiate(saveGalleryMenu);
+                return true;
+            });
+        }
     }
 
     private void SetSettings(){

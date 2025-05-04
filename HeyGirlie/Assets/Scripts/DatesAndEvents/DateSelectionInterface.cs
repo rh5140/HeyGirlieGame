@@ -1,35 +1,59 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class DateSelectionInterface : MonoBehaviour
 {
+    [SerializeField] private Button[] regions;
     [SerializeField] private Button schoolButton;
     [SerializeField] private Button homeButton;
     [SerializeField] private Button downtownButton;
     [SerializeField] private Button outdoorsButton;
     [SerializeField] private Button awayButton;
+    [SerializeField] private Button background;
     public void Start()
     {
-        // Debug.Log("Start!");
-        // Debug.Log("Dates this week: " + GameManager.Instance.GetDatesThisWeek());
+        List<Button> valid = new List<Button>();
+        
         if (GameManager.Instance.GetDatesThisWeek() == 0) SetUpRegions();
 
-        if (GameManager.Instance.schoolDates.Count == 0) schoolButton.interactable = false;
-        if (GameManager.Instance.mordredDates.Count == 0) homeButton.interactable = false;
-        if (GameManager.Instance.elmvilleDates.Count == 0) downtownButton.interactable = false;
-        if (GameManager.Instance.outdoorsDates.Count == 0) outdoorsButton.interactable = false;
-        if (GameManager.Instance.awayDates.Count == 0) awayButton.interactable = false;
+        foreach (Region region in Enum.GetValues(typeof(Region)))
+        {
+            if(GetRegionQueue(region).Count == 0) regions[(int)region].interactable = false;
+            else valid.Add(regions[(int)region]);
+        }
+
+        Navigation nav = background.navigation;
+        nav.selectOnDown = valid[0];
+        nav.selectOnUp = valid[0];
+        nav.selectOnLeft = valid[0];
+        nav.selectOnRight = valid[0];
+        background.navigation = nav;
+
+        for(int i = 0; i < valid.Count; i++){
+            nav = valid[i].navigation;
+
+            nav.selectOnUp = (i == 0) ? null : valid[i-1];
+            nav.selectOnDown = (i == valid.Count-1) ? null : valid[i+1];
+
+            valid[i].navigation = nav;
+        }
+    }
+
+    void Update(){
+        Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
     }
 
     public void SetUpRegions()
     {
-        GameManager.Instance.schoolDates.Clear();
-        GameManager.Instance.elmvilleDates.Clear();
-        GameManager.Instance.mordredDates.Clear();
-        GameManager.Instance.outdoorsDates.Clear();
         GameManager.Instance.awayDates.Clear();
+        GameManager.Instance.outdoorsDates.Clear();
+        GameManager.Instance.schoolDates.Clear();
+        GameManager.Instance.mordredDates.Clear();
+        GameManager.Instance.elmvilleDates.Clear();
         foreach (LoveInterest li in GameManager.Instance._liQueue)
         {
             // Shouldn't really ever be empty when we're done setting everything up
@@ -46,16 +70,16 @@ public class DateSelectionInterface : MonoBehaviour
     {
         switch (region)
         {
-            case Region.School:
-                return GameManager.Instance.schoolDates;
-            case Region.Elmville:
-                return GameManager.Instance.elmvilleDates;
-            case Region.Mordred:
-                return GameManager.Instance.mordredDates;
+            case Region.Away:
+                return GameManager.Instance.awayDates;
             case Region.Outdoors:
                 return GameManager.Instance.outdoorsDates;
+            case Region.School:
+                return GameManager.Instance.schoolDates;
+            case Region.Mordred:
+                return GameManager.Instance.mordredDates;
             default:
-                return GameManager.Instance.awayDates;
+                return GameManager.Instance.elmvilleDates;
         }
     }
 

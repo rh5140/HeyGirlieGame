@@ -20,14 +20,6 @@ public class SaveGallery : Menu
     private int selectedSave = 0;
 
     void Awake(){
-        // LockEsc(EscLock.Gallery);
-        // Pause();
-        // ArrowKeyStart();
-
-        // loadButton.interactable = false;
-        // deleteButton.interactable = false;
-        // saveButton.interactable = false;
-
         StartCoroutine(WaitAwake());
     }
 
@@ -42,7 +34,7 @@ public class SaveGallery : Menu
         yield return null;
         CursorManager.Instance.Load(false);
         yield return null;
-        ArrowKeyStart();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
     }
 
     void Update(){
@@ -52,7 +44,7 @@ public class SaveGallery : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public void isSelected(bool toggle){
