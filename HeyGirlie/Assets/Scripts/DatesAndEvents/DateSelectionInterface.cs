@@ -27,26 +27,6 @@ public class DateSelectionInterface : MonoBehaviour
         }
 
         gameObject.GetComponent<ArrowNavigation>().ArrowNav(regions);
-
-        // Navigation nav = background.navigation;
-        // nav.selectOnDown = valid[0];
-        // nav.selectOnUp = valid[0];
-        // nav.selectOnLeft = valid[0];
-        // nav.selectOnRight = valid[0];
-        // background.navigation = nav;
-
-        // for(int i = 0; i < valid.Count; i++){
-        //     nav = valid[i].navigation;
-
-        //     nav.selectOnUp = (i == 0) ? null : valid[i-1];
-        //     nav.selectOnDown = (i == valid.Count-1) ? null : valid[i+1];
-
-        //     valid[i].navigation = nav;
-        // }
-    }
-
-    void Update(){
-        // Debug.Log(EventSystem.current.currentSelectedGameObject.transform.name);
     }
 
     public void SetUpRegions()
