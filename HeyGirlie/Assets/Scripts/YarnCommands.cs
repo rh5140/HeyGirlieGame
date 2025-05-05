@@ -42,6 +42,9 @@ public class YarnCommands : MonoBehaviour
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
+    private RectTransform _cassSprite;
+    private float tick = 0, direction = 0.05f;
+
     #region Setup
     /// <summary>
     /// Supporting adding Yarn Commands, initializing values, and setting LI priority
@@ -104,6 +107,17 @@ public class YarnCommands : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
+    }
+
+    void Update(){
+        if(_cassSprite != null){
+            if(tick <= 30 && tick >= 0) {
+                _cassSprite.anchoredPosition = new Vector2(-640f, -1f*(tick = tick + direction));
+            } else {
+                direction = -1f*direction;
+                tick = tick + direction;
+            }
+        }
     }
 
     private void SetLIPriority(int li)
@@ -324,6 +338,13 @@ public class YarnCommands : MonoBehaviour
 
     private void SetCharLeft(string charSpriteName)
     {
+        if(charSpriteName.Contains("Cass")){
+            if (_cassSprite == null) _cassSprite = _charLeftSprite.GetComponent<RectTransform>();
+        } else {
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            _cassSprite = null;
+        }
+
         if (_multiSprite != null)
             SetMultiSprite(_charLeftSprite, charSpriteName);
         else
@@ -332,6 +353,13 @@ public class YarnCommands : MonoBehaviour
 
     private void SetCharRight(string charSpriteName)
     {
+        if(charSpriteName.Contains("Cass")){
+            if (_cassSprite == null) _cassSprite = _charRightSprite.GetComponent<RectTransform>();
+        } else {
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            _cassSprite = null;
+        }
+
         if (_multiSprite != null)
             SetMultiSprite(_charRightSprite, charSpriteName);
         else
