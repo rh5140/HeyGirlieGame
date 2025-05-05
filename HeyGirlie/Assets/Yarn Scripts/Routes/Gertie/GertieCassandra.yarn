@@ -19,7 +19,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra1
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -36,7 +38,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra2
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -53,7 +57,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra3
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -70,7 +76,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra4
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -87,7 +95,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra5
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -104,7 +114,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra6
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -121,7 +133,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra7
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -138,7 +152,9 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 title: Cassandra8
 ---
 <<sfx ring>>
-teehee cass time
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -161,20 +177,15 @@ title: EndDate
 <<if get_dates_this_week() < 3>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
-    end of Week 2 event
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
-    end of Week 4 event
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
-    end of Week 6 event
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
-    spring fling
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>
-    WEEK SHOULD INCREMENT
     <<change_scene Cassandra>>
 <<endif>>
 ===

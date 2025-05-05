@@ -1,11 +1,11 @@
 ﻿title: Date6
 ---
-April 13
 <<location "Gym">>
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
 <<kristen Neutral>>
 <<char_right TrackerNeutral_3C>>
+April 28
 :Surprise, surprise, you’re back at the gym with Tracker.
 :This is becoming a trend with the two of you, huh? Not that you mind terribly. Any excuse to see her in those shorts – you mean, spend quality time with her.
 :This time, though, you make your way into a far less frequented back room. It feels a little bare without the weight racks and pull up bars you’re used to, but more than makes up for it in piles and piles of yoga mats. It gives you a little deja vu for the bib-pocalypse you experienced last time you were here.
@@ -18,6 +18,7 @@ Kristen: Very, <i>very</i> hot.
 <<char_right TrackerBlush_3C>>
 :She rolls her eyes, but that is definitely a blush.
 Tracker: Yeah, yeah, slow your roll, cowboy. Just grab a mat.
+<<kristen Neutral>>
 Kristen: You got it, babe.
 :She doesn’t shy away when you call her babe. Success.
 :You decide to be particularly chivalrous, and grab Tracker a mat too. You plop them down so close to each other they’re almost overlapping. Too forward? Almost definitely. She raises an eyebrow, but sits down without complaint. A win is a win.
@@ -35,6 +36,7 @@ Tracker: That seemed a little dangerous for a date, but… maybe next time?
 Kristen: What’s owlbear yoga?
 Tracker: Yoga with owlbears, obviously.
 Tracker: Though I feel like you’d just fall on an owlbear cub and feel <i>so</i> bad about it immediately.
+<<voiceline KristenNeutral3>>
 Kristen: Hey! I… would totally do that, actually.
 <<char_right TrackerLaugh_3C>>
 :Tracker laughs at you until a nearby air genasi – decked out head to toe in FallineLemon – gives her a quelling glare.
@@ -42,20 +44,25 @@ Kristen: Hey! I… would totally do that, actually.
 :The instructor says that you’re going to start with something easy, and then demonstrates a pose that you think you couldn’t even hold for six seconds.
 :Tracker, the big showoff, does it for two seconds longer.
 :You do your best, both to avoid shamelessly ogling her and to actually follow along with the exercises… and manage to fail at both simultaneously.
+<<voiceline TrackerHappy2>>
 :Tracker openly laughs when you fall to the floor because you were focusing on her more than balancing. You stick out your tongue at her, and dust yourself off.
 <<kristen Nervous>>
-:Cassandra help you, you can do this. You’ve fought dragons! Gods! Way more faculty than should be reasonably expected!
+:Cassandra help you, you can do this. You’ve fought dragons! Gods! An alarming amount of Aguefort faculty!
 :You try again, letting out a relieved huff of breath when the instructor relaxes into an easier way to stand.
 :Tracker whispers.
 Tracker: Hey, you okay?
+<<voiceline KristenAwkward2>>
 Kristen: Peachy keen.
 :It’s less than convincing, because you’re practically wheezing. This is <i>not</i> your strong suit.
 Tracker: Don’t worry. It gets easier fast.
+<<kristen Neutral>>
 :After what feels like several hours but is probably only ten minutes, it does actually get easier. 
-:The instructor sits and tells them to face the person next to them.
+:The instructor sits and tells everyone to face the person next to them.
 :You immediately turn to face Tracker, who smiles at you.
 <<char_right TrackerHappy_3C>>
+<<voiceline TrackerGreeting3>>
 Tracker: Hey, cowboy.
+<<voiceline KristenGreeting2>>
 Kristen: Hey, girlie.
 :Tracker snorts.
 Tracker: Galicaea, no. Just <i>no.</i>
@@ -121,6 +128,7 @@ Kristen: Tracker suggested we give meditation a try.
 Cassandra: Ohoho, <i>did</i> she?
 :Oh. Wait. You didn’t think this through.
 <<kristen Awkward>>
+<<voiceline KristenSad3>>
 Kristen: Uh, Cassandra…
 Cassandra: Don’t worry, I’m not going to ruin your date. I have a bet to win, after all!
 <<char_right TrackerBlush_3C>>
@@ -132,10 +140,12 @@ Cassandra: A god of mystery should have <i>some</i> secrets!
 Kristen: What do gods even bet for, anyway?
 <<char_left CassandraBlush>>
 Cassandra: Well!
+<<voiceline KristenAwkward1>>
 :She doesn’t elaborate. This is somehow worse than Jawbone.
 Cassandra: But enough about <i>me</i>. How is -
 :She gets interrupted by the increasingly loud chatter of the other people around you.
 <<char_left CassandraAngry>>
+<<voiceline CassDisappointed3>>
 Cassandra: As I was <i>saying</i>... I’m really happy for you, Kristen.
 <<char_left CassandraNeutral>>
 Cassandra: I think this is good for you. For both of you!
@@ -148,12 +158,14 @@ Cassandra: I think that’s fair for the “best goddex ever”.
     <<char_left CassandraSurprised>>
     Cassandra: Wait, huh?
     Cassandra: Isn’t that the main thing I’m supposed to do? How am I supposed to give you advice, then?
+    <<voiceline KristenNeutral2>>
     Kristen: Well… that’s…
     :Honestly a really good point.
     <<add_points 1>>
 -> Kristen: “Yeah, I think this is good for us, too.”
     :Tracker’s blush somehow deepens as Cassandra’s smile gets even wider.
     <<char_left CassandraHappy>>
+    <<voiceline CassHappy1>>
     Cassandra: You two are so <i>cute</i>! Oh, I can’t wait to tell Ankarna about this.
     <<add_points 2>>
 -> Kristen: “Oh my you you’re embarrassing me!!! Go away!”
@@ -171,6 +183,7 @@ Cassandra: It was very nice to see you under better circumstances, Tracker.
 :Tracker finally opens her eyes, looking surprised to be directly addressed.
 <<char_right TrackerSurprised_3C>>
 Tracker: Oh! Um, you too, Cassandra.
+<<voiceline CassFarewell3>>
 Cassandra: Okayloveyoubyeeee!!!!
 :Cassandra waves and disappears in a cloud of purple sparkles. You will literally never get tired of that. The instructor only lets her voice shake a little bit as she tells everyone to get back to meditating. 
 // cass sprite goes away bye cass we love you
@@ -234,6 +247,7 @@ The only thing that’s clear here is she needs someone to comfort her. And you 
 :You steal a few glances at Tracker, too. She seems less tense now. More comfortable in her own skin, like a weight was just lifted from her shoulders.
 :She catches you watching, and smiles.
 <<char_right TrackerHappy_3C>>
+<<voiceline TrackerSuccess1>>
 Tracker: Still hanging in there, cowboy?
 :You give her a thumbs up, then shoot a finger gun or two just to make her laugh again.
 :It works, and you can’t help but grin at her.
@@ -274,5 +288,5 @@ Kristen: Well, I can’t say I don’t have ulterior motives... like, say, danci
 Tracker: Oooh, you wanna dance with me, cowboy?
 Kristen: Whoa, who said I was talking about you?
 :Tracker shoves you away, laughing. She smiles the whole way home.
-<<jump Cassandra>>
+<<jump Cassandra6>>
 ===

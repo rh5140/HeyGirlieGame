@@ -1,5 +1,6 @@
 ﻿title: Lucy
 ---
+<<fade_in_ui>>
 You turn in a circle, scanning the crowd. You don’t have to look too hard — Lucy’s height makes her easy to spot. In fact, you think she’s probably having trouble looking for <i>you</i>; you’re kind of small.
 Just the right height to be cradled in her arms. 
 <<voiceline KristenAwkward3>>
@@ -58,16 +59,22 @@ The day passes in a blur, and soon enough, it’s time for the headline show. Yo
 The anticipatory energy of the crowd thrums in your veins, and the air is electric. You find Lucy’s hand and squeeze tightly, and she squeezes back hard. 
 //splash art here
 <<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<background MusicFestival_Lucy>>
+<<fade_out_ui>>
+<<background MusicFestival_Lucy>> 
 <<wait 2>>
+<<fade_in_ui>>
 When Chappell Gnome saunters onto the stage, red hair flying behind her, you and Lucy scream in excitement along with the rest of the crowd.
 She immediately launches into your favorite of her iconic songs. You — and the rest of the crowd — move your arms into the shapes of the letters she’s singing, bumping into Lucy repeatedly and giggling breathlessly when you do. 
 The red lights of the stage flicker over Lucy’s joyous expression, and you can’t help but be struck by how pretty she looks carefree and laughing like this.
 You definitely won’t have a voice tomorrow with how loudly you’re singing, and you’re definitely going to be exhausted after the day you’ve had, but you don’t mind. 
 This moment with Lucy is worth it. 
-<<Kristen transparent>>
+<<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<background MusicFestival_Lucy>>
-<<enable_continue>> 
+<<fade_out_ui>>
+<<wait 2>>
+<<background MusicFestival_Lucy>> // Set up your splash again
+<<enable_continue>> // Enables a continue button that lets people choose when to move on from the splash
 ===

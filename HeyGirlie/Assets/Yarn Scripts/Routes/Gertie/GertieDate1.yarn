@@ -1,10 +1,11 @@
 ﻿title: Date1
 ---
-April 14
+April 27
 <<location "Aguefort">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 12>>
 <<kristen Neutral>>
+<<crystal_ping true>>
 Ping! You get a crystal text.
 <<toggleText Riz>>
 RizText: sry, accidentally double-booked w/ club meeting. will try to leave early if i can.
@@ -14,9 +15,12 @@ KristenText: which club?
 <<toggleText none>>
 Cleric classes. New quests. College apps. While junior year ended with a devilish domain being summoned to Elmville, the work and stress of senior year might just have you wishing for the eternal abyss.
 It’s suffocating, sometimes, just thinking of all the responsibilities you’ve committed to. That’s why you and Riz had plans to meet up at Fabian’s after school for a lo-fi study night.
-Sure, you’ll probably spend half the night blending cocktails out of random ingredients you’ll dig out of one of Fabian’s bazillion fridges, but as long as The Ball’s around, you’re guaranteed to get <i>some</i> work done.
-The two of you work best when you work together. You bring the big ideas, and Riz brings the notebooks, pencils, scratch paper, and folders to organize it. Which seems like an even split of responsibilities to you.
-It’s a few minutes before Riz pings you back. Weird. You follow his directions to the club, thinking nothing of where you’re going, until you hear the buzzing…
+Sure, you’ll probably spend half the night blending cocktails out of random ingredients you’ll dig out of one of Fabian’s bazillion fridges.
+But as long as The Ball’s around, you’re guaranteed to get <i>some</i> work done.
+The two of you work best when you work together. You bring the big ideas, and Riz brings the notebooks, pencils, scratch paper, and folders to organize it.
+Which seems like an even split of responsibilities to you.
+It’s a few minutes before Riz pings you back. Weird.
+You follow his directions to the club, thinking nothing of where you’re going, until you hear the buzzing…
 <<location "Apiarists’ Society">>
 <<background ApiaristsSociety>>
 <<sfx bees>>
@@ -49,10 +53,11 @@ Kristen: Right, um, totally.
     <<kristen Neutral>>
     Gertie: Well, if you want to know more about hive organization and maintenance, I can actually recommend you some fascinating literature to check out at the library.
     <<add_points 2>>
-  -> Kristen: “But what if you’re genuinely not sure if you can commit to the club?”
+  -> Kristen: “But what if you’re genuinely not sure if you can commit?”
     Kristen: What if you’re interested in a lot of different clubs? How’d you know which ones you should actually join if you don’t try them all out?
     <<char_right GertieSad>>
-    Gertie: But what if one particular club has wanted you for a long time? What if, after all this time, you led her to believe you finally liked her back? The club, that is.
+    Gertie: But what if one particular club has wanted you for a long time? What if, after all this time, you led her to believe you finally liked her back?
+    Gertie: The club, that is.
     <<add_points 1>>
   -> Kristen: “This again? A kiss doesn’t mean forever!”
     <<char_right GertieAngry>>
@@ -71,17 +76,22 @@ Gertie: We need to make sure we have enough feeders, plant more flowers, double-
 <<char_right GertieNeutral>>
 Gertie: Oh, that reminds me, I still have to fill and label the honey jars and Gert’s Bees lip balms for the farmer’s market stall…
 <<kristen Neutral>>
-You almost lose yourself in Gertie’s stream of consciousness, but you manage to snap yourself out of it. You’ve already forwarded Riz’s takeout order to Fabian. You can’t let yourself get distracted by how cute Gertie is when she goes on about bees.
+You almost lose yourself in Gertie’s stream of consciousness, but you manage to snap yourself out of it.
+You’ve already forwarded Riz’s takeout order to Fabian. You can’t let yourself get distracted by how cute Gertie is when she goes on about bees.
 You make eye contact with Riz, who’s messaging you over the mind-link on the sly, profusely apologizing for messing up his schedule.
 You message back, telling him not to worry.
-The Ball should seriously cut himself some slack. He’s attending every extra-curricular club possible on top of a full-time course load <i>on top of</i> all his college scholarship applications <i>on top of</i> his private eye caseload. It’s a wonder he doesn’t double-book himself more often. You’re doing a fraction of that, and still manage to double-book yourself almost weekly.
+The Ball should seriously cut himself some slack.
+He’s attending every extra-curricular club possible on top of a full-time course load <i>on top of</i> all his college scholarship applications <i>on top of</i> his private eye caseload.
+It’s a wonder he doesn’t double-book himself more often. You’re doing a fraction of that, and still manage to double-book yourself almost weekly.
 <<char_right GertieSad>>
 <<kristen Nervous>>
-Gertie: Look, I’ll just call it out. It’s quite obvious what’s happening when two people drop silent in the middle of a three-person conversation. I shouldn’t be surprised that the adventuring party always comes first.
+Gertie: Look, I’ll just call it out. It’s quite obvious what’s happening when two people drop silent in the middle of a three-person conversation.
+Gertie: I shouldn’t be surprised that the adventuring party always comes first.
 Gertie: I’ll see you at the next club meeting, Mr. Gukgak, whenever you’re free next.
 <<voiceline GertieFarewell1>>
 Gertie: Good day to you, Miss Applebees.
-You shuffle toward the door with Riz, already dreaming of pad thai, lo-fi beats, and those scented candles Fabian orders specially from a vendor on Levithan (ocean breeze with a pineapple-mango twist, yum).
+You shuffle toward the door with Riz, already dreaming of pad thai, lo-fi beats, and those scented candles Fabian orders specially from a vendor on Levithan.
+(Ocean breeze with a pineapple-mango twist, yum.)
 <<char_right GertieNeutral>>
 But then you turn back to Gertie, humming to herself (or maybe to the bees) as she removes each box from the hive for inspection. By herself.
 <<kristen Surprised>>
@@ -105,7 +115,8 @@ Kristen: I don’t want to leave you alone with all this work.
 <<char_right GertieNeutral>>
 Gertie: If you and Mr. Gukgak made previous arrangements with Mr. Seacaster, then you should both honor your words.
 <<kristen Sad>>
-Gertie turns away, giving up the fight like she already knows she’ll lose. Does she really believe that everybody else would simply drop their commitment to her club if their someone else called them up?
+Gertie turns away, giving up the fight like she already knows she’ll lose.
+Does she really believe that everybody else would simply drop their commitment to her club if their someone else called them up?
 Oh right. That’s exactly what you asked Riz to do.
 <<kristen Neutral>>
 Kristen: But Riz also promised to attend this meeting. Apiarist’s honor, right?
@@ -127,9 +138,11 @@ Gertie: Ah, so you suggest first blood.
 Kristen: Sorry, what was that?
 Gertie: Very well. You named the terms, so I shall name the place, as is customary.
 Gertie: Right here, right now.
+<<sfx bee>>
+At Gertie’s summon, a swarm of bees engulf her.
 <<char_right GertieFight>>
 <<sfx sword>>
-At Gertie’s summon, a swarm of bees engulf her. A shield of finely weaved but durable-looking gossamer appears in one hand, while the other reaches out to catch a sword, gleaming with a sheen of honey gold.
+A shield of finely weaved but durable-looking gossamer appears in one hand, while the other reaches out to catch a sword, gleaming with a sheen of honey gold.
 <<voiceline GertieDuel1>>
 Gertie: Stinger, come to me!
 <<kristen Grin>>
@@ -144,12 +157,14 @@ How should you respond?
   -> <i>Turnabout’s fair play. Attack!</i>
     <<kristen Neutral>>
     A blade born of the night sky clashes against honey gold steel.
+    <<sfx sword>>
     <<voiceline GertieHappy3>>
     Gertie: Well met, Miss Applebees.
     The duel is on!
     <<add_points 2>>
   -> <i>Let’s not turn this into a bloodbath. Retreat!</i>
-    Your prayer to the Goddex of Mystery rings true. In this moment, you’re really doubting whether a duel is a good idea. An air of mystery lifts you up, shepherding you away from the swarm.
+    Your prayer to the Goddex of Mystery rings true. In this moment, you’re really doubting whether a duel is a good idea.
+    An air of mystery lifts you up, shepherding you away from the swarm.
     Gertie: Come back and face me!
     <<add_points 1>>
   -> <i>Try to get in her head. Taunt!</i>
@@ -162,7 +177,8 @@ How should you respond?
     <<add_points 0>>
 <<kristen Nervous>>
 The duel tears through the bee farm, crashing into the hive and the gardens, kicking up a storm of seeds and nectar.
-You can hold your own in a fight (thank Cassandra), but let’s face it, you’re not exactly a duelist. To you, adventuring has always been a team sport. Your eyes dart around the battlefield on instinct, searching for an ally to lend support, protection, or healing.
+You can hold your own in a fight (thank Cassandra), but let’s face it, you’re not exactly a duelist. To you, adventuring has always been a team sport.
+Your eyes dart around the battlefield on instinct, searching for an ally to lend support, protection, or healing.
 But you can only find Riz, twitching and wincing — a reaction that certainly doesn’t inspire any advantage.
 Gertie, on the other hand, is a one-woman army. Or, rather, she’s one woman who can <i>summon</i> a whole army.
 <<char_right transparent>>
@@ -178,7 +194,8 @@ It’s the Granny Smith strudels Jawbone would bake on Sundays to stock the snac
 It’s also, quite aptly, tinted red.
 <<kristen Surprised>>
 <<char_right GertieFight>>
-The clank of metal draws your attention back to the duel. You whip back to Gertie, bracing for some sort of sneak attack, but she merely stands before you, Stinger poised and ready in a textbook-perfect fighting stance.
+The clank of metal draws your attention back to the duel.
+You whip back to Gertie, bracing for some sort of sneak attack, but she merely stands before you, Stinger poised and ready in a textbook-perfect fighting stance.
 <<voiceline KristenSurprised2>>
 Kristen: Sweet Cassandra!
 Blinking away your exhaustion, you summon your starlight sword once more.
@@ -195,12 +212,13 @@ Gertie: In this past week.
     Kristen: You mess with the bee, you get the sting.
     Gertie: Honeybees do not attack unprovoked, only when they perceive their hive to be in danger. In that case, they’ll also release pheromones to alert the others.
     Gertie: It’s also a misconception that a worker bee can sting only once.
-    Gertie: It’s only when their target’s skin is sufficiently thick enough, such that the bee cannot easily dislodge its stinger after the attack without tearing off the entire appendage, that the bee will eventually die from the wound.
+    Gertie: It’s only when their target’s skin is so thick, such that the bee cannot dislodge its stinger after the attack without tearing off the entire appendage, that the bee will eventually die from the wound.
     <<add_points 1>>
   -> Kristen: “Hey, are you okay?”
     <<char_right GertieSurprise>>
     Gertie blinks. Huh. She sure didn’t expect that.
-    Around her, the bees falter, turning their attention from you back to their keeper. Is it just you, or does the buzzing sound less menacing and more… reassuring?
+    Around her, the bees falter, turning their attention from you back to their keeper.
+    Is it just you, or does the buzzing sound less menacing and more… reassuring?
     <<add_points 2>>
   -> Kristen: “Hot.”
     <<kristen Grin>>
@@ -227,11 +245,14 @@ Gertie: …
 Kristen: And wouldn’t you say you pour your blood, sweat, and tears into making these honey?
 Gertie: …
 <<kristen Nervous>>
-Gertie’s shoulders are shaking. Her whole <i>body</i> is shaking, jostling the swarm around her. Her face remains impassive, though tears are trickling out of the corner of her eyes, mixing with the sticky red honey.
+Gertie’s shoulders are shaking. Her whole <i>body</i> is shaking, jostling the swarm around her.
+Her face remains impassive, though tears are trickling out of the corner of her eyes, mixing with the sticky red honey.
 <<kristen Awkward>>
 Uh oh. Is this honey cursed or something? Did you just accidentally put her under some sort of shaking spell?
-Quick! You could maybe counter the effect? Unless that’ll trigger some sort of failsafe. Maybe you should call Adaine. See if she can help you identify the exact curse. But there’s not enough time! 
-Well, it’s not like you could make thing’s worse. You begin to whisper a quick prayer, but — wait. No. Gertie’s not crying. Not exactly. Could she be —
+Quick! You could maybe counter the effect? Unless that’ll trigger some sort of failsafe.
+Maybe you should call Adaine. See if she can help you identify the exact curse. But there’s not enough time! 
+Well, it’s not like you could make thing’s worse. You begin to whisper a quick prayer, but — wait. 
+No. Gertie’s not crying. Not exactly. Could she be —
 <<kristen Surprised>>
 <<char_right GertieHappy>>
 Gertie bursts out laughing, unable to hold it in much longer.
@@ -250,7 +271,9 @@ Kristen: First, I want to help you clean up this mess…
   -> Kristen: “… then I want to help you with preparing the hive for spring.”
     <<kristen Happy>>
     <<char_right GertieGrin>>
-    You make the first effort to start organizing the honey jars on the shelf. The bees hiss — you didn’t even know bees <i>could</i> hiss, but here they are, hissing. Gertie calms them down with some soothing humming.
+    You make the first effort to start organizing the honey jars on the shelf.
+    The bees hiss — you didn’t even know bees <i>could</i> hiss, but here they are, hissing. 
+    Gertie calms them down with some soothing humming.
     <<add_points 2>>
   -> Kristen: “… then I want you to take an actual break.”
     Kristen: Come to Seacaster Manor with us. I’ll even banish Fabian if he insults your honey again.
@@ -286,12 +309,12 @@ Gertie: I make a whole day of it, with dessert at Basrar’s for a final treat. 
 Kristen: Of course. But if I just <i>happen</i> to see you in town… And I <i>happen</i> to have some free time…
 Gertie’s lips twitch. She looks less guarded, for sure, but maybe it’s still too soon to take an ex-nemesis for ice cream.
 Gertie: Sure, Madam President, if you say so.
+<<location "Aguefort">>
 <<background Aguefort>>
 <<char_right transparent>>
 <<kristen Soft>>
 As you bid your farewells and leave for Fabian’s, you feel your mind settle, reassured by the fact that you’ve mended something tonight.
 Your heart, on the other hand?
 What is this feeling, tingly and fluttering, that seems to set your whole body abuzz?
-<<jump Cassandra>>
-
+<<jump Cassandra1>>
 ===

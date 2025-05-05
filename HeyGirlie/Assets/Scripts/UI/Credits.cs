@@ -9,7 +9,7 @@ public class Credits : Menu
             Pause();
         }
         LockEsc(EscLock.Credits);
-        ArrowKeyStart();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
     }
 
     void Update(){
@@ -19,10 +19,10 @@ public class Credits : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
-    public void Close(){
+    public override void Close(){
         if(!SceneManager.GetActiveScene().name.Equals("Credits")) Destroy(creditsMenu);
         else {
             #if (UNITY_EDITOR)

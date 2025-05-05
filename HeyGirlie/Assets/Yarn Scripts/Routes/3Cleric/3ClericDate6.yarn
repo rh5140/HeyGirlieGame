@@ -1,21 +1,23 @@
 ﻿title: Date6
 ---
-April 21
 <<location "PLACEHOLDER">>
 <<set $date_points = 0>>
-<<set $date_points_total = 0>>
+<<set $date_points_total = 4>>
 <<kristen Neutral>>
+April 28
 :Hoot, growl! Hoot, growl! Hoot, growl!
-:Or something like that. You don’t actually know any other bloodrush-adjacent cheers. Is this game even for the Owlbears?
+:Or something like that. You don’t actually know any other bloodrush-adjacent cheers. Is this game even for the Owlbears? They do out-of-town games, right?
 :You keep your eyes peeled for Fabian, but you don’t see him, or any of the same screaming crowd that you usually see at these kinds of games.
 :It’s a lot more casual. People are still wearing Owlbear jerseys, but no one’s yelling or throwing things at the field or casting offensive magic at the referee.
 <<char_left TrackerHappy_3D>>
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 :You spot Tracker grinning on the sidelines, standing next to a thoroughly confused Nara.
+<<voiceline TrackerGreeting3>>
 Tracker: Kristen! You made it!
 :She pulls you in for a quick hug before letting you go, still smiling widely.
 Tracker: Okay, I got us good seats, come on.
-<<char_right NaraHappy>>
+<<char_right NaraHappy3>>
+<<voiceline NaraHappy1>>
 Nara: Oh! It seems we have been saved from the moral burden of performing the violence ourselves!
 Tracker: ...Yeah. Although there <i>is</i> a pick-up game later, Kristen. If you want.
 <<kristen Nervous>>
@@ -23,7 +25,7 @@ Kristen: This isn’t going to be like the centaur rodeo again, is it?
 <<char_left TrackerLaugh_3D>>
 Tracker: Hey, whether you eat shit or not is up to you.
 <<kristen Neutral>>
-<<char_right NaraShock>>
+<<char_right NaraShock3>>
 Nara: Kristen! I did not know you Ate Shit upon a horse on more than one occasion! 
 <<char_left TrackerHappy_3D>>
 Tracker: This time it was a centaur, not a horse. But she’s eaten shit <i>way</i> more than once, babe.
@@ -31,19 +33,21 @@ Tracker: This time it was a centaur, not a horse. But she’s eaten shit <i>way<
 :At you, specifically. And sure, maybe you <i>have</i> gotten thrown off of a centaur and also the most evil pony in all of existence. 
 Is that really <i>that</i> funny?
 -> <i>It is, yeah. Play along.</i>
+    <<voiceline KristenNeutral2>>
     :Evil creatures you rode under extreme duress aside, you can, unfortunately, see it from their point of view. But who says you can’t have a little fun too at their expense?
     Kristen: What can I say? Solesian tradition, <i>babe.</i>
     <<char_left TrackerAwkward_3D>>
-    <<char_right NaraBlush>>
+    <<char_right NaraBlush3>>
     :It works out just how you want it to - Nara blushes with your forwardness, and Tracker looks away, flustered by the indirect callout. Most importantly, continuing to tease you is clearly the furthest thing from their minds. Victory.
     <<char_left TrackerBlush_3D>>
     Tracker: ...Let’s just find our seats.
     <<add_points 2>>
 -> <i>It’s a little funny. Make one joke then change the topic.</i>
+    <<voiceline KristenAwkward2>>
     <<kristen Nervous>>
     Kristen: Haha yeah totally... well, there’s no horses here, so!
     Kristen: Did you guys catch the game last night?
-    <<char_right NaraThink>>
+    <<char_right NaraThink3>>
     Nara: Was there another game we had plans to watch?
     <<char_left TrackerNeutral_3D>>
     Tracker: Yeah, I have no clue what you’re talking about either, cowboy.
@@ -51,13 +55,15 @@ Is that really <i>that</i> funny?
     Kristen: Haha yeah. Uh, where were those seats again?
     <<add_points 1>>
 -> <i>Uh, did Tracker just call Nara babe? Stew in jealousy until something else distracts you.</i>
+    <<voiceline KristenAngry3>>
     <<kristen Angry>>
     :Yeah, you can see it all so clearly now. Every time they’ve locked eyes, all the moments where their hands were pretty close but not too close together, the occasions when they’ve spoken with each other…
     :It was all to spite you, and you alone, as they secretly make out without you. How dare they? Don’t they know you deserve two little kisses at the same time too? On each cheek, even???
     <<char_left TrackerAwkward_3D>>
+    <<voiceline TrackerDateFail1>>
     Tracker: Uhhh… Kristen?
     :Great, they’ve taken a break from making googly-eyes at each other to talk to you, making it even harder to imagine them NOT kissing you tenderly on the lips and also mouth.
-    <<char_right NaraShock>>
+    <<char_right NaraShock3>>
     Nara: Kristen, I am sure you have much athletic prowess in other areas. You have that physique for a reason, of that I am sure.
     :And now she’s making fun of your muscles?! You make a mental note to work out even harder just to make her jealous. Yeah, that’s why. No other reason. You’re handling this situation so well.
     :Tracker’s gaze flickers between the two of you, clearly confused by what’s happening here.
@@ -67,7 +73,7 @@ Is that really <i>that</i> funny?
 :Or near the front, at least. One row back.
 Tracker: Best seats in the house! Everyone’s trying to get these.
 Tracker: Well, except people who are scared of being in the splash zone.
-<<char_right NaraHappy>>
+<<char_right NaraHappy3>>
 Nara: Splash Zone? An aptly named area! Surely being seated in this Zone will add a Splash of Fun to our viewing experience!
 <<char_left TrackerAwkward_3D>>
 Tracker: Uh, Nara…
@@ -77,53 +83,56 @@ Kristen: So who’s the first game between?
 Tracker: Uh, let’s see…
 :Tracker squints at the field.
 Tracker: Looks like the Hudol Hellions against the Oakshield Mimics.
+<<voiceline TrackerNeutral1>>
 Tracker: Oof.
-<<char_right NaraShock>>
+<<char_right NaraShock3>>
 Nara: Hellions and Mimics… such monstrous creatures. How does one train them to betray their inherently evil nature and embrace a life of bloodrush?
 <<char_left TrackerLaugh_3D>>
 Tracker: That’s just the name of the teams. They’re not <i>actual</i> monsters.
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 Nara: I see. Which team are we supporting?
--> Whoever has the better colors. Go Hellions!
+-> “Whoever has the better colors. Go Hellions!”
     Kristen: I mean, come on. Blue and white look way better on a jersey than yellow and brown.
-    <<char_right NaraHappy>>
+    <<char_right NaraHappy3>>
     Nara: I see! The complexities of Solesian fashion never cease to impress.
     <<char_left TrackerNeutral_3D>>
     Tracker: Eh, I don’t mind Oakshield colors, but that’s as good a reason as any.
     <<add_points 1>>
--> Whichever team would be funnier to win. Go Mimics!
+-> “Whichever team would be funnier to win. Go Mimics!”
     Kristen: Well, Hudol is kind of our rival school, and Oakshield are middle schoolers. So. Go Mimics?
-    <<char_right NaraHappy>>
+    <<char_right NaraHappy3>>
     Nara: Ah, so the aim spectating here is to applaud the demise of our enemies at the hands of mere infants. It seems some urges are cross-cultural!
     :Wait, what?
     <<char_left TrackerLaugh_3D>>
+    <<voiceline TrackerSuccess1>>
     Tracker: You know what… sure! Mimics it is.
     <<add_points 2>>
--> Whatever Tracker wants, which is… uh… Tracker? Help me out here.  
+-> “Whatever Tracker wants, which is… uh… Tracker? Help me out here.”  
     <<char_left TrackerSurprised_3D>>
     Tracker: What?
     <<char_left TrackerAwkward_3D>>
     Tracker: Uh, support whatever team you want, Nara. The only one I’m actually invested in is Ragh’s team winning the Superb Owlbear, and that’s over in Bastion City.
-    <<char_right NaraSad>>
+    <<char_right NaraSad3>>
     Nara: But I don’t know enough to know which team I wish to bestow my favor upon… this has not been very helpful.
     :Oof. Nara had asked you <i> both</i> for help. Maybe you shouldn’t have been so quick to foist this on just Tracker...
     <<add_points 0>>
 <<char_left TrackerNeutral_3D>>
 <<char_right NaraNeutral>>
 :This first game doesn’t last long. The Hellions are overconfident — how hard can winning against a team of middle schoolers be? 
-:The Mimics have more than triple the Hellions’ points by the end.
+:The Mimics have more than triple the Hellions’ points by the end. Like, a <i>lot</i> more than triple.
 Kristen: Damn… sixty points to one. Brutal.
-<<char_right NaraThink>>
+<<char_right NaraThink3>>
 Nara: There is a great deal less blood than I was expecting. This name is quite misleading.
 Tracker: Yeah, it’s mostly just a sport. Full contact, but that’s what cleric medics are for.
 Nara: Oh! Are we here to injure the healed players? 
-Tracker: Nah. That’s more for Aguefort students who got in trouble with Professor Badgood.
-<<char_right NaraNeutral>>
+Tracker: Nah. Healing’s more for Aguefort students who got in trouble with Professor Badgood.
+<<char_right NaraNeutral3>>
 Kristen: That was <i>one</i> time.
 :YES? had been your god at the time. You hadn’t quite managed to write a full essay about it, and no one had even needed healing at the game you’d had to volunteer at.
 <<char_left TrackerLaugh_3D>>
 Tracker: I know, cowboy. Just poking fun. You’re reformed now!
 <<kristen Surprised>>
+<<voiceline TrackerHappy2>>
 :She laughs at your outraged expression.
 <<char_left TrackerNeutral_3D>>
 <<kristen Neutral>>
@@ -134,10 +143,12 @@ Tracker: I know, cowboy. Just poking fun. You’re reformed now!
 Kristen: Aw. So are you guys free next —
 Tracker: Not over yet, cowboy.
 :Tracker stands up and stretches. You try and fail not to stare at the way her shirt slightly pulls up as she does so, and wait - did you just catch Nara doing the same as you? ...Try not to think too hard about this, Applebees.
+<<voiceline TrackerBespoke2>>
 Tracker: Come on, just a quick game? This one’s more based on strength than agility, you’re probably gonna be good at it!
 :You’ll take any chance to show off your muscles, sure, but the thing that pushes you to take Tracker’s hand is the look on her face — earnest and imploring and just so goshdarn cute.
 Tracker: Uh, Nara, if you want —
-<<char_right NaraDisgust>>
+<<char_right NaraDisgust3>>
+<<voiceline NaraAngry2>>
 Nara: No.
 Tracker: Yeah, fair enough. C’mon, cowboy.
 <<char_right transparent>>
@@ -150,6 +161,7 @@ Tracker: Hmm… so I can do this.
 :You stumble back but miraculously keep your footing.
 <<char_left TrackerFlirt_3D>>
 :Tracker shoots a finger gun at you as she takes a scrimmage vest.
+<<voiceline KristenRomanticTracker2>>
 Kristen: Oh, it is <i>so</i> on.
 :You take the other team’s vest and Tracker’s grin only gets more feral.
 :Have you played bloodrush before? Well, no. Do you know how to play? Also no. But you’ve totally got this. 
@@ -168,11 +180,13 @@ Kristen: Uwauhgah!
 <<voiceline TrackerHappy2>>
 <<char_left TrackerLaugh_3D>>
 :You have to wipe the mud from your eyes before you can actually <i>see</i> Tracker laughing, but you can hear her. And feel her, too; body pressed close against your own, hands closing you in. 
+<<kristen Nervous>>
 :You are completely at the mercy of Tracker O’Shaughnessey.
 <<char_left TrackerHappy_3D>>
 :And you like it. It feels like maybe you should be upset, but how could you be, with her smiling like that?
 <<kristen Happy>>
 Kristen: Okay, okay, you got me.
+<<voiceline TrackerHappy3>>
 Tracker: Sure did, babe.
 :She reaches a hand down to help you up and you take it, completely ignoring the scramble of your respective teams going for the ball.
 Kristen: What happened to ‘whether or not you eat shit is up to you’?
@@ -188,23 +202,27 @@ Kristen: Well! Maybe!
 Tracker: Um. We’re in trouble.
 Kristen: Is this, like, an Officer Kristen —
 Tracker: No! Uh, look.
-<<char_right NaraSad>>
+<<char_right NaraSad3>>
 :Tracker points and you realize you are in the splash zone, and also have been the splash in the splash zone.
 :Most of the people sitting there are cheering. Nara, splattered with mud, looks a lot like a kicked puppy.
 Nara: Kristren! This is not the Splash I was promised!
+<<kristen Neutral>>
 Tracker: Well, as long as you’re here…
-<<char_right NaraBlush>>
+<<char_right NaraBlush3>>
+<<voiceline TrackerRomantic1>>
 :Tracker takes Nara’s hand, and you have a second or two to admire the blush that <i>immediately</i> rises on Nara’s cheeks before she shrieks in surprise at being yanked down into the mud with you.
-<<char_right NaraAngry>>
+<<char_right NaraAngry3>>
 Nara: Tracker!
 <<char_left TrackerHappy_3D>>
 Tracker: You’re gonna have to clean up, anyway. Might as well have fun in the meantime, princess.
 :Nara splutters in outrage.
 Nara: I shall have to make use of my unseen servants for this. The extent of the damage to my clothes and spirit is far above the paygrade of the Little Man.
+<<char_right TrackerSurprised_3D>>
 Tracker: Who?
 :Oh, man, you don’t want to talk about the Little Man again. You still hallucinate him when you go to sleep. At least… you hope it’s a hallucination.
+<<char_left TrackerNeutral_3D>>
 Kristen: Hey, at least you still look cute?
-<<char_right NaraNeutral>>
+<<char_right NaraNeutral3>>
 Nara: Of course I do. Imagine how much cuter I will be once I have freed myself from the confines of this filth.
 :She imperiously extends both her impeccably manicured hands out.
 Nara: Now extricate me.
@@ -218,8 +236,10 @@ Nara: I must say, you looked splendid on the field, like warriors in battle. War
 Nara: I believe it is customary for such brave knights to be rewarded with a kiss from a princess?
 Nara: And forgive my forwardness, but I see no other princesses on the field.
 Nara: And far be it from me to shirk my royal duties.
+<<kristen Neutral>>
 Kristen: But you —
 :You almost point out all the actual royal duties she literally constantly shirks, but also why the hell would you do that and ruin a good thing?
+<<kristen Soft>>
 :Nara bends down to press a quick, feather-light kiss to your cheek.
 :To your surprise, Tracker pushes herself up on her toes to do the same to the other side of your face.
 Tracker: I’m no princess, but… I just wanted to kiss you.
@@ -243,8 +263,9 @@ Nara: I see you two are talking! I can only assume you are planning the spa date
 :Tracker barks out a laugh but still waits for you to answer.
 Kristen: I am if you are.
 <<char_left TrackerHappy_3D>>
+<<voiceline TrackerDateSuccess3>>
 Tracker: Well. I am if <i>you</i> are.
 <<kristen Happy>>
 Kristen: Then it sounds like we have a spa date to plan.
-<<jump Cassandra>>
+<<jump Cassandra2>>
 ===

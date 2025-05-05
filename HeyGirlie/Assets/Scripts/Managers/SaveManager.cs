@@ -70,9 +70,9 @@ public static class SaveManager
             GameManager.Instance.SetLiQueue(data.getLIs());
             GameManager.Instance.SetAyda(data.getAyda());
 
-            GameManager.Instance.SetLocationQueues(data.getLocationQueue(Region.School), data.getLocationQueue(Region.Elmville),
-                                                    data.getLocationQueue(Region.Mordred), data.getLocationQueue(Region.Outdoors),
-                                                    data.getLocationQueue(Region.Away));
+            GameManager.Instance.SetLocationQueues(data.getLocationQueue(Region.Away), data.getLocationQueue(Region.Outdoors),
+                                                    data.getLocationQueue(Region.School), data.getLocationQueue(Region.Mordred), 
+                                                    data.getLocationQueue(Region.Elmville));
 
             return data.getScene();
         } else return null;

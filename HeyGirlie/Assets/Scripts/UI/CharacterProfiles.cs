@@ -14,13 +14,13 @@ public class CharacterProfiles : Menu
     [SerializeField] private Button backButton;
     [SerializeField] private Button nextButton;
 
-    private int character = (int)Character.Kristen;
+    private int character = (int)Character.Cassandra;
     
     void Awake()
     {
         LockEsc(EscLock.Profiles);
         Pause();
-        ArrowKeyStart();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
 
         string scene = SceneManager.GetActiveScene().name;
         string pattern = @"(.+)Date\d+|(Cassandra)";
@@ -28,7 +28,7 @@ public class CharacterProfiles : Menu
 
         if(match.Success) {
             character = (match.Groups[1].Value == "") ? GetCharacter(match.Groups[2].Value) : GetCharacter(match.Groups[1].Value);
-        } else character = GetCharacter("Kristen");
+        } else character = GetCharacter("Cassandra");
 
         LoadProfile();
         SetButtons();
@@ -36,14 +36,14 @@ public class CharacterProfiles : Menu
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Profiles) Close();
-        if(Input.GetKeyDown(KeyCode.LeftArrow) && character != (int)Character.Kristen) Back();
+        if(Input.GetKeyDown(KeyCode.LeftArrow) && character != (int)Character.Cassandra) Back();
         if(Input.GetKeyDown(KeyCode.RightArrow) && character != (int)Character.Naradriel) Next();
     }
 
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public void Back(){
@@ -58,12 +58,8 @@ public class CharacterProfiles : Menu
         SetButtons();
     }
 
-    public void Close(){
-        Destroy(gameObject);
-    }
-
     private void SetButtons(){
-        if(character == (int)Character.Kristen) backButton.interactable = false;
+        if(character == (int)Character.Cassandra) backButton.interactable = false;
         else backButton.interactable = true;
 
         if(character == (int)Character.Naradriel) nextButton.interactable = false;
@@ -121,7 +117,7 @@ public class CharacterProfiles : Menu
             case "Naradriel":
                 return (int)Character.Naradriel;
             default:
-                return (int)Character.Kristen;
+                return (int)Character.Cassandra;
         }
     }
 }

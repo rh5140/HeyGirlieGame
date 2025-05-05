@@ -16,73 +16,165 @@ Cassandra: Did you notice how I said something depending on how you did with 3C?
 <<jump EndDate>>
 ===
 
+//Date 5
 title: Cassandra1
 ---
-teehee cass time
 <<sfx ring>>
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left  transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
+<<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+    <<kristen Happy>>
+    <<char_right CassandraHappy>>
+    Kristen: Okay, you were right, that was great.
+    Cassandra: I know! But tell me about it anyway. I want to hear it from you!
+    Kristen: I don’t know why I never thought of this before! It was easy and only a little awkward.
+    <<kristen Neutral>>
+    Kristen: Do you think it’ll stay that way?
+    <<char_right CassandraNeutral>>
+    Cassandra: That’s up to you, Kristen. But I think you’ve got this!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+    <<kristen Nervous>>
+    <<char_right CassandraNeutral>>
+    Kristen: Okay, it was a little awkward, but I think this could be good! It’ll be good, right?
+    Cassandra: Of course!
+    Kristen: Is that a prophecy or are you just hyping me up?
+    Cassandra: I just believe in you!
+    <<kristen Neutral>>
+    Kristen: That... actually does help. Any advice for me?
+    Cassandra: Remember you <i>know</i> Nara and Tracker already. Don’t treat them like they’re totally different people!
+<<else>>
+    //flop
+    <<kristen Awkward>>
+    <<char_right CassandraSurprised>>
+    Kristen: Okay, that was a total disaster! Why did I let you talk me into this?
+    Cassandra: Kristen, all I gave you was a hint on where they would be. You’re the one who acted like <i>that</i>.
+    <<kristen Sad>>
+    Kristen: Oh my you. You’re right. How am I supposed to recover from this?
+    <<char_right CassandraNeutral>>
+    Cassandra: Just... talk to them like normal people you like?
+    Cassandra: ... maybe it’s a good thing you got a few more people to think of me today. At least Spring Fling won’t kill <i>both</i> of us.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with 3C date 1?
-
 <<jump EndDate>>
 ===
 
+//Date 6
 title: Cassandra2
 ---
-teehee cass time
 <<sfx ring>>
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left  transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
+<<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+    <<kristen Happy>>
+    <<char_right CassandraHappy>>
+    Cassandra: How was the game, Kristen?
+    Kristen: It was really fun! Tracker tackled me and Nara looked <i>so</i> cute.
+    Kristen: Also, the Hellions got their ass kicked, which I feel like I should care about as president.
+    <<char_right CassandraNeutral>>
+    Cassandra: Sure! Tracker and Nara had fun too, right?
+    <<kristen Soft>>
+    Kristen: Yeah, I think so. I think the spa will be more Nara’s thing, though.
+    Cassandra: Aw, how cute! I hope you three have fun!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+    <<kristen Neutral>>
+    <<char_right CassandraNeutral>>
+    Cassandra: How was the game, Kristen?
+    Kristen: Pretty good! The Mimics killed the Hellions’ butt.
+    Cassandra: I <i>mean</i>, how was your date with Tracker and Nara?
+    Kristen: Oh, right! Pretty good, I think? A little awkward but not, like, terrible.
+    Cassandra: Hm... well, the spa next week should be a little more relaxing! 
+    Cassandra: As long as you don’t do something totally ridiculous, it should go smoothly!
+    Cassandra: Oh, no. We’re doomed.
+    <<kristen Angry>>
+    Kristen: Hey!
+<<else>>
+    //flop
+    <<kristen Sad>>
+    <<char_right CassandraAngry>>
+    Cassandra: If I weren’t a goddex, I’d think it was a miracle. You didn’t say a single thing right. <i>Literally</i> not one correct choice.
+    Kristen: It’s not like we’re keeping score!
+    Cassandra: Who told you that?
+    <<kristen Surprised>>
+    Kristen: Wait, I’m being graded?!
+    <<char_right CassandraSurprised>>
+    Cassandra: Yes, on whether or not they still want to date you once it’s time for Spring Fling!
+    <<kristen Neutral>>
+    Kristen: So... how are my odds?
+    Cassandra: Well...
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with 3C date 2?
-
 <<jump EndDate>>
 ===
+
+//Date 7
 title: Cassandra3
 ---
-teehee cass time
 <<sfx ring>>
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left  transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
+<<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+    <<kristen Happy>>
+    <<char_right CassandraNeutral>>
+    Kristen: I feel so <i>relaxed</i>. Nara was right, spas are great.
+    Cassandra: You three are <i>so</i> cute. If everything keeps going this well, you won’t have to worry about your principal murdering you for being a loser nerd anymore!
+    Kristen: Stress, my old friend, welcome back.
+    Cassandra: Oh, no, I didn’t mean to! Sorry!
+    Kristen: It’s fine, Cass! Uh, just tell me that Tracker and Nara <i>also</i> think the date went well?
+    Cassandra: Of course they do!
+    <<kristen Happy>>
+    Kristen: Yeehaw!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+    <<kristen Neutral>>
+    <<char_right CassandraNeutral>>
+    Kristen: Spas are okay, I guess. That could’ve been a little more relaxing.
+    Cassandra: Dating your ex and your ex’s ex isn’t a challenge for the faint of heart! But you’re doing great!
+    Kristen: Huh. Do you... think I need a pep talk or something?
+    <<char_right CassandraSurprised>>
+    Cassandra: Don’t you?
+    <<kristen Sad>>
+    Cassandra: No, don’t freak out! I wouldn’t bother if I didn’t think you still had a shot!
+    Kristen: Uh, thanks, I think?
+<<else>>
+    //flop
+    <<kristen Sad>>
+    <<char_right CassandraSad>>
+    Kristen: That was so <i>stressful</i>. I feel like I need a spa break from my spa date.
+    Cassandra: I hate to tell you this, but that isn’t the spa’s fault. That’s all you.
+    Kristen: That’s even worse!
+    Cassandra: Maybe suggesting you date both Tracker and Nara was a bad idea...
+    <<kristen Awkward>>
+    Kristen: Don’t say that now! I’m already freaking out!
+    <<char_right CassandraAngry>>
+    Cassandra: So am I, Kristen! It’s both our lives on the line here!
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with 3C date 3?
-
 <<jump EndDate>>
 ===
+
+//Date 8
 title: Cassandra4
 ---
-teehee cass time
 <<sfx ring>>
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<char_right transparent>>
+<<char_left  transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
+<<if $date_points >= (2/3) * $date_points_total>>
+    // slay
+<<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+<<else>>
+    //flop
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with 3C date 4?
-
 <<jump EndDate>>
 ===
 
@@ -94,20 +186,15 @@ title: EndDate
 <<if get_dates_this_week() < 3>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
-    end of Week 2 event
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
-    end of Week 4 event
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
-    end of Week 6 event
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
-    spring fling
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>
-    WEEK SHOULD INCREMENT
     <<change_scene Cassandra>>
 <<endif>>
 ===

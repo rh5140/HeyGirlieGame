@@ -9,11 +9,8 @@ public class SettingManager : MonoBehaviour
     private static SettingManager _instance;
     public static SettingManager Instance {get {return _instance;}}
 
-    [SerializeField] private Texture2D appleCursor, applebeeCursor, beeCursor;
-    [SerializeField] private CursorMode cursorMode = CursorMode.Auto;
-
-    [SerializeField] public bool fullscreen = false, vsync = false;
-    [SerializeField] public float cursor = 0f, volMusic = 1f, volSFX = 1f, volVoices = 1f, speed = 1f, textSize = 68f;
+    [SerializeField] public bool fullscreen = false;
+    [SerializeField] public float cursor, volMusic, volSFX, volVoices, speed, textSize;
     [SerializeField] public bool autoforward = false;
 
     [SerializeField] public AudioSource music, sfx, voices;
@@ -21,7 +18,9 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private List<HGGOptionView> hggOptionViews = null;
     [SerializeField] private HGGOptionsListView hggOptionsListView = null;
 
-    void Awake() {
+    public bool fastForwardActive;
+
+    void OnEnable() {
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -31,34 +30,17 @@ public class SettingManager : MonoBehaviour
         LoadSettings();
 
         DontDestroyOnLoad(this.gameObject);
-   }
+    }
 
     public void ChangeFullscreen(bool value){
         fullscreen = value;
         Screen.fullScreen = value;
     }
 
-    public void ChangeVSync(bool value){
-        vsync = value;
-        // Debug.Log("idk what VSync is <3");
-    }
-
     public void ChangeCursor(float value){
         cursor = value;
-        switch((int)Math.Ceiling(value)){
-            case 0:
-                Cursor.SetCursor(appleCursor, Vector2.zero, cursorMode);
-                break;
-            case 1:
-                Cursor.SetCursor(applebeeCursor, Vector2.zero, cursorMode);
-                break;
-            case 2:
-                Cursor.SetCursor(beeCursor, Vector2.zero, cursorMode);
-                break;
-            default:
-                Cursor.SetCursor(null, Vector2.zero, cursorMode);
-                break;
-        }
+
+        if(CursorManager.Instance != null) CursorManager.Instance.ChangeCursor(value);
     }
 
     public void ChangeVolMusic(float value){
@@ -136,20 +118,17 @@ public class SettingManager : MonoBehaviour
         if(PlayerPrefs.HasKey(nameof(Setting.Fullscreen))) fullscreen = PlayerPrefs.GetInt(nameof(Setting.Fullscreen)) != 0;
         else fullscreen = false;
 
-        if(PlayerPrefs.HasKey(nameof(Setting.VSync))) vsync = PlayerPrefs.GetInt(nameof(Setting.VSync)) != 0;
-        else vsync = false;
-
         if(PlayerPrefs.HasKey(nameof(Setting.Cursor))) cursor = PlayerPrefs.GetFloat(nameof(Setting.Cursor));
         else cursor = 0f;
 
         if(PlayerPrefs.HasKey(nameof(Setting.Music))) volMusic = PlayerPrefs.GetFloat(nameof(Setting.Music));
-        else volMusic = 1f;
+        else volMusic = Settings.maxMusicVol;
 
         if(PlayerPrefs.HasKey(nameof(Setting.SFX))) volSFX = PlayerPrefs.GetFloat(nameof(Setting.SFX));
-        else volSFX = 1f;
+        else volSFX = Settings.maxSfxVol;
 
         if(PlayerPrefs.HasKey(nameof(Setting.Voices))) volVoices = PlayerPrefs.GetFloat(nameof(Setting.Voices));
-        else volVoices = 1f;
+        else volVoices = Settings.maxVoiceVol;
 
         if(PlayerPrefs.HasKey(nameof(Setting.Speed))) speed = PlayerPrefs.GetFloat(nameof(Setting.Speed));
         else speed = 1f;
@@ -161,7 +140,6 @@ public class SettingManager : MonoBehaviour
         else textSize = 68f;
 
         ChangeFullscreen(fullscreen);
-        ChangeVSync(vsync);
         ChangeCursor(cursor);
         ChangeVolMusic(volMusic);
         ChangeVolSFX(volSFX);

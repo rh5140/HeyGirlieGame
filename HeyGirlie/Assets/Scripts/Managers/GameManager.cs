@@ -32,14 +32,13 @@ public class GameManager : MonoBehaviour
 
     // One queue per region
     // Queue of scene names to load
-    public Queue<string> schoolDates;
-    public Queue<string> elmvilleDates;
-    public Queue<string> mordredDates;
-    public Queue<string> outdoorsDates;
     public Queue<string> awayDates;
+    public Queue<string> outdoorsDates;
+    public Queue<string> schoolDates;
+    public Queue<string> mordredDates;
+    public Queue<string> elmvilleDates;
 
     public bool pauseLock = false;
-
     public EscLock escLock = EscLock.Dropdown;
 
     private void Awake()
@@ -60,13 +59,6 @@ public class GameManager : MonoBehaviour
         awayDates = new Queue<string>();
 
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    private void Update(){ 
-        if(!SceneManager.GetActiveScene().name.Equals("Main Menu") &&
-            Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.LeftControl)){
-            Save();
-        }
     }
 
     public void Pause(bool pause){
@@ -233,12 +225,12 @@ public class GameManager : MonoBehaviour
         _polyamPair = pair;
     }
 
-    public void SetLocationQueues(List<string> schoolDates, List<string> elmvilleDates, List<string> mordredDates, List<string> outdoorsDates, List<string> awayDates){
-        this.schoolDates = new Queue<string>(schoolDates);
-        this.elmvilleDates = new Queue<string>(elmvilleDates);
-        this.mordredDates = new Queue<string>(mordredDates);
-        this.outdoorsDates = new Queue<string>(outdoorsDates);
+    public void SetLocationQueues(List<string> awayDates, List<string> outdoorsDates, List<string> schoolDates, List<string> mordredDates, List<string> elmvilleDates){
         this.awayDates = new Queue<string>(awayDates);
+        this.outdoorsDates = new Queue<string>(outdoorsDates);
+        this.schoolDates = new Queue<string>(schoolDates);
+        this.mordredDates = new Queue<string>(mordredDates);
+        this.elmvilleDates = new Queue<string>(elmvilleDates);
     }
 
     public void SetLiQueue(List<int[]> lis){
@@ -262,7 +254,7 @@ public class GameManager : MonoBehaviour
     public bool Save(){
         PlayerData data = new PlayerData(_playerName, _location, SceneManager.GetActiveScene().name, _week, _datesThisWeek, 
                                             (int)priority, (int)polyamPartner, (_polyamActive ? 1 : 0), (int)_polyamPair, _liQueue, (((AydaLI) GetLoveInterest(Character.Ayda)).GetAydaDate7() ? 1 : 0),
-                                            schoolDates, elmvilleDates, mordredDates, outdoorsDates, awayDates);
+                                            awayDates, outdoorsDates, schoolDates, mordredDates, elmvilleDates);
 
         SaveManager.SaveData(data, _saveProfile);
         Instantiate(savePopup);

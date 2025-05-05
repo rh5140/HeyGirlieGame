@@ -1,12 +1,12 @@
 ﻿title: Date5
 ---
-April 14
-<<location "Mordred Manor Kitchen">>
+April 27
+<<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 14>>
 It’s your week to fill the snack cupboard at Mordred Manor. 
 Jawbone can be relied upon to regularly bake cookies, muffins, or strudels. Sandra Lynn likes to stock up on trail mix.
-Adaine alternates between the most caloric chips she can find at Thrallmart, or some sort of delicate Fallinelven pastries with a name that sounds like birdsong when she says it and spitting when you try.
+Adaine alternates between caloric Thrallmart chips, or some sort of delicate Fallinelven pastries with a name that sounds like birdsong when she says it and spitting when you try.
 Even Zayn manages to procure some sugary, gelatinous confection he calls ghost-mallows to fill the cupboard.
 You don’t ask him how.
 Most weeks, you somehow lose track and forget about snack shopping until the very last minute, when you have to scramble and buy, like, a trash bag full of gas station vegan jerky or something.
@@ -22,13 +22,14 @@ Gertie: Do you taste like… butter?
 <<kristen Grin>>
 Kristen: I had a snack before you got here!
 Okay, so you and Gertie had been looking forward to this baking date all week, only to get a little sidetracked after she showed up at Mordred Manor.
+Oops.
   -> Kristen: “Focus up, Bladeshield. We still have to peel all these pistachios.”
     <<kristen Neutral>>
     <<char_right GertieNeutral>>
     <<voiceline GertieHappy1>>
     Gertie: Ah, of course Mrs Applebees. Baking awaits.
     <<add_points 1>>
-  -> Kristen: “Okay okay, if we sample our baking as we go, we can also sample each other.”
+  -> Kristen: “If we sample our baking as we go, we can also sample each other.”
     <<voiceline KristenRomantic3>>
     Gertie: And then we’ll both be even sweeter. An excellent idea.
     <<add_points 1>>
@@ -49,11 +50,15 @@ Gertie: I have a secret.
 Kristen: A sexy secret?
 Gertie: A secret recipe.
 <<kristen Surprised>>
-She opens an app on her crystal. You expected a photo of a handwritten index card, some old family recipe passed down through generations of Bladeshields, until the ink has faded and the paper’s sun damaged.
+She opens an app on her crystal.
+You expected a photo of a handwritten index card, some old family recipe passed down through generations of Bladeshields, until the ink has faded and the paper’s sun damaged.
 <<voiceline KristenSurprised1>>
 You did not expect a chart.
-Gertie: I’ve been developing this recipe for years, switching out different butter brands, varying the amount of sugar in the honey syrup, debating the pay off of quality vs. convenience in homemade vs. store-brought phyllo sheets.
-Gertie: I’ve taste tested all of the variations against a control batch. Whatever level of sweetness or flavors your housemates prefer, I can fine-tune the ingredient proportions to their liking.
+Gertie: I’ve been developing this recipe for years.
+Gertie: Switching out different butter brands. Varying the amount of sugar in the honey syrup. Debating the pay off of quality vs. convenience in homemade vs. store-brought phyllo sheets.
+Gertie: I’ve taste tested all of the variations against a control batch.
+Gertie: Whatever level of sweetness or flavors your housemates prefer, I can fine-tune the ingredient proportions to their liking.
+Gertie: What do you think?
   -> Kristen: “Whoa! That is… a lot.”
     Kristen: How do you even understand all that info?
     Gertie: I assure you, the chart makes complete sense if you know how to read it.
@@ -94,7 +99,8 @@ Kristen: Oracle bullshit?
 Adaine: Oracle bullshit.
 Sounds like yet another high elf wizard tracked down the People’s Oracle for a prophecy, and did not react well when Adaine shot back that she isn’t a fortune teller machine.
 Jabbing at her crystal with one hand, scooping a fistful of pistachios out of the bag with the other, Adaine grumpily stalks out of the kitchen.
-You go back to de-shelling the pistachios. Gertie takes a second longer to recover from the brief interruption, but soon she’s talking about the different types of honeys she’d brought and how each color and flavor might complement the baklava in different ways.
+You go back to de-shelling the pistachios. Gertie takes a second longer to recover from the brief interruption.
+But soon she’s talking about the different types of honeys she’d brought and how each flavor and color might complement the baklava in different ways.
 But as she reaches into her bag for a spare honey dipper, Zayn Darkshadow floats through the kitchen wall.
 Zayn: Is that organic honey?
 <<kristen Surprised>>
@@ -140,7 +146,8 @@ Kristen: Now you can see why I can never get any baking done around here…
 Gertie: That’s all right, Miss Applebees. I know how to keep us on track.
 <<kristen Surprised>>
 As you begin to sample the flight, Gertie goes to pack up the extraneous honeys she’d brought along with her. Your eyes zero in on the red — you can’t help it.
-Unlike the apple-flavored honey you’d seen at Apiarists’ Society a few weeks ago, this distinctive red hue can’t be mistaken for anything except devil’s honey.
+Unlike the apple-flavored honey you’d seen at Apiarists’ Society a few weeks ago, this distinctive red hue can’t be mistaken for anything else.
+It’s devil’s honey. It must be.
   -> Kristen: “What the devil are you doing, carrying around devil’s honey?”
     <<kristen Angry>>
     <<char_right GertieAngry>>
@@ -170,7 +177,8 @@ Kristen: Of course. I’m sorry.
 You had panicked, the sight of that blood red substance taking you back to the end of your junior year, back to the battle that’d been months — years — in the making.
 But Gertie wasn’t a part of all that. You try to crack a joke, something to ease the tension and put you both back in a better mood.
 <<kristen Grin>>
-Kristen: Did I ever tell you that Riz found traces of baklava in Porter’s desk? Kind of a funny image, if you think about it. Porter, this Big Bad Wannabe God of War, spending hours carefully layering phyllo sheets.
+Kristen: Did I ever tell you that Riz found traces of baklava in Porter’s desk?
+Kristen: Kind of a funny image, if you think about it. Porter, this Big Bad Wannabe God of War, spending hours carefully layering phyllo sheets.
 Kristen: Like, seriously, he didn’t need to do all that.
 <<kristen Surprised>>
 <<char_right GertieSurprise>>
@@ -192,15 +200,17 @@ Discomfort turns into frustration. Frustration turns into anger.
 <<voiceline GertieAngry3>>
 Gertie: “Garnish for a food truck”? Did I really come up with that excuse?
 Gertie: I know I’m always so busy with the hive and everything, but I didn’t think I could miss <i>this</i> much.
-Anger turns inward. Gertie tightens her grip around the knife in her hand, as though she were wielding Stinger in a duel, not cutting baklava into diamonds. What happens when the person that wronged Gertie is… Gertie?
+Anger turns inward. Gertie tightens her grip around the knife in her hand, as though she were wielding Stinger in a duel, not cutting baklava into diamonds.
+What happens when the person that wronged Gertie is… Gertie?
 She can’t declare <i>herself</i> her own nemesis.
 … Can she?
-  -> Kristen: “You were focused on the apiary — that’s more important than anything else.”
+  -> Kristen: “It’s all right. You were focused on the apiary.”
+    Kristen: That’s more important than anything else.
     <<kristen Nervous>>
     <<char_right GertieSad>>
     Gertie: But the hive would’ve been in danger if a mad god had taken over the world!
     <<add_points 1>>
-  -> Kristen: “Sometimes we need to fly away from the hive to get more perspective — or pollen.”
+  -> Kristen: “Sometimes we need to take a step back to get a better perspective.”
     <<kristen Neutral>>
     <<voiceline KristenRomanticGertie2>>
     Kristen: I really admire how much you care about the bees, but there’s a world outside of the apiary too.
@@ -219,7 +229,8 @@ Gertie: I just get so consumed by work. Classic Bladeshield, I suppose. My whole
 Kristen: You did mention your parents travel a lot for work…
 <<kristen Sad>>
 <<voiceline KristenSad2>>
-Gertie was so dedicated to the hive, she didn’t even realize Porter had played her for a pawn. You can only imagine what the Bladeshields had neglected, so dedicated to all those long ranger expeditions into the far reaches of the Material Plane.
+Gertie was so dedicated to the hive, she didn’t even realize Porter had played her for a pawn.
+You can only imagine what the Bladeshields had neglected, so dedicated to all those long ranger expeditions into the far reaches of the Material Plane.
 You picture Gertie all alone in her house, for days, weeks, months, with only bees for company…
 Gertie must’ve read the sadness on your face.
 <<char_right GertieNeutral>>
@@ -228,7 +239,8 @@ Gertie: It’s not what you think. When we were younger, my parents would switch
 Gertie: But Hertie’s graduated now. He’s doing some specialized interplanar training program for kobolds, and I can take care of myself, so I’ve been encouraging them to go on longer trips.
 <<char_right GertieGrin>>
 Gertie: I love my family, but I’ve come to really enjoy my alone time.
-Alone time? You don’t know her! Mordred Manor is always crammed with people. That was true of the Applebees home too. Three brothers and two homebody parents did not leave a lot of room for Me Time. Except…
+Alone time? You don’t know her! Mordred Manor is always crammed with people.
+That was true of the Applebees home too. Three brothers and two homebody parents did not leave a lot of room for Me Time. Except…
 <<kristen Sad>>
 Kristen: I was never left alone back when I lived with my parents, but you can be damn sure I felt lonely — even if I didn’t realize it at the time.
 <<kristen Neutral>>
@@ -268,6 +280,7 @@ Fabian: Well, I hope you’ve been practicing your sword form. Maybe you’d las
 <<kristen Awkward>>
 <<voiceline KristenAwkward3>>
 You don’t need to pass an insight check to sense the lingering tension between those two.
+Yeesh.
   -> <i>Quick! Distract Gertie with a kiss!</i>
     <<char_right GertieGrin>>
     <<kristen Grin>>
@@ -293,7 +306,8 @@ Gertie: A duel’s a duel. Mr. Seacaster and I will never be best friends, but I
 Gertie: As long as he doesn’t insult the hive again.
 Kristen: And you’re both… good with that?
 <<voiceline GertieNeutral1>>
-Gertie and Fabian exchange nods — distant, but respectful — like they’re captains of rival bloodrush teams shaking hands after a game. Which is well and fine and all. Not everyone you like <i>has</i> to like each other.
+Gertie and Fabian exchange nods — distant, but respectful — like they’re captains of rival bloodrush teams shaking hands after a game.
+Which is well and fine and all. Not everyone you like <i>has</i> to like each other.
 But… well… why shouldn’t they?
 <<kristen Neutral>>
 Fabian eyes the baklava baking in the oven, breathing in the delicious scent of warm butter.
@@ -389,5 +403,5 @@ Kristen: I don’t know. Sounds like Adaine might need more help…
 Gertie: My parents aren’t home.
 <<kristen Grin>>
 Kristen: Let’s go!
-<<jump Cassandra>>
+<<jump Cassandra5>>
 ===

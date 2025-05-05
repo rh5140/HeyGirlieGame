@@ -5,9 +5,9 @@ public class SavePopup : MonoBehaviour
 {
     [SerializeField] private RectTransform paper;
 
-    private float start = 2258.786f;
-    private float end = 1594f;
-    private float y = 953f;
+    private float start = 2414f;
+    private float end = 1683.5f;
+    private float y = 860f;
     void Awake()
     {
         // StartCoroutine(Appear());
@@ -42,6 +42,8 @@ public class SavePopup : MonoBehaviour
             yield return null;
         }
         paper.anchoredPosition = new Vector2(start, y);
+        
+        CursorManager.Instance.Load(false);
 
         Destroy(gameObject);
     }
