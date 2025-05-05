@@ -19,22 +19,20 @@ public class Dropdown : Menu
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject quitPopup;
+    [SerializeField] private EventTrigger eventTrigger;
 
     public bool pause = false;
     private float start = 2588f;
-    private bool open = true;
+    private bool isOpen = false;
     
     private bool animationLock = false;
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape) && !animationLock && GameManager.Instance.escLock == EscLock.Dropdown){
-            if(open) {
-                OpenDropdown();
-                open = false;
-            } else {
-                CloseDropdown();
-                open = true;
-            }
+            eventTrigger.OnPointerClick(null);
+
+            if(!isOpen) OpenDropdown();
+            else CloseDropdown();
         }
     }
 
@@ -47,11 +45,13 @@ public class Dropdown : Menu
     }
 
     public void OpenDropdown(){
+        isOpen = true;
         StartCoroutine(AnimateDropdown(true));
         
     }
 
     public void CloseDropdown(){
+        isOpen = false;
         StartCoroutine(AnimateDropdown(false));
     }
 
@@ -81,6 +81,9 @@ public class Dropdown : Menu
     }
 
     IEnumerator AnimateDropdown(bool open){
+        gameObject.GetComponent<ArrowNavigation>().DisableEventSystem();
+        yield return null;
+
         float time = 0, lerpTime = 0.25f;
         Image overlayImg = overlay.GetComponent<Image>();
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
@@ -91,13 +94,11 @@ public class Dropdown : Menu
         if(open){
             hoverArea.SetActive(false);
             overlay.SetActive(true);
-            // paper.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
         } else {
             // "OnDestroy"
             Unpause();
             UnlockEsc();
-            ArrowKeyEnd();
         }
 
         while(time < lerpTime){
@@ -113,19 +114,21 @@ public class Dropdown : Menu
 
         if(!open){
             overlay.SetActive(false);
-            // paper.SetActive(false);
             hoverArea.SetActive(true);
             ChangeTab("Menu");
         } else {
             // "Awake"
             Pause();
             LockEsc(EscLock.Dropdown);
-            ArrowKeyStart();
             ChangeTab("Close");
         }
 
         animationLock = false;
-        // EventSystem.current.SetSelectedGameObject(null);
+
+        yield return null;
+        gameObject.GetComponent<ArrowNavigation>().EnableEventSystem();
+        if(open) gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
+        else gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public void ChangeTab(string value){
@@ -136,7 +139,10 @@ public class Dropdown : Menu
     {
         CloseDropdown();
         DisableHover();
-        Instantiate(saveGalleryMenu);
+        CursorManager.Instance.WaitCursor(() => {
+            Instantiate(saveGalleryMenu);
+            return true;
+        });
     }
 
     public void Settings()

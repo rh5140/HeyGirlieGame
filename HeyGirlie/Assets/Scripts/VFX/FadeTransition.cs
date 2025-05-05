@@ -13,6 +13,8 @@ public class FadeTransition : MonoBehaviour
     public Image rightSprite;
     public Image background; // in case we want to... do something with that
 
+    public GameObject eventSystem;
+
     public void Start()
     {
         ui = GetComponent<CanvasGroup>();
@@ -45,6 +47,9 @@ public class FadeTransition : MonoBehaviour
         }
 
         cg.alpha = end;
+
+        yield return null;
+        gameObject.GetComponent<ArrowNavigation>().EnableEventSystem();
     }
 
     public void FadeOutAndChangeScene(string sceneName)

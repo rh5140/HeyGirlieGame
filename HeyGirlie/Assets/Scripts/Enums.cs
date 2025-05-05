@@ -17,11 +17,12 @@ public enum Character
 
 public enum Region
 {
-    School,
-    Elmville,
-    Mordred,
-    Outdoors,
+    
     Away,
+    Outdoors,
+    School,
+    Mordred,
+    Elmville,
 }
 
 public enum liInfo

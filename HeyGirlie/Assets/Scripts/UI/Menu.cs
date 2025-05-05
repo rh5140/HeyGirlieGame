@@ -6,9 +6,6 @@ public abstract class Menu : MonoBehaviour
     protected bool pauseLock = false;
     protected EscLock escLock;
 
-    [SerializeField] private GameObject arrowKeyStart;
-    [SerializeField] private GameObject arrowKeyPrevious;
-
     public virtual void Close(){
         Destroy(gameObject);
     }
@@ -34,16 +31,5 @@ public abstract class Menu : MonoBehaviour
 
     protected void UnlockEsc(){
         GameManager.Instance.escLock = escLock;
-    }
-
-    protected void ArrowKeyStart(){
-        if(EventSystem.current != null) {
-            arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
-            if(arrowKeyStart != null) EventSystem.current.SetSelectedGameObject(arrowKeyStart);
-        }
-    }
-
-    protected void ArrowKeyEnd(){
-        if(EventSystem.current != null && arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
     }
 }

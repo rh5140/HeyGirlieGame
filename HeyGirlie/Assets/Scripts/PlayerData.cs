@@ -27,11 +27,11 @@ public class PlayerData
     [SerializeField] private List<LIData> liData = new List<LIData>();
     [SerializeField] private int ayda;
     
-    [SerializeField] private List<string> schoolDates;
-    [SerializeField] private List<string> elmvilleDates;
-    [SerializeField] private List<string> mordredDates;
-    [SerializeField] private List<string> outdoorsDates;
     [SerializeField] private List<string> awayDates;
+    [SerializeField] private List<string> outdoorsDates;
+    [SerializeField] private List<string> schoolDates;
+    [SerializeField] private List<string> mordredDates;
+    [SerializeField] private List<string> elmvilleDates;
  
     // Object for LI data without making a whole new file. Not relevant outside this scope anyways
     [System.Serializable]
@@ -70,8 +70,8 @@ public class PlayerData
 
     public PlayerData(string playerName, string location, string scene, int week, int datesThisWeek, 
                         int priority, int polyamPartner, int polyamActive, int polyamPair, List<LoveInterest> liQueue, int ayda,
-                        Queue<string> schoolDates, Queue<string> elmvilleDates, Queue<string> mordredDates,
-                        Queue<string> outdoorsDates, Queue<string> awayDates){
+                        Queue<string> awayDates, Queue<string> outdoorsDates, Queue<string> schoolDates,
+                        Queue<string> mordredDates, Queue<string> elmvilleDates){
         this.playerName = playerName;
         this.location = location;
         this.scene = scene;
@@ -89,11 +89,11 @@ public class PlayerData
         }
         this.ayda = ayda;
 
-        this.schoolDates = (schoolDates != null) ? schoolDates.ToList() : null;
-        this.elmvilleDates = (elmvilleDates != null) ? elmvilleDates.ToList() : null;
-        this.mordredDates = (mordredDates != null) ? mordredDates.ToList() : null;
-        this.outdoorsDates = (outdoorsDates != null) ? outdoorsDates.ToList() : null;
         this.awayDates = (awayDates != null) ? awayDates.ToList() : null;
+        this.outdoorsDates = (outdoorsDates != null) ? outdoorsDates.ToList() : null;
+        this.schoolDates = (schoolDates != null) ? schoolDates.ToList() : null;
+        this.mordredDates = (mordredDates != null) ? mordredDates.ToList() : null;
+        this.elmvilleDates = (elmvilleDates != null) ? elmvilleDates.ToList() : null;
     }
 
     // Saves individual LI data to list
@@ -193,11 +193,11 @@ public class PlayerData
 
     public List<string> getLocationQueue(Region region){
         switch(region){
-            case Region.School: return schoolDates;
-            case Region.Elmville: return elmvilleDates;
-            case Region.Mordred: return mordredDates;
-            case Region.Outdoors: return outdoorsDates;
             case Region.Away: return awayDates;
+            case Region.Outdoors: return outdoorsDates;
+            case Region.School: return schoolDates;
+            case Region.Mordred: return mordredDates;
+            case Region.Elmville: return elmvilleDates;
             default: return null;
         }
     }

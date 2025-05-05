@@ -204,18 +204,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 4061624024014570308}
-          m_TargetAssemblyTypeName: Dropdown, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -1293,6 +1281,7 @@ GameObject:
   - component: {fileID: 4218881044391239619}
   - component: {fileID: 2411063927547047210}
   - component: {fileID: 4061624024014570308}
+  - component: {fileID: 2799809300890309883}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -1411,7 +1400,23 @@ MonoBehaviour:
   settingsMenu: {fileID: 1757103797310101717, guid: 5335224bf8447464b9f71a65658f5d9c, type: 3}
   creditsMenu: {fileID: 2873726535391717469, guid: 888b7c5ec61191f45a89f0e85599658b, type: 3}
   quitPopup: {fileID: 2423942627491101857}
+  eventTrigger: {fileID: 9136238664810978538}
   pause: 0
+--- !u!114 &2799809300890309883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693638916390861848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe01e6a863452e24f8903ec76a7af3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
+  arrowKeyStart: {fileID: 8018786209157576910}
+  arrowKeyPrevious: {fileID: 0}
 --- !u!1 &7975482061484568623
 GameObject:
   m_ObjectHideFlags: 0

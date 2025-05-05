@@ -256,6 +256,7 @@ namespace Yarn.Unity
             if (Input.GetKeyUp(KeyCode.Space) && !GameManager.Instance.pauseLock)
             {
                 UserRequestedViewAdvancement();
+                continueButton.GetComponent<EventTrigger>().OnSubmit(null);
             }
         }
 

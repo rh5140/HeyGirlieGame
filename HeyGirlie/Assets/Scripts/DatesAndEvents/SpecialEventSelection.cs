@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Yarn.Unity;
+using System.Collections.Generic;
 
 public class SpecialEventSelection : MonoBehaviour
 {
@@ -10,7 +12,15 @@ public class SpecialEventSelection : MonoBehaviour
     [SerializeField] protected GameObject _polyamButtonContainer;
 
     private int buttonsTurnedOff = 0;
-
+    private ArrowNavigation arrowNavigation;
+    
+    void Awake(){
+        arrowNavigation = gameObject.GetComponent<ArrowNavigation>();
+    }
+    
+    void Update(){
+        // Debug.Log(EventSystem.current.currentSelectedGameObject);
+    }
     public bool GetSpecialEventFail(int threshold)
     {
         LoveInterest[] loveInterests = GameManager.Instance.GetLIArray();
@@ -26,6 +36,9 @@ public class SpecialEventSelection : MonoBehaviour
     public bool ActivateButtons(int threshold)
     {
         _buttonContainer.SetActive(true);
+        arrowNavigation.ArrowKeyStart();
+        List<Button> tempButtons = new List<Button>();
+
         if(GameManager.Instance.GetPolyamActive()) _polyamButtonContainer.SetActive(true);
         if (threshold == 0)
         {   
@@ -41,6 +54,7 @@ public class SpecialEventSelection : MonoBehaviour
         // Button array shorter than LI array when no polyam included
         foreach (GameObject button in _buttons)
         {
+            tempButtons.Add(button.GetComponent<Button>());
             // DateCount is 1-indexed
             int liDateCount = GameManager.Instance.GetLoveInterest((Character)liIdx).GetDateCount();
             if (liDateCount < threshold)
@@ -51,23 +65,16 @@ public class SpecialEventSelection : MonoBehaviour
                     } else if(liIdx != (int)GameManager.Instance.GetPolyamPair()) {
                         button.SetActive(false);
                     } else {
-                        button.GetComponent<Button>().interactable = false;
+                        tempButtons[tempButtons.Count - 1].interactable = false;
                     }
                 } else {
-                    button.GetComponent<Button>().interactable = false;
+                    tempButtons[tempButtons.Count - 1].interactable = false;
                 }
-                // if (week6 && (liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara) && liDateCount >= 3) // True if you've gone on 2 polyam dates by week 6 event
-                // {
-                //     continue;
-                // }
-                // else
-                // {
-                //     if((liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara) && liIdx != (int)GameManager.Instance.GetPolyamPair()) button.SetActive(false);
-                //     button.GetComponent<Button>().interactable = false;
-                // }
             }
             liIdx++;
         }
+
+        arrowNavigation.ArrowNav(tempButtons);
 
         if (buttonsTurnedOff == _buttons.Length)
         {

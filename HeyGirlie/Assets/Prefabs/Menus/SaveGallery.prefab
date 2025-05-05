@@ -73,10 +73,10 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6100706517408811076}
-  - {fileID: 4368990825144274326}
-  - {fileID: 5809773113007200383}
   - {fileID: 6222422363845947752}
+  - {fileID: 5809773113007200383}
+  - {fileID: 4368990825144274326}
+  - {fileID: 6100706517408811076}
   m_Father: {fileID: 5426677681738063100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 208663460291887251}
   - component: {fileID: 5935405526530508582}
   - component: {fileID: 4531351938926972419}
+  - component: {fileID: 8903298312371637106}
   m_Layer: 5
   m_Name: SaveGallery
   m_TagString: Untagged
@@ -326,8 +327,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89bc06594e8a8cd499a0c27ce0db4f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowKeyStart: {fileID: 3792275122998258532}
-  arrowKeyPrevious: {fileID: 0}
+  buttons:
+  - {fileID: 4590462817533852578}
+  - {fileID: 4129396706518061749}
+  - {fileID: 6147171262074439516}
+  - {fileID: 4414923951371027086}
   saveButton: {fileID: 4129396706518061749}
   loadButton: {fileID: 6147171262074439516}
   deleteButton: {fileID: 4414923951371027086}
@@ -346,6 +350,23 @@ MonoBehaviour:
   newGamePopup: {fileID: 3723025955169232564}
   playerName: {fileID: 4550667548193109673}
   background: {fileID: 3792275122998258532}
+--- !u!114 &8903298312371637106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6524237873561504882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe01e6a863452e24f8903ec76a7af3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
+  arrowKeyStart: {fileID: 3792275122998258532}
+  arrowKeyPrevious: {fileID: 0}
+  upDown: 0
+  leftRight: 1
 --- !u!1 &7321165370037358447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8711090945293968937}
     - target: {fileID: 6860863507333849385, guid: 2db2ad41e4dbe4349a57a24e1b448576, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 4414923951371027086}
+    - target: {fileID: 6860863507333849385, guid: 2db2ad41e4dbe4349a57a24e1b448576, type: 3}
       propertyPath: m_Navigation.m_SelectOnRight
       value: 
       objectReference: {fileID: 4129396706518061749}
@@ -3271,7 +3296,7 @@ PrefabInstance:
     - target: {fileID: 6860863507333849385, guid: 2db2ad41e4dbe4349a57a24e1b448576, type: 3}
       propertyPath: m_Navigation.m_SelectOnRight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4590462817533852578}
     - target: {fileID: 6860863507333849385, guid: 2db2ad41e4dbe4349a57a24e1b448576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

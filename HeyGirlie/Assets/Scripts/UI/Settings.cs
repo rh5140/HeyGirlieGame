@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 using System.IO;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
@@ -33,9 +34,12 @@ public class Settings : Menu
     [SerializeField] private CanvasGroup autoforward, textSpeed;
 
     void Awake() {
+        StartCoroutine(WaitAwake());
+    }
+
+    protected IEnumerator WaitAwake(){
         LockEsc(EscLock.Settings);
         Pause();
-        ArrowKeyStart();
 
         if(SettingManager.Instance.fastForwardActive){
             speedSlider.interactable = false;
@@ -54,7 +58,10 @@ public class Settings : Menu
         settingsButton.GetComponent<Button>().interactable = false;
         controlsContainer.SetActive(false);
 
-        screenshot.sprite = (GameManager.Instance.GetProfile() != 0) ? SaveManager.getScreenshot(GameManager.Instance.GetProfile()) : defaultScreenshot;
+        screenshot.sprite = (SceneManager.GetActiveScene().name.Equals("Main Menu")) ? defaultScreenshot : SaveManager.getScreenshot(GameManager.Instance.GetProfile());
+
+        yield return null;
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
     }
 
     void Update(){
@@ -64,7 +71,7 @@ public class Settings : Menu
     void OnDestroy(){
         Unpause();
         UnlockEsc();
-        ArrowKeyEnd();
+        gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
     }
 
     public void ToggleFullscreen(bool value){
@@ -93,13 +100,17 @@ public class Settings : Menu
     }
 
     public void ChangeSpeed(float value){
-        PlayerPrefs.SetFloat(nameof(Setting.Speed), value);
-        SettingManager.Instance.ChangeSpeed(value);
+        if(!SettingManager.Instance.fastForwardActive){
+            PlayerPrefs.SetFloat(nameof(Setting.Speed), value);
+            SettingManager.Instance.ChangeSpeed(value);
+        }
     }
 
     public void ToggleAutoforward(bool value){
-        PlayerPrefs.SetInt(nameof(Setting.Autoforward), value ? 1 : 0);
-        SettingManager.Instance.ChangeAutoforward(value);
+        if(!SettingManager.Instance.fastForwardActive){
+            PlayerPrefs.SetInt(nameof(Setting.Autoforward), value ? 1 : 0);
+            SettingManager.Instance.ChangeAutoforward(value);
+        }
     }
     
     public void ChangeTextSize(float value)
@@ -109,7 +120,13 @@ public class Settings : Menu
     }
 
     public void OpenSaves(){
-        Instantiate(saveGalleryMenu);
+        if(SceneManager.GetActiveScene().name.Equals("Main Menu")) Instantiate(saveGalleryMenu);
+        else {
+            CursorManager.Instance.WaitCursor(() => {
+                Instantiate(saveGalleryMenu);
+                return true;
+            });
+        }
     }
 
     private void SetSettings(){
@@ -122,6 +139,7 @@ public class Settings : Menu
 
         speedSlider.value = SettingManager.Instance.speed;
         autoforwardToggle.isOn = SettingManager.Instance.autoforward;
+        
         textSizeSlider.value = SettingManager.Instance.textSize;
     }
 

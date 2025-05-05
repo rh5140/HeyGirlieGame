@@ -30,7 +30,7 @@ public class SettingManager : MonoBehaviour
         LoadSettings();
 
         DontDestroyOnLoad(this.gameObject);
-   }
+    }
 
     public void ChangeFullscreen(bool value){
         fullscreen = value;
