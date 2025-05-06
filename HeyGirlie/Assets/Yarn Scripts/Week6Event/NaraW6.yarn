@@ -84,6 +84,7 @@ Nara: Hmm… alright. I must say, I did not take you for someone who preferred t
 Kristen: No yeah I love the tame stuff. I’m Team Tame all the way baby.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background Fair_Nara>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -94,5 +95,7 @@ Nara: Kristen!! I am overcome with the most uncomfortable affliction!!!!
 Kristen: Yeah that’s my bad. At least this ride only lasts five minutes.
 Nara: How much longer do we have left?!
 Kristen: Four minutes and fifty five seconds.
-<<jump EndEvent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<enable_continue>>
 ===

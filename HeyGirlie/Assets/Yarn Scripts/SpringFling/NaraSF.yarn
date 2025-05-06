@@ -170,6 +170,7 @@ Nara: I want to be here. With you. I will be okay.
 :You have never felt so loved, so cherished. You gently lead Nara over to a nearby table and decide to do something nice for her.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background SpringFling_Nara>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -191,5 +192,7 @@ Nara: I have an allergy.
 Kristen: … to punch?
 Nara: To red. Beverage.
 Kristen: … yeah let’s get outta here.
-<<jump EndingForReal>>
+<<fade_out_ui>>
+<<wait 2>>
+<<enable_continue>>
 ===

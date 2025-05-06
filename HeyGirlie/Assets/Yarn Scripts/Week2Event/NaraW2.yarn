@@ -74,12 +74,13 @@ Nara: We don’t talk about her.
 :You never thought you would ever think this, but… you’re actually having <i>fun.</i> Turns out anything is interesting if you have the right teacher.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background Museum_Nara>>
 <<wait 2>>
 <<fade_in_ui>>
 :Eventually, you both decide to take a seat in front of a painting that depicts a couple in a forest.
 Kristen: Thanks for keeping me company today, Nara.
-<<voiceline NaraSateSuccess1>>
+<<voiceline NaraDateSuccess1>>
 Nara: It was my pleasure. I hope you enjoyed yourself.
 Kristen: I did.
 :You reach your arm behind Nara, and feel her hand rest atop yours. As she rests her head on your shoulder, your heart flutters and you feel your face grow warm.
@@ -93,5 +94,7 @@ Kristen: I’m not sure Elmville is part of your royal jurisdiction.
 Nara: They do not have to know that.
 <<voiceline KristenRomantic2>>
 Kristen: You’re so right babe.
-<<jump EndEvent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<enable_continue>>
 ===

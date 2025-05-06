@@ -117,8 +117,8 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        CursorManager.Instance.Load(true);
-        // SceneManager.LoadScene("Credits");
+        //CursorManager.Instance.Load(true);
+        //SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()
