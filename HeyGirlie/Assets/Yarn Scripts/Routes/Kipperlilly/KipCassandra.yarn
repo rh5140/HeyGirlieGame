@@ -119,7 +119,25 @@ title: Cassandra2
     Kristen: I guess that’s true.
 <<else>>
   // flop
-    flop
+  <<kristen Neutral>>
+  <<char_right CassandraSad>>
+  Cassandra: Are you going to tell her?
+  <<kristen Surprised>>
+  <<voiceline KristenNeutral3>>
+  Kristen: Huh? 
+  <<char_right CassandraSurprised>>
+  <<voiceline CassDisappointed1>>
+  Cassandra: Kristen, Kipperlilly doesn’t know you’ve seen her therapy notes. Don’t you think you should at least mention it? Especially if she’s so disturbed by you living with Jawbone?
+  <<kristen Nervous>>
+  <<voiceline KristenAngry2>>
+  Kristen: Do I hafta? 
+  Cassandra: Is it a good idea to keep hiding it from her, especially if you plan on moving forward?
+  <<kristen Angry>>
+  Kristen: Weren’t <i>you</i> the one pushing me to go for this?
+  <<char_right CassandraSad>>
+  <<voiceline CassDisappointed3>>
+  Cassandra: Just… think about it, Kristen.
+
 <<endif>>
 
 <<jump EndDate>>
@@ -362,8 +380,18 @@ title: Cassandra6
     <<kristen Neutral>>
     Kristen: … never mind.
 <<else>>
-  // flop
-    flop
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassNeutral1>>
+  Cassandra: Hey, Kristen! What d’you think about enrolling in some comedy classes outside of school?
+  <<voiceline KristenSad1>>
+  Kristen: … is that a new commandment or something? ”Thou must be the funniest guy in every room thou dost walk into”?
+  Cassandra: I mean, it just felt like some of your jokes today fell really flat, and mortals covet humor in a partner, right? 
+  <<char_right CassandraHappy>>
+  Cassandra: I’m just looking out for you!
+  <<kristen Sad>>
+  <<voiceline KristenSad3>>
+  Kristen: I thought they were funny…
 <<endif>>
 <<jump EndDate>>
 ===
