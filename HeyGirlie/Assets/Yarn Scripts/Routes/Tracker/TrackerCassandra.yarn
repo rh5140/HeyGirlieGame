@@ -20,6 +20,9 @@ Cassandra: Did you notice how I said something depending on how you did with Tra
 title: Cassandra1
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -77,6 +80,9 @@ title: Cassandra1
 title: Cassandra2
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -125,6 +131,9 @@ title: Cassandra2
 title: Cassandra3
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -178,6 +187,9 @@ title: Cassandra3
 title: Cassandra4
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<char_right CassandraHappy>>
@@ -232,6 +244,9 @@ title: Cassandra4
 title: Cassandra5
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -297,6 +312,9 @@ title: Cassandra5
 title: Cassandra6
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -343,6 +361,9 @@ title: Cassandra6
 title: Cassandra7
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Soft>>
@@ -392,12 +413,18 @@ title: Cassandra7
 title: Cassandra8
 ---
 <<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+...someone's calling...
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
+    slay
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
+    mid
 <<else>>
     //flop
+    flop
 <<endif>>
 <<jump EndDate>>
 ===
@@ -410,20 +437,15 @@ title: EndDate
 <<if get_dates_this_week() < 3>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
-    end of Week 2 event
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
-    end of Week 4 event
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
-    end of Week 6 event
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
-    spring fling
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>
-    WEEK SHOULD INCREMENT
     <<change_scene Cassandra>>
 <<endif>>
 ===

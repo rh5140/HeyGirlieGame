@@ -1,33 +1,51 @@
 ﻿title: Lucy
 ---
-Lucy’s mouth parts, and she gasps gently in surprise.
-Lucy: Oh. Oh, wow.
-She reaches forward and gently takes the flowers from you. 
-<<voiceline LucyRomantic4>>
-Lucy: Kristen, these are beautiful. Where did you get them?
-Kristen: I looked up the best flower shops in Elmville. They’re nothing compared to the ones in your garden, though.
-Lucy smiles. She lifts the flowers to her nose and inhales, closing her eyes to savor the scent. 
+<<fade_in_ui>>
 <<kristen Nervous>>
-You wait anxiously, torn between watching her and saying something. You get the sense that she’s thinking intently, and you try to be patient.
-Eventually, though, your nerves get the best of you.
-<<voiceline KristenAwkward2>>
-Kristen: Lucy, I know death is, like, your thing, but you’re kind of killing me here.
-<<char_right LucyFlirty3>>
-Lucy giggles. 
-She sets the flowers aside on the bed and walks over to you. She takes your hands in hers.
-Slowly, Lucy lowers her forehead to rest against yours. 
-Your eyes flit down to her lips, then back up to meet her gaze. 
-Her voice is as soft as snow.
-<<voiceline LucyDateSuccess2>>
-Lucy: Kristen Applebees, I would love to go to Spring Fling with you.
+Lucy’s smile is wide when you open the door to let her in; she’s clearly excited to explore Mordred with you today. 
+<<kristen Happy>>
+The knots in your stomach loosen, a sense of calm washing over you at her sweet face. 
+She steps in and reaches for you. You’re already leaning forward onto your tiptoes, and you meet her halfway for the warm hug that now accompanies every greeting you share. 
 <<kristen Soft>>
-<<voiceline KristenDateSuccessLucy2>>
-Your heart stops in your chest, then picks up speed again. 
-You think you’re shaking, but you’re too distracted by her eyes and the chill of her breath against your mouth to notice.
-Kristen: Really?
-Lucy: Yes. And not just because it’s on my list.
-You laugh, and so does she.
-And drawn inexorably together, holding each other close, you both lean into a kiss to seal the deal.
+<<char_right LucyBlush3>>
+You breathe out, letting her presence soothe you.
+<<voiceline LucyGreeting1>>
+Lucy: Hi, Kristen.
+<<voiceline KristenGreetingLucy2>>
+Kristen: Hi, Lucy. 
+Lucy is blushing when you separate, and so are you. You both grin at each other for a few long seconds.
+<<kristen Neutral>>
+<<char_right LucyNeutral3>>
+Kristen: C’mon, let’s head to my room.
+Lucy casts a longing glance at the cemetery. You laugh.
+Kristen: We’ll go visit Zayn later, I promise.
+Lucy: I’ll hold you to that.
+You reach your room, and Lucy sits on the bed. You hover at the door.
+Kristen: I’ll be right back.
+Lucy: Okay.
+<<kristen Nervous>>
+You run to the kitchen and grab your surprise for Lucy. You take a deep breath and straighten your shoulders, doing your best to project confidence.
+When you re-enter your room, you hide your hands behind your back. Lucy’s eyes narrow. 
+<<char_right LucySurprised3>>
+<<voiceline LucyConfused1>>
+She tilts her head, confused.
+Lucy: Kristen?
+Kristen: Lucy, before we start exploring Mordred, there was something else I wanted to ask you.
+Lucy: Oh?
+You take a deep breath. 
+<<kristen Soft>>
+<<voiceline KristenRomanticLucy1>>
+Kristen: Getting to hang out with you this past little while has been so much fun.
+Kristen: I know we started off as classmates, and then I was helping you figure yourself out, but I’ve learned so much about myself, too.
+Kristen: You’re so strong and kind and brave, and spending time with you has made me a better person.
+Kristen: And in honor of our journey, I was thinking, what if we knock off one final thing on your list together?
+<<voiceline KristenRomanticLucy2>>
+:You hold out two flowers whose stalks are intertwined: a snowdrop and a daffodil. 
+<<char_right LucyBlush3>>
+Lucy’s eyes are soft and wide, her cheeks flushed.
+<<voiceline LucySurprised3>>
+Lucy: Oh, <i>Kristen</i>. 
+Kristen: Lucy Frostblade, will you go to Spring Fling with me? 
 
 <<sf_success Lucy>>
 
@@ -40,6 +58,7 @@ And drawn inexorably together, holding each other close, you both lean into a ki
 
 title: LucySuccess
 ---
+<<fade_in_ui>>
 Lucy’s mouth parts, and she gasps gently in surprise.
 Lucy: Oh. Oh, wow.
 She reaches forward and gently takes the flowers from you. 
@@ -74,6 +93,7 @@ And drawn inexorably together, holding each other close, you both lean into a ki
 
 title: LucyFail
 ---
+<<fade_in_ui>>
 <<char_right LucySad3>>
 Lucy opens her mouth, then closes it, biting her lip anxiously. 
 <<kristen Surprised>>
@@ -100,6 +120,7 @@ Lucy: Thanks, Kristen. You’re the best.
 title: LucyEnding
 ---
 <<background SpringFling>>
+<<fade_in_ui>>
 <<kristen Nervous_Lucy>>
 Students begin filing in through the doors, and the room soon fills with excited chatter and laughter. 
 You spot your friends in the crowd and give them a wave, making a mental note to save them a few dances, too.
@@ -109,13 +130,13 @@ Your stomach churns, your heart beating fast in your ears. You think you’re ab
 And then you see her, and your heart stops. 
 Butterflies chase away your anxiety and start to flutter in your stomach instead.
 <<kristen Soft_Lucy>>
-<<char_right LucyBlush>>
+<<char_right LucyBlush4>>
 <<voiceline LucyGreeting1>>
 Lucy: Hi, Kristen.
 Your voice comes out soft. 
 <<voiceline KristenRomanticLucy1>>
 Kristen: Hi, Lucy. Wow. You look <i>beautiful</i>.
-<<char_right LucyFlirty>>
+<<char_right LucyFlirty4>>
 Lucy reaches out and adjusts your collar, though you’re pretty sure there’s nothing to fix. You think she just wants to touch you. 
 You kind of want to combust on the spot, in the best way.
 Lucy: You look <i>very</i> dapper, too. 
@@ -126,28 +147,28 @@ Lucy laughs.
 Lucy: Courtesy of the school’s budget, this time?
 Kristen: Even Fabian has his limits. 
 <<kristen Neutral_Lucy>>
-<<char_right LucyNeutral>>
+<<char_right LucyNeutral4>>
 You escort her to the food table and deliberate with her over which appetizers to try. 
 There are a lot of little finger foods that Lucy manages to eat daintily and you… kind of just scarf down. They’re delicious.
 Kristen: Man, I wish we could eat like this forever.
-<<char_right LucyJoking>>
+<<char_right LucyJoking4>>
 Lucy: Hmm, I don’t know. They’re good, but you know what’s even better?
 Kristen: What?
 Lucy: Those deep-fried chocolate pickles.
 <<kristen Happy_Lucy>>
 You elbow her and she laughs along with you.
 <<kristen Neutral>>
-<<char_right LucyNeutral>>
+<<char_right LucyNeutral4>>
 Eventually the DJ starts to play music, and you pull Lucy onto the dance floor. 
 You end up shimmying along with her to a few songs, and then you’re both pulled away for a few dances by your respective friends.
 <<kristen Happy_Lucy>>
-<<char_right LucyHappy>>
+<<char_right LucyHappy4>>
 As you dance with them, you’re caught up in the happiness of just being a <i>teenager</i> for once. 
 You catch Lucy’s eye several times as you dance, and you both give each other huge grins. Somehow, you know she’s thinking the same thing.
 You’ve earned this joy.
 Finally, just as you make your way back to each other, the lights dim and a slow song starts to play.
 <<kristen Soft_Lucy>>
-<<char_right LucyBlush>>
+<<char_right LucyBlush4>>
 Kristen: Dance with me?
 Lucy: Of course.
 You wrap your arms around her neck, and her hands settle on your waist. 
@@ -158,7 +179,7 @@ Kristen: So, you know what I just realized?
 Lucy: What?
 Kristen: We’ve now officially knocked everything off your list. Isn’t that awesome?
 Lucy smiles. Her eyes are suddenly intent on yours.
-<<char_right LucyFlirty>>
+<<char_right LucyFlirty4>>
 Lucy: Not everything.
 <<kristen Surprised>>
 Kristen: What do you mean?
@@ -185,6 +206,5 @@ You tighten your arms around her and kiss her back.
 And for a moment that stretches into eternity, nothing in the world exists other than you and this beautiful, brilliant, strong girl in your arms. 
 <<kristen transparent>>
 <<char_right transparent>>
-<<background SpringFling_Lucy>> 
 <<enable_continue>> 
 ===

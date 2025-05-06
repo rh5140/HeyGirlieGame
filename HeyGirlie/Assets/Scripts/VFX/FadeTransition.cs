@@ -13,6 +13,8 @@ public class FadeTransition : MonoBehaviour
     public Image rightSprite;
     public Image background; // in case we want to... do something with that
 
+    public GameObject eventSystem;
+
     public void Start()
     {
         ui = GetComponent<CanvasGroup>();
@@ -22,12 +24,13 @@ public class FadeTransition : MonoBehaviour
 
     public void FadeIn()
     {
+        if (ui.alpha == 1f) return;
         StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 1f, fadeTime));
     }
 
     public void FadeOut()
     {
-
+        if (ui.alpha == 0) return;
         StartCoroutine(FadeCanvasGroup(ui, ui.alpha, 0, fadeTime));
     }
 
@@ -44,6 +47,9 @@ public class FadeTransition : MonoBehaviour
         }
 
         cg.alpha = end;
+
+        yield return null;
+        gameObject.GetComponent<ArrowNavigation>().EnableEventSystem();
     }
 
     public void FadeOutAndChangeScene(string sceneName)

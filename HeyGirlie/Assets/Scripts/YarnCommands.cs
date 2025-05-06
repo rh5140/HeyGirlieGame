@@ -14,16 +14,11 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private DialogueRunner dialogueRunner;
 
     #region Crystal UI variables
-    // private bool toggleText = false;
-
-    // [SerializeField] private Canvas nonCrystalView;
-    // [SerializeField] private Canvas crystalView;
     public GameObject[] crystalUI;
     public Image lineViewBackground;
-    public TextMeshProUGUI lineViewText;
+    public Image optionViewBackground;
     public TextMeshProUGUI characterName;
     private Color _textColor;
-
     #endregion Crystal UI
 
     [SerializeField] private Character _character;
@@ -46,6 +41,9 @@ public class YarnCommands : MonoBehaviour
     private AudioSource _audioSource;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
+
+    private RectTransform _cassSprite;
+    private float tick = 0, direction = 0.05f;
 
     #region Setup
     /// <summary>
@@ -96,6 +94,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
+        dialogueRunner.AddCommandHandler<bool>("crystal_ping", CrystalPing);
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
@@ -108,7 +107,17 @@ public class YarnCommands : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
-        _textColor = lineViewText.color;
+    }
+
+    void Update(){
+        if(_cassSprite != null){
+            if(tick <= 30 && tick >= 0) {
+                _cassSprite.anchoredPosition = new Vector2(-640f, -1f*(tick = tick + direction));
+            } else {
+                direction = -1f*direction;
+                tick = tick + direction;
+            }
+        }
     }
 
     private void SetLIPriority(int li)
@@ -207,6 +216,7 @@ public class YarnCommands : MonoBehaviour
             location.text = locationName;
         } catch (Exception e) {
             //do nothing
+            Debug.Log("help");
         } finally {
             GameManager.Instance.SetLocationName(locationName);
         }
@@ -223,35 +233,51 @@ public class YarnCommands : MonoBehaviour
         _ui.GetComponent<FadeTransition>().FadeOut();
     }
 
+    private void CrystalPing(bool isPinging)
+    {
+        crystalUI[(int)CrystalUI.Crystal].SetActive(!isPinging);
+        crystalUI[(int)CrystalUI.CrystalPing].SetActive(isPinging);
+    }
+
     private void ToggleText(string character = "NONE")
     {
         if (character.ToUpper() != "NONE")
         {
+            crystalUI[(int)CrystalUI.Crystal].SetActive(false);
+            crystalUI[(int)CrystalUI.CrystalPing].SetActive(false);
+            crystalUI[(int)CrystalUI.KristenTextOptions].SetActive(true);
             lineViewBackground.enabled = false;
+            optionViewBackground.enabled = false;
             characterName.enabled = false;
-            if (character == "KristenText" || character == "Kristen")
+            if (character == "KristenText" || character == "Kristen" || character == "MaryAnn")
             {
-                crystalUI[0].SetActive(true);
-                lineViewText.color = Color.white;
+                crystalUI[(int)CrystalUI.KristenText].SetActive(true);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
+                if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
+            }
+            else if (character[0] == '2') // 2 prepended to the 3rd character texting
+            {
+                crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText2].SetActive(true);
             }
             else
             {
-                crystalUI[1].SetActive(true);
-                lineViewText.color = Color.black;
+                crystalUI[(int)CrystalUI.KristenText].SetActive(false);
+                if (crystalUI.Length == (int)CrystalUI.MaxLength) crystalUI[(int)CrystalUI.OtherText2].SetActive(false);
+                crystalUI[(int)CrystalUI.OtherText1].SetActive(true);
             }
-            // crystalView.gameObject.SetActive(true);
-            // nonCrystalView.gameObject.SetActive(false);
         }
         else
         {
             lineViewBackground.enabled = true;
+            optionViewBackground.enabled = true;
             characterName.enabled = true;
-            lineViewText.color = _textColor;
-            crystalUI[0].SetActive(false);
-            crystalUI[1].SetActive(false);
-            //switch text recipient to whoever character is
-            // crystalView.gameObject.SetActive(false);
-            // nonCrystalView.gameObject.SetActive(true);
+            foreach (GameObject element in crystalUI)
+            {
+                element.SetActive(false);
+            }
+            crystalUI[0].SetActive(true);
         }
     }
     #endregion UI
@@ -312,6 +338,13 @@ public class YarnCommands : MonoBehaviour
 
     private void SetCharLeft(string charSpriteName)
     {
+        if(charSpriteName.Contains("Cass")){
+            if (_cassSprite == null) _cassSprite = _charLeftSprite.GetComponent<RectTransform>();
+        } else {
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            _cassSprite = null;
+        }
+
         if (_multiSprite != null)
             SetMultiSprite(_charLeftSprite, charSpriteName);
         else
@@ -320,6 +353,13 @@ public class YarnCommands : MonoBehaviour
 
     private void SetCharRight(string charSpriteName)
     {
+        if(charSpriteName.Contains("Cass")){
+            if (_cassSprite == null) _cassSprite = _charRightSprite.GetComponent<RectTransform>();
+        } else {
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            _cassSprite = null;
+        }
+
         if (_multiSprite != null)
             SetMultiSprite(_charRightSprite, charSpriteName);
         else
@@ -511,6 +551,9 @@ public class YarnCommands : MonoBehaviour
 
     private IEnumerator FadeBGFilter(Image bg, string color)
     {
+        Image kristenSprite = _kristenSprite.GetComponent<Image>(),
+                leftSprite = _charLeftSprite.GetComponent<Image>(),
+                rightSprite = _charRightSprite.GetComponent<Image>();
         Color start = bg.color;
         Color end;
         switch (color)
@@ -520,6 +563,9 @@ public class YarnCommands : MonoBehaviour
                 break;
             case "sepia": 
                 end = new Color(0.8f, 0.7f, 0.6f, 1f); 
+                break;
+            case "purple":
+                end = new Color(0.85f, 0.62f, 1f, 1f);
                 break;
             default: 
                 end = Color.white; 
@@ -532,6 +578,11 @@ public class YarnCommands : MonoBehaviour
         {
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
+            if(color.Equals("sepia") || color.Equals("white")){
+                kristenSprite.color = currentColor;
+                leftSprite.color = currentColor;
+                rightSprite.color = currentColor;
+            }
             time += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }

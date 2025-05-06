@@ -1,5 +1,6 @@
 ﻿title: Lucy
 ---
+<<fade_in_ui>>
 <<kristen Neutral>>
 Kristen: Welcome to the Elmville fair! 
 <<voiceline KristenHappy1>>
@@ -47,8 +48,10 @@ Kristen: Two.
 Lucy: Three!
 //splash art here
 <<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<background ActivitiesFair_Lucy>>
+<<fade_out_ui>>
+<<background ActivitiesFair_Lucy>> 
 <<wait 2>>
 <<fade_in_ui>>
 You both take a bite. 
@@ -60,6 +63,7 @@ Lucy: Hey, it’s not — it’s not <i>that</i> bad! I mean, it’s not <i>good
 She immediately betrays her own words by choking, eyes watering from the taste. You reach up to pat her on the back, laughing.
 At least Lucy’s laughing, too. You’d eat a billion nasty pickles to see her laugh like that again. 
 //background returns
+<<fade_out_ui>>
 <<wait 2>>
 <<background ActivitiesFair>>
 <<fade_in_ui>>
@@ -70,5 +74,11 @@ Lucy: Let’s do it. I wonder what the nastiest thing at the fair is.
 As it turns out, nothing can beat the stomach-churning taste of the chocolate-covered deep-fried pickles. But you and Lucy have a great time trying lots of different food, rides, and experiences.
 When you get home, it’s with a full stomach, cheeks that hurt from smiling, and a warm glow in your chest.  
 It’s been the perfect day. 
-<<enable_continue>>
+<<kristen transparent>>
+<<char_left transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<background ActivitiesFair_Lucy>> // Set up your splash again
+<<enable_continue>> // Enables a continue button that lets people choose when to move on from the splash
 ===

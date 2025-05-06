@@ -1,7 +1,7 @@
 ﻿title: Fig
 ---
-April 5
 <<kristen Neutral>>
+April 5
 You look around as everyone starts to branch off into different areas of the museum, but nothing really catches your eye.
 The whole place feels too familiar. Probably because half the exhibits are directly linked to your own heroics. It’s hard to get excited about a dusty artifact behind glass when you’re the one who uncovered it.
 You sigh and shuffle your feet, and that’s when you notice Fig.
@@ -46,6 +46,7 @@ Kristen: Fig… There is a very high probability of me dying if I get on that th
 Fig: Oh no! What a terrible way to go. Riding off into the sunset with your hot best friend.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background Museum_Fig>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -68,6 +69,7 @@ Fig: Right?! That’s what I’ve been saying!
 Fig: You better hold on tight, spider monkey.
 Kristen: What do you–
 //RETURN TO GENERTIC BACKGROUND (Or outside elmville bg?)
+<<fade_out_ui>>
 <<wait 2>>
 <<background CityOutdoors>>
 <<fade_in_ui>>
@@ -105,6 +107,8 @@ Fig cackles, the daymare surging forward even faster as the wind howls around yo
 You wouldn’t trade this moment for anything.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background Museum_Fig>>
 <<enable_continue>>
 ===

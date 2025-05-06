@@ -17,11 +17,12 @@ public enum Character
 
 public enum Region
 {
-    School,
-    Elmville,
-    Mordred,
-    Outdoors,
+    
     Away,
+    Outdoors,
+    School,
+    Mordred,
+    Elmville,
 }
 
 public enum liInfo
@@ -54,4 +55,15 @@ public enum EscLock
     Profiles,
     Credits,
     Popup
+}
+
+public enum CrystalUI
+{
+    Crystal,
+    CrystalPing,
+    KristenText,
+    KristenTextOptions,
+    OtherText1,
+    OtherText2,
+    MaxLength
 }

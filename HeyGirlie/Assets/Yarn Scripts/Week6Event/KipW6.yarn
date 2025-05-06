@@ -1,6 +1,6 @@
 ﻿title: Kipperlilly
 ---
-
+<<fade_in_ui>>
 <<kristen Neutral>>
 You wander through the rows of carnival games, each one laden with walls of prizes and workers calling out to convince people that they <i>definitely</i> aren’t rigged. Yeah, right.
 
@@ -9,7 +9,7 @@ You wander through the rows of carnival games, each one laden with walls of priz
 Standing in front of the biggest one, eyeing the toys inside with a thoughtful expression, is your new game buddy.
 
 <<kristen Happy>>
-Kristen: Kip!
+Kristen: Hey Kip!
 
 <<char_right KipperlillySurprised>>
 <<voiceline KipSurprised1>>
@@ -60,12 +60,14 @@ Kipperlilly is silent for your first attempt, but you can feel her staring as yo
 
 You hit the button right before you run out of time, and the claw lowers directly over the cat’s head. It starts to lift…
 
+<<kristen Surprised>>
 Then promptly slips out of the claw’s grip.
 
 You try to get the body on your next attempt, but you mess up your approach, the claw sliding straight past it. 
 
 Third try.
 
+<<kristen Neutral>>
 Kipperlilly goes around to the side of the machine, pressing her face against it with steely focus.
 
 <<char_right KipperlillyAnnoyed>>
@@ -109,11 +111,12 @@ It does. The cat falls, bouncing once…
 <<kristen Happy>>
 And tipping over into the drop chute. 
 
-<<char_right KipperlillyHappy>>
+<<char_right KipperlillyLaugh>>
 Kipperlilly: <i>YES!</i>
 
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background ActivitiesFair_Kipperlilly>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -123,10 +126,9 @@ With far more energy than would be expected from someone who allegedly knows not
 
 Kristen: My work here is done.
 
-<<char_right KipperlillySmug>>
 Kipperlilly: I suppose you do have some talents. 
 
-<<background ActivitiesFair_Kipperlilly>>
+<<fade_out_ui>>
+<<wait 2>>
 <<enable_continue>>
-
 ===

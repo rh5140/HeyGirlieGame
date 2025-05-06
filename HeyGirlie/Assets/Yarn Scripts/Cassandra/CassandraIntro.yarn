@@ -10,28 +10,22 @@ tags:
 
 <<elseif get_week() == 3>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 3 NOW
 
 <<elseif get_week() == 4>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 4 NOW
 
 <<elseif get_week() == 5>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 5 NOW
     <<jump CassandraWeek5>>
 
 <<elseif get_week() == 6>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 6 NOW
 
 <<elseif get_week() == 7>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 7 NOW
 
 <<elseif get_week() == 8>>
     <<voiceline CassGreeting1>>
-    Cassandra: WEEK 8 NOW
 
 <<else>>
     Cassandra: ??? how did u get here
@@ -137,7 +131,7 @@ Cassandra: And that leaves Kipperlilly! She’ll be in the great <b>outdoors</b>
 Kristen: Right. Cause everything about Kipperlilly screams “upstanding citizen.”
 Cassandra: Okay, so maybe the volunteer work is mandatory from the whole “doing a bunch of murderous plots” thing. Either way, that’s where you’ll find her.
 Cassandra: And, that’s everyone! So, what’ll it be, Kristen? Where to first?
-radish: hi kirby we're going to have to incorporate choosing a love interest priority somewhere. dropping it here for now.
+love interest priority selection (narrative framing tbd)
 -> Fig
     <<setLIPriority 2>>
 -> Gertie
@@ -156,8 +150,6 @@ radish: hi kirby we're going to have to incorporate choosing a love interest pri
 
 title: CassandraWeek2
 ---
-Cassandra: WEEK 2 NOW
-
 Cassandra: Where do you want to go this week?
 <<change_scene DateSelection>>
 ===
