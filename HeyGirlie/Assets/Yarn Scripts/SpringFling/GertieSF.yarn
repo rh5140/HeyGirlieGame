@@ -2,7 +2,6 @@
 ---
 <<fade_in_ui>>
 <<kristen Nervous>>
-April 27
 You wait anxiously by the door of Mordred Manor.
 You’d sent Gertie a text thirty minutes ago asking if she could meet you here for a movie night, but there’s no movie.
 You want to ask Gertie to the Spring Fling. 
@@ -122,6 +121,7 @@ Kristen: Gertie, if I could, I’d gift you a whole damn garden.
 
 title: GertieEnding
 ---
+<<background  SpringFling>>
 <<fade_in_ui>>
 <<location "Aguefort">>
 <<kristen Soft_Gertie>>
@@ -175,7 +175,7 @@ Gertie: No, I mean…
 Gertie: You <i>feel</i> quiet.
 Gertie: When I’m with you, I <i>feel</i> as though I am alone.
 <<kristen Surprised_Gertie>>
-<<char_right GertieSurprise1>>
+<<char_right GertieSurprised1>>
 Panic strickens Gertie’s face, as she realizes what she just said.
 Gertie: My apologies, Miss Applebees. That sounded awfully disrespectful. I only mean to say —
 <<char_right GertieNeutral1>>
@@ -201,14 +201,14 @@ Gertie: Your sick moves?
 <<char_left transparent>>
 <<char_right transparent>>
 <<fade_out_ui>>
-<<wait 2>>
 <<background SpringFling_Gertie>> 
+<<wait 2>>
 <<fade_in_ui>>
 Kristen: Of course! I put in a lot of hours to learn that bee choreography to ask you to the Spring Fling.
 Kristen: And it worked, didn’t it?
 <<fade_out_ui>>
 <<wait 2>>
-<<background BloodrushField BG>>
+<<background BloodrushField>>
 <<fade_in_ui>>
 <<kristen Happy_Gertie>>
 <<char_right GertieBlush1>>
