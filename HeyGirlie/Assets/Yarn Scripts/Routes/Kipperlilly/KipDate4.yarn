@@ -19,10 +19,12 @@ At least he’s forgiven you for that.
 <<kristen Neutral>>
 You’re about to give up hope and resign yourself to waiting for a text. Then you remember her mentioning that she was going to the arcade this week. Perfect!
 
-<<background "MALL">>
+<<background "Mall">>
 <<location "Arcade">>
 
-The arcade has been renovated since you helped destroy it in freshman year. Most notably, it’s taken over one of the neighboring storefronts and converted it into a laser tag arena. Teens and tweens are scattered between the rows of games and gachas as you walk through, but not so many that it would be hard to spot Kipperlilly. 
+The arcade has been renovated since you helped destroy it in freshman year. Most notably, it’s taken over one of the neighboring storefronts and converted it into a laser tag arena. 
+
+Teens and tweens are scattered between the rows of games and gachas as you walk through, but not so many that it would be hard to spot Kipperlilly. 
 
 Surely you have more than enough experience rogue-spotting to find her this time, right?
 -> <i>The claw machines?</i>
@@ -41,9 +43,9 @@ There! You finally spot her near the entrance to laser tag, talking animatedly t
 <<voiceline KristenGreeting1>>
 Kristen: Hey, Kipperlilly! 
 
+<<char_right KipperlillySurprised>>
 Kipperlilly glances over her shoulder in confusion, doing a double take and whirling around when she notices you.
 
-<<char_right KipperlillySurprised>>
 <<voiceline KipGreeting2>>
 Kipperlilly: What are you doing here? 
 -> Kristen: “You know, just playing some Lagala.”
@@ -63,8 +65,6 @@ Kipperlilly: What are you doing here?
   <<add_points 0>>
 
 <<kristen Neutral>>
-Kipperlilly looks at you suspiciously, folding her arms and waiting for you to speak.
-
 Kristen: I’m not trying to bother you or anything. I just wanted to tell you my brother really liked the cupcakes. All my brothers did, really.
 
 <<char_right KipperlillySurprised>>
@@ -133,7 +133,6 @@ Kipperlilly: T100. My greatest competition for the laser tag leaderboard.
   Kipperlilly: You know, you can just leave if you don’t have anything else to say to me.
   <<add_points 0>>
 
-<<char_right KipperlillyNeutral>>
 Kipperlilly: The top spot has been bouncing back and forth between us for a couple of years now, but obviously it was a bit difficult to take part while I was in Hell.
 
 <<char_right KipperlillySmug>>
@@ -150,11 +149,11 @@ Kristen: T100 just did!
 
 Kipperlilly: They called me <i>KIPP.</i> Two P’s, all caps.
 
-<<kristen Neutral>>
 Kristen: That’s exactly what I said.
 
 Kipperlilly: No, you didn’t. I could tell. 
 
+<<kristen Neutral>>
 Kipperlilly: Now, I have some serious business to take care of, and I don’t need any distractions.
 
 She waves a hand as if to dismiss you, only to pause and look back thoughtfully.
@@ -192,9 +191,9 @@ Kipperlilly: Would any of your magic be useful?
 <<kristen Neutral>>
 Kristen: You’re allowed to use magic in laser tag? Isn’t that kind of unfair?
 
+<<char_right KipperlillySmug>>
 Kipperlilly: If you’re playing a regular game, perhaps. 
 
-<<char_right KipperlillySmug>>
 Kipperlilly: But this is for the top spot. There is no honor in championship laser tag. The only thing that matters is your final score.
 
 <<char_right KipperlillyNeutral>>
@@ -210,6 +209,7 @@ Kipperlilly: You do?
 <<kristen Grin>>
 Kristen: Goddex of mystery and night? Course I do.
 
+<<char_right KipperlillySmug>>
 <<kristen Neutral>>
 She grabs you by the wrist and starts pulling you towards the laser tag arena.
 
@@ -320,12 +320,13 @@ Shit. Which way do you go?
 <<kristen Neutral>>
 Okay. You haven’t really been taking this seriously, but now you absolutely <i>have</i> to focus. Where are you trying to go?
 -> <i>You need to get to the center!</i>
-  These walls don’t all go to the ceiling, you can sort of tell where the middle is.
+  These walls don’t all go to the ceiling, you can sort of tell where the middle is. You take a few seconds to look around before you start getting disoriented
   <<add_points 2>>
 -> <i>Just keep moving forward! It can’t be worse than the other options.</i>
   Well, at least you’re going <i>somewhere.</i>
   <<add_points 1>>
 -> <i>Just stand right where you are and wait for Kipperlilly to find you.</i>
+  <<sfx pew>>
   Kipperlilly never shows up. T100 hits you like three more times before you realize this is futile.
   <<add_points 0>>
 
@@ -333,31 +334,38 @@ Okay. You haven’t really been taking this seriously, but now you absolutely <i
 You are a hero of Spyre. You have defeated beings capable of destroying your entire reality. You have resurrected gods. Laser tag will not defeat you. 
 
 <<kristen Neutral>>
-Gathering your wits, you press forward to the centre of the arena. Smoke gathers around your feet. 
+Gathering your wits, you press forward to the center of the arena. Smoke gathers around your feet. 
 
 Somewhere in the arena, you hear the sounds of laser guns firing, cursing, and footsteps fleeing the site of battle. Kipperlilly is trying to engage but doesn't seem to be having much luck.
 
 What could you do to help?
 -> <i>Call out as a distraction!</i>
+  <<kristen Awkward>>
   Kristen: Hey, uh, stupid head! I’m over here, come and get me.
   <<add_points 1>>
+  Your voice echoes through the arena.
 -> <i>Knock a wall over!</i>
   You push over the closest barrier. No one ever said you couldn’t.
   <<add_points 1>>
 -> <i>FIRE AT WILL!</i>
+  <<kristen Grin>>
+  <<sfx pew>>
   You have no idea if any of your shots hit, but the “pew pew!” is very satisfying.
   <<add_points 1>>
 
+<<kristen Neutral>>
 You spot the flash of T100’s vest running between the walls. You aim and fire. You’re rewarded with a victorious ding before they vanish behind cover.
 
-<<char_right KipperlillySurprised>>
-You try to spot where T100 went, but your squinting eyes land on another figure, climbing on top of some of the shorter walls to skip over corridors. Kipperlilly! You open your mouth to call out to her before seeing her make a weird gesture with her hand, pointing frantically in the direction T100 disappeared to.
+You try to spot where T100 went, but your squinting eyes land on another figure, climbing on top of some of the shorter walls to skip over corridors. Kipperlilly! 
+
+<<char_right KipperlillyNeutral>>
+You open your mouth to call out to her before seeing her make a weird gesture with her hand, pointing frantically in the direction T100 disappeared to.
 
 <<kristen Surprised>>
 Oh shit, the signal! 
 
 <<kristen Neutral>>
-You fumble with your gun for a second before sending a quick prayer to Cass. You point in the direction Kipperlilly gestured, summoning magical darkness and chasing away what little visibility there had been in that portion of the arena.
+You fumble with your gun for a second before sending a quick prayer to Cassandra. You point in the direction Kipperlilly gestured, summoning magical darkness and chasing away what little visibility there had been in that portion of the arena.
 
 T100: Hah! The Darkness strategy! You really are afraid of losing this match, aren’t you, KIPP? 
 
@@ -377,13 +385,18 @@ A gleeful Kipperlilly suddenly appears from the shadows next to you.
 Kipperlilly: Just stay right here and keep an eye out. I’m going in.
 
 <<kristen Surprised>>
-She sprints directly into the Darkness, and within seconds there’s a small cacophony of laser shots. Dings and buzzes of hits and misses, thumps of shoulders clipping walls and feet tripping around corners. 
+<<sfx pew>>
+She sprints directly into the Darkness, and within seconds there’s a small cacophony of laser shots. Dings and buzzes of hits and misses, thumps of shoulders clipping walls and feet tripping around corners.
+<<sfx pew>> 
 
 <<voiceline KipBespoke1>>
 You can hear Kipperlilly and T100 taunting each other, and soon realize that T100’s voice is getting closer. Kipperlilly is slowly leading them towards you.
 
 <<kristen Neutral>>
-You wait for T100 to stumble out of the darkness, obviously expecting further attack but not knowing where it might come from or even where they’ve ended up. You shoot immediately, nailing them in the chest while another laser shot appears from within the spell to simultaneously hit the back. 
+You wait for T100 to stumble out of the darkness, obviously expecting further attack but not knowing where it might come from or even where they’ve ended up. 
+
+<<sfx pew>>
+You shoot immediately, nailing them in the chest while another laser shot appears from within the spell to simultaneously hit the back. 
 
 <<kristen Happy>>
 <<voiceline KristenHappy1>>
@@ -413,9 +426,9 @@ Kipperlilly: I’m counting on it, kid.
 <<background_filter_off>>
 T100 pulls down their bandana to scratch their chin as they head out, revealing a face that’s… far younger than you expected.
 
+<<kristen Surprised>>
 When the person you assumed was a halfling is gone, you look back at Kipperlilly, who looks pleased with herself. 
 
-<<kristen Surprised>>
 Kristen: Wait, is that an actual child?
 
 <<char_right KipperlillyNeutral>>

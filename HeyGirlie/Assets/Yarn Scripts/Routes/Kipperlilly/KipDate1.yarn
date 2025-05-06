@@ -2,11 +2,12 @@
 // max 7 points
 ---
 
+// scene 0- kristen finding out she needs the key
+
 <<background "???">>
 <<location "PLACEHOLDER">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 7>>
-
 <<kristen Happy>>
 Welcome to senior year! Now that you’re officially the senior class president, you’re excited to hit the ground running with all of your responsibilities!
 
@@ -45,6 +46,7 @@ You find Kipperlilly in a high-vis vest chasing an empty chip bag with a trash g
 Finally, she manages to snag it and stuff it triumphantly in a trash bag before she turns and notices you.
 
 <<kristen Grin>>
+<<voiceline KipGreeting1>>
 She freezes for a brief moment before she straightens up, flicking her hair behind her shoulder and turning her nose up at you. It’s kind of impressive, since she’s at least a full foot shorter than you.
 
 Kipperlilly: Oh, laugh it up, Applebees.
@@ -89,7 +91,7 @@ Kipperlilly: Wait. Wait. Are you telling me Aguefort got you to track me down be
 
 Kipperlilly: Aren’t you Bad Kids, like, his favorites? Hasn’t he bent reality multiple times just to save your asses from being perma-dead? Isn’t his daughter one of your honorary party members when she’s not at her job? 
 
-He’s not going to help <i>you</i>, of all people, get into a room that’s barely more than a glorified supply closet right down the hall from his office?
+Kipperlilly: He’s not going to help <i>you</i>, of all people, get into a room that’s barely more than a glorified supply closet right down the hall from his office?
 
 <<kristen Neutral>>
 <<voiceline KristenNeutral2>>
@@ -129,7 +131,9 @@ Kristen: Uh, I’d totally beat you in a fight, first of all. But what’s the n
 Kipperlilly: I’ve found plenty of use for it, for your information.
 
 <<kristen Surprised>>
-Oh right, the traps. You imagine what Kipperlilly could do with free access to the office. Maybe she set up a series of new, increasingly more elaborate and deadly traps waiting for you to trigger the instant you step inside. You already trip over the ugly carpet Jawbone insists on keeping in the living room basically every morning.
+Oh right, the traps. You imagine what Kipperlilly could do with free access to the office. 
+
+Maybe she set up a series of new, increasingly more elaborate and deadly traps waiting for you to trigger the instant you step inside. You already trip over the ugly carpet Jawbone insists on keeping in the living room basically every morning.
 
 <<kristen Neutral>>
 On the other hand, Kipperlilly did initially seem confused that you’d asked her about it at all, so it’s more likely she forgot she had the key in the first place and is just making stuff up now. That sounds like something she’d do.
@@ -152,7 +156,9 @@ There has to be a way to convince her.
   <<add_points 0>>
 
 <<char_right KipperlillyNeutral>>
-She keeps walking around to grab different bits of litter, forcing you to follow if you want to keep talking to her. It’s a petty power move, though somewhat undercut by the fact that you’re both just picking up trash on the side of the road, and her vest is obviously a size too big for her.
+She keeps walking around to grab different bits of litter, forcing you to follow if you want to keep talking to her. 
+
+It’s a petty power move, though somewhat undercut by the fact that you’re both just picking up trash on the side of the road, and her vest is obviously a size too big for her.
 
 Kristen: What are you even doing with it?
 
@@ -170,7 +176,9 @@ Kipperlilly: Ooh, or maybe I could convince Eugenia to hold onto it so that the 
 <<kristen Angry>>
 Great. You kind of forgot how annoying Kipperlilly can be sometimes. Obviously she just wants to be stubborn until you give up and go home. 
 
-But you’re Kristen Applebees. You’ve punched at least one god in the face. You force yourself into your shitty parents’ lives every few weeks just to talk to your little brothers. Kipperlilly may be stubborn, but she’s dealing with the president of stubborn. 
+But you’re Kristen Applebees. You’ve punched at least one god in the face. You force yourself into your shitty parents’ lives every few weeks just to talk to your little brothers. 
+
+Kipperlilly may be stubborn, but she’s dealing with the president of stubborn. 
 
 <<kristen Neutral>> 
 Kristen: Alright, I get it. I can read between the lines.
@@ -178,7 +186,7 @@ Kristen: Alright, I get it. I can read between the lines.
 <<char_right KipperlillyNeutral>>
 Kristen: But come on! We’re seniors now, surely this kind of pettiness is beneath you.
 
-<<voiceline KipHappy1>>
+<<voiceline KipHappy2>>
 <<char_right KipperlillyHappy>>
 Kipperlilly: <i>Au contraire</i>. Watching you squirm is incredibly entertaining.
 -> Kristen: “Okay, okay, laugh it up. I can take it. Can I just get the key once you’re done?”
@@ -193,7 +201,7 @@ Kipperlilly: <i>Au contraire</i>. Watching you squirm is incredibly entertaining
   <<add_points 1>>
 -> Kristen: “Come on, aren’t you supposed to be turning over a new leaf or whatever?”
   <<voiceline KipAnnoyed2>>
-  <<char_right KipperlillyFrown>>
+  <<char_right KipperlillyNeutral>>
   Kipperlilly: Don’t be ridiculous. Since when was doing favors for you part of the deal?
   <<add_points 0>>
 
@@ -252,6 +260,7 @@ Kipperlilly: Huh. Alright then.
 Kipperlilly: We’re playing this game now? Fine. Let’s play.
 
 <<voiceline KristenNeutral3>>
+<<kristen Surprised>>
 Kristen: Game? What game?
 
 Instead of actually answering your question, Kipperlilly takes a step back and chuckles to herself.
@@ -266,7 +275,10 @@ Kristen: Hey, I work plenty hard! Whatever you’re thinking, I’m totally up f
 <<char_right KipperlillyNeutral>>
 Kipperlilly: I don’t have the key on me right now. Obviously. I don’t just carry it with me everywhere I go like some freak NPC in one of Mary Ann’s RPGs.
 
-Kipperlilly: If you can prove to me that you deserve this key, then I’ll retrieve it from its hiding place and give it to you. No one but me knows where it is, so don’t bother trying to sneak the answer out of my party. Actually, leave them out of this completely. They aren’t going to help your ass.
+Kipperlilly: If you can prove to me that you deserve this key, then I’ll retrieve it from its hiding place and give it to you. No one but me knows where it is, so don’t bother trying to sneak the answer out of my party. 
+
+<<char_right KipperlillyAnnoyed>>
+Kipperlilly: Actually, leave them out of this completely. They aren’t going to help your ass.
 
 <<char_right KipperlillySmug>>
 Kipperlilly: You better be ready to fucking jump when I tell you to, ‘cause otherwise there’s no way you’re getting that key from me.
@@ -295,13 +307,9 @@ Kipperlilly: It’s agreed, then.
 <<kristen Neutral>>
 Kipperlilly: Wait, I’m going to need to track you down after this, aren’t I? Here, give me your phone.
 
-She takes your crystal, types something into it, and hands it back. It’s a new contact. The name is just the letter K. It looks like she’s already texted herself.
+She takes your crystal, types something into it, and hands it back. 
 
-<<jump Date1Hint>>
-===
-
-title: Date1Hint
----
+It’s a new contact. The name is just the letter K. It looks like she’s already texted herself.
 
 Kristen: What, I’m just supposed to sit around at school waiting for your text?
 
@@ -309,7 +317,7 @@ Kipperlilly: How you choose to spend your time is not my prerogative, Applebees.
 
 Kipperlilly picks up a crumpled half-empty water bottle, dumps out the rest of the water on a patch of grass, and throws it in her bag.
 
-Kristen: Exactly what sort of stuff will prove I “deserve” the key?
+Kristen: Exactly what sort of stuff proves I “deserve” the key?
 
 <<char_right KipperlillySmug>>
 Kipperlilly: That’s for me to know, and you to find out.
@@ -321,11 +329,12 @@ Surely this won’t result in anything too embarrassing, right? Right?
 <<char_right KipperlillyNeutral>>
 Kipperlilly: ...did you need anything else from me?
 
+<<kristen Surprised>>
 Kristen: Uh, nope, I think that’s it.
 <<voiceline KristenFarewellKip1>>
 
 <<voiceline KipFarewell1>>
-Kipperlilly: Okay, then. Stop stealing my trash. Go pick some up somewhere else. I need to research something for my capstone project next week, and I have to make up for the litter I can’t pick up then.
+Kipperlilly: Okay, then. Stop stealing my trash. Go pick some up somewhere else. I need to research something for my capstone project next week at the school library, and I have to make up for the litter I can’t pick up then.
 
 <<jump Cassandra1>>
 ===

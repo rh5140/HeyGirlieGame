@@ -136,6 +136,7 @@ Kipperlilly: If it helps, I can’t actually beat you in only one move, so you c
 
 Kristen: Alright then. Take <i>that!</i>
 
+<<sfx chess>>
 <<kristen Neutral>>
 You hop a knight over your line of pawns. It’s perfect. It’s unexpected. It’s genius!
 
@@ -168,6 +169,7 @@ Kipperlilly: What do you mean?
   Kipperlilly: Keep telling yourself that.
   <<add_points 0>>
 
+<<sfx chess>>
 She makes a move. You’re not sure what. You aren’t really paying attention. You idly pick up one of your pieces (a bishop, you think), tilting your head to the side.
 
 Kristen: I thought you were having fun too. With, you know, everything.
@@ -206,6 +208,7 @@ Kipperlilly: This is your problem, you know, you’re so blasé. Unfocused.
   <<add_points 0>>
 
 <<char_right KipperlillyAnnoyed>>
+<<sfx chess>>
 She makes her next moves so quickly you wonder if she even has a strategy at all. Maybe she’s so confident in how bad you are at chess that she’s not trying too hard to outmaneuver you. 
 
 If she was that confident, though, you’re pretty sure she’d be gloating more. She’s not silent, but it’s far from the enthusiastic competitiveness you’ve begun to find incredibly endearing.
@@ -229,6 +232,7 @@ Kristen: Good thing I count it, then.
 
 Guess you’d better keep doing more of that. If you’re not consistent enough to allow Kipperlilly to launch a coherent counterstrategy, maybe the game will never end!
 
+<<sfx chess>>
 <<kristen Neutral>>
 You focus on just moving the pieces correctly to avoid pissing Kipperlilly off needlessly, but you just barely get away with taking a little too long to decide on your next move each turn. You fill the dead space with chatter.
 
@@ -243,11 +247,13 @@ Kipperlilly shrugs, resting her head in her hand for a moment and fiddling with 
 
 Kipperlilly: Sure. My teacher said I’d probably be good at it, and I was, so. 
 
+<<kristen Happy>>
 Kristen: Cool. It would’ve been fun to be in one, but I always had church stuff after school.
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly looks up and makes actual eye contact with you for the first time in a while.
 
+<<kristen Neutral>>
 Kipperlilly: What sort of club would you have joined?
 -> Kristen: “Chess club, I guess, since you were there.”
   <<kristen Grin>>
@@ -258,13 +264,15 @@ Kipperlilly: What sort of club would you have joined?
   <<add_points 2>>
 -> Kristen: “A sport would’ve been cool. I would’ve been terrible at it, but it would’ve been cool.”
   <<char_right KipperlillyLaugh>>
-  Kipperlilly snorts while moving the pawn, perhaps imagining the utter carnage resulting from preteen Kristen Applebees seriously attempting any kind of team sport. You wince at the mental image yourself.
+  Kipperlilly snorts while moving the pawn, perhaps imagining the utter carnage resulting from preteen Kristen Applebees seriously attempting any kind of team sport. 
+  <<kristen Nervous>>
+  You wince at the mental image yourself.
   <<add_points 1>>
 -> Kristen: “Maybe a non-church choir. I’m a pretty good singer, you know.”
   <<char_right KipperlillyNeutral>>
   Kipperlilly raises an eyebrow while making her next move.
   <<voiceline KipSurprised3>>
-  Kipperlilly: Huh. I suppose I could see it.
+  Kipperlilly: I suppose that tracks.
   <<add_points 1>>
 
 <<kristen Neutral>>
@@ -292,7 +300,7 @@ She snaps her mouth shut.
 
 Kipperlilly: Just take your turn, Krist— Applebees.
 
-<<kristen Neutral>>
+<<kristen Surprised>>
 You blink. Kipperlilly leans back in her chair, folding her arms and staring at the wall. 
 
 It’s been a while since she called you by your last name without you having put your foot in your mouth immediately beforehand. She does it to other people constantly, but for some reason it bothers you this time.
@@ -301,6 +309,7 @@ Kristen: Kip, I…
 
 Her eyes flicker towards you for a second before darting away. Her tail wraps tightly around her arm, squeezing harder with each second of silence.
 
+<<kristen Neutral>>
 Kristen: Does that hurt? 
 
 <<char_right KipperlillyNeutral>>
@@ -336,6 +345,7 @@ Kipperlilly: What are you getting at?
 <<char_right KipperlillyNeutral>>
 Kipperlilly: Just play the stupid game so we can be done with this.
 
+<<kristen Surprised>>
 <<voiceline KristenDateSuccessKip1>>
 Kristen: Why do you want to be done? I thought we were having a good time. Why rush to have it over?
 
@@ -351,10 +361,10 @@ Kipperlilly: Because it has to be!
   She keeps glaring at you, but you can see her swallow heavily.
   <<add_points 1>>
 
-<<char_right KipperlillySad>>
 <<voiceline KipSad2>>
 Kipperlilly: If you’re not going to make a move, you might as well quit. Knock your king over.
 
+<<kristen Neutral>>
 You slowly breathe out before deliberately moving a rook over by a single square. The last thing you want is to give Kipperlilly an excuse to end the match early.
 
 Kristen: Do you even care about the key anymore?
@@ -427,6 +437,7 @@ Kristen: If I only cared about the key, would I have…
 
 Kipperlilly looks at you for a long moment, before jerking her head down to focus on the board instead. You’re both slowly running out of pieces to choose from. 
 
+<<sfx chess>>
 <<char_right KipperlillyNeutral>>
 With an almost reluctant move, Kipperlilly captures another one of yours and adds it to her growing pile. You can’t stall for much longer. 
 
@@ -452,14 +463,16 @@ Kristen: I know that if <i>you</i> only cared about the key you wouldn’t have�
   Kipperlilly: It was for my own amusement. That’s all.
   <<add_points 0>>
 
-<<char_right KipperlillySad>>
 She falls quiet again. You already know how much she deflects and obfuscates. It took weeks just for her to admit she had fun in your presence.
 
 It <i>has</i> been fun, seeing the times where she let her snide mask slip and openly enjoyed herself, only to catch herself and haughtily act like nothing had happened. 
 
 <<kristen Neutral>>
-But it was only fun because the more time that passed, the easier it became. The more time you spent with each other, the more Kipperlilly loosened up and gave herself permission to enjoy hanging out with you. Now it feels like you’ve both gone backwards. 
+But it was only fun because the more time that passed, the easier it became. The more time you spent with each other, the more Kipperlilly loosened up and gave herself permission to enjoy hanging out with you. 
 
+Now it feels like you’ve both gone backwards. 
+
+<<char_right KipperlillySad>>
 You don’t think she believes it was all just for the key, but maybe she doesn’t want to accept the alternative, whatever that is for her. You know what it is for you.
 
 You look back at the chessboard. Partly because it’s your turn again, partly to give yourself a chance to think. 
@@ -481,6 +494,7 @@ Kipperlilly: Check.
 
 She looks disappointed. 
 
+<<sfx chess>>
 Nah. Not on your watch. After a moment of deliberation, you move your last knight in the way of the bishop.
 
 <<char_right KipperlillyNeutral>>
@@ -500,11 +514,12 @@ For the briefest of moments, you think you see the corner of Kipperlilly’s mou
 <<voiceline KipFarewell2>>
 Kipperlilly: Blocking a check is hardly a trick, it’s common sense.
 
+<<sfx chess>>
 She moves a different piece, but now the wheels in your brain begin to turn. Making Kipperlilly outright admit the truth is like pulling teeth, but getting under her skin? Pushing the buttons that you’d figured out made her come alive?
 
+<<kristen Grin>>
 That’s way too easy. Once you manage that, it’s just a hop, skip, and jump to the truth. You just have to keep your king safe for long enough to do it. 
 
-<<kristen Grin>>
 Kristen: Well, Kip? Your move.
 
 She scoffs, looking between her pieces and you warily, obviously suspicious of your sudden shift in attitude.
@@ -514,6 +529,7 @@ Kristen: Ohoho, stunned into silence by my strategic brilliance? I get it.
 <<char_right KipperlillyAnnoyed>>
 Kipperlilly: Oh, please.
 
+<<sfx chess>>
 Now she just looks unimpressed, but you just grin wider as you move another piece.
 
 Kristen: If not strategic brilliance, it must be my beautiful face.
@@ -567,14 +583,16 @@ Kristen: Too bad. It made me really happy when I realized you’d started doing 
 Kipperlilly stares for a moment, lips pressed together tightly before she looks back down, retreating to the safety of the game between you.
 
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly. Shut up. It’s my turn.
+Kipperlilly: Shut up. It’s my turn.
 
+<<sfx chess>>
 <<kristen Neutral>>
 It takes her far longer to decide on a move this time. For some reason, she avoids going after your king or the knight defending it at the moment, moving her own king towards a corner of the board instead. 
 
 <<char_right KipperlillyNeutral>>
 When she does, Kipperlilly leans back again. She folds her arms, fingers tapping restlessly. Her eyes flicker away, trying to avoid eye contact again. She’s much worse at it this time.
 
+<<kristen Grin>>
 No point making it any easier for her!
 -> Kristen: “Is your king running away?”
   She rolls her eyes.
@@ -588,9 +606,9 @@ No point making it any easier for her!
   She glares, in an incredibly silent and broody way. Fair enough.
   <<add_points 0>>
 
-<<kristen Neutral>>
 Kristen: Alright, alright. I see how it is. Let’s try something else. 
 
+<<kristen Neutral>>
 Kristen: What are we going to do after all of this?
 
 <<char_right KipperlillyNeutral>>
@@ -615,6 +633,7 @@ Kipperlilly doesn’t answer, which you’re pretty sure means you are one hundr
 <<kristen Soft>>
 Kristen: You don’t want this to end either, do you?
 
+<<sfx chess>>
 <<char_right KipperlillyNeutral>>
 Kipperlilly moves her king once more, finally making it to the corner. She just keeps staring at it, occasionally glancing at the other pieces. 
 
@@ -632,6 +651,7 @@ Kristen: Exactly.
 
 Kipperlilly: It’s your turn.
 
+<<sfx chess>>
 <<kristen Neutral>>
 You inwardly sigh at the continued avoidance but make your move anyway, shuffling a piece closer to Kipperlilly’s king to see if that jumpstarts her competitiveness again. 
 
@@ -641,22 +661,23 @@ Kipperlilly: You’re not being aggressive enough.
 
 Kristen: I don’t think I’m a particularly aggressive person in general.
 
+<<char_right KipperlillyAnnoyed>>
 She gives you a flat look.
 
-<<char_right KipperlillyAnnoyed>>
 <<voiceline KipAnnoyed1>>
 Kipperlilly: Of course. Just when you want something from me.
 
 <<kristen Grin>>
 Kristen: I mean, when you know what you want, then…
 
+<<sfx chess>>
 You trail off, inviting her to fill in the blank with a particularly suggestive eyebrow waggle. Kipperlilly huffs and rolls her eyes back at you, idly moving her queen out of harm’s way and grimacing as you take her bishop in response.
 
-<<char_right KipperlillyNeutral>>
 Kipperlilly: I don’t get how you’re so carefree. You’re losing and you’re still able to crack jokes so easily.
 
 Kristen: Who said I was joking?
 
+<<char_right KipperlillyNeutral>>
 She gives you an unimpressed look.
 
 <<kristen Neutral>>
@@ -694,6 +715,7 @@ Kipperlilly: Aren’t you tired of putting in so much effort? Just to not even w
 
 Kristen: Like I said, winning isn't everything. Besides, I haven’t lost yet. No wasted effort here.
 
+<<sfx chess>>
 Kipperlilly frowns, moving one of her other pawns. Idly, you block it with one of your own pieces.
 
 Kristen: Kip, here’s the thing—
@@ -757,7 +779,9 @@ Kipperlilly: The rule was, “If <i>I</i> win, I keep the key.”
 Kipperlilly: I didn’t win.
 
 <<char_right KipperlillySurprised>>
-She goes to stand up but jolts back a little at the same moment that you feel one of your legs being tugged from under the table. You slip down in your chair, flailing until you manage to grab a table leg for support. You glance under the table to see Kipperlilly’s tail hastily unwinding from where it had wrapped itself around your ankle.
+She goes to stand up but jolts back a little at the same moment that you feel one of your legs being tugged from under the table. You slip down in your chair, flailing until you manage to grab a table leg for support. 
+
+You glance under the table to see Kipperlilly’s tail hastily unwinding from where it had wrapped itself around your ankle.
 
 <<char_right KipperlillyBlush>>
 <<kristen Nervous>>

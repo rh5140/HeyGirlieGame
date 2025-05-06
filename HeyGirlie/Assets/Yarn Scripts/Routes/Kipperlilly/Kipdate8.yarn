@@ -1,11 +1,10 @@
-﻿title: Date8
+﻿//we did it joe. we are in the president’s office.
 
+title: Date8
 ---
-<<location "Aguefort, President’s Office">>
+<<location "Aguefort, President's Office">>
 <<set $date_points = 0>>
 <<set $date_points_total = 0>>
-
-<<char_right transparent>>
 <<kristen Neutral>>
 You lean back and look at the fruits of your last two hours of labor. Sure, it felt like everything that could go wrong did — Gorgug forgot to get you the charging cable for the speaker he’s loaning you and it’s almost dead, and you didn’t have time to make sure everything looks as perfect as you’d like. 
 
@@ -22,6 +21,7 @@ Kipperlilly: Really? A single placement shifted Caesar cipher? We cover this in�
 <<voiceline KipRomantic3>>
 Her words trail off as her eyes widen, taking in the scene in front of her. You wonder if it’s good enough. 
 
+<<kristen Nervous>>
 You’d caved and let Jawbone take over baking the cookies after you’d managed to burn three batches. 
 
 You hadn’t quite been able to fit Kipperlilly’s full name on the sign haphazardly taped to the front of the office desk so it’s awkwardly trailing off to the side. 
@@ -39,6 +39,8 @@ Kipperlilly stares at you. Or maybe she’s staring at the bouquet in your hands
 Kristen: From the first moment I met you, I knew you were… you…
 
 <<kristen Awkward>>
+…
+
 <<voiceline KristenAwkward2>>
 Shit.
 
@@ -79,7 +81,9 @@ Kristen: I think the way your nose scrunches when you’re really focused on som
 Kristen: And I think you have a hard time letting yourself be happy, which really sucks because I also think you, more than a lot of people I’ve met, deserve to be happy. 
 
 <<kristen Neutral>>
-Kristen: I don’t know what I can do about any of those things. I don’t know if you count me as a loved one, or a legit good rival, or if you think I’m cute or whatever. But I’d like for you to be happy, and I’d like if you let me stick around so I can see you be happy. I think it’d be an incredible privilege if you did.
+Kristen: I don’t know what I can do about any of those things. I don’t know if you count me as a loved one, or a legit good rival, or if you think I’m cute or whatever. 
+
+Kristen: But I’d like for you to be happy, and I’d like if you let me stick around so I can see you be happy. I think it’d be an incredible privilege if you did.
 
 <<char_right KipperlillySurprised>>
 Kristen: Last week, I asked you to give me a try. You said maybe. I’m not asking for a yes or no, but I am asking if “maybe” can maybe include this. So: Kipperlilly Copperkettle, will you go on a date with me?
@@ -87,11 +91,11 @@ Kristen: Last week, I asked you to give me a try. You said maybe. I’m not aski
 <<kristen Soft>>
 You finally look up from your note cards. You have no idea how red you’ve turned, but you hope you’re not blushing too hard because you know it clashes with your hair and you want this to be picture perfect.
 
+<<char_right KipperlillyBlush>>
 <<voiceline KipSurprised4>>
 Kipperlilly: You wrote me a speech?
 
 <<voiceline KristenRomantic2>>
-<<char_right KipperlillyBlush>>
 Kristen: Sandra Lynn — Fig’s mom — read it over and gave me some tips, but yeah, it was mostly me.
 
 <<kristen Neutral>>
@@ -106,15 +110,20 @@ She delicately steps around the blue and burgundy rose petals you sprinkled on t
 Kipperlilly: Did you arrange these like a heart on purpose?
 
 <<kristen Neutral>>
-Kristen: Well, yeah. Wait, is there a better shape? Are hearts tacky? Are circles more romantic?
+Kristen: Well, yeah. 
+
+<<kristen Awkward>>
+Kristen: Wait, is there a better shape? Are hearts tacky? Are circles more romantic?
 
 Kipperlilly: It’s fine, Kristen. I was just curious.
 
+<<kristen Happy>>
 <<char_right KipperlillyNeutral>>
 It looks like she’s going to examine everything on the desk one at a time. Maybe you should nudge her towards something…
 -> The cookies.
   Kipperlilly takes a cookie out of the bowl to nibble on as she takes everything in. 
   Kipperlilly: You put Ks on the cookies?
+  <<kristen Neutral>>
   Kristen: Yeah. For Kipperlilly.
   <<char_right KipperlillySmug>>
   Kipperlilly: Not for Kristen?
@@ -124,11 +133,11 @@ It looks like she’s going to examine everything on the desk one at a time. May
   <<kristen Nervous>>
   Kristen: Is that the vibe I give off? Clueless and unobservant?
 -> The sign.
+  <<kristen Neutral>>
   Kipperlilly: Is that a quote from somewhere? I think I recognize it.
   Kristen: It’s from one of the movies Fabian showed me for the speech. Apparently it’s based on some old Elvish play his mom really likes?
   <<kristen Nervous>>
   Kristen: The first draft just had the word “please” ten times, but Adaine said it sounded desperate and not funny.
-  Kipperlilly: … it’s a little funny.
 -> The music.
   Kipperlilly: I don’t think I’ve listened to Lady Gaghost in years.
   <<kristen Nervous>>
@@ -140,6 +149,7 @@ It looks like she’s going to examine everything on the desk one at a time. May
 
 Kipperlilly: It’s cute.
 
+<<kristen Soft>>
 <<char_right KipperlillySurprised>>
 Kipperlilly freezes. 
 
@@ -147,7 +157,6 @@ Kipperlilly: Sorry, that was—
 
 You reach out and take her hand before she can fully withdraw again.
 
-<<kristen Soft>>
 <<char_right KipperlillyBlush>>
 Kristen: Kip, I turned this place into, like, a lesbian shrine to the last couple months we spent hanging out with each other. I feel like anything you do is so normal compared to that.
 
@@ -161,9 +170,13 @@ Kipperlilly: I don’t…
 
 She trails off, but you have a notion of what she means. You don’t really know what to do either. 
 
-But Cassandra is a goddex of mystery and uncertainty, and not knowing something isn’t as unmooring for you as it is for someone as obsessed with order and rules as Kipperlilly. That’s how you know better than her that from uncertainty comes compulsion.
+But Cassandra is a goddex of mystery and uncertainty, and not knowing something isn’t as unmooring for you as it is for someone as obsessed with order and rules as Kipperlilly. 
 
-You sit on the desk, nudging the plate of cookies over with your leg. It’s a little short, but that just means you’re practically eye-level with Kipperlilly now. She doesn’t seem to notice how close she’s drifted to you until your foreheads almost knock together. 
+That’s how you know better than her that from uncertainty comes compulsion.
+
+You sit on the desk, nudging the plate of cookies over with your leg. It’s a little short, but that just means you’re practically eye-level with Kipperlilly now. 
+
+She doesn’t seem to notice how close she’s drifted to you until your foreheads almost knock together. 
 
 Kipperlilly gives you a startled, wide-eyed look that reminds you of a rabbit caught in the middle of an open field. 
 
@@ -173,7 +186,9 @@ Kipperlilly blushes.
 
 Kipperlilly: I — d-don’t…
 
-Her eyes dart up and down all over your face, as if trying to memorize it. You watch her document each freckle on your face, the baby fat still stubbornly clinging to your jawline, and the curve of your cheek. She looks into your eyes, then back down your face. 
+Her eyes dart up and down all over your face, as if trying to memorize it. You watch her document each freckle on your face, the baby fat still stubbornly clinging to your jawline, and the curve of your cheek. 
+
+She looks into your eyes, then back down your face. 
 
 You can tell she’s not going to ask for the invitation.
 -> Kristen: “Can I…?”
@@ -200,6 +215,7 @@ You match her grin, let go of her hand to hold the other side of her face, and d
 
 You scramble to keep from sliding off of the desk without breaking away from her, the sign crumpling under your thighs. Your teeth click as you fumble backwards to support yourself before finally just putting your hands under Kipperlilly’s arms and pulling her close. 
 
+<<sfx clatter>>
 She catches on in the next second, clambering onto the desk with you. Somewhere vaguely beside you, the bowl of cookies clatters to the floor, but you can pick them up later. Eventually.
 
 Kipperlilly pulls back just long enough to give both of you a moment to catch your breath before she twists around, pins you down with a deceptively strong grip, and kisses you again.
@@ -210,7 +226,9 @@ You try your best to give her room to pull back whenever she wants to, but at so
 
 She responds by circling her arms around your neck and pulling herself closer once more, meeting whatever energy you’re giving her.
 
-Eventually, you break apart and don’t immediately dive back in. Your noses brush against each other as both of you breathe heavily. The dizzy romantic that lives in the back of your head sighs pretty poetry about how you’re sharing each other’s breaths. Maybe you’ve seen one too many rom-coms in the past twenty-four hours.
+Eventually, you break apart and don’t immediately dive back in. Your noses brush against each other as both of you breathe heavily. 
+
+The dizzy romantic that lives in the back of your head sighs pretty poetry about how you’re sharing each other’s breaths. Maybe you’ve seen one too many rom-coms in the past twenty-four hours.
 
 Lightheaded, you brush hair out of your face while Kipperlilly shuffles over and settles on the desk properly, brushing down her clothes. She’s avoiding your gaze, endearingly embarrassed, but she’s still smiling.
 
@@ -293,6 +311,7 @@ Kristen: I really think you should have this, by the way.
 
 Kipperlilly blinks at the key in your hand.
 
+<<char_right KipperlillySurprised>>
 Kipperlilly: What? No, that’s yours. You earned it.
 
 Kristen: I didn’t exactly earn it fair and square, though.
@@ -306,8 +325,10 @@ Kristen: I think “fair” matters a lot to you, so I want to do it fairly. Bes
 
 Kipperlilly: That sounds like a horrible idea.
 
+<<kristen Grin>>
 Kristen: What if I want my constituents to feel like they have access to me? I can leave a little suggestion box for everyone on the desk.
 
+<<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
 Kristen: If it really bothers you, you can always make me a copy at Drowe’s for like ten copper. I’d like you to keep the original, though. 
 
@@ -321,6 +342,8 @@ Kipperlilly opens her mouth as if to summon another argument, but this time she 
 Kipperlilly: You better be ready to jump when I tell you to.
 
 Kristen: Happily.
+
+
 
 <<jump Cassandra8>>
 ===
