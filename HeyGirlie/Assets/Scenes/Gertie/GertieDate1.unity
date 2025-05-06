@@ -465,11 +465,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7946954004576759860, guid: 7134edc92ba93b1469e17fd40c018205, type: 3}
   m_PrefabInstance: {fileID: 460568315}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &565462329 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 5054096798041104203, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
-  m_PrefabInstance: {fileID: 1888651453317235519}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &633397870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1256,7 +1251,7 @@ PrefabInstance:
     - target: {fileID: 6816584826739837480, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: crystalView
       value: 
-      objectReference: {fileID: 565462329}
+      objectReference: {fileID: 0}
     - target: {fileID: 6816584826739837480, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: _multiSprite
       value: 
@@ -1305,6 +1300,10 @@ PrefabInstance:
       propertyPath: voicelineArray.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[0].voiceline
+      value: 
+      objectReference: {fileID: 8300000, guid: 2180aba0ef47af749a4e07dcd6fa7713, type: 3}
     - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: voicelineArray.Array.data[1].voiceline
       value: 
