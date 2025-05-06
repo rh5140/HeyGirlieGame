@@ -6,13 +6,13 @@
 <<set $date_points_total = 5>>
 
 <<Kristen Neutral>>
-You nearly get lost three times on your way to the pottery studio, but you make it over with a couple minutes to spare.
+You nearly get lost three times on your way to the pottery studio, but you make it there with a couple minutes to spare.
 
 <<voiceline LucyGreeting1>>
 Lucy: Oh, Kristen!
 
 <<char_right KipperlillyNeutral>>
-<<char_left LucyNeutral1>>
+<<char_left LucyNeutral3>>
 As expected, Lucy and Kipperlilly are already here. As you hurry over to join them, you wonder if Lucy’s punctuality is her own or comes from having been friends with Kipperlilly for so long.
 
 <<voiceline KipGreeting1>>
@@ -38,9 +38,11 @@ Kipperlilly gives you a glare, but she doesn’t seem to have an answer for you.
 
 Lucy: Let’s go see if any of the wheels are open.
 
-Kipperlilly and you trail after Lucy like a pair of ducklings as she goes up to the earth genasi standing attentively at a giant kiln. She procures three day-passes for the studio’s open work space. A row of tables set in shallow basins with foot pedals line one of the walls, and there’s a long table with matching benches on the opposite side of the room. At the very back of the room is a set of shelves half-full of projects that have yet to be fired.
+Kipperlilly and you trail after Lucy like a pair of ducklings as she goes up to the earth genasi standing attentively at a giant kiln. 
 
-Lucy marches the three of you over to a box of terracotta clay and gestures to it.
+A row of tables set in shallow basins with foot pedals line one of the walls, and there’s a long table with matching benches on the opposite side of the room. At the very back of the room is a set of shelves half-full of projects that have yet to be fired.
+
+Lucy procures three day-passes for the studio’s open work space before marching the three of you over to a box of terracotta clay and gestures to it.
 
 Lucy: Well?
 
@@ -49,7 +51,7 @@ You stare at her, and then at Kipperlilly, and then at the clay. And then at Luc
 <<voiceline KristenNeutral3>>
 Kristen: …well, what?
 
-<<char_left LucySurprised>>
+<<char_left LucySurprised3>>
 Lucy’s eyes light up with a touch of panic.
 
 Lucy: Well, this was your idea, right? What do we do?
@@ -68,7 +70,7 @@ You give Kipperlilly a glare of your own. She raises an eyebrow, daring you to a
 <<kristen Neutral>>
 Kristen: I’ve done it at summer camps and stuff! Just not, like, on my own, y’know?
 
-<<char_left LucyNeutral1>>
+<<char_left LucyNeutral3>>
 Lucy: Well, that’s better than us, right, Kip?
 
 <<char_right KipperlillyNeutral>>
@@ -78,7 +80,7 @@ Kipperlilly: Right. Sure.
 Okay, so maybe you should have realized there was a chance none of you would know how pottery even works. That’s okay. You can dig yourself out of this one.
 -> <i>Maybe you can ask someone at the studio for pointers to get started.</i>
   Lucy: Oh! I’m sure Mr. Peppercorn is happy to help.
-  Kipperlilly: Isn’t that his literal job?
+  Kipperlilly: I mean, it’s his literal job.
   <<add_points 1>>
 -> <i>Surely, there’s a video on how to do this online, right?</i>
   Kipperlilly: …are you on YouTome?
@@ -104,15 +106,19 @@ There’s no response, not even a twitch of a cheek. Kipperlilly’s particular 
 
 Kristen: Wow, she’s really locked in.
 
-<<char_left LucyJoking>>
-Lucy: Should we check the spindle of the spinning wheel for sleeping effects?
+<<char_left LucyJoking3>>
+Lucy: Should we check her for a pulse?
 
-<<char_left LucyNeutral1>>
-The joke falls flat when Kipperlilly shows no sign of having heard either of you. Lucy shrugs at the lack of response and turns to her own wheel. She kicks it on with a couple firm presses to the foot pedal and is soon drawn to her own craft. You wonder if single-minded focus is a prerequisite for being a Rat Grinder. Then you turn back to your own station.
+<<char_left LucyNeutral3>>
+The joke falls flat when Kipperlilly shows no sign of having heard either of you. Lucy shrugs at her lack of response and turns to her own wheel. She kicks it on with a couple firm presses to the foot pedal and is soon drawn to her own craft. 
+
+You wonder if single-minded focus is a prerequisite for being a Rat Grinder. Then you turn back to your own station.
 
 Alright. You’ve got a lump of clay, a turntable, and a dream. 
 
-The clay is wet under your hands and squishes at the slightest pressure. It slips from you when you push a little too hard and juts out to one side, forcing you to turn the wheel off so you can crush it back down and recenter it. At one point, your creation collapses on itself when you accidentally scrape too much of the lower half away and you have to start over again.
+The clay is wet under your hands and squishes at the slightest pressure. It slips away from you when you push a little too hard and juts out to one side, forcing you to turn the wheel off so you can crush it back down and recenter it. 
+
+At one point, your creation collapses on itself when you accidentally scrape too much of the lower half away and you have to start over again.
 
 <<kristen Sad>>
 When that happens, you wonder if it’s too late to admit defeat. Maybe you can just bring Kipperlilly’s guinea pigs a carrot or something. 
@@ -129,18 +135,18 @@ You glance back down to your mass of unshapen clay.
 
 Kristen: That’s the spirit?
 
-<<char_left LucyFlirting>>
+<<char_left LucyFlirting3>>
 Lucy smiles fondly at you, even as the genasi you saw at the kiln comes over to help her take her bowl off of the wheel. He says something about getting it ready for a bisky fire? You’re pretty sure you misheard that, though.
 
 <<kristen Sad>>
 Kristen: At least yours will be functional.
 
 <<voiceline KristenSad2>>
-Your lump of clay looks so sad. You can practically hear it cursing its rotten luck getting stuck with you. You draw a frowny face in it with your finger. 
+Your lump of clay looks so sad. You can practically hear it cursing its rotten luck getting stuck with you. You draw a frowny face in it with your finger and half expect it to start berating you. 
 
 Lucy: Yours could be a toy. I’m sure the guinea pigs will have fun with it if you had fun making it.
 
-She reaches over and slides her own finger through the clay, changing the frowny face to a smiley face.
+She reaches over to change the frowny face to a smiley face.
 
 <<kristen Neutral>>
 Kristen: Well, that does look like a significant improvement.
@@ -151,16 +157,16 @@ Kristen: I think we have to do an initial fire today, but we could always come b
 
 Lucy: Oh, like a glaze? That might be nice. What do you think, Kip?
 
-<<char_left LucySurprised>>
+<<char_left LucySurprised3>>
 No response. You expected it, but Lucy clearly didn’t. She seems surprised when she realizes Kipperlilly is still locked in.
 
-Lucy: Kip?
+Lucy: Kipperlilly?
 
 Kipperlilly is too engrossed in ensuring the sides of her mug are perfectly straight and even. As you watch, her eyes narrow in on some imperfection at the lip of the mug and she carefully moves a finger to adjust it. She curses quietly when it overcorrects and sticks out in the other direction.
 
 Kristen: I could be sitting in your lap right now and she wouldn’t notice.
 
-<<char_left LucyBlush>>
+<<char_left LucyBlush3>>
 Lucy: I could be strangling you to death and she wouldn’t even stop for photos.
 
 Kipperlilly continues to ignore you in favor of slowing the wheel down and introducing a fun groove at the bottom of the mug with a popsicle stick.
@@ -168,19 +174,19 @@ Kipperlilly continues to ignore you in favor of slowing the wheel down and intro
 <<kristen Grin>>
 Kristen: How annoyed will she be if I mess with her mug?
 
-<<char_left LucyJoking>>
+<<char_left LucyJoking3>>
 Lucy: Very. You should do it.
 
 Kristen: Huh? I thought you liked having me around.
 
-Lucy: She wouldn’t kill you over it. I think. At worst, she’ll just storm out.
+Lucy: She wouldn’t <i>kill</i> you over it. I think. At worst, she’ll just storm out.
 
-You’re not as certain.
+… isn’t that just as bad?
 
 Lucy: C’mon, it’ll be funny, at least. 
 
 <<kristen Neutral>>
-That’s true enough. Okay, time to brainstorm a way to avoid being sneak attacked in the hallway…
+That’s true enough. Okay, time to brainstorm a way to annoy her while also avoiding a sneak attack in the hallway…
 -> <i>Wait for the wheel to slow down more, then jab your finger at the mug.</i>
   The wet clay caves slightly under your finger.
 -> <i>Flick water at Kipperlilly’s face.</i>
@@ -197,14 +203,14 @@ Apparently, messing with Kipperlilly’s pottery is more than enough to catch he
 <<voiceline KipAngry1>>
 Kipperlilly: What’s your fucking <i>problem</i>, Applebees!?
 
-Oh fuck, she sounds absolutely pissed. And maybe a little heartbroken? You’re <i>definitely</i> getting sneak attacked before lunch on Monday.
+Oh fuck, she sounds absolutely pissed. And maybe a little heartbroken? You’re <i>definitely</i> getting sneak attacked before lunch. Might as well fully send it.
 
 <<kristen Grin>>
 Kristen: It adds character!
 
 Kipperlilly: It adds fuck-all, you shithead! I’m going to have to start over!
 
-<<char_left LucyNeutral1>>
+<<char_left LucyNeutral3>>
 <<kristen Neutral>>
 Lucy: You haven’t said a word to us in close to forty minutes.
 
@@ -218,9 +224,9 @@ Kipperlilly pokes at the imperfection in her work. It’s honestly not that bad;
 Kipperlilly: I’m going to have to start over. Fuck everything.
 
 <<kristen Surprised>>
-Her bottom lip is poking out a bit. You actually start to feel a little regretful. You frantically look at Lucy. She was the one who told you to do it; she wouldn’t have done that if she didn’t think it would be fine, right? 
+Her bottom lip is poking out a bit. You actually start to feel a little regretful. You frantically look to Lucy. She was the one who told you to do it; she wouldn’t have done that if she didn’t think it would be fine, right? 
 
-<<char_left LucyFlirty>>
+<<char_left LucyFlirty3>>
 Lucy doesn’t seem bothered. She shuffles her chair a little closer towards Kipperlilly’s wheel and takes a closer look at the allegedly ruined mug. 
 
 Lucy: It’s going to take all the time we have left if you want to remake it, you know.
@@ -238,14 +244,14 @@ Kipperlilly grumbles something under her breath, but her shoulders relax a littl
 Kristen: Yeah, just makes it special!
 
 <<kristen Grin>>
-Kristen: Plus, whenever you look at it, you can always think of me! 
+Kristen: Plus, whenever you look at it, you can think of me. 
 
 Kipperlilly: Just what I’ve always wanted.
 
 Despite the sarcasm dripping from her voice, you’re almost certain you can see a smile ghosting across her face before she glances away so you can’t see it. 
 
 <<kristen Neutral>>
-A second later, Lucy leans over and pokes another groove into the top of the mug, next to your own imperfection. Kipperlilly grimaces and gives a small huff of disapproval but doesn’t attempt to stop her. 
+A second later, Lucy leans over and pokes another groove into the mug, next to your own imperfection. Kipperlilly grimaces and gives a small huff of disapproval but doesn’t attempt to stop her. 
 
 <<voiceline LucyRomantic3>>
 Lucy: There. Now you can think of both of us.
@@ -256,7 +262,7 @@ Kipperlilly: I <i>suppose</i> it looks like an intentional design feature now.
 
 Lucy lightly elbows you in the side, putting on a fake whisper tone that Kipperlilly can absolutely still hear.
 
-<<char_left LucyJoking>>
+<<char_left LucyJoking3>>
 Lucy: That means she likes it.
 -> Kristen: “It was so good to begin with, even my negative three dex couldn’t ruin it.”
   <<char_right KipperlillySmug>>
@@ -275,7 +281,7 @@ Lucy: That means she likes it.
   Kipperlilly: Maybe that would be easier if you weren’t constantly a mess. 
   <<add_points 0>>
 
-<<char_left LucyNeutral1>>
+<<char_left LucyNeutral3>>
 Kristen: So you’ll keep it?
 
 <<char_right KipperlillyNeutral>>
@@ -292,6 +298,8 @@ Kipperlilly: This is going to be stupid, isn’t it.
 Kristen: I promise if it is, I’m not trying to be.
 
 Lucy: Very reassuring, Kristen.
+
+You go to fetch another blob of clay, slapping it down on your turntable.
 
 <<kristen Soft>>
 Kristen: What if we made something together?
@@ -326,9 +334,13 @@ Lucy: So you’ve said. It’ll be a fun story, though.
 <<voiceline KipAnnoyed1>>
 Kipperlilly scoffs at this, but that doesn’t stop her from leaning over to start working the clay. She scowls at you and kicks your ankle a couple times to remind you to start the wheel up.
 
-The cross expression leaves as soon as she sets her hands on the clay. Almost immediately, her concentration takes all of her attention away from you and Lucy, and her eyes narrow as she carefully forms the clay into a puck in the center of the wheel. Her lower lip disappears behind her teeth as she digs her thumbs into the middle of the prepared clay and drags them out, slowly forming the beginnings of a rudimentary bowl. 
+The cross expression leaves as soon as she sets her hands on the clay. Almost immediately, her concentration takes all of her attention away from you and Lucy, and her eyes narrow as she carefully forms the clay into a puck in the center of the wheel. 
 
-Lucy takes over after a while, her hands brushing against Kipperlilly’s as she carefully shapes the walls of the vessel. Kipperlilly startles at the unexpected touch, but she doesn’t move her hands away from the piece, opting instead to focus on the bottom half while Lucy does what she wants on top. 
+Her lower lip disappears behind her teeth as she digs her thumbs into the middle of the prepared clay and drags them out, slowly forming the beginnings of a rudimentary bowl. 
+
+Lucy takes over after a while, her hands brushing against Kipperlilly’s as she carefully shapes the walls of the vessel. 
+
+Kipperlilly startles at the unexpected touch, but she doesn’t move her hands away from the piece, opting instead to focus on the bottom half while Lucy does what she wants on top. 
 
 Both of them glance up to you expectantly.
 -> <i>Start at the top, just under Lucy’s hands.</i>
@@ -358,15 +370,17 @@ Lucy: I was going for some kind of vase, but it kind of looks like an urn withou
 
 Kristen: That’s a bit dark.
 
-<<char_left LucyJoking>>
+<<char_left LucyJoking3>>
 Lucy: I guess an urn seems less natural than dumping a body in the woods. 
+
+There’s an awkwardly long pause.
 
 <<char_right KipperlillyLaugh>>
 <<voiceline KipHappy1>>
-There’s an awkwardly long pause before Kipperlilly snorts quietly to herself. Lucy beams openly, and that’s enough to make you snicker.
+Then, Kipperlilly snorts quietly to herself. Lucy beams openly, and that’s enough to make you snicker.
 
 <<char_right KipperlillyNeutral>>
-<<char_left LucyNeutral1>>
+<<char_left LucyNeutral3>>
 Kipperlilly: If I die before either of you, you’re not allowed to use this for my ashes.
 
 Lucy: Since when did you want to be cremated?
@@ -384,42 +398,47 @@ Kristen: I dunno, I think it’s doing a pretty good job.
 <<voiceline KipAnnoyed2>>
 Kipperlilly: That pun sucked shit and you know it.
 
-Lucy: It was rather weak.
+Lucy: I’ve heard better.
 
 <<kristen Sad>>
 Kristen: I can’t believe you <i>both</i> hate my ass.
 
-<<char_left LucyJoking>>
-Kipperlilly rolls her eyes as Lucy gives you the smile that you once thought was warm and kindly and now know is a shit-eating grin.
+<<char_left LucyJoking3>>
+Kipperlilly rolls her eyes as Lucy gives you the smile that you once thought was warm and kindly and now recognize as a shit-eating grin.
 
-<<char_left LucyNeutral1>>
+<<char_right KipperlillyNeutral>>
+<<char_left LucyNeutral3>>
 <<kristen Neutral>>
 Lucy: I did mean what I said. We should get this fired, and when we come back for Kip’s mug we can glaze it.
 
-Kipperlilly: Who says I’m coming back with either of you for that mug? You’ll just fuck with it all over it again, and then I’m going to have to deal with explaining why I’m using a shitty mug for the rest of my life.
+Kipperlilly: Who says I’m coming back with either of you for that mug? You’ll just fuck with it all over it again, and then I’m going to have to deal with explaining why I’m using the shittiest mug in all of Spyre for the rest of my life.
 
 <<kristen Grin>>
 Kristen: Awww, you’re going to use it for the rest of your life? You love us that much?
 
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: Every day, I’m plagued by your existence.
 
 Kristen: When should we come back to glaze everything? This weekend?
 
-Lucy: Oh, we’re actually busy this weekend. Monthly karaoke night.
+Lucy: Oh, we’re actually busy this weekend. Karaoke night.
 
-Kristen: You guys have a monthly karaoke night?
+Kristen: You guys have a karaoke night?
 
 <<char_right KipperlillySmug>>
-Kipperlilly: It’s important to team build with your party members. Though I think a few of them are flaking this month so if you wanted to stop by there’d technically be room. 
+Kipperlilly: It’s important to team build with your party members. 
+
+<<char_right KipperlillyNeutral>>
+Kipperlilly: Though I think a few of them are flaking this month so if you wanted to stop by there’d technically be room. 
 
 Kristen: Aw, I’m getting an invite to the team building exercise? You sure know how to make a girl feel special.
 
-<<char_right KipperlillyNeutral>>
 Kipperlilly: Don’t read too far into it. It’s just more fun with more people.
 
 Lucy: I’d love to see you there, if you can make it.
 
 Kristen: I’ll definitely try!
 
-<<jump Cassandra>>
+
+<<jump Cassandra2>>
 ===
