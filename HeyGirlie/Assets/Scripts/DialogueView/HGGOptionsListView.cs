@@ -121,6 +121,7 @@ namespace Yarn.Unity
             HGGOptionView prev = null;
             Navigation nav = new Navigation();
             nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnLeft = scrollbar;
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
@@ -153,6 +154,10 @@ namespace Yarn.Unity
                 // The first available option is selected by default
                 if (optionViewsCreated == 0)
                 {
+                    Navigation scrollNav = scrollbar.navigation;
+                    scrollNav.selectOnRight = optionView;
+                    scrollbar.navigation = scrollNav;
+
                     optionView.Select();
                 }
 
