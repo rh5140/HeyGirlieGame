@@ -70,10 +70,11 @@ namespace Yarn.Unity
         
         void Update()
         {
-            //SettingManager.Instance.UpdateOptionView();
-            if ((Input.GetKeyUp(key) || Input.GetKeyUp(keyAlt)) && !GameManager.Instance.pauseLock)
-            {
-                InvokeOptionSelected();
+            if(!GameManager.Instance.pauseLock){
+                if (Input.GetKeyUp(key) || Input.GetKeyUp(keyAlt))
+                {
+                    InvokeOptionSelected();
+                }
             }
         }
 

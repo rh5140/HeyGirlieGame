@@ -18,8 +18,9 @@ namespace Yarn.Unity
         [SerializeField] CanvasGroup canvasGroup;
 
         [SerializeField] Canvas gridLayout;
-
         [SerializeField] Canvas verticalLayout;
+
+        [SerializeField] Scrollbar scrollbar;
 
         [SerializeField] HGGOptionView optionViewPrefab;
 
@@ -61,6 +62,21 @@ namespace Yarn.Unity
             //SettingManager.Instance.UpdateOptionView();
         }
 
+        public void Update(){
+            // if(!GameManager.Instance.pauseLock){
+            //     if (Input.GetKey(KeyCode.UpArrow))
+            //     {
+            //         // Debug.Log("up");
+            //         scrollbar.value = (scrollbar.value >= 1f) ? 1f : scrollbar.value + 0.01f;
+            //     }
+            //     if (Input.GetKey(KeyCode.DownArrow))
+            //     {
+            //         // Debug.Log("down");
+            //         scrollbar.value = (scrollbar.value <= 0f) ? 0f : scrollbar.value - 0.01f;
+            //     }
+            // }
+        }
+
         public void Reset()
         {
             canvasGroup = GetComponentInParent<CanvasGroup>();
@@ -76,6 +92,7 @@ namespace Yarn.Unity
         }
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
+            // scrollWheel.Select();
             // If we don't already have enough option views, create more
             if (dialogueOptions.Length > 3)
             {

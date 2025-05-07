@@ -2271,7 +2271,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4694568306897327866}
   - component: {fileID: 3038808405164522522}
-  - component: {fileID: 4694568306897327846}
   - component: {fileID: 4694568306897327844}
   - component: {fileID: 4694568306897327867}
   - component: {fileID: 4694568306897327845}
@@ -2321,28 +2320,8 @@ MonoBehaviour:
   canvasGroup: {fileID: 4694568306897327845}
   gridLayout: {fileID: 5359445899905078343}
   verticalLayout: {fileID: 575465224060739382}
+  scrollbar: {fileID: 6160288876728184478}
   optionViewPrefab: {fileID: 4127215260396776200, guid: c9d7256f7b9974842a63b1a3659aae27, type: 3}
-  palette: {fileID: 0}
-  fadeTime: 0.1
-  showUnavailableOptions: 0
-  lastLineText: {fileID: 4694568308469987978}
-  lastLineContainer: {fileID: 4694568308469987976}
-  lastLineCharacterNameText: {fileID: 0}
-  lastLineCharacterNameContainer: {fileID: 0}
---- !u!114 &4694568306897327846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4694568306897327865}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac0c40fc910845709d9cef7c876cb99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 4694568306897327845}
-  optionViewPrefab: {fileID: 5665317717604146022, guid: 3ff4e0d87ab7d4789a1565ac303e8261, type: 3}
   palette: {fileID: 0}
   fadeTime: 0.1
   showUnavailableOptions: 0
@@ -5816,6 +5795,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1537811496490116650}
     - target: {fileID: 897872514292890785, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: scrollbar
+      value: 
+      objectReference: {fileID: 8318650238770438698}
+    - target: {fileID: 897872514292890785, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
+      propertyPath: scrollWheel
+      value: 
+      objectReference: {fileID: 8318650238770438698}
+    - target: {fileID: 897872514292890785, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 5318245346231619610}
@@ -6207,7 +6194,8 @@ PrefabInstance:
       propertyPath: m_LayoutPriority
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2819999833750329424, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2819999832344087589, guid: 2c867cc601f89564b886445b01da71bd, type: 3}
     m_AddedGameObjects:
@@ -6713,6 +6701,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8428484967426530723, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7895946088576098565, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
@@ -6799,6 +6791,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 0}
   gridLayout: {fileID: 0}
   verticalLayout: {fileID: 0}
+  scrollbar: {fileID: 0}
   optionViewPrefab: {fileID: 0}
   palette: {fileID: 0}
   fadeTime: 0.1

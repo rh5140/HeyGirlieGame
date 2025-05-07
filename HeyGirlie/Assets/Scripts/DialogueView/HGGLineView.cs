@@ -193,6 +193,10 @@ namespace Yarn.Unity
         [SerializeField]
         internal GameObject continueButton = null;
 
+
+        [SerializeField]
+        internal Scrollbar scrollbar;
+
         /// <summary>
         /// The amount of time to wait after any line
         /// </summary>
@@ -253,9 +257,20 @@ namespace Yarn.Unity
 
         void Update()
         {
-            if (Input.GetKeyUp(KeyCode.Space) && !GameManager.Instance.pauseLock)
-            {
-                UserRequestedViewAdvancement();
+            if(!GameManager.Instance.pauseLock){
+                if (Input.GetKeyUp(KeyCode.Space)) {
+                    UserRequestedViewAdvancement();
+                }
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    // Debug.Log("up");
+                    scrollbar.value = (scrollbar.value >= 1f) ? 1f : scrollbar.value + 0.01f;
+                }
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    // Debug.Log("down");
+                    scrollbar.value = (scrollbar.value <= 0f) ? 0f : scrollbar.value - 0.01f;
+                }
             }
         }
 
@@ -536,6 +551,7 @@ namespace Yarn.Unity
                 requestInterrupt?.Invoke();
 
                 continueButton.GetComponent<EventTrigger>().OnSubmit(null);
+                // scrollWheel.Select();
             }
             // EventSystem.current.SetSelectedGameObject(null);
         }
