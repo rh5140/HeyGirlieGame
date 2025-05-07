@@ -63,18 +63,10 @@ namespace Yarn.Unity
         }
 
         public void Update(){
-            // if(!GameManager.Instance.pauseLock){
-            //     if (Input.GetKey(KeyCode.UpArrow))
-            //     {
-            //         // Debug.Log("up");
-            //         scrollbar.value = (scrollbar.value >= 1f) ? 1f : scrollbar.value + 0.01f;
-            //     }
-            //     if (Input.GetKey(KeyCode.DownArrow))
-            //     {
-            //         // Debug.Log("down");
-            //         scrollbar.value = (scrollbar.value <= 0f) ? 0f : scrollbar.value - 0.01f;
-            //     }
-            // }
+            if(!GameManager.Instance.pauseLock){
+                float value = scrollbar.value + (Input.GetAxis("Mouse ScrollWheel"));
+                scrollbar.value = (value <= 0f) ? 0f : ((value >= 1f) ? 1f : value);
+            }
         }
 
         public void Reset()
