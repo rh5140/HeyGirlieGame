@@ -33,6 +33,10 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(AnimateMenu());
     }
 
+    void Update(){
+        // Debug.Log(Display.main.systemWidth);
+    }
+
     IEnumerator AnimateMenu(){
         yield return new WaitForSeconds(1);
 
