@@ -25,6 +25,7 @@ namespace Yarn.Unity
         public KeyCode key;
         public KeyCode keyAlt;
         public int order;
+        public EventTrigger soundTrigger;
 
         DialogueOption _option;
 

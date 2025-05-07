@@ -36,8 +36,8 @@ public class CharacterProfiles : Menu
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.Profiles) Close();
-        if(Input.GetKeyDown(KeyCode.LeftArrow) && character != (int)Character.Cassandra) Back();
-        if(Input.GetKeyDown(KeyCode.RightArrow) && character != (int)Character.Naradriel) Next();
+        if(Input.GetKeyDown(KeyCode.LeftArrow) && character != (int)Character.Cassandra) backButton.OnSubmit(null);
+        if(Input.GetKeyDown(KeyCode.RightArrow) && character != (int)Character.Naradriel) nextButton.OnSubmit(null);
     }
 
     void OnDestroy(){

@@ -256,7 +256,6 @@ namespace Yarn.Unity
             if (Input.GetKeyUp(KeyCode.Space) && !GameManager.Instance.pauseLock)
             {
                 UserRequestedViewAdvancement();
-                continueButton.GetComponent<EventTrigger>().OnSubmit(null);
             }
         }
 
@@ -537,6 +536,8 @@ namespace Yarn.Unity
                 requestInterrupt?.Invoke();
             }
 
+            
+            continueButton.GetComponent<EventTrigger>().OnSubmit(null);
             // EventSystem.current.SetSelectedGameObject(null);
         }
 
