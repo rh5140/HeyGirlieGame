@@ -534,10 +534,9 @@ namespace Yarn.Unity
                 // No animation is now running. Signal that we want to
                 // interrupt the line instead.
                 requestInterrupt?.Invoke();
-            }
 
-            
-            continueButton.GetComponent<EventTrigger>().OnSubmit(null);
+                continueButton.GetComponent<EventTrigger>().OnSubmit(null);
+            }
             // EventSystem.current.SetSelectedGameObject(null);
         }
 
