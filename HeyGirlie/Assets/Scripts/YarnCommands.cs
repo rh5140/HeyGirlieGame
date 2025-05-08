@@ -112,7 +112,7 @@ public class YarnCommands : MonoBehaviour
     void Update(){
         if(_cassSprite != null){
             if(tick <= 30 && tick >= 0) {
-                _cassSprite.anchoredPosition = new Vector2(-640f, -1f*(tick = tick + direction));
+                _cassSprite.anchoredPosition = new Vector2(_cassSprite.anchoredPosition.x, -1f*(tick = tick + direction));
             } else {
                 direction = -1f*direction;
                 tick = tick + direction;

@@ -18,8 +18,9 @@ namespace Yarn.Unity
         [SerializeField] CanvasGroup canvasGroup;
 
         [SerializeField] Canvas gridLayout;
-
         [SerializeField] Canvas verticalLayout;
+
+        [SerializeField] Scrollbar scrollbar;
 
         [SerializeField] HGGOptionView optionViewPrefab;
 
@@ -61,6 +62,13 @@ namespace Yarn.Unity
             //SettingManager.Instance.UpdateOptionView();
         }
 
+        public void Update(){
+            if(!GameManager.Instance.pauseLock){
+                float value = scrollbar.value + (Input.GetAxis("Mouse ScrollWheel"));
+                scrollbar.value = (value <= 0f) ? 0f : ((value >= 1f) ? 1f : value);
+            }
+        }
+
         public void Reset()
         {
             canvasGroup = GetComponentInParent<CanvasGroup>();
@@ -76,6 +84,7 @@ namespace Yarn.Unity
         }
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
+            // scrollWheel.Select();
             // If we don't already have enough option views, create more
             if (dialogueOptions.Length > 3)
             {
@@ -104,6 +113,7 @@ namespace Yarn.Unity
             HGGOptionView prev = null;
             Navigation nav = new Navigation();
             nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnLeft = scrollbar;
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
@@ -136,6 +146,10 @@ namespace Yarn.Unity
                 // The first available option is selected by default
                 if (optionViewsCreated == 0)
                 {
+                    Navigation scrollNav = scrollbar.navigation;
+                    scrollNav.selectOnRight = optionView;
+                    scrollbar.navigation = scrollNav;
+
                     optionView.Select();
                 }
 
