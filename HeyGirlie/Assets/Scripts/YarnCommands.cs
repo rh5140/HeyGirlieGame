@@ -18,7 +18,7 @@ public class YarnCommands : MonoBehaviour
     public Image lineViewBackground;
     public Image optionViewBackground;
     public TextMeshProUGUI characterName;
-    private Color _textColor;
+    public GameObject cassCall;
     #endregion Crystal UI
 
     [SerializeField] private Character _character;
@@ -96,6 +96,7 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<bool>("crystal_ping", CrystalPing);
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
+        dialogueRunner.AddCommandHandler<bool>("cass_call", EnableCassCrystal);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
     }
@@ -279,6 +280,11 @@ public class YarnCommands : MonoBehaviour
             }
             crystalUI[0].SetActive(true);
         }
+    }
+
+    private void EnableCassCrystal(bool calling)
+    {
+        cassCall.SetActive(calling);
     }
     #endregion UI
 

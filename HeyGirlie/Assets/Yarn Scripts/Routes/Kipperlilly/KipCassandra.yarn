@@ -20,8 +20,10 @@ title: Cassandra1
 ---
 <<sfx ring>>
 <<char_right transparent>>
+<<cass_call  true>>
 <<bg_filter_on  purple>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
