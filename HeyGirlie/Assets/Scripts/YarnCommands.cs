@@ -432,7 +432,17 @@ public class YarnCommands : MonoBehaviour
     }
     
     private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
-        PlayAudioByName(_sfxSource, _audioClips, audioName);
+        PlayOneShotByName(_sfxSource, _audioClips, audioName);
+    }
+
+    private void PlayOneShotByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
+    {
+        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        if (audioClips.ContainsKey(audioName)) 
+        {
+            audioSource.PlayOneShot(audioClips[audioName]);
+        }
+        else Debug.Log("Audio asset " + audioName + " not found!");
     }
 
     private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)

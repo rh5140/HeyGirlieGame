@@ -20,9 +20,10 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler
     public void PlayAudio(AudioClip audioClip)
     {
         if(_sfxSource != null && (selectable != null || selectable.interactable)){
-            _sfxSource.Stop();
-            _sfxSource.clip = audioClip;
-            _sfxSource.Play();
+            _sfxSource.PlayOneShot(audioClip);
+            // _sfxSource.Stop();
+            // _sfxSource.clip = audioClip;
+            // _sfxSource.Play();
         }
     }
 
