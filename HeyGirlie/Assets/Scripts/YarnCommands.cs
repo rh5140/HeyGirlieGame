@@ -347,7 +347,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charLeftSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(424f, 0f);
             _cassSprite = null;
         }
 
@@ -362,7 +362,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charRightSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(1280f, 0f);
             _cassSprite = null;
         }
 
