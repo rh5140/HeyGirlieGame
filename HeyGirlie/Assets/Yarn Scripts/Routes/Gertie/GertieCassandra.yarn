@@ -21,6 +21,9 @@ title: Cassandra1
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
+...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   Kristen: Not too bad! At least, once the duel was over.
@@ -66,7 +69,9 @@ title: Cassandra2
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -85,7 +90,9 @@ title: Cassandra3
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -104,7 +111,9 @@ title: Cassandra4
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
@@ -126,7 +135,9 @@ title: Cassandra5
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -145,7 +156,9 @@ title: Cassandra6
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -164,7 +177,9 @@ title: Cassandra7
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
