@@ -550,7 +550,7 @@ namespace Yarn.Unity
                 // interrupt the line instead.
                 requestInterrupt?.Invoke();
 
-                continueButton.GetComponent<EventTrigger>().OnSubmit(null);
+                // continueButton.GetComponent<EventTrigger>().OnSubmit(null);
                 // scrollWheel.Select();
             }
             // EventSystem.current.SetSelectedGameObject(null);
