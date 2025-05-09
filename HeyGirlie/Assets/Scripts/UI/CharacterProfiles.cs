@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class CharacterProfiles : Menu
 {
@@ -14,6 +15,8 @@ public class CharacterProfiles : Menu
 
     [SerializeField] private Button backButton;
     [SerializeField] private Button nextButton;
+
+    [SerializeField] private TextMeshProUGUI hintText;
 
     private int character = (int)Character.Cassandra;
     
@@ -99,6 +102,15 @@ public class CharacterProfiles : Menu
             foreach(GameObject apple in apples){
                 apple.SetActive(false);
             }
+        }
+
+        if (character != (int)Character.Cassandra)
+        {
+            hintText.text = GameManager.Instance.GetLoveInterest((Character)character).GetDateHint();
+        }
+        else
+        {
+            hintText.text = "love you!!! good luck <3";
         }
     }
 
