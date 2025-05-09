@@ -139,7 +139,7 @@ Cassandra: Then, I’ve got it on good authority that Nara will be out at the <i
 Kristen: Hope she’s not trying to beat <i>these</i> gains.
 :You flex your muscles and Cass giggles at you. You have been working out a little more lately, so you’re pretty proud of the biceps you’re sporting right now.
 :Hopefully, the ladies will be equally impressed.
-Cassandra: And that leaves Kipperlilly! She’ll be <i>downtown</i>, doing some volunteer work.
+Cassandra: And that leaves Kipperlilly! She’ll be <i>outside</i>, doing some volunteer work.
 <<Kristen Neutral>>
 <<char_right CassandraNeutral>>
 Kristen: Right. ‘Cause everything about Kipperlilly screams “upstanding citizen.”
@@ -174,6 +174,28 @@ Cassandra: So… does your heart have any first guesses for who you want to hang
     Cassandra: D’awww, I’m sure she could! You should totally show her around, you’d make a wonderful tour guide.
     <<setLIPriority 7>>
 Cassandra: Ooooh, I’m so excited for you!! This is gonna be great, you’ll see. Okay! Time for your first date!!!!
+Cassandra: I’ll leave you hints if you get stuck on where to go! Do you think you’re good, or do you want any more tips?
+-> I'm ready for my first date! (Skip tutorial).
+-> Give me the rundown!
+   Cassandra: If you want to review what I just told you about Elmville's hottest bachelorettes, I've added some notes for you.
+   <<cass_pointer_on profiles>>
+   Cassandra: Take a look!
+   <<cass_pointer_off profiles>>
+   Cassandra: If you need to jog your memory about your latest conversations, you can check the record.
+   <<cass_pointer_on history>>
+   Cassandra: See?
+   <<cass_pointer_off history>>
+   Cassandra: If you think you  need to take a break, this might just SAVE your life.
+   <<cass_pointer_on save>>
+   Cassandra: Give it a try!
+   <<cass_pointer_off save>>
+   <<cass_pointer_on menu>>
+   Cassandra: There's some other handy information in your notes -- I even put a little tab as a bookmark for you!
+   <<cass_pointer_off menu>>
+   Cassandra: If you want to be a little more hands-off, there's a neat little magic trick here.
+   <<cass_pointer_on ff>>
+   Cassandra: Though it might not be your pace.
+   <<cass_pointer_off ff>>
 Cassandra: So, what’ll it be, Kristen? Where to first?
 <<change_scene DateSelection>>
 ===
