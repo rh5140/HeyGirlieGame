@@ -38,6 +38,7 @@ public class YarnCommands : MonoBehaviour
     private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
     private AudioSource _sfxSource;
+    [SerializeField] private AudioTrackManager _atm;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
@@ -464,7 +465,7 @@ public class YarnCommands : MonoBehaviour
 
     private void PlayTrack(string audioName="default")
     {
-        AudioTrackManager.Instance.ChangeTrack(audioName);
+        _atm.ChangeTrack(audioName);
     }
     #endregion Audio
 
