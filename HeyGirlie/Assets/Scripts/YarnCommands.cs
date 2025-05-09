@@ -18,7 +18,7 @@ public class YarnCommands : MonoBehaviour
     public Image lineViewBackground;
     public Image optionViewBackground;
     public TextMeshProUGUI characterName;
-    private Color _textColor;
+    public GameObject cassCall;
     #endregion Crystal UI
 
     [SerializeField] private Character _character;
@@ -43,7 +43,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
     private RectTransform _cassSprite;
-    private float tick = 0, direction = 0.05f;
+    private float tick = 0, direction = 0.5f;
 
     #region Setup
     /// <summary>
@@ -96,6 +96,7 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<bool>("crystal_ping", CrystalPing);
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
+        dialogueRunner.AddCommandHandler<bool>("cass_call", EnableCassCrystal);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
     }
@@ -280,6 +281,11 @@ public class YarnCommands : MonoBehaviour
             crystalUI[0].SetActive(true);
         }
     }
+
+    private void EnableCassCrystal(bool calling)
+    {
+        cassCall.SetActive(calling);
+    }
     #endregion UI
 
     #region Polyam Functions
@@ -341,7 +347,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charLeftSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(424f, 0f);
             _cassSprite = null;
         }
 
@@ -356,7 +362,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charRightSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(1280f, 0f);
             _cassSprite = null;
         }
 
@@ -432,7 +438,17 @@ public class YarnCommands : MonoBehaviour
     }
     
     private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
-        PlayAudioByName(_sfxSource, _audioClips, audioName);
+        PlayOneShotByName(_sfxSource, _audioClips, audioName);
+    }
+
+    private void PlayOneShotByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
+    {
+        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        if (audioClips.ContainsKey(audioName)) 
+        {
+            audioSource.PlayOneShot(audioClips[audioName]);
+        }
+        else Debug.Log("Audio asset " + audioName + " not found!");
     }
 
     private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
