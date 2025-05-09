@@ -43,7 +43,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
     private RectTransform _cassSprite;
-    private float tick = 0, direction = 0.05f;
+    private float tick = 0, direction = 0.5f;
 
     #region Setup
     /// <summary>
