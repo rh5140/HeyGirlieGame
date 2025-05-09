@@ -1,128 +1,5 @@
-﻿title: Gertie
+﻿title: GertieEnding
 ---
-<<fade_in_ui>>
-<<kristen Nervous>>
-You wait anxiously by the door of Mordred Manor.
-You’d sent Gertie a text thirty minutes ago asking if she could meet you here for a movie night, but there’s no movie.
-You want to ask Gertie to the Spring Fling. 
-It’s a risky move. Gertie has a select few she trusts and sticks with them come hell or high water. She’s not one for crowds or social functions.
-But you hope that she’ll make an exception for you.
-<<sfx knock>>
-<i>KNOCK KNOCK</i>
-You peel open the door and look up to make eye contact with Gertie Bladeshield.
-<<char_right GertieNeutral>>
-<<voiceline GertieGreeting3>>
-Gertie: Sorry it took so long. I had to wrap up some beekeeping duties.
-<<kristen Soft>>
-You chuckle.
-Kristen: Of course you did.
-Gertie: So, what’s our film on this fine —
-<<char_right GertieSurprise>>
-As Gertie takes a step in, she pauses in shock.
-Just inside the entryway is a small colony of bees organized in a near perfect circle. All buzzing with anticipation.
-<<voiceline GertieSurprised1>>
-Gertie: Kristen… What is this?
-You don’t answer, instead you take your place right in the center of the formation.
-<<kristen Happy>>
-Kristen: I know you may not be one for big gestures, Miss Bladeshield, but I hope you don’t mind that I am. 
-Kristen: For the past couple weeks, I’ve been auditing an introductory ranger class. Haven’t even gotten to subclasses yet, but I did get far enough to cast Speak With Animals. 
-Kristen: And after befriending a hive in the backyard, they agreed to help me with this.
-<<sfx bees>>
-The second you finish your sentence, the bees and you begin a choreographed dance. It’s like a well-executed marching band, the way they weave in and out of images, buzzing rhythmically.
-A sword for your duel. An ice cream cone for your first real date. All the while you make a fool of yourself dead center.
-As the number comes to an end, you kneel down on the ground as the bees spell out “Spring Fling?”
-<<voiceline KristenAwkward3>>
-<<kristen Nervous>>
-You catch your breath and glance upward, anticipating Gertie’s response. 
-<<sf_success Gertie>>
-
-<<if $succeed>>
-    <<jump GertieSuccess>>
-<<else>>
-    <<jump GertieFail>>
-<<endif>>
-===
-
-title: GertieFail
----
-<<fade_in_ui>>
-<<char_right GertieNervous>>
-Gertie: Oh, Kristen.
-Gertie: This is such a kind gesture, it really is. And I’ve very much enjoyed our reconnection these past couple weeks.
-<<kristen Sad>>
-You’re no relationship expert, but you can tell when there’s a “but” coming.
-Gertie: But I can’t help but notice all the ways we don’t add up.
-Kristen: I don’t understand.
-Gertie: You go with the flow, Kristen. You’re adaptable, free, and exciting. And that’s something I’ve never been able to do. I like routine, I like comfort, I like my life.
-<<char_right GertieNeutral>>
-She leans forward and cups your face.
-Gertie: I wish you no ill will. No duels, no nemeses. 
-Gertie: But I don’t believe we should continue our romantic entanglement.
-<<voiceline KristenDateFail2>>
-She kisses you on your forehead. 
-<<voiceline GertieFarewell1>>
-Gertie: Good day to you, Miss Applebees.
-<<char_right transparent>>
-<<sfx bees>>
-As Gertie exits, the bees buzz a note of pity.
-<<voiceline KristenDateFail3>>
-<<jump Ending>>
-===
-
-title: GertieSuccess
----
-<<fade_in_ui>>
-<<kristen Nervous>>
-<<char_right GertieNeutral>>
-<<voiceline GertieNeutral3>>
-Gertie: Kristen…
-Behind the glasses, her eyes are glossy with tears, but you can’t tell if they’re happy or sad tears. Damn it. Did one of the bees mess up the choreography?
-<<kristen Angry>>
-<<voiceline KristenAngry1>>
-Kristen: Damn it, Benedict, you’re supposed to go <i>left</i> when Belinda and Bernard are going <i>right</i>.
-Kristen: And Beatrice! I’m not seeing a lot of waggle in that waggle dance! Why didn’t you just follow Beena’s lead like we practiced?
-<<char_right GertieGrin>>
-<<kristen Surprised>>
-Gertie: No, no, Miss Applebees, the dance was perfect.
-Gertie: You’re perfect.
-<<kristen Happy>>
-<<char_right GertieHappy>>
-<<voiceline GertieRomantic2>>
-Gertie: Of course I’d be delighted to attend the Spring Fling with you!
-<<voiceline KristenHappy3>>
-Kristen: <i>Bee</i>autiful!
-Kristen: You best bring your dancing shoes. We’re going to have so much fun, I promise.
-<<voiceline GertieHappy2>>
-Gertie: With you? I don’t doubt it.
-<<char_right GertieGrin>>
-<<kristen Neutral>>
-Gertie: Of course, I have to admit that I’m rather unfamiliar your typical prom night dance movies.
-Gertie: My only dance experiences are derived from years of intense study into the choreographed communication between bees.
-<<sfx bees>>
-With that, she looks at the swarm, waving about her long limbs and twisting her torso in a way you can only describe as hypnotic.
-<<kristen Surprised>>
-Kristen: What was that about?
-Gertie: I was just telling Beatrice that you’re right. There <i>wasn’t</i> enough waggle in that waggle dance.
-Kristen: But… did you even cast Speak with Animals?
-Gertie: That first level spell? I haven’t really needed it since freshman year.
-<<voiceline KristenSurprised1>>
-Kristen: What?
-<<voiceline GertieBee1>>
-Gertie: Well, my hive and I know each other so well, we’ve developed a shorthand. A pointed finger for “Attack!” A raised palm for “Retreat!” Stuff like that.
-Gertie: But I can communicate with most bees without the aid of a spell. I’ve been studying their dance language since I was, oh, twelve? Thirteen?
-<<kristen Soft>>
-Incredible. She’s just… incredible.
-<<char_right GertieBlush>>
-Gertie: Would it be too much if I wore a corsage to the dance?
-<<voiceline KristenRomanticGertie2>>
-Kristen: Gertie, if I could, I’d gift you a whole damn garden.
-<<jump Ending>>
-===
-
-title: GertieEnding
----
-<<background  SpringFling>>
-<<fade_in_ui>>
 <<location "Aguefort">>
 <<kristen Soft_Gertie>>
 <<char_right GertieNeutral1>>
@@ -152,7 +29,7 @@ Kristen: Want some air?
 Gertie: Please.
 <<background BloodrushField>>
 Leaning against each other, you duck out of the gym hand in hand.
-The spring air, bracing and fresh, cools the sweat on your skin. Out in the distance, you think you recongize a couple Aguefort Owlbears in rented tuxes, trying to set off fireworks on the bloodrush field.
+The spring air, bracing and fresh, cools the sweat on your skin. Out in the distance, you think you recognize a couple Aguefort Owlbears in rented tuxes, trying to set off fireworks on the bloodrush field.
 Finding a spot to be thankfully, blissfully alone, you and Gertie chatter about nothing and everything.
 <<kristen Surprised_Gertie>>
 <<char_right GertieHappy1>>
@@ -188,7 +65,7 @@ Now, with Gertie, you feel utterly free to be unguarded, unabashed, unfiltered, 
 <<char_right GertieBlush1>>
 Gertie: I suppose I’m trying to say that you feel very familiar to me. I’ve really enjoyed getting to know you, and now, I’m really enjoying <i>knowing you</i>.
 Gertie: Of course, you’re also constantly surprising me, everywhere, in every way, all the time.
-She gestures at your intwined hands.
+She gestures at your entwined hands.
 <<char_right GertieHappy1>>
 Gertie: <i>This</i> surprised me! Just ask the bees. They’ll probably dig up a dartboard with your face on it.
 <<kristen Grin_Gertie>>
@@ -226,3 +103,4 @@ Gertie: If you insist, my dear nemesis.
 <<background SpringFling_Gertie>>
 <<enable_continue>>
 ===
+
