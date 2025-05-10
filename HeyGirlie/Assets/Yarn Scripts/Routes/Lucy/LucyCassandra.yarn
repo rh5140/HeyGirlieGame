@@ -24,6 +24,7 @@ title: Cassandra1
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -45,6 +46,7 @@ title: Cassandra2
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -66,6 +68,7 @@ title: Cassandra3
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -87,6 +90,7 @@ title: Cassandra4
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -108,6 +112,7 @@ title: Cassandra5
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -129,6 +134,7 @@ title: Cassandra6
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -150,6 +156,7 @@ title: Cassandra7
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -171,6 +178,7 @@ title: Cassandra8
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -191,6 +199,7 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
+    <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<change_scene Week2Event>>
