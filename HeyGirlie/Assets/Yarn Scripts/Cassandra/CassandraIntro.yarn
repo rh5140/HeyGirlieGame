@@ -2,6 +2,7 @@
 tags:
 ---
 <<location "Mordred">>
+<<play_track cassandra>>
 <<if get_week() == 1>>
     <<jump CassandraWeek1>>
 
@@ -198,6 +199,7 @@ Cassandra: I’ll leave you hints if you get stuck on where to go! Do you think 
    <<cass_pointer_off ff>>
 Cassandra: So, what’ll it be, Kristen? Where to first?
 <<change_scene DateSelection>>
+<<play_track default>>
 ===
 
 title: CassandraWeek2
