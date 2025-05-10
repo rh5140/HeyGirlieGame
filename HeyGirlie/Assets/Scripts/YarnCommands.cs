@@ -165,6 +165,7 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
+        _atm.FadeOutTrack();
         _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
         // SceneManager.LoadScene(sceneName);
     }

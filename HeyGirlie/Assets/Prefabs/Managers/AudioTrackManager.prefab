@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1734760218183029219}
   - component: {fileID: 4462525527514952745}
-  - component: {fileID: 7272795856543392891}
   m_Layer: 0
   m_Name: AudioTrackManager
   m_TagString: Untagged
@@ -45,39 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d92938bd197a1f4b9d691e6ff566886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
---- !u!114 &7272795856543392891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7214437460800445301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0ce5dd29dd40eb47a65aea8475bd369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voicelineArray:
-  - voicelineName: default
-    voiceline: {fileID: 8300000, guid: d48d50eeabdf7f7458e20467f4374847, type: 3}
-  - voicelineName: cassandra
-    voiceline: {fileID: 8300000, guid: d48d50eeabdf7f7458e20467f4374847, type: 3}
-  - voicelineName: club
-    voiceline: {fileID: 8300000, guid: 88b2852e6e27ea54ab14585e87fd962c, type: 3}
-  - voicelineName: leviathan
-    voiceline: {fileID: 8300000, guid: 8a2fcd06623bbfe468930506907e6d68, type: 3}
-  - voicelineName: crowd
-    voiceline: {fileID: 8300000, guid: fa344eea2c5bf894dae2f495b1c13b14, type: 3}
-  - voicelineName: rodeo
-    voiceline: {fileID: 8300000, guid: 80c57e44053271c45aa2ce71fe8f4aa2, type: 3}
-  - voicelineName: mf
-    voiceline: {fileID: 8300000, guid: a4fe37e132348034db711e2b87189998, type: 3}
-  - voicelineName: t8
-    voiceline: {fileID: 8300000, guid: 8fc2dd55587fa2849af82f4f9dba0158, type: 3}
-  - voicelineName: n8
-    voiceline: {fileID: 8300000, guid: 62bcfc71feaf7a047985e10eda223ce3, type: 3}
-  - voicelineName: k7
-    voiceline: {fileID: 8300000, guid: d80afb07607ba3744bd85ce63bf7e966, type: 3}
-  - voicelineName: g8
-    voiceline: {fileID: 8300000, guid: d9d49191866b33b48a75d2577ef1a719, type: 3}
+  audioMixer: {fileID: 24100000, guid: 8b83bb97d1cd91c4199595d4750e9c4f, type: 2}
+  currentTrack: default
