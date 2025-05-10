@@ -26,7 +26,8 @@ public class PlayerData
 
     [SerializeField] private List<LIData> liData = new List<LIData>();
     [SerializeField] private int ayda;
-    
+    [SerializeField] private int figW4;
+
     [SerializeField] private List<string> awayDates;
     [SerializeField] private List<string> outdoorsDates;
     [SerializeField] private List<string> schoolDates;
@@ -62,14 +63,14 @@ public class PlayerData
 
     public PlayerData() : this("Kristen") {}
 
-    public PlayerData(string playerName) : this(playerName, "Spyre", "Intro", 1, 0, 1, 1, 0, 0, null, 0, null, null, null, null, null) {
+    public PlayerData(string playerName) : this(playerName, "Spyre", "Intro", 1, 0, 1, 1, 0, 0, null, 0, 0, null, null, null, null, null) {
         for(int i = 2; i < 8; i++){
             addLI((Character)i, 1, 0);
         }
     }
 
     public PlayerData(string playerName, string location, string scene, int week, int datesThisWeek, 
-                        int priority, int polyamPartner, int polyamActive, int polyamPair, List<LoveInterest> liQueue, int ayda,
+                        int priority, int polyamPartner, int polyamActive, int polyamPair, List<LoveInterest> liQueue, int ayda, int figW4,
                         Queue<string> awayDates, Queue<string> outdoorsDates, Queue<string> schoolDates,
                         Queue<string> mordredDates, Queue<string> elmvilleDates){
         this.playerName = playerName;
@@ -88,6 +89,7 @@ public class PlayerData
             }
         }
         this.ayda = ayda;
+        this.figW4 = figW4;
 
         this.awayDates = (awayDates != null) ? awayDates.ToList() : null;
         this.outdoorsDates = (outdoorsDates != null) ? outdoorsDates.ToList() : null;
@@ -189,6 +191,11 @@ public class PlayerData
 
     public bool getAyda(){
         return (ayda == 1 ? true : false);
+    }
+
+    public bool getFigW4()
+    {
+        return (figW4 == 1 ? true : false);
     }
 
     public List<string> getLocationQueue(Region region){

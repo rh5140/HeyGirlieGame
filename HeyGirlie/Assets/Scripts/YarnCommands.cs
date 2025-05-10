@@ -603,7 +603,7 @@ public class YarnCommands : MonoBehaviour
         LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
         FigLI figLi = (FigLI)li;
         //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
-        figLi.SetFigW4();
+        figLi.SetFigW4(true);
     }
 
     private void GetFigW4()
