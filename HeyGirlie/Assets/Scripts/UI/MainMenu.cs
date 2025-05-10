@@ -33,6 +33,10 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(AnimateMenu());
     }
 
+    void Update(){
+        // Debug.Log(Display.main.systemWidth);
+    }
+
     IEnumerator AnimateMenu(){
         yield return new WaitForSeconds(1);
 
@@ -117,8 +121,8 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        CursorManager.Instance.Load(true);
-        // SceneManager.LoadScene("Credits");
+        //CursorManager.Instance.Load(true);
+        //SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()

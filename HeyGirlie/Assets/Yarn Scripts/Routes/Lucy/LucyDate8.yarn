@@ -2,7 +2,7 @@
 ---
 <<location "Outdoors">>
 <<set $date_points = 0>>
-//<<set declare $date_points_total = #>>
+<<set $date_points_total = 6>>
 //outdoor background
 <<kristen Neutral>>
 There’s an odd nervousness in your stomach as you wait for Lucy, and it’s not just the prospect of getting to spend time with her.
@@ -66,15 +66,16 @@ You remember how limp and lifeless Lucy’s body was under your hands, compared 
 Kristen: It’s a lot.
 Lucy: Hey.
 <<char_right LucyNeutral3>>
-<<kristen Soft>>
+<<kristen Surprised>>
 Lucy takes your hand gently. She presses it over her heart.
 Lucy: What do you feel?
 Her heartbeat flutters strongly beneath your fingers, even through her clothes. You focus on it and count her pulse, breathing slowly in and out. 
 Kristen: I feel… I feel your heartbeat. 
 Lucy: Yeah. I’m alive.
+<<kristen Soft>>
 She cups your face and looks you straight in the eyes.
 Lucy: I’m <i>alive</i>, Kristen. And I plan to be for a long time, okay?
-You nod slowly, holding her gaze. The uneasiness in your limbs and chest dissipate, leaving you feeling lighter.
+You nod slowly, holding her gaze. The uneasiness in your limbs and chest dissipates, leaving you feeling lighter.
 Kristen: Thanks, Lucy. I think I feel better now. 
 Lucy: Do you want to keep going? We could go back to the park instead if it’s too much for you.
 You shake your head.
@@ -84,12 +85,14 @@ You start walking again, and you realize that Lucy hasn’t let go of your hand.
 <<char_right LucyBlush3>>
 You swing your linked hands back and forth playfully, just to see her smile. You don’t comment on the way you’re both blushing.
 Just before you reach the woods, you hear a loud squeak.
+<<kristen Surprised>>
 <<char_right LucyHappy3>>
 Kristen: Did you hear that?
 <<voiceline LucySurprised3>>
 Lucy gasps.
 Lucy: Spot!
 A grey blur streaks past you into Lucy’s waiting hands. She brings the writhing mass of fur to her face and smooches it on its forehead.
+<<kristen Neutral>>
 Lucy extends her cupped hands to show you a rat.
 Lucy: This is Spot!
 Her voice drops to a whisper.
@@ -108,6 +111,7 @@ True to her word, a few other rats approach you, noses twitching inquisitively. 
 //tree background
 <<location "Far Haven Woods">>
 <<background LucyDeathTree>>
+<<char_right LucyHappy3>>
 And soon, you and Lucy reach the tree.
 The last time you saw the tree, it was past midnight, and the dim moonlight made monsters of the shadows cast by its enormous branches.
 But in the sunlight, its height is staggering, and the complex weave of its boughs and branches is beautiful. 
@@ -137,7 +141,7 @@ In tandem, you eat a piece of the cheesecake.
 Lucy: Oh, wow.
 Kristen: Holy shit.
 The cheesecake melts in your mouth with the wispiness of cotton candy, leaving behind a frosty feeling, as though ice has dissolved on your tongue. 
-The richness of the cheese and cream lingers in your mouth. The crust balances the cake’s sweetness perfectly.
+The richness of the sesame, cheese, and cream lingers in your mouth. The crust balances the cake’s sweetness perfectly.
 -> Kristen: Marry me. I need to eat this every day for the rest of my life.
   <<char_right LucyFlirty3>>
   Lucy: You helped me make it, Kristen. You <i>have</i> the recipe.
@@ -189,7 +193,7 @@ Lucy: I am a part of this tree, this woods, just as they are a part of me.
 Lucy: I died here, and I remembered that it wasn’t so horrible. In some ways, it was even beautiful. 
 Though Lucy’s voice is soft, it rings with the same conviction as when she described her faith in Ruvina. 
 You hesitate, then ask her the question that has been plaguing you since everything happened last year.
-Kristen: What was it like for you? Dying?
+Kristen: What was it like?
 <<char_right LucyNeutral3>>
 Lucy turns her head and meets your eyes. 
 Lucy: I don’t remember the moment I was killed. But I do remember dying when you freed me.
@@ -212,8 +216,8 @@ Kristen: I’m just glad that your experience of dying was better than mine. I n
 <<kristen Grin>>
 A thought strikes you, and you grin. 
 Kristen: Although… I’m sure I could have made it better. Maybe I should talk to those fireflies.
-Lucy looks perplexed.
 <<char_right LucySurprised3>>
+Lucy looks perplexed.
 Lucy: What? 
 <<voiceline KristenHappy1>>
 Kristen: You said there were tens of thousands of fireflies, but they didn’t even try to give you a thousand hugs. 
@@ -285,7 +289,7 @@ She makes a little noise that sends your heart tripping even faster, and her han
 When you separate, you’re both breathing hard. Lucy’s cheeks are flushed, and you’re sure yours are no better.
 Kristen: Wow. <i>Wow.</i> That was. <i>Wow.</i>
 You want to smack yourself. Very eloquent, Applebees.
-Lucy licks her lips, almost sending you into a conniption. 
+Lucy licks her lips, almost giving you a heart attack. 
 <<char_right LucyJoking3>>
 Lucy: Yeah, wow. That was amazing. Almost as great as the cheesecake.
 <<kristen Surprised>>
@@ -324,6 +328,7 @@ You spend the rest of the afternoon talking, eating, laughing with Lucy — and 
 It’s only when dusk falls that that you both finally decide to pack up. You clean up slowly, lingering.
 Lucy says goodbye to the rats, and you give them all a scratch on the forehead. They really are adorable.
 //outdoor background
+<<background CityOutdoors>>
 You reach the intersection where you and Lucy have to part ways. 
 <<kristen Soft>>
 <<char_right LucyFlirty3>>

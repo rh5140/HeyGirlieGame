@@ -22,7 +22,9 @@ title: Cassandra1
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -82,7 +84,9 @@ title: Cassandra2
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -133,7 +137,9 @@ title: Cassandra3
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -189,7 +195,9 @@ title: Cassandra4
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<char_right CassandraHappy>>
@@ -246,7 +254,9 @@ title: Cassandra5
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -314,7 +324,9 @@ title: Cassandra6
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -363,7 +375,9 @@ title: Cassandra7
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Soft>>
@@ -415,18 +429,58 @@ title: Cassandra8
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
-    slay
+    <<kristen Soft>>
+    <<char_right CassandraBlush>>
+    Kristen: Thanks, Cassandra. For getting me where I needed to be.
+    <<char_right CassandraHappy>>
+    Cassandra: That was all you, Kristen! I just gave you a little nudge in the right direction.
+    Cassandra: Normally I’d ask how you think it went, but...
+    Kristen: It really couldn’t have gone any better. I mean, I genuinely can’t imagine it going any better.
+    Cassandra: I’m proud of you, Kristen. No matter what happens, you really showed up for her.
+    Cassandra: ...Kristen, did you hear what I said?
+    Kristen: Um. No, sorry. Can you teleport me to my room if I pass out?
+    Cassandra: That’s a very silly miracle to ask for. Sure.
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
-    mid
+    <<kristen Sad>>
+    <<char_right Neutral>>
+    Kristen: Cass, can we save the check-in? I’m literally about to pass out and die if I don’t get in bed immediately.
+    Cassandra: No, you’re not. You’ve got at <i>least</i> five minutes before that happens.
+    Kristen: Cassandraaaaa...
+    Cassandra: Kriiiiisten. How’d your date go?
+    Kristen: Fine, I think. Good. She said she loved me even though it was a little...
+    Cassandra: Rough?
+    Kristen: Yeah. I know I made a couple mistakes tonight, but I don’t think I totally fucked it up.
+    Cassandra: I guess we’ll see when you ask her to Spring Fling!
+    Cassandra: ...if you’re still planning to.
+    :You’re about to answer, but you yawn so widely you actually hear your jaw crack.
+    Cassandra: Yeowch. Okay, one-time miracle to get you to bed. We’ll talk in the morning.
 <<else>>
     //flop
-    flop
+    <<kristen Sad>>
+    <<char_right CassandraSad>>
+    Kristen: Go on. I know I messed up, tell me how badly.
+    Cassandra: I’m not here to yell at you, Kristen. I only ever want to help you.
+    Cassandra: Um. I know I’m supposed to say something inspiring, but I really don’t know if there’s any coming back from that.
+    <<kristen Neutral>>
+    Kristen: I mean, she still said she loved me. That has to count for something, doesn’t it?
+    <<char_right CassandraNeutral>>
+    Cassandra: Kristen... of course she loves you. I don’t think she ever stopped.
+    Cassandra: The question now is if she trusts you.
+    <<kristen Sad>>
+    Kristen: ...fuck. 
+    Kristen: I didn’t hug her, I literally <i>flinched</i>, what’s <i>wrong</i> with me? 
+    Cassandra: I’m sorry, Kristen. You can still ask her to Spring Fling? Maybe the last couple of months were enough for her to look past that.
+    <<char_right CassandraSad>>
+    Cassandra: But, um. It’s not just my domain talking when I say I doubt it.
 <<endif>>
 <<jump EndDate>>
+
 ===
 
 title: EndDate

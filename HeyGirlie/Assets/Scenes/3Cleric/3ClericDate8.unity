@@ -439,6 +439,22 @@ PrefabInstance:
       propertyPath: 'crystalUI.Array.data[5]'
       value: 
       objectReference: {fileID: 1229863944}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[0].voiceline
+      value: 
+      objectReference: {fileID: 8300000, guid: 2180aba0ef47af749a4e07dcd6fa7713, type: 3}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[1].voiceline
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b9be4f117296c449b7c9bb0419580bb, type: 3}
+    - target: {fileID: 6855213085236647753, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: voicelineArray.Array.data[1].voicelineName
+      value: vulture
+      objectReference: {fileID: 0}
     - target: {fileID: 6910515818803609811, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -575,6 +591,10 @@ PrefabInstance:
       propertyPath: yarnProject
       value: 
       objectReference: {fileID: 7545569452688597077, guid: 2a2437704b305b54b8e5f397f5c8e24f, type: 3}
+    - target: {fileID: 8827199340954882986, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8935863937163933744, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       propertyPath: voicelineArrays.Array.size
       value: 5
@@ -650,7 +670,7 @@ PrefabInstance:
       insertIndex: 6
       addedObject: {fileID: 2090484069}
     - targetCorrespondingSourceObject: {fileID: 7988057601494346702, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
-      insertIndex: 3
+      insertIndex: 2
       addedObject: {fileID: 514829164}
     - targetCorrespondingSourceObject: {fileID: 4679143672698120475, guid: dcb2ede82821ecc4897b19b79c260fb6, type: 3}
       insertIndex: -1
@@ -909,12 +929,68 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
       propertyPath: spriteArray.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 45a73fc40c19ce5468b7afd947d98828, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c70f826ff6b6b144290afdd1f3447eff, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 00543779b96aed04ead7d74c71bd2b82, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8756811ba7bf74548b3020d98b7a5fd2, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7059ae131a48d18459476570d9844ebe, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[5].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92bce04491a0fc847a99e46deef122c6, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[6].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f61497edca849840a94c02590d8415e, type: 3}
     - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
       propertyPath: spriteArray.Array.data[7].sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8f61497edca849840a94c02590d8415e, type: 3}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[0].spriteName
+      value: NaraAngry5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[1].spriteName
+      value: NaraBlush5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[2].spriteName
+      value: NaraDisgust5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[3].spriteName
+      value: NaraHappy5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[4].spriteName
+      value: NaraNeutral5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[5].spriteName
+      value: NaraThink5
+      objectReference: {fileID: 0}
+    - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
+      propertyPath: spriteArray.Array.data[6].spriteName
+      value: NaraAngry
+      objectReference: {fileID: 0}
     - target: {fileID: 491528706655918614, guid: 7fce6f264cd547e499c71b8cd66d3481, type: 3}
       propertyPath: spriteArray.Array.data[7].spriteName
       value: NaraAngry

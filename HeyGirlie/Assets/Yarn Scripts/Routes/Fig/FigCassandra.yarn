@@ -21,7 +21,9 @@ title: Cassandra1
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -96,7 +98,9 @@ title: Cassandra2
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -171,7 +175,9 @@ title: Cassandra3
 <<sfx ring>>
 <<bg_filter_on  purple>>
 <<char_right transparent>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -258,7 +264,9 @@ title: Cassandra4
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -359,7 +367,9 @@ title: Cassandra5
 <<char_right transparent>>
 <<char_left  transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -470,7 +480,9 @@ title: Cassandra6
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -566,7 +578,9 @@ title: Cassandra7
 <<char_right transparent>>
 <<char_left transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Awkward>>
@@ -685,7 +699,9 @@ title: Cassandra8
 <<char_right transparent>>
 <<char_left transparent>>
 <<bg_filter_on  purple>>
+<<cass_call  true>>
 ...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
 // slay
     <<kristen Neutral>>
@@ -798,6 +814,13 @@ title: Cassandra8
 ===
 title: Cassandra8Alt
 ---
+<<sfx ring>>
+<<char_right transparent>>
+<<char_left transparent>>
+<<bg_filter_on  purple>>
+<<cass_call  true>>
+...someone's calling...
+<<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
         <<kristen Surprised>>

@@ -2,7 +2,6 @@
 ---
 <<fade_in_ui>>
 <<kristen Neutral>>
-April 28
 :Aimless wandering! Your favorite! All these choices seem a little overwhelming, so walking around and taking everything in before you actually try something seems like the best option.
 :Strolling around the fair, you absorb all the sights and sounds (and smells. So many smells) around you. And as you walk, you notice someone else has the same strategy as you.
 <<voiceline KristenGreetingNara3>>
@@ -85,6 +84,7 @@ Nara: Hmm… alright. I must say, I did not take you for someone who preferred t
 Kristen: No yeah I love the tame stuff. I’m Team Tame all the way baby.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background Fair_Nara>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -95,5 +95,7 @@ Nara: Kristen!! I am overcome with the most uncomfortable affliction!!!!
 Kristen: Yeah that’s my bad. At least this ride only lasts five minutes.
 Nara: How much longer do we have left?!
 Kristen: Four minutes and fifty five seconds.
-<<jump EndEvent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<enable_continue>>
 ===

@@ -10,8 +10,8 @@ public class LoveInterest : MonoBehaviour
     [SerializeField] protected int _points;
     [SerializeField] protected int _successThreshold;
     [SerializeField] private int _datesForSuccess;
-
     [SerializeField] public Date[] dates;
+    [SerializeField] private string[] _locationHints;
 
     public void IncrementDateCount()
     {
@@ -51,6 +51,11 @@ public class LoveInterest : MonoBehaviour
     public void SetPoints(int points)
     {
         _points = points;
+    }
+
+    public string GetDateHint()
+    {
+        return _locationHints[_dateCount - 1];
     }
 
     // Whether Spring Fling date is successful at the end

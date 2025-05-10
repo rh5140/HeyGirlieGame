@@ -5,10 +5,10 @@
 <<location "Aguefort">>
 <<set $date_points = 0>>
 <<set $date_points_total = 11>>
-
 <<kristen Neutral>>
 You thought Kipperlilly would blow up your phone with a list of ridiculous, undoable demands within the next twenty-four hours. Instead, it takes her almost a full week to even acknowledge your existence.
 
+<<sfx vibrate>>
 <<toggleText 2Kipperlilly>>
 Kipperlilly: Library, after school. I can’t force you to be punctual but at least try to be on time, Applebees.
 <<toggleText none>>
@@ -225,10 +225,11 @@ A brilliant idea strikes you, and you pull out your crystal.
 
 <<kristen Grin>>
 <<voiceline KristenHappy3>>
-<<toggleText 2Kipperlilly>>
+<<toggleText Kristen>>
 Kristen: heyyyyyy kipperlilly :)
 <<toggleText none>>
 
+<<sfx vibrate>>
 <<char_right KipperlillyAnnoyed>>
 Kipperlilly’s crystal vibrates, and she glances at it. A beat passes, then she looks up at you, unamused.
 
@@ -238,7 +239,7 @@ She narrows her eyes at you before picking up her crystal.
 
 <<toggleText 2Kipperlilly>>
 Kipperlilly: I specifically told you not to text me.
-
+<<toggleText Kristen>>
 Kristen: u also told me not to get u kicked out of the library
 <<toggleText none>>
 
@@ -259,16 +260,15 @@ Kipperlilly pointedly stands one of her books up so it blocks her from your view
   <<char_right KipperlillyAnnoyed>>
   Kipperlilly: You are actually the worst.
   <<add_points 0>>
-
-<<char_right KipperlillyNeutral>>
 <<toggleText Kristen>>
+<<char_right KipperlillyNeutral>>
 Kristen: so
 
 Kristen: besides this how has school been :)
-
-<<char_right KipperlillyAnnoyed>>
 <<toggleText 2Kipperlilly>>
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: You are incorrigible.
+<<toggleText none>>
 
 <<kristen Soft>>
 <<voiceline KipSad1>>
@@ -284,6 +284,7 @@ Kipperlilly actually takes down her book-wall to give you a truly disgusted look
 <<kristen Neutral>>
 You mess around on your crystal for a bit, ignoring your own homework in favor of Cantrip Crush. Kipperlilly slowly relaxes, focusing on her schoolwork rather than eyeing her crystal like it’s going to bite her.
 
+<<sfx vibrate>>
 <<kristen Surprised>>
 After about ten levels, you feel something vibrate on the table. Kipperlilly immediately glares at you again, but you hold your hands up in surrender.
 
@@ -306,19 +307,23 @@ Kipperlilly: Shut the fuck up, Applebees.
 She doesn’t even bother making eye contact, typing out a rushed reply, but you simply grab your crystal.
 <<toggleText Kristen>>
 -> Kristen: “no need to be embarrassed <3”
+  <<toggleText 2Kipperlilly>>
   Kipperlilly: I’m not.
   <<add_points 1>>
 -> Kristen: “nearly your curfew?”
+  <<toggleText 2Kipperlilly>>
   Kipperlilly: It’s literally 4:30.
   <<add_points 1>>
 -> Kristen: “thats a lot of emojis for one message”
+  <<toggleText 2Kipperlilly>>
   Kipperlilly: It’s rude to look at someone else’s texts.
   <<add_points 0>>
+
 <<toggleText Kristen>>
 <<char_right KipperlillyNeutral>>
 Kristen: so whats up kip? u getting picked up or something?
-<<toggleText 2Kipperlilly>>
 
+<<toggleText 2Kipperlilly>>
 <<char_right KipperlillyAngry>>
 Kipperlilly: Don’t call me that.
 
@@ -332,8 +337,8 @@ Kristen: awwww its sweet that shes checking in
 <<voiceline KipSad1>>
 Kipperlilly scoffs and rolls her eyes before pointedly clicking her crystal off and putting it face-down on the table. 
 
+<<sfx vibrate>>
 <<kristen Neutral>> 
-<<crystal_ping true>>
 Before you can come up with another banger text to prod her with, you get a notification of your own, followed by six more. 
 
 <<kristen Happy>>
@@ -384,6 +389,7 @@ Kristen: Uh, what are you doing?
 <<char_right KipperlillySmug>>
 Kipperlilly: <i>Gloating.</i>
 
+<<sfx ring>>
 <<kristen Surprised>>
 Before you can ask what the hell that means, your crystal rings. Riz’s caller ID flashes across the screen. Oh dear.
 

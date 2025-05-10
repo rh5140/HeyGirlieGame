@@ -2,7 +2,7 @@
 ---
 <<location "Mordred Manor">>
 <<set $date_points = 0>>
-//<<set declare $date_points_total = #>>
+<<set $date_points_total = 6>>
 <<kristen Sad>>
 After three hours of staring at a blinking cursor on a blank page, trying desperately to turn the buzz in your head into usable words, you’re a shell of yourself. 
 Okay, maybe three hours is a stretch. 
@@ -46,8 +46,7 @@ Curious, you approach her and just kinda stand for a moment by the table. She do
   Kristen: I’m great! Nothing brightens my day like getting something at Basrar’s.
   Lucy: You know, I absolutely agree. 
   <<add_points 1>>
-
-->  Stay silent.
+-> <i>Stay silent.</i>
   You stand there, watching her finish writing in her notebook until you’re noticed. 
   Lucy turns slowly to stare back at you. She gives you a weirded-out look.
   <<voiceline LucyGreeting3>>
@@ -303,4 +302,5 @@ You begin working away, smiling to yourself. You can’t wait to see her soon.
 You do only get three sentences in before you’re distracted again,  but hey, that’s three more sentences than before!
 
 <<jump Cassandra2>>
+
 ===

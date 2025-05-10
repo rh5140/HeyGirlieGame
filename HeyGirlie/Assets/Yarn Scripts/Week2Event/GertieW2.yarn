@@ -34,20 +34,25 @@ She stands up straight. You swear that you can feel her joints lock up from here
 Sure, you two have made up and were no longer nemeses, but you were a fair bit away from comfortable.
 Even then, last thing you want to do is make Gertie feel weird about her excitement for cool weapons.
 <<kristen Neutral>>
-Kristen: You don’t have to worry about talking to a sword. I’d say talking to the Goddess of Mystery is a decent bit weirder.
-<<char_right GertieNeutral>>
+Kristen: You don’t have to worry about talking to a sword. I’d say talking to the Goddex of Mystery is a decent bit weirder.
+<<kristen transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<background Museum_Gertie>> 
+<<wait 2>>
+<<fade_in_ui>>
+// <<char_right GertieNeutral>>
 Gertie clears her throat as her posture softens, her eyes turning back to the glowing purple sword she was admiring.
 <<sfx sword>>
-<<Kristen transparent>>
-<<char_right transparent>>
-<<background Museum_Gertie>>
+// <<kristen Nervous>>
+// <<char_right GertieGrin>>
+Gertie: I can’t help but be so mesmerized by the weaponry! The smith work on display is nothing short of intoxicating.
+Gertie: Are you a fan of the smithing arts, Miss Applebees?
+<<fade_out_ui>>
 <<wait 2>>
 <<background Museum>>
 <<fade_in_ui>>
-<<kristen Nervous>>
 <<char_right GertieGrin>>
-Gertie: I can’t help but be so mesmerized by the weaponry! The smith work on display is nothing short of intoxicating.
-Gertie: Are you a fan of the smithing arts, Miss Applebees?  
 <<kristen Grin>>
 Kristen: Never been much of a metal person. I prefer to stick to my Staff of Doubt and these bad boys.
 <<char_right GertieBlush>>
@@ -64,8 +69,8 @@ Kristen: Can’t say I ever saw the appeal.
 As you finish the sentence, another item across the way catches Gertie’s attention as she makes a mad dash toward it.
 <<voiceline GertieRomantic4>>
 Gertie: Look at this one! Wait — this one!
-<<kristen Nervous>>
 You follow across, glancing at all the display cases. The more you see, however, the more concerned you get.
+<<sfx sword>>
 A sword that looks like it comes from a toy called “The Brick Sword,” a strange gun labeled simply as “The List,” and an array of other ominous items that send a shiver up your spine.
 But Gertie seems unwaveringly excited, bouncing from item to item.
 :You lean back and look at the label of the exhibit: “Cursed Armament”
@@ -83,8 +88,10 @@ You crack a smile.
 <<voiceline KristenHappy2>>
 Kristen: So long as I’m on this side of the glass, I think they look awesome.
 You continue to follow Gertie along down the line of weaponry. Her passion for the craft is far more interesting than any exhibit in the museum. 
-<<Kristen transparent>>
+<<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
 <<background Museum_Gertie>>
 <<enable_continue>>
 ===
