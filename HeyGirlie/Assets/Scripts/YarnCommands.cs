@@ -35,6 +35,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _splashContinueButton; // not always used
     [SerializeField] private GameObject _ui;
     [SerializeField] private CharacterSwipe _characterSwipe;
+    [SerializeField] private GameObject _mapTutorial;
 
     private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
@@ -106,7 +107,7 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("start_character_swipe", StartCharSwipe);
         dialogueRunner.AddCommandHandler<string>("end_character_swipe", EndCharSwipe);
-
+        dialogueRunner.AddCommandHandler<string>("map_tutorial", MapTutorial);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
     }
@@ -294,49 +295,6 @@ public class YarnCommands : MonoBehaviour
     private void EnableCassCrystal(bool calling)
     {
         cassCall.SetActive(calling);
-    }
-
-    private void CassPointerOn(string button)
-    {
-        switch (button)
-        {
-            case "profiles":
-                CatsandraPointers[0].SetActive(true);
-                break;
-            case "ff":
-                CatsandraPointers[1].SetActive(true);
-                break;
-            case "history":
-                CatsandraPointers[2].SetActive(true);
-                break;
-            case "save":
-                CatsandraPointers[3].SetActive(true);
-                break;
-            default: // menu
-                CatsandraPointers[4].SetActive(true);
-            break;
-        }
-    }
-    private void CassPointerOff(string button)
-    {
-        switch (button)
-        {
-            case "profiles":
-                CatsandraPointers[0].SetActive(false);
-                break;
-            case "ff":
-                CatsandraPointers[1].SetActive(false);
-                break;
-            case "history":
-                CatsandraPointers[2].SetActive(false);
-                break;
-            case "save":
-                CatsandraPointers[3].SetActive(false);
-                break;
-            default: // menu
-                CatsandraPointers[4].SetActive(false);
-                break;
-        }
     }
     #endregion UI
 
@@ -664,6 +622,7 @@ public class YarnCommands : MonoBehaviour
     }
     #endregion Background Functions
 
+    #region Tutorial Functions
     private void StartCharSwipe(string character){
         _characterSwipe.StartAnimate(GetCharacter(character));
     }
@@ -692,4 +651,55 @@ public class YarnCommands : MonoBehaviour
                 return 50;
         }
     }
+
+    private void MapTutorial(string location){
+        Enum.TryParse(location, out Region region);
+        if(location.Equals("Start")) _mapTutorial.SetActive(true);
+        else if(location.Equals("End")) _mapTutorial.GetComponent<MapTutorial>().ShowLocation(null);
+        else _mapTutorial.GetComponent<MapTutorial>().ShowLocation(region);
+    }
+
+    private void CassPointerOn(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(true);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(true);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(true);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(true);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(true);
+            break;
+        }
+    }
+    private void CassPointerOff(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(false);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(false);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(false);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(false);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(false);
+                break;
+        }
+    }
+    #endregion
 }
