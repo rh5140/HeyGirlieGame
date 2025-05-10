@@ -37,6 +37,8 @@ namespace Yarn.Unity
         [SerializeField] TextMeshProUGUI lastLineCharacterNameText;
         [SerializeField] GameObject lastLineCharacterNameContainer;
 
+        [SerializeField] GameObject dialogueBubblePrefab;
+
         // A cached pool of OptionView objects so that we can reuse them
         List<HGGOptionView> optionViewsVertical = new List<HGGOptionView>();
         List<HGGOptionView> optionViewsGrid = new List<HGGOptionView>();
@@ -258,10 +260,28 @@ namespace Yarn.Unity
 
                 IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
                 {
+                    CloneMessageBoxToHistory(selectedOption.Line);
                     yield return StartCoroutine(FadeAndDisableOptionViews(canvasGroup, 1, 0, fadeTime));
                     OnOptionSelected(selectedOption.DialogueOptionID);
                 }
             }
+        }
+
+        public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
+        {
+            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueLine.Text.Text;
+
+            var oldClone = Instantiate(
+                    dialogueBubblePrefab,
+                    dialogueBubblePrefab.transform.position,
+                    dialogueBubblePrefab.transform.rotation,
+                    dialogueBubblePrefab.transform.parent
+                );
+            dialogueBubblePrefab.transform.SetAsLastSibling();
+
+
+            // reset message box and configure based on current settings
+            dialogueBubblePrefab.SetActive(true);
         }
 
         /// <inheritdoc />

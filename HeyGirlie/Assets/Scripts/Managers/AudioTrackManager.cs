@@ -14,7 +14,10 @@ public class AudioTrackManager : MonoBehaviour
         trackDict = new Dictionary<string, AudioClip>();
         foreach (VoicelineDictionaryItem v in arr.voicelineArray)
         {
-            trackDict.Add(v.voicelineName, v.voiceline);
+            if (!trackDict.ContainsKey(v.voicelineName))
+            {
+                trackDict.Add(v.voicelineName, v.voiceline);
+            }
         }
     }
 
