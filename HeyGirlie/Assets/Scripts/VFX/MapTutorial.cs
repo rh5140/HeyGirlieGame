@@ -26,6 +26,8 @@ public class MapTutorial : MonoBehaviour
             yield return null;
         }
 
+        rect.anchoredPosition = new Vector2(0, end);
+
         if(!awake) gameObject.SetActive(false);
     }
 
