@@ -39,7 +39,7 @@ public class YarnCommands : MonoBehaviour
     private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
     private AudioSource _sfxSource;
-    private AudioSource _audioSource;
+    [SerializeField] private AudioTrackManager _atm;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
@@ -78,6 +78,7 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
+        dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -114,7 +115,6 @@ public class YarnCommands : MonoBehaviour
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
-        _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
     }
@@ -483,7 +483,7 @@ public class YarnCommands : MonoBehaviour
 
     #region Audio Functions
     /// <summary>
-    /// Supporting Yarn commands for voicelines and SFX
+    /// Supporting Yarn commands for audio
     /// </summary>    
     private void PlayVoiceline(string audioName) {
         PlayAudioByName(_voiceSource, _audioClips, audioName);
@@ -513,6 +513,11 @@ public class YarnCommands : MonoBehaviour
             audioSource.Play();
         }
         else Debug.Log("Audio asset " + audioName + " not found!");
+    }
+
+    private void PlayTrack(string audioName="default")
+    {
+        _atm.ChangeTrack(audioName);
     }
     #endregion Audio
 
