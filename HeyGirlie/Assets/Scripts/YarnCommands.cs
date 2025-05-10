@@ -34,6 +34,7 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
     [SerializeField] private GameObject _splashContinueButton; // not always used
     [SerializeField] private GameObject _ui;
+    [SerializeField] private CharacterSwipe _characterSwipe;
 
     private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
@@ -44,6 +45,8 @@ public class YarnCommands : MonoBehaviour
 
     private RectTransform _cassSprite;
     private float tick = 0, direction = 0.5f;
+    
+    public GameObject[] CatsandraPointers;
 
     #region Setup
     /// <summary>
@@ -100,6 +103,12 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<bool>("cass_call", EnableCassCrystal);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
+
+        dialogueRunner.AddCommandHandler<string>("start_character_swipe", StartCharSwipe);
+        dialogueRunner.AddCommandHandler<string>("end_character_swipe", EndCharSwipe);
+
+        dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
+        dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
     }
 
     void Start()
@@ -285,6 +294,49 @@ public class YarnCommands : MonoBehaviour
     private void EnableCassCrystal(bool calling)
     {
         cassCall.SetActive(calling);
+    }
+
+    private void CassPointerOn(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(true);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(true);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(true);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(true);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(true);
+            break;
+        }
+    }
+    private void CassPointerOff(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(false);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(false);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(false);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(false);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(false);
+                break;
+        }
     }
     #endregion UI
 
@@ -611,4 +663,33 @@ public class YarnCommands : MonoBehaviour
         bg.color = end;
     }
     #endregion Background Functions
+
+    private void StartCharSwipe(string character){
+        _characterSwipe.StartAnimate(GetCharacter(character));
+    }
+
+    private void EndCharSwipe(string character){
+        _characterSwipe.EndAnimate(GetCharacter(character));
+    }
+
+    private int GetCharacter(string character)
+    {
+        switch (character)
+        {
+            case "Fig":
+                return 5;
+            case "Gertie":
+                return 2;
+            case "Kipperlilly":
+                return 4;
+            case "Lucy":
+                return 3;
+            case "Tracker":
+                return 0;
+            case "Naradriel":
+                return 1;
+            default:
+                return 50;
+        }
+    }
 }

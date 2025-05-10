@@ -75,29 +75,41 @@ Cassandra: Oh, y’know, gods talk.
 :You hope she hasn’t revealed anything embarrassing about you. You also sincerely doubt she hasn’t revealed anything embarrassing about you.
 <<char_right CassandraNeutral>>
 <<voiceline CassNeutral1>>
+<<start_character_swipe Tracker>>
 Cassandra: Anyway, let’s see… well, obviously, Tracker is single now. Nara, too.
+<<end_character_swipe Tracker>>
+<<start_character_swipe Naradriel>>
 Kristen: Nara’s in town??
 Cassandra: Yep! She’s a foreign exchange student at BCU right now, same school as Tracker! They both hang around Elmville a lot, actually, but not together. At least, Galicaea hasn’t seen them together.
+<<end_character_swipe Naradriel>>
 :So that’s one confirmed member of the godly gossip circle. The godssip circle. Heehee.
+<<start_character_swipe Gertie>>
 Cassandra: So you could talk to either one of them! Or, well, you obviously know Gertie is single, since you…
 <<Kristen Nervous>>
 Kristen: Broke up with her? And then she declared me her nemesis? Yeah, I remember.
+<<end_character_swipe Gertie>>
 <<char_right CassandraBlush>>
 Cassandra: Well, if you’ve changed your mind about her… I’m just saying, you might get a second chance. It worked out with Ankarna and me, right?
 :Once they kissed and made up and stopped being uber-destructive rage entities… Cassandra and Ankarna got back into their “old married couple” schtick pretty dang quickly. You like to pretend it grosses you out, but you really are happy for them.
 Kristen: I’ll keep that in mind. Who else you got?
 <<char_right CassandraNeutral>>
+<<start_character_swipe Lucy>>
 Cassandra: There’s Lucy! You know Lucy. She’s in your cleric classes, my wife brought her back from the dead, et cetera et cetera… oh, and Kipperlilly is single, too!
+<<end_character_swipe Lucy>>
 <<Kristen Awkward>>
 <<voiceline KristenAngry2>>
+<<start_character_swipe Kipperlilly>>
 Kristen: Hold on. You think I should try courting <i>Kipperlilly</i>?! After she spent all of last year trying to steal the election and also LITERALLY kill me?!?! And also steal the election??????
 Cassandra: We should maybe work on your priorities a little. But, yeah! Sure, it’s a weird match on paper, but… maybe she changed after going to hell and back?
+<<end_character_swipe Kipperlilly>>
 <<Kristen Neutral>>
 Kristen: Hmph. Maybe… Wait – you said six. That was only five.
 Cassandra: Oh! Right! Well, there’s also Fig!
+<<start_character_swipe Fig>>
 Kristen: Fig’s… <i>not</i> single. Fig’s, like, <i>super</i> not single.
 :Cassandra’s grin turns super big and smug, like she knows a secret. Well, you’re sure she knows a ton of secrets. But this one might actually be about you, or Fig, or whatever.
 Cassandra: I never said she was single, I said she was <i>eligible</i>.
+<<end_character_swipe Fig>>
 :You narrow your eyes at her. She sticks her tongue out at you.
 <<Kristen Surprised>>
 <<voiceline KristenNeutral3>>
@@ -127,7 +139,7 @@ Cassandra: Then, I’ve got it on good authority that Nara will be out at the <i
 Kristen: Hope she’s not trying to beat <i>these</i> gains.
 :You flex your muscles and Cass giggles at you. You have been working out a little more lately, so you’re pretty proud of the biceps you’re sporting right now.
 :Hopefully, the ladies will be equally impressed.
-Cassandra: And that leaves Kipperlilly! She’ll be <i>downtown</i>, doing some volunteer work.
+Cassandra: And that leaves Kipperlilly! She’ll be <i>outside</i>, doing some volunteer work.
 <<Kristen Neutral>>
 <<char_right CassandraNeutral>>
 Kristen: Right. ‘Cause everything about Kipperlilly screams “upstanding citizen.”
@@ -162,6 +174,28 @@ Cassandra: So… does your heart have any first guesses for who you want to hang
     Cassandra: D’awww, I’m sure she could! You should totally show her around, you’d make a wonderful tour guide.
     <<setLIPriority 7>>
 Cassandra: Ooooh, I’m so excited for you!! This is gonna be great, you’ll see. Okay! Time for your first date!!!!
+Cassandra: I’ll leave you hints if you get stuck on where to go! Do you think you’re good, or do you want any more tips?
+-> I'm ready for my first date! (Skip tutorial).
+-> Give me the rundown!
+   Cassandra: If you want to review what I just told you about Elmville's hottest bachelorettes, I've added some notes for you.
+   <<cass_pointer_on profiles>>
+   Cassandra: Take a look!
+   <<cass_pointer_off profiles>>
+   Cassandra: If you need to jog your memory about your latest conversations, you can check the record.
+   <<cass_pointer_on history>>
+   Cassandra: See?
+   <<cass_pointer_off history>>
+   Cassandra: If you think you  need to take a break, this might just SAVE your life.
+   <<cass_pointer_on save>>
+   Cassandra: Give it a try!
+   <<cass_pointer_off save>>
+   <<cass_pointer_on menu>>
+   Cassandra: There's some other handy information in your notes -- I even put a little tab as a bookmark for you!
+   <<cass_pointer_off menu>>
+   Cassandra: If you want to be a little more hands-off, there's a neat little magic trick here.
+   <<cass_pointer_on ff>>
+   Cassandra: Though it might not be your pace.
+   <<cass_pointer_off ff>>
 Cassandra: So, what’ll it be, Kristen? Where to first?
 <<change_scene DateSelection>>
 ===
