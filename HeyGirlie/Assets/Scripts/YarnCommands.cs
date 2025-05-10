@@ -95,6 +95,9 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
 
+        dialogueRunner.AddCommandHandler("figW4_condition", SetFigW4);
+        dialogueRunner.AddCommandHandler("get_figW4", GetFigW4);
+
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
@@ -594,7 +597,24 @@ public class YarnCommands : MonoBehaviour
         _splashContinueButton.SetActive(true);
         StartCoroutine(FadeSprite(_splashContinueButton.GetComponentInChildren<Image>(), 0, 1f, 1f));
     }
-    
+
+    private void SetFigW4()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        FigLI figLi = (FigLI)li;
+        //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
+        figLi.SetFigW4();
+    }
+
+    private void GetFigW4()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        FigLI figLi = (FigLI)li;
+        //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
+        bool temp = figLi.GetFigW4();
+        _variableStorage.SetValue("$figW4", temp);
+    }
+
     #endregion Special Event
 
     #region Background Functions
