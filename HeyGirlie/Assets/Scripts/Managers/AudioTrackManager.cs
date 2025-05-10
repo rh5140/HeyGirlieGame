@@ -8,6 +8,7 @@ public class AudioTrackManager : MonoBehaviour
 
     private void Awake()
     {
+        musicSource = SettingManager.Instance.music;
         VoicelineArrayContainer arr = GetComponent<VoicelineArrayContainer>();
          // Sorry this uses voiceline dictionary which I should have named more generically...
         trackDict = new Dictionary<string, AudioClip>();
