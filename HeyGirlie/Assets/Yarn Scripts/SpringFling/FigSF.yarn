@@ -154,6 +154,8 @@ tags:
 ---
 <<fade_in_ui>>
 <<background SpringFling>>
+<<declare $figW4 = false>>
+<<get_figW4>>
 <<kristen Neutral_Fig>>
 As soon as you spot Fig, your heart hammers in your chest. You’re just staring at her like an idiot. You know you are. But how can you not? Fig looks—
 <<char_right FigBlush2>>
@@ -244,6 +246,15 @@ Fig: This is definitely going in the church pamphlet.
 <<kristen Grin_Fig>>
 Kristen: Oh yeah… Front page for sure.
 :The music blasts, but for the two of you, there is only this: a cleric and a paladin. Chosen by deities who were once lost to each other, now sitting hand-in-hand at a dumb little high school dance.
+<<if $figW4>>
+<<char_right FigNeutral2>>
+Fig: I meant what I said, you know?
+Kristen: That you hate me? You said that plenty of times recently.
+Fig: No, idiot!
+<<char_right FigBlush2>>
+<<voiceline FigSong2>>
+Fig: ♪♫ I think I’d die again to make you stay.
+<<endif>>
 <<kristen Soft_Fig>>
 You know what? Maybe the universe doesn’t always get it wrong. Sometimes, just sometimes, things line up just the way they should.
 <<kristen transparent>>
