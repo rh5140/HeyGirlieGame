@@ -35,16 +35,19 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private GameObject _splashContinueButton; // not always used
     [SerializeField] private GameObject _ui;
     [SerializeField] private CharacterSwipe _characterSwipe;
+    [SerializeField] private GameObject _mapTutorial;
 
     private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
     private AudioSource _sfxSource;
-    private AudioSource _audioSource;
+    [SerializeField] private AudioTrackManager _atm;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
     private RectTransform _cassSprite;
     private float tick = 0, direction = 0.5f;
+    
+    public GameObject[] CatsandraPointers;
 
     #region Setup
     /// <summary>
@@ -76,6 +79,7 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
+        dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -103,13 +107,15 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("start_character_swipe", StartCharSwipe);
         dialogueRunner.AddCommandHandler<string>("end_character_swipe", EndCharSwipe);
+        dialogueRunner.AddCommandHandler<string>("map_tutorial", MapTutorial);
+        dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
+        dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
     }
 
     void Start()
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
-        _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
     }
@@ -435,7 +441,7 @@ public class YarnCommands : MonoBehaviour
 
     #region Audio Functions
     /// <summary>
-    /// Supporting Yarn commands for voicelines and SFX
+    /// Supporting Yarn commands for audio
     /// </summary>    
     private void PlayVoiceline(string audioName) {
         PlayAudioByName(_voiceSource, _audioClips, audioName);
@@ -465,6 +471,11 @@ public class YarnCommands : MonoBehaviour
             audioSource.Play();
         }
         else Debug.Log("Audio asset " + audioName + " not found!");
+    }
+
+    private void PlayTrack(string audioName="default")
+    {
+        _atm.ChangeTrack(audioName);
     }
     #endregion Audio
 
@@ -611,6 +622,7 @@ public class YarnCommands : MonoBehaviour
     }
     #endregion Background Functions
 
+    #region Tutorial Functions
     private void StartCharSwipe(string character){
         _characterSwipe.StartAnimate(GetCharacter(character));
     }
@@ -639,4 +651,55 @@ public class YarnCommands : MonoBehaviour
                 return 50;
         }
     }
+
+    private void MapTutorial(string location){
+        Enum.TryParse(location, out Region region);
+        if(location.Equals("Start")) _mapTutorial.SetActive(true);
+        else if(location.Equals("End")) _mapTutorial.GetComponent<MapTutorial>().ShowLocation(null);
+        else _mapTutorial.GetComponent<MapTutorial>().ShowLocation(region);
+    }
+
+    private void CassPointerOn(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(true);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(true);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(true);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(true);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(true);
+            break;
+        }
+    }
+    private void CassPointerOff(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(false);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(false);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(false);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(false);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(false);
+                break;
+        }
+    }
+    #endregion
 }

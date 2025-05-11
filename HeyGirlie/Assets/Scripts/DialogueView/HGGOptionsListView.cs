@@ -37,8 +37,11 @@ namespace Yarn.Unity
         [SerializeField] TextMeshProUGUI lastLineCharacterNameText;
         [SerializeField] GameObject lastLineCharacterNameContainer;
 
+        [SerializeField] GameObject dialogueBubblePrefab;
+
         // A cached pool of OptionView objects so that we can reuse them
-        List<HGGOptionView> optionViews = new List<HGGOptionView>();
+        List<HGGOptionView> optionViewsVertical = new List<HGGOptionView>();
+        List<HGGOptionView> optionViewsGrid = new List<HGGOptionView>();
 
         // The method we should call when an option has been selected.
         Action<int> OnOptionSelected;
@@ -48,7 +51,7 @@ namespace Yarn.Unity
 
         public void Awake()
         {
-            SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+            SettingManager.Instance.SetOptionsListView(this, this.optionViewsVertical);
             SettingManager.Instance.UpdateOptionView();
         }
 
@@ -58,7 +61,7 @@ namespace Yarn.Unity
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
 
-            //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+            //SettingManager.Instance.SetOptionsListView(this, this.optionViewsVertical);
             //SettingManager.Instance.UpdateOptionView();
         }
 
@@ -86,10 +89,13 @@ namespace Yarn.Unity
         {
             // scrollWheel.Select();
             // If we don't already have enough option views, create more
-            if (dialogueOptions.Length > 3)
+            bool dialogueGrid = dialogueOptions.Length > 3;
+            if (dialogueGrid)
             {
                 gridLayout.gameObject.SetActive(true);
-                while (dialogueOptions.Length > optionViews.Count)
+                verticalLayout.gameObject.SetActive(false);
+
+                while (dialogueOptions.Length > optionViewsGrid.Count)
                 {
                     var optionView = CreateNewOptionView(gridLayout);
                     optionView.gameObject.SetActive(false);
@@ -99,7 +105,8 @@ namespace Yarn.Unity
             else
             {
                 verticalLayout.gameObject.SetActive(true);
-                while (dialogueOptions.Length > optionViews.Count)
+                gridLayout.gameObject.SetActive(false);
+                while (dialogueOptions.Length > optionViewsVertical.Count)
                 {
                     var optionView = CreateNewOptionView(verticalLayout);
                     optionView.gameObject.SetActive(false);
@@ -117,9 +124,9 @@ namespace Yarn.Unity
 
             for (int i = 0; i < dialogueOptions.Length; i++)
             {
-                var optionView = optionViews[i];
+                var optionView = dialogueGrid ? optionViewsGrid[i] : optionViewsVertical[i];
                 var option = dialogueOptions[i];
-                //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+                //SettingManager.Instance.SetOptionsListView(this, this.optionViewsVertical);
                 //SettingManager.Instance.UpdateOptionView();
 
                 if (option.IsAvailable == false && showUnavailableOptions == false)
@@ -220,19 +227,26 @@ namespace Yarn.Unity
 
             /// <summary>
             /// Creates and configures a new <see cref="OptionView"/>, and adds
-            /// it to <see cref="optionViews"/>.
+            /// it to <see cref="optionViewsVertical"/>.
             /// </summary>
             HGGOptionView CreateNewOptionView(Canvas layout)
             {
                 var optionView = Instantiate(optionViewPrefab);
-                //SettingManager.Instance.SetOptionsListView(this, this.optionViews);
+                //SettingManager.Instance.SetOptionsListView(this, this.optionViewsVertical);
                 //SettingManager.Instance.UpdateOptionView();
                 optionView.transform.SetParent(layout.gameObject.transform, false);
                 optionView.transform.SetAsLastSibling();
 
                 optionView.OnOptionSelected = OptionViewWasSelected;
 
-                optionViews.Add(optionView);
+                if (dialogueGrid)
+                {
+                    optionViewsGrid.Add(optionView);
+                }
+                else
+                {
+                    optionViewsVertical.Add(optionView);
+                }
 
                 return optionView;
             }
@@ -246,10 +260,28 @@ namespace Yarn.Unity
 
                 IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
                 {
+                    CloneMessageBoxToHistory(selectedOption.Line);
                     yield return StartCoroutine(FadeAndDisableOptionViews(canvasGroup, 1, 0, fadeTime));
                     OnOptionSelected(selectedOption.DialogueOptionID);
                 }
             }
+        }
+
+        public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
+        {
+            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueLine.Text.Text;
+
+            var oldClone = Instantiate(
+                    dialogueBubblePrefab,
+                    dialogueBubblePrefab.transform.position,
+                    dialogueBubblePrefab.transform.rotation,
+                    dialogueBubblePrefab.transform.parent
+                );
+            dialogueBubblePrefab.transform.SetAsLastSibling();
+
+
+            // reset message box and configure based on current settings
+            dialogueBubblePrefab.SetActive(true);
         }
 
         /// <inheritdoc />
@@ -279,7 +311,7 @@ namespace Yarn.Unity
             yield return Effects.FadeAlpha(canvasGroup, from, to, fadeTime);
 
             // Hide all existing option views
-            foreach (var optionView in optionViews)
+            foreach (var optionView in optionViewsVertical)
             {
                 optionView.gameObject.SetActive(false);
             }

@@ -51,7 +51,7 @@ public class CursorManager : MonoBehaviour
 
     void Update(){
         if(animateLock){
-            if(tick >= 45) {
+            if(tick >= 5) {
                 Cursor.SetCursor(waitCursorFrames[frame++], cursorHotspot, cursorMode);
                 if(frame >= 15) frame = 0;
                 tick = 0;
