@@ -66,7 +66,7 @@ public class Credits : Menu
     IEnumerator RunCredits(float waitTime)
     {
         int i = 0;
-        while (i < 6)
+        while (i < (pages.transform.childCount - 1))
         {
             yield return new WaitForSecondsRealtime(waitTime);
             pages.transform.GetChild(i).gameObject.SetActive(false);
