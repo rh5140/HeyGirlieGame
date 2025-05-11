@@ -80,6 +80,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
         dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
+        dialogueRunner.AddCommandHandler("fade_out_track", FadeOutTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -170,6 +171,7 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
+        //_atm.FadeOutTrack();
         _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
         // SceneManager.LoadScene(sceneName);
     }
@@ -480,6 +482,11 @@ public class YarnCommands : MonoBehaviour
     private void PlayTrack(string audioName="default")
     {
         _atm.ChangeTrack(audioName);
+    }
+
+    private void FadeOutTrack()
+    {
+        _atm.FadeOutTrack();
     }
     #endregion Audio
 
