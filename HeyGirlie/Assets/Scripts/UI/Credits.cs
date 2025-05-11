@@ -18,8 +18,8 @@ public class Credits : Menu
 
     void Start()
     {
-        // change credits page every 3 seconds
-        StartCoroutine(RunCredits(3.0f));
+        // change credits page every X seconds
+        StartCoroutine(RunCredits(2.5f));
     }
 
     void Update(){
@@ -44,24 +44,6 @@ public class Credits : Menu
             #endif
         }
     }
-
-    /*
-    // the below function is WIP, it needs a coroutine so frames change every X seconds
-    private void PageTurnAnim()
-    {
-        //enable the page turn object
-        pageTurn.SetActive(true);
-        //disable the current frame and enable the next one
-        for (int i = 0; i < 6; i++)
-        {
-            pageTurn.transform.GetChild(i).gameObject.SetActive(false);
-            if(pageTurn.transform.GetChild(i + 1) != null)
-            {
-                pageTurn.transform.GetChild(i + 1).gameObject.SetActive(true);
-            }
-        }
-    }
-    */
     
     IEnumerator RunCredits(float waitTime)
     {
@@ -69,14 +51,30 @@ public class Credits : Menu
         while (i < (pages.transform.childCount - 1))
         {
             yield return new WaitForSecondsRealtime(waitTime);
+            pageTurn.SetActive(true);
+            yield return StartCoroutine(PageTurnAnim(0.1f));
             pages.transform.GetChild(i).gameObject.SetActive(false);
             if(pages.transform.GetChild(i + 1) != null)
             {
                 pages.transform.GetChild(i + 1).gameObject.SetActive(true);
             }
+            
             i++;
         }
     }
     
-
+    IEnumerator PageTurnAnim(float waitTime)
+    {
+        int i = 0;
+        while(i < (pageTurn.transform.childCount))
+        {
+            yield return new WaitForSecondsRealtime(waitTime);
+            pageTurn.transform.GetChild(i).gameObject.SetActive(false);
+            if ((i+1) < pageTurn.transform.childCount)
+            {
+                pageTurn.transform.GetChild(i + 1).gameObject.SetActive(true);
+            }
+            i++;
+        }
+    }
 }
