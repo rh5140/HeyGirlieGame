@@ -384,6 +384,12 @@ namespace Yarn.Unity
 
         public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
         {
+            var line = dialogueLine.Text.Text;
+            if (line[0] == ':')
+            {
+                line = line.Substring(1);
+            }
+            Debug.Log(line);
             dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueLine.Text.Text;
 
             var oldClone = Instantiate(
