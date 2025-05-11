@@ -54,7 +54,8 @@ public enum EscLock
     Settings,
     Profiles,
     Credits,
-    Popup
+    Popup,
+    DialogueHistory
 }
 
 public enum CrystalUI

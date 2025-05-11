@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using Yarn.Unity;
 
-public class DialogueUIButtons : MonoBehaviour
+public class DialogueUI : Menu
 {
     [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject characterProfiles;
@@ -49,6 +49,8 @@ public class DialogueUIButtons : MonoBehaviour
         else if (Input.GetKeyUp(charProfileKey))
         {
             CharacterProfiles();
+        } else if (Input.GetKeyUp(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.DialogueHistory) {
+            CloseDialogueHistory();
         }
     }
 
@@ -79,9 +81,20 @@ public class DialogueUIButtons : MonoBehaviour
     public void DialogueHistory()
     {
         hggLineView.DialogueHistoryCompleteLine();
-        dialogueHistoryCanvas.SetActive(!dialogueHistoryCanvas.activeSelf);
-        hggLineObject.SetActive(!hggLineObject.activeSelf);
-        hggOptionsObject.SetActive(!hggOptionsObject.activeSelf);
-        gradientObject.SetActive(!gradientObject.activeSelf);
+        dialogueHistoryCanvas.SetActive(true);
+        Pause();
+        LockEsc(EscLock.DialogueHistory);
+        // hggLineObject.SetActive(false);
+        // hggOptionsObject.SetActive(false);
+        // gradientObject.SetActive(false);
+    }
+
+    public void CloseDialogueHistory(){
+        dialogueHistoryCanvas.SetActive(false);
+        Unpause();
+        UnlockEsc();
+        // hggLineObject.SetActive(true);
+        // hggOptionsObject.SetActive(true);
+        // gradientObject.SetActive(true);
     }
 }
