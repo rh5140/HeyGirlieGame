@@ -300,49 +300,6 @@ public class YarnCommands : MonoBehaviour
     {
         cassCall.SetActive(calling);
     }
-
-    private void CassPointerOn(string button)
-    {
-        switch (button)
-        {
-            case "profiles":
-                CatsandraPointers[0].SetActive(true);
-                break;
-            case "ff":
-                CatsandraPointers[1].SetActive(true);
-                break;
-            case "history":
-                CatsandraPointers[2].SetActive(true);
-                break;
-            case "save":
-                CatsandraPointers[3].SetActive(true);
-                break;
-            default: // menu
-                CatsandraPointers[4].SetActive(true);
-            break;
-        }
-    }
-    private void CassPointerOff(string button)
-    {
-        switch (button)
-        {
-            case "profiles":
-                CatsandraPointers[0].SetActive(false);
-                break;
-            case "ff":
-                CatsandraPointers[1].SetActive(false);
-                break;
-            case "history":
-                CatsandraPointers[2].SetActive(false);
-                break;
-            case "save":
-                CatsandraPointers[3].SetActive(false);
-                break;
-            default: // menu
-                CatsandraPointers[4].SetActive(false);
-                break;
-        }
-    }
     #endregion UI
 
     #region Polyam Functions
