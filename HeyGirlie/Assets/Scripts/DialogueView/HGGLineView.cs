@@ -158,7 +158,7 @@ namespace Yarn.Unity
 
         // current message bubble styling settings, modified by SetSender
         bool isRightAlignment = true;
-        Color currentBGColor = Color.black, currentTextColor = Color.white;
+        Color purple = new Color(0.4313726f, 0.2f, 0.6470588f, 1f), white = Color.white;
 
         /// <summary>
         /// A Unity Event that is called when a pause inside of the typewriter effect occurs.
@@ -371,15 +371,21 @@ namespace Yarn.Unity
         }
 
         // when we clone a new message box, re-style the message box based on whether SetSenderMe or SetSenderThem was most recently called
-        void UpdateMessageBoxSettings()
+        void UpdateMessageBoxSettings(string character)
         {
             var bg = dialogueBubblePrefab.GetComponentInChildren<Image>();
-            bg.color = currentBGColor;
             var message = dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
-            message.text = "";
-            message.color = currentTextColor;
-
-
+            // message.text = "";
+            if (character == "" || character == "Kristen")
+            {
+                bg.color = purple;
+                message.color = white;
+            }
+            else
+            {
+                bg.color = white;
+                message.color = purple;
+            }
         }
 
         public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
@@ -389,8 +395,7 @@ namespace Yarn.Unity
             {
                 line = line.Substring(1);
             }
-            Debug.Log(line);
-            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueLine.Text.Text;
+            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = line;
 
             var oldClone = Instantiate(
                     dialogueBubblePrefab,
@@ -402,8 +407,22 @@ namespace Yarn.Unity
 
 
             // reset message box and configure based on current settings
-            dialogueBubblePrefab.SetActive(true);
-            //UpdateMessageBoxSettings();
+            //dialogueBubblePrefab.SetActive(true);
+            string character = dialogueLine.CharacterName;
+            var bg = oldClone.GetComponentInChildren<Image>();
+            var message = oldClone.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+            // message.text = "";
+            if (character == "" || character == "Kristen")
+            {
+                bg.color = purple;
+                message.color = white;
+            }
+            else
+            {
+                bg.color = white;
+                message.color = purple;
+            }
+            //UpdateMessageBoxSettings(character);
         }
 
         /// <inheritdoc/>

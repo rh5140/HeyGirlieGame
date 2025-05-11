@@ -269,7 +269,7 @@ namespace Yarn.Unity
 
         public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
         {
-            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueLine.Text.Text;
+            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "SELECTED: " + dialogueLine.Text.Text;
 
             var oldClone = Instantiate(
                     dialogueBubblePrefab,
