@@ -13,7 +13,7 @@ public class DialogueUIButtons : MonoBehaviour
     [SerializeField] private GameObject optionsFFButton;
     [SerializeField] private GameObject lineFFButton;
     [SerializeField] private KeyCode saveKey, historyKey, ffKey, charProfileKey;
-    [SerializeField] private GameObject dialogueHistoryCanvas, hggLineObject, hggOptionsObject;
+    [SerializeField] private GameObject dialogueHistoryCanvas, hggLineObject, hggOptionsObject, gradientObject;
 
 
     private bool ffActive = false;
@@ -78,8 +78,10 @@ public class DialogueUIButtons : MonoBehaviour
 
     public void DialogueHistory()
     {
+        hggLineView.DialogueHistoryCompleteLine();
         dialogueHistoryCanvas.SetActive(!dialogueHistoryCanvas.activeSelf);
         hggLineObject.SetActive(!hggLineObject.activeSelf);
         hggOptionsObject.SetActive(!hggOptionsObject.activeSelf);
+        gradientObject.SetActive(!gradientObject.activeSelf);
     }
 }

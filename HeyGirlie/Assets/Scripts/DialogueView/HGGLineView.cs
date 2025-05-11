@@ -390,6 +390,7 @@ namespace Yarn.Unity
 
         public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
         {
+            dialogueBubblePrefab.SetActive(true);
             var line = dialogueLine.Text.Text;
             if (line[0] == ':')
             {
@@ -405,14 +406,14 @@ namespace Yarn.Unity
                 );
                 dialogueBubblePrefab.transform.SetAsLastSibling();
 
-
+            dialogueBubblePrefab.SetActive(false);
             // reset message box and configure based on current settings
             //dialogueBubblePrefab.SetActive(true);
             string character = dialogueLine.CharacterName;
             var bg = oldClone.GetComponentInChildren<Image>();
             var message = oldClone.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
             // message.text = "";
-            if (character == "" || character == "Kristen")
+            if (String.IsNullOrEmpty(character) || character == "Kristen")
             {
                 bg.color = purple;
                 message.color = white;
@@ -622,6 +623,16 @@ namespace Yarn.Unity
                 // scrollWheel.Select();
             }
             // EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        public void DialogueHistoryCompleteLine()
+        {
+            // We received a request to advance the view. If we're in the middle of
+            // an animation, skip to the end of it. If we're not current in an
+            // animation, interrupt the line so we can skip to the next one.
+
+            // we have no line, so the user just mashed randomly
+            lineText.maxVisibleCharacters = currentLine.Text.Text.Length;
         }
 
         /// <summary>
