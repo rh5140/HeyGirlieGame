@@ -1,7 +1,6 @@
 ﻿title: Tracker
 ---
 <<fade_in_ui>>
-<<background Museum_Tracker>>
 <<kristen Neutral>>
 :You wander in the vague direction of the college kids you’d seen sneaking in during all the chaos. If you’re lucky, there’ll be someone you know. Ragh? 
 :...Okay, you can be real with yourself. You’re hoping it’s Tracker.
@@ -38,23 +37,37 @@ Tracker: Easy, cowboy. I get it. Come look at how nasty this thing’s teeth wer
 :You’re so surprised by the feeling of her hand in yours that you don’t even think to look at what she’s so excited about until you’re there.
 <<kristen Neutral>>
 Tracker: This is kind of trippy.
+<<kristen transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<background Museum_Tracker>>
+<<wait 2>>
+<<fade_in_ui>>
 :You look at the wolf skeleton she’s brought you in front of. It’s a wolf-wolf skeleton, not a werewolf-wolf skeleton, because she looks more fascinated than furious.
 Kristen: Hey, at least this one didn’t come to life.
 Tracker: What?
 Kristen: Don’t worry about it.
+<<voiceline TrackerNeutral3>>
 Tracker: Uh… sure, okay. It’s just… I’m used to seeing human skeletons, but I’ve never seen a wolf one like this. It’s kind of weird.
 Kristen: Bad weird? We can leave.
 Tracker shakes her head.
 Tracker: Just weird-weird. Not good or bad.
 :You’re not super sure what to say here. Would it be weird if you called it pretty? It would definitely be weird if you called it pretty.
 :She makes a face at it,  ridiculous enough that you know she’s trying to make you laugh over anything else.
+<<voiceline KristenHappy2>>
 :Obviously, it works. But you can sense that there’s a little sadness there, too, beneath the silly expression, and Tracker raises an eyebrow at the sudden change in your mood.
 Tracker: What, a werewolf can’t make a face at her local museum’s wolf skeleton? For shame, Applebees.
 Kristen: Me? Shame someone for a silly face? Political suicide, O'Shaughnessey. My constituents would never elect me again.
+<<voiceline KristenRomanticTracker1>>
 Kristen: But also, um… if you just wanna sit in silence and have a weird-weird moment, I’m here for that too, you know?
 :Tracker’s face softens into an expression you haven’t seen on her since before she left. Your heart skips a beat.
 Tracker: Good to know. But, for the record…
 :She makes the face again. You, predictable as ever, laugh at it again.
+<<voiceline TrackerDateSuccess1>>
 Tracker: Sometimes I really do just want to make you laugh, too.
+<<fade_out_ui>>
+<<wait 2>>
+<<background Museum_Tracker>>
+<<enable_continue>>
 <<jump EndEvent>>
 ===

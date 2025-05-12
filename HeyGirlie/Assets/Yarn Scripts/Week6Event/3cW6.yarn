@@ -1,7 +1,6 @@
 ﻿title: 3C
 ---
 <<fade_in_ui>>
-<<background ActivitiesFair_3C>>
 <<kristen Neutral>>
 <<char_left TrackerHappy_1>>
 <<char_right NaraNeutral>>
@@ -11,7 +10,7 @@ Tracker: Kristen! Over here!
 Nara: Kristen! I did not know Solace had developed magic specifically tailored to destroy food!
 :Tracker snorts.
 Tracker: She had one bite of fried food.
-<<char_right NaraDisgust1>>
+<<char_right NaraDisgust>>
 :Nara shudders.
 Tracker: Kristen, have you been to one of these fairs before?
 Kristen: Uh… no, not really.
@@ -40,7 +39,7 @@ Nara: Kristren! Your lactose hypertolerance! We must judge the cheese contest! A
 :You try and fail to think of a way to explain to Nara that this was a bit that’s gone too far. Tracker is visibly holding back laughter at your expense and definitely isn’t going to help you.
 <<kristen Neutral>>
 Kristen: I… can restrain myself to a couple bites.
-<<char_right NaraNeutral1>>
+<<char_right NaraNeutral>>
 :Through the power of diplomatic skills and also helpfully happening to be an actual real life princess, Nara ends up as an actual judge for the contest. 
 :The two women sitting next to her at the judging table keep shooting each other ‘WTF’ looks, but she pays them no mind, completely serene.
 <<char_left TrackerNeutral_1>>
@@ -83,13 +82,14 @@ Kristen: Um, any second now…
 <<kristen transparent>>
 <<char_right transparent>>
 <<char_left transparent>>
-<<background PLACEHOLDER SPLASH ART>>
+<<fade_out_ui>>
+<<background ActivitiesFair_3C>>
 <<wait 2>>
 <<fade_in_ui>>
 :All the lights of the fair come on at once.
 :You expect some sort of witty banter, but instead, a comfortable quiet falls over all of you. Tracker’s warm against you, and Nara smiles sweetly at you when you glance at her.
 :You enjoy the lights of the fair, the most you’d ever experienced of it before today. This time, it doesn’t feel so lonely.
-<<enable_continue>>
+<<fade_out_ui>>
 <<wait 2>>
-<<jump EndEvent>>
+<<enable_continue>>
 ===

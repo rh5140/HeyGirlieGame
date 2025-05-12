@@ -21,11 +21,9 @@ title: Cassandra1
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -84,11 +82,9 @@ title: Cassandra2
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -138,11 +134,9 @@ title: Cassandra3
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -197,11 +191,9 @@ title: Cassandra4
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<char_right CassandraHappy>>
@@ -257,11 +249,9 @@ title: Cassandra5
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -328,11 +318,9 @@ title: Cassandra6
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -380,11 +368,9 @@ title: Cassandra7
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Soft>>
@@ -402,7 +388,8 @@ title: Cassandra7
     Kristen: Maybe. I think she’ll say yes. I hope I know her well enough to know that, by this point.
     Cassandra: Well enough to figure out where she is next week?
     <<kristen Nervous>>
-    Kristen: I hope so!
+    Kristen: I hope so! I <i>think</i> so. Uh, are you still leaving me hints on post-its?
+    Cassandra: Of course! What are goddexes for?
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
     <<kristen Neutral>>
@@ -414,6 +401,7 @@ title: Cassandra7
     Kristen: Huh, okay. I trust you.
     <<char_right CassandraHappy>>
     Cassandra: Aw, really?
+    Cassandra: Plus, there’s always the post-it if you get stuck!
 <<else>>
     //flop
     <<kristen Sad>>
@@ -424,8 +412,8 @@ title: Cassandra7
     Cassandra: Listen, it’s not a lost cause. Probably.
     Kristen: Probably?!
     Cassandra: Just be there for Tracker. <i>Really</i> be there.
-    Cassandra: She wants to let you in, you just have to show you’re willing to be there for her.
-    Cassandra: So... be there!
+    Cassandra: She wants to let you in, you just have to show you’re willing to actually show up for her when she needs you.
+    Cassandra: So... be there! I’ve left a hint if you get stuck, so no excuses, Applebees.
 <<endif>>
 <<jump EndDate>>
 ===
@@ -435,11 +423,9 @@ title: Cassandra8
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 ...someone's calling...
-<<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Soft>>
@@ -488,7 +474,6 @@ title: Cassandra8
     Cassandra: But, um. It’s not just my domain talking when I say I doubt it.
 <<endif>>
 <<jump EndDate>>
-
 ===
 
 title: EndDate
@@ -497,7 +482,6 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
-    <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<change_scene Week2Event>>
