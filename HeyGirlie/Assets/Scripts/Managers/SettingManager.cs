@@ -47,6 +47,7 @@ public class SettingManager : MonoBehaviour
     public void ChangeVolMusic(float value){
         volMusic = value;
         music.volume = value;
+        GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().UpdateVolume(value);
     }
 
     public void ChangeVolSFX(float value){
