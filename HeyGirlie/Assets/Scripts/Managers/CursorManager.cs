@@ -31,7 +31,7 @@ public class CursorManager : MonoBehaviour
     [SerializeField] private Texture2D[] cursors;
     [SerializeField] private Texture2D[] waitCursorFrames;
     [SerializeField] private CursorMode cursorMode = CursorMode.Auto;
-    [SerializeField] private Vector2 cursorHotspot = Vector2.one;
+    [SerializeField] private Vector2 cursorHotspot;
     [SerializeField] private float prevCursor = 0;
     [SerializeField] private bool animateLock = false;
 

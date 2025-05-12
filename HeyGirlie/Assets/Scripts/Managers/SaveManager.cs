@@ -69,6 +69,7 @@ public static class SaveManager
             // List<int[]> lis = data.getLIs();
             GameManager.Instance.SetLiQueue(data.getLIs());
             GameManager.Instance.SetAyda(data.getAyda());
+            GameManager.Instance.SetFigW4(data.getFigW4());
 
             GameManager.Instance.SetLocationQueues(data.getLocationQueue(Region.Away), data.getLocationQueue(Region.Outdoors),
                                                     data.getLocationQueue(Region.School), data.getLocationQueue(Region.Mordred), 

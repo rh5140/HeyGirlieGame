@@ -80,6 +80,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
         dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
+        dialogueRunner.AddCommandHandler("fade_out_track", FadeOutTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -96,6 +97,9 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
 
+        dialogueRunner.AddCommandHandler("figW4_condition", SetFigW4);
+        dialogueRunner.AddCommandHandler("get_figW4", GetFigW4);
+
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
@@ -107,6 +111,7 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("start_character_swipe", StartCharSwipe);
         dialogueRunner.AddCommandHandler<string>("end_character_swipe", EndCharSwipe);
+
         dialogueRunner.AddCommandHandler<string>("map_tutorial", MapTutorial);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
@@ -166,6 +171,7 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
+        //_atm.FadeOutTrack();
         _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
         // SceneManager.LoadScene(sceneName);
     }
@@ -477,6 +483,11 @@ public class YarnCommands : MonoBehaviour
     {
         _atm.ChangeTrack(audioName);
     }
+
+    private void FadeOutTrack()
+    {
+        _atm.FadeOutTrack();
+    }
     #endregion Audio
 
     #region Special Event Functions
@@ -552,7 +563,24 @@ public class YarnCommands : MonoBehaviour
         _splashContinueButton.SetActive(true);
         StartCoroutine(FadeSprite(_splashContinueButton.GetComponentInChildren<Image>(), 0, 1f, 1f));
     }
-    
+
+    private void SetFigW4()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        FigLI figLi = (FigLI)li;
+        //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
+        figLi.SetFigW4(true);
+    }
+
+    private void GetFigW4()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        FigLI figLi = (FigLI)li;
+        //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
+        bool temp = figLi.GetFigW4();
+        _variableStorage.SetValue("$figW4", temp);
+    }
+
     #endregion Special Event
 
     #region Background Functions

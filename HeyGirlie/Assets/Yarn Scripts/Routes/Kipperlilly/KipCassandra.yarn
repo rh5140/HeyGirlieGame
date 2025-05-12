@@ -24,6 +24,7 @@ title: Cassandra1
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -89,6 +90,7 @@ title: Cassandra2
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -154,6 +156,7 @@ title: Cassandra3
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Neutral>>
@@ -224,6 +227,7 @@ title: Cassandra4
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
 <<kristen Happy>>
@@ -292,6 +296,7 @@ title: Cassandra5
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
 <<kristen Neutral>>
@@ -355,6 +360,7 @@ title: Cassandra6
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Soft>>
@@ -415,6 +421,7 @@ title: Cassandra7
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
     <<kristen Sad>>
@@ -482,6 +489,7 @@ title: Cassandra8
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<kristen Soft>>
 <<char_right CassandraNeutral>>
 <<voiceline CassGreeting2>>
@@ -523,6 +531,7 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
+    <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<change_scene Week2Event>>

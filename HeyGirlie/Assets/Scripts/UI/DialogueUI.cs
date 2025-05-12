@@ -32,25 +32,19 @@ public class DialogueUI : Menu
         // }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyUp(saveKey))
-        {
-            Save();
-        }
-        else if (Input.GetKeyUp(historyKey))
-        {
-            DialogueHistory();
-        }
-        else if (Input.GetKeyUp(ffKey))
-        {
-            FastForward();
-        }
-        else if (Input.GetKeyUp(charProfileKey))
-        {
-            CharacterProfiles();
-        } else if (Input.GetKeyUp(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.DialogueHistory) {
-            CloseDialogueHistory();
+    void Update(){
+        if(!GameManager.Instance.pauseLock){
+            if(Input.GetKeyUp(saveKey)) {
+                Save();
+            } else if(Input.GetKeyUp(historyKey)) {
+                DialogueHistory();
+            } else if(Input.GetKeyUp(ffKey)) {
+                FastForward();
+            } else if(Input.GetKeyUp(charProfileKey)) {
+                CharacterProfiles();
+            } else if (Input.GetKeyUp(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.DialogueHistory) {
+                CloseDialogueHistory();
+            }
         }
     }
 

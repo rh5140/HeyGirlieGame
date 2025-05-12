@@ -2447,6 +2447,7 @@ MonoBehaviour:
   stickerShadow: {fileID: 1899225628}
   saveGalleryMenu: {fileID: 6524237873561504882, guid: 17e93610f1d6cf447a0f9a5a1ab8d6d9, type: 3}
   settingsMenu: {fileID: 1757103797310101717, guid: 5335224bf8447464b9f71a65658f5d9c, type: 3}
+  creditsMenu: {fileID: 2873726535391717469, guid: 888b7c5ec61191f45a89f0e85599658b, type: 3}
   newGamePopup: {fileID: 1950247321}
   maxProfilePopup: {fileID: 180769493}
   playerName: {fileID: 294629292}
@@ -2477,6 +2478,71 @@ MonoBehaviour:
   arrowKeyPrevious: {fileID: 0}
   upDown: 0
   leftRight: 0
+--- !u!1001 &1897989224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 718.79395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 265.5777
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2797644
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734760218183029219, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462525527514952745, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: fadeInOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462525527514952745, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: fade_in_at_start
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214437460800445301, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: m_Name
+      value: AudioTrackManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
 --- !u!1 &1899225626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,6 +3665,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 862776319}
     - target: {fileID: 6068026243883579466, guid: c6460511b5375c946a72fbeb6483bc73, type: 3}
+      propertyPath: cursorHotspot.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068026243883579466, guid: c6460511b5375c946a72fbeb6483bc73, type: 3}
+      propertyPath: cursorHotspot.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068026243883579466, guid: c6460511b5375c946a72fbeb6483bc73, type: 3}
       propertyPath: _settingsManager
       value: 
       objectReference: {fileID: 628535353}
@@ -3742,4 +3816,5 @@ SceneRoots:
   - {fileID: 862776322}
   - {fileID: 93855155}
   - {fileID: 6888259811504002904}
+  - {fileID: 1897989224}
   - {fileID: 6216454430890734588}
