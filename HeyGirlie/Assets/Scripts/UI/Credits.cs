@@ -40,7 +40,7 @@ public class Credits : Menu
         Destroy(creditsMenu);
     }
     
-    IEnumerator RunCredits(float waitTime)
+    protected IEnumerator RunCredits(float waitTime)
     {
         while (leftPageBefore.childCount > 0)
         {
