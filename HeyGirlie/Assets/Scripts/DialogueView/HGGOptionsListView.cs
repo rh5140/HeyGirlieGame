@@ -38,6 +38,7 @@ namespace Yarn.Unity
         [SerializeField] GameObject lastLineCharacterNameContainer;
 
         [SerializeField] GameObject dialogueBubblePrefab;
+        Color purple = new Color(0.4313726f, 0.2f, 0.6470588f, 1f), white = Color.white;
 
         // A cached pool of OptionView objects so that we can reuse them
         List<HGGOptionView> optionViewsVertical = new List<HGGOptionView>();
@@ -269,6 +270,12 @@ namespace Yarn.Unity
 
         public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
         {
+            dialogueBubblePrefab.SetActive(true);
+            var line = dialogueLine.Text.Text;
+            if (line[0] == ':')
+            {
+                line = line.Substring(1);
+            }
             dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "SELECTED: " + dialogueLine.Text.Text;
 
             var oldClone = Instantiate(
@@ -279,9 +286,23 @@ namespace Yarn.Unity
                 );
             dialogueBubblePrefab.transform.SetAsLastSibling();
 
-
+            dialogueBubblePrefab.SetActive(false);
             // reset message box and configure based on current settings
-            dialogueBubblePrefab.SetActive(true);
+            //dialogueBubblePrefab.SetActive(true);
+            string character = dialogueLine.CharacterName;
+            var bg = oldClone.GetComponentInChildren<Image>();
+            var message = oldClone.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+            // message.text = "";
+            if (String.IsNullOrEmpty(character) || character == "Kristen")
+            {
+                bg.color = purple;
+                message.color = white;
+            }
+            else
+            {
+                bg.color = white;
+                message.color = purple;
+            }
         }
 
         /// <inheritdoc />
