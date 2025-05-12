@@ -151,6 +151,7 @@ namespace Yarn.Unity.Example
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
             currentLine = dialogueLine;
+            Debug.Log(dialogueLine.TextWithoutCharacterName.Text);
             if (dialogueLine.CharacterName == "Kristen")
             {
                 isRightAlignment = true;
@@ -183,31 +184,31 @@ namespace Yarn.Unity.Example
             }
         }
 
-        public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
-        {
-            foreach (Transform child in optionsContainer.transform)
-            {
-                Destroy(child.gameObject);
-            }
+        //public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
+        //{
+        //    foreach (Transform child in optionsContainer.transform)
+        //    {
+        //        Destroy(child.gameObject);
+        //    }
 
-            optionsContainer.SetActive(true);
+        //    optionsContainer.SetActive(true);
 
-            for (int i = 0; i < dialogueOptions.Length; i++)
-            {
-                DialogueOption option = dialogueOptions[i];
-                var optionView = Instantiate(optionPrefab);
+        //    for (int i = 0; i < dialogueOptions.Length; i++)
+        //    {
+        //        DialogueOption option = dialogueOptions[i];
+        //        var optionView = Instantiate(optionPrefab);
 
-                optionView.transform.SetParent(optionsContainer.transform, false);
+        //        optionView.transform.SetParent(optionsContainer.transform, false);
 
-                optionView.Option = option;
+        //        optionView.Option = option;
 
-                optionView.OnOptionSelected = (selectedOption) =>
-                {
-                    optionsContainer.SetActive(false);
-                    onOptionSelected(selectedOption.DialogueOptionID);
-                };
-            }
-        }
+        //        optionView.OnOptionSelected = (selectedOption) =>
+        //        {
+        //            optionsContainer.SetActive(false);
+        //            onOptionSelected(selectedOption.DialogueOptionID);
+        //        };
+        //    }
+        //}
     }
 
 }

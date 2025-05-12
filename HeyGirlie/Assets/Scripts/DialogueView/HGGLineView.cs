@@ -150,6 +150,16 @@ namespace Yarn.Unity
         [SerializeField]
         internal UnityEngine.Events.UnityEvent onCharacterTyped;
 
+        public GameObject dialogueBubblePrefab;
+
+        bool isFirstMessage = true;
+
+        public GameObject dialogueHistoryCanvas;
+
+        // current message bubble styling settings, modified by SetSender
+        bool isRightAlignment = true;
+        Color purple = new Color(0.4313726f, 0.2f, 0.6470588f, 1f), white = Color.white;
+
         /// <summary>
         /// A Unity Event that is called when a pause inside of the typewriter effect occurs.
         /// </summary>
@@ -360,6 +370,62 @@ namespace Yarn.Unity
             onInterruptLineFinished();
         }
 
+        // when we clone a new message box, re-style the message box based on whether SetSenderMe or SetSenderThem was most recently called
+        void UpdateMessageBoxSettings(string character)
+        {
+            var bg = dialogueBubblePrefab.GetComponentInChildren<Image>();
+            var message = dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+            // message.text = "";
+            if (character == "" || character == "Kristen")
+            {
+                bg.color = purple;
+                message.color = white;
+            }
+            else
+            {
+                bg.color = white;
+                message.color = purple;
+            }
+        }
+
+        public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
+        {
+            dialogueBubblePrefab.SetActive(true);
+            var line = dialogueLine.Text.Text;
+            if (line[0] == ':')
+            {
+                line = line.Substring(1);
+            }
+            dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = line;
+
+            var oldClone = Instantiate(
+                    dialogueBubblePrefab,
+                    dialogueBubblePrefab.transform.position,
+                    dialogueBubblePrefab.transform.rotation,
+                    dialogueBubblePrefab.transform.parent
+                );
+                dialogueBubblePrefab.transform.SetAsLastSibling();
+
+            dialogueBubblePrefab.SetActive(false);
+            // reset message box and configure based on current settings
+            //dialogueBubblePrefab.SetActive(true);
+            string character = dialogueLine.CharacterName;
+            var bg = oldClone.GetComponentInChildren<Image>();
+            var message = oldClone.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+            // message.text = "";
+            if (String.IsNullOrEmpty(character) || character == "Kristen")
+            {
+                bg.color = purple;
+                message.color = white;
+            }
+            else
+            {
+                bg.color = white;
+                message.color = purple;
+            }
+            //UpdateMessageBoxSettings(character);
+        }
+
         /// <inheritdoc/>
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
@@ -480,6 +546,9 @@ namespace Yarn.Unity
             }
             currentLine = dialogueLine;
 
+
+            CloneMessageBoxToHistory(currentLine);
+
             // Run any presentations as a single coroutine. If this is stopped,
             // which UserRequestedViewAdvancement can do, then we will stop all
             // of the animations at once.
@@ -554,6 +623,17 @@ namespace Yarn.Unity
                 // scrollWheel.Select();
             }
             // EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        public void DialogueHistoryCompleteLine()
+        {
+            // We received a request to advance the view. If we're in the middle of
+            // an animation, skip to the end of it. If we're not current in an
+            // animation, interrupt the line so we can skip to the next one.
+
+            // we have no line, so the user just mashed randomly
+            if (currentLine == null) return;
+            lineText.maxVisibleCharacters = currentLine.Text.Text.Length;
         }
 
         /// <summary>
