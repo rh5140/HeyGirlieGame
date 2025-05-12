@@ -593,6 +593,7 @@ namespace Yarn.Unity
         /// <inheritdoc/>
         public override void UserRequestedViewAdvancement()
         {
+            if (GameManager.Instance.menuOpen) return;
             // We received a request to advance the view. If we're in the middle of
             // an animation, skip to the end of it. If we're not current in an
             // animation, interrupt the line so we can skip to the next one.

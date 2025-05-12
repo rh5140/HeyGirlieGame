@@ -39,7 +39,8 @@ public class Settings : Menu
 
     protected IEnumerator WaitAwake(){
         LockEsc(EscLock.Settings);
-        Pause();
+        Pause(); // Game is already paused when this is called, so nothing happens. The game unpauses when dropdown is destroyed.
+        GameManager.Instance.menuOpen = true;
 
         if(SettingManager.Instance.fastForwardActive){
             speedSlider.interactable = false;
@@ -69,6 +70,7 @@ public class Settings : Menu
     }
 
     void OnDestroy(){
+        GameManager.Instance.menuOpen = false;
         Unpause();
         UnlockEsc();
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
