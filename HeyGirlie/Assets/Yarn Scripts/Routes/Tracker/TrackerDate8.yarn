@@ -1,8 +1,8 @@
 ﻿title: Date8
 ---
-<<location "Elmville Outdoors">> // You can use a more specific location name
+<<location "Elmville Outdoors">>
 <<set $date_points = 0>>
-<<set $date_points_total = 10>>
+<<set $date_points_total = 16>>
 <<kristen Neutral>>
 :Here’s the thing about making impulsive, arguably insane decisions on a regular basis: you never get better at telling when they’re going to pay off. 
 :And this time, it’s beyond important you get it right.
@@ -21,10 +21,12 @@
 :You can’t see the sun, already set past the trees, but you can see the moon — not quite fully risen yet, what with the last vestiges of sunset still turning the sky pink, but unmistakably full.
 :You know you’re in the right place now. You can wait.
 <<char_right TrackerSurprised_1>>
+<<voiceline TrackerConfused1>>
 Tracker: Kristen? What are you doing here?!
 Wow, you really thought you were going to have to wait longer than that.
--> Uh, just walking around!
+-> “Uh, just walking around!”
     <<char_right TrackerAngry_1>>
+   <<voiceline TrackerAngry3>>
     :She narrows her eyes and glares at you, managing to look both incredibly anxious and deeply unimpressed.
     <<kristen Sad>>
     :You know this look well.
@@ -33,7 +35,7 @@ Wow, you really thought you were going to have to wait longer than that.
     Tracker: I guess you’re here now, though.
     <<kristen Neutral>>
     <<add_points 0>>
--> I came looking for you, of course. You had me worried!
+-> “I came looking for you, of course. You had me worried!”
     <<char_right TrackerNeutral_1>>
     Tracker: I’m not a child, you don’t have to worry about me. I can handle myself.
     Tracker: But… well, it is sweet that you’re here.
@@ -42,13 +44,14 @@ Wow, you really thought you were going to have to wait longer than that.
     Tracker: Don’t push your luck.
     <<kristen Neutral>>
     <<add_points 1>>
--> I’m here to help, if you’ll let me. Please let me.
+-> “I’m here to help, if you’ll let me. Please let me.”
     <<char_right TrackerHappy_1>>
     :Her face softens considerably, at that. She gives you a small, watery grin.
     Tracker: ...Yeah. Yeah, okay. I guess it'll make up for all those times I've come to your rescue, huh?
     <<kristen Soft>>
     Kristen: Oh, so it’s like that?
     <<char_right TrackerBlush_1>>
+    <<voiceline TrackerRomantic1>>
     Tracker: Oh, it’s like that.
     Tracker: Seriously, though... thanks for being here. Even if I didn't think I wanted you to be.
     <<add_points 2>>
@@ -171,6 +174,7 @@ Tracker: Yeah?
 Kristen: Will it, um… hurt? When you turn?
 :It looked like it hurt in Sylvaire, but that was Sylvaire. But you never asked, all those other times. Why didn’t you ask? Why didn’t you care enough?
 :Get out of your head, Kristen. You’re asking now. You’re caring now. Stay in the moment – if not for your own sake, then for hers.
+<<voiceline TrackerSad2>>
 :Tracker sighs.
 Tracker: I hope not.
 Kristen: Four barks for if you need healing?
@@ -193,11 +197,13 @@ You recognise that look in Tracker’s eyes. She’s nervous. About what she’s
     :So of course you open your arms to her. How could you do anything else?
     :She trots right over and leans her full body weight against you, letting you wrap her into a hug.
     :Her tail’s wagging a little bit, too. Aw.
-    <<add_points 4>>
+    <<add_points 5>>
 -> Hesitate.
-    :It’s only for a second, you swear. Yes, obviously it’s still <i>her,</i> but this - a version of Tracker with a face you can’t instantly recognize? It makes you freeze in a way you can’t fully seem to rationalize.
-    :You know she sees it. Her whole body seems to slump with disappointment. Sure, she perks up a little when you do open your arms, just a moment later.
-    :But she still feels a little tense when you hug her, like she’s not able to just relax and trust you.
+    :It’s only for a second, you swear. Yes, obviously it’s still <i>her,</i> just - this has always been the version of Tracker you have the least experience with, and that knowledge makes you freeze in a way you can’t rationalize even to yourself.
+    :It’s only for a second. But Tracker takes a half-step back, radiating disappointment and hurt. You have to fix this.
+    Kristen: No, ignore that, I was being dumb. It's okay. Come here.
+    :You open your arms. After a moment, she trots over and lets you wrap her into a hug. Even perks up a little.
+    :But she still feels a little tense, like she’s not able to just relax and trust you.
     <<add_points 0>>
 :For a long while, you just sit and hold her, petting her idly and watching the sky as it gets darker and stars start shining through.
 :The full moon makes it bright enough that you can see every detail of Tracker’s wolf form.
@@ -290,18 +296,17 @@ Kristen: I mean, I like seeing <i>all</i> sides of you.
 :Tracker waggles her eyebrows, which looks way weirder when she’s wolfed out.
 Kristen: Not like that! Well, also like that, sure.
 Kristen: But…
-:You pause as you try to figure out how to phrase what you mean. Tracker waits patiently.
-Kristen: I always saw you as so calm and confident.
-:Tracker snorts.
-Kristen: I mean it! You seemed so completely in your element everywhere we went — the Black Pit, in Strongtower, all those pride events. And there I was, hiding in the bathroom. Just happy to be there, y’know?
+:You pause as you try to figure out how to phrase what you mean.
+Kristen: I guess I’ve been thinking a lot about the ways things used to be?
+Kristen: Like, no matter where we’d go, you always seemed so completely in your element - at the Black Pit, in Strongtower, all those pride events. And there I was, hiding in the bathroom. Just happy to be there.
+:Your voice, thankfully, only barely cracks. Tracker gives you a comforting head bump to the shoulder.
+Kristen: Thanks. Yeah, I was a <i>mess.</i> In a ton of ways. I made mistakes. I hurt you by not understanding there could be more to things than the way I saw them. I’m still not as put together as you are. 
+Kristen: But I guess I’m trying to say… you don’t <i>have</i> to be either? Put together, that is. I don’t always have to be silly, you don’t always have to be serious.
 :You give her a wry smile.
-Kristen: Yeah, I was a <i>mess.</i> In a ton of ways. I’m still not as put together as you are. But I guess I’m trying to say... you don’t have to be?
-Kristen: Put together, I mean. You can relax.
-Kristen: I don’t always have to be silly, you don’t always have to be serious. 
-Kristen: Which I think you know. I mean, we went to a centaur rodeo. But I just… I wanted to say it.
-Kristen: Or I wanted you to hear it. Both, I guess.
+Kristen: Which I think you know. I mean, the first thing we did when we were both not calling these dates, but also not <i>not</i> calling these dates, was go to a centaur rodeo. But I just… I wanted to say it.
+Kristen: Or, I wanted you to hear it? Both, I guess. 
 :There’s silence. Tracker can’t answer you, so you don’t blame her, but you have to resist the urge to make another joke, just to break the tension.
-:Tracker nuzzles your hand with her snout and adjusts so she’s fully cuddling with you.
+:Tracker nuzzles your hand with her snout, then adjusts her position so she’s fully cuddling against you.
 Kristen: Your fur is <i>so</i> soft. Do you shampoo it or something?
 :Tracker barks twice.
 <<kristen Neutral>>
@@ -326,11 +331,11 @@ Kristen: I’m lost, dude.
 Kristen: You… want back scritches?
 :Tracker makes a choked noise, clearly caught between frustration and laughter. She then proceeds to lay, paws first, completely flat against the ground, staring expectantly at you. 
 :You… also lay down on the ground. Is this what she wants?
-Tracker does her best wolfy approximation of an eye roll, and quicker than you can react to, she’s barreling at you. 
+Tracker does her best wolfy approximation of an eye roll. Then, way quicker than you can react, she’s barreling in your direction.
 -> Flinch.
     :She’s just so <i>fast.</i> You see her flying at you, all fur and muscle and glinting teeth, and while your brain knows this is Tracker, that Tracker would never hurt you, your body moves on instinct. 
     :You... recoil.
-    :Her feet dig into the dirt, stopping an inch short of where you were, and her expression makes you regret everything. She wasn’t baring her teeth - she was <i>smiling.</i>
+    :Her feet dig into the dirt, stopping an inch short of where you were, and her expression… oh, Cassandra. She wasn’t baring her teeth - she was <i>smiling.</i>
     :She’s not smiling anymore.
     :You can make it up to her. You <i>have to</i> make it up to her. You get back on the ground and close your eyes, and feel her gently, carefully, scoop you up with her nose.
     :You’re on her back now. She still feels a little tense. You know it’s your fault.  
@@ -341,7 +346,7 @@ Tracker does her best wolfy approximation of an eye roll, and quicker than you c
     :At the last second, her head tilts downward, nosing under your body and lifting you into the air.
     :For a single moment, you’re flying, weightless, surrendering yourself completely to the sky and the moon and the night - and then suddenly, you’ve landed on her back. She lets loose a loud, joyful howl.
     :Holy fuck you’re on top of a werewolf. You’re on top of <i>your</i> werewolf. There’s definitely a dirty joke there, but you’re so happy you won’t even make it. This rules.
-    <<add_points 2>>
+    <<add_points 5>>
 :So this is what she wanted. Her little game of charades makes way more sense now. 
 :You shuffle into a comfortable position, and instinctively wrap your arms around her midsection.
 :Good thing, too, cause she’s off to the races. As soon as she feels your grip, she’s bolting through the woods with all the speed of a massive, furry freight train.
@@ -357,44 +362,46 @@ Kristen: I just wanted to say I’m glad we found each other again. That’s all
 :Impulsively, you duck down and press a small, swift kiss to the back of her fur. Somehow, you still get just a little bit of hair in your mouth. You can’t find it in you to care.
 :Tracker rumbles appreciatively into your touch, then gently nudges you to slide off her back so you’re standing side by side.
 :You were so focused on her that you didn’t even realize where she had taken you. You’re in a small clearing at the top of a hill, and you can see the whole sky from here. Stretching over the woods, over Elmville, over everything.
-:You feel small. But… not in a bad way. You’re small, but you’re part of something greater - something vast and mysterious and beautiful and <i>true</i>.
+:You feel small. But… not in a bad way. You’re small, sure, but in service of something greater - a part of something vast and mysterious, beautiful and <i>true</i>.
 :It feels undeniably holy, getting to be here with Tracker like this. A secret reminder to you, from the universe: even in the dark, you’re not alone. 
 :The two of you stand together in comfortable silence for a long time. Then, just for a moment, Tracker pulls away.
 //werewolf tracker disappear
+<<char_right transparent>>
 :The first band of sunlight peeks out from the horizon, bathing you in a soft, orange glow. You hear motion from where Tracker is standing, but you don’t turn around. You give her her privacy.
 :You feel a soft kiss touch the nape of your neck, and finally turn back around.
 <<char_right TrackerBlush_1>>
 Tracker: I’m glad we found each other, too.
 :Oh, come on. She can’t say that and not expect you to kiss her a whole bunch.
 :It’s just the two of you now: it’s just muscle memory, to cup Tracker’s face in your hand and pull her in for a long, searing kiss. You’ve both waited long enough.
-:Tracker melts into your embrace, pulling you even closer and nipping your bottom lip hard enough to draw blood.
+:Tracker melts into your embrace, pulling you even closer, nipping your bottom lip hard enough to draw blood.
 :You pull back just barely, only enough to breathe, your words fanning out against her face.
-Kristen: You bit me.
+Kristen: You <i>bit</i> me.
 :If it comes out breathless, well… who could blame you?
 :You spot a little bit of your blood on Tracker’s lips before her tongue darts out to lick it off.
 :She opens her mouth to say something, but you can’t help but kiss her again before she can.
 Kristen: I liked it.
 Tracker: Galicaea, you are <i>so</i> —
-:Whatever you are, you don’t find out, because she pulls you in for yet another kiss even before the words are out of her mouth.
+:Whatever you are, you don’t find out, because before the words are even fully out of her mouth, she pulls you in for yet another kiss.
 :When you finally break apart, you resist the urge to grab her butt, and instead take her cheeks in your hands. She mirrors you, and you both just kind of… stand there holding each other’s faces for a bit. 
-:Your thumb traces the contour of her cheek, the tiny mole just hidden beneath her lip. 
-:Your hands held the memory of her skin far longer than you did, and coming back to her feels like the most natural thing in the world.
-:You missed getting to just touch her like this.
+:You’ve missed getting to just touch her like this - your thumb traces the familiar contour of her cheek, the tiny mole just hidden beneath her lip, and it feels like the most natural thing in the world.
 :Tracker lets out a shaky breath.
 Tracker: Hey, Kristen?
 Kristen: Yeah?
+<<voiceline TrackerDateSuccess5>>
 Tracker: I love you.
-:The world could stop spinning right now and you wouldn’t notice or care. 
-:You think you stop breathing for a minute, because you see Tracker’s eyebrows knit together in concern.
+:You think you stop breathing for a minute. The world could stop spinning right now and you wouldn’t notice or care. 
+:Then you see Tracker’s eyebrows knit together in concern. Embarrassment. Like she thinks <i>you</i> don’t -
 Tracker: Are you – do you –
 Kristen: I love you, too.
 :She stumbles back, like you’ve just hit her in the chest. But you gently pull her back into you and suddenly you’re kissing again. You’re two people in love and you’re kissing. It feels so right.
 :When you pull away this time, you gently place a small stray curl back behind her ear. She’s so beautiful.
 Kristen: You’re so beautiful.
-:Tracker lights up and you swear you could mistake her for the sun. How did you get so lucky?
+:The way Tracker lights up at that, you swear you could mistake her for the sun. How did you get so lucky?
 Kristen: How did I get so lucky?
-Tracker: Luck’s got nothing to do with it, babe. This was pure skill and a lot of dedication.
+:Okay, it seems your brain to mouth function is <i>fully</i> broken. Somehow, you can’t bring yourself to care.
+Tracker: Luck’s got nothing to do with it, babe. This was all pure skill and a lot of dedication.
 :She smiles at you, but you can tell it wasn’t really a joke.
+<<voiceline TrackerDateSuccess6>>
 Tracker: Seriously, I know I had some major walls up at the start of all this. I really, <i>really</i> didn’t want it to be like last time. But… you’re different now. We both are. I think… I think we have something here that’s built to last. If you want it to.
 :She puts up a brave front, but you can see the worry palpable in her eyes. Oh, Cassandra. She still doesn’t get it, does she? Despite everything, she still thinks this is a story that can only end with you running away. 
 Kristen: Tracker, you’re my dream girl. There’s not a plane I could travel to where I wouldn’t want this. And if there is, then put me on the no-fly list.
@@ -403,8 +410,6 @@ Kristen: Tracker, you’re my dream girl. There’s not a plane I could travel t
 Tracker: Take a hike with me?
 Kristen: You know it, babe.
 :You hold hands the whole way back. 
-
-
-//AWOO VOICELINE END DATE
-<<jump Cassandra>>
-=== 
+<<voiceline TrackerBespoke4>>
+<<jump Cassandra8>>
+===

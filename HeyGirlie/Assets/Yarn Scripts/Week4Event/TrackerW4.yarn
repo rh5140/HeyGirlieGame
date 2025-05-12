@@ -1,7 +1,5 @@
 ﻿title: Tracker
 ---
-<<fade_in_ui>>
-<<background MusicFestival_Tracker>>
 <<kristen Neutral>>
 :If Tracker’s here, you know she’s at one of the punk shows. She’d taken you to plenty, that first year you were together. 
 :It had been terrifying and exhilarating for you, still getting used to the idea that regular old pop music wasn’t just for warlocks or people who preferred Marge’s corn to your mother’s. You know, unforgivable sins.
@@ -53,11 +51,15 @@ Kristen: WHAT?!
 Tracker: HOLLOW ME!
 :Tracker gestures towards... oh, the <i>mosh pit</i>. That makes more sense.
 <<char_right TrackerNeutral_4>>
-:She gives you a questioning look. Wanna go?
+:She gives you a questioning look. As if to ask, “<i>Wanna go?</i>”
 :You know if you hesitated, she’d stay out here with you, just enjoying the music.
 <<kristen Happy>>
 <<char_right TrackerHappy_4>>
 :Instead, you use the hand laced with hers to tug her in after you. You think you can even hear her delighted laughter over the cacophony.
+<<kristen transparent>>
+<<char_right transparent>>
+<<background MusicFestival_Tracker>>
+<<wait 2>>
 :It’s so chaotic, so quickly. You get separated immediately. With all the thrashing and flailing arms, the only reason you don’t fall flat on your face is because you keep collapsing into people who block your fall.
 :Someone gets annoyed enough by it that they pick you up and place you on top of the crowd, who keep you aloft. Hey, you’re crowdsurfing!
 :The crowd eventually ends up taking you back towards Tracker, who grins up at you, wrapping her hand around your arm to keep you in place.
@@ -68,5 +70,8 @@ Kristen: FUCK YEAH!
 :The crowd seems to roar out its agreement, and the two of you enjoy the music for what feels like hours.
 :When you finally come back down to earth, she places her hand back in yours again.
 :This time, she doesn’t let go.
+<<fade_out_ui>>
+<<wait 2>>
+<<enable_continue>>
 <<jump EndEvent>>
 ===

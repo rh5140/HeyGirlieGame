@@ -49,7 +49,7 @@ Nara: My goodness your muscles are large, Kristen! May I make out with them pass
 <<kristen Nervous>>
 :Okay, so maybe that part didn’t happen. Probably.
 <<background_filter_off>>
-<<background Manor>>
+<<background  Manor>>
 // manor background (al note: no more sepia!)
 <<char_right NaraNeutral2>>
 :Oh no. She’s giving you puppy dog eyes. You’re powerless to resist.
@@ -129,7 +129,7 @@ Nara: Oooh, Chariot Surfer! Shall we play that one next, darling?
 <<kristen Soft>>
 :Darling.... Well, when she puts it like that, how can you say no?
 <<kristen Neutral>>
-Kristen: Sure. The point of the game is to run from the chariot inspector after he catches you vandalising a chariot. You also collect coins and stuff.
+Kristen: Sure. The point of the game is to run from the chariot inspector after he catches you vandalizing a chariot. You also collect coins and stuff.
 <<char_right NaraDisgust2>>
 <<voiceline NaraAngry3>>
 :Nara looks scandalized.
@@ -150,7 +150,7 @@ Kristen: Sure, but maybe we can start with, like, the basic stuff first.
 <<voiceline NaraHappy2>>
 Nara: Ah! I see you have noticed the engraved model number of my The Phone!
 <<kristen Nervous>>
-Kristen:Uhhh… do you have a model number on your phone?
+Uhhh… do you have a model number on your phone?
 Nara: The vendor was most adamant that this is the very first model of the newest version.
 :The sticker is clearly peeling off at the corner. You... think you know what's happened here.
 
@@ -182,7 +182,8 @@ Nara: The vendor was most adamant that this is the very first model of the newes
     <<voiceline NaraSurprised1>>
 Nara: Kristen! This engraving removed itself!
 Kristen: It's called a sticker. The, uh, guy selling you the phone lied.
-<<char_right NaraDisgust2>>
+    <<char_right NaraDisgust2>>
+    <<voiceline NaraAngry3>>
 :Nara stares at the sticker in abject disgust.
 Nara: You truly think someone would do that? Just, go to the mall and spread falsehoods?
 Kristen: I have it on very good authority they would. Exhibit A, the sticker in your hand.
@@ -298,7 +299,7 @@ Nara: I said, which painting do you think I should choose?
 <<char_right NaraNeutral2>>
 Kristen: You know, there are other things you can change about the phone.
 Nara: Like what?
-Kristen: Size of the text, how the apps are organised, the language…
+Kristen: Size of the text, how the apps are organized, the language…
 <<char_right NaraHappy2>>
 <<voiceline NaraHappy2>>
 :Nara immediately perks up, and tries to play it cool immediately after.
@@ -308,7 +309,10 @@ Nara: Kristen, would it be possible to change the language on my The Phone to…
 
 -> “Sure!”
     <<kristen Happy>>
-    :You do as she asks without question because you are a Hashtag Ally.
+    :You do as she asks without question because you are a Hashtag Ally. She looks incredibly satisfied.
+    Nara: Thank you! It is a comfort to have some small, familiar thing within my The Phone. I am, naturally, fluent in several languages, but Elvish is by far my favorite.
+    Kristen: It’s no problem.
+    :Hash. Tag. Ally.
     <<add_points 2>>
 -> “Why would you need to do that? The phone is already set to Common, and you speak Common very well.”
     <<kristen Nervous>>
@@ -327,15 +331,14 @@ Nara: Kristen, would it be possible to change the language on my The Phone to…
     <<char_right NaraSad2>>
     <<voiceline NaraSad3>>
     :Nara does puppy dog eyes until you check, and at the bottom of the languages list in the settings is Elvish. Which is weird, because the rest of the list is in alphabetical order.
+    :But hey, you get it done, and she seems pleased, so you’ll brush aside the confusion for now and focus up.
     <<add_points 1>>
-
-
 <<kristen Neutral>>
 <<char_right NaraNeutral2>>
 Nara: Kristen, you have taught me much of the mysterious ways of The Phone today, and for that I must thank you.
 <<kristen Soft>>
 :You blush at the idea of making Nara happy. Which is strange, because making Nara happy usually comes at the cost of your self-esteem.
-Kristen: It’s no problem. You know there’s other stuff that runs on crystals too.
+Kristen: It’s no problem. You know, there’s other stuff that runs on crystals too. Not just the phone.
 <<char_right NaraShock2>>
 <<voiceline NaraSurprised3>>
 Nara: Really? Please, tell me more!
@@ -346,7 +349,7 @@ Nara: Really? Please, tell me more!
 Nara: Kristen! Are these portraits of yourself shortly after your birth?
 <<kristen Awkward>>
 <<voiceline KristenSurprised2>>
-Kristen: NO!!!
+Kristen: NO!!!!!!!!
 :You hastily snatch the photos away from her and cram them into a random box. Nara looks disappointed.
 <<char_right NaraSad2>>
 Nara: No… But you looked so adorable in those rags…
@@ -364,8 +367,8 @@ Kristen: It’s hard to explain. Common is such a complex language, after all.
 <<voiceline NaraSad2>>
 :Nara furrows her brow and pouts.
 <<kristen Neutral>>
-Kristen: Anyway, there are a ton of games on here you might like. There’s Crash Bandicoot, you get to race against other people in cars and there’s a cool loading screen where -
-:You suddenly realise who you’re talking to.
+Kristen: Anyway, there are a ton of games on here you might like. There’s Crash Bandicoot, you get to race against other people in cars and there’s this really cool loading screen where -
+:You suddenly realize who you’re talking to.
 <<char_right NaraNeutral2>>
 Nara: Where you what?
 <<kristen Sad>>
@@ -374,12 +377,12 @@ Kristen: You… press a button… and it makes a fart sound…
 <<voiceline NaraAngry3>>
 :If she wasn’t so polite, you’re sure Nara’s face would retreat into itself in distaste.
 Nara: I do not think I will be doing that.
-:You try to think of anything on the PSP that doesn’t have a fart joke in it. There is… one.
+:You try to think of anything on your PSP that doesn’t have a fart joke in it. There is… one. Singular. App.
 <<kristen Neutral>>
 <<voiceline KristenNeutral1>>
 Kristen: Maybe you’d like uhh…
 <<char_right NaraNeutral2>>
-:Fuck her eyes look so hopeful and kind. Like a baby deer. Or a bird. Or a baby deer.
+:Fuck, her eyes look so hopeful and kind. Like a baby deer. Or a bird. Or a baby deer.
 Kristen: Google Maps for the PSP?
 <<char_right NaraShock2>>
 :Nara gasps!
@@ -387,14 +390,14 @@ Kristen: Google Maps for the PSP?
 Nara: To contain maps on such a small object… Solace is truly a wonderful place…
 <<kristen Soft>>
 :Is that the first time she’s complimented your hometown? You blush as you bring up the maps. As you show her how it works, you notice something.
-Kristen: Oh wow that field of horses looks nice.
+Kristen: Oh wow, look, if you zoom in, you can see little horses in that field. Neat!
 <<char_right NaraHappy2>>
 <<voiceline NaraBespoke4>>
 Nara: Kristren!!! I did not know you were a horse aficionado! We simply must ride sometime!
 <<kristen Awkward>>
-Kristen: Uhhhh
+Kristen: Uhhhh.
 <<voiceline NaraFarewell1>>
-Nara: I must leave to make preparations I will see you later!!! Love you bye mwah!!!!
+Nara: I must leave to make preparations. I will see you later!! Love you bye mwah!!!!
 <<voiceline KristenNeutral3>>
 <<kristen Surprised>>
 Kristen: Wait what -

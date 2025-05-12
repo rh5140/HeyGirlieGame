@@ -8,7 +8,7 @@
 :Now that you think about it.... What the hell is a centaur rodeo?
 :As it turns out, kinda what it says on the tin. It’s a rodeo, but with centaurs. Sick.
 :You have absolutely no idea what Tracker’s doing here - but hey, it’s a little fun being the one who doesn’t know what’s going to happen next. And who are you to not take an opportunity to bust the ol’ cowboy hat out? 
-:If only you could have found it...
+:If only you’d found it in time… your heart breaks a little, thinking of your beloved hat sitting underneath the piles of dirty laundry in your room.
 :You settle in on the sidelines, close enough to see one of the centaurs wrangling another but not so close as to risk getting kicked.
 :There’s a few clerics you recognize from class on standby, so nothing you need to worry about. Oh, wait, it looks like Aguefort’s sponsoring this.
 :Not the school itself, just your principal, personally. Good for him, you guess. 
@@ -35,6 +35,7 @@ Kristen: Oh! Well…
     <<char_right TrackerAngry_1>>
     <<voiceline TrackerAngry1>>
     :You regret the sentence almost as soon as you finish saying it - because Tracker’s easy smile is gone, all the warmth and ease replaced by a borderline frosty and pointed look in your direction.
+    <<kristen Sad>>
     : Ah, there it is. The patented ‘Kristen, you fucked up again’ look. You can’t help a small wince.
     Tracker: We were having such a <i>good day</i>. Why did you have to…
     :She stops herself just short of a yell, conscious of the fact that you’re in a crowd. You wince again.
@@ -46,6 +47,7 @@ Kristen: Oh! Well…
     Tracker: I know. Let’s just get back to watching the rodeo for a bit.
     <<add_points 0>>
 -> Kristen: “I guess I’ll have to ribbon dance right now to prove you wrong.”
+    <<Kristen Grin>>
     Kristen: This rodeo could use a bit more flair.
     :You stand up, making a show of going for your pocket, which doesn’t even have your ribbon wand in it. Tracker laughs and grabs for your arm anyway, pulling you back down.
     <<voiceline TrackerHappy2>>
@@ -68,6 +70,7 @@ Kristen: Oh! Well…
     :Tracker snorts.
     Tracker: Yeah, I remember.
     <<add_points 1>>
+<<Kristen Neutral>>
 Kristen: I didn’t know this was the kind of thing you liked.
 :Tracker shrugs.
 Tracker: They used to hold them in Bastion City, and I didn’t really care enough to drive all the way out there.
@@ -224,8 +227,8 @@ Tracker reaches a hand toward your face. Instinctively, you grab it.
 -> <i>Press a quick kiss to the palm of her hand before she heals you.</i>
     <<char_right TrackerSurprised_1>>
     :It’s impulsive, and more than a little insane, but so are you. Tracker freezes as you gently take her palm and press it against your lips. 
-:And oh, what a fucking mistake. Because you remember this, how warm Tracker’s skin is: because,if you’re being honest, you’ve never truly forgotten. And now - her eyes fixed on yours, her hand against your mouth - you probably never will.
-:You suddenly realise the distant prickling sensation is actually the magic making your bruises starting to heal. It snaps you back into reality. You drop her hand.
+    :And oh, what a fucking mistake. Because you remember this, how warm Tracker’s skin is: because,if you’re being honest, you’ve never truly forgotten. And now - her eyes fixed on yours, her hand against your mouth - you probably never will.
+    :You suddenly realise the distant prickling sensation is actually the magic making your bruises starting to heal. It snaps you back into reality. You drop her hand.
     Tracker: …
     Tracker: Why?
     :You… don't actually have an answer to that.
@@ -270,11 +273,13 @@ Tracker: I may have grabbed it off my centaur’s head while he was distracted. 
 :Did she just...?
 Kristen: Hey, don’t steal my thing! That’s <i>my</i> thing! <i>I’m</i> the yeehaw guy!
 Tracker: Where’s your proof? I don’t see a cowboy hat on your head.
-:You yoink the cowboy hat and place it back on your head, where it belongs. At her incredulous expression, you lean smugly back into your chair.
+:You yoink the cowboy hat and place it on your own head, where it belongs. At her incredulous expression, you lean smugly back into your chair.
+<<char_right TrackerSurprised_1>>
 <<kristen Grin>>
 Kristen: Now you do. Yeehaw, motherfucker.
 <<voiceline TrackerHappy2>>
-:She laughs, her eyes crinkling in the cutest way. She gives you a long, tender stare.
+<<char_right TrackerHappy_1>>
+:She laughs, her eyes crinkling tenderly. It’s the cutest thing you’ve ever seen.
 Tracker: Huh. Looks better on you.
 <<kristen Soft>>
 <<voiceline TrackerFarewell3>>

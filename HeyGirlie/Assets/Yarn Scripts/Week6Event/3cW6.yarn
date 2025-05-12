@@ -1,7 +1,5 @@
 ﻿title: 3C
 ---
-<<fade_in_ui>>
-<<background ActivitiesFair_3C>>
 <<kristen Neutral>>
 <<char_left TrackerHappy_1>>
 <<char_right NaraNeutral>>
@@ -83,13 +81,14 @@ Kristen: Um, any second now…
 <<kristen transparent>>
 <<char_right transparent>>
 <<char_left transparent>>
-<<background PLACEHOLDER SPLASH ART>>
+<<fade_out_ui>>
+<<background ActivitiesFair_3C>>
 <<wait 2>>
 <<fade_in_ui>>
 :All the lights of the fair come on at once.
 :You expect some sort of witty banter, but instead, a comfortable quiet falls over all of you. Tracker’s warm against you, and Nara smiles sweetly at you when you glance at her.
 :You enjoy the lights of the fair, the most you’d ever experienced of it before today. This time, it doesn’t feel so lonely.
-<<enable_continue>>
+<<fade_out_ui>>
 <<wait 2>>
-<<jump EndEvent>>
+<<enable_continue>>
 ===

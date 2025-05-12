@@ -17,13 +17,16 @@ Kristen: Jawbone’s got an open-door policy. He takes it literally.
 Tracker: Of course he does. I’ll set something up for him on the way out.
 :The door creaks. It’s so loud in the silence, Aguefort eerily quiet without the usual hustle and bustle of young adventurers crowding its halls. With a dramatic bow, you hold the door open for her. She curtsies in response.
 Kristen: After you.
-Tracker: Thank you kindly. You gonna tell me what we’re doing here yet?
+Tracker: Why, thank you kindly. You gonna tell me what we’re doing here yet?
 Kristen: Hey, you’re the one who wanted to see what Jawbone was up to.
 :Tracker snorts.
 Tracker: I meant hanging out at home, not breaking into his office.
 Kristen: Meh, tomato tomato.
 <<voiceline TrackerConfused1>>
-Tracker: You just said tomato the same way twice. That’s not how the… whatever, fuck it. What’s a little B&E between family? It’s been too long since I’ve gotten up to any real shenanigans.
+Tracker: You just said that the exact same way both times - you know what, I’m not even going to bother.
+<<voiceline TrackerBespoke1>>
+Tracker: Yeah, alright, fuck it! What's a little B&E between family? Besides, it’s been <i>way</i> too long since I’ve gotten up to any real shenanigans.
+<<kristen Grin>>
 Kristen: Was the centaur rodeo not shenanigans enough for you?
 <<char_right TrackerHappy_1>>
 Tracker: <i>Never</i> enough shenanigans, Kristen. Honestly, I’m offended.
@@ -83,8 +86,8 @@ Kristen: <i>Everything</i>.
 Tracker: Uh, I drew this one as a kid.
 <<voiceline KristenHappy2>>
 Kristen: Aw. That’s cute.
-:You picture little Tracker, holding a crayon in her tiny wolf paws... dawww.
-:The two of you get back to “reorganizing”. By silent agreement, you save the desk for last.
+:You picture little Tracker, holding a crayon in her tiny wolf paws... d’awww.
+:The two of you get back to “reorganizing.” By silent agreement, you save the desk for last.
 :You finish turning the chair upside down - taking it off the hook, flipping it, and hanging it back up - before grinning at Tracker.
 <<kristen Happy>>
 Kristen: Anything left but the desk?
@@ -176,6 +179,8 @@ You’ve been caught!!
     :You exhale, happy to not be in trouble.  Tracker looks relieved too, though she does take a second to shoot you an annoyed side-eye.
     :How were you supposed to know Jawbone would be cool with this?
     <<add_points 0>>
+<<kristen Neutral>>
+<<char_right TrackerNeutral_1>>
 Jawbone: Well, it’s always nice to see the two of you in my office.
 :He takes a moment, seeming to finally realize that it’s <i>the two of you</i> in his office.
 :He sits in the egg chair - a lot less awkwardly than you, despite it still being upside-down - and sighs a bit, fixing you both with a Look.

@@ -1,18 +1,20 @@
 ﻿title: Nara
 ---
-<<fade_in_ui>>
+<<kristen transparent>>
 <<background MusicFestival_Nara>>
+<<wait 2>>
 <<kristen Neutral>>
 :Your eyes immediately gravitate towards one Princess Naradriel Lastnameyoucan’tpronounce. Partly because she sticks out like a sore thumb in her robes and her desperate attempts to distance herself from any and all mud and mud-adjacent surfaces.
 <<kristen Soft>>
 :But also because she looks <i>so cute.</i> Is it an Elven thing? You’ll have to ask Adaine later about that, and why she doesn’t have it.
 <<kristen Neutral>>
-:After watching her struggle for a while (because you love her sooo much) you decided to walk over and give her a little wave to try and get her attention. Eventually, she notices while dodging some flying mud.
+:After watching her struggle for a while (just ‘cause you like looking at her) you decide to walk over and give her a little wave to try and get her attention. 
+:Eventually, she notices you while trying and failing to dodge some flying mud.
 <<char_right NaraSad>>
 <<voiceline NaraBespoke4>>
 Nara: Kristren! I require assistance!
 :You extend a hand to her. She takes it gladly, and you pull her away from the crowd of mud-covered moshers behind her.
-Kristen: You ok?
+Kristen: You okay?
 Nara: I suppose so.
 <<char_right NaraBlush>>
 <<voiceline NaraRomantic3>>
@@ -22,12 +24,12 @@ Nara: It was certainly nice of you to sweep me off my feet like that…
 :Oh shit you’re still holding her hand. Should you… maybe hold her waist? Like a knight? Or some kind of cool guy? Or a hot and sexy knight? Who is also a cool guy?
 <<char_right NaraNeutral>>
 <<voiceline NaraConfused1>>
-Nara: Or perhaps you could enlighten me as to why we are surrounded by filth?
+Nara: Perhaps you could enlighten me as to why we are surrounded by filth?
 <<kristen Neutral>>
-Kristen: Yeahhh that’s just how music festivals are. People don’t really dress up or anything.
+Kristen: Yeahhhh, that’s just how music festivals are. People don’t really dress up or anything. At least not fancy.
 <<char_right NaraThink>>
 <<voiceline NaraNeutral1>>
-Nara: This is very different from musical events in Fallinel.
+Nara: This is very different from musical events in Fallinel. I suppose I should start getting used to that.
 Kristen: If you want, I can show you around?
 <<char_right NaraHappy>>
 <<voiceline NaraHappy3>>
@@ -35,7 +37,7 @@ Nara: Yippee!!!
 <<kristen Soft>>
 :Nara is the only person in the world who can say that and not sound like a dork.
 :... Well. She still sounds kind of like a dork. But she’s a cute dork, so you don’t really mind.
-:You decide to make a move and link your arm with hers as you both stroll around the festival.
+:You decide to make a move and link your arm with hers as you stroll together around the festival.
 <<kristen Neutral>>
 <<char_right NaraNeutral>>
 Kristen: So do you listen to any Solesian music?
@@ -65,11 +67,11 @@ Kristen: Those are all loud bands.
 Nara: Yes! Is that not a common feature of Solesian music?
 :You feel a sudden urge to fix this.
 <<kristen Neutral>>
-Kristen: No!!! We’re gonna find a band that you like before the end of the festival.
+Kristen: No!!! Sweet Cassandra, <i>no</i>. We’re gonna find a band that you like before the end of the festival.
 <<char_right NaraHappy>>
 <<voiceline NaraHappy1>>
 Nara: Thank you!!!
-:Dragging Nara around the festival, you try to find something that would please both of you (read: not the most overstimulating thing you’ve ever heard.)
+:Dragging Nara around the festival, you try to find something that would please both of you (i.e. not the most overstimulating thing you’ve ever heard).
 :Suddenly, you see Nara’s ears perk up.
 <<char_right NaraShock>>
 <<voiceline NaraSurprised3>>
@@ -83,6 +85,7 @@ Nara: Kristen, we simply must dance!
 :Nara pulls you over to the crowd at breakneck speed before you can think.
 <<kristen transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
 <<background MusicFestival_Nara>>
 <<wait 2>>
 <<fade_in_ui>>
@@ -90,5 +93,7 @@ Nara: Kristen, we simply must dance!
 :As Nara breaks out into spontaneous ballet, you can’t help but admire her skill. You can’t believe this is the same girl you saw flailing in the mud earlier, and her style and grace now is… <i>so</i> pretty.
 :You can’t help but break out your ribbon and join her.
 :As the two of you dance the night away, you feel like there’s nothing that could ruin this moment… or the relationship the two of you have…
-<<jump EndEvent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<enable_continue>>
 ===
