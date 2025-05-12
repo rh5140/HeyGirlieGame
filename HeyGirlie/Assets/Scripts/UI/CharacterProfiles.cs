@@ -5,14 +5,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class CharacterProfiles : Menu
 {
     [SerializeField] private GameObject[] profiles;
-    [SerializeField] private GameObject[] progress;
+    [SerializeField] private GameObject[] apples;
+    [SerializeField] private GameObject progress;
 
     [SerializeField] private Button backButton;
     [SerializeField] private Button nextButton;
+
+    [SerializeField] private TextMeshProUGUI hintText;
 
     private int character = (int)Character.Cassandra;
     
@@ -80,21 +84,33 @@ public class CharacterProfiles : Menu
         }
 
         profiles[character].SetActive(true);
+        progress.SetActive(character != (int)Character.Cassandra);
+        // if(character == (int)Character.Cassandra) progress.SetActive(false);
+        // else progress.SetActive(true);
 
         try{
             int dateCount = GameManager.Instance.GetLoveInterest((Character)character).GetDateCount() - 1;
             
             for(int i = 0; i < dateCount; i++){
-                progress[i].SetActive(true);
-                if(i % 2 != 0) progress[i-1].SetActive(false);
+                apples[i].SetActive(true);
+                if(i % 2 != 0) apples[i-1].SetActive(false);
             }
             for(int i = dateCount; i < 8; i++){
-                progress[i].SetActive(false);
+                apples[i].SetActive(false);
             }
         } catch(Exception e){
-            foreach(GameObject apple in progress){
+            foreach(GameObject apple in apples){
                 apple.SetActive(false);
             }
+        }
+
+        if (character != (int)Character.Cassandra)
+        {
+            hintText.text = GameManager.Instance.GetLoveInterest((Character)character).GetDateHint();
+        }
+        else
+        {
+            hintText.text = "love you!!! good luck <3";
         }
     }
 

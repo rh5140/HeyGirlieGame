@@ -24,13 +24,18 @@ public class MainMenu : MonoBehaviour
     
     [SerializeField] private GameObject saveGalleryMenu;
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject newGamePopup;
     [SerializeField] private GameObject maxProfilePopup;
     [SerializeField] private TMP_InputField playerName;
     [SerializeField] private AudioClip[] _startupVoicelines;
 
-    void Start() {
+    void Awake() {
         StartCoroutine(AnimateMenu());
+    }
+
+    void Update(){
+        // Debug.Log(Display.main.systemWidth);
     }
 
     IEnumerator AnimateMenu(){
@@ -119,6 +124,7 @@ public class MainMenu : MonoBehaviour
     {
         //CursorManager.Instance.Load(true);
         //SceneManager.LoadScene("Credits");
+        Instantiate(creditsMenu);
     }
 
     public void QuitGame()

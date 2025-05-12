@@ -29,14 +29,16 @@ public class DialogueUIButtons : MonoBehaviour
     }
 
     void Update(){
-        if(Input.GetKeyUp(saveKey)) {
-            Save();
-        } else if(Input.GetKeyUp(historyKey)) {
-            //nothing yet
-        } else if(Input.GetKeyUp(ffKey)) {
-            FastForward();
-        } else if(Input.GetKeyUp(charProfileKey)) {
-            CharacterProfiles();
+        if(!GameManager.Instance.pauseLock){
+            if(Input.GetKeyUp(saveKey)) {
+                Save();
+            } else if(Input.GetKeyUp(historyKey)) {
+                //nothing yet
+            } else if(Input.GetKeyUp(ffKey)) {
+                FastForward();
+            } else if(Input.GetKeyUp(charProfileKey)) {
+                CharacterProfiles();
+            }
         }
     }
 

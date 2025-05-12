@@ -34,7 +34,8 @@ public class SettingManager : MonoBehaviour
 
     public void ChangeFullscreen(bool value){
         fullscreen = value;
-        Screen.fullScreen = value;
+        if(value) Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, FullScreenMode.FullScreenWindow);
+        else Screen.SetResolution(3840, 2160, FullScreenMode.MaximizedWindow);
     }
 
     public void ChangeCursor(float value){

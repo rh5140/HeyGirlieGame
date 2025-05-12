@@ -18,7 +18,7 @@ public class DialogueUIButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
     }
 
     void Update(){
-        if(Input.GetKeyUp(buttonKey)) {
+        if(!GameManager.Instance.pauseLock && Input.GetKeyUp(buttonKey)) {
             if(stayOpen) {
                 selected = !selected;
                 StartCoroutine(AnimateButton(selected));

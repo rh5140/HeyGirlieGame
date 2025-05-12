@@ -250,10 +250,15 @@ public class GameManager : MonoBehaviour
         ((AydaLI) GetLoveInterest(Character.Ayda)).SetAydaDate7(success);
     }
 
+    public void SetFigW4(bool success)
+    {
+        ((FigLI) GetLoveInterest(Character.Fig)).SetFigW4(success);
+    }
+
     // Calls to save manager and creates a player data object to add relevant info to save file
     public bool Save(){
         PlayerData data = new PlayerData(_playerName, _location, SceneManager.GetActiveScene().name, _week, _datesThisWeek, 
-                                            (int)priority, (int)polyamPartner, (_polyamActive ? 1 : 0), (int)_polyamPair, _liQueue, (((AydaLI) GetLoveInterest(Character.Ayda)).GetAydaDate7() ? 1 : 0),
+                                            (int)priority, (int)polyamPartner, (_polyamActive ? 1 : 0), (int)_polyamPair, _liQueue, (((AydaLI) GetLoveInterest(Character.Ayda)).GetAydaDate7() ? 1 : 0), (((FigLI)GetLoveInterest(Character.Fig)).GetFigW4() ? 1 : 0),
                                             awayDates, outdoorsDates, schoolDates, mordredDates, elmvilleDates);
 
         SaveManager.SaveData(data, _saveProfile);

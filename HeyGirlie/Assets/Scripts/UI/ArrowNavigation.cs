@@ -31,7 +31,11 @@ public class ArrowNavigation : MonoBehaviour
     }
 
     public void ArrowKeyEnd(){
-        if(arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
+        try{
+            if(arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
+        } catch(Exception e){
+            //do nothing
+        }
     }
 
     public void ArrowNav(List<Button> buttons){

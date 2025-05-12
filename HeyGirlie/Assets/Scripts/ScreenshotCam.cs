@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.UI;
 using System.IO;
 using System.Collections;
 
@@ -8,6 +9,9 @@ public class ScreenshotCam : MonoBehaviour
     private static ScreenshotCam _instance;
     public static ScreenshotCam Instance {get {return _instance;}}
     public RenderTexture rTex;
+
+    public Image[] realCanvas;
+    public Image[] screenshotCanvas;
 
     private void Awake()
     {
@@ -21,7 +25,12 @@ public class ScreenshotCam : MonoBehaviour
     }
 
     public void Screenshot(string filepath){
+        SetSprites();
         StartCoroutine(TakeScreenshot(filepath));
+    }
+
+    private void SetSprites(){
+        for(int i = 0; i < realCanvas.Length; i++) screenshotCanvas[i].sprite = realCanvas[i].sprite;
     }
 
     IEnumerator TakeScreenshot(string filepath){

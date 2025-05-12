@@ -18,7 +18,7 @@ public class YarnCommands : MonoBehaviour
     public Image lineViewBackground;
     public Image optionViewBackground;
     public TextMeshProUGUI characterName;
-    private Color _textColor;
+    public GameObject cassCall;
     #endregion Crystal UI
 
     [SerializeField] private Character _character;
@@ -34,16 +34,20 @@ public class YarnCommands : MonoBehaviour
     [SerializeField] private MultiSpriteContainer _multiSprite; // not always used
     [SerializeField] private GameObject _splashContinueButton; // not always used
     [SerializeField] private GameObject _ui;
+    [SerializeField] private CharacterSwipe _characterSwipe;
+    [SerializeField] private GameObject _mapTutorial;
 
     private Dictionary<string, AudioClip> _audioClips;
     private AudioSource _voiceSource;
     private AudioSource _sfxSource;
-    private AudioSource _audioSource;
+    [SerializeField] private AudioTrackManager _atm;
 
     [SerializeField] private InMemoryVariableStorage _variableStorage;
 
     private RectTransform _cassSprite;
-    private float tick = 0, direction = 0.05f;
+    private float tick = 0, direction = 0.5f;
+    
+    public GameObject[] CatsandraPointers;
 
     #region Setup
     /// <summary>
@@ -75,6 +79,8 @@ public class YarnCommands : MonoBehaviour
 
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
+        dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
+        dialogueRunner.AddCommandHandler("fade_out_track", FadeOutTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -91,20 +97,30 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("polyam_condition", CheckPolyamCondition);
         dialogueRunner.AddCommandHandler<string>("set_polyam", SetPolyam);
 
+        dialogueRunner.AddCommandHandler("figW4_condition", SetFigW4);
+        dialogueRunner.AddCommandHandler("get_figW4", GetFigW4);
+
         dialogueRunner.AddCommandHandler("ayda_condition", SetAydaCondition);
         dialogueRunner.AddCommandHandler("get_ayda8", GetAydaCondition);
 
         dialogueRunner.AddCommandHandler<bool>("crystal_ping", CrystalPing);
         dialogueRunner.AddCommandHandler<string>("toggleText", ToggleText);
+        dialogueRunner.AddCommandHandler<bool>("cass_call", EnableCassCrystal);
         
         dialogueRunner.AddCommandHandler<int>("get_special_event_fail", GetSpecialEventFail);
+
+        dialogueRunner.AddCommandHandler<string>("start_character_swipe", StartCharSwipe);
+        dialogueRunner.AddCommandHandler<string>("end_character_swipe", EndCharSwipe);
+
+        dialogueRunner.AddCommandHandler<string>("map_tutorial", MapTutorial);
+        dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
+        dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
     }
 
     void Start()
     {
         _loveInterest = GameManager.Instance.GetLoveInterest(_character);
         _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
-        _audioSource = GetComponent<AudioSource>();
         _voiceSource = SettingManager.Instance.voices;
         _sfxSource = SettingManager.Instance.sfx;
     }
@@ -112,7 +128,7 @@ public class YarnCommands : MonoBehaviour
     void Update(){
         if(_cassSprite != null){
             if(tick <= 30 && tick >= 0) {
-                _cassSprite.anchoredPosition = new Vector2(-640f, -1f*(tick = tick + direction));
+                _cassSprite.anchoredPosition = new Vector2(_cassSprite.anchoredPosition.x, -1f*(tick = tick + direction));
             } else {
                 direction = -1f*direction;
                 tick = tick + direction;
@@ -155,6 +171,7 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
+        //_atm.FadeOutTrack();
         _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
         // SceneManager.LoadScene(sceneName);
     }
@@ -280,6 +297,11 @@ public class YarnCommands : MonoBehaviour
             crystalUI[0].SetActive(true);
         }
     }
+
+    private void EnableCassCrystal(bool calling)
+    {
+        cassCall.SetActive(calling);
+    }
     #endregion UI
 
     #region Polyam Functions
@@ -341,7 +363,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charLeftSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(424f, 0f);
             _cassSprite = null;
         }
 
@@ -356,7 +378,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charRightSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(-640f, 0f);
+            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(1280f, 0f);
             _cassSprite = null;
         }
 
@@ -425,14 +447,24 @@ public class YarnCommands : MonoBehaviour
 
     #region Audio Functions
     /// <summary>
-    /// Supporting Yarn commands for voicelines and SFX
+    /// Supporting Yarn commands for audio
     /// </summary>    
     private void PlayVoiceline(string audioName) {
         PlayAudioByName(_voiceSource, _audioClips, audioName);
     }
     
     private void PlaySFX(string audioName) { // NOTE** Has not been set up properly yet
-        PlayAudioByName(_sfxSource, _audioClips, audioName);
+        PlayOneShotByName(_sfxSource, _audioClips, audioName);
+    }
+
+    private void PlayOneShotByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
+    {
+        if (_audioClips == null) _audioClips = GetComponentInChildren<VoicelineDictionary>().voicelineDict;
+        if (audioClips.ContainsKey(audioName)) 
+        {
+            audioSource.PlayOneShot(audioClips[audioName]);
+        }
+        else Debug.Log("Audio asset " + audioName + " not found!");
     }
 
     private void PlayAudioByName(AudioSource audioSource, Dictionary<string, AudioClip> audioClips, string audioName)
@@ -445,6 +477,16 @@ public class YarnCommands : MonoBehaviour
             audioSource.Play();
         }
         else Debug.Log("Audio asset " + audioName + " not found!");
+    }
+
+    private void PlayTrack(string audioName="default")
+    {
+        _atm.ChangeTrack(audioName);
+    }
+
+    private void FadeOutTrack()
+    {
+        _atm.FadeOutTrack();
     }
     #endregion Audio
 
@@ -521,7 +563,24 @@ public class YarnCommands : MonoBehaviour
         _splashContinueButton.SetActive(true);
         StartCoroutine(FadeSprite(_splashContinueButton.GetComponentInChildren<Image>(), 0, 1f, 1f));
     }
-    
+
+    private void SetFigW4()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        FigLI figLi = (FigLI)li;
+        //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
+        figLi.SetFigW4(true);
+    }
+
+    private void GetFigW4()
+    {
+        LoveInterest li = GameManager.Instance.GetLoveInterest(Character.Fig);
+        FigLI figLi = (FigLI)li;
+        //FigLI figLi = GameManager.Instance.GetLoveInterest(Character.Fig);
+        bool temp = figLi.GetFigW4();
+        _variableStorage.SetValue("$figW4", temp);
+    }
+
     #endregion Special Event
 
     #region Background Functions
@@ -590,4 +649,85 @@ public class YarnCommands : MonoBehaviour
         bg.color = end;
     }
     #endregion Background Functions
+
+    #region Tutorial Functions
+    private void StartCharSwipe(string character){
+        _characterSwipe.StartAnimate(GetCharacter(character));
+    }
+
+    private void EndCharSwipe(string character){
+        _characterSwipe.EndAnimate(GetCharacter(character));
+    }
+
+    private int GetCharacter(string character)
+    {
+        switch (character)
+        {
+            case "Fig":
+                return 5;
+            case "Gertie":
+                return 2;
+            case "Kipperlilly":
+                return 4;
+            case "Lucy":
+                return 3;
+            case "Tracker":
+                return 0;
+            case "Naradriel":
+                return 1;
+            default:
+                return 50;
+        }
+    }
+
+    private void MapTutorial(string location){
+        Enum.TryParse(location, out Region region);
+        if(location.Equals("Start")) _mapTutorial.SetActive(true);
+        else if(location.Equals("End")) _mapTutorial.GetComponent<MapTutorial>().ShowLocation(null);
+        else _mapTutorial.GetComponent<MapTutorial>().ShowLocation(region);
+    }
+
+    private void CassPointerOn(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(true);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(true);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(true);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(true);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(true);
+            break;
+        }
+    }
+    private void CassPointerOff(string button)
+    {
+        switch (button)
+        {
+            case "profiles":
+                CatsandraPointers[0].SetActive(false);
+                break;
+            case "ff":
+                CatsandraPointers[1].SetActive(false);
+                break;
+            case "history":
+                CatsandraPointers[2].SetActive(false);
+                break;
+            case "save":
+                CatsandraPointers[3].SetActive(false);
+                break;
+            default: // menu
+                CatsandraPointers[4].SetActive(false);
+                break;
+        }
+    }
+    #endregion
 }
