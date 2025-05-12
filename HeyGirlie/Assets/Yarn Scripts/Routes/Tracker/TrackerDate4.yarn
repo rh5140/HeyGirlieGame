@@ -129,6 +129,7 @@ Tracker: Kristen, what is this?
 :You pull out her chair for her, and she smiles at you, a little distracted.
 Kristen: So! This is —
 <<location "Dinner in the Dark">>
+<<bg_filter_on color>>
 :The lights all go out, stealing your thunder a bit.
 <<char_right transparent>>
 <<kristen transparent>>
@@ -241,6 +242,7 @@ Tracker: Yeah, of course. Go ahead and get the car ready, I’ll be out with to-
 :You could cry with relief.
 Kristen: Thank you.
 Tracker: Hey. Anytime.
+<<bg_filter_off>>
 <<voiceline TrackerDateSuccess2>>
 <<kristen Neutral>>
 <<char_right TrackerNeutral_1>>
@@ -362,7 +364,7 @@ You know exactly what to say.
     Kristen: This, obviously.
     :You grab a handful of flour and throw it at her. Surprise attack!
     :...It’s flour, so the effect is spoiled a little by how it mostly just wafts into the air and leaves a light dusting on her face. 
-  :Tracker sneezes, then blinks. It clearly takes a second for her to process what just happened.
+    :Tracker sneezes, then blinks. It clearly takes a second for her to process what just happened.
     <<voiceline TrackerBespoke4>>
     :There’s a pause…
     <<char_right TrackerHappy_1>>
@@ -372,8 +374,7 @@ You know exactly what to say.
     :But... you don’t think you’ve ever seen Tracker smile so much. So it’s all worth it.
     <<add_points 2>>
 -> Kristen: “Hey, don’t worry, I’ll help you clean it up.”
-    <<kristen Happy>>
-    
+    <<kristen Happy>>    
     Kristen: No sweat! This kitchen’s seen worse.
     :Between Adaine, Aelwyn, Zayn, and Ragh, that’s an understatement.
     Kristen: We can try again after if we want.
