@@ -49,6 +49,8 @@ public class YarnCommands : MonoBehaviour
     
     public GameObject[] CatsandraPointers;
 
+    public GameObject endCredits;
+
     #region Setup
     /// <summary>
     /// Supporting adding Yarn Commands, initializing values, and setting LI priority
@@ -115,6 +117,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("map_tutorial", MapTutorial);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
+
+        dialogueRunner.AddCommandHandler("end_credits", EndCredits);
     }
 
     void Start()
@@ -581,6 +585,10 @@ public class YarnCommands : MonoBehaviour
         _variableStorage.SetValue("$figW4", temp);
     }
 
+    private void EndCredits()
+    {
+        endCredits.SetActive(true);
+    }
     #endregion Special Event
 
     #region Background Functions
@@ -638,9 +646,9 @@ public class YarnCommands : MonoBehaviour
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
             if(color.Equals("sepia") || color.Equals("white")){
-                kristenSprite.color = currentColor;
-                leftSprite.color = currentColor;
-                rightSprite.color = currentColor;
+                kristenSprite.color = new Color(currentColor.r, currentColor.g, currentColor.b, kristenSprite.color.a);
+                leftSprite.color = new Color(currentColor.r, currentColor.g, currentColor.b, leftSprite.color.a);
+                rightSprite.color = new Color(currentColor.r, currentColor.g, currentColor.b, rightSprite.color.a);
             }
             time += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
