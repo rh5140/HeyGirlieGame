@@ -135,6 +135,12 @@ public class Dropdown : Menu
         tabText.text = value;
     }
 
+    public void MainMenu(){
+        Unpause();
+        UnlockEsc();
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void LoadGame()
     {
         CloseDropdown();
