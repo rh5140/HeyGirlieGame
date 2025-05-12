@@ -632,6 +632,7 @@ namespace Yarn.Unity
             // animation, interrupt the line so we can skip to the next one.
 
             // we have no line, so the user just mashed randomly
+            if (currentLine == null) return;
             lineText.maxVisibleCharacters = currentLine.Text.Text.Length;
         }
 
