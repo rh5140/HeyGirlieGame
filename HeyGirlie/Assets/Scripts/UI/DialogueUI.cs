@@ -46,6 +46,12 @@ public class DialogueUI : Menu
                 CloseDialogueHistory();
             }
         }
+        else if (Input.GetKeyUp(KeyCode.Escape) && GameManager.Instance.escLock == EscLock.DialogueHistory) {
+            CloseDialogueHistory();
+        }
+        else if (Input.GetKeyUp(historyKey)) {
+            CloseDialogueHistory();
+        }
     }
 
     public void Save()
