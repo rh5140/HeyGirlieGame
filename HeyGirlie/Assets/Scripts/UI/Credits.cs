@@ -15,6 +15,7 @@ public class Credits : Menu
     [SerializeField] private Sprite[] pageTopFrames;
 
     void Awake(){
+        GameManager.Instance.menuOpen = true;
         Pause();
         LockEsc(EscLock.Credits);
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
@@ -31,6 +32,7 @@ public class Credits : Menu
     }
 
     void OnDestroy(){
+        GameManager.Instance.menuOpen = false;
         Unpause();
         UnlockEsc();
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
