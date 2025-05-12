@@ -1,17 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Credits : Menu
 {
     [SerializeField] private GameObject creditsMenu;
-    [SerializeField] private GameObject pageTurn;
-    [SerializeField] private GameObject pages;
+    [SerializeField] private Transform leftPageBefore;
+    [SerializeField] private Transform leftPageAfter;
+    [SerializeField] private Transform rightPageBottomBefore;
+    [SerializeField] private GameObject rightPageBottomAfter;
+    [SerializeField] private Image rightPageTop;
+    [SerializeField] private Sprite[] pageBottomFrames;
+    [SerializeField] private Sprite[] pageTopFrames;
 
     void Awake(){
-        if(!SceneManager.GetActiveScene().name.Equals("Credits")){
-            Pause();
-        }
+        Pause();
         LockEsc(EscLock.Credits);
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
     }
@@ -33,48 +37,41 @@ public class Credits : Menu
     }
 
     public override void Close(){
-        if(!SceneManager.GetActiveScene().name.Equals("Credits")) Destroy(creditsMenu);
-        else {
-            #if (UNITY_EDITOR)
-                UnityEditor.EditorApplication.isPlaying = false;
-            #elif (UNITY_WEBGL)
-                SceneManager.LoadScene("Main Menu");
-            #else
-                Application.Quit();
-            #endif
-        }
+        Destroy(creditsMenu);
     }
     
     IEnumerator RunCredits(float waitTime)
     {
-        int i = 0;
-        while (i < (pages.transform.childCount - 1))
+        while (leftPageBefore.childCount > 0)
         {
             yield return new WaitForSecondsRealtime(waitTime);
-            pageTurn.SetActive(true);
             yield return StartCoroutine(PageTurnAnim(0.1f));
-            pages.transform.GetChild(i).gameObject.SetActive(false);
-            if(pages.transform.GetChild(i + 1) != null)
-            {
-                pages.transform.GetChild(i + 1).gameObject.SetActive(true);
-            }
+
+            leftPageAfter.GetChild(leftPageAfter.childCount - 1).gameObject.SetActive(false);
+            leftPageBefore.GetChild(0).parent = leftPageAfter;
             
-            i++;
+            if(leftPageBefore.childCount !=0) leftPageBefore.GetChild(0).gameObject.SetActive(true);
         }
     }
     
     IEnumerator PageTurnAnim(float waitTime)
     {
+        Image rightPageBottomAfterImage = rightPageBottomAfter.GetComponent<Image>();
         int i = 0;
-        while(i < (pageTurn.transform.childCount))
+        while(i < pageBottomFrames.Length)
         {
             yield return new WaitForSecondsRealtime(waitTime);
-            pageTurn.transform.GetChild(i).gameObject.SetActive(false);
-            if ((i+1) < pageTurn.transform.childCount)
-            {
-                pageTurn.transform.GetChild(i + 1).gameObject.SetActive(true);
-            }
-            i++;
+            rightPageBottomAfterImage.sprite = pageBottomFrames[i];
+            rightPageTop.sprite = pageTopFrames[i++];
         }
+
+        rightPageBottomAfter.transform.GetChild(rightPageBottomAfter.transform.childCount - 1).gameObject.SetActive(false);
+        rightPageBottomBefore.GetChild(0).parent = rightPageBottomAfter.transform;
+
+        if(rightPageBottomBefore.childCount == 0) rightPageBottomBefore.gameObject.SetActive(false);
+        else rightPageBottomBefore.GetChild(0).gameObject.SetActive(true);
+
+        rightPageBottomAfterImage.sprite = pageBottomFrames[0];
+        rightPageTop.sprite = pageTopFrames[0];
     }
 }
