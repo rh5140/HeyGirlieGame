@@ -429,7 +429,12 @@ public class YarnCommands : MonoBehaviour
             // Fade out
             StartCoroutine(FadeSprite(curSprite, curSprite.color.a, 0, 0.5f)); // hardcoded to spend half a second fading
         }
-        else curSprite.sprite = nextSprite;
+        else
+        {
+            if (curSprite.color.a != 1)
+                curSprite.color = Color.white;
+            curSprite.sprite = nextSprite;
+        }
     }
 
     private IEnumerator FadeSprite(Image sprite, float start, float end, float lerpTime)

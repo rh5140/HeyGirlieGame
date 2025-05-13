@@ -25,8 +25,16 @@ title: Cassandra1
 ...someone's calling...
 <<cass_call  false>>
 <<play_track cassandra>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+Cassandra: Kristen! I heard you were hanging out with Gertie this week…
+Kristen: Heard from who?
+Cassandra: It doesn’t matter. 
+Cassandra: Tell. Me. Everything.
+
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
+ <<kristen Grin>>
   Kristen: Not too bad! At least, once the duel was over.
   Cassandra’s eyes widen.
   Cassandra: You DUELED??!!
@@ -63,6 +71,7 @@ title: Cassandra1
   Kristen: Oh, no. We squashed that beef. She just normal doesn’t like me now. 
   Cassandra: Well, that’s one obstacle down. You still have time. Don’t worry, Kristen.
 <<endif>>
+
 <<jump EndDate>>
 ===
 title: Cassandra2

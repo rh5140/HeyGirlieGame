@@ -212,21 +212,71 @@ Cassandra: So, what’ll it be, Kristen? Where to first?
 
 title: CassandraWeek2
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting1>>
+Cassandra: Hey Kristen! We’re a week in, so let’s really start putting in the work to feel some romance.
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
+Kristen: Uhhh, you sure about that? It’s a little too soon to start calling it romantic, right? I’m not about to become a u-hauling statistic.
+<<char_right CassandraBlush>>
+Cassandra: What can I tell you? When it’s right, there’s no such thing as too much too soon!
+Kristen: Yeah, yeah… just keep telling yourself that.
+<<kristen Neutral>>
+Kristen: You… annoying happily married goddex.
+<<char_right CassandraNeutral>>
+Cassandra: When you live for thousands of years, you tend to get a little perspective. So take my word for it, get out there again, and have a little fun!
+<<voiceline CassNeutral2>>
+Cassandra: If you’re a little stuck where to go to find a date, you can always check your notebook. I slipped in some tips for you.
+<<kristen Grin>>
+<<voiceline KristenNeutral3>>
+Kristen: Ooooooor I could just wing it! Livin’ la vida loca!
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell2>>
+Cassandra: You just do what you feel is right. I’ll check in with you later!
 <<play_track default>>
 <<change_scene DateSelection>>
 ===
 
 title: CassandraWeek3
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassStartup1>>
+Cassandra: Hi bestie! Who’s ready for a new week! I sure am!
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
+Kristen: I’m really not vibing with how into this you are. Is it going to be like this every week?
+<<char_right CassandraHappy>>
+Cassandra: Maybe! I LOVE love, Kristen! Just let me live vicariously through you for a while, okay? 
+<<char_right CassandraNeutral>>
+Cassandra: Not to mention, it’s kiiiind of a big deal that you get this right. But no pressure!
+Kristen: No pressure…? right…
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell3>>
+Cassandra: Exactly! So, have fun, be your best self and I’ll call you later!
 <<play_track default>>
 <<change_scene DateSelection>>
 ===
 
 title: CassandraWeek4
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting1>>
+Cassandra: Hi Kristen! I missed you!
+Kristen: Honestly… I think I’ve seen more of you these past few weeks than usual, but okaaaaaay. What’s up?
+Cassandra: What’s up? Another fun week of wooing our lovely eligible bachelorettes to snag a date to the Spring Fling.
+<<char_right CassandraSurprised>>
+Cassandra: You didn’t already forget did you?
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
+Kristen: No… I mean, how could I? I’m just sayin’ maybe it would be nice for a little <i>’hey Kristen, what did you have for breakfast?’</i> or <i>’yo, Kristen, I saw what you did with that hacky sack. That was awesome.’</i>
+Cassandra: …
+Kristen: …
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell1>>
+Cassandra: Okay so, where to next?
 <<play_track default>>
 <<change_scene DateSelection>>
 ===
@@ -287,7 +337,25 @@ title: CassandraWeek5
         Cassandra: You got it!
         Cassandra: Just remember you’ll have to choose between them eventually.
 <<else>>
-    Cassandra: Hmm... never mind.
+    <<kristen Neutral>>
+    <<char_right CassandraNeutral>>
+    <<voiceline CassPhone1>>
+    Cassandra: Would you look at that, we’re already at the halfway point! When did that happen??
+    <<kristen Nervous>>
+    <<voiceline KristenNeutral1>>
+    Kristen: Yeahhhhh. Time sure does fly when you’re trying to work your way out of impending death.
+    <<char_right CassandraSurprised>>
+    Cassandra: Woah!
+    Kristen: Too much?
+    Cassandra: Maaaaybe a little. Aren’t you at least having a little fun?
+    <<kristen Happy>>
+    <<voiceline KristenHappy1>>
+    Kristen: Actually, yeah! Pulling up my bootstraps and getting back on the market was exactly what I needed!
+    <<char_right CassandraHappy>>
+    Cassandra: That’s the spirit! You’ll find yourself the perfect partner soon. I can just feel it, no doubt about it!
+    <<char_right CassandraNeutral>>
+    <<voiceline CassFarewell4>>
+    Cassandra: So go out there and tell me everything later!
 <<endif>>
 <<play_track default>>
 <<change_scene DateSelection>>
@@ -295,21 +363,84 @@ title: CassandraWeek5
 
 title: CassandraWeek6
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraHappy>>
+<<voiceline CassHappy3>>
+Cassandra: Good morning Kristen! It’s another beautiful week here in Elmville, and another exciting week of dates!
+Kristen: What are you, my own personal romantic weather-diety?
+<<kristen Grin>>
+Kristen: Cloudy with a chance of smooches, amiright?
+<<char_right CassandraNeutral>>
+Cassandra: Yowch, that was a little corny.
+<<kristen Surprised>>
+<<voiceline KristenSurprised1>>
+Kristen: <i>Corny?</i> That was a low blow, dude. I’m still dealing with all that residual trauma.
+Cassandra: Oopsie, that’s totally on me. But onto more important things, where are you thinking of starting your week?
+Kristen: More important than my clearly unresolved issues with corn?
+<<voiceline CassDisappointed3>>
+Cassandra: What about finding a love interest <i>or else?</i>
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
+Kristen: …
+Kristen: Sooooo about that date!
+<<char_right CassandraHappy>>
+<<voiceline CassNeutral2>>
+Cassandra: Good idea! Let’s see what the stars think!
 <<play_track default>>
 <<change_scene DateSelection>>
 ===
 
 title: CassandraWeek7
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting2>>
+Cassandra: Kristen! Fancy seeing you here!
+Kristen: I… live here? You’re the one giving me jump scares first thing in the morning! I haven’t even checked my crystal notifications yet!
+<<char_right CassandraHappy>>
+<<voiceline CassHappy3>>
+Cassandra: Ooo la la! Anything from any of our eligible bachelorettes?
+<<kristen Nervous>>
+Kristen: …
+<<char_right CassandraSurprised>>
+Cassandra: Your silence is kiiiind of speaking volumes right now.
+Kristen: <i>Oh boy,</i> would you look at the time! I really have to get going and figure out where I’m going to be starting the week at.
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell1>>
+Cassandra: That’s the spirit, Kristen! The early cleric gets the girlie! So, where to next?
 <<play_track default>>
 <<change_scene DateSelection>>
 ===
 
 title: CassandraWeek8
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting1>>
+Cassandra: Crunch time, Kristen! This is the final week before Spring Fling, so it’s time to lock it in and really make an impact!
+<<kristen Nervous>>
+Kristen: Oh man, already? I could have sworn we had more time!
+<<char_right CassandraSurprised>>
+<<voiceline CassDisappointed1>>
+Cassandra: The dance is this weekend! The dance that you’ve been planning. How did that slip your mind???
+<<kristen Awkward>>
+<<voiceline KristenNeutral1>>
+Kristen: Okayyyyyy I’m feeling a lot of judgement right now.
+<<char_right CassandraNeutral>>
+<<voiceline CassNeutral1>>
+Cassandra: Hey, listen! You’re cute, charming, funny and literally a hero. You’re the full package AND my favorite cleric!
+<<kristen Nervous>>
+Kristen: …your only cleric…
+<<char_right CassandraBlush>>
+Cassandra: So seal it with a kiss and we can finally see if we can make things official.
+<<kristen Grin>>
+Kristen: Seal it with a kiss? I like the sound of that!
+<<char_right CassandraHappy>>
+<<voiceline CassHappy1>>
+Cassandra: If the mood takes you there, who am I to stand in the way of it!
+<<kristen Happy>>
+<<voiceline KristenHappy3>>
+Kristen: Let’s do this!
 <<play_track default>>
 <<change_scene DateSelection>>
 ===
