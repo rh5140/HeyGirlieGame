@@ -138,6 +138,7 @@ public class Dropdown : Menu
     public void MainMenu(){
         Unpause();
         UnlockEsc();
+        GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().MuteTrack();
         SceneManager.LoadScene("Main Menu");
     }
 
