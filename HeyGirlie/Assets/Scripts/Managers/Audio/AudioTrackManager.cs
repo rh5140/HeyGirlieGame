@@ -10,7 +10,8 @@ public class AudioTrackManager : MonoBehaviour
 
     private void Start()
     {
-        if (fadeInOnStart) StartCoroutine(FadeMixerGroup.StartFade(audioMixer, currentTrack, 0.5f, SettingManager.Instance.music.volume));
+        if (fadeInOnStart) 
+            StartCoroutine(FadeMixerGroup.StartFade(audioMixer, currentTrack, 0.5f, SettingManager.Instance.music.volume));
     }
 
     public void UpdateVolume(float val)
