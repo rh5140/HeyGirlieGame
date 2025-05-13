@@ -6,11 +6,12 @@ public class AudioTrackManager : MonoBehaviour
 { 
     public AudioMixer audioMixer;
     public string currentTrack = "default";
-    public bool fadeInOnStart = false;
+    // public bool fadeInOnStart = false;
 
     private void Start()
     {
-        if (fadeInOnStart) StartCoroutine(FadeMixerGroup.StartFade(audioMixer, currentTrack, 0.5f, SettingManager.Instance.music.volume));
+        //if (fadeInOnStart) 
+            StartCoroutine(FadeMixerGroup.StartFade(audioMixer, currentTrack, 0.5f, SettingManager.Instance.music.volume));
     }
 
     public void UpdateVolume(float val)
