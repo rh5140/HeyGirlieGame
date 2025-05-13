@@ -216,7 +216,8 @@ public class YarnCommands : MonoBehaviour
         _variableStorage.TryGetValue("$date_points", out date_points);
         _variableStorage.SetValue("$date_points", date_points + num);
 
-        if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints((int)date_points+num, _loveInterest); // Slow but only used for testing... 
+        // COMMENT OUT FOR RELEASE
+        // if (num != 0) GameObject.Find("PointsDisplay").GetComponent<PointsDisplay>().UpdatePoints((int)date_points+num, _loveInterest); // Slow but only used for testing... 
     }
 
     private void UpdatePointsInGameManager()
