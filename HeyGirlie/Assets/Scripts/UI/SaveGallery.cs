@@ -103,6 +103,7 @@ public class SaveGallery : Menu
     public void LoadSave(){
         string scene = SaveManager.LoadData(selectedSave);
         if(scene != null){
+            GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().MuteTrack();
             SceneManager.LoadScene(scene);
         } else {
            Debug.Log("how the fuck did you get here");

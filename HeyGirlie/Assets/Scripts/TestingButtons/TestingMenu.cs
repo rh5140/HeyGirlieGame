@@ -28,7 +28,8 @@ public class TestingMenu : MonoBehaviour
         string loveInterest = liDropdown.options[liDropdown.value].text;
         
         List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
-
+        
+        GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().MuteTrack();
         // if(SaveManager.NewData(null) != null)
         if(loveInterest.Equals("FigAyda (alt date 8)"))
         {
@@ -64,6 +65,7 @@ public class TestingMenu : MonoBehaviour
                 week = 9;
                 break;
         }
+        GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().MuteTrack();
         SceneManager.LoadScene(sceneName);
         // List<LoveInterest> liQueue = GameManager.Instance.priorityQueue();
         // foreach(LoveInterest li in liQueue) if(li != null) Debug.Log(li.GetCharacter());
