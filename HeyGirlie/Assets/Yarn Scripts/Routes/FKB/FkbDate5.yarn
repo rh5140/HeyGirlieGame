@@ -1,4 +1,5 @@
 ﻿title: Date1
+
 ---
 <<background "Cat Cafe">>
 <<location "Cat Cafe">>
@@ -76,10 +77,12 @@ Kipperlilly: It looks great. Obviously.
 <<kristen Grin>>
 Kristen: Is that a compliment for my amazing hairdressing skills?
 
+<<char_right KipperlillyAnnoyed>>
 Kipperlilly: No, it’s a compliment for Lucy’s ability to rock any hairstyle, even if an amateur was holding the scissors.
 
 <<kristen Neutral>>
 <<char_left LucyHappy3>>
+<<char_right KipperlillyNeutral>>
 Lucy beams at both of you as she sits down, and you take the opportunity to slide onto the bench after her.
 
 Kristen: Soooooo, you invited both of us?
@@ -95,6 +98,7 @@ Lucy chuckles a little sheepishly as she nods, drawing both of your attentions b
 
 Lucy: Yeah. I thought it could be fun if the three of us did something together, you know? Don’t you think?
 
+Kipperlilly’s lips press together like she’s considering disagreeing, but you manage to speak before her.
 -> Kristen: “Of course! I wish I’d thought of it myself.”
   <<char_left LucyHappy3>>
   Lucy beams at you, and Kipperlilly’s eyes widen again before she folds her arms, shrugging nonchalantly.
@@ -177,6 +181,7 @@ Kipperlilly drags a menu on the table to herself. Lucy fidgets with her straw. Y
 You catch Kipperlilly and Lucy stealing glances at each other when they don’t think they’ll be caught, and both of them hurriedly looking <i>away</i> from you when you glance towards them. 
 
 <<kristen Nervous>>
+//[add lucy + kip sprites here]
 It feels weird to be sitting in awkward silence, especially since you thought you’d already gotten past that with both of them individually. Somehow, putting the three of you together brings it all back. 
 
 <<voiceline KristenAwkward3>>
@@ -223,7 +228,9 @@ Lucy: Barely allergic. I already took an antihistamine, I’ll be fine. But you 
 
 Lucy shrugs like it’s no big deal, taking another sip of her drink. Kipperlilly hums to herself before suddenly flinching, looking behind her. 
 
+<<kristen Grin>>
 <<char_left LucyJoking3>>
+<<sfx meow2>>
 One of the smaller tabby cats has apparently noticed Kipperlilly’s tail and found it too tempting to ignore. As you watch, he bats at it like a feather on a string.
 
 <<char_right KipperlillyAnnoyed>>
@@ -239,6 +246,7 @@ Kipperlilly: He thinks I’m a toy.
 <<char_left LucyNeutral3>>
 Kipperlilly huffs, her tail wrapping itself around her leg until the cat loses interest and sidles up to Lucy instead, pressing against her leg in an obvious bid for entertainment or pets.
 
+<<char_left LucyHappy3>>
 <<char_right KipperlillyNeutral>>
 Lucy indulges him, scritching the cat between his ears. Kipperlilly sits down again, her tail unwinding as she focuses very intently on her drink.
 
@@ -248,12 +256,18 @@ The rules are very clear that you’re supposed to let the cats come to you, so 
 
 You shuffle a little closer to her, reaching out a hand for the cat to sniff.
 -> <i>Scratch the top of his head.</i>
- You copy what Lucy had been doing and are rewarded with the cat tilting his head towards you and meowing.
+  <<kristen Happy>>
+  <<sfx meow2>>
+  You copy what Lucy had been doing and are rewarded with the cat tilting his head towards you and meowing.
   <<add_points 1>>
 -> <i>Stroke his back.</i>
+  <<kristen Happy>>
+  <<sfx meow3>>
   The cat slowly stretches his back before walking around Lucy, winding his tail around your hand as he goes past. 
   <<add_points 1>>
 -> <i>Keep your hand still.</i>
+  <<kristen Happy>>
+  <<sfx meow3>>
   After a moment of sniffing, the cat bumps his head against your waiting hand, pushing against it until you start scratching behind his ears.
   <<add_points 1>> 
 
@@ -264,6 +278,7 @@ Kipperlilly: Doesn’t look very blue to me.
 
 Kristen: Maybe they all have food names, cause it’s a cafe. That’d be kinda cute.
 
+//[lucy sprite]
 Kipperlilly hums. She’s still sitting on the other side of the table with her arms folded while you and Lucy pet Blueberry. Lucy starts patting her lap, trying to encourage him to sit on it or at least on the bench between the two of you.
 
 <<kristen Grin>>
@@ -288,6 +303,7 @@ Kipperlilly: Alright, alright, fine.
 
 <<char_right KipperlillyNeutral>>
 <<kristen Neutral>>
+<<sfx meow3>>
 Cheeks reddening, Kipperlilly reluctantly shuffles along the bench closer to Lucy, holding a hand out towards the cat like you had. Blueberry is happy to have another source of affection, purring and butting his head into Kipperlilly’s hand before starting to wind around her back, meowing.
 
 <<char_left LucyHappy3>>
@@ -313,9 +329,11 @@ She gives both of you another look. The one she gives to Lucy seems more hesitan
 
 You can’t really imagine what Kipperlilly thinks you’re going to do in the two minutes she’s gone, but you can try to reassure her.
 -> <i>Give her a thumbs up!</i>
+  <<kristen Grin>>
   She audibly exhales, walking away.
   <<add_points 1>>
 -> <i>Just smile.</i>
+  <<kristen Happy>>
   She doesn’t smile back, but she walks away without any further fuss.
   <<add_points 1>>
 -> <i>Waggle your eyebrows suggestively.</i>
@@ -330,6 +348,7 @@ With Kipperlilly on the hunt, you turn back to Lucy, who is patting Blueberry ag
 
 Kristen: So. I know that <i>I</i> would totally forget to tell two people that I invited the other to a hangout, but you’re not even, like, a tenth of the airhead I am, Lucy. 
 
+//[lucy sprite]
 Kristen: What’s going on? Why’d you really invite me and Kip here?
 
 <<char_left LucySurprised3>>
@@ -340,13 +359,17 @@ Kristen: When she’s feeling extra nice.
 
 Kristen: Well, technically, I think I’m only allowed to call her KIPP.
 
+//[lucy sprite]
 Lucy: …did you say something different?
 
+<<kristen Nervous>>
 Kristen: Apparently, the all-caps, double-P is audible?
 
 <<char_left LucyNeutral3>>
 Lucy quietly chuckles at that. She sighs quietly and gently scratches behind Blueberry’s ear as she mulls her answer over. 
 
+//[note to self: keep spriting from here based on build]
+<<kristen Neutral>>
 Lucy: Um. I didn’t know if you’d show up?
 
 You give her a skeptical look. Lucy sighs.
@@ -367,6 +390,7 @@ Lucy: But I was hoping that with you here, things would be a bit smoother and we
 <<voiceline KristenRomanticLucy2>>
 Kristen: Build a new relationship, huh?
 
+<<char_left LucyFlirty3>>
 There’s a hint of that strange expression on Lucy’s face, the one you saw as she watched you in the mirror during her haircut. You get the sense that there’s something meaningful underlying her words, something that maybe she isn’t ready to talk about just yet.
 
 You decide not to press her on it. Besides, she’s right — despite how strange this afternoon has been, you’re still having fun.
@@ -385,6 +409,7 @@ Before either of you can say anything else, Kipperlilly slides back into her sea
 
 Kipperlilly: You better like this, Blueberry.
 
+<<sfx meow3>>
 She dangles the toy in front of Blueberry, who immediately perks up, clambering over Lucy to bat at the feathers overhead. 
 
 <<char_right KipperlillyNeutral>>
@@ -412,6 +437,7 @@ In the moment before <i>it</i> happens, you have the chance to do something big.
   Kipperlilly: What the fuck are you talking about?
 
 <<char_right KipperlillySurprised>>
+<<sfx meow1>>
 Before you can respond, both cats that had been stalking Kipperlilly’s waving tail pounce. One manages to nip it and the other smacks at it with a paw. 
 
 Kipperlilly herself shrieks, the sound one of surprise and not pain, which scares Blueberry off but somehow doesn’t dissuade the other two cats. She falls off the bench onto the floor, scrambling to keep her composure as she watches the two interlopers casually stroll away, tails held high.
@@ -529,7 +555,6 @@ Hell yeah, Kristen! Nailed it. You high-five yourself mentally.
 You head home with a pep in your step. No matter what happens the next time you three hang out, you know it definitely won’t be boring.
 
 <<jump Cassandra1>>
-
 ===
 
 

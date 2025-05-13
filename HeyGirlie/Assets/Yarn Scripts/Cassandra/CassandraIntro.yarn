@@ -238,12 +238,24 @@ title: CassandraWeek5
 <<declare $tn3c = false>>
 <<polyam_condition 3C>>
 <<if $fkb>>
-    Cassandra: It looks like you're doing well with Kipperlilly and Lucy! What do you think about... dating them both together at the same time...
-    -> Kristen: Heck yeah!
+    Cassandra: Kristen! 
+    Kristen: Oh, hey Cass! Sorry, my room’s a bit of a mess, but—
+    Cassandra: Never mind that!
+    Cassandra: You’re really working hard on this whole “finding a date for Spring Fling” thing, aren’t you? You big ol’ charmer, you?
+    Kristen: Aha, I mean, I learned from the best, right?
+    Cassandra: Awwwww! You’re making me blush!
+    Cassandra: Y’know, word on the godly street is that both Lucy and Kipperlilly have their eyes on you…
+    Kristen: You’re serious?
+    Cassandra: When it comes to getting you a date or two? Absolutely.
+    Cassandra: And from what it sounds like, you’re not against it.
+    Kristen: I mean… It's been fun watching Kipperlilly come out of her shell, and I want to keep working on Lucy’s bucket list with her.
+    Cassandra: The two of them are definitely more than just a sum of their parts, and I think you could help them find their true potentials together.
+    Cassandra: So? What d’you think?
+    -> Kristen: “I like both of them separately, I might like them more together.”
         <<set_polyam FKB>>
-        Cassandra: Excited for this new adventure for the three of you!
-        Cassandra: I think you'll be pleasantly surprised heading downtown this week!
-    -> Kristen: I think it's not for me.
+        Cassandra: Heehee, I knew it! Look out for a text from Lucy to meet her downtown, okay? Have so much fun!
+    -> Kristen: “This is a bit much for right now…”
+       Cassandra: Totally get it! Good luck, Kristen! Make me proud! Kiss some girls!
 <<elseif $tn3c>>
     <<kristen Neutral>>
     <<char_right CassandraHappy>>
