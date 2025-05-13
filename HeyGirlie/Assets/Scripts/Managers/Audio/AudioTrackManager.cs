@@ -6,7 +6,7 @@ public class AudioTrackManager : MonoBehaviour
 { 
     public AudioMixer audioMixer;
     public string currentTrack = "default";
-    // public bool fadeInOnStart = false;
+    public bool fadeInOnStart = false;
 
     private void Start()
     {
