@@ -58,7 +58,7 @@ public class Settings : Menu
         settingsButton.GetComponent<Button>().interactable = false;
         controlsContainer.SetActive(false);
 
-        screenshot.sprite = (SceneManager.GetActiveScene().name.Equals("Main Menu")) ? defaultScreenshot : SaveManager.getScreenshot(GameManager.Instance.GetProfile());
+        screenshot.sprite = (SceneManager.GetActiveScene().name.Equals("Main Menu")) ? defaultScreenshot : SaveManager.getScreenshot(GameManager.Instance.SaveProfile);
 
         yield return null;
 

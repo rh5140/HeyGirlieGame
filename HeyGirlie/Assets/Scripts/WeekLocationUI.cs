@@ -7,7 +7,7 @@ public class WeekLocationUI : MonoBehaviour
     public void Start()
     {
         // Set the text input of the TextMeshProUGUI to "Week" + the week # from GameManager
-        week.text = "Week " + GameManager.Instance.GetWeek();
+        week.text = "Week " + GameManager.Instance.Week;
     }
     
 }

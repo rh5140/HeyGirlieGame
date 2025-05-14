@@ -46,12 +46,16 @@ public class Dropdown : Menu
 
     public void OpenDropdown(){
         isOpen = true;
+        Pause();
+        LockEsc(EscLock.Dropdown);
         StartCoroutine(AnimateDropdown(true));
         
     }
 
     public void CloseDropdown(){
         isOpen = false;
+        Unpause();
+        UnlockEsc();
         StartCoroutine(AnimateDropdown(false));
     }
 
@@ -67,7 +71,7 @@ public class Dropdown : Menu
         while(time < lerpTime){
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
 
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -97,8 +101,8 @@ public class Dropdown : Menu
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
         } else {
             // "OnDestroy"
-            Unpause();
-            UnlockEsc();
+            // Unpause();
+            // UnlockEsc();
         }
 
         while(time < lerpTime){
@@ -108,7 +112,7 @@ public class Dropdown : Menu
 
             paperRect.anchoredPosition = new Vector2(Mathf.Lerp(pStart, pEnd, time / lerpTime), 0);
 
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -117,9 +121,9 @@ public class Dropdown : Menu
             hoverArea.SetActive(true);
             ChangeTab("Menu");
         } else {
-            // "Awake"
-            Pause();
-            LockEsc(EscLock.Dropdown);
+            // // "Awake"
+            // Pause();
+            // LockEsc(EscLock.Dropdown);
             ChangeTab("Close");
         }
 
