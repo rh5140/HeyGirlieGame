@@ -18,16 +18,20 @@ public class Credits : Menu
     [SerializeField] private Sprite[] closeCoverFrames;
     [SerializeField] private Sprite rightPage;
 
-    void Awake(){
-        Pause();
-        LockEsc(EscLock.Credits);
-        gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
-    }
+    [SerializeField] private AudioClip farewellAudio;
+    [SerializeField] private GameObject heyGirlieSticker;
+    [SerializeField] private CanvasGroup background;
+    [SerializeField] private Image black;
 
-    void Start()
-    {
-        // change credits page every X seconds
-        // StartCoroutine(RunCredits(5f));
+    void OnEnable(){
+        if(SceneManager.GetActiveScene().name.Equals("SpringFling")){
+            GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().ChangeTrack("default");
+        } else {
+            Pause();
+            LockEsc(EscLock.Credits);
+            gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
+        }
+
         StartCoroutine(EndCredits());
     }
 
@@ -51,7 +55,6 @@ public class Credits : Menu
 
         Image leftPageAfterImage = leftPageAfter.gameObject.GetComponent<Image>();
         Image rightPageBottomAfterImage = rightPageBottomAfter.GetComponent<Image>();
-        // Image rightPageBottomBeforeImage = rightPageBottomBefore.GetComponent<Image>();
         
         int index = 0;
         for (int i = 0; i < closeBookFrames.Length; i++)
@@ -62,6 +65,37 @@ public class Credits : Menu
             rightPageTop.sprite = closeCoverFrames[i];
             if(i < 4) rightPageBottomAfterImage.sprite = closeBookFrames[i];
             else rightPageBottomAfterImage.sprite = rightPage;
+        }
+
+        if(SceneManager.GetActiveScene().name.Equals("SpringFling")) {
+            yield return new WaitForSecondsRealtime(2.5f);
+
+            rightPageBottomBefore.gameObject.SetActive(false);
+            rightPageBottomAfter.SetActive(false);
+            heyGirlieSticker.SetActive(true);
+
+            float time = 0f, lerpTime = 1f;
+            Color blackColor = black.color;
+        
+            while (time < lerpTime)
+            {
+                float currentAlpha = Mathf.Lerp(1f, 0f, time / lerpTime);
+                background.alpha = currentAlpha;
+
+                Color newColor = Color.Lerp(blackColor, Color.black, time / lerpTime);
+                black.color = newColor;
+
+                time += Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
+            }
+
+            background.alpha = 0f;
+            black.color = Color.black;
+
+            SettingManager.Instance.voices.PlayOneShot(farewellAudio);
+            yield return new WaitWhile(() => SettingManager.Instance.voices.isPlaying);
+
+            SceneManager.LoadScene("Main Menu");
         }
     }
     
