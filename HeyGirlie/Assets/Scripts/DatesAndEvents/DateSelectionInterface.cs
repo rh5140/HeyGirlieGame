@@ -18,7 +18,7 @@ public class DateSelectionInterface : MonoBehaviour
     {
         List<Button> valid = new List<Button>();
         
-        if (GameManager.Instance.GetDatesThisWeek() == 0) SetUpRegions();
+        if (GameManager.Instance.DatesThisWeek == 0) SetUpRegions();
 
         foreach (Region region in Enum.GetValues(typeof(Region)))
         {

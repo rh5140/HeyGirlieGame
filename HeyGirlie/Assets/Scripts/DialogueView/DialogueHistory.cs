@@ -151,7 +151,6 @@ namespace Yarn.Unity.Example
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
             currentLine = dialogueLine;
-            Debug.Log(dialogueLine.TextWithoutCharacterName.Text);
             if (dialogueLine.CharacterName == "Kristen")
             {
                 isRightAlignment = true;

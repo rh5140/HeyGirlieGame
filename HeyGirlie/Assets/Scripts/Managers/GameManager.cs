@@ -11,24 +11,69 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get {return _instance;}}
 
     private string _playerName = "Kristen";
+    public string PlayerName {
+        get {return _playerName;}
+        set {_playerName = value;}
+    }
+
     private string _location = "Spyre";
+    public string Location {
+        get {return _location;}
+        set {_location = value;}
+    }
+    
     private int _saveProfile = 0;
+    public int SaveProfile {
+        get {return _saveProfile;}
+        set {_saveProfile = value;}
+    }
+    
     [SerializeField] private GameObject savePopup;
 
     // public string _lastMenu = "Main Menu";
 
-    private int _week = 1; 
+    private int _week = 1;
+    public int Week {
+        get {return _week;}
+        set {_week = value;}
+    }
+
     private int _datesThisWeek = 0;
+    public int DatesThisWeek {
+        get {return _datesThisWeek;}
+        set {_datesThisWeek = value;}
+    }
+
     [SerializeField] private LoveInterest[] _loveInterests;
 
     // Separate data structure for ordering by affinity -- for now, just a copy of default
     // Needs more descriptive name..?
     public List<LoveInterest> _liQueue;
     public Character priority;
+    public Character Priority {
+        get {return priority;}
+        set {priority = value;}
+    }
+
     public Character polyamPartner;
+    public Character PolyamPartner {
+        get {return polyamPartner;}
+        set {polyamPartner = value;}
+    }
+
     // Checking for polyam condition
     [SerializeField] private bool _polyamActive;
+    public bool PolyamActive {
+        get {return _polyamActive;}
+        set {_polyamActive = value;}
+    }
+
     [SerializeField] private Character _polyamPair;
+    public Character PolyamPair {
+        get {return _polyamPair;}
+        set {_polyamPair = value;}
+    }
+
 
     // One queue per region
     // Queue of scene names to load
@@ -59,6 +104,10 @@ public class GameManager : MonoBehaviour
         awayDates = new Queue<string>();
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Update(){
+        // Debug.Log(Time.timeScale);
     }
 
     public void Pause(bool pause){
@@ -153,76 +202,6 @@ public class GameManager : MonoBehaviour
     {
         _datesThisWeek = 0;
         _week++;
-    }
-
-    public int GetWeek()
-    {
-        return _week;
-    }
-
-    public void SetWeek(int week)
-    {
-        _week = week;
-    }
-
-    public string GetPlayerName()
-    {
-        return _playerName;
-    }
-
-    public void SetPlayerName(string playerName)
-    {
-        _playerName = playerName;
-    }
-
-    public string GetLocationName()
-    {
-        return _location;
-    }
-
-    public void SetLocationName(string locationName)
-    {
-        _location = locationName;
-    }
-
-    public int GetProfile(){
-        return _saveProfile;
-    }
-
-    public void SetProfile(int profileNum){
-        _saveProfile = profileNum;
-    }
-
-    public Character GetPriority(){
-        return priority;
-    }
-
-    public void SetPriority(Character priority){
-        this.priority = priority;
-    }
-
-    public Character GetPolyamPartner(){
-        return polyamPartner;
-    }
-
-    public void SetPolyamPartner(Character partner){
-        this.polyamPartner = partner;
-    }
-
-    public bool GetPolyamActive(){
-        return _polyamActive;
-    }
-
-    public void SetPolyamActive(bool active){
-        _polyamActive = active;
-    }
-
-    public Character GetPolyamPair(){
-        return _polyamPair;
-    }
-
-    public void SetPolyamPair(Character pair){
-        _polyamPair = pair;
     }
 
     public void SetLocationQueues(List<string> awayDates, List<string> outdoorsDates, List<string> schoolDates, List<string> mordredDates, List<string> elmvilleDates){

@@ -84,8 +84,8 @@ public class SaveGallery : Menu
     }
 
     public void NameSave(){
-        if(!string.IsNullOrEmpty(playerName.text)) GameManager.Instance.SetPlayerName(playerName.text);
-        GameManager.Instance.SetProfile(selectedSave);
+        if(!string.IsNullOrEmpty(playerName.text)) GameManager.Instance.PlayerName = playerName.text;
+        GameManager.Instance.SaveProfile = selectedSave;
         StartCoroutine(Save());
     }
 
@@ -102,9 +102,12 @@ public class SaveGallery : Menu
     }
 
     public void LoadSave(){
+        OnDestroy();
+
         string scene = SaveManager.LoadData(selectedSave);
         if(scene != null){
             GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().MuteTrack();
+
             SceneManager.LoadScene(scene);
         } else {
            Debug.Log("how the fuck did you get here");

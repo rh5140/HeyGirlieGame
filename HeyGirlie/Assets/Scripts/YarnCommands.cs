@@ -172,7 +172,7 @@ public class YarnCommands : MonoBehaviour
     /// </summary>
     private void ChangeScene(string sceneName)
     {
-        GameManager.Instance.SetLocationName("Spyre");
+        GameManager.Instance.Location = "Spyre";
         _voiceSource.Stop();
         _sfxSource.Stop();
         //_atm.FadeOutTrack();
@@ -193,7 +193,7 @@ public class YarnCommands : MonoBehaviour
     [YarnFunction("get_dates_this_week")]
     public static int GetDatesThisWeek()
     {
-        return GameManager.Instance.GetDatesThisWeek();
+        return GameManager.Instance.DatesThisWeek;
     }
 
     private void NextWeek()
@@ -205,7 +205,7 @@ public class YarnCommands : MonoBehaviour
     [YarnFunction("get_week")]
     public static int GetWeek()
     {
-        return GameManager.Instance.GetWeek();
+        return GameManager.Instance.Week;
     }
 
     private void AddPoints(int num)
@@ -236,10 +236,9 @@ public class YarnCommands : MonoBehaviour
             TextMeshProUGUI location = _locationUI.GetComponent<TextMeshProUGUI>();
             location.text = locationName;
         } catch (Exception e) {
-            //do nothing
-            Debug.Log("help");
+            // Debug.Log(e.Message);
         } finally {
-            GameManager.Instance.SetLocationName(locationName);
+            GameManager.Instance.Location = locationName;
         }
         // If location is multiple words, put "quotes around location"
     }

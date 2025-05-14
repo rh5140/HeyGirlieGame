@@ -15,18 +15,69 @@ contains all relevant information for a player save.
 public class PlayerData
 {
     [SerializeField] private string playerName;
+    public string PlayerName {
+        get {return playerName;}
+        set {playerName = value;}
+    }
+
     [SerializeField] private string location;
+    public string Location {
+        get {return location;}
+        set {location = value;}
+    }
+    
     [SerializeField] private string scene;
+    public string Scene {
+        get {return scene;}
+        set {scene = value;}
+    }
+    
     [SerializeField] private int week;
+    public int Week {
+        get {return week;}
+        set {week = value;}
+    }
+    
     [SerializeField] private int datesThisWeek;
+    public int DatesThisWeek {
+        get {return datesThisWeek;}
+        set {datesThisWeek = value;}
+    }
+    
     [SerializeField] private int priority;
+    public int Priority {
+        get {return priority;}
+        set {priority = value;}
+    }
+    
     [SerializeField] private int polyamPartner;
+    public int PolyamPartner {
+        get {return polyamPartner;}
+        set {polyamPartner = value;}
+    }
+    
     [SerializeField] private int polyamActive;
+    public int PolyamActive {
+        get {return polyamActive;}
+        set {polyamActive = value;}
+    }
+    
     [SerializeField] private int polyamPair;
+    public int PolyamPair {
+        get {return polyamPair;}
+        set {polyamPair = value;}
+    }
 
     [SerializeField] private List<LIData> liData = new List<LIData>();
     [SerializeField] private int ayda;
+    public bool Ayda {
+        get {return (ayda == 1 ? true : false);}
+    }
+
     [SerializeField] private int figW4;
+    public bool FigW4 {
+        get {return (figW4 == 1 ? true : false);}
+    }
 
     [SerializeField] private List<string> awayDates;
     [SerializeField] private List<string> outdoorsDates;
@@ -103,78 +154,6 @@ public class PlayerData
         liData.Add(new LIData(character, dateCount, points));
     }
 
-    public string getPlayerName(){
-        return playerName;
-    }
-
-    public void setPlayerName(string playerName){
-        this.playerName = playerName;
-    }
-
-    public string getLocation(){
-        return location;
-    }
-
-    public void setLocation(string location){
-        this.location = location;
-    }
-
-    public string getScene(){
-        return scene;
-    }
-
-    public void setScene(string scene){
-        this.scene = scene;
-    }
-
-    public int getWeek(){
-        return week;
-    }
-
-    public void setWeek(int week){
-        this.week = week;
-    }
-
-    public int getDatesThisWeek(){
-        return datesThisWeek;
-    }
-
-    public void setDatesThisWeek(int datesThisWeek){
-        this.datesThisWeek = datesThisWeek;
-    }
-
-    public int getPriority(){
-        return priority;
-    }
-
-    public void setPriority(int priority){
-        this.priority = priority;
-    }
-
-    public int getPolyamPartner(){
-        return polyamPartner;
-    }
-
-    public void setPolyamPartner(int partner){
-        this.polyamPartner = partner;
-    }
-
-    public int getPolyamActive(){
-        return polyamActive;
-    }
-
-    public void setPolyamActive(int active){
-        this.polyamActive = active;
-    }
-
-    public int getPolyamPair(){
-        return polyamPair;
-    }
-
-    public void setPolyamPair(int pair){
-        this.polyamPair = pair;
-    }
-
     public List<int[]> getLIs(){
         List<int[]> lis = new List<int[]>();
 
@@ -187,15 +166,6 @@ public class PlayerData
         }
 
         return lis;
-    }
-
-    public bool getAyda(){
-        return (ayda == 1 ? true : false);
-    }
-
-    public bool getFigW4()
-    {
-        return (figW4 == 1 ? true : false);
     }
 
     public List<string> getLocationQueue(Region region){

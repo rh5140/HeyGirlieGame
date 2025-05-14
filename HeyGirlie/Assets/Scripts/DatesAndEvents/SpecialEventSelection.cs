@@ -39,7 +39,7 @@ public class SpecialEventSelection : MonoBehaviour
         arrowNavigation.ArrowKeyStart();
         List<Button> tempButtons = new List<Button>();
 
-        if(GameManager.Instance.GetPolyamActive()) _polyamButtonContainer.SetActive(true);
+        if(GameManager.Instance.PolyamActive) _polyamButtonContainer.SetActive(true);
         if (threshold == 0)
         {   
             foreach (GameObject button in _buttons)
@@ -62,7 +62,7 @@ public class SpecialEventSelection : MonoBehaviour
                 if(liIdx == (int)Character.Frostkettle || liIdx == (int)Character.Trackernara){
                     if(week6 && liDateCount >= 3){
                         continue;
-                    } else if(liIdx != (int)GameManager.Instance.GetPolyamPair()) {
+                    } else if(liIdx != (int)GameManager.Instance.PolyamPair) {
                         button.SetActive(false);
                     } else {
                         tempButtons[tempButtons.Count - 1].interactable = false;

@@ -7,7 +7,7 @@ public class UpdateCassWeek : MonoBehaviour
     public DialogueRunner dialogueRunner;
     void Start()
     {
-        int weekNum = GameManager.Instance.GetWeek();
+        int weekNum = GameManager.Instance.Week;
         if (weekNum == 1)
         {
             dialogueRunner.StartDialogue("Cassandra");

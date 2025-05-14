@@ -27,7 +27,7 @@ public class LoadPolaroid : MonoBehaviour
     public void SetName(){
         PlayerData data = SaveManager.findSave(profileNum);
         
-        name.text = (data != null) ? data.getPlayerName() : "";
-        location.text = (data != null) ? data.getLocation() : "";
+        name.text = (data != null) ? data.PlayerName : "";
+        location.text = (data != null) ? data.Location : "";
     }
 }
