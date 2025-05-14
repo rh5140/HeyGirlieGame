@@ -15,6 +15,8 @@ public class Credits : Menu
     [SerializeField] private Sprite[] pageTopFrames;
     [SerializeField] private Sprite[] closeBookFrames;
     [SerializeField] private Sprite[] closePageFrames;
+    [SerializeField] private Sprite[] closeCoverFrames;
+    [SerializeField] private Sprite rightPage;
 
     void Awake(){
         Pause();
@@ -44,18 +46,21 @@ public class Credits : Menu
     }
 
     IEnumerator EndCredits(){
-        yield return StartCoroutine(RunCredits(1f));
+        yield return StartCoroutine(RunCredits(2.5f));
 
         Image leftPageAfterImage = leftPageAfter.gameObject.GetComponent<Image>();
         Image rightPageBottomAfterImage = rightPageBottomAfter.GetComponent<Image>();
+        // Image rightPageBottomBeforeImage = rightPageBottomBefore.GetComponent<Image>();
         
         int index = 0;
-        while (index < closeBookFrames.Length)
+        for (int i = 0; i < closeBookFrames.Length; i++)
         {
             yield return new WaitForSecondsRealtime(0.1f);
 
-            leftPageAfterImage.sprite = closePageFrames[index];
-            rightPageBottomAfterImage.sprite = closeBookFrames[index++];
+            leftPageAfterImage.sprite = closePageFrames[i];
+            rightPageTop.sprite = closeCoverFrames[i];
+            if(i < 4) rightPageBottomAfterImage.sprite = closeBookFrames[i];
+            else rightPageBottomAfterImage.sprite = rightPage;
         }
     }
     
@@ -78,12 +83,12 @@ public class Credits : Menu
     IEnumerator PageTurnAnim(float waitTime)
     {
         Image rightPageBottomAfterImage = rightPageBottomAfter.GetComponent<Image>();
-        int i = 0;
-        while(i < pageBottomFrames.Length)
+        // int i = 0;
+        for(int i = 0; i < pageBottomFrames.Length; i++)
         {
             yield return new WaitForSecondsRealtime(waitTime);
             rightPageBottomAfterImage.sprite = pageBottomFrames[i];
-            rightPageTop.sprite = pageTopFrames[i++];
+            rightPageTop.sprite = pageTopFrames[i];
         }
 
         rightPageBottomAfter.transform.GetChild(rightPageBottomAfter.transform.childCount - 1).gameObject.SetActive(false);
