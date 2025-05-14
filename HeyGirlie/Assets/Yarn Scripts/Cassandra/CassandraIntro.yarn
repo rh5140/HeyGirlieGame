@@ -2,6 +2,7 @@
 tags:
 ---
 <<location "Mordred">>
+<<play_track cassandra>>
 <<if get_week() == 1>>
     <<jump CassandraWeek1>>
 
@@ -9,17 +10,22 @@ tags:
     <<jump CassandraWeek2>>
 
 <<elseif get_week() == 3>>
+    <<jump CassandraWeek3>>
 
 <<elseif get_week() == 4>>
+    <<jump CassandraWeek4>>
 
 <<elseif get_week() == 5>>
     <<jump CassandraWeek5>>
 
 <<elseif get_week() == 6>>
+    <<jump CassandraWeek6>>
 
 <<elseif get_week() == 7>>
+    <<jump CassandraWeek7>>
 
 <<elseif get_week() == 8>>
+    <<jump CassandraWeek8>>
 
 <<else>>
     Cassandra: ??? how did u get here
@@ -29,7 +35,7 @@ tags:
 
 
 Cassandra: Well, why don't you choose where you want to have a meet-cute (or two or three) this week!
-<<change_scene DateSelection>>
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek1
@@ -193,37 +199,86 @@ Cassandra: I’ll leave you hints if you get stuck on where to go! Do you think 
    <<cass_pointer_on history>>
    Cassandra: See?
    <<cass_pointer_off history>>
-   Cassandra: If you think you  need to take a break, this might just SAVE your life.
+   Cassandra: If you think you need to take a break, this might just SAVE your life.
    <<cass_pointer_on save>>
    Cassandra: Give it a try!
    <<cass_pointer_off save>>
    <<cass_pointer_on menu>>
-   Cassandra: There's some other handy information in your notes -- I even put a little tab as a bookmark for you!
+   Cassandra: There's some other handy information in your notes – I even put a little tab as a bookmark for you!
    <<cass_pointer_off menu>>
    Cassandra: If you want to be a little more hands-off, there's a neat little magic trick here.
    <<cass_pointer_on ff>>
    Cassandra: Though it might not be your pace.
    <<cass_pointer_off ff>>
 Cassandra: So, what’ll it be, Kristen? Where to first?
-<<change_scene DateSelection>>
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek2
 ---
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting1>>
+Cassandra: Heya, Kristen! We’re a week in, so let’s really start putting in the work to feel some romance.
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
+Kristen: Uhhh, you sure about this? It’s a little too soon to start calling things romantic, right? I’m not about to become a U-Haul statistic.
+<<char_right CassandraBlush>>
+Cassandra: What can I tell you? When it’s right, there’s no such thing as too much, too soon!
+Kristen: Yeah, yeah… just keep telling yourself that.
+<<kristen Neutral>>
+Kristen: You… annoying, happily married goddex, you.
+<<char_right CassandraNeutral>>
+Cassandra: When you live for thousands of years, you tend to gain a little perspective. So take my word for it, get out there again, and have a little fun!
+<<voiceline CassNeutral2>>
+Cassandra: If you’re a little stuck on where to go to find a date, you can always check your notebook. I slipped in some tips for you.
+<<kristen Grin>>
+<<voiceline KristenNeutral3>>
+Kristen: Orrrrrr I could just wing it! Livin’ la vida loca!
+<<voiceline CassFarewell2>>
+Cassandra: Or that! You just do what you feel is right. I’ll check in with you later!
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek3
 ---
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassStartup1>>
+Cassandra: Hi bestie! Who’s ready for a new week! I sure am!
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
+Kristen: I’m really not vibing with how into this you are. Is it going to be like this every week?
+<<char_right CassandraHappy>>
+Cassandra: Maybe! I LOVE love, Kristen! Just let me live vicariously through you for a while, okay? 
+<<char_right CassandraNeutral>>
+Cassandra: Not to mention, it’s kiiiind of a big deal that you get this right. But no pressure!
+Kristen: No pressure…? right…
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell3>>
+Cassandra: Exactly! So, have fun, be your best self and I’ll call you later!
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek4
 ---
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting1>>
+Cassandra: Hi Kristen! I missed you!
+Kristen: Honestly… I think I’ve seen more of you these past few weeks than usual, but okaaaaaay. What’s up?
+Cassandra: What’s up? Another fun week of wooing our lovely eligible bachelorettes to snag a date to the Spring Fling.
+<<char_right CassandraSurprised>>
+Cassandra: You didn’t already forget did you?
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
+Kristen: No… I mean, how could I? I’m just sayin’ maybe it would be nice for a little <i>’hey Kristen, what did you have for breakfast?’</i> or <i>’yo, Kristen, I saw what you did with that hacky sack. That was awesome.’</i>
+Cassandra: …
+Kristen: …
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell1>>
+Cassandra: Okay so, where to next?
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek5
@@ -233,12 +288,24 @@ title: CassandraWeek5
 <<declare $tn3c = false>>
 <<polyam_condition 3C>>
 <<if $fkb>>
-    Cassandra: It looks like you're doing well with Kipperlilly and Lucy! What do you think about... dating them both together at the same time...
-    -> Kristen: Heck yeah!
+    Cassandra: Kristen! 
+    Kristen: Oh, hey Cass! Sorry, my room’s a bit of a mess, but—
+    Cassandra: Never mind that!
+    Cassandra: You’re really working hard on this whole “finding a date for Spring Fling” thing, aren’t you? You big ol’ charmer, you?
+    Kristen: Aha, I mean, I learned from the best, right?
+    Cassandra: Awwwww! You’re making me blush!
+    Cassandra: Y’know, word on the godly street is that both Lucy and Kipperlilly have their eyes on you…
+    Kristen: You’re serious?
+    Cassandra: When it comes to getting you a date or two? Absolutely.
+    Cassandra: And from what it sounds like, you’re not against it.
+    Kristen: I mean… It's been fun watching Kipperlilly come out of her shell, and I want to keep working on Lucy’s bucket list with her.
+    Cassandra: The two of them are definitely more than just a sum of their parts, and I think you could help them find their true potentials together.
+    Cassandra: So? What d’you think?
+    -> Kristen: “I like both of them separately, I might like them more together.”
         <<set_polyam FKB>>
-        Cassandra: Excited for this new adventure for the three of you!
-        Cassandra: I think you'll be pleasantly surprised heading downtown this week!
-    -> Kristen: I think it's not for me.
+        Cassandra: Heehee, I knew it! Look out for a text from Lucy to meet her downtown, okay? Have so much fun!
+    -> Kristen: “This is a bit much for right now…”
+       Cassandra: Totally get it! Good luck, Kristen! Make me proud! Kiss some girls!
 <<elseif $tn3c>>
     <<kristen Neutral>>
     <<char_right CassandraHappy>>
@@ -270,25 +337,107 @@ title: CassandraWeek5
         Cassandra: You got it!
         Cassandra: Just remember you’ll have to choose between them eventually.
 <<else>>
-    Cassandra: Hmm... never mind.
+    <<kristen Neutral>>
+    <<char_right CassandraNeutral>>
+    <<voiceline CassPhone1>>
+    Cassandra: Would you look at that, we’re already halfway to Spring Fling! When did that happen??
+    <<kristen Nervous>>
+    <<voiceline KristenNeutral1>>
+    Kristen: Yeahhhhh. Time sure does fly when you’re trying to romance your way out of impending death.
+    <<char_right CassandraSurprised>>
+    Cassandra: Woah!
+    Kristen: Too much?
+    Cassandra: Maybe a little. Aren’t you at least having fun?
+    <<kristen Happy>>
+    <<voiceline KristenHappy1>>
+    Kristen: Actually, yeah! Lacing up my big girl cowboy boots and getting back on the market was… kind of exactly what I needed.
+    <<char_right CassandraHappy>>
+    Cassandra: That’s the spirit! You’ll find yourself the perfect partner soon. I can feel it in the air!
+    <<voiceline CassFarewell4>>
+    Cassandra: So get back out there, and tell me <i>everything</i> later. Bye for now, girlie!
 <<endif>>
-<<change_scene DateSelection>>
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek6
 ---
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
+<<kristen Neutral>>
+<<char_right CassandraHappy>>
+<<voiceline CassHappy3>>
+Cassandra: Good morning, Kristen! It’s another beautiful week here in Elmville, and another exciting week of dates!
+Kristen: What are you, my own personal romantic weather-diety?
+<<kristen Grin>>
+Kristen: Cloudy with a chance of smooches, amiright?
+<<char_right CassandraNeutral>>
+Cassandra: Yowch, that was a little corny.
+<<kristen Surprised>>
+<<voiceline KristenSurprised1>>
+Kristen: <i>Corny?</i> Low blow, dude. I’m still dealing with all that residual trauma.
+Cassandra: Oopsie. But, um… onto more important things, where are you thinking of starting your week?
+Kristen: More important than my clearly unresolved issues with corn? For shame, Cass, for <i>shame</i>.
+<<voiceline CassDisappointed3>>
+Cassandra: C’monnnn, Kristen. What about finding a love interest <i>or else?</i>
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
+Kristen: …
+Kristen: Sooooo, about that date!
+<<char_right CassandraHappy>>
+<<voiceline CassNeutral2>>
+Cassandra: Couldn’t agree more. Where are we headed?
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek7
 ---
-Cassandra: Where do you want to go this week?
-<<change_scene DateSelection>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting2>>
+Cassandra: Kristen! Fancy seeing you here!
+Kristen: I… live here? You’re the one giving me jump scares first thing in the morning. I haven’t even checked my texts yet!
+<<voiceline CassHappy3>>
+Cassandra: Texts? Oooh, she’s popular! Anything from any of our eligible bachelorettes?
+<<kristen Nervous>>
+Kristen: …
+<<char_right CassandraSurprised>>
+Cassandra: Your silence speaks volumes.
+Kristen: <i>Oh boy,</i> would you look at the time! I really have to get going and figure out where I’m going to be starting the week at.
+<<char_right CassandraHappy>>
+<<voiceline CassFarewell1>>
+Cassandra: That’s the spirit, Kristen! The early cleric gets the girlie! Where are we headed?
+<<jump SwitchToDateSelection>>
 ===
 
 title: CassandraWeek8
 ---
-Cassandra: Where do you want to go this week?
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+<<voiceline CassGreeting1>>
+Cassandra: Crunch time, Kristen! This is the final week before Spring Fling, so it’s time to lock it in and really make an impact!
+<<kristen Nervous>>
+Kristen: Oh man, already? I could have sworn we had more time!
+<<char_right CassandraSurprised>>
+<<voiceline CassDisappointed1>>
+Cassandra: The dance is this weekend! The dance that <i>you’ve</i> been planning. How did that slip your mind???
+<<voiceline KristenNeutral1>>
+Kristen: I’m feeling a lot of judgement right now.
+<<char_right CassandraNeutral>>
+<<voiceline CassNeutral1>>
+Cassandra: Hey, listen! You’re cute, charming, funny and literally a hero. You’re the full package AND my favorite cleric!
+Kristen: I’m your only cleric…
+<<char_right CassandraBlush>>
+Cassandra: So seal it with a kiss and we can finally see if we can make things official.
+<<kristen Grin>>
+Kristen: Seal it with a kiss? I like the sound of that!
+<<voiceline CassHappy1>>
+Cassandra: Go get ‘em, girlie. I believe in you!
+<<kristen Happy>>
+<<voiceline KristenHappy3>>
+Kristen: Yeehaw, let’s do this!
+<<jump SwitchToDateSelection>>
+===
+
+title: SwitchToDateSelection
+---
+<<play_track default>>
 <<change_scene DateSelection>>
 ===

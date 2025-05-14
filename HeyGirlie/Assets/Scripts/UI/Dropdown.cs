@@ -135,28 +135,34 @@ public class Dropdown : Menu
         tabText.text = value;
     }
 
+    public void MainMenu(){
+        Unpause();
+        UnlockEsc();
+        GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().MuteTrack();
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void LoadGame()
     {
-        CloseDropdown();
-        DisableHover();
-        CursorManager.Instance.WaitCursor(() => {
-            Instantiate(saveGalleryMenu);
-            return true;
-        });
+        GameObject menu = Instantiate(saveGalleryMenu);
+        menu.GetComponent<SaveGallery>().OnDestroyEvnt.AddListener(Close);
     }
 
     public void Settings()
     {
-        CloseDropdown();
-        DisableHover();
-        Instantiate(settingsMenu);
+        GameObject menu = Instantiate(settingsMenu);
+        menu.GetComponent<Settings>().OnDestroyEvnt.AddListener(Close);
     }
 
     public void Credits()
     {
+        GameObject menu = Instantiate(creditsMenu);
+        menu.GetComponent<Credits>().OnDestroyEvnt.AddListener(Close);
+    }
+
+    protected void Close(){
         CloseDropdown();
         DisableHover();
-        Instantiate(creditsMenu);
     }
 
     public void ExitPopup(){

@@ -11,7 +11,10 @@ But still, how do you not have anything to show for it? You have <i>five</i> pag
 Fuck essays. All your homies hate essays. 
 Except Riz. But then again, he’s <i>Riz</i>. 
 Kristen: Cassandra, help meeee. 
+<<crystal_ping true>>
+<<sfx  vibrate>>
 Your crystal buzzes — she’s sent back an emoji of an angry cat. Fantastic.
+<<crystal_ping false>>
 You thunk your head on your desk with a groan, hoping it’ll knock two brain cells together to give you just one idea. 
 It doesn’t work. Shocker.
 Your stomach chooses this exact moment to growl. You straighten with a grimace.
@@ -199,7 +202,7 @@ Kristen: What’s on it?
 Lucy hands the notebook over to you. You read through the page.
 First on the list is “Make up with Kipperlilly”, which has been crossed out. 
 You try to keep your face neutral, but you’re pretty sure Lucy has noticed your grimace when she gives you a knowing look.
-:Lucy has also written: Find favorite flavor of ice cream. Change up style. Get a different haircut. Get into gardening. Learn more about frost giant culture. Return to Far Haven Woods and make a good memory! Go to a big social event.
+:Lucy has also written: Find favorite flavor of ice cream. Change up style. Get a different haircut. Get into gardening. Learn more about frost giant culture. Make more good memories at Far Haven Woods! Go to a big social event.
 <<kristen Happy>>
 Kristen: There’s so much cool stuff here! 
 <<char_right LucyHappy>>
@@ -296,11 +299,13 @@ Lucy: I’ll text you.
 You spend a little while longer chatting before you leave for the evening. 
 <<voiceline KristenFarewellLucy1>>
 <<voiceline LucyFarewell1>>
+<<char_right transparent>>
+<<location “Mordred Manor”>>
+<<background Mordred>>
 When you get home, you find that your laptop is still open to your document. You sit down in front of it, and this time, when you look at the questions, you find that you have a better idea of how to answer them.
 A lot of that is probably thanks to Lucy. Today was enlightening for you, too. 
 You begin working away, smiling to yourself. You can’t wait to see her soon.
 You do only get three sentences in before you’re distracted again,  but hey, that’s three more sentences than before!
 
 <<jump Cassandra2>>
-
 ===

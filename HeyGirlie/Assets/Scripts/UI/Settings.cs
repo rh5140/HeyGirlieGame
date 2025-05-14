@@ -61,6 +61,7 @@ public class Settings : Menu
         screenshot.sprite = (SceneManager.GetActiveScene().name.Equals("Main Menu")) ? defaultScreenshot : SaveManager.getScreenshot(GameManager.Instance.GetProfile());
 
         yield return null;
+
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyStart();
     }
 
@@ -72,6 +73,7 @@ public class Settings : Menu
         Unpause();
         UnlockEsc();
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
+        if(OnDestroyEvnt != null) OnDestroyEvnt.Invoke();
     }
 
     public void ToggleFullscreen(bool value){
@@ -122,10 +124,10 @@ public class Settings : Menu
     public void OpenSaves(){
         if(SceneManager.GetActiveScene().name.Equals("Main Menu")) Instantiate(saveGalleryMenu);
         else {
-            CursorManager.Instance.WaitCursor(() => {
+            // CursorManager.Instance.WaitCursor(() => {
                 Instantiate(saveGalleryMenu);
-                return true;
-            });
+            //     return true;
+            // });
         }
     }
 

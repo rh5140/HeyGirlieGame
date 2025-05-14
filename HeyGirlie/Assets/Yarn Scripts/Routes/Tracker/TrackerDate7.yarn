@@ -1,18 +1,19 @@
 ﻿title: Date7
 ---
-<<location "The Black Pit">>
+<<location "Downtown Elmville">>
 <<set $date_points = 0>>
 <<set $date_points_total = 8>>
 <<kristen Neutral>>
 :You offered to give Tracker a ride, but she said she wanted to meet you there, so you pull up to the Black Pit all by yourself.
-:You’ve been here since that fateful night — with the other Bad Kids, a couple times with Fig, that sort of thing - but it feels brand new like this.
-:Aside from when you first met, you’ve never been here with <i>Tracker</i>.
+:You’ve been here more than once since that fateful night — a few times with the other Bad Kids, a couple bored nights with Fig — but this time, everything feels different.
+:And, well, of course it does. Aside from the day you first met, you’ve never been here with <i>Tracker</i>...
 :The place is the same as ever. You feel the bass in your bones as you push your way through the crowd, looking for Tracker.
 :You have a little bit of trouble actually finding her, so you decide to wait at the bar. Feeling nostalgic, you order something non-alcoholic with a lime in it.
+<<voiceline TrackerGreeting2>>
 Tracker: Cute.
 <<char_right TrackerBlush_4>>
 :You turn and spot Tracker, arms leaned casually back against the table. She’s as beautiful as she ever was.
-:Oh, Cassandra. You almost can’t believe she was ever just a stranger to you.
+:Oh, Cassandra. You almost can’t believe there was a time she was ever just a stranger.
 <<kristen Soft>>
 Tracker: No alcohol?
 :You shrug and say:
@@ -23,6 +24,7 @@ Tracker: No alcohol?
     Tracker: What did I say next? Something about your shirt?
     Kristen: I think so? It’s been awhile.
     <<char_right TrackerBlush_4>>
+    <<voiceline TrackerSurprised3>>
     Tracker: It has. But it’s sweet that you remember.
     <<add_points 1>>
 -> I wanna remember every second of this.
@@ -34,12 +36,14 @@ Tracker: No alcohol?
     <<add_points 2>>
 -> Wait, are we getting fucked up? I’ll get a bad baby milk.
     <<char_right TrackerAwkward_4>>
+    <<voiceline TrackerSad1>>
     Tracker: Uh, no, it’s just… It’s what I said when we met.
     Tracker: Let’s <i>not</i> get really fucked up. Kind of a different date vibe than I was going for.
     <<kristen Sad>>
     Kristen: Aw, okay. If you insist.
     <<kristen Neutral>> // just so she’s not sad through the next scene
     <<add_points 0>>  
+<<char_right TrackerNeutral_4>>
 Tracker: Don’t worry, the plan isn’t to argue about Helio again. We’ve got a <i>much</i> better use of our time.
 Kristen: Arguing about Cassandra and Galicaea?
 :She rolls her eyes, mostly fondly, then holds out a hand for you to take. You do, obviously, linking your fingers together and following her.
@@ -63,7 +67,7 @@ Tracker: Nope. Go on, tell me what you’ve been up to. I know you’re busy. It
 :You do, telling her about your sundry misadventures and quieter moments and everything else you’ve done in your time apart.
 <<kristen Happy>>
 :Talking with her is so nice. Comfortable. Easy, even, which feels like it should be more of a surprise than it is.
-:She’s your <i>ex</i>. You think, anyway. Maybe you’re fully back together now. But isn’t it supposed to be awful and awkward and all of that?
+:She’s your <i>ex</i>. You think, anyway. Maybe you’re mostly back together now. But isn’t it supposed to be awful and awkward and all of that?
 Tracker: Hey.
 :She pokes you in the cheek this time.
 <<kristen Neutral>>
@@ -74,7 +78,8 @@ Tracker: What’s up? You went away there for a sec.
 Kristen: I was just thinking about how easy this is.
 Kristen: It’s really nice. I really missed spending time with you and having it just be…
 :You trail off, but Tracker nods.
-<<char_right TrackerNeutral4>>
+<<char_right TrackerNeutral_4>>
+<<voiceline TrackerNeutral1>>
 Tracker: Having it feel natural rather than super awkward?
 Kristen: Yes! Exactly, yes.
 Tracker: I think we’ve had our fair share of awkwardness to get here.
@@ -94,6 +99,7 @@ Kristen: Hey, Tracker?
     Tracker: Oh, so it <i>was</i> me.
     Kristen: Of course it was!
     <<kristen Awkward>>
+    <<voiceline KristenAwkward2>>
     Kristen: Unless you don’t want to?
     <<char_right TrackerBlush_4>>
     Tracker: No, I <i>definitely</i> want to.
@@ -105,8 +111,10 @@ Kristen: Hey, Tracker?
     Tracker: No.
     :Wait, what?
     <<char_right TrackerLaugh_4>>
+    <<voiceline TrackerHappy2>>
     Tracker: Your face! Come on, Kristen. Of course I do. Ugh, Galicaea, how could I forget...
     :You gotta hand it to her, she totally got you.
+    <<char_right TrackerNeutral_4>>
     Tracker: Still, I thought we were here to make new, hopefully less bloodthirsty memories?
     <<add_points 1>>
 -> Is it too fast for us to go find a bathroom?
@@ -119,6 +127,7 @@ Kristen: Hey, Tracker?
     <<add_points 0>>
 :Tracker gets up from her seat and holds a hand out to you.
 <<char_right TrackerFlirt_4>>
+<<voiceline TrackerRomantic1>>
 Tracker: Come on, cowboy. Let’s dance.
 <<kristen Happy>>
 :You take her hand and she all but yanks you out of your seat, pulling you into the thick of it.
@@ -126,7 +135,7 @@ Tracker: Come on, cowboy. Let’s dance.
 :The music’s not really either of your styles, but you follow their lead. It’s kinda fun, losing yourself to the rhythm.
 <<char_right TrackerAwkward_4>>
 :...Tracker seems to be struggling with that.
-:Despite being the one who dragged you out to the floor in the first place, she seems hesitant to actually dance with you. Wary, even. But why?
+:Despite being the one who dragged you out to the floor in the first place, now that you’re out here, Tracker seems hesitant to actually dance with you. Wary, even. But why?
 :When someone bumps into you from behind, you make skin contact - and she actively flinches away.
 :Okay. Ouch. But the initial sting of rejection aside, you get the feeling that it wasn’t really about you.
 :You lean in, close enough to be heard over the rush of people.
@@ -169,6 +178,7 @@ She looks so sad that you can’t help but pull her in for a hug and say…
     Kristen: Uh, yes, I do. We killed that DJ Brainzz guy.
     Tracker: Well… that’s actually a fair point.
     <<add_points 1>>
+<<char_right TrackerSad_4>>
 :Despite the pep talk, Tracker still seems a little conflicted, stepping back from the hug and crossing her arms.
 Tracker: I just... really don’t want to hurt you, Kristen. Not again.
 :You have a feeling she’s not just talking about wolfing out that night anymore.
@@ -183,12 +193,12 @@ Tracker: …
 Tracker: It was a really terrible booth, we shouldn’t fight for it.
 <<kristen Surprised>>
 Kristen: What? You literally just said it was the best!
-Tracker: ‘Best’ at the Black Pit doesn’t necessarily mean <i>good.</i>
+Tracker: Yeah, ‘Best’ at the Black Pit doesn’t necessarily mean <i>good.</i>
 Tracker: Let’s keep dancing. If I need to go, I… I’ll let you know.
 <<kristen Happy>>
 :You dance for a while longer, long enough that your feet hurt and you’ve had at least three drinks spilled on you from less perceptive dancers. You definitely step on Tracker’s feet more than once.
 <<char_right TrackerHappy_4>>
-:But despite that, you’d dance for hours more just to see this look on Tracker’s face, carefree and bright-eyed and just <i>happy</i> whenever your gaze catches hers.
+:But despite that, you’d dance for hours more just to see this look on Tracker’s face, carefree and bright-eyed and just <i>lighter</i> whenever your gaze catches hers.
 :You actually dance long enough that the crowd thins around you, until it’s just you, Tracker, the bartender, and a couple of Aguefort students who scurry out once they see who they’re sharing the floor with.
 :You share a look with Tracker at that.
 Kristen: Their loss.
@@ -223,7 +233,7 @@ Kristen: Yeah?
 :She holds out both her hands for you to take. Which you do immediately, obviously.
 Tracker: I had a really, really good time tonight.
 Kristen: I did, too.
-It’s been a great time. You really want to wrap this up right, too, and you know just how to do it.
+It’s been a great time. You really want to wrap this up right. And you think you know just how to do it.
 -> Pull her in for a good night kiss.
     :When you gently pull her hands, Tracker goes easily, going up on her tiptoes to make kissing you easier even before you’re finished leaning in.
     :It’s a quick kiss. Relatively chaste, too, compared to what you used to get up to.
@@ -233,10 +243,12 @@ It’s been a great time. You really want to wrap this up right, too, and you kn
     <<add_points 2>>
 -> Ask her if she wants to come home with you.
     <<char_right TrackerNeutral_4>>
+    <<voiceline TrackerAngry3>>
     :The cold winter air somehow gets a little more icy.
     <<kristen Awkward>>
     Kristen: Y’know, like… for old… times…
     Tracker: I know what you meant.
+    <<voiceline TrackerDateFail5>>
     :She sighs, clearly frustrated with herself.
     Tracker: Tonight was really nice… but that sounds like a really bad idea.
     <<add_points 0>>
@@ -246,8 +258,8 @@ It’s been a great time. You really want to wrap this up right, too, and you kn
     Tracker: Oh!
     :After a beat, she hugs you back tightly, practically radiating warmth against your chest.
     <<char_right TrackerNeutral_4>>
-    Tracker: A good night <i>hug</i>, huh?
-    :She gives you a look you can’t begin to read as she pulls back.
+    Tracker: …A good night <i>hug</i>, huh?
+    :She gives you a look you can’t even begin to read as she pulls back.
     <<add_points 1>>  
 Kristen: Are you free next week?
 <<char_right TrackerAwkward_4A>>
@@ -263,5 +275,5 @@ Tracker: Drive safe.
 <<kristen Soft>>
 Kristen: Good night!
 :You get into your car and drive home, the half-moon shining bright in the night sky above you. You wonder what’s got Tracker so busy next week?
-<<jump Cassandra>>
+<<jump Cassandra7>>
 === 

@@ -49,6 +49,8 @@ public class YarnCommands : MonoBehaviour
     
     public GameObject[] CatsandraPointers;
 
+    public GameObject endCredits;
+
     #region Setup
     /// <summary>
     /// Supporting adding Yarn Commands, initializing values, and setting LI priority
@@ -80,6 +82,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
         dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
+        dialogueRunner.AddCommandHandler("fade_out_track", FadeOutTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
         dialogueRunner.AddCommandHandler<string>("sf_success", SetSF);
@@ -114,6 +117,8 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("map_tutorial", MapTutorial);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_on", CassPointerOn);
         dialogueRunner.AddCommandHandler<string>("cass_pointer_off", CassPointerOff);
+
+        dialogueRunner.AddCommandHandler("end_credits", EndCredits);
     }
 
     void Start()
@@ -170,6 +175,7 @@ public class YarnCommands : MonoBehaviour
         GameManager.Instance.SetLocationName("Spyre");
         _voiceSource.Stop();
         _sfxSource.Stop();
+        //_atm.FadeOutTrack();
         _ui.GetComponent<FadeTransition>().FadeOutAndChangeScene(sceneName);
         // SceneManager.LoadScene(sceneName);
     }
@@ -361,8 +367,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charLeftSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(424f, 0f);
-            _cassSprite = null;
+            if (_cassSprite != null && _cassSprite.anchoredPosition.x != 1280f) _cassSprite.anchoredPosition = new Vector2(424f, 0f);
         }
 
         if (_multiSprite != null)
@@ -376,8 +381,7 @@ public class YarnCommands : MonoBehaviour
         if(charSpriteName.Contains("Cass")){
             if (_cassSprite == null) _cassSprite = _charRightSprite.GetComponent<RectTransform>();
         } else {
-            if (_cassSprite != null) _cassSprite.anchoredPosition = new Vector2(1280f, 0f);
-            _cassSprite = null;
+            if (_cassSprite != null && _cassSprite.anchoredPosition.x != 424f) _cassSprite.anchoredPosition = new Vector2(1280f, 0f);
         }
 
         if (_multiSprite != null)
@@ -425,7 +429,12 @@ public class YarnCommands : MonoBehaviour
             // Fade out
             StartCoroutine(FadeSprite(curSprite, curSprite.color.a, 0, 0.5f)); // hardcoded to spend half a second fading
         }
-        else curSprite.sprite = nextSprite;
+        else
+        {
+            if (curSprite.color.a != 1)
+                curSprite.color = Color.white;
+            curSprite.sprite = nextSprite;
+        }
     }
 
     private IEnumerator FadeSprite(Image sprite, float start, float end, float lerpTime)
@@ -480,6 +489,11 @@ public class YarnCommands : MonoBehaviour
     private void PlayTrack(string audioName="default")
     {
         _atm.ChangeTrack(audioName);
+    }
+
+    private void FadeOutTrack()
+    {
+        _atm.FadeOutTrack();
     }
     #endregion Audio
 
@@ -574,6 +588,10 @@ public class YarnCommands : MonoBehaviour
         _variableStorage.SetValue("$figW4", temp);
     }
 
+    private void EndCredits()
+    {
+        endCredits.SetActive(true);
+    }
     #endregion Special Event
 
     #region Background Functions
@@ -631,9 +649,9 @@ public class YarnCommands : MonoBehaviour
             Color currentColor = Color.Lerp(start, end, time / lerpTime);
             bg.color = currentColor;
             if(color.Equals("sepia") || color.Equals("white")){
-                kristenSprite.color = currentColor;
-                leftSprite.color = currentColor;
-                rightSprite.color = currentColor;
+                kristenSprite.color = new Color(currentColor.r, currentColor.g, currentColor.b, kristenSprite.color.a);
+                leftSprite.color = new Color(currentColor.r, currentColor.g, currentColor.b, leftSprite.color.a);
+                rightSprite.color = new Color(currentColor.r, currentColor.g, currentColor.b, rightSprite.color.a);
             }
             time += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();

@@ -27,7 +27,7 @@ Kristen: Yes! And… I was wondering…
 <<char_right TrackerNeutral_1>>
 Kristen: I’ve really enjoyed spending time with you over the past few weeks.
 Kristen: It’s been so nice getting to know you again, and I just… you’re who I want. In my life. As my…
-Somewhere in the universe, there must be the right sequence of words to finish that sentence; a dozen ways to explain to Tracker exactly how you feel. You don’t feel brave enough to say any of them.
+:Somewhere in the universe, there must be the right sequence of words to finish that sentence: a dozen ways to explain to Tracker exactly how you feel. You don’t feel brave enough to say any of them.
 ...Her expression is completely unreadable.
 <<kristen Awkward>>
 Kristen: Um. Fuck, okay let me start over.
@@ -61,7 +61,7 @@ Tracker: Okay, no, I don’t want to get all teary on these nice flowers.
 <<char_right TrackerFlirt_1>>
 Tracker: Come here, cowboy.
 <<char_right TrackerBlush_1>>
-<<kristen Blush>>
+<<kristen Soft>>
 Tracker takes her free hand and pulls you in for a kiss, quick and sweet and enough to make you feel fireworks in every cell of your body.
 <<kristen Happy>>
 Kristen: Fuck yeah.
@@ -101,7 +101,7 @@ Tracker: What?
 
 title: TrackerEnding
 ---
-<<background SpringFling>>
+<<fade_in_ui>>
 <<char_right TrackerHappy_2>>
 :You’re waiting by the front door for Tracker - so you’re surprised when someone taps on your shoulder from behind and you turn to see her already inside.
 :She looks really good. You don’t think you’ve ever seen her do that with her hair before, which is a shame, because <i>damn</i>. 
@@ -125,20 +125,28 @@ Tracker: Come on. Let’s dance.
 :And you’re smiling wide enough that it hurts a little when she pulls you off the dance floor.
 Tracker: Let’s sit down for a bit and grab a bite to eat. I’m <i>starving</i>.
 :Before you can sit, though, you run into Jawbone.
+<<kristen transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
 <<background SpringFling_Tracker>>
+<<wait 2>>
+<<fade_in_ui>>
 Jawbone: Tracker! Kristen! Good to see you both.
 Kristen: Hey, Jawbone.
 Jawbone: You did a great job with this shindig, Kristen. Reminds me of a silent disco I went to one time in the Swamp of Ruin, but without all the toxic fumes.
-<<char_right TrackerAwkward_2>>
 Tracker: Jawbone…
 Jawbone: I know, I know. I won’t take up too much of your night, but… one photo for a sentimental old man? After that, I’ll leave you to it.
-<<char_right TrackerNeutral_2>>
 :Tracker turns to you, a question in her expression.
 Kristen: Hell yeah, why not?
-<<char_right TrackerHappy_2>>
 :Tracker grins.
 Tracker: Hell yeah.
 :He takes more than one photo. To be fair to him, you and Tracker keep switching to new poses: bunny ears, a kiss on the cheek, awkward prom poses where your hands are just kind of hovering over Tracker’s shoulder and waist.
+<<fade_out_ui>>
+<<wait 2>>
+<<background SpringFling>>
+<<fade_in_ui>>
+<<kristen Neutral_Tracker>>
+<<char_right TrackerNeutral_2>>
 :Eventually, though, Tracker shoos him away, though not fast enough to escape his ‘helpful’ parting advice.
 Jawbone: Real glad to see you both happy. Make sure you stay on the same page, keep it safe —
 <<char_right TrackerAwkward_2>>
@@ -147,6 +155,7 @@ Kristen: Good night!
 <<char_right TrackerNeutral_2>>
 :You sit Tracker down at the table closest to the buffet and grab her a plate of the best food it has to offer.
 :You both pick at it while talking about everything and nothing.You tell Tracker all about the work that planning this event was. Tracker tells you it definitely paid off.
+<<kristen Soft_Tracker>>
 <<char_right TrackerBlush_2>>
 :You even talk about the future.
 :You don’t know what the next few months will have in store for you. If the pattern holds, there’ll be some new world-ending threat you have to face.
@@ -161,5 +170,11 @@ Tracker: Yeah?
 Kristen: I love you.
 :Tracker smiles at you.
 Tracker: Hey, Kristen? I love you, too.
+<<kristen transparent>>
+<<char_right transparent>>
+<<fade_out_ui>>
+<<wait 2>>
+<<background SpringFling_Tracker>>
+<<enable_continue>>
 <<jump EndingForReal>>
 ===

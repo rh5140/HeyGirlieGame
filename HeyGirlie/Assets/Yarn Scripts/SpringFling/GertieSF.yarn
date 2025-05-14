@@ -34,6 +34,7 @@ As the number comes to an end, you kneel down on the ground as the bees spell ou
 <<voiceline KristenAwkward3>>
 <<kristen Nervous>>
 You catch your breath and glance upward, anticipating Gertie’s response. 
+
 <<sf_success Gertie>>
 
 <<if $succeed>>
@@ -121,7 +122,6 @@ Kristen: Gertie, if I could, I’d gift you a whole damn garden.
 
 title: GertieEnding
 ---
-<<background  SpringFling>>
 <<fade_in_ui>>
 <<location "Aguefort">>
 <<kristen Soft_Gertie>>
@@ -152,7 +152,7 @@ Kristen: Want some air?
 Gertie: Please.
 <<background BloodrushField>>
 Leaning against each other, you duck out of the gym hand in hand.
-The spring air, bracing and fresh, cools the sweat on your skin. Out in the distance, you think you recongize a couple Aguefort Owlbears in rented tuxes, trying to set off fireworks on the bloodrush field.
+The spring air, bracing and fresh, cools the sweat on your skin. Out in the distance, you think you recognize a couple Aguefort Owlbears in rented tuxes, trying to set off fireworks on the bloodrush field.
 Finding a spot to be thankfully, blissfully alone, you and Gertie chatter about nothing and everything.
 <<kristen Surprised_Gertie>>
 <<char_right GertieHappy1>>
@@ -188,7 +188,7 @@ Now, with Gertie, you feel utterly free to be unguarded, unabashed, unfiltered, 
 <<char_right GertieBlush1>>
 Gertie: I suppose I’m trying to say that you feel very familiar to me. I’ve really enjoyed getting to know you, and now, I’m really enjoying <i>knowing you</i>.
 Gertie: Of course, you’re also constantly surprising me, everywhere, in every way, all the time.
-She gestures at your intwined hands.
+She gestures at your entwined hands.
 <<char_right GertieHappy1>>
 Gertie: <i>This</i> surprised me! Just ask the bees. They’ll probably dig up a dartboard with your face on it.
 <<kristen Grin_Gertie>>
@@ -226,3 +226,4 @@ Gertie: If you insist, my dear nemesis.
 <<background SpringFling_Gertie>>
 <<enable_continue>>
 ===
+

@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_InputField playerName;
     [SerializeField] private AudioClip[] _startupVoicelines;
 
-    void Start() {
+    void Awake() {
         StartCoroutine(AnimateMenu());
     }
 

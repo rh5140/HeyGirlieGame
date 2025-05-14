@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public abstract class Menu : MonoBehaviour
 {
     protected bool pauseLock = false;
+    public UnityEvent OnDestroyEvnt;
+
     protected EscLock escLock;
 
     public virtual void Close(){

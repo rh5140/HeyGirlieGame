@@ -21,6 +21,7 @@ title: Ending
 <<location "Aguefort Gym">>
 <<background SpringFling>>
 <<fade_in_ui>>
+<<play_track sf>>
 <<if $succeed is false>>
     <<jump FlopEnding>>
 <<else>>
@@ -64,11 +65,7 @@ title: Ending
 
 title: EndingForReal
 ---
-<<fade_in_ui>>
-the end...
-thank you for playing hey, girlie! game courtesy of the hey, girlie! team
-byebye
-<<change_scene Credits>>
+<<end_credits>>
 ===
 
 title: FlopEnding
@@ -102,12 +99,13 @@ Annnnnd back to the present.
 Aguefort: Power word kill.
 You die, and are dead.
 Game over.
+<<fade_out_track>>
 <<bg_filter_on black>>
 <<kristen transparent>>
 <<char_right transparent>>
 <<fade_out_ui>>
 <<wait  2>>
-<<bg_filter_off>>
+<<bg_filter_on  off>>
 <<background SpringFling_Dead>>
 <<wait  2>>
 <<background SpringFling_DeadText>>

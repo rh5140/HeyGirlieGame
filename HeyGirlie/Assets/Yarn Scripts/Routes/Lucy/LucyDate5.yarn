@@ -14,9 +14,10 @@ You sigh.
 Okay, you can admit it — enjoying the moment isn’t the only reason you’re not up and about yet. You’re also anxiously hoping for a message from Lucy asking to hang out today.
 You know she’d mentioned being busier this week, but she <i>had</i> said she’d text you with plans for a future meetup. 
 You didn’t want to seem clingy or pushy by texting her first, so now you’re just lying here, waiting, your crystal by your head near the pillow. 
-<i>Ding!</i>
 <<crystal_ping true>>
-You scramble upright and grab at your crystal, swearing when it slides off the bed. You just barely catch it and look at the screen.
+<<sfx vibrate>>
+Your crystal buzzes. 
+You scramble upright and grab at it, swearing when it slides off the bed. You just barely catch it and look at the screen.
 <<toggleText Lucy>> 
 LucyText: hi kristen! 
 <<toggleText none>>
@@ -25,28 +26,29 @@ You let out a squeak of happiness, then clap a hand over your mouth. There’s n
 You try to think of a good way to respond. 
 <<toggleText Kristen>>
 -> KristenText: heyyyy
- <<kristen Nervous>>
- Fuck. That’s too many ‘y’s! You’re being <i>way</i> too flirty! But you’ve already sent it. 
- Lucy texts back a blushing, wide-eyed emoji. Your jaw drops. She’s onto you! She’s <i>into</i> you!
- Or, more likely, she’s pulling your leg again. 
- <<kristen Grin>>
- You send back a winky face, leaning into it, and she laugh-reacts your message.
- <<add_points 2>>
+  <<kristen Nervous>>
+  <<toggleText none>>
+  Fuck. That’s too many ‘y’s! You’re being <i>way</i> too flirty! But you’ve already sent it. 
+  Lucy texts back a blushing, wide-eyed emoji. Your jaw drops. She’s onto you! She’s <i>into</i> you!
+  Or, more likely, she’s pulling your leg again. 
+  <<kristen Grin>>
+  You send back a winky face, leaning into it, and she laugh-reacts your message.
+  <<add_points 2>>
 -> KristenText: heyy i was waiting for ur msg!!
- <<toggleText Lucy>>
- LucyText: oh!! sorry i didn’t message earlier, i wasn’t sure of my plans yet.
- <<toggleText none>>
- Uh-oh, you’ve missed casual by a mile and landed fully in clingy territory. 
- <<toggleText Kristen>>
- KristenText: no no ur good whats up
- <<add_points 0>>
+  <<toggleText Lucy>>
+  LucyText: oh!! sorry i didn’t message earlier, i wasn’t sure of my plans yet.
+  <<toggleText none>>
+  Uh-oh, you’ve missed casual by a mile and landed fully in clingy territory. 
+  <<toggleText Kristen>>
+  KristenText: no no ur good whats up
+  <<add_points 0>>
 -> KristenText: hey lucy! how’s it hanging
- <<toggleText Lucy>>
- LucyText: pretty great! how are you?
- <<toggleText Kristen>>
- KristenText: gr8 thx! whats up
- Casual, interested, but unclingy. Applebees, you’re nailing it!
- <<add_points 1>>
+  <<toggleText Lucy>>
+  LucyText: pretty great! how are you?
+  <<toggleText Kristen>>
+  KristenText: gr8 thx! whats up
+  Casual, interested, but unclingy. Applebees, you’re nailing it!
+  <<add_points 1>>
 <<kristen Neutral>>
 <<toggleText Lucy>>
 LucyText: i’m volunteering to pick up trash at the park today and i’d love some company. do you want to come?
@@ -71,6 +73,7 @@ Lucy heart-reacts your message, and you smile.
 <<location "Park">>
 <<background NatureOutdoors>>
 //outdoors background
+<<play_track outside>>
 It really is a beautiful day, and you enjoy the sunshine, blue sky, and singing birds as you walk to the park. 
 You catch sight of Lucy right away. She’s waiting by the park entrance, a stash of equipment in her hands and a backpack on her shoulder.
 <<char_right LucyHappy3>>
@@ -125,6 +128,8 @@ Lucy: A token of what?
   You click your rocks together.
   Lucy: Thanks, Kristen. I’ll treasure this. 
   <<add_points 2>>
+<<kristen Neutral>>
+<<char_right LucyNeutral3>>
 Kristen: Okay, I’ve distracted us enough. Let’s get going. 
 You reach the grove a few minutes later. In the circle of trees, even with the shriek of happy families nearby, it feels like you and Lucy are secluded in your own private space. 
 A tension you hadn’t realized you’d been carrying releases from your shoulders. 
@@ -166,6 +171,8 @@ Lucy: I’m an expert. Trust me.
   Lucy shakes her head, amused. 
   Lucy: Let’s get back to work. 
   <<add_points 1>>
+<<kristen Neutral>>
+<<char_right LucyNeutral3>>
 You get back to it, falling into a rhythm. 
 Lucy’s right; with the two of you working together, the grove quickly looks cleaner and cleaner. It’s encouraging. 
 You try to pick up the thread of the conversation.
@@ -274,6 +281,7 @@ Lucy: I’ll think about it and text you. See you then!
 //mordred background
 <<location "Mordred Manor">>
 <<background Mordred>>
+<<play_track default>>
 When you get back, you flop onto your bed, letting out a deep sigh. You hadn’t expected things to get so introspective today, but you can’t deny that you feel a lot better about yourself.
 It seems that this journey to help Lucy learn more about herself is helping <i>you</i>, too.
 You can’t wait to uncover what you’ll learn next. 

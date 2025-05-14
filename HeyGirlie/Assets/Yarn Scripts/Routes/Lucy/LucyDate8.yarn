@@ -3,6 +3,7 @@
 <<location "Outdoors">>
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
+<<play_track outside>>
 //outdoor background
 <<kristen Neutral>>
 There’s an odd nervousness in your stomach as you wait for Lucy, and it’s not just the prospect of getting to spend time with her.
@@ -11,7 +12,7 @@ So what if you’re going into the Far Haven Woods today? So what if it’s wher
 More importantly, <i>Lucy</i> is fine with it. She had been the one to suggest having the picnic there; clearly, the woods are meaningful to her. 
 <<char_right LucyNeutral3>>
 You’re broken out of your thoughts by Lucy herself. She’s holding her own basket, which you see holds a cake container. 
-Through the clear plastic, you can see the delicate grey swirls on the top layer of the cheesecake.
+Through the clear plastic, you can see the delicate grey swirls of sesame on the top layer of the cheesecake.
 Kristen: Man, that looks so good.
 <<voiceline LucyGreeting1>>
 Lucy: Hello to you, too, Kristen.
@@ -96,7 +97,7 @@ A grey blur streaks past you into Lucy’s waiting hands. She brings the writhin
 Lucy extends her cupped hands to show you a rat.
 Lucy: This is Spot!
 Her voice drops to a whisper.
-Lucy: He’s my favourite rat, but don’t tell anyone else. They’ll get jealous.
+Lucy: He’s my favorite rat, but don’t tell anyone else. They’ll get jealous.
 You grin.
 Kristen: Oh, we’ve met! Hi, Spot.
 <<char_right LucySurprised3>>
@@ -174,6 +175,7 @@ After a moment, Lucy moves to join you, positioning herself so that your head re
 Her cool fingers slip into yours, and you sigh contentedly, lacing your fingers together.
 In silence, you stare up into the tree’s thick canopy and watch how the sunlight dapples across the leaves. 
 You stay like that for a long time, peacefully listening to the birds and the wind, until Lucy lets out a long breath.
+<<play_track l8>>
 <<char_right LucySad3>>
 <<voiceline LucySad2>>
 Lucy: At first, I was scared to come back here, too, just like you.
@@ -230,7 +232,10 @@ Lucy: Do you really want to turn your afterlife into an Owlbear City song?
 Kristen: It would be funny!
 Lucy: And Cassandra would be okay with that?
 Kristen: Eh, I’m sure I could convince her. She knows how far I like to go to commit to the bit.
-Your crystal buzzes in your pocket — probably a sign that Cassandra will <i>not</i> be convinced. 
+<<sfx vibrate>>
+<<crystal_ping true>>
+Your crystal buzzes in your pocket — probably a sign that Cass will <i>not</i> be convinced. 
+<<crystal_ping false>>
 Oh, well. It’s still a fun thought.
 <<char_right LucyNeutral3>>
 <<kristen Neutral>>

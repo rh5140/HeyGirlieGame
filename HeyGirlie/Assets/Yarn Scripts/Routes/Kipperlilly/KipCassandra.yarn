@@ -24,61 +24,63 @@ title: Cassandra1
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
-    <<kristen Neutral>>
-    <<char_right CassandraNeutral>>
-    <<voiceline CassNeutral1>>
-    Cassandra: … soooooo?
-    <<voiceline KristenDateSuccessKip1>>
-    Kristen: … okay, fine, yeah, she wasn’t as bad as I thought she’d be.
-    Cassandra: And? And?
-    Kristen: And… I have to wait for her to text me at some point?
-    <<char_right CassandraHappy>>
-    <<voiceline CassNeutral3>>
-    Cassandra: Ooh, she’s playing it super cool. I get it.
-    <<kristen Surprised>>
-    <<voiceline KristenAngry2>>
-    Kristen: What? No, she’s literally blackmailing me.
-    Cassandra: Blackmail can be romantic, trust me.
-    Kristen: … do I want to know?
-    <<char_right CassandraNeutral>>
-    Cassandra: Probably not. 
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassNeutral1>>
+  Cassandra: … soooooo?
+  <<voiceline KristenDateSuccessKip1>>
+  Kristen: … okay, fine, yeah, she wasn’t as bad as I thought she’d be.
+  Cassandra: And? And?
+  Kristen: And… I have to wait for her to text me at some point?
+  <<char_right CassandraHappy>>
+  <<voiceline CassNeutral3>>
+  Cassandra: Ooh, she’s playing it super cool. I get it.
+  <<kristen Surprised>>
+  <<voiceline KristenAngry2>>
+  Kristen: What? No, she’s literally blackmailing me.
+  Cassandra: Blackmail can be romantic, trust me.
+  Kristen: … do I want to know?
+  <<char_right CassandraNeutral>>
+  Cassandra: Probably not. 
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
-    <<kristen Neutral>>
-    <<char_right CassandraNeutral>>
-    <<voiceline CassPhone1>>
-    Cassandra: Debrief sesh?
-    <<kristen Nervous>>
-    <<voiceline KristenFarewellKip1>>
-    Kristen: Gotta be honest, I’m not really seeing the vision here.
-    <<char_right CassandraHappy>>
-    Cassandra: You got her number! That’s progress!
-    <<kristen Awkward>>
-    Kristen: She literally told me not to text her.
-    Cassandra: She’s playing hard-to-get!
-    Kristen: She’s playing incredibly annoying and intrusive, you mean.
-    <<char_right CassandraNeutral>>
-    Cassandra: You might not realize it now, but this could be the start of a complex ritual that leads to something really, really good.
-    <<voiceline CassNeutral2>>
-    Cassandra: Just watch. It’ll all be worth it.
-<<else>>
-  // flop
-    <<kristen Awkward>>
-    <<char_right CassandraSurprised>>
-    <<voiceline KristenSad3>>
-    Kristen: I really don’t think this is going to work, Cass.
-    <<voiceline CassDisappointed1>>
-    Cassandra: Y’know, I’m doing my best to stay positive about this, but I have to ask.
-    Cassandra: Did you really think insulting her was going to help?
-    <<voiceline KristenAngry2>>
-    Kristen: I can’t help it! It’s all I know!
-    Cassandra: Well, if you’re going to keep trying to talk to her, you’re going to have to get over that. 
-    <<kristen Sad>>
-    <<char_right CassandraNeutral>>
-    Cassandra: Just give her a chance? Please?
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassPhone1>>
+  Cassandra: Debrief sesh?
+  <<kristen Nervous>>
+  <<voiceline KristenFarewellKip1>>
+  Kristen: Gotta be honest, I’m not really seeing the vision here.
+  <<char_right CassandraHappy>>
+  Cassandra: You got her number! That’s progress!
+  <<kristen Awkward>>
+  Kristen: She literally told me not to text her.
+  Cassandra: She’s playing hard-to-get!
+  Kristen: She’s playing incredibly annoying and intrusive, you mean.
+  <<char_right CassandraNeutral>>
+  Cassandra: You might not realize it now, but this could be the start of a complex ritual that leads to something really, really good.
+  <<voiceline CassNeutral2>>
+  Cassandra: Just watch. It’ll all be worth it.
+  <<else>>
+    // flop
+  <<kristen Awkward>>
+  <<char_right CassandraSurprised>>
+  <<voiceline KristenSad3>>
+  Kristen: I really don’t think this is going to work, Cass.
+  <<voiceline CassDisappointed1>>
+  Cassandra: Y’know, I’m doing my best to stay positive about this, but I have to ask.
+  Cassandra: Did you really think insulting her was going to help?
+  <<voiceline KristenAngry2>>
+  Kristen: I can’t help it! It’s all I know!
+  Cassandra: Well, if you’re going to keep trying to talk to her, you’re going to have to get over that. 
+  <<kristen Sad>>
+  <<char_right CassandraNeutral>>
+  Cassandra: Just give her a chance? Please?
 <<endif>>
+
 <<jump EndDate>>
 ===
 title: Cassandra2
@@ -89,38 +91,108 @@ title: Cassandra2
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
-    <<kristen Neutral>>
-    <<char_right CassandraNeutral>>
-    <<voiceline CassHappy1>>
-    Cassandra: Girl’s got you stabbing your besties in the back now, huh?
-    <<kristen Surprised>>
-    Kristen: It was for the key! I’m literally just trying to do my job, Cass!
-    <<char_right CassandraHappy>>
-    Cassandra: Oh, I’m sure.
-    Cassandra: And saying you’re going to ask for her help next time? That’s also just “for the key,” is it?
-    <<kristen Nervous>>
-    <<voiceline KristenNeutral2>>
-    Kristen: … okay, yeah, I’ve got nothing.
-    <<char_right CassandraNeutral>>
-    Cassandra: Trust the process, Kristen. The long, sapphic process.
-    Kristen: If you say so.
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassHappy1>>
+  Cassandra: Girl’s got you stabbing your besties in the back now, huh?
+  <<kristen Surprised>>
+  Kristen: It was for the key! I’m literally just trying to do my job, Cass!
+  <<char_right CassandraHappy>>
+  Cassandra: Oh, I’m sure.
+  Cassandra: And saying you’re going to ask for her help next time? That’s also just “for the key,” is it?
+  <<kristen Nervous>>
+  <<voiceline KristenNeutral2>>
+  Kristen: … okay, yeah, I’ve got nothing.
+  <<char_right CassandraNeutral>>
+  Cassandra: Trust the process, Kristen. The long, sapphic process.
+  Kristen: If you say so.
+<<elseif $date_points >= (1/3) * $date_points_total>>
+    // mid
+  <<kristen Sad>>
+  <<char_right CassandraNeutral>>
+  Kristen: Hey, Cass?
+  Cassandra: What’s up?
+  <<voiceline KristenSad3>>
+  Kristen: Do you think Riz’ll ever forgive me?
+  Cassandra: I mean, probably! 
+  Kristen: But he said he’d open the office for me whenever. What if he thinks this is, like, a double insult or something?
+  Kristen: Man, I should get him an apology gift. Do you think he’d like a new briefcase? A new gun?
+  <<voiceline CassDisappointed2>>
+  Cassandra: I’m sure he would — but hey, Kipperlilly seemed happy!
+  <<kristen Neutral>>
+  Kristen: I guess that’s true.
+<<else>>
+  // flop
+  <<kristen Awkward>>
+  <<char_right CassandraNeutral>>
+  Kristen: Dude, was it just me or did she seem really annoyed at me today?
+  <<char_right CassandraSad>>
+  <<voiceline CassNeutral2>>
+  Cassandra: Oh, def not just you.
+  <<char_right CassandraSurprised>>
+  Cassandra: Though I guess she <i>was</i> trying to study and you <i>were</i> trying to talk to her instead.
+  Cassandra: You didn’t need to be in the library to forward some texts along, y’know.
+  <<kristen Angry>>
+  <<voiceline KristenAngry2>>
+  Kristen: Whose side are you on?
+  <<char_right CassandraNeutral>>
+  <<voiceline CassFarewell2>>
+  Cassandra: The side that leads to you getting a date, duh.
+
+<<endif>>
+
+<<jump EndDate>>
+===
+title: Cassandra3
+---
+<<sfx ring>>
+<<char_right transparent>>
+<<bg_filter_on  purple>>
+<<cass_call  true>>
+...someone's calling...
+<<cass_call  false>>
+<<play_track cassandra>>
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+  <<kristen Neutral>>
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy1>>
+  Cassandra: Aww, your knight in shining armor.
+  <<char_right CassandraNeutral>>
+  Cassandra: Or, well. Your rogue in shining… sweater?
+  <<voiceline KristenHappy1>>
+  Kristen: No dragons to be slain, but she did save the day.
+  <<kristen Grin>>
+  Kristen: Cork’s going to lose his mind over the cupcakes.
+  <<char_right CassandraHappy>>
+  <<voiceline CassNeutral3>>
+  Cassandra: And the two of you opened up to each other a bit more, yeah? I’d say the day ended with a rousing success!
+  <<kristen Neutral>>
+  <<voiceline KristenFarewell2>>
+  Kristen: Ha, sure. Crazy what a missent text can turn into.
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
-    <<kristen Sad>>
-    <<char_right CassandraNeutral>>
-    Kristen: Hey, Cass?
-    Cassandra: What’s up?
-    <<voiceline KristenSad3>>
-    Kristen: Do you think Riz’ll ever forgive me?
-    Cassandra: I mean, probably! 
-    Kristen: But he said he’d open the office for me whenever. What if he thinks this is, like, a double insult or something?
-    Kristen: Man, I should get him an apology gift. Do you think he’d like a new briefcase? A new gun?
-    <<voiceline CassDisappointed2>>
-    Cassandra: I’m sure he would— but hey, Kipperlilly seemed happy!
-    <<kristen Neutral>>
-    Kristen: I guess that’s true.
+  <<kristen Neutral>>
+  <<char_right CassandraSurprised>>
+  <<voiceline CassDisappointed2>>
+  Cassandra: Are you doing alright, Kristen?
+  <<kristen Surprised>>
+  <<voiceline KristenNeutral3>>
+  Kristen: Huh? No “so how’d it go”?
+  <<char_right CassandraNeutral>>
+  Cassandra: Well, I know it went fine. 
+  Cassandra: This wasn’t exactly contrived to be a romantic thing though. You didn’t seem okay at the start of it.
+  <<kristen Neutral>>
+  <<voiceline KristenAwkward2>>
+  Kristen: I guess, but I’m all good now.
+  Cassandra: Good. As much as I tease you, I do want what’s best for your well-being.
+  Kristen: Thanks, Cass.
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy3>>
+  Cassandra: … so do I get a cupcake?
 <<else>>
   // flop
   <<kristen Neutral>>
@@ -141,78 +213,8 @@ title: Cassandra2
   <<char_right CassandraSad>>
   <<voiceline CassDisappointed3>>
   Cassandra: Just… think about it, Kristen.
-
 <<endif>>
 
-<<jump EndDate>>
-===
-title: Cassandra3
----
-<<sfx ring>>
-<<char_right transparent>>
-<<bg_filter_on  purple>>
-<<cass_call  true>>
-...someone's calling...
-<<cass_call  false>>
-<<if $date_points >= (2/3) * $date_points_total>>
-  // slay
-    <<kristen Neutral>>
-    <<char_right CassandraHappy>>
-    <<voiceline CassHappy1>>
-    Cassandra: Aww, your knight in shining armor.
-    <<char_right CassandraNeutral>>
-    Cassandra: Or, well. Your rogue in shining… sweater?
-    <<voiceline KristenHappy1>>
-    Kristen: No dragons to be slain, but she did save the day.
-    <<kristen Grin>>
-    Kristen: Cork’s going to lose his mind over the cupcakes.
-    <<char_right CassandraHappy>>
-    <<voiceline CassNeutral3>>
-    Cassandra: And the two of you opened up to each other a bit more, yeah? I’d say the day ended with a rousing success!
-    <<kristen Neutral>>
-    <<voiceline KristenFarewell2>>
-    Kristen: Ha, sure. Crazy what a missent text can turn into.
-<<elseif $date_points >= (1/3) * $date_points_total>>
-  // mid
-    <<kristen Neutral>>
-    <<char_right CassandraSurprised>>
-    <<voiceline CassDisappointed2>>
-    Cassandra: Are you doing alright, Kristen?
-    <<kristen Surprised>>
-    <<voiceline KristenNeutral3>>
-    Kristen: Huh? No “so how’d it go”?
-    <<char_right CassandraNeutral>>
-    Cassandra: Well, I know it went fine. 
-    Cassandra: This wasn’t exactly contrived to be a romantic thing though. You didn’t seem okay at the start of it.
-    <<kristen Neutral>>
-    <<voiceline KristenAwkward2>>
-    Kristen: I guess, but I’m all good now.
-    Cassandra: Good. As much as I tease you, I do want what’s best for your well-being.
-    Kristen: Thanks, Cass.
-    <<char_right CassandraHappy>>
-    <<voiceline CassHappy3>>
-    Cassandra: … so do I get a cupcake?
-<<else>>
-  // flop
-    <<kristen Neutral>>
-    <<char_right CassandraSad>>
-    Cassandra: Are you going to tell her?
-    <<kristen Surprised>>
-    <<voiceline KristenNeutral3>>
-    Kristen: Huh? 
-    <<char_right CassandraSurprised>>
-    <<voiceline CassDisappointed1>>
-    Cassandra: Kristen, Kipperlilly doesn’t know you’ve seen her therapy notes. Don’t you think you should at least mention it? Especially if she’s so disturbed by you living with Jawbone?
-    <<kristen Nervous>>
-    <<voiceline KristenAngry2>>
-    Kristen: Do I hafta? 
-    Cassandra: Is it a good idea to keep hiding it from her, especially if you plan on moving forward?
-    <<kristen Angry>>
-    Kristen: Weren’t <i>you</i> the one pushing me to go for this?
-    <<char_right CassandraSad>>
-    <<voiceline CassDisappointed3>>
-    Cassandra: Just… think about it, Kristen.
-<<endif>>
 
 <<jump EndDate>>
 ===
@@ -224,63 +226,65 @@ title: Cassandra4
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
-<<kristen Happy>>
-    <<char_right CassandraNeutral>>
-    Kristen: Did you hear that? She called me her greatest weapon!
-    <<voiceline CassNeutral3>>
-    Cassandra: Y’know, that’s a high compliment from a girl like that.
-    <<kristen Neutral>>
-    Kristen: What do you mean?
-    <<char_right CassandraHappy>>
-    Cassandra: A mastermind who’s constantly coming up with new strategies for every situation she’s in thinks of you as her secret trump card to secure victory? Hello?
-    <<kristen Grin>>
-    <<voiceline KristenHappy4>>
-    Kristen: … is this about your wife again?
-    <<char_right CassandraBlush>>
-    <<voiceline CassDisappointed3>>
-    Cassandra: Now, I don’t know what you could possibly be talking about.
+  <<kristen Happy>>
+  <<char_right CassandraNeutral>>
+  Kristen: Did you hear that? She called me her greatest weapon!
+  <<voiceline CassNeutral3>>
+  Cassandra: Y’know, that’s a high compliment from a girl like that.
+  <<kristen Neutral>>
+  Kristen: What do you mean?
+  <<char_right CassandraHappy>>
+  Cassandra: A mastermind who’s constantly coming up with new strategies for every situation she’s in thinks of you as her secret trump card to secure victory? Hello?
+  <<kristen Grin>>
+  <<voiceline KristenHappy4>>
+  Kristen: … is this about your wife again?
+  <<char_right CassandraBlush>>
+  <<voiceline CassDisappointed3>>
+  Cassandra: Now, I don’t know what you could possibly be talking about.
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
-    <<kristen Neutral>>
-    <<char_right CassandraNeutral>>
-    Cassandra: …
-    Kristen: … Cass?
-    Cassandra: …
-    <<voiceline KristenSurprised1>>
-    Kristen: You’re there, right? Am I missing something?
-    Cassandra: I’m just waiting for my “thank you”.
-    Kristen: Thank you? For what?
-    <<char_right CassandraSurprised>>
-    <<voiceline CassPhone2>>
-    Cassandra: Don’t tell me you forgot who exactly is the source of your magic.
-    Cassandra: You wouldn’t have won that game without me! <i>Or</i> Kipperlilly’s heart.
-    <<voiceline KristenNeutral1>>
-    Kristen: We are nowhere near that yet. And, uh, yeah, that’s fair. Thanks, Cass.
-    <<char_right CassandraHappy>>
-    <<voiceline CassFarewell3>>
-    Cassandra: That’s more like it.
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  Cassandra: …
+  Kristen: … Cass?
+  Cassandra: …
+  <<voiceline KristenSurprised1>>
+  Kristen: You’re there, right? Am I missing something?
+  Cassandra: I’m just waiting for my “thank you”.
+  Kristen: Thank you? For what?
+  <<char_right CassandraSurprised>>
+  <<voiceline CassPhone2>>
+  Cassandra: Don’t tell me you forgot who exactly is the source of your magic.
+  Cassandra: You wouldn’t have won that game without me! <i>Or</i> Kipperlilly’s heart.
+  <<voiceline KristenNeutral1>>
+  Kristen: We are nowhere near that yet. And, uh, yeah, that’s fair. Thanks, Cass.
+  <<char_right CassandraHappy>>
+  <<voiceline CassFarewell3>>
+  Cassandra: That’s more like it.
 <<else>>
   // flop
-    <<kristen Awkward>>
-    <<char_right CassandraHappy>>
-    Cassandra: Kristen Applebees.
-    Kristen: Uh oh.
-    Cassandra: You nearly got your butt kicked by a twelve-year-old?
-    <<voiceline KristenAwkward3>>
-    Kristen: They’re really good!
-    <<voiceline CassNeutral3>>
-    Cassandra: You’ve saved the world at least three times and rediscovered lost gods (hi). You nearly lost to a twelve-year-old in front of your crush?
-    <<kristen Sad>>
-    <<voiceline KristenAngry1>>
-    Kristen: You’re never going to let me live this down, are you?
-    <<kristen Surprised>>
-    Kristen: And what’s this about a crush? This was all for the key!
-    <<char_right CassandraNeutral>>
-    <<voiceline CassDisappointed3>>
-    Cassandra: Oh yeah, and I’m a goddex of cheese.
+  <<kristen Awkward>>
+  <<char_right CassandraHappy>>
+  Cassandra: Kristen Applebees.
+  Kristen: Uh oh.
+  Cassandra: You nearly got your butt kicked by a twelve-year-old?
+  <<voiceline KristenAwkward3>>
+  Kristen: They’re really good!
+  <<voiceline CassNeutral3>>
+  Cassandra: You’ve saved the world at least three times and rediscovered lost gods (hi). You nearly lost to a twelve-year-old in front of your crush?
+  <<kristen Sad>>
+  <<voiceline KristenAngry1>>
+  Kristen: You’re never going to let me live this down, are you?
+  <<kristen Surprised>>
+  Kristen: And what’s this about a crush? This was all for the key!
+  <<char_right CassandraNeutral>>
+  <<voiceline CassDisappointed3>>
+  Cassandra: Oh yeah, and I’m the goddex of cheese.
 <<endif>>
+
 
 <<jump EndDate>>
 ===
@@ -292,58 +296,62 @@ title: Cassandra5
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
-<<kristen Neutral>>
-<<char_right CassandraNeutral>>
-Cassandra: So… do <i>I</i> get a brownie?
-<<kristen Surprised>>
-<<voiceline KristenSurprised3>>
-Kristen: Oh, not you too. Can’t a girl enjoy the brownies she got from a maybe-date?
-<<voiceline CassHappy1>>
-Cassandra: Can’t a goddex get a reward for pushing you towards the girl you’re maybe-dating to get said brownies to begin with?
-<<kristen Nervous>>
-Cassandra: And by the looks of things, I’m sure you’ll get more brownies from Mrs. Copperkettle in no time.
-Kristen: Fine… you win this time…
-<<char_right CassandraHappy>>
-<<voiceline CassHappy3>>
-Cassandra: Yippee!
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  Cassandra: So… do <i>I</i> get a brownie?
+  <<kristen Surprised>>
+  <<voiceline KristenSurprised3>>
+  Kristen: Oh, not you too. Can’t a girl enjoy the brownies she got from a maybe-date?
+  <<voiceline CassHappy1>>
+  Cassandra: Can’t a goddex get a reward for pushing you towards the girl you’re maybe-dating to get said brownies to begin with?
+  <<kristen Nervous>>
+  Cassandra: And by the looks of things, I’m sure you’ll get more brownies from Mrs. Copperkettle in no time.
+  Kristen: Fine… you win this time…
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy3>>
+  Cassandra: Yippee!
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
-<<kristen Happy>>
-<<char_right CassandraNeutral>>
-<<voiceline KristenHappy1>>
-Kristen: Cass! Did you see her face when she realized I was right? Absolute GOLD. 
-<<voiceline CassNeutral1>>
-Cassandra: Isn’t it nice that you’ve gotten to the “listens to your ideas” phase?
-<<kristen Neutral>>
-Kristen: I mean, I guess.
-<<kristen Grin>>
-Kristen: It feels even nicer to have figured something out before her, though. I feel like one of the big dogs at the dog park.
-<<char_right CassandraSurprised>>
-Cassandra: … is that really all you got out of today?
+  <<kristen Happy>>
+  <<char_right CassandraNeutral>>
+  <<voiceline KristenHappy1>>
+  Kristen: Cass! Did you see her face when she realized I was right? Absolute GOLD. 
+  <<voiceline CassNeutral1>>
+  Cassandra: Isn’t it nice that you’ve gotten to the “listens to your ideas” phase?
+  <<kristen Neutral>>
+  Kristen: I mean, I guess.
+  <<kristen Grin>>
+  Kristen: It feels even nicer to have figured something out before her, though. I feel like one of the big dogs at the dog park.
+  <<char_right CassandraSurprised>>
+  <<voiceline CassDisappointed3>>
+  Cassandra: … is that really all you got out of today?
 <<else>>
-  // flop
-    <<kristen Sad>>
-    <<char_right CassandraSurprised>>
-    <<voiceline CassDisappointed2>>
-    Cassandra: You did your best!
-    Kristen: That’s not as encouraging as you think.
-    <<char_right CassandraNeutral>>
-    Cassandra: And now <i>I’m</i> doing <i>my</i> best!
-    <<kristen Neutral>>
-    <<voiceline KristenAngry1>>
-    Kristen: I mean, I liked seeing how excited Kipperlilly got, and it’s nice to see her actual smile. It still doesn’t feel great to look stupid for an hour straight.
-    <<char_right CassandraSad>>
-    Cassandra: Maybe it’s best that your next hang-out is a low-stakes walk through some flowers.
-    <<kristen Sad>>
-    <<voiceline KristenSad1>>
-    Kristen: Way to rub it in, girlie.
-    <<kristen Surprised>>
-    Kristen: Gender-neutral.
-    <<char_right CassandraNeutral>>
-    Cassandra: I know, Kristen.
+    // flop
+  <<kristen Sad>>
+  <<char_right CassandraSurprised>>
+  <<voiceline CassDisappointed2>>
+  Cassandra: You did your best!
+  Kristen: That’s not as encouraging as you think.
+  <<char_right CassandraNeutral>>
+  Cassandra: And now <i>I’m</i> doing <i>my</i> best!
+  <<kristen Neutral>>
+  <<voiceline KristenAngry1>>
+  Kristen: I mean, I liked seeing how excited Kipperlilly got, and it’s nice to see her actual smile. It still doesn’t feel great to look stupid for an hour straight.
+  <<char_right CassandraSad>>
+  Cassandra: Maybe it’s best that your next hang-out is a low-stakes walk through some flowers.
+  <<kristen Sad>>
+  <<voiceline KristenSad1>>
+  Kristen: Way to rub it in, girlie.
+  <<kristen Surprised>>
+  Kristen: Gender-neutral.
+  <<char_right CassandraNeutral>>
+  Cassandra: I know, Kristen.
 <<endif>>
+
+
 
 <<jump EndDate>>
 ===
@@ -355,43 +363,45 @@ title: Cassandra6
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
-    <<kristen Soft>>
-    <<char_right CassandraNeutral>>
-    Kristen: Cass, I’m adding blue roses as a symbol of your worship, if that’s alright.
-    <<char_right CassandraBlush>>
-    <<voiceline CassHappy2>>
-    Cassandra: Are you sure you don’t want to keep them for yourself? They seemed pretty meaningful to the two of you.
-    <<voiceline KristenAwkward2>>
-    Kristen: I mean…
-    <<char_right CassandraHappy>>
-    Cassandra: Oh, if she wants to stick with that color palette, tell her to add lilac in, okay?
-    <<voiceline CassHappy1>>
-    Cassandra: Gotta represent if it’s what I think it’s for.
-    <<kristen Awkward>>
-    <<voiceline KristenRomantic2>>
-    Kristen: Ahahahahaha. Ha! Haha!! Sure! What the fuck!
+  <<kristen Soft>>
+  <<char_right CassandraNeutral>>
+  Kristen: Cass, I’m adding blue roses as a symbol of your worship, if that’s alright.
+  <<char_right CassandraBlush>>
+  <<voiceline CassHappy2>>
+  Cassandra: Are you sure you don’t want to keep them for yourself? They seemed pretty meaningful to the two of you.
+  <<voiceline KristenAwkward2>>
+  Kristen: I mean…
+  <<char_right CassandraHappy>>
+  Cassandra: Oh, if she wants to stick with that color palette, tell her to add lilac in, okay?
+  <<voiceline CassHappy1>>
+  Cassandra: Gotta represent if it’s what I think it’s for.
+  <<kristen Awkward>>
+  <<voiceline KristenRomantic2>>
+  Kristen: Ahahahahaha. Ha! Haha!! Sure! What the fuck!
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
-    <<kristen Neutral>>
-    <<char_right CassandraHappy>>
-    Cassandra: KRISTEN!!!
-    <<kristen Surprised>>
-    Kristen: CASS!!! WHAT IS IT?!!!
-    <<voiceline CassHappy3>>
-    Cassandra: You held hands! Isn’t that a big milestone for mortal romance?
-    <<voiceline KristenAwkward2>>
-    Kristen: I mean, maybe if we were middle schoolers.
-    Kristen: And hold on, “mortal”? You and Ankarna hold hands all the time.
-    Cassandra: Well, we don’t <i>just</i> do that.
-    <<kristen Nervous>>
-    Kristen: Okay, possible TMI—
-    <<voiceline CassNeutral2>>
-    Cassandra: We also arrange constellations in each other’s image and write letters in the beams of sunlight that creep onto the horizon!
-    <<kristen Neutral>>
-    Kristen: … never mind.
+  <<kristen Neutral>>
+  <<char_right CassandraHappy>>
+  Cassandra: KRISTEN!!!
+  <<kristen Surprised>>
+  Kristen: CASS!!! WHAT IS IT?!!!
+  <<voiceline CassHappy3>>
+  Cassandra: You held hands! Isn’t that a big milestone for mortal romance?
+  <<voiceline KristenAwkward2>>
+  Kristen: I mean, maybe if we were middle schoolers.
+  Kristen: And hold on, “mortal”? You and Ankarna hold hands all the time.
+  Cassandra: Well, we don’t <i>just</i> do that.
+  <<kristen Nervous>>
+  Kristen: Okay, possible TMI—
+  <<voiceline CassNeutral2>>
+  Cassandra: We also arrange constellations in each other’s image and write letters in the beams of sunlight that creep onto the horizon!
+  <<kristen Neutral>>
+  Kristen: … never mind.
 <<else>>
+  // flop
   <<kristen Neutral>>
   <<char_right CassandraNeutral>>
   <<voiceline CassNeutral1>>
@@ -399,12 +409,14 @@ title: Cassandra6
   <<voiceline KristenSad1>>
   Kristen: … is that a new commandment or something? ”Thou must be the funniest guy in every room thou dost walk into”?
   Cassandra: I mean, it just felt like some of your jokes today fell really flat, and mortals covet humor in a partner, right? 
+  <<kristen Sad>>
   <<char_right CassandraHappy>>
   Cassandra: I’m just looking out for you!
-  <<kristen Sad>>
   <<voiceline KristenSad3>>
   Kristen: I thought they were funny…
+
 <<endif>>
+
 <<jump EndDate>>
 ===
 title: Cassandra7
@@ -415,62 +427,62 @@ title: Cassandra7
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
-    <<kristen Sad>>
-    <<char_right CassandraNeutral>>
-    <<voiceline KristenSad1>>
-    Kristen: Did I fuck up?
-    <<char_right CassandraSad>>
-    <<voiceline CassNeutral2>>
-    Cassandra: Why do you think that?
-    Kristen: It feels like everything was building up to today, and I don’t <i>think</i> I fucked up that bad. But she didn’t seem… happy?
-    <<char_right CassandraNeutral>>
-    Cassandra: Girls like Kipperlilly spook easy, especially if they’re not used to that kind of attention.
-    Cassandra: She just needs space to process what you talked about today. Everything will work out.
-    <<kristen Neutral>>
-    <<voiceline KristenDateSuccess2>>
-    Kristen: Alright… if you say so…
+  <<kristen Sad>>
+  <<char_right CassandraNeutral>>
+  <<voiceline KristenSad1>>
+  Kristen: Did I fuck up?
+  <<char_right CassandraSad>>
+  <<voiceline CassNeutral2>>
+  Cassandra: Why do you think that?
+  Kristen: It feels like everything was building up to today, and I don’t <i>think</i> I fucked up that bad. But she didn’t seem… happy?
+  <<char_right CassandraNeutral>>
+  Cassandra: Girls like Kipperlilly spook easy, especially if they’re not used to that kind of attention.
+  Cassandra: She just needs space to process what you talked about today. Everything will work out.
+  <<kristen Neutral>>
+  <<voiceline KristenDateSuccess2>>
+  Kristen: Alright… if you say so…
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
-    <<kristen Neutral>>
-    <<char_right CassandraNeutral>>
-    <<voiceline CassDisappointed1>>
-    Cassandra: So! That was a lot.
-    <<voiceline KristenSad1>>
-    Kristen: I wasn’t exactly expecting a final exam on lesbianism.
-    Cassandra: Look on the bright side!
-    Kristen: …
-    <<char_right CassandraHappy>>
-    Cassandra: You have the key to the office now? You can do your job like you’ve been wanting to?
-    <<kristen Sad>>
-    <<voiceline KristenDateFail3>>
-    Kristen: … that’s it? That’s all you’ve got?
-    <<char_right CassandraNeutral>>
-    Cassandra: You’re not giving me much to work with, Kristen.
-    <<kristen Awkward>>
-    <<voiceline KristenSad3>>
-    Kristen: I’m doing my best! 
-    Cassandra: That’s all I can ask for, I guess.
+  <<kristen Neutral>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassDisappointed1>>
+  Cassandra: So! That was a lot.
+  <<voiceline KristenSad1>>
+  Kristen: I wasn’t exactly expecting a final exam on lesbianism.
+  Cassandra: Look on the bright side!
+  Kristen: …
+  <<char_right CassandraHappy>>
+  Cassandra: You have the key to the office now? You can do your job like you’ve been wanting to?
+  <<kristen Sad>>
+  <<voiceline KristenDateFail3>>
+  Kristen: … that’s it? That’s all you’ve got?
+  <<char_right CassandraNeutral>>
+  Cassandra: You’re not giving me much to work with, Kristen.
+  <<kristen Awkward>>
+  <<voiceline KristenSad3>>
+  Kristen: I’m doing my best! 
+  Cassandra: That’s all I can ask for, I guess.
 <<else>>
   // flop
-    <<kristen Sad>>
-    <<char_right CassandraNeutral>>
-    <<voiceline KristenDateFailKip2>>
-    Kristen: I should’ve started eating the pieces. Maybe then, she’d pay more attention.
-    <<voiceline CassDisappointed1>>
-    Cassandra: That sounds horrible for both your gut and your potential love story.
-    <<kristen Neutral>>
-    Kristen: Is there even potential for it to be a love story anymore? I feel like I lost… something.
-    Cassandra: Um. Well.
-    <<kristen Sad>>
-    <<char_right CassandraSad>>
-    Cassandra: I don’t know.
-    Cassandra: And I know I’m the goddex of “I don’t know,” but I don’t really love the feeling this time.
-    <<voiceline KristenDateFail3>>
-    Kristen: Yeah…
+  <<kristen Sad>>
+  <<char_right CassandraNeutral>>
+  <<voiceline KristenDateFailKip2>>
+  Kristen: I should’ve started eating the pieces. Maybe then, she’d pay more attention.
+  <<voiceline CassDisappointed1>>
+  Cassandra: That sounds horrible for both your gut and your potential love story.
+  <<kristen Neutral>>
+  Kristen: Is there even potential for it to be a love story anymore? I feel like I lost… something.
+  Cassandra: Um. Well.
+  <<kristen Sad>>
+  <<char_right CassandraSad>>
+  Cassandra: I don’t know.
+  Cassandra: And I know I’m the goddex of “I don’t know,” but I don’t really love the feeling this time.
+  <<voiceline KristenDateFail3>>
+  Kristen: Yeah…
 <<endif>>
-
 
 <<jump EndDate>>
 ===
@@ -482,6 +494,7 @@ title: Cassandra8
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<kristen Soft>>
 <<char_right CassandraNeutral>>
 <<voiceline CassGreeting2>>
@@ -495,7 +508,7 @@ Cassandra: Goddex to Kristen? Kristen, do you copy?
 Kristen: …
 <<char_right CassandraAngry>>
 Cassandra: KRISTEN APPLEBEES.
-<<kristen Neutral>>
+<<kristen Surprised>>
 <<voiceline KristenSurprised3>>
 Kristen: Cass? Why are you shouting?
 <<voiceline CassDisappointed1>>
@@ -523,6 +536,7 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
+    <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<change_scene Week2Event>>

@@ -39,6 +39,7 @@ public class Credits : Menu
         Unpause();
         UnlockEsc();
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
+        if(OnDestroyEvnt != null) OnDestroyEvnt.Invoke();
     }
 
     public override void Close(){
@@ -64,7 +65,7 @@ public class Credits : Menu
         }
     }
     
-    IEnumerator RunCredits(float waitTime)
+    protected IEnumerator RunCredits(float waitTime)
     {
         while (leftPageBefore.childCount > 0)
         {

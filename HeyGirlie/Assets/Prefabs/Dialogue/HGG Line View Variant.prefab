@@ -484,7 +484,8 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4935123090281167014, guid: 67dde1b92175d4745aaea386e7555d40, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4935123090371513924, guid: 67dde1b92175d4745aaea386e7555d40, type: 3}
     m_AddedGameObjects:
@@ -619,6 +620,8 @@ MonoBehaviour:
   onCharacterTyped:
     m_PersistentCalls:
       m_Calls: []
+  dialogueBubblePrefab: {fileID: 0}
+  dialogueHistoryCanvas: {fileID: 0}
   onPauseStarted:
     m_PersistentCalls:
       m_Calls: []

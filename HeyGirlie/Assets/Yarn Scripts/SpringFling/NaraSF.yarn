@@ -2,14 +2,14 @@
 ---
 <<fade_in_ui>>
 <<kristen Neutral>>
-:The day to ask Nara to the prom is finally here. Despite all the time you’ve spent together, you’re still not sure whether she’ll say yes.
+:The day to ask Nara to the spring fling is finally here. Despite all the time you’ve spent together, you’re still not sure whether she’ll say yes.
 <<kristen Nervous>>
 <<voiceline KristenAwkward2>>
 :You are… incredibly worried about whether Nara will accept your invitation.
-:You consider buying her a gift to bribe her, but you quickly realise that everything you think she would want is either something she already owns or too expensive (and she probably owns the expensive stuff already too).
+:You consider buying her a gift to bribe her, but you quickly realize that everything you think she would want is either something she already owns or too expensive (and she probably owns the expensive stuff already too).
 :And honestly, you can’t afford to mess this up. When’s the next time you’re going to date a cute princess who also likes you? Probably never!
 <<kristen Neutral>>
-:It’s ok, you still have like 10 minutes before Nara arrives. Plenty of time to come up with the perfect speech, eat breakfast, put on deodorant…
+:It’s okay, you still have like 10 minutes before Nara arrives. Plenty of time to come up with the perfect speech, eat breakfast, put on deodorant…
 <<char_right NaraHappy>>
 <<voiceline NaraGreeting2>>
 Nara: Hello!
@@ -31,7 +31,10 @@ Nara: So why did you invite me here?
 Kristen: Nara, I know we haven’t known each other for a long time, but I really like you, and I think we’ve grown really close, and I didn’t think I would ever say this to the ex of my ex, but…
 <<kristen Soft>>
 Kristen: Nara, would you like to go to prom with me?
+:Aw, beans. You already fucked up. It’s not prom yet, dummy, it’s the spring fling!!
+:It’s okay. Breathe, Applebees, you’ve come back from worse fuckups than this. Much, <i>much</i> worse. Stay cool.
 <<sf_success Naradriel>>
+
 
 <<if $succeed>>
     <<jump NaraSuccess>>
@@ -122,7 +125,7 @@ title: NaraEnding
 :It’s not because you’ve spent all year planning for this as President of Solace(‘s Number One High School), even though it probably should be. It’s more about making sure Nara has a good time.
 <<voiceline KristenAwkward3>>
 :Is she going to enjoy all of this? Is she going to enjoy <i>any</i> of this???
-:Ok ok, calm down. Take a few breaths. If you panic, your super sick and metropolitan bolo tie is gonna look so off balance and Nara is gonna make <i>so</i> much fun of you for it - 
+:Ok ok, calm down. Take a few breaths. If you panic, your super sick and metropolitan bolo tie is gonna look so off balance and Nara is gonna make <i>so</i> much fun of you for it — 
 <<char_right NaraHappy4>>
 <<voiceline NaraGreeting3>>
 Nara: Kristen!!!!!
@@ -144,7 +147,7 @@ Kristen: I uhhh…
 Kristen: You uhhhhh…
 Kristen: Hot.
 Nara: Yes, that adjective does describe my appearance at any given time. I am glad you like my outfit, though.
-Kristen: Mhm uh huh yeah no problem. Should I like. Show you around?
+Kristen: Mhm, uh-huh, yeah no problem. Hey, so. Should I like. Show you around?
 <<voiceline NaraHappy1>>
 Nara: Yes, that would be lovely.
 <<kristen Neutral_Nara>>
@@ -174,13 +177,13 @@ Nara: I want to be here. With you. I will be okay.
 <<background SpringFling_Nara>>
 <<wait 2>>
 <<fade_in_ui>>
-:As Nara sits at the table, you pour two glasses of punch and drape the smallest tissue you’ve ever seen on your arm. You are nothing if not a gentleman of chivalrous bravery. Braverous chivalry. You’re good guy.
+:As Nara sits at the table, you pour two glasses of punch and drape the smallest tissue you’ve ever seen on your arm. You are nothing if not a gentleman of chivalrous bravery. Braverous chivalry. You’re a good guy.
 :Returning a champion, you place one goblet in front of your princess, the other arm bent like you’re a waiter.
 Kristen: Milady.
 :Nara’s eyes go wide.
-<<voiceline NaraBespoke4>>
-Nara: Kristren…
-Kristen: That’s right babe. I’m chivally now.
+<<voiceline NaraRomantic3>>
+Nara: Kristen…
+Kristen: That’s right, babe. I’m all chivally now.
 :Nara takes your hand in hers.
 <<voiceline NaraRomantic2>>
 Nara: You have never seemed more beautiful.
@@ -191,7 +194,7 @@ Kristen: Why?
 Nara: I have an allergy.
 Kristen: … to punch?
 Nara: To red. Beverage.
-Kristen: … yeah let’s get outta here.
+Kristen: … Yeah let’s get outta here.
 <<fade_out_ui>>
 <<wait 2>>
 <<enable_continue>>

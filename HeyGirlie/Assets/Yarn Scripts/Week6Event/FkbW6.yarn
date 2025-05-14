@@ -71,10 +71,13 @@ You all study the people milling about. You’re <i>pretty</i> sure you see Gort
 
 After a couple of minutes, the Ferris Wheel pauses at the very top. Forget the fairground, you can see nearly all of Elmville from here. Even the top of Mordred peeking out from behind some trees. 
 
-<<background ActivitiesFair_FKB>>
 <<kristen transparent>>
 <<char_left transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<background ActivitiesFair_FKB>>
+<<wait 2>>
+<<fade_in_ui>>
 
 Kristen: You know, I don’t think I’ve actually seen the town from this high up before.
 
@@ -89,5 +92,7 @@ You look out across the town, spotting all the familiar buildings you see nearly
 <<voiceline KristenDateSuccessLucy1>>
 Kristen: I think it’s pretty cool.
 
+<<fade_out_ui>>
+<<wait 2>>
 <<enable_continue>>
 ===

@@ -21,11 +21,12 @@ title: Cassandra1
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<char_left  transparent>>
-<<bg_filter_on  purple>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -68,11 +69,12 @@ title: Cassandra2
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<char_left  transparent>>
-<<bg_filter_on  purple>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
@@ -121,17 +123,19 @@ title: Cassandra3
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<char_left  transparent>>
-<<bg_filter_on  purple>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
     <<kristen Happy>>
     <<char_right CassandraNeutral>>
     Kristen: I feel so <i>relaxed</i>. Nara was right, spas are great.
     Cassandra: You three are <i>so</i> cute. If everything keeps going this well, you won’t have to worry about your principal murdering you for being a loser nerd anymore!
+    <<kristen Neutral>>
     Kristen: Stress, my old friend, welcome back.
     Cassandra: Oh, no, I didn’t mean to! Sorry!
     Kristen: It’s fine, Cass! Uh, just tell me that Tracker and Nara <i>also</i> think the date went well?
@@ -171,17 +175,58 @@ title: Cassandra4
 ---
 <<sfx ring>>
 <<char_right transparent>>
-<<char_left  transparent>>
-<<bg_filter_on  purple>>
+<<char_left transparent>>
+<<bg_filter_on purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
+    <<kristen Soft>>
+    <<char_right CassandraHappy>>
+    Cassandra: Hey, Kristen! How was your date?
+    Kristen: Don’t you already know?
+    Cassandra: Would you begrudge you goddex a little bit of gossip?
+    Kristen: I guess not. It was really good. We finally had The Talk.
+    <<char_right CassandraSurprised>>
+    Cassandra: You asked them to Spring Fling?
+    <<kristen Neutral>>
+    Kristen: What? No, not <i>that</i> talk. The relationship talk. It went really well!
+    <<char_right CassandraNeutral>>
+    Cassandra: Oh, okay! So do you think they’ll say yes to Spring Fling?
+    Kristen: I do! But even more than that... I think this’ll <i>last</i>, you know?
+    <<char_right CassandraBlush>>
+    Cassandra: Aw, how cute!
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
+    <<kristen Neutral>>
+    <<char_right CassandraNeutral>>
+    Kristen: Hey, Cass. How am I doing?
+    Cassandra: Not that bad! Still a little shaky, but you’re not totally fumbling.
+    Cassandra: If you think the last three weeks were enough for them to give this a real shot, you might want to ask them to Spring Fling <i>soon</i>.
+    <<kristen Nervous>>
+    Kristen: Right. Totally. Um. Will they say yes?
+    Cassandra: I can’t just give you <i>all</i> the answers. But... be realistic about how your last dates went before you ask. 
+    Cassandra: I really don’t want to be the Nightmare King <i>again</i>.
 <<else>>
     //flop
+    <<kristen Sad>>
+    <<char_right CassandraSad>>
+    Kristen: Adding a third <i>doesn’t</i> fix relationship problems. That’s so messed up!
+    Cassandra: Kristen.
+    <<kristen Nervous>>
+    Kristen: This was your idea, though! So it’s all gonna work out, right?
+    Cassandra: Kristen...
+    Kristen: They’re <i>not</i> gonna get together without me, right? Right?!
+    Cassandra: Um.
+    <<kristen Sad>>
+    Kristen: Oh my you. It’s so over for us.
+    <<char_right CassandraAngry>>
+    Cassandra: Kristen! It’s our lives on the line! If you’ve fumbled this date, you better <i>hope</i> the other three dates were good enough to make up for it!
+    Cassandra: Or, you know. Maybe ask someone else out. Try asking only <i>one</i> of them out if you really fumbled the other.
+    Kristen: ...but that’s a no on the dating without me?
+    Cassandra: Kristen. Lock the fuck in! We have bigger problems!
 <<endif>>
 <<jump EndDate>>
 ===

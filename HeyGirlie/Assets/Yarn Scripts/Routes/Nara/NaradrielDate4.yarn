@@ -24,10 +24,14 @@ Nara: Kristen, <i>everything</i> in Solace is different from what I am used to i
 :Suddenly, your conversation is interrupted by… is that a Gregorian chant?
 <<char_right NaraShock2>>
 <<voiceline NaraSurprised1>>
-Nara: Oh! You will have to excuse me for a moment, Kristen. It appears I am receiving a call.
+:Maybe even more surprising is that Nara doesn’t even seem to notice. Does she just… hear chanting all the time, in the background of her day-to-day life?
+:You’ll unpack that never.
+Kristen: Um… Nara? Do you know what the fuck that chanting is?
+Nara: Oh! Yes, of course! You will have to excuse me for a moment, Kristen. It appears I am receiving a call.
 <<kristen Surprised>>
 <<voiceline KristenSurprised3>>
 :No way. How did she learn about calls? You didn’t teach her that.
+:You also didn’t teach her how to change her ringtone. You’re pretty sure <i>you</i> don’t know how to do that, so, cool. Maybe she can teach you! What a novel thought.
 Kristen: Of course! Take your time.
 <<kristen Neutral>>
 :She steps to the side, and speaks in hushed tones into the crystal. Meanwhile, you decide to make your way into the diner so you can reserve a table.
@@ -100,7 +104,7 @@ Nara: But Kristen! You are in grave danger!
 Nara: Kristen, may I propose something?
 <<kristen Awkward>>
 <<voiceline KristenSurprised3>>
-Kristen: Nara I don’t think- what if we- I-
+Kristen: Nara I don’t think - what if we - I -
 <<char_right NaraHappy2>>
 :Nara laughs.
 Nara: No, silly! I am not asking for your hand in marriage. Galicaea knows how long it would take to perform all of the prerequisite rituals.
@@ -142,13 +146,13 @@ Kristen: What about you?
 <<voiceline NaraNeutral2>>
 Nara: Hmmm…
 <<char_right NaraNeutral2>>
-Nara: Princess Buttercup.
+Nara: Lady Buttercup.
 <<kristen Surprised>>
 :Buttercup? That doesn’t sound like an Elven name. It’s not your name either. Does she hate you? Is this her way of telling you she hates you?
 Kristen: I thought you were an only child.
 <<char_right NaraHappy2>>
 <<voiceline NaraBespoke4>>
-Nara: Oh Kristren, you do make me laugh! No, Princess Buttercup is my childhood horse.
+Nara: Oh Kristren, you do make me laugh! No, Lady Buttercup is my childhood horse.
 :Ohhh, that explains why she named her new horse Madame Buttercup…
 <<char_right NaraNeutral2>>
 Nara: She is resting in Fallinel at the moment. I do miss her, though.
@@ -158,7 +162,7 @@ Nara: No, she is still alive.
 <<voiceline KristenSurprised1>>
 :Wait… how many horse years are in one human year?
 Kristen: How does that work? Isn’t she, like, really old?
-Nara: Well, yes, but thanks to advanced Elven magic, Princess Buttercup has survived well beyond any other horse I have ever known!
+Nara: Well, yes, but thanks to advanced Elven magic, Lady Buttercup has survived well beyond any other horse I have ever known!
 :The image of a horse covered in tubes filled with mysterious green liquid weaving in and out of it enters your mind. You wish it hadn’t.
 <<kristen Nervous>>
 Kristen: Nnnno yeah that’s great I’m so happy for you and your horse also as well.
@@ -169,14 +173,15 @@ Kristen: Wh… horses in Fallinel can talk?
 Nara: No, no. It is simply a side effect of the spells. They were crafted for humans, you see. Not for horse.
 Nara: Now, question two: for what in your life do you feel most grateful?
 <<kristen Neutral>>
+:You take a moment to think about this one. These questions seem like something you should maybe take seriously.
 Kristen: My friends, probably. I’ve grown so much with them, and they’ve supported me more than anyone else.
 Nara: I see! For me, it would be the Little Man.
-:That is an incredibly sinister sentence.
+:That… is an incredibly sinister sentence.
 <<kristen Nervous>>
 <<voiceline KristenNeutral3>>
 Kristen: The who?
 Nara: The Little Man! You met him at the stables?
-:Ohhhh the guy who cleaned you up and then left.
+:Ohhhh, right, the guy who cleaned Nara up and then left.
 <<kristen Grin>>
 Kristen: Do you really care that much about being clean?
 Nara: Oh, the Little Man does more than that. He has been there for me my whole life.
@@ -262,7 +267,7 @@ Nara: How close are you to your family?
 Kristen: What?
 Nara: Sorry, it is one of the questions.
 <<kristen Neutral>>
-Kristen: I mean, they’re still in Elmville. I think.
+Kristen: I mean, they’re still in Elmville. 
 Nara: Ah, you misunderstand. I believe the question means it in an emotional sense.
 :Riiight right right.
 Nara: I can go first, if you would like.
@@ -350,8 +355,7 @@ Nara: What about you? You do not have to answer if you prefer not to.
     <<voiceline KristenDateSuccess2>>
     :You feel a little pleased with yourself as you both put your money on the table. Sure, your small pile of change looks kinda lame next to her stack of gold coins, but at least it’s <i>your</i> pile.
     <<add_points 2>>
-
-
+<<Kristen Neutral>>
 <<char_right NaraNeutral2>>
 :As the waitress collects the cash, Nara looks at you like she’s about to say something.
 <<voiceline NaraDateSuccess2>>

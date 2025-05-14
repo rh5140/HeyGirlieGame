@@ -24,8 +24,17 @@ title: Cassandra1
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+Cassandra: Kristen! I heard you were hanging out with Gertie this week…
+Kristen: Heard from who?
+Cassandra: It doesn’t matter. 
+Cassandra: Tell. Me. Everything.
+
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
+ <<kristen Grin>>
   Kristen: Not too bad! At least, once the duel was over.
   Cassandra’s eyes widen.
   Cassandra: You DUELED??!!
@@ -62,6 +71,7 @@ title: Cassandra1
   Kristen: Oh, no. We squashed that beef. She just normal doesn’t like me now. 
   Cassandra: Well, that’s one obstacle down. You still have time. Don’t worry, Kristen.
 <<endif>>
+
 <<jump EndDate>>
 ===
 title: Cassandra2
@@ -72,6 +82,7 @@ title: Cassandra2
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -93,6 +104,7 @@ title: Cassandra3
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -114,7 +126,7 @@ title: Cassandra4
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-
+<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
 Cassandra: Hey Kristen! Don’t get mad at me, but I was kiiiinda peeking, and saw you making friends with the bees!
@@ -138,6 +150,7 @@ title: Cassandra5
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -159,6 +172,7 @@ title: Cassandra6
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -180,6 +194,7 @@ title: Cassandra7
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
+<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -198,7 +213,10 @@ title: Cassandra8
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
+<<cass_call true>>
 ...someone's calling...
+<<play_track cassandra>>
+<<cass_call false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -219,6 +237,7 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
+    <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<change_scene Week2Event>>
