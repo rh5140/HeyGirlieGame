@@ -34,6 +34,7 @@ public class Credits : Menu
         Unpause();
         UnlockEsc();
         gameObject.GetComponent<ArrowNavigation>().ArrowKeyEnd();
+        if(OnDestroyEvnt != null) OnDestroyEvnt.Invoke();
     }
 
     public override void Close(){
