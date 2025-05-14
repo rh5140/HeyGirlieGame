@@ -142,10 +142,12 @@ public static class SaveManager
     }
 
     private static string getFile(int num, string extension){
+        string path = "/Profiles/Girlie{0}.{1}";
+        
         #if (UNITY_WEBGL)
-            return String.Format("/idbfs/HGHQ/HeyGirlie/Profiles/Girlie{0}.{1}", num.ToString("00"), extension);
+            return String.Format("/idbfs/HGHQ/HeyGirlie/" + path, num.ToString("00"), extension);
         #else
-            return String.Format(Application.persistentDataPath + "/Profiles/Girlie{0}.{1}", num.ToString("00"), extension);
+            return String.Format(Application.persistentDataPath + path, num.ToString("00"), extension);
         #endif
     }
 }
