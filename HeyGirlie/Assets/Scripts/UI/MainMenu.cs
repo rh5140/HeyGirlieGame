@@ -109,6 +109,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        SettingManager.Instance.voices.Stop();
         CursorManager.Instance.WaitCursor(() => {
             Instantiate(saveGalleryMenu);
             return true;
@@ -117,13 +118,13 @@ public class MainMenu : MonoBehaviour
 
     public void Settings()
     {
+        SettingManager.Instance.voices.Stop();
         Instantiate(settingsMenu);
     }
 
     public void Credits()
     {
-        //CursorManager.Instance.Load(true);
-        //SceneManager.LoadScene("Credits");
+        SettingManager.Instance.voices.Stop();
         Instantiate(creditsMenu);
     }
 
