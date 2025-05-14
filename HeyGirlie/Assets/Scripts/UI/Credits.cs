@@ -13,6 +13,8 @@ public class Credits : Menu
     [SerializeField] private Image rightPageTop;
     [SerializeField] private Sprite[] pageBottomFrames;
     [SerializeField] private Sprite[] pageTopFrames;
+    [SerializeField] private Sprite[] closeBookFrames;
+    [SerializeField] private Sprite[] closePageFrames;
 
     void Awake(){
         Pause();
@@ -23,7 +25,8 @@ public class Credits : Menu
     void Start()
     {
         // change credits page every X seconds
-        StartCoroutine(RunCredits(2.5f));
+        // StartCoroutine(RunCredits(5f));
+        StartCoroutine(EndCredits());
     }
 
     void Update(){
@@ -39,6 +42,22 @@ public class Credits : Menu
     public override void Close(){
         Destroy(creditsMenu);
     }
+
+    IEnumerator EndCredits(){
+        yield return StartCoroutine(RunCredits(1f));
+
+        Image leftPageAfterImage = leftPageAfter.gameObject.GetComponent<Image>();
+        Image rightPageBottomAfterImage = rightPageBottomAfter.GetComponent<Image>();
+        
+        int index = 0;
+        while (index < closeBookFrames.Length)
+        {
+            yield return new WaitForSecondsRealtime(0.1f);
+
+            leftPageAfterImage.sprite = closePageFrames[index];
+            rightPageBottomAfterImage.sprite = closeBookFrames[index++];
+        }
+    }
     
     IEnumerator RunCredits(float waitTime)
     {
@@ -52,6 +71,8 @@ public class Credits : Menu
             
             if(leftPageBefore.childCount !=0) leftPageBefore.GetChild(0).gameObject.SetActive(true);
         }
+        
+        yield return new WaitForSecondsRealtime(waitTime);
     }
     
     IEnumerator PageTurnAnim(float waitTime)
