@@ -7,20 +7,26 @@
 <<declare $no_special_event = false>>
 <<get_special_event_fail 5>>
 You, Gorgug, Riz, and Adaine have camped out all night to get the best possible spot for Ghoulapalooza, and the sun is finally rising on what has serious potential to be the best day ever. 
+
 The festival’s entirely sold-out, and anyone who's anyone is going to be in attendance. Fig’s performing, of course, and she might even take you and the Bad Kids backstage!
-
+<<kristen Happy>>
+<<voiceline KristenHappy3>>
 The rest of the lineup is <i>unreal</i> this year, too. Chappell Gnome is headlining, along with Cantrip Lamar, Billie Elvish, and Emily Axford. Remi Werewolf, Boygenie, Critski, and Laufaey are performing too, and that’s just on the main stage! 
-There are others spread throughout the campground — there’s something for everyone here this year, and it’s dizzyingly exciting.
 
+There are others spread throughout the campground — there’s something for everyone here this year, and it’s dizzyingly exciting.
+<<kristen Neutral>>
 The fresh morning air fills your nostrils, along with some very potent fireweed smoke from the camper next door. You’re sure you could score some if you asked, but you wanted to explore the festival with a clear head. 
 You finally spot Fabian walking over (he wouldn’t dream of missing his beauty sleep); he settles into Gorgug’s spot as Gorgug heads backstage to meet Fig. You let out a contented sigh. What could be better than this?
 
 Obviously there’s a lot of music to take in, but there’s so much more to the festival. It’s shaping up to be a beautiful day, the sun shining bright and the air crisp and new. 
+<<kristen Grin>>
+<<voiceline KristenHappy4>>
 Some organizer has prestidigitated the entire grounds to smell faintly of flowers instead of sweat and BO, and you <i>really</i> appreciate that. 
-
+<<kristen Neutral>>
 As attendees begin streaming in, you spot several of your classmates, all wearing their music-festival best. 
 You look down at yourself in your usual outfit — you don’t have any flashy accessories or creative makeup, but you’ll be comfortable, and that’s what matters. Ghoulapalooza’s only a fashion show if you want it to be, after all.
-
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
 :There’s so much to do! So much to see! So many people to hang out with! Just one problem: your friends are splitting up for the day, so you need to pick a festival buddy, the one person you spend the whole day with. Who will it be?
 
 <<if $no_special_event>>
@@ -41,6 +47,24 @@ since we're just testing, we'll let you cheat and play a special event if you wa
     <<special_event_selection 0>>
     no shame, huh? /j
 -> nah i'll commit to being single
+<<kristen Neutral>>
+You decide to blow off the whole “festival buddy” idea. Can’t a girl have a little solo date? Besides, a buddy would mean compromising on all the things you want to do. And there’s a <i>lot</i> to do! 
+<<kristen Happy>>
+<<voiceline KristenHappy2>>
+You and Fabian sing along loudly to Cantrip’s set, two drops in a sea of people chanting lyrics.
+
+Adaine wants photos in front of some arcane art display, and you’re the only one who she trusts with her angles — not even a mage hand will do.
+<<kristen Grin>>
+<<voiceline KristenHappy4>>
+You and Riz check out the refreshment stalls, and the ID policy here is more lax than when you all went to Leviathan. The two of you waste an hour pretending to be artisanal kombucha sommeliers.
+<<kristen Neutral>>
+Solo, you see some sets that none of your friends want to and discover your favorite new artist. You trade beaded bracelets with strangers, and exchange crystal numbers with people you’ll never see again. You dance like no one’s watching, because there’s no one to impress but yourself.
+<<kristen Happy>>
+<<voiceline KristenHappy1>>
+And when Fig brings you all onstage to sing her breakout hit, it’s the end of a perfect day.
+
+Even if you’re the only one who knows how perfect it was.
+
     <<jump EndEvent>>
 ===
 

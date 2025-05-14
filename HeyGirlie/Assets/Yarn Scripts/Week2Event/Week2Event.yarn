@@ -7,15 +7,15 @@ title: EventDefault
 <<declare $no_special_event = false>>
 <<get_special_event_fail 3>>
 It’s another beautiful weekend morning, and instead of enjoying it in bed, you’re up bright and early to go to the Elmville Art and Culture Museum. 
-
+<<kristen Nervous>>
 Maybe it’s too bright. Maybe it’s too early. Maybe you should’ve left Fabian’s board game night after he lost the second time and started breaking things.
-
+<<kristen Neutral>>
 But as Aguefort’s senior class president, you know better than to miss out on the senior class field trip.
 
 You and the rest of the Bad Kids — even Fig, who despite no longer being enrolled at Aguefort had declared that weekends were <i>her</i> time with her friends, and it’d be a cold day in Hell before she let that get taken away from her — all sip on Riz’s too-strong coffee and stand at the back of the large crowd that’s assembled in the museum lobby. 
 
 :You look around to see if anyone ditched: there’s the rest of your cleric class, there’s Skrank and the AV club, there’s the Rat Grinders, there’s Max Durden and Buddy Dawn, even Molman and the soil club are here! 
-:You even spot some non-Aguefort students: you see some Hudol kids and some kids from the local college walk through the front doors and slip into the exhibits.
+:You even spot some non-Aguefort students: you see some Hudol kids and some kids from the local college walk through the front doors and slip into the exhibits. 
 This has got to be the busiest day the museum’s seen in a while.
 
 Arthur Aguefort stands at the center of the room, Vice Principal Gilear Faeth at his side, and claps his hands. The crowd of students goes silent. 
@@ -29,6 +29,8 @@ He chuckles.
 Aguefort: As I’ve always said, the best way for an adventurer to learn is for an adventurer to do.
 
 <<char_right AguefortExcited>>
+<<kristen Surprised>> 
+<<voiceline KristenAngry3>>
 
 Aguefort:  Go forth, and wreak havoc upon the museum!
 
@@ -43,14 +45,18 @@ Aguefort sighs.
 Aguefort: Fine. Don’t do anything a mending cantrip couldn’t fix. Now fly free!
 
 <<char_right transparent>>
+<<kristen Awkward>> 
+<<voiceline KristenSurprised1>>
 
 He disappears in a gust of wind and a puff of smoke, sending museum guides and maps flying everywhere.
+<<kristen Neutral>> 
 
 The worker heaves a sigh and flips off the lobby smoke detector. 
 
 Museum worker: He does this every year.
 
 Where do you want to go?
+
 
 <<if $no_special_event>>
     <<jump EventFail>>
@@ -70,6 +76,53 @@ since we're just testing, we'll let you cheat and play a special event if you wa
     <<special_event_selection 0>>
     no shame, huh? /j
 -> nah i'll commit to being single
+<<kristen Surprised>>
+You look around frantically for someone, anyone, to buddy up with, but to your horror, all your friends have already peeled off into smaller groups and pairs and left you totally alone.
+<<kristen Awkward>>
+Well, totally alone save for Principal Aguefort, who is… walking very briskly in your general direction. Run! Hide! 
+
+Aw, shoot, there’s nowhere to hide. Arthur Aguefort’s eyes see all.
+
+<<char_right AguefortNeutral>>
+
+Aguefort: Madame President! 
+
+<<voiceline KristenSurprised3>>
+
+Kristen: Principal Aguefort, hi! Uhhhh, what are you still doing here?
+
+Aguefort: Why, taking in all the sights and sounds of the Elmville Art and Culture Museum, of course! It appears you are in need of a presidential escort.
+
+<<kristen Nervous>>
+
+Aguefort leans in conspiratorially, speaking in a rushed whisper.
+
+Aguefort: Between you and me, I <i>had</i> to get out of buddying up with Gilear. He’s a total stick in the mud, not even up for a single hijink — not a one! Can you believe that?
+
+There is literally nothing you can believe more.
+
+Aguefort: So, help me out? Be my museum buddy? For your ol’ pal Arty? I’d owe you one, and that’s legally binding.
+
+<<kristen Grin>>
+
+Kristen: Can I use that “one” to get me out of dying at the Spring Fling?
+
+Aguefort: No.
+
+<<kristen Sad>>
+<<voiceline KristenSad1>>
+
+Kristen: Fiiiine.
+
+<<char_right AguefortExcited>>
+
+Aguefort: Splendid!
+
+You walk around with Principal Aguefort all. Day. Long. It’s a little embarrassing, and a lot exhausting, and all you can think of the whole time is how much more fun you would’ve had if even <i>one</i> friend had decided not to leave you behind. 
+<<voiceline KristenSad3>>
+
+But at least this way, no one had to see your shame.
+
     <<jump EndEvent>>
 ===
 

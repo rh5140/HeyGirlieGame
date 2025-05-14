@@ -7,20 +7,26 @@
 <<location  "Elmville Fairgrounds">>
 <<get_special_event_fail 7>>
 You’ve known for years that Elmville has an annual spring fair, it’s just that you’ve never actually been. Your parents had avoided them like the plague, claiming they were hotbeds of ungodly people, sinful foods, and demonic activities.
-Honestly, those all sound pretty good to you these days, so you’re excited to experience them for the first time. From what you can tell from your friends, going to the spring fair is an incredibly normal part of Elmville life — the sky is blue, Aguefort is crazy, everyone goes to the fair every year.
-You’re a little envious. You’ve been meaning to go for a while, but one thing or another had popped up every single year of high school — jail, the Nightmare King, just being really fucking busy — and you hadn’t made it. 
-You’ve made a solemn vow to yourself that this year’ll be different.
+<<kristen Grin>>
+<<voiceline KristenHappy2>>
+Honestly, those all sound pretty good to you these days, so you’re excited to experience them for the first time. 
 
+<<kristen Neutral>>
+From what you can tell from your friends, going to the spring fair is an incredibly normal part of Elmville life — the sky is blue, Aguefort is crazy, everyone goes to the fair every year. You’re a little envious. 
+
+You’ve been meaning to go for a while, but one thing or another had popped up every single year of high school — jail, the Nightmare King, just being really fucking busy — and you hadn’t made it. You’ve made a solemn vow to yourself that this year’ll be different.
+<<kristen Nervous>>
+<<voiceline KristenNeutral1>>
 …Okay, you’ll admit it, it hadn’t been that solemn a vow. 
-
-Still, it’s kind of amazing to soak in the sunshine and feast your eyes on the staggering array of activities set up here.
-It’s a beautiful day to be outside, and as you look around you see quite a few of your classmates at Aguefort are here as well.
-The smell of various deep-fried food items is making your mouth water. There’s a Ferris wheel spinning at the back, a carousel full of shrieking little kids, about a trillion little games to be played… there’s even a haunted house, which seems slightly out of season but still fun. 
+<<kristen Neutral>>
+Still, it’s kind of amazing to soak in the sunshine and feast your eyes on the staggering array of activities set up here. It’s a beautiful day to be outside, and as you look around you see quite a few of your classmates at Aguefort are here as well. 
+<<kristen Happy>>
+<<voiceline KristenHappy1>>
+The smell of various deep-fried food items is making your mouth water. There’s a Ferris wheel spinning at the back, a carousel full of shrieking little kids, about a trillion little games to be played… there’s even a haunted house, which seems slightly out of season but still fun.
+<<kristen Neutral>>
 You can’t help but think that your brothers would <i>love</i> this, and you would have, too, if you’d come here as a kid. 
 
-No time to get maudlin, though! You’ve just gotta make up for lost time by having the best experience possible.
-There are so many things here you’d be happy to spend hours doing, but there are only so many hours in the day.
-:The big question is: what do you want to do first?
+:No time to get maudlin, though! You’ve just gotta make up for lost time by having the best experience possible. There are so many things here you’d be happy to spend hours doing, but there are only so many hours in the day. The big question is: what do you want to do first?
 
 <<if $no_special_event>>
     <<jump EventFail>>
@@ -40,6 +46,17 @@ since we're just testing, we'll let you cheat and play a special event if you wa
     <<special_event_selection 0>>
     no shame, huh? /j
 -> nah i'll commit to being single
+<<kristen Nervous>>
+You wish you had someone with you to show you around, but you can’t see anyone you properly <i>know</i> — just people whose faces you’ve seen in the hallways but couldn’t put a name to if someone paid you to do it. You squint at a passing dwarf in an Aguefort sweatshirt, trying to remember where you know them from, but they notice you staring and flip you off. Oops. 
+<<kristen Neutral>>
+<<voiceline KristenNeutral2>>
+Let it never be said that Kristen Applebees was vanquished by a little uncertainty, though. That’s your whole deal! You’re going to try all the new things you possibly can, and have a good time doing it. Probably.
+
+You end up wandering from stall to stall, trying foods that range from incredible (you’re going to <i>dream</i> about those churros) to inedible (whose idea was it to deep-fry Jell-O, and can you sue them?) and playing games with varying levels of success. Honestly, you just have a sort of… okay time.
+<<kristen Sad>>
+<<voiceline KristenSad2>>
+It’s not that the fair isn’t cool, but exploring it alone, with nobody to ooh and ahh and try things with, just makes you feel a little glum. Maybe next time you’ll have someone with you.
+
     <<jump EndEvent>>
 ===
 
