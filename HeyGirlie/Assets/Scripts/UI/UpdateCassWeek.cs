@@ -1,12 +1,18 @@
 using UnityEngine;
 using TMPro;
+using Yarn.Unity;
 
 public class UpdateCassWeek : MonoBehaviour
 {
+    public DialogueRunner dialogueRunner;
     void Start()
     {
         int weekNum = GameManager.Instance.GetWeek();
-        if (weekNum == 1) transform.parent.gameObject.SetActive(false);
+        if (weekNum == 1)
+        {
+            dialogueRunner.StartDialogue("Cassandra");
+            transform.parent.gameObject.SetActive(false);
+        }
         else GetComponent<TextMeshProUGUI>().text = "Week " + weekNum;
     }
 }

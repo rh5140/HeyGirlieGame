@@ -18,13 +18,13 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 
 title: Cassandra1
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<kristen Neutral>>
 <<char_right CassandraNeutral>>
 Cassandra: Kristen! I heard you were hanging out with Gertie this week…
@@ -76,13 +76,13 @@ Cassandra: Tell. Me. Everything.
 ===
 title: Cassandra2
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -98,13 +98,13 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 ===
 title: Cassandra3
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -120,13 +120,13 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 ===
 title: Cassandra4
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
 Cassandra: Hey Kristen! Don’t get mad at me, but I was kiiiinda peeking, and saw you making friends with the bees!
@@ -144,13 +144,13 @@ Kristen: You saw that? Didn’t even get stung once. I’m starting to become a 
 ===
 title: Cassandra5
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -166,13 +166,13 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 ===
 title: Cassandra6
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -188,13 +188,13 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 ===
 title: Cassandra7
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -210,12 +210,12 @@ Cassandra: Did you notice how I said something depending on how you did with Ger
 ===
 title: Cassandra8
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call true>>
 ...someone's calling...
-<<play_track cassandra>>
 <<cass_call false>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
@@ -240,12 +240,16 @@ title: EndDate
     <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
+    <<play_track museum>>
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
+    <<play_track mf>>
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
+    <<play_track outside>>
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
+    <<fade_out_track>>
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>

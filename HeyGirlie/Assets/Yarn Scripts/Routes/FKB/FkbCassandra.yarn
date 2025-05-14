@@ -19,6 +19,7 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra1
 tags:
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -26,7 +27,6 @@ tags:
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -43,6 +43,7 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra2
 tags:
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -50,7 +51,6 @@ tags:
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -67,6 +67,7 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra3
 tags:
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -74,7 +75,6 @@ tags:
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -91,6 +91,7 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra4
 tags:
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left transparent>>
@@ -98,7 +99,6 @@ tags:
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points == $date_points_total>>
     Cassandra: You blew it out of the water!! (earned max points possible)
 <<elseif $date_points == 0>>
@@ -113,7 +113,6 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 <<jump EndDate>>
 ===
 title: EndDate
-tags:
 ---
 <<update_points>>
 <<increment_date_count>>
@@ -122,12 +121,16 @@ tags:
     <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
+    <<play_track museum>>
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
+    <<play_track mf>>
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
+    <<play_track outside>>
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
+    <<fade_out_track>>
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>

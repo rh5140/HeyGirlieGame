@@ -18,13 +18,13 @@ Cassandra: Did you notice how I said something depending on how you did with Kip
 
 title: Cassandra1
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Neutral>>
@@ -85,13 +85,13 @@ title: Cassandra1
 ===
 title: Cassandra2
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Neutral>>
@@ -148,13 +148,13 @@ title: Cassandra2
 ===
 title: Cassandra3
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Neutral>>
@@ -220,13 +220,13 @@ title: Cassandra3
 ===
 title: Cassandra4
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Happy>>
@@ -290,13 +290,13 @@ title: Cassandra4
 ===
 title: Cassandra5
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Neutral>>
@@ -357,13 +357,13 @@ title: Cassandra5
 ===
 title: Cassandra6
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Soft>>
@@ -421,13 +421,13 @@ title: Cassandra6
 ===
 title: Cassandra7
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Sad>>
@@ -488,13 +488,13 @@ title: Cassandra7
 ===
 title: Cassandra8
 ---
+<<play_track cassandra>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<play_track cassandra>>
 <<kristen Soft>>
 <<char_right CassandraNeutral>>
 <<voiceline CassGreeting2>>
@@ -539,12 +539,16 @@ title: EndDate
     <<play_track default>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
+    <<play_track museum>>
     <<change_scene Week2Event>>
 <<elseif get_week() == 4>>
+    <<play_track mf>>
     <<change_scene Week4Event>>
 <<elseif get_week() == 6>>
+    <<play_track outside>>
     <<change_scene Week6Event>>
 <<elseif get_week() == 8>>
+    <<fade_out_track>>
     <<change_scene SpringFling>>
 <<else>>
     <<next_week>>
