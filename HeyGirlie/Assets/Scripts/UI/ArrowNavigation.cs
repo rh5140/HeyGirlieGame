@@ -26,7 +26,7 @@ public class ArrowNavigation : MonoBehaviour
             arrowKeyPrevious = EventSystem.current.currentSelectedGameObject;
             if(arrowKeyStart != null) EventSystem.current.SetSelectedGameObject(arrowKeyStart);
         } catch(Exception e) {
-            //do nothing
+            // Debug.Log(e.Message);
         }
     }
 
@@ -34,7 +34,7 @@ public class ArrowNavigation : MonoBehaviour
         try{
             if(arrowKeyPrevious != null) EventSystem.current.SetSelectedGameObject(arrowKeyPrevious);
         } catch(Exception e){
-            //do nothing
+            // Debug.Log(e.Message);
         }
     }
 

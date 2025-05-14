@@ -51,6 +51,7 @@ public class SaveGallery : Menu
         Unpause();
         UnlockEsc();
         arrowNavigation.ArrowKeyEnd();
+        if(OnDestroyEvnt != null) OnDestroyEvnt.Invoke();
     }
 
     public void isSelected(bool toggle){
