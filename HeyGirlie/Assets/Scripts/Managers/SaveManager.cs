@@ -40,7 +40,9 @@ public static class SaveManager
         if(ScreenshotCam.Instance != null) ScreenshotCam.Instance.Screenshot(filePath2);
 
         File.WriteAllText(filePath, jsonData);
-        JS_FileSystem_Sync();
+        #if(UNITY_WEBGL) 
+            JS_FileSystem_Sync();
+        #endif
     }
 
     // Loads in save file of specified number
