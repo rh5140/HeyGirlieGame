@@ -309,6 +309,7 @@ Wait, that voiceline wasn’t supposed to be in your flashback…
 <<bg_filter_off>>
 <<char_right  transparent>>
 <<wait  1>>
+<<play_track bluegrace>>
 <<background SpringFling>>
 <<kristen  Surprised_SF>>
 You look around for the owner of the mysterious voice.
@@ -401,6 +402,7 @@ Buddy: But we can go as friends, and then neither of us has to be killed by Arth
       <<bg_filter_on  off>>
       <<background SpringFling_Dead>>
       <<wait  2>>
+      <<sfx  vineboom>>
       <<background SpringFling_DeadText>>
       <<wait  2>>
       <<enable_continue>>
@@ -412,9 +414,10 @@ title: BDAccept
 <<kristen Sad_SF>>
 You really don’t want to go with Buddy, but you’d rather not die in the Aguefort cafeteria for, what, the third time?
 Kristen: Fine, Buddy, let’s tear it up.
-<<char_left BuddyDawnRelieved>>
+<<char_left BuddyRelieved>>
 Buddy: All right! Thanks, Kristen.
 <<kristen Neutral_SF>>
+<<char_left BuddyNeutral>>
 And you know what? The night doesn’t go half bad. Even though the sting of rejection hurts, hanging out and dancing with your friends and with Buddy is almost enough for you to forget. And he only tries to convince you to convert to Baccarath like three times.
 <<voiceline BDGreeting2>>
 Buddy: Have you heard the good word of Baccarath?
