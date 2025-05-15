@@ -179,7 +179,7 @@ public class Dropdown : Menu
         #if (UNITY_EDITOR)
             UnityEditor.EditorApplication.isPlaying = false;
         #elif (UNITY_WEBGL)
-            SceneManager.LoadScene("Main Menu");
+            MainMenu();
         #else
             Application.Quit();
         #endif
