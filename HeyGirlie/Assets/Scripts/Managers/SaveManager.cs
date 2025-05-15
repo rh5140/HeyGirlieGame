@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 /*****************************************************
@@ -13,6 +14,8 @@ as well as does the sole interactions with save files
 *****************************************************/
 public static class SaveManager
 {
+    [DllImport("__Internal")]
+    private static extern void JS_FileSystem_Sync();
     // Creates new save file
     public static PlayerData NewData(string playerName){
         int newProfileNum = getCount();
@@ -33,12 +36,11 @@ public static class SaveManager
         string jsonData = JsonUtility.ToJson(data, true);
         string filePath = getFile(profileNum, "json");
         string filePath2 = getFile(profileNum, "png");
-        // string filePath2 = screenshotPath.Replace("{profileNum}", profileNum.ToString("00"));
-
-        // ScreenCapture.CaptureScreenshot(filePath2);
+        
         if(ScreenshotCam.Instance != null) ScreenshotCam.Instance.Screenshot(filePath2);
 
         File.WriteAllText(filePath, jsonData);
+        JS_FileSystem_Sync();
     }
 
     // Loads in save file of specified number

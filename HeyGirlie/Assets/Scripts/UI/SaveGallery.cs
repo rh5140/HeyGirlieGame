@@ -96,8 +96,8 @@ public class SaveGallery : Menu
         arrowNavigation.ArrowNav(buttons);
 
         overwritePopup.SetActive(false);
-        saves[selectedSave - 1].SetName();
-        saves[selectedSave - 1].SetScreenshot();
+        saves[selectedSave - 1].SetPolaroid();
+        // saves[selectedSave - 1].SetScreenshot();
         newGamePopup.SetActive(false);
     }
 
@@ -117,8 +117,8 @@ public class SaveGallery : Menu
     public void DeleteSave(){
         if(selectedSave < 1 || selectedSave > 10) return;
         SaveManager.DeleteData(selectedSave);
-        saves[selectedSave - 1].SetName();
-        saves[selectedSave - 1].SetScreenshot();
+        saves[selectedSave - 1].SetPolaroid();
+        // saves[selectedSave - 1].SetScreenshot();
         Unselect(false);
         selected.isOn = false;
         EventSystem.current.SetSelectedGameObject(background);
