@@ -105,8 +105,9 @@ public class Dropdown : Menu
             // UnlockEsc();
         }
 
+        Color c = overlayImg.color;
         while(time < lerpTime){
-            Color c = overlayImg.color;
+            // c = overlayImg.color;
             c.a = Mathf.Lerp(cStart, cEnd, time / lerpTime);
             overlayImg.color = c;
 
@@ -115,6 +116,10 @@ public class Dropdown : Menu
             time += Time.unscaledDeltaTime;
             yield return null;
         }
+
+        c.a = cEnd;
+        overlayImg.color = c;
+        paperRect.anchoredPosition = new Vector2(pEnd, 0);
 
         if(!open){
             overlay.SetActive(false);
