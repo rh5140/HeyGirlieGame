@@ -12,6 +12,7 @@ public class EndCredits : Credits
     IEnumerator ReturnToMainMenu()
     {
         yield return StartCoroutine(RunCredits(2.5f));
+        Destroy(GameManager.Instance.gameObject);
         SceneManager.LoadScene("Main Menu");
     }
 }
