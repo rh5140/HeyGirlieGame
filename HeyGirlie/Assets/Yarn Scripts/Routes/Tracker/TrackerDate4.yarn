@@ -95,6 +95,8 @@ Tracker: But then I remember… it’s just me and you.
 :You squeeze her hand back.
 Kristen: Anything you need to grab before we head out?
 Tracker: Nope! I’m all yours.
+<<location "Driving">>
+<<background CityOutdoors>>
 <<kristen Soft>>
 :You walk Tracker out and hold open the passenger side door of Jawbone’s car for her.
 Kristen: M’lady.
@@ -129,7 +131,7 @@ Tracker: Kristen, what is this?
 :You pull out her chair for her, and she smiles at you, a little distracted.
 Kristen: So! This is —
 <<location "Dinner in the Dark">>
-<<bg_filter_on color>>
+<<bg_filter_on black>>
 :The lights all go out, stealing your thunder a bit.
 <<char_right transparent>>
 <<kristen transparent>>
@@ -218,7 +220,6 @@ Tracker: Everything okay?
     Kristen: Everything's fine. It's fine!
     :Tracker narrows her eyes in suspicion. Fuck, the guilt is going to eat you alive. You should call him back.
     :Your phone lights up again, and you nearly drop it in your scramble to pick up.
-    <<char_right TrackerAngry_1>>
     <<voiceline TrackerAngry2>>
     <<add_points 0>>
 Kristen: Hey, sorry for the wait. Are you okay?
@@ -247,6 +248,7 @@ Tracker: Hey. Anytime.
 <<kristen Neutral>>
 <<char_right TrackerNeutral_1>>
 <<location "Driving">>
+<<background CityOutdoors>>
 :This time, the drive with Tracker feels longer, quieter, but still... comfortable. Easy.
 :You keep your eyes on the road, not willing to be the one who breaks the silence just yet. Bucky’s not far, thank goodness. Only about a five minute drive from the restaurant, and from there about ten minutes back to your parents’ house.
 :Red light. You tap your fingers against the steering wheel, impatient to start moving again — and catch a glimpse of Tracker through your peripheral vision.

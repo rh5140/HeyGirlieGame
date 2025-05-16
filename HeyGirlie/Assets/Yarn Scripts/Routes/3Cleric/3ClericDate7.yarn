@@ -9,11 +9,13 @@
 :Yeah, you know Nara <i>could</i> have paid for those, but this is supposed to be your treat!
 <<char_right TrackerAwkward_3A>>
 :Yours and Tracker’s, and if you’re a teensy bit nervous, she’s actively panicking right now.
+<<voiceline TrackerAngry2>>
 Tracker: Galicaea, I hope this’ll be up to Nara’s standards. 
 Kristen: I mean, she did come to a bloodrush game with us. Compared to that, this isn’t exactly roughing it.
 :Though, you remember how Nara somehow managed to transform the Wolfsong expedition from Ragh and Tracker living half-feral on the road into a luxury campsite experience. 
 :Okay, <i>her</i> standards of roughing it may be different...
 :Tracker laughs, still a little tense.
+<<voiceline TrackerSurprised1>>
 Tracker: Yeah, I guess. Or even compared to Wolfsong, really. I just… I want this to go well, you know? 
 :You nod, knowing she’s talking about more than just this date. 
 Kristen: It’ll be okay! It’ll be <i>great</i>, actually. 
@@ -24,6 +26,7 @@ Tracker: Thanks, Kristen.
 Kristen: Anytime.
 Tracker: So which package did we end up go—
 <<char_left NaraNeutral2>>
+<<voiceline NaraGreeting2>>
 Nara: I have some thoughts!
 <<char_right TrackerSurprised_3A>>
 <<kristen Surprised>>
@@ -49,6 +52,7 @@ Nara: My goodness, you both move quickly!
 <<char_right TrackerSurprised_3A>>
 Tracker: Uh —
 <<kristen Awkward>>
+<<voiceline KristenSurprised3>>
 Kristen: No, it’s not because we’re —
 Nara: It is quite alright. I would never live there myself.
 <<char_left NaraDisgust2>>
@@ -100,6 +104,7 @@ Kristen: So what are we doing first?
 :Nara laughs.
 Nara: Certainly not a manicure <i>before</i> a massage. Only a fool would think that.
 <<kristen Awkward>>
+<<voiceline KristenAwkward2>>
 Kristen: Yeah… haha…
 :Okay, you might have just gone down the list alphabetically. The website didn’t tell you there was an order of operations!
 <<kristen Neutral>>
@@ -140,6 +145,7 @@ Tracker: I have no idea how a stranger punching my back is supposed to make me r
 :Still, though. You want to make her feel comfortable.
 Kristen: Maybe take a few deep breaths? Try and relax?
 :Tracker scoffs a little at your suggestion, words dripping with sarcasm.
+<<voiceline TrackerNeutral3>>
 Tracker: Right. Easy peasy, thanks, Kristen. // TRACKER can be a little mean as a treat!
 -> <i>Just take the words at face value.
     :You’re putting too much effort into chilling to read into that right now.</i>
@@ -150,6 +156,7 @@ Tracker: Right. Easy peasy, thanks, Kristen. // TRACKER can be a little mean as 
     <<add_points 1>>
 -> <i>Admit you’re a little nervous too and breathe with her.</i>
     Kristen: Hey, I’m not super used to this, either. But I’ll breathe with you, if you want.
+    <<voiceline TrackerSad2>>
     :Tracker sighs, looking a little abashed. 
     Tracker: Yeah, okay. Sorry.
     Kristen: It’s cool. I get it.
@@ -175,6 +182,7 @@ Tracker: It’s fine, don’t worry about me. You two can get pampered and I can
 <<char_left NaraSad2>>
 Nara: Tracker! The purpose of a spa is to relax! And if you are not relaxing, I am unable to relax!
 Tracker: You seemed pretty relaxed earlier…
+<<voiceline NaraSad1>>
 Nara: Not as relaxed as I could have been! Can you at least <i>try?</i> Please? For me? 
 :Tracker clearly wrestles with herself, but in the end, Nara’s puppy eyes win.
 <<char_right TrackerNeutral_3A>>
@@ -217,6 +225,7 @@ Nara: Wonderful! I am delighted to learn they still bring you joy. It is why I r
 :The three of you chat quietly about nothing in particular. Nothing too heavy or loaded or wild, just light and simple. 
 :The new things Nara’s noticed about Solace this week, how Tracker’s cleric classes at Bastion City University are going, how you’re tackling your senior year at Aguefort. 
 :Underneath the warm low-light of the spa, their faces both transform into something softer, more vulnerable. It kinda makes your chest hurt. In a good way, of course.
+<<voiceline TrackerDateSuccess1>>
 Tracker: This was really nice.
 <<char_left NaraNeutral2>>
 Nara: Of course it was! I enjoyed an opportunity to show you both the finer things in life.
@@ -242,8 +251,10 @@ Nara: Why? Are… <i>you</i> not cool with us?
 Kristen: No! No, I am. I’m sorry for asking, Nara.
 <<char_left NaraNeutral2>>
 Nara: I forgive you. To be honest, I appreciate the frankly unnecessary concern. Of course I want to spend time with the two of you.
+<<voiceline TrackerConfused1>>
 Tracker: Hrm?
 :You snort as Tracker stirs.
+<<voiceline Kristen Greeting2>>
 Kristen: Hey, sleepyhead.
 Nara: I said I wish to spend time with you both again. I believe it is Kristen’s turn to choose where. 
 Nara: Do not pick bloodrush again unless you agree to protect me from the dangers of violent athletes, as well as the terrors of filth and refuse.
@@ -259,10 +270,12 @@ You turn to Tracker, half-expecting her to have a suggestion all ready. But she 
     <<kristen Awkward>>
     :Oh shit you said that last bit out loud.
     Kristen: No, I didn’t — 
+    <<voiceline KristenSurprised3>>
     <<char_left NaraNeutral2>>
     Nara: Of course, I knew of your principal’s extensive lobbying in support of the pro avian intercourse community, Kristren. I am greatly surprised to learn of your personal support for him, though! Tell me, was the bird a longtime committed partner, or —
     Kristen: NARA, I HAVE NEVER FUCKED A BIRD IN MY LIFE EVER. 
     <<char_right TrackerLaugh_3A>>
+    <<voiceline TrackerHappy2>>
     Tracker: Are you sure about that?
     :You have never wanted to disappear more.
     <<add_points 2>>
@@ -290,12 +303,15 @@ You turn to Tracker, half-expecting her to have a suggestion all ready. But she 
 Kristen: I really don’t know, though. Normally I just meet up with people wherever they happen to be going.
 :You’ve been doing that for nearly two months now, actually. That’s wild.
 Kristen: Uh, you can come over to my place?
+<<voiceline TrackerNeutral2>>
 Tracker: Which is also my place. But yeah, I’d be down to hang out at home.
 <<char_left NaraHappy2>>
 Nara: Are you inviting me to the beloved Solesian ritual commonly known as a Slumber Party?
 Kristen: Um.
 :You’d mostly meant they could come over and sit on the couch to watch trashy TV with you, but…
+<<voiceline KristenRomantic2>>
 Kristen: Sure!
+<<voiceline TrackerHappy3>>
 Tracker: Sounds fun.
 Nara: I accept your invitation! I will come prepared with only the finest of nightwear.
 :She probably has a matching set, you think fondly. Wait, should you have a matching set? Eh, Tracker’s pajamas will help lower the standards.
