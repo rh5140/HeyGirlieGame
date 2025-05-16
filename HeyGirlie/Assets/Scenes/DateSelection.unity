@@ -1938,6 +1938,7 @@ MonoBehaviour:
   outdoorsButton: {fileID: 130146841}
   awayButton: {fileID: 839339037}
   background: {fileID: 652500656}
+  _atm: {fileID: 1978628810}
 --- !u!114 &838703953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2847,6 +2848,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4462525527514952745, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+      propertyPath: currentTrack
+      value: altcass
+      objectReference: {fileID: 0}
     - target: {fileID: 7214437460800445301, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
       propertyPath: m_Name
       value: AudioTrackManager
@@ -2856,6 +2861,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+--- !u!114 &1978628810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4462525527514952745, guid: 763851b8f7703264082ca77b97126f9b, type: 3}
+  m_PrefabInstance: {fileID: 1978628809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d92938bd197a1f4b9d691e6ff566886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

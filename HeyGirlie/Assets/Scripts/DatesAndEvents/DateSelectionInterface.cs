@@ -14,6 +14,7 @@ public class DateSelectionInterface : MonoBehaviour
     [SerializeField] private Button outdoorsButton;
     [SerializeField] private Button awayButton;
     [SerializeField] private Button background;
+    [SerializeField] private AudioTrackManager _atm;
     public void Start()
     {
         List<Button> valid = new List<Button>();
@@ -73,26 +74,31 @@ public class DateSelectionInterface : MonoBehaviour
     // }
     public void SelectSchoolRegion()
     {
+        _atm.MuteTrack();
         string dateScene = GameManager.Instance.schoolDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectElmvilleRegion()
     {
+        _atm.MuteTrack();
         string dateScene = GameManager.Instance.elmvilleDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectMordredRegion()
     {
+        _atm.MuteTrack();
         string dateScene = GameManager.Instance.mordredDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectOutdoorsRegion()
     {
+        _atm.MuteTrack();
         string dateScene = GameManager.Instance.outdoorsDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }
     public void SelectAwayRegion()
     {
+        _atm.MuteTrack();
         string dateScene = GameManager.Instance.awayDates.Dequeue();
         SceneManager.LoadScene(dateScene);
     }

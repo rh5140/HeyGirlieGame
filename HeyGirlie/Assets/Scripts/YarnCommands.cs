@@ -82,6 +82,7 @@ public class YarnCommands : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("voiceline", PlayVoiceline);
         dialogueRunner.AddCommandHandler<string>("sfx", PlaySFX);
         dialogueRunner.AddCommandHandler<string>("play_track", PlayTrack);
+        dialogueRunner.AddCommandHandler("play_cass", WaitThenPlayCass);
         dialogueRunner.AddCommandHandler("fade_out_track", FadeOutTrack);
 
         dialogueRunner.AddCommandHandler<int>("special_event_selection", ActivateButtons);
@@ -490,6 +491,17 @@ public class YarnCommands : MonoBehaviour
     private void PlayTrack(string audioName="default")
     {
         _atm.ChangeTrack(audioName);
+    }
+
+    private void WaitThenPlayCass()
+    {
+        StartCoroutine(WaitForRingtone());
+    }
+
+    IEnumerator WaitForRingtone()
+    {
+        yield return new WaitForSecondsRealtime(4f);
+        _atm.ChangeTrack("cassandra");
     }
 
     private void FadeOutTrack()

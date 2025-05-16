@@ -1,10 +1,6 @@
 ﻿title: Date1
 // max 7 points
 ---
-
-// scene 0- kristen finding out she needs the key
-
-//<<background "???">>
 <<location "Aguefort">>
 <<declare $date_points = 0>>
 <<declare $date_points_total = 7>>
@@ -35,11 +31,17 @@ But you’re going to stay optimistic! Surely she doesn’t hate you that much a
 
 <<background "City">>
 <<location "Outside">>
+<<play_track outside>>
 
 Apparently if you bust out of Hell without going through all of the proper channels, you have to earn 1,000 community service hours helping the group of people you scorned badly enough to get sent to damnation, which is why you’re walking up to a table with a sign that reads “LITTER-B-GONE VOLUNTEER CHECK-IN”. 
 
-Honestly, community service is pretty cool. Or, well, at the very least it’s not like doing community service has ever killed anyone. Might as well join in. You give the incredibly bored volunteer manager a winning smile, pull on a pair of disposable gloves, and take a trash bag.
+Honestly, community service is pretty cool. Or, well, at the very least it’s not like doing community service has ever killed anyone. 
 
+Might as well join in. 
+
+You give the incredibly bored volunteer manager a winning smile, pull on a pair of disposable gloves, and take a trash bag.
+
+<<voiceline KipNeutral1>>
 <<char_right KipperlillyNeutral>> 
 You find Kipperlilly in a high-vis vest chasing an empty chip bag with a trash grabber. She’s running in a full sprint, which would be far more impressive if the breeze hadn’t floated the bag just out of her reach three times in as many seconds. 
 
@@ -55,8 +57,11 @@ Kipperlilly: Oh, laugh it up, Applebees.
 Kristen: Hey, Kipperlilly.
 
 <<kristen Neutral>>
-She glares at you, then sighs heavily. You notice a tiny bit of cellophane embedded in the ground and spend a second digging it up to throw in your own bag. If you’re going to have to talk to Kipperlilly anyway, you might as well help her clean up a bit.
+She glares at you, then sighs heavily. You notice a tiny bit of cellophane embedded in the ground and spend a second digging it up to throw in your own bag. 
 
+If you’re going to have to talk to Kipperlilly anyway, you might as well help her clean up a bit.
+
+<<voiceline KipSad1>>
 <<char_right KipperlillyAnnoyed>> 
 She doesn’t seem to appreciate the assistance, shooting you an unamused look as you continue to exist in her general vicinity.
 
@@ -69,7 +74,6 @@ Kipperlilly: You know what I mean. What’s a shining star like you doing out he
 
 She tightens her grip on the trash grabber with a scathing glare before reaching over and snatching a stray food wrapper you’d been about to pick up.
 
-//<<kristen Sprite?>>
 Kristen: Well, I don’t know how much you’re caught up on local news but I am the student body president now... 
 
 <<voiceline KipNeutral1>>
@@ -99,7 +103,7 @@ Kipperlilly: ...
 
 Kipperlilly stares at you. For a brief moment, she looks almost concerned that you’ve somehow lost Arthur’s regard. Is she actually worried about you? Maybe getting this key will be even simpler than you thought!
 
-<<voiceline KipHappy1>>
+<<voiceline KipHappy3>>
 <<char_right KipperlillyHappy>>
 Kipperlilly: This is the best day of my life.
 
@@ -113,6 +117,7 @@ Kipperlilly smirks victoriously before turning as if to walk away, potentially t
 <<voiceline KristenSurprised3>>
 Kristen: Wait! Can’t you just give it to me? 
 
+<<voiceline KipHappy1>>
 <<char_right KipperlillySmug>> 
 Kipperlilly: Why would I do that, when it’s much funnier to see you groveling at me for it? 
 
@@ -136,7 +141,9 @@ Oh right, the traps. You imagine what Kipperlilly could do with free access to t
 Maybe she set up a series of new, increasingly more elaborate and deadly traps waiting for you to trigger the instant you step inside. You already trip over the ugly carpet Jawbone insists on keeping in the living room basically every morning.
 
 <<kristen Neutral>>
-On the other hand, Kipperlilly did initially seem confused that you’d asked her about it at all, so it’s more likely she forgot she had the key in the first place and is just making stuff up now. That sounds like something she’d do.
+On the other hand, Kipperlilly did initially seem confused that you’d asked her about it at all, so it’s more likely she forgot she had the key in the first place and is just making stuff up now. 
+
+That sounds like something she’d do.
 
 <<char_right KipperlillyNeutral>>
 There has to be a way to convince her.
@@ -164,6 +171,7 @@ Kristen: What are you even doing with it?
 
 Kipperlilly: My plans are none of your business.
 
+<<voiceline KipHappy1>>
 <<char_right KipperlillySmug>>
 Kipperlilly: My machinations have machinations that you could never dream of. For all you know, that key is the lynchpin of a bigger scheme that’s going to take the whole year to come to fruition. The fact that you actually want to have it is just a plus.
 
@@ -174,6 +182,7 @@ Kipperlilly: I suppose I’ll give it to the next president at the end of the ye
 Kipperlilly: Ooh, or maybe I could convince Eugenia to hold onto it so that the next rogue to track her down gets a bonus prize. It could be a new Aguefort tradition.
 
 <<kristen Angry>>
+<<voiceline KristenAngry2>>
 Great. You kind of forgot how annoying Kipperlilly can be sometimes. Obviously she just wants to be stubborn until you give up and go home. 
 
 But you’re Kristen Applebees. You’ve punched at least one god in the face. You force yourself into your shitty parents’ lives every few weeks just to talk to your little brothers. 
@@ -189,11 +198,6 @@ Kristen: But come on! We’re seniors now, surely this kind of pettiness is bene
 <<voiceline KipHappy2>>
 <<char_right KipperlillyHappy>>
 Kipperlilly: <i>Au contraire</i>. Watching you squirm is incredibly entertaining.
--> Kristen: “Okay, okay, laugh it up. I can take it. Can I just get the key once you’re done?”
-  <<char_right KipperlillySmug>>
-  <<voiceline KipSmug2>>
-  Kipperlilly: Hmph. Bold to assume I’ll be done anytime soon.
-  <<add_points 2>>
 -> Kristen: “It could probably get you some brownie points. Maybe knock a couple hours off of community service?”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral1>>
@@ -204,6 +208,11 @@ Kipperlilly: <i>Au contraire</i>. Watching you squirm is incredibly entertaining
   <<char_right KipperlillyNeutral>>
   Kipperlilly: Don’t be ridiculous. Since when was doing favors for you part of the deal?
   <<add_points 0>>
+-> Kristen: “Okay, okay, laugh it up. I can take it. Can I just get the key once you’re done?”
+  <<char_right KipperlillySmug>>
+  <<voiceline KipSmug2>>
+  Kipperlilly: Hmph. Bold to assume I’ll be done anytime soon.
+  <<add_points 2>>
 
 <<kristen Grin>>
 Kristen: Come on, we could make some kind of arrangement. A deal. You scratch my back, I scratch yours. You give me the key, I do something for you.
@@ -215,6 +224,7 @@ Kipperlilly: I don’t need or want anything from you, Applebees. Right now, all
 Kristen: Your title?
 
 <<char_right KipperlillySmug>>
+<<voiceline KipHappy1>>
 Kipperlilly: Of the most efficient volunteer in the entire group!
 
 Kristen: … the group that picks up trash?
@@ -232,15 +242,16 @@ Kipperlilly: I’m not doing a thing for you unless you make it worth my while.
   <<voiceline KipSmug2>>
   Kipperlilly looks thoughtful, humming to herself. She studies you like a particularly interesting insect.
   <<add_points 2>>
--> Kristen: “There’s gotta be something I can help you out with at school.”
-  <<voiceline KipAnnoyed2>>
-  Kipperlilly: Like what, an I.O.U.?
-  <<add_points 1>>
 -> Kristen: “Please please please please please please please please please—”
   <<voiceline KipAngry2>>
   You fall to your knees dramatically in front of her, letting your trash bag flop on the ground next to you.
   Kipperlilly: Seriously? Get the fuck up, Applebees.
   <<add_points 0>>
+-> Kristen: “There’s gotta be something I can help you out with at school.”
+  <<voiceline KipAnnoyed2>>
+  Kipperlilly: Like what, an I.O.U.?
+  <<add_points 1>>
+
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: You’re really this desperate to get into that office? You know you don’t need anything in there to do the job, right? I don’t think Mazey set foot in there <i>once</i> last year.
@@ -281,6 +292,7 @@ Kipperlilly: If you can prove to me that you deserve this key, then I’ll retri
 Kipperlilly: Actually, leave them out of this completely. They aren’t going to help your ass.
 
 <<char_right KipperlillySmug>>
+<<voiceline KipHappy1>>
 Kipperlilly: You better be ready to fucking jump when I tell you to, ‘cause otherwise there’s no way you’re getting that key from me.
 
 <<kristen Neutral>>

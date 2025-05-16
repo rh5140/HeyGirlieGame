@@ -18,7 +18,8 @@ Cassandra: Did you notice how I said something depending on how you did with Fig
 
 title: Cassandra1
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
@@ -96,7 +97,8 @@ title: Cassandra1
 ===
 title: Cassandra2
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
@@ -174,7 +176,8 @@ title: Cassandra2
 ===
 title: Cassandra3
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<bg_filter_on  purple>>
 <<char_right transparent>>
@@ -264,7 +267,8 @@ title: Cassandra3
 ===
 title: Cassandra4
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
@@ -367,7 +371,8 @@ title: Cassandra4
 ===
 title: Cassandra5
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -482,7 +487,8 @@ Kristen: What can I say? I’ve really been knuckling down in my classes this ye
 ===
 title: Cassandra6
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<bg_filter_on  purple>>
@@ -580,7 +586,8 @@ title: Cassandra6
 ===
 title: Cassandra7
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left transparent>>
@@ -702,7 +709,8 @@ title: Cassandra7
 ===
 title: Cassandra8
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left transparent>>
@@ -822,7 +830,8 @@ title: Cassandra8
 ===
 title: Cassandra8Alt
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left transparent>>
@@ -930,7 +939,7 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
-    <<play_track default>>
+    <<fade_out_track>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<play_track museum>>

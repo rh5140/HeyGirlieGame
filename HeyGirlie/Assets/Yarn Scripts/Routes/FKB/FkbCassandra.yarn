@@ -19,7 +19,8 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra1
 tags:
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -43,7 +44,8 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra2
 tags:
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -67,7 +69,8 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra3
 tags:
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left  transparent>>
@@ -91,7 +94,8 @@ Cassandra: Did you notice how I said something depending on how you did with FKB
 title: Cassandra4
 tags:
 ---
-<<play_track cassandra>>
+<<fade_out_track>>
+<<play_cass>>
 <<sfx ring>>
 <<char_right transparent>>
 <<char_left transparent>>
@@ -118,7 +122,7 @@ title: EndDate
 <<increment_date_count>>
 <<increase_dates_this_week>>
 <<if get_dates_this_week() < 3>>
-    <<play_track default>>
+    <<fade_out_track>>
     <<change_scene DateSelection>>
 <<elseif get_week() == 2>>
     <<play_track museum>>
