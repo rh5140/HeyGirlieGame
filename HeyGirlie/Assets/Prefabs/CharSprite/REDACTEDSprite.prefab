@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6717304234574290660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6980370640556168207}
+  - component: {fileID: 7023362285150702797}
+  m_Layer: 5
+  m_Name: REDACTEDSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6980370640556168207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717304234574290660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7023362285150702797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717304234574290660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a46a68b620d9f4192af363ed5f8ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArray:
+  - spriteName: BuddyAngry
+    sprite: {fileID: 21300000, guid: ba62e48541c97894d927faef0aac793d, type: 3}
+  - spriteName: BuddyAnnoyed
+    sprite: {fileID: 21300000, guid: e84793622d6b605449bdc18463f928d0, type: 3}
+  - spriteName: BuddyAwkward
+    sprite: {fileID: 21300000, guid: a311db74e24e9ff42a043303a9c3d0b7, type: 3}
+  - spriteName: BuddyNeutral
+    sprite: {fileID: 21300000, guid: 4dd2f8e7713867c41aee17de21a6e1bf, type: 3}
+  - spriteName: BuddyPleading
+    sprite: {fileID: 21300000, guid: b85f785a80ad0794c8841fb763a87855, type: 3}
+  - spriteName: BuddyRelieved
+    sprite: {fileID: 21300000, guid: 8fa3cd2188239e84781c4fb6d3d6f0eb, type: 3}
