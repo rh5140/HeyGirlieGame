@@ -79,18 +79,18 @@ Cassandra: No doubt about it. Now go get ‘em, girlie!
 
 title: Ending
 ---
-<<kristen transparent>>
-<<char_right transparent>>
-<<char_left transparent>>
-<<fade_out_ui>>
-<<wait  2>>
-<<location "Aguefort Gym">>
-<<background SpringFling>>
-<<fade_in_ui>>
-<<play_track sf>>
 <<if $succeed is false>>
-    <<jump FlopEnding>>
+    <<jump FlopCass>>
 <<else>>
+    <<kristen transparent>>
+    <<char_right transparent>>
+    <<char_left transparent>>
+    <<fade_out_ui>>
+    <<wait  2>>
+    <<location "Aguefort Gym">>
+    <<background SpringFling>>
+    <<fade_in_ui>>
+    <<play_track sf>>
     <<if $date == "Fig">>
         <<kristen Neutral_Fig>>
     <<elseif $date == "FigAyda">>
@@ -238,8 +238,54 @@ title: EndingForReal
 <<end_credits>>
 ===
 
+title: FlopCass
+---
+<<kristen transparent>>
+<<char_right transparent>>
+<<char_left transparent>>
+<<bg_filter_on black>>
+<<wait  2>>
+<<bg_filter_off>>
+<<kristen Neutral_SF>>
+You put the last finishing touches on your Spring Fling outfit, and check yourself out in the mirror.
+<<kristen Grin_SF>>
+So what if you couldn’t get a date! You look <i>good</i>, Applebees.
+<<voiceline CassPhone3>>
+Cassandra: Kristen, pick up!! 
+Maybe she doesn’t know.
+Kristen: Hey, Cass!
+<<char_right CassandraAngry>>
+Cassandra: How did you fumble SIX BEAUTIFUL AND ELIGIBLE WOMEN??!!
+<<kristen Nervous_SF>>
+She knows.
+<<voiceline KristenAwkward2>>
+Kristen: Um, haha, I know. I know! It’s fine though, I’ve worked it all out. 
+Cassandra: You’re going to die, Kristen.
+Kristen: Yeah, sure. I’ve died before. I’ve brought myself back before! 
+Kristen: Plus, I have you now. You can just, I don’t know, revive me?
+Cassandra: Kristen. You’re not thinking.
+Ouch.
+<<char_right CassandraSad>>
+Cassandra: You’re my only follower right now. If you die, I don’t have a tether. I’ll become the Nightmare King again, and I can’t save you.
+<<kristen Nervous_SF>> 
+Shit! You really hadn’t been thinking. Sure, you might die, but now Cassandra might, too.
+-> Kristen: “I won’t let that happen.”
+	<<jump FlopEnding>>
+-> Kristen: “I’m sorry, Cassandra.”
+	<<jump FlopEnding>>
+===
+
 title: FlopEnding
 ---
+<<kristen transparent>>
+<<char_right transparent>>
+<<char_left transparent>>
+<<fade_out_ui>>
+<<wait  2>>
+<<location "Aguefort Gym">>
+<<background SpringFling>>
+<<fade_in_ui>>
+<<play_track sf>>
 <<if $date == "FigAyda">>
     <<set $date = "Fig and Ayda">>
 <<elseif $date == "FKB">>
@@ -249,7 +295,7 @@ title: FlopEnding
 <<endif>>
 <<kristen  Sad_SF>>
 Oh, shit. Shit! This is really not good.
-Despite your best efforts, {$date} turned you down, and you didn’t manage to get a date for the Spring Fling. Aguefort’s voice echoes in your ears…
+Despite your best efforts, you didn’t manage to get a date for the Spring Fling. Aguefort’s voice echoes in your ears…
 <<bg_filter_on sepia>>
 //return to the intro background
 //remove Kristen sprite
