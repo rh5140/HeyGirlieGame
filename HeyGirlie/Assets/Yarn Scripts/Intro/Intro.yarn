@@ -21,6 +21,7 @@ Aguefort: Kristen, a word?
   :Nothing has changed.
   <<char_right AguefortNeutral>>
   Aguefort: But good on you for keeping me on my toes! What I have to tell you must <i>not</i> fall into the wrong hands.
+    Aguefort: I know we just had a meeting about a different dance, but I need to talk to you about the Spring Fling.
 -> "Yes?"
   Aguefort: I need to talk to you about the Spring Fling.
   You groan.
@@ -36,20 +37,31 @@ Aguefort: Every god represented by our cleric class has to have at least one stu
 <<kristen Surprised>>
 <<voiceline KristenSurprised1>> 
 :Wait, what? What does he mean, <i>has</i> to?
-Aguefort: If that’s not the case, the contract I have with the celestial plane means I have to kill those cleric students for being, and I quote, “loser virgin nerds.” Do you understand what I’m saying?
--> "Loud and clear."
-  <<kristen Nervous>>
-  <<voiceline KristenAwkward3>> 
-  :You need a date to the Spring Fling. Cassandra wouldn’t kill you, but Aguefort just might.
--> "Not a bit."
-  Aguefort: Kristen, you are the only student at this school who worships Cassandra. You need a date to the Spring Fling… or else!
-  <<kristen Awkward>>
-  <<voiceline KristenAwkward1>>
-  :He’s right. The easy option would be to take another cleric. But there’s only two clerics at Aguefort who are the sole followers of a god: you and… <i>ew</i>.
-  :Definitely not an option.
+Aguefort: If that’s not the case, the contract I have with the celestial plane means I have to kill those cleric students for being, and I quote, “loser virgin nerds.” 
+<<kristen Awkward>>
+<<voiceline KristenNeutral3>>
+Kristen: Kill? You can’t be serious.
+Aguefort: Oh, yes, I’m serious.
+Aguefort: <i>Deadly</i> serious.
+…
+Aguefort: Get it? 
+…
+Aguefort: I’m not joking. If you show up to the Spring Fling without a date, I am legally obligated to cast Power Word Kill on you. You are in <i>danger</i>, Kristen Applebees.
+<<kristen Sad>>
+<<voiceline KristenSad1>>
 
+You’re the only cleric student at Aguefort who worships Cassandra. Hell, you’re the only cleric <i>anywhere</i> who worships Cassandra. And you’ve seen Cass without her followers — it’s not pretty.
+
+<<kristen Awkward>>
+<<voiceline KristenAwkward1>>
+:The easy option would be to take another cleric in need. But there’s only two clerics at Aguefort who are the sole followers of a god: you and… <i>ew</i>.
+:Definitely not.
 <<kristen Nervous>>
-:The Spring Fling is only 8 weeks away and you, Kristen Applebees, are desperately single. It’s time to get to work. Your life depends on it!
+
+Kristen: Are you sure you read that contract right?
+Aguefort: Right as rain, Miss Applebees.
+
+:The Spring Fling is only 8 weeks away and you, Kristen Applebees, are desperately single. It’s time to get to work. Your life depends on it! 
 
 <<change_scene "Cassandra">>
 ===
