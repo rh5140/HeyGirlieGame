@@ -1,11 +1,77 @@
-﻿title: SpringFling
+﻿title: CassMusic
+---
+<<location "Mordred Manor">>
+<<play_track altcass>>
+
+===
+title: SpringFling
 ---
 //<<wait  0.5>>
 <<declare $date = "they">>
-<<location "Mordred Manor">>
-SPRING FLINGGGGGGGGGGGGG it ends here.. time to ask a girlie(s) out
+<<voiceline CassStartup1>>
+<<kristen Neutral>>
+<<char_right CassandraNeutral>>
+Cassandra: Hi, Kristen! Do you have any news for me?
+<<voiceline CassStartup1>>
+<<kristen Surprised>>
+<<voiceline KristenNeutral3>>
+Kristen: Like, in general, or…?
+Kristen: I think the stock market is probably up today. Or down. One of those two things. 
+Kristen: The weather’s… I actually don’t know how the weather is. I haven’t been outside today.
+<<char_right CassandraSurprised>>
+<<voiceline CassNeutral1>>
+Cassandra: No, not that kind of news. Don’t tell me you forgot?!
+<<kristen Nervous>>
+Kristen: …forgot what?
+<<char_right CassandraAngry>>
+Cassandra: Kristen! The Spring Fling is <i>right</i> around the corner! It’s so close it’s breathing down your neck!
+<<kristen Awkward>>
+<<voiceline KristenAwkward2>>
+Kristen: Ohhh. Right. No, I super remembered that, don’t worry. It would be crazy if I hadn’t, haha. 
+<<char_right CassandraNeutral>>
+Cassandra: Riiiight. So you have a date to go with, then? You’ve asked someone out?
+Kristen: …
+Kristen: Promise not to be mad? 
+<<char_right CassandraSad>>
+<<voiceline CassDisappointed1>>
+Cassandra: Kristen, I don’t know how to make you understand that if you don’t go with a date, <i>both</i>  of us are going to die.
+Cassandra: I’m not mad, just disappointed.
+Cassandra: I was hoping you’d take this a little more seriously.
+<<kristen Sad>>
+Kristen: Cass, no, I’m sorry. I <i>have</i> been taking this seriously. Of course I don’t want anything to happen to you. 
+Kristen: Or me.
+<<kristen Soft>>
+Kristen: I’m just nervous. I’ve been spending a lot of time with a lot of different people, and it’s been… really nice. 
+Kristen: I’ve learned so much about myself, and had so many wonderful experiences. And I know where and how I’ll do it, if I have to ask someone out.
+Cassandra: Which you do.
+<<kristen Sad>>
+Kristen: Which I do. But Cass… what if they say no?
+<<char_right CassandraSurprised>>
+Cassandra: Why would they?
+<<kristen Surprised>>
+<<voiceline KristenDateFail2>>
+Kristen: I mean, you’ve said it yourself a bunch of times, right? Sometimes I’m awkward, or insensitive, or rude… I don’t know if I’m exactly Spring Fling date material.
+<<char_right CassandraSad>>
+Cassandra: I think you’re being way too hard on yourself. 
+<<kristen Neutral>>
+<<char_right CassandraHappy>>
+Cassandra: You might be a little silly sometimes, sure, but Kristen, you’re a <i>catch</i>. Just look at you! 
+Cassandra: You’re generous, you’re kind, you’re <i>incredibly</i> magical… not to mention you’re… 
+<<kristen Grin>>
+<<voiceline KristenHappy1>>
+Kristen: An absolute smokeshow?
+Cassandra: Exactly. Kristen, you’re one of the most lovable people in the world. Take it from me — I’ve seen a lot of the world. 
+<<kristen Soft>>
+Kristen: You mean that? 
+<<char_right CassandraBlush>>
+Cassandra: No doubt about it. Now go get ‘em, girlie!
+<<kristen Happy>>
+<<voiceline KristenHappy3>>
+
 
 <<spring_fling_selection>>
+<<char_right transparent>>
+<<kristen  transparent>>
 <<fade_out_ui>>
 <<wait  1>>
 <<declare $succeed = false>>
@@ -25,18 +91,121 @@ title: Ending
 <<if $succeed is false>>
     <<jump FlopEnding>>
 <<else>>
+    <<if $date == "Fig">>
+        <<kristen Neutral_Fig>>
+    <<elseif $date == "FigAyda">>
+        <<kristen Neutral_FigAyda>>
+    <<elseif $date == "Gertie">>
+        <<kristen Neutral_Gertie>>
+    <<elseif $date == "Kipperlilly">>
+        <<kristen Neutral_KL>>
+    <<elseif $date == "Lucy">>
+        <<kristen Neutral_Lucy>>
+    <<elseif $date == "Naradriel">>
+        <<kristen Neutral_Nara>>
+    <<elseif $date == "Lucy">>
+        <<kristen Neutral_Lucy>>
+    <<elseif $date == "Tracker">>
+        <<kristen Neutral_Tracker>>
+    <<elseif $date == "FKB">>
+        <<kristen Neutral_FKB>>
+    <<elseif $date == "3C">>
+        <<kristen Neutral_3C>>
+    <<endif>>
     It feels like every moment of the last few months has led up to this, and it’s making you a little nervous. Sure, you’ve saved the world a time or five, and sure, you’ve died and brought yourself back to life, but all of that pales in comparison to the towering threat of high school social functions. 
-    <<kristen Nervous>>
+
+    <<if $date == "Fig">>
+        <<kristen Nervous_Fig>>
+    <<elseif $date == "FigAyda">>
+        <<kristen Nervous_FigAyda>>
+    <<elseif $date == "Gertie">>
+        <<kristen Nervous_Gertie>>
+    <<elseif $date == "Kipperlilly">>
+        <<kristen Nervous_KL>>
+    <<elseif $date == "Lucy">>
+        <<kristen Nervous_Lucy>>
+    <<elseif $date == "Naradriel">>
+        <<kristen Nervous_Nara>>
+    <<elseif $date == "Lucy">>
+        <<kristen Nervous_Lucy>>
+    <<elseif $date == "Tracker">>
+        <<kristen Nervous_Tracker>>
+    <<elseif $date == "FKB">>
+        <<kristen Nervous_FKB>>
+    <<elseif $date == "3C">>
+        <<kristen Nervous_3C>>
+    <<endif>>
+
     <<voiceline KristenAwkward2>>
     It doesn’t help that you’ve been heavily involved in planning it, either. Having that much control over something stressful would probably make most people feel <i>better,</i> but you know yourself and you know there’s a decent chance you’ve fucked something up in a major way and just haven’t realized it yet. 
-    <<kristen Grin>>
+    <<if $date == "Fig">>
+        <<kristen Grin_Fig>>
+    <<elseif $date == "FigAyda">>
+        <<kristen Grin_FigAyda>>
+    <<elseif $date == "Gertie">>
+        <<kristen Grin_Gertie>>
+    <<elseif $date == "Kipperlilly">>
+        <<kristen Grin_KL>>
+    <<elseif $date == "Lucy">>
+        <<kristen Grin_Lucy>>
+    <<elseif $date == "Naradriel">>
+        <<kristen Grin_Nara>>
+    <<elseif $date == "Lucy">>
+        <<kristen Grin_Lucy>>
+    <<elseif $date == "Tracker">>
+        <<kristen Grin_Tracker>>
+    <<elseif $date == "FKB">>
+        <<kristen Grin_FKB>>
+    <<elseif $date == "3C">>
+        <<kristen Grin_3C>>
+    <<endif>>
     <<voiceline KristenHappy4>>
     The venue looks beautiful, though. You look around the gym, admiring the tasteful streamers and exquisitely-arranged flowers at each table, and can’t help but feel proud of yourself. You’re especially pleased with the disco ball hanging from the basketball hoop — that was an inspired choice, if you do say so yourself.
-    <<kristen Neutral>>
+    <<if $date == "Fig">>
+        <<kristen Neutral_Fig>>
+    <<elseif $date == "FigAyda">>
+        <<kristen Neutral_FigAyda>>
+    <<elseif $date == "Gertie">>
+        <<kristen Neutral_Gertie>>
+    <<elseif $date == "Kipperlilly">>
+        <<kristen Neutral_KL>>
+    <<elseif $date == "Lucy">>
+        <<kristen Neutral_Lucy>>
+    <<elseif $date == "Naradriel">>
+        <<kristen Neutral_Nara>>
+    <<elseif $date == "Lucy">>
+        <<kristen Neutral_Lucy>>
+    <<elseif $date == "Tracker">>
+        <<kristen Neutral_Tracker>>
+    <<elseif $date == "FKB">>
+        <<kristen Neutral_FKB>>
+    <<elseif $date == "3C">>
+        <<kristen Neutral_3C>>
+    <<endif>>
     You’ve been here for most of the day, overseeing decor and handling logistics and helping out wherever you were needed. Now that all the work’s done, there are just a few more minutes until people start arriving for real, and <i>that’s</i> probably what’s making your heart pound in double-time. 
 
     You’ve changed into your fancy outfit — you would <i>not</i> recommend putting on a suit in a high school bathroom, by the way —  and you open the camera on your crystal one last time to make sure nothing drastic has happened to your face or hair since thirty seconds ago when you checked it last. It hasn’t. Phew! 
-    <<kristen Soft>>
+    <<if $date == "Fig">>
+        <<kristen Soft_Fig>>
+    <<elseif $date == "FigAyda">>
+        <<kristen Soft_FigAyda>>
+    <<elseif $date == "Gertie">>
+        <<kristen Soft_Gertie>>
+    <<elseif $date == "Kipperlilly">>
+        <<kristen Soft_KL>>
+    <<elseif $date == "Lucy">>
+        <<kristen Soft_Lucy>>
+    <<elseif $date == "Naradriel">>
+        <<kristen Soft_Nara>>
+    <<elseif $date == "Lucy">>
+        <<kristen Soft_Lucy>>
+    <<elseif $date == "Tracker">>
+        <<kristen Soft_Tracker>>
+    <<elseif $date == "FKB">>
+        <<kristen Soft_FKB>>
+    <<elseif $date == "3C">>
+        <<kristen Soft_3C>>
+    <<endif>>
     <<voiceline KristenRomantic2>>
     You feel a soft pressure on your forehead — a little ghostly kiss of reassurance from Cassandra — and you relax a little. It’ll be fine, probably. It’s just a school dance. What’s the worst that could happen? You look dapper as hell, the room is gorgeous, the catering smells delicious… and most importantly, no matter what happens, you know you’ll be spending the evening in good company. You’re going to have the time of your life. 
 
