@@ -297,34 +297,136 @@ title: FlopEnding
 Oh, shit. Shit! This is really not good.
 Despite your best efforts, you didn’t manage to get a date for the Spring Fling. Aguefort’s voice echoes in your ears…
 <<bg_filter_on sepia>>
-//return to the intro background
-//remove Kristen sprite
 <<kristen transparent>>
 <<background Aguefort>>
 <<char_right AguefortNeutral>>
 <<wait  1>>
 Aguefort: Every god represented by our cleric class has to have at least one student with a date to Spring Fling. 
 Aguefort: Or else the contract I have with the celestial plane means I have to kill those cleric students for being, and I quote, “loser virgin nerds.”
+<<voiceline BDHeyGirlie>>
+???: Hey, girlie!
+Wait, that voiceline wasn’t supposed to be in your flashback…
 <<bg_filter_off>>
+<<char_right  transparent>>
 <<wait  1>>
+<<play_track bluegrace>>
 <<background SpringFling>>
 <<kristen  Surprised_SF>>
-<<char_right  AguefortNeutral>>
-Annnnnd back to the present.
-<<char_right  AguefortExcited>>
-Aguefort: Power word kill.
-You die, and are dead.
-Game over.
-<<fade_out_track>>
-<<bg_filter_on black>>
-<<kristen transparent>>
-<<char_right transparent>>
-<<fade_out_ui>>
-<<wait  2>>
-<<bg_filter_on  off>>
-<<background SpringFling_Dead>>
-<<wait  2>>
-<<background SpringFling_DeadText>>
-<<wait  2>>
-<<enable_continue>>
+You look around for the owner of the mysterious voice.
+<<char_left BuddyNeutral>>
+<<kristen  Sad_SF>>
+Oh, Cassandra, give you strength.
+-> Kristen: "Hi, Buddy…"
+    Buddy: Hi! Aguefort just told me the rules, did you know we both need dates or we die?
+    Obviously, you’ve known for weeks. But this is pretty embarrassing. You have to lie.
+    <<voiceline KristenNeutral3>>
+    <<kristen  Nervous_SF>>
+    Kristen: Whaaat??? No way! If I had known, I would’ve convinced {$date} to come with me. 
+    Nailed it.
+-> <i>Pretend you don’t see him</i>
+    Buddy waves wildly.
+    <<voiceline BDGreeting1>>
+    Buddy: KRISTEN! Kristen, hi!
+    You can’t keep ignoring him.
+    <<voiceline KristenAwkward1>>
+    <<kristen  Nervous_SF>>
+    Kristen: Oh, Buddy. Sorry, didn’t see you there.
+    Buddy: Looking for your date?
+    Shit! Shit shit shit.
+    Kristen: No, haha, I actually came alone.
+    Which is also what Buddy’s mom said last night. Nope, not even jokes can raise your spirits right now.
+
+<<kristen  Sad_SF>>
+<<voiceline BDRandom>>
+<<char_left BuddyAwkward>>
+Buddy: So. Here we are. Both dateless. Both the only clerics of our gods. But there’s an easy solution to this problem.
+Ew.
+<<kristen Nervous_SF>>
+Kristen: Ew.
+<<voiceline  KristenAwkward3>>
+Kristen: Buddy, are you asking me on a date right now?
+<<voiceline BDBothered>>
+<<char_left BuddyAnnoyed>>
+Buddy: Obviously not, Kristen. We’re both gay.
+<<kristen  Neutral_SF>>
+<<voiceline KristenNeutral1>>
+You didn’t know that. Good for Buddy Dawn.
+Buddy: But we can go as friends, and then neither of us has to be killed by Arthur fucking Aguefort. What do you say, Kristen? One dance where we’re civil to each other?
+-> <i>Accept</i>
+  <<jump BDAccept>>
+-> <i>Reject</i>
+  <<kristen  Grin_SF>>
+  Kristen: Sorry, Buddy, but I’d rather die to corn cuties and go to Helioic hell, <i>again</i>, than go to the Spring Fling with you.
+  Ouch! Maybe that was a little harsh.
+  <<kristen  Nervous_SF>>
+  Kristen: No offense.
+  <<voiceline BDAngry>>
+  <<char_left BuddyAngry>>
+  Buddy: Have you considered, Kristen Applebees, that not everything is about you? I’d rather not die at the hands of someone I trusted, <i>again</i>. So will you please go to the fucking Spring Fling with me?
+  -> <i>Accept</i>
+    <<jump BDAccept>>
+  -> <i>Reject</i>
+    <<kristen  Neutral_SF>>
+    <<voiceline  KristenAngry2>>
+    Kristen: No means no, Buddy. Shit, you really were one of Helio’s favorites, weren’t you?
+    <<voiceline BDPleading>>
+    <<char_left BuddyPleading>>
+    <<kristen  Surprised_SF>>
+    Buddy: Please, Kristen, I really, really, really don’t want to die. I’m sorry I snapped at you earlier. I was just scared. I <i>am</i> scared! Please, Kristen. 
+    :Buddy sounds legitimately frightened. Maybe his afterlife was worse than any of yours? You try to count them in your head: there was Helio’s afterlife, there was the empty spiral of the universe, there was the one in the Forest of the Nightmare King…
+    Shit! You’ve zoned out, and Buddy’s still talking.
+    <<kristen  Surprised_SF>>
+    Buddy: I’m just, I’m going to ask one more time, and then I’ll accept whatever answer you give me. Can we please go to the Spring Fling together so I don’t have to die?
+    -> <i>Accept</i>
+      <<jump BDAccept>>
+    -> <i>Reject</i>
+      <<kristen  Nervous_SF>>
+      Kristen: I’ll take my chances. Sorry, Buddy.
+      <<voiceline BDCalroy>>
+      <<char_left BuddyAngry>>
+      Buddy: You know what I always hated about you, Kristen?
+      <<char_right AguefortExcited>>
+      He talks more, but you’re suddenly distracted by Aguefort materializing out of thin air.
+      <<kristen  Surprised_SF>>
+      Buddy: …he’s right behind me, isn’t he. 
+      Aguefort: Power word kill.
+      You die, and are dead.
+      Game over.
+      <<fade_out_track>>
+      <<bg_filter_on black>>
+      <<kristen transparent>>
+      <<char_right transparent>>
+      <<char_left transparent>>
+      <<fade_out_ui>>
+      <<wait  2>>
+      <<bg_filter_on  off>>
+      <<background SpringFling_Dead>>
+      <<wait  2>>
+      <<sfx  vineboom>>
+      <<background SpringFling_DeadText>>
+      <<wait  2>>
+      <<enable_continue>>
+===
+
+
+title: BDAccept
+---
+<<kristen Sad_SF>>
+You really don’t want to go with Buddy, but you’d rather not die in the Aguefort cafeteria for, what, the third time?
+Kristen: Fine, Buddy, let’s tear it up.
+<<char_left BuddyAnnoyed>>
+Buddy: Thank Baccarath you have the common sense to not die.
+Kristen: Hey, I’m doing you a favor here.
+He rolls his eyes.
+Buddy: Thanks, Kristen.
+<<char_left BuddyRelieved>>
+Buddy: Seriously.
+<<kristen Neutral_SF>>
+<<char_left BuddyNeutral>>
+And you know what? The night doesn’t go half bad. Even though the sting of rejection hurts, hanging out and dancing with your friends and with Buddy is almost enough for you to forget. And he only tries to convince you to convert to Baccarath like three times.
+<<voiceline BDGreeting2>>
+Buddy: Have you heard the good word of Baccarath?
+Yes, Buddy. Yes, you have.
+
+<<end_credits>>
 ===
