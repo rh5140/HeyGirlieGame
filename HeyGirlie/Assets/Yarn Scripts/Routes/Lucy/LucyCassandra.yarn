@@ -312,16 +312,69 @@ title: Cassandra7
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+  <<kristen Soft>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassPhone1>>
+  Cassandra: Hey, Kristen! You’ve been on my mind all day — I can’t wait to hear about how it went with Lucy!
+  <<char_right CassandraSurprised>>
+  Cassandra: …
+  Cassandra: Why do you have that look on your face?
+  Kristen: What, this one?
+  <<kristen Happy>>
+  <<voiceline KristenHappy1>>
+  Kristen: Because I’m completely, totally, absolutely gone for Lucy.
+  <<char_right CassandraHappy>>
+  Cassandra: Oh my me! Tell me EVERYTHING.
+  <<kristen Soft>>
+  Kristen: Baking with her was amazing, but I think we could just about do anything together and I’d be happy.
+  <<voiceline CassHappy3>>
+  Cassandra: Amazing!! I’m sensing another date on the horizon then?
+  Kristen: You bet! I’m already counting down the days. 
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+  <<kristen Nervous>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassPhone1>>
+  Cassandra: Hey, Kristen! You’ve been on my mind all day — I can’t wait to hear about how it went with Lucy!
+  <<char_right CassandraSurprised>>
+  Cassandra: …
+  Cassandra: Why do you have that look on your face?
+  <<voiceline KristenAwkward3>>
+  Kristen: Should I be worried if Lucy hasn’t kissed me on the mouth yet?
+  Cassandra: I mean, have you talked about it? Did you try to kiss her?
+  Kristen: No? She said she wanted to take things slow. I get it, but I’m <i>dying</i> over here! It’s making me a little nervous.
+  <<char_right CassandraNeutral>>
+  Cassandra: This is good, Kristen! It means she really cares about you and wants to make it special! Don’t worry so much about it.
+  <<kristen Neutral>>
+  Kristen: You really think so?
+  Cassandra: I know so! 
+<<else>>
+  //flop
+  <<kristen Nervous>>
+  <<char_right CassandraNeutral>>
+  <<voiceline CassPhone1>>
+  Cassandra: Hey, Kristen! You’ve been on my mind all day — I can’t wait to hear about how it went with Lucy!
+  <<char_right CassandraSurprised>>
+  Cassandra: …
+  Cassandra: Why do you have that look on your face?
+  Kristen: Lucy wanted our next date to be where she died.
+  <<char_right CassandraNeutral>>
+  Cassandra: Okay… and that’s a problem? You got another date!
+  <<kristen Awkward>>
+  <<voiceline KristenAwkward2>>
+  Kristen: It’s… super weird, though, right? Am I supposed to just be chill about that?
+  Cassandra: I mean, Lucy must be okay with it if that’s what she wants.
+  Kristen: I think it’s a little weird, Cass.
+  <<char_right CassandraAngry>>
+  <<voiceline CassDisappointed1>>
+  Cassandra: Don’t be rude, Kristen! Different strokes for different folks.
+  <<kristen Nervous>>
+  Kristen: Okay, fine… I’ll try not to be an asshole about it. Maybe I’ll understand when we actually go there.
+  <<char_right CassandraNeutral>>
+  Cassandra: That’s literally all I ask.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Lucy date 7?
 
 <<jump EndDate>>
 ===
@@ -334,16 +387,85 @@ title: Cassandra8
 <<cass_call  true>>
 ...someone's calling...
 <<cass_call  false>>
-<<if $date_points == $date_points_total>>
-    Cassandra: You blew it out of the water!! (earned max points possible)
-<<elseif $date_points == 0>>
-    Cassandra: Kristen, you need to lock the fuck in. (earned ZERO points)
-<<elseif $date_points > $date_points_total / 2>>
-    Cassandra: You blew it out of the water!! (more than half of possible points earned)
-<<else>> // Less than half but not zero
-    Cassandra: Well, that wasn't... too bad... (between zero and half of the possible points)
+<<if $date_points >= (2/3) * $date_points_total>>
+  // slay
+  <<kristen Surprised>>
+  <<char_right CassandraSurprised>>
+  <<voiceline CassPhone3>>
+  Cassandra: KRISTEN!
+  Kristen: CASSANDRA!
+  Cassandra: Ruvina told Ankarna some juicy gossip that she is <i>purposely</i> withholding from me. I can’t wait any longer. You HAVE to tell me everything rightnowpleasethankyou!
+  <<kristen Happy>>
+  Kristen: We kissed!
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy3>>
+  Cassandra: And!?
+  <<kristen Soft>>
+  Kristen: I’m head-over-heels obsessed. Who’d have thought that randomly pairing up for an assignment would lead to… this?
+  <<voiceline KristenRomantic2>>
+  Kristen: Seeing where Lucy died again, but with her there this time. Thinking about how far we’ve come together and how beautiful her brain is. I feel like the best version of myself when I’m with her.
+  <<voiceline CassHappy1>>
+  Cassandra: Kristen! That’s <i>so</i> sweet. I love this for you!
+  Kristen: Do you think… after we die, you and Ruvina could write us up some afterlife hall passes?
+  <<char_right CassandraBlush>>
+  Cassandra: Who are we to stand in the way of true love, Kristen? Of course we can figure something out.
+  <<kristen Happy>>
+  <<voiceline KristenHappy3>>
+  Kristen: Good! But of course I think Lucy and I have long, happy lives ahead of us first.
+  Cassandra: No doubt about that!
+<<elseif $date_points >= (1/3) * $date_points_total>>
+  // mid
+  <<kristen Surprised>>
+  <<char_right CassandraSurprised>>
+  <<voiceline CassPhone3>>
+  Cassandra: KRISTEN!
+  Kristen: CASSANDRA!
+  Cassandra: Ruvina told Ankarna some juicy gossip that she is <i>purposely</i> withholding from me. I can’t wait any longer. You HAVE to tell me everything rightnowpleasethankyou!
+  <<kristen Happy>>
+  Kristen: We kissed!
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy3>>
+  Cassandra: And!?
+  <<kristen Nervous>>
+  <<voiceline KristenAwkward3>>
+  Kristen: I’m still unsure about if we actually got married or not.
+  <<char_right CassandraSurprised>>
+  Cassandra: If you what?
+  Kristen: Neither of us cast Ceremony, so we’re good, right?
+  <<kristen Soft>>
+  Kristen: Though… the thought of it isn’t too bad.
+  <<char_right CassandraNeutral>>
+  Cassandra: You give me so much whiplash, but I love you for it. Just try and play it cool. Spring Fling first, and then we’ll talk.
+  <<voiceline KristenHappy2>>
+  Kristen: Deal!
+<<else>>
+  //flop
+  <<kristen Surprised>>
+  <<char_right CassandraSurprised>>
+  <<voiceline CassPhone3>>
+  Cassandra: KRISTEN!
+  Kristen: CASSANDRA!
+  Cassandra: Ruvina told Ankarna some juicy gossip that she is <i>purposely</i> withholding from me. I can’t wait any longer. You HAVE to tell me everything rightnowpleasethankyou!
+  <<kristen Happy>>
+  Kristen: We kissed!
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy3>>
+  Cassandra: And!?
+  <<kristen Nervous>>
+  <<voiceline KristenAwkward2>>
+  Kristen: …
+  <<char_right CassandraSurprised>>
+  Cassandra: …Kristen?
+  Kristen: My brain kind of broke after that.
+  <<char_right CassandraAngry>>
+  <<voiceline CassDisappointed1>>
+  Cassandra: Are you kidding me? Kristen, we were really trying to turn over a new leaf this year.
+  <<kristen Awkward>>
+  Kristen: Whaaaaat?! It’s not my fault! We had a nice time, what else do you want from me?
+  <<char_right CassandraSad>>
+  <<voiceline CassDisappointed3>>
+  Cassandra: Well… I guess we’ll just have to wait and see if that’s good enough for Lucy.
 <<endif>>
-Cassandra: Did you notice how I said something depending on how you did with Lucy date 8?
 
 <<jump EndDate>>
 ===

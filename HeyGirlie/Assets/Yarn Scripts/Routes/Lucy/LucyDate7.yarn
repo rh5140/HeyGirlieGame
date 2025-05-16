@@ -1,5 +1,486 @@
 ﻿title: Date7
 ---
-PLACEHOLDER for lucy7
-<<jump Cassandra>>
+<<location "Lucy’s House">>
+//<<background Lucy’s Kitchen>>
+<<set $date_points = 0>>
+<<set $date_points_total = 9>>
+<<kristen Neutral>>
+You know the way to Lucy’s place now — or, well, that’s what you’d told yourself, but in all honesty, you’ve had to check the maps app on your crystal three or four times on the way here. Kind of embarrassing, but what Lucy doesn’t know can’t hurt her, right?
+
+When you arrive at the correct door, you hesitate for a moment. 
+
+<<kristen Nervous>>
+<<voiceline KristenAwkward2>>
+You’ve spent so much time with Lucy over the past few weeks, but something feels different now, charged in a way that makes you a little more shy than you normally would be. 
+
+She <i>likes</i> you. Like, like-likes you. You still can’t quite believe it. 
+
+<<char_right LucyNeutral3>>
+The door swings open and Lucy pokes her head out before you work up the courage to knock or ring the doorbell. 
+
+Her smile at the sight of you widens when she sees the way you’re clutching her floriography book to your chest.
+
+<<char_right LucyHappy3>>
+<<voiceline LucyGreeting1>>
+Lucy: Kristen! 
+
+<<kristen Soft>>
+She holds out a hand, ostensibly to take her book, but on impulse you bend down and kiss it, like she’s a princess and you’re her knight in shining armor. Or like she’s a pretty girl and you’re a lesbian who really, really likes her. Something along those lines. 
+
+Her blush is immediate and gratifying, and she brings up her hand to cup your face. It’s <i>so</i> soft. You lean into it.
+
+Lucy: It’s good to see you.
+
+<<kristen Neutral>>
+<<voiceline KristenGreetingLucy2>>
+Kristen: Yeah, same here. It’s been too long.
+
+Lucy: We see each other in class every day. 
+
+-> Kristen: "Not every day. I skip class more than I should.” 
+    <<char_right LucyNeutral3>>
+    <<voiceline LucyNeutral3>>
+    Lucy: I guess that’s true. 
+    <<add_points 0>>
+-> Kristen: “Yeah, but class was hours ago. I missed you.”
+    <<char_right LucyFlirty3>>
+    <<voiceline LucyRomantic2>>
+    Lucy: I missed you too.
+    <<add_points 1>>
+-> <i>Turn your head slightly and kiss the palm of the hand she has on your cheek.</i>
+    Kristen: And it’s still been too long.
+    <<char_right LucyBlush3>>
+    <<voiceline LucyRomantic2>>
+    Lucy’s breath hitches a little, and her blush deepens. She doesn’t move her hand away, though.
+    <<add_points 2>>
+<<char_right LucyNeutral3>>
+Lucy: Thank you for bringing my book back. Did you get the chance to read it? What did you think? Did you like it?
+
+<<kristen Soft>>
+Cassandra, but she’s cute when she’s excited. You can tell she’s holding herself back a little, but Lucy visibly lights up when she’s talking about the things she loves. 
+
+You’ve seen this animatedness in her face a few times before, and you really want to see it again, as many times as you can.
+
+<<kristen Neutral>>
+Kristen: I did. My favorite sections were the ones on daffodils, peonies, and pink and red orchids.
+
+Kristen: Those <i>are</i> what you said you’d give me, right?
+
+<<char_right LucyHappy3>>
+<<voiceline LucyHappy3>>
+Lucy: You remembered.
+
+Kristen: Of course I did. And for what it’s worth… I’d get you all of those, too. Especially the orchids.
+
+She’s all but told you to your face that she’s interested in you, but your heartbeat still speeds up in the moment of silence before she responds. Finally she nods decisively. 
+
+Lucy: Good. 
+
+<<kristen Soft>>
+The immediate flush of relief and glee you feel makes you glad none of your other friends are here to witness this. 
+
+You <i>know</i> you don’t have a poker face, and you don’t think you’d ever hear the end of it if Adaine or Gorgug could see the look on your face. 
+
+You and Lucy stand there for entirely too long just grinning goofily at each other, giddy with the knowledge that your feelings are mutual, until your reverie is interrupted by the sound of a smoke alarm going off.
+
+<<char_right LucySurprised3>>
+<<voiceline LucySurprised1>>
+Lucy: Fuck!
+
+<<kristen Surprised>>
+Kristen: What’s wrong? Can I help?
+
+Lucy: Depending on how much it’s burnt, it might be beyond help. Come on in, though.
+
+<<kristen Neutral>>
+She disappears back into her house before you can ask what “it” is. Noticing the neat rows of shoes on her porch, you bend down to unlace your boots before following her inside down a short hallway into a kitchen.
+
+<<background LucyKitchen>>
+
+<<char_right LucySad3>>
+<<voiceline LucySad2>>
+The smoke alarm has stopped going off, and Lucy, incredibly dejected, is holding a metal pot that she’s clearly just taken off the stove. 
+
+You walk over, peer into it, and wince. 
+
+<<kristen Surprised>>
+<<voiceline KristenDateFailLucy1>>
+It’s a burnt, sticky mess of sugar, blackish-brown and unpleasant-smelling. You’re no master chef, but even you can tell something’s gone very wrong.
+
+Lucy: I can’t use this. 
+
+-> Kristen: “It can’t be <i>that</i> bad.” 
+    Lucy: You don’t need to lie, Kristen. We can both see it.
+    <<kristen Sad>> 
+    <<voiceline KristenSad3>>
+    Kristen: …okay, yeah, it is pretty bad.
+  <<add_points 0>>
+-> <i>Try to get a taste.</i>
+    You reach a finger out and touch the caramel, then immediately recoil.
+    <<kristen Awkward>>
+    <<voiceline KristenSurprised3>>
+    Kristen: Ow!
+    <<char_right LucySurprised3>>
+    Lucy: I don’t know what you expected. Are you okay?
+    <<kristen Grin>>
+    Kristen: I will be if you kiss it better.
+    <<char_right LucyNeutral3>>
+    Lucy shakes her head, exasperated and fond.
+    <<add_points 1>>
+-> Kristen: “Hey, it’s just caramel. It’s not the end of the world.”
+    <<char_right LucyCoy3>>
+    Lucy: And you’d know, wouldn’t you.
+    <<kristen Grin>>
+    You wink at her.
+    Kristen: “I’m sort of an authority on apocalypses. Apocalypsi? No, that just sounds bad.
+    <<add_points 1>>
+<<kristen Neutral>>
+Kristen: What were you trying to make, anyway?
+
+<<char_right LucySad3>>
+<<voiceline LucySad3>>
+Lucy: Some sort of caramel cheesecake… thing. I think. I’ll be honest, I wasn’t even sure. I just wanted to… try something new, I guess.
+
+Kristen: Lucy, you gotta know I’m the world’s number one fan of trying new things. Or at the very least I’m the world’s number one fan of <i>you</i> trying new things. 
+
+<<char_right LucyNeutral3>>
+She smiles a little at that.
+
+Lucy: You say the sweetest things.
+
+<<kristen Grin>>
+Kristen: That’s what you get for being such a sweetie. Get it? Because you were making dessert?
+
+<<char_right LucySad3>>
+<<voiceline LucySad2>>
+Lucy: <i>Were</i> being the operative word there, I’m afraid. It’s ruined. 
+
+<<kristen Neutral>>
+Kristen: Can’t you just make some more? If you need the pot, I can scrub the caramel out of it for you. A little hard labor never hurt me, I don’t mind.
+
+You flex your biceps and raise an eyebrow in what you hope is an enticing manner; you don’t miss the way her eyes slide along your arms and linger on your muscles. 
+
+<<char_right LucyHappy3>>
+<<voiceline LucySurprised3>>
+Lucy: Are you offering to be… eye candy? While you do my dishes?
+
+You whoop with delight at that, and she grins back at you, then sobers.
+
+<<char_right LucySad3>>
+Lucy: I can’t make any more caramel. I don’t have any more heavy cream.
+
+You… hadn’t known there was heavy cream in caramel. 
+
+Kristen: Oh. 
+
+Lucy: And anyway, I’d never let you do <i>my</i> chores in <i>my</i> house, Kristen. If my parents ever found out, they’d disown me.
+
+<<kristen Surprised>>
+You flinch the slightest bit.
+
+<<char_right LucySurprised3>>
+<<voiceline LucyDateFail3>>
+Lucy: Oh! Oh, Kristen, I’m sorry. That was insensitive of me.
+
+-> Kristen: Don’t worry about it. 
+    <<kristen Neutral>>
+    <<char_right LucySad3>>
+    <<voiceline LucySad1>>
+    Lucy: Are you sure? I really am sorry, I didn’t think. 
+    Kristen: Don’t <i>worry</i> about it. It’s fine, I never think before I speak.
+    Lucy: If you’re sure.
+    <<add_points 0>>
+-> Kristen: Honestly, I’d be kinda jealous. That seems like a better reason than mine disowned <i>me</i> for.
+    <<kristen Neutral>>
+    If Lucy can joke about dying as often as she does, surely you can make light of your own shitty past, right? You watch her face change as she seems to come to the same conclusion.
+    <<char_right LucyNeutral3>>
+    <<voiceline LucyNeutral2>>
+    Lucy: Yeah, that’s fair.
+    <<add_points 1>>
+-> Kristen: It’s fine. You can make it up to me.
+    <<kristen Grin>>
+    You hold your arms out for a hug.
+    <<char_right LucyNeutral3>>
+    Lucy still looks concerned, but she smiles and draws you into a tight embrace that almost knocks the breath out of you. 
+    When you separate, you feel better, and you think she probably does, too.   
+    <<add_points 1>>
+
+
+<<kristen Neutral>>
+You realize in the momentary silence that follows that you’re inside Lucy’s <i>house</i>, and cast your eyes around it, soaking in every detail. 
+
+In keeping with the rest of the neighborhood, it’s a nice little kitchen, bright and airy. There are a handful of magnets on the fridge, a houseplant on the counter, and a light breeze coming from an open window.
+
+Kristen: I like your place.
+
+<<char_right LucySurprised3>>
+Lucy: Oh, right! Welcome to my humble home, I guess. Sorry, I haven’t been a great host so far, I’m just kind of… frazzled right now.
+
+Kristen: Hey. Lucy, it’s okay. You have nothing to worry about. I’m happy to be here. 
+
+<<char_right LucyNeutral3>>
+Lucy: I’m glad you’re here, too. I don’t have friends over very often.
+
+-> Kristen: “You must think I’m something special, huh?” 
+    <<char_right LucyFlirty3>>
+    <<voiceline LucyRomantic1>>
+    Lucy: You know I do. 
+    <<add_points 1>>
+-> Kristen: “Amending my statement, I’m happy <i>and</i> honored to be here. Seriously.”
+    <<kristen Grin>>
+    You bow with a theatrical flourish — maybe you’ve been spending too much time with Fabian — and she laughs.
+    <<char_right LucyFlirty3>>
+    <<voiceline LucyRomantic1>>
+    Lucy: Well, I’m honored to have you here.
+    <<add_points 2>>
+-> Kristen: “I guess spending all that time grinding rats didn’t leave you guys with too much time to actually hang, huh.”
+    <<char_right LucyAngry3>>
+    <<voiceline LucyAngry4>>
+    Lucy: That’s… one way to put it.
+<<add_points 0>>
+
+<<kristen Neutral>>
+Lucy: Don’t get me wrong, I do spend a lot of time with my friends. I always have, but…
+
+She shrugs.
+
+<<char_right LucySad3>>
+<<voiceline LucySad2>>
+Lucy: For a long time all we were talking about, all we were doing, was trying to become part of something bigger than us. For… well, you know.
+
+Lucy: It took over every aspect of our lives. We were training with… we were training every day, we did so much together in service of the plan, and I felt like my house was the only place I had left that was my own. So I never invited anyone over.
+
+<<char_right LucyNeutral3>>
+Lucy: That part of my life is over, though. For good. When I told you to come here last week I didn’t <i>just</i> want my book back, you know?
+
+Kristen: And now I’m here.
+
+Lucy: And now you’re here. What do you think?
+
+<<voiceline KristenDateSuccessLucy2>>
+Kristen: I think… I think I’d really like to bake a cheesecake with you.
+
+<<char_right LucyHappy3>>
+Lucy: I’d love that.
+
+You hop up onto the counter and swing your legs playfully. 
+
+<<kristen Soft>>
+A beautiful sequence of images flashes through your head — if Lucy came up to the countertop you could wrap your legs around her waist pretty easily, or she could box you in with her arms, and from there you could… 
+
+Well. You should probably think about something else before your face goes the way of the caramel.
+
+<<kristen Neutral>>
+Kristen: Talk to me. Why cheesecake, specifically?
+
+<<char_right LucyNeutral3>>
+Lucy: I honestly don’t know. I just like cheesecake, I guess. 
+
+Kristen: That’s as good an answer as any. I always enjoy finding out what you like and don’t like. 
+
+Her raised eyebrow makes you realize how that sounded. Oh, well. It’s not like it isn’t true.
+
+Kristen: But if we can’t do caramel… do you want to just make regular cheesecake? Or, hey, what if we took your list of flavors you liked at Basrar’s and tried something from there?
+
+Lucy: Banana grape bubblegum cheesecake. Now <i>there’s</i> a thought.
+
+-> Kristen: “How would you put gum in a cheesecake, anyway?” 
+    <<char_right LucySurprised3>>
+    <<voiceline LucySurprised3>>
+    Lucy: …
+    Lucy: Great question. I have no idea. 
+    <<add_points 1>>
+-> Kristen: “Can I be so honest with you? I thought that ice cream was <i>nasty</i>.”
+    <<char_right LucySurprised3>>
+    <<voiceline LucySurprised3>>
+    Lucy: You never said!
+    Kristen: Well, you were enjoying it. 
+    <<add_points 2>>
+-> Kristen: “I don’t know how good you are at cooking, but I can’t even boil water right.”
+    <<char_right LucySad3>>
+    <<voiceline LucySad1>>
+    Lucy: That’s fair, I did just burn my caramel. 
+    <<add_points 0>>
+
+Kristen: Okay. I know this is your Official First Time Inaugural Friend At Your House Hangout, so we have to make this something special. 
+
+<<char_right LucyNeutral3>>
+Kristen: Are there any non-bonkers flavors you’re particularly attached to? And might have the ingredients for already?
+
+Lucy: We might have a little jar of black sesame from Frostheim? I think that might be sort of special.
+
+Kristen: I don’t think I’ve ever had black sesame.
+
+Lucy: It’s not used very commonly in Spyre. We have to drive, like, forty minutes out of Elmville to the nearest frost giant grocery to get it, but my parents used to make this black sesame dessert soup a lot when I was a kid. It’s kind of a nostalgic food, I guess.
+
+Kristen: Having that connection to Frostheim sounds… really nice.
+
+Lucy: I’m curious, do you have anything like that? 
+
+<<kristen Nervous>>
+<<voiceline KristenAwkward3>>
+Kristen: Honestly? Corn. 
+
+<<char_right LucySurprised3>>
+Lucy: Oh.
+
+You shrug. It sucks that every fond childhood memory of yours has been tainted forever by, well, everything, but what can you do? 
+
+You’re glad that after all Lucy’s been through, at least <i>she</i> has something to be nostalgic about.
+
+<<kristen Neutral>>
+Kristen: Like you said, though, that part of my life is over for good. Tell me more about black sesame.
+
+<<char_right LucyNeutral3>>
+Lucy talks as she putters around her kitchen, grabbing bowls and measuring spoons and various ingredients out of her cabinets and fridge. 
+
+Lucy: The thing that makes black sesame from Frostheim really special is… ugh, I don’t know how to say it in Common. Basically, the way it’s planted and harvested is really magically specific. 
+
+Lucy: When you use it to cook, no matter what you’re cooking, you have to freeze the food for at least a few days for the flavor to properly come through. 
+
+<<kristen Surprised>>
+<<voiceline KristenSurprised2>>
+Kristen: A few <i>days</i>?
+
+Lucy: A few days at least. It doesn’t go bad or anything, because, you know, magic. But the longer, the better, really. So we can do all the baking for this today, but it won’t actually be ready to eat for… a little while.
+
+<<char_right LucySurprised3>>
+Lucy: … you don’t mind, do you? 
+
+<<kristen Neutral>>
+You put your hands on your hips. You’ve spent a lot of time with Lucy recently, and the look on her face — half-shy, half-gently calculating — is making the part of your brain that does pattern recognition buzz. 
+
+<<voiceline KristenRomanticLucy1>>
+Kristen: Lucy.
+
+Lucy: Kristen?
+
+Kristen: Did you pick black sesame specifically so we wouldn’t be done today? 
+
+Lucy: …
+
+<<kristen Nervous>>
+Kristen: I know it’s important to you for real, obviously, but it kind of feels to me like you’re trying to arrange things so that we have to meet up next week. You wouldn’t eat that cheesecake without me, would you? 
+
+<<char_right LucyNeutral3>>
+Lucy moves closer to where you’re still perched on the countertop, and your heart rate picks up a little. You definitely haven’t moved past those guilty daydreams yet.
+
+Lucy: Of course not.
+
+She leans in so close that your noses are almost touching. You fully stop breathing. Is she about to…
+
+<<char_right LucyCoy3>>
+<<voiceline LucyDateSuccess2>>
+Lucy: Okay, I’ll admit it. I <i>am</i> making excuses to see you again. Can you blame me?
+
+<<kristen Soft>>
+<<voiceline KristenRomantic1>>
+Kristen: No, of course not. I love spending time with you, you know that. It’s just —
+
+She moves her hands up so they’re on your waist now. <i>Cassandra.</i>
+
+<<char_right LucyBlush3>>
+<<voiceline LucyRomantic2>>
+Lucy: There’s nothing wrong with a little delayed gratification, Kristen.
+
+<<kristen Nervous>>
+If something lesbian doesn’t happen in the next thirty seconds you might die for real, but Lucy doesn’t move.
+
+Kristen: Lucy. Lucy, we <i>have</i> to talk about this. 
+
+<<char_right LucySurprised3>>
+Much to your disappointment, she pulls back. She looks a little overwhelmed, like the tension of this moment has just caught up to her.
+
+Lucy: … yeah. You’re right. 
+
+Kristen: You okay?
+
+Lucy: Yeah, sorry. I think I… went a little too fast even for myself there. Got carried away.
+
+You allow her to step back and place a gentle hand on her shoulder.
+
+<<kristen Grin>>
+Kristen: That makes sense. I am devastatingly attractive.
+
+<<char_right LucyHappy3>>
+<<voiceline LucyHappy3>>
+Lucy laughs, and the tension in her drains seems to drain away.
+
+Lucy: You really are. 
+
+<<kristen Neutral>>
+Kristen: Do you… want to talk about it?
+
+Lucy: Yeah. I want to talk about everything. But… maybe not right now?
+
+<<char_right LucyNeutral3>>
+Lucy: Maybe we can have a little picnic, go somewhere special. Eat this… what was it you called it? Eat the Official First Time Inaugural Friend At My House Hangout cake. I’ll tell you what I’m thinking. I promise. 
+
+Kristen: Why do I get the feeling you already have a place in mind?
+
+Lucy: …probably because I do. Let’s go to the Far Haven Woods and have a picnic under my tree.
+
+-> Kristen: “The tree you were <i>buried</i> under?” 
+    <<kristen Surprised>>
+    Lucy: That’s the one. Trust me, Kristen.
+    <<kristen Soft>>
+    Kristen: I do, Lucy.
+    <<add_points 1>>
+-> <i>Kiss her on the cheek.</i>
+    <<char_right LucyBlush3>>
+    <<voiceline LucyRomantic2>>
+     Lucy sighs as your lips meet her skin. You don’t linger, and she smiles at you appreciatively.
+    Lucy: Next week, Kristen. I promise.
+    <<kristen Soft>>
+    Kristen: Okay.
+    <<add_points 1>>
+-> Kristen: “Are you getting cold feet?”
+    <<kristen Nervous>>
+    <<char_right LucySurprised3>>
+    <<voiceline LucyConfused1>>
+    Lucy: I just… I want to take things a little slow. 
+    Kristen: That’s fair. I guess I just want to know… are you having second thoughts about this? About me? 
+    <<char_right LucyNeutral3>>
+    Lucy: I <i>do</i> like you, Kristen. I’m just a little nervous.
+    Kristen: I’m trusting you here, Lucy. I really like you, too. But I get that. We’ll take it slow.
+    <<add_points 0>>
+
+<<kristen Neutral>>
+Kristen: So it’s a date next week, then?
+
+<<char_right LucyFlirty3>>
+Lucy: Yes. Yes, it is. 
+
+Lucy: For now, though… let’s bake this cake?
+
+Kristen: You got it. 
+
+<<char_right LucyNeutral3>>
+Thankfully, you and Lucy don’t have any more romantic close calls — you don’t think your heart could take it, and you want to respect that she wants to go slow. Instead, you work together all afternoon as a team, and soon enough the cheesecake is going into the fridge.
+
+You hold your hand up for a high-five, and Lucy slaps it with enthusiasm.
+
+<<kristen Happy>>
+<<voiceline KristenDateSuccessLucy1>>
+Kristen: We did it!
+
+<<char_right LucyHappy3>>
+Lucy: We did! Thank you for the help, Kristen. And for your patience. With… everything.
+
+You pull her into a hug, inhaling the lingering scent of vanilla and sesame on her clothes.
+
+<<kristen Soft>>
+Kristen: Anything for you, Lucy.
+
+By the way she looks at you, you know that <i>she</i> knows that you really mean that.
+
+<<char_right LucyCoy3>>
+<<voiceline LucyDateSuccess1>>
+Lucy: I’ll see you next week, okay?
+
+Kristen: I can’t wait. 
+
+One more week. Just one more week until you and Lucy talk. It’s going to be agonizing, but you just know it’ll be worth the wait. 
+
+<<jump Cassandra7>>
 ===
