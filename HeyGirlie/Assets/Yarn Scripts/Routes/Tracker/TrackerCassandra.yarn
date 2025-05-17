@@ -50,6 +50,7 @@ title: Cassandra1
     <<char_right CassandraNeutral>>
 	<<voiceline KristenGreeting2>>
     Kristen: Tracker and I are going out again! I think! That was an invitation, right?
+    <<char_right CassandraNeutral>>
     Cassandra: It was... definitely an invitation!
     <<kristen Happy>>
     Kristen: Okay, great! Spring Fling, here we come!
@@ -68,13 +69,18 @@ title: Cassandra1
     <<char_right CassandraAngry>>
 	<<voiceline CassDisappointed3>>
     Cassandra: Kristen!
+    <<char_right CassandraAngry>>
     Kristen: I know, I know —
+    <<char_right CassandraAngry>>
     Cassandra: What did you <i>think</i> was gonna happen?
     <<kristen Neutral>>
 	<<kristen KristenAngry1>>
     Kristen: We’d both be overcome with passion and make out?
+    <<char_right CassandraAngry>>
     Cassandra: You broke up more than a <i>year</i> ago! Slow down!
+    <<char_right CassandraAngry>>
     Kristen: Or... I could give up and date someone else?
+    <<char_right CassandraAngry>>
     Cassandra: ...not the worst idea.
     <<kristen Angry>>
 	<<voiceline KristenAngry2>>
@@ -109,8 +115,11 @@ title: Cassandra2
     <<char_right CassandraHappy>>
     <<voiceline KristenHappy1>>
     Kristen: Yeehaw!
+    <<char_right CassandraHappy>>
     Cassandra: That date really <i>was</i> yeehaw-worthy! Great job, Kristen!
+    <<char_right CassandraHappy>>
     Kristen: Aw, shucks. It was easier than I thought, actually!
+    <<char_right CassandraHappy>>
     Kristen: I forgot how much I just... missed <i>her</i>, you know? Not just the dating part, but all of it. Hanging out with her was easy.
     <<char_right CassandraBlush>>
 	<<voiceline CassHappy1>>
@@ -125,7 +134,9 @@ title: Cassandra2
     <<kristen Neutral>>
 	<<voiceline CassPhone3>>
     Kristen: That could’ve gone better.
+    <<char_right CassandraNeutral>>
     Cassandra: It could also have gone <i>worse</i>. Let’s take the win!
+    <<char_right CassandraNeutral>>
     Kristen: Doesn’t feel like a win... I’ve gotta pull out the big guns for next date.
     <<char_right CassandraSurprised>>
 	<<voiceline CassNeutral3>>
@@ -140,10 +151,13 @@ title: Cassandra2
     <<char_right CassandraSad>>
     <<voiceline CassDisappointed2>>
     Cassandra: So the good news: you aren’t concussed!
+    <<char_right CassandraSad>>
     Cassandra: The bad news is that all the rest of that date really did happen.
+    <<char_right CassandraSad>>
     <<kristen Awkward>>
 	<<voiceline KristenAwkward3>>
     Kristen: It wasn’t <i>that</i> bad, was it?
+    <<char_right CassandraSad>>
     Cassandra: Well...
     Kristen: I just don’t know how to act around Tracker! It used to be so easy! Why can’t it be like it used to?
     <<char_right CassandraNeutral>>
@@ -171,6 +185,7 @@ title: Cassandra3
 	<<voiceline KristenHappy2>>
     Kristen: Guess who’s got a daaaaate!
     <<voiceline CassNeutral3>>
+    <<char_right CassandraNeutral>>
     Cassandra: Hm... what a mystery...
     <<kristen Angry>>
     Kristen: Cassandra!
@@ -192,8 +207,10 @@ title: Cassandra3
     <<kristen Happy>>
     <<char_right CassandraNeutral>>
     Kristen: Guess who’s got a daaaaaate!
+    <<char_right CassandraNeutral>>
 	<<voiceline CassHappy2>>
     Cassandra: You do! Hooray!
+    <<char_right CassandraNeutral>>
     Cassandra: I hope it’s less awkward than this week’s was.
     <<kristen Neutral>>
     Kristen: I mean, it couldn’t be <i>more</i> awkward.
@@ -205,9 +222,12 @@ title: Cassandra3
     <<kristen Awkward>>
     <<char_right CassandraAngry>>
     Cassandra: No, Kristen, I will not erase your and Tracker’s memories just because you had a bad date!
+    <<char_right CassandraAngry>>
 	<<voiceline KristenAngry2>>
     Kristen: Come on, please! I’m sure Tracker will say yes if I ask her out again!
+    <<char_right CassandraAngry>>
     Cassandra: Really? Because I’m not! It’s a miracle she said yes <i>this</i> time!
+    <<char_right CassandraAngry>>
     Cassandra: This is going to be your first <i>real</i> date with Tracker since you broke up. Not just hanging out, but an actual date!
     <<char_right CassandraNeutral>>
 	<<voiceline CassDisappointed1>>
@@ -238,7 +258,9 @@ title: Cassandra4
     <<char_right CassandraHappy>>
 	<<voiceline CassGreeting1>>
     Cassandra: Hi, Kristen! How was your date?
+    <<char_right CassandraHappy>>
     Kristen: I mean, you saw! It was really nice.
+    <<char_right CassandraHappy>>
     Kristen: I’m glad she can share this place with me now. I don’t remember her ever even <i>talking</i> about it before.
     <<char_right CassandraBlush>>
     Cassandra: But this time... ?
@@ -257,10 +279,14 @@ title: Cassandra4
     <<char_right CassandraNeutral>>
 	<<voiceline CassGreeting1>>
     Cassandra: Hi, Kristen! How was your date?
+    <<char_right CassandraNeutral>>
     Kristen: Good! I think good.
+    <<char_right CassandraNeutral>>
     Kristen: A little awkward, but not <i>super</i> awkward, so... we’re getting better at being together!
     <<kristen Grin>>
+    <<char_right CassandraNeutral>>
     Kristen: Heh. That rhymed.
+    <<char_right CassandraNeutral>>
     Cassandra: How do you think next week will go?
     <<kristen Neutral>>
     Kristen: Meditating? Um...
@@ -277,12 +303,16 @@ title: Cassandra4
     //flop
     <<kristen Sad>>
     <<char_right CassandraNeutral>>
-<<voiceline CassGreeting1>>
+    <<voiceline CassGreeting1>>
     Cassandra: Hi, Kristen! How was your date?
+    <<char_right CassandraNeutral>>
     Kristen: So are we, like, <i>completely</i> sure I have to get a date for Spring Fling?
+    <<char_right CassandraNeutral>>
     Cassandra: Yes.
     <<kristen Surprised>>
+    <<char_right CassandraNeutral>>
     Kristen: Wow, really? Total certainty from the goddex of doubt?
+    <<char_right CassandraNeutral>>
 	<<voiceline CassNeutral1>>
     Cassandra: I am 100 percent convinced Arthur Aguefort will kill you if you don’t get a date.
 	<<voiceline KristenSad3>>
@@ -317,7 +347,9 @@ title: Cassandra5
     <<kristen Happy>>
     <<char_right CassandraHappy>>
     Cassandra: Hi, Kristen! How was your date?
+    <<char_right CassandraHappy>>
     Kristen: I mean, you saw! It was really nice.
+    <<char_right CassandraHappy>>
     Kristen: I’m glad she can share this place with me now. I don’t remember her ever even <i>talking</i> about it before.
     <<char_right CassandraBlush>>
     Cassandra: But this time... ?
@@ -334,10 +366,14 @@ title: Cassandra5
     <<kristen Neutral>>
     <<char_right CassandraNeutral>>
     Cassandra: Hi, Kristen! How was your date?
+    <<char_right CassandraHappy>>
     Kristen: Good! I think good.
+    <<char_right CassandraHappy>>
     Kristen: A little awkward, but not <i>super</i> awkward, so... we’re getting better at being together!
+    <<char_right CassandraHappy>>
     <<kristen Grin>>
     Kristen: Heh. That rhymed.
+    <<char_right CassandraHappy>>
     Cassandra: How do you think next week will go?
     <<kristen Neutral>>
     Kristen: Meditating? Um...
@@ -390,9 +426,12 @@ title: Cassandra6
     <<kristen Happy>>
     <<char_right CassandraHappy>>
     Cassandra: Kristen!!! Thanks for inviting me on your date!
+    <<char_right CassandraHappy>>
     Kristen: It was Tracker’s idea.
+    <<char_right CassandraHappy>>
 	<<voiceline CassHappy3>>
     Cassandra: That’s even cuter! I’m totally going to win this bet.
+    <<char_right CassandraHappy>>
     Kristen: I know I should ask but I honestly don’t even care. I’m still giddy from spending so much time with her.
     Kristen: Being around Tracker makes me want to be a better cleric. A better person.
     <<kristen Soft>>
@@ -407,8 +446,11 @@ title: Cassandra6
     <<char_right CassandraNeutral>>
 	<<voiceline CassStartup1>>
     Cassandra: Thanks for inviting me on your date, Kristen!
+    <<char_right CassandraNeutral>>
     Kristen: It was honestly a surprise when you showed up, but you’re welcome anyway!
+    <<char_right CassandraNeutral>>
     Kristen: I don’t know if meditating is really my <i>thing</i>, but I had fun with Tracker.
+    <<char_right CassandraNeutral>>
     Kristen: I think going to the Black Pit will be more our scene, anyway.
     <<char_right CassandraSurprised>>
     Cassandra: ...right.
@@ -422,6 +464,7 @@ title: Cassandra6
     <<char_right CassandraAngry>>
 	<<voiceline CassPhone3>>
     Cassandra: Kristen, if you’re going to invite me on one of your dates, can you <i>please</i> make it a good one?
+    <<char_right CassandraAngry>>
     Kristen: I’m really trying!
     <<char_right CassandraNeutral>>
     Cassandra: I believe you. Unfortunately.
@@ -452,6 +495,7 @@ title: Cassandra7
     <<kristen Soft>>
     <<char_right CassandraHappy>>
     Kristen: That was... perfect. That was the perfect date.
+    <<char_right CassandraHappy>>
     Cassandra: It was really sweet. I’m really happy for you two!
     <<char_right CassandraNeutral>>
     Cassandra: Um... what do you think Tracker’s doing next week?
@@ -476,8 +520,11 @@ title: Cassandra7
     <<char_right CassandraNeutral>>
 	<<voiceline KristenNeutral1>>
     Kristen: That went okay! A little tense, but the Black Pit’s always kind of like that.
+    <<char_right CassandraNeutral>>
     Cassandra: Still, it couldn’t hurt to spend a little more time with Tracker!
+    <<char_right CassandraNeutral>>
     Kristen: Yeah. Do you know where she’s going to be next week? I’m trying to figure it out.
+    <<char_right CassandraNeutral>>
 	<<voiceline CassNeutral2>>
     Cassandra: Well... I might have an idea. But you’ve got enough to figure it out, I promise!
     Kristen: Huh, okay. I trust you.
@@ -491,13 +538,19 @@ title: Cassandra7
     <<char_right CassandraSad>>
 	<<voiceline KristenSad1>>
     Kristen: I really thought I’d be better at this by now, but every time Tracker shows up, I just... 
+    <<char_right CassandraSad>>
     Cassandra: Make a huge mess of things?
+    <<char_right CassandraSad>>
 	<<voiceline KristenAngry2>>
     Kristen: Rude! But yeah.
+    <<char_right CassandraSad>>
     Cassandra: Listen, it’s not a lost cause. Probably.
+    <<char_right CassandraSad>>
     Kristen: Probably?!
+    <<char_right CassandraSad>>
     Cassandra: Just be there for Tracker. <i>Really</i> be there.
 	<<voiceline CassNeutral1>>
+    <<char_right CassandraSad>>
     Cassandra: She wants to let you in, you just have to show you’re willing to actually show up for her when she needs you.
     Cassandra: So... be there! I’ve left a hint if you get stuck, so no excuses, Applebees.
 <<endif>>

@@ -29,49 +29,71 @@ title: Cassandra1
 <<kristen Neutral>>
 <<char_right CassandraNeutral>>
 Cassandra: Kristen! I heard you were hanging out with Gertie this week…
+<<char_right CassandraNeutral>>
 Kristen: Heard from who?
+<<char_right CassandraNeutral>>
 Cassandra: It doesn’t matter. 
+<<char_right CassandraNeutral>>
 Cassandra: Tell. Me. Everything.
+<<char_right CassandraNeutral>>
 
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
- <<kristen Grin>>
+  <<kristen Grin>>
   Kristen: Not too bad! At least, once the duel was over.
-  Cassandra’s eyes widen.
+  <<char_right CassandraSurprised>>
   Cassandra: You DUELED??!!
   Kristen: Yeah, to first blood.
   Cassandra: And this was good, to you?
-  You laugh.
+  <<kristen Happy>>
+  <<voiceline KristenHappy4>>
   Kristen: No one actually got hurt! I found some reddish honey that kinda looked like blood, and smeared some on her cheek. 
+  <<char_right CassandraHappy>>
   Cassandra: Nice thinking!
-  Kristen: And then I helped clean up from the duel, and it was…nice! Comfortable. 
+  <<kristen Neutral>>
+  Kristen: And then I helped clean up from the duel, and it was… nice! Comfortable. 
+  <<char_right CassandraBlush>>
   Cassandra: Maybe you’ll see her soon?
   Kristen: I hope so.
-  Cassandra squeals.
+  <<char_right CassandraHappy>>
+  <<voiceline CassHappy1>>
+  Cassandra: Great job Kristen!
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
   Kristen: It was okay, I think? Once the duel was over.
-  Cassandra’s eyes widen.
+  <<char_right CassandraSurprised>>
   Cassandra: You DUELED??!!
+  <<kristen Nervous>>
   Kristen: Yeah, but no one got hurt. Except the jars.
+  <<voiceline CassDisappointed1>>
   Cassandra: Kristen!
   Kristen: I helped clean up, don’t worry. Nothing I couldn’t fix. 
   Cassandra: …including your relationship?
+  <<voiceline KristenAwkward2>>
   You sigh.
   Kristen: Maybe.
+  <<char_right CassandraNeutral>>
   Cassandra: Well, could be worse. Keep your chin up, Kristen! Some time and effort is all you need.
 <<else>>
   //flop
+  <<kristen Nervous>>
   Kristen: Well… we dueled. To first blood.
+  <<char_right CassandraSurprised>>
+  <<voiceline CassDisappointed1>>
   Cassandra: Kristen…
-  Kristen: No one actually got hurt, but…I don’t know.
+  <<kristen Awkward>>
+  Kristen: No one actually got hurt, but… I don’t know.
   You can tell Cassandra’s trying to stay positive, but she looks <i>stressed</i>.
   Kristen: She said she’s had like six other nemesis duels this week. Maybe I’m just another notch in her belt.
+  <<char_right CassandraSad>>
   Cassandra: You’re still one of her nemesises? 
-  Cassandra: Nice thinking!
+  <<kristen Nervous>>
+  <<voiceline KristenAwkward3>>
   Kristen: Oh, no. We squashed that beef. She just normal doesn’t like me now. 
+  <<char_right CassandraNeutral>>
   Cassandra: Well, that’s one obstacle down. You still have time. Don’t worry, Kristen.
 <<endif>>
+
 
 <<jump EndDate>>
 ===
@@ -89,8 +111,11 @@ title: Cassandra2
 <<char_right CassandraNeutral>>
 <<voiceline CassStartup1>>
 Cassandra: Hey girlie!! How was Basrar’s?
+<<char_right CassandraNeutral>>
 Kristen: I get it, I get it, I need to lay off the ice cream…
+<<char_right CassandraNeutral>>
 Cassandra: Who said that? I didn’t say that. You said that.
+<<char_right CassandraNeutral>>
 Kristen: But, my sugar addiction let me run into Gertie!
 <<char_right CassandraHappy>> 
 <<voiceline CassHappy3>>
@@ -158,9 +183,11 @@ title: Cassandra3
 <<char_right CassandraNeutral>>
 <<voiceline CassPhone3>>
 Cassandra: Kristen! Pick up!
+<<char_right CassandraNeutral>>
 Kristen: Sorrrryyyy I’ve been a really busy bee today… pun intended!
 <<char_right CassandraBlush>>
 Cassandra: Ooh la la, are things getting a little less brittle with Gertie?
+<<char_right CassandraBlush>>
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay
   <<kristen Grin>>
@@ -227,9 +254,13 @@ title: Cassandra4
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: Hey Kristen! Don’t get mad at me, but I was kiiiinda peeking, and saw you making friends with the bees!
+  <<char_right CassandraNeutral>>
   Kristen: You saw that? Didn’t even get stung once. I’m starting to become a real bee whisperer.
+  <<char_right CassandraNeutral>>
   Cassandra: Let’s not get ahead of ourselves just yet! How was the rest of the date?
+  <<char_right CassandraNeutral>>
   Kristen: Honestly?
+  <<char_right CassandraNeutral>>
   <<kristen Soft>>
   Kristen: Gertie is… she’s great. It’s been a long time since I could talk like that with anyone. Like… deep and shit, without it just ending up weird.
   Kristen: We’re <i>actually</i> going to be having a real date next week, FINALLY!
@@ -247,8 +278,11 @@ title: Cassandra4
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: Hey Kristen! Don’t get mad at me, but I was kiiiinda peeking, and saw you making friends with the bees!
+  <<char_right CassandraNeutral>>
   Kristen: You saw that? Didn’t even get stung once. I’m starting to become a real bee whisperer.
+  <<char_right CassandraNeutral>>
   Cassandra: Let’s not get ahead of ourselves just yet! How was the rest of the date?
+  <<char_right CassandraNeutral>>
   <<kristen Grin>>
   <<voiceline KristenHappy4>>
   Kristen: She kissed me. Full on the mouth. I still got it.
@@ -270,12 +304,16 @@ title: Cassandra4
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: Hey Kristen! Don’t get mad at me, but I was kiiiinda peeking, and saw you making friends with the bees!
+  <<char_right CassandraNeutral>>
   <<kristen Grin>>
   Kristen: Did you see the part when her lips were on my lips?
+  <<char_right CassandraNeutral>>
   <<voiceline KristenHappy4>>
   Kristen: That’s a point on the scoreboard for President Applebees!
+  <<char_right CassandraNeutral>>
   <<char_right CassandraSurprised>>
   Cassandra: KRISTEN!
+  <<char_right CassandraNeutral>>
   <<kristen Awkward>>
   <<voiceline CassDisappointed1>>
   Cassandra: Don’t be so crude about it. This is supposed to be your new start with Gertie. Or did you already forget what happened last year?
@@ -312,7 +350,9 @@ title: Cassandra5
   <<char_right CassandraNeutral>>
   <<voiceline CassPhone3>>
   Cassandra: Hey! Uh, I’ve been trying to get a hold of you for a while. How did the baking date with Gertie go?
+  <<char_right CassandraNeutral>>
   Kristen: We baked, made a truce with a nemesis on her list, we cleared the air over the Porter problem from last year and I got some kisses.
+  <<char_right CassandraNeutral>>
   <<kristen Happy>>
   Kristen: Looks like everything <i>is</i> a little sweeter when you add some honey.
   <<char_right CassandraHappy>>
@@ -326,10 +366,13 @@ title: Cassandra5
   <<char_right CassandraNeutral>>
   <<voiceline CassPhone3>>
   Cassandra: Hey! Uh, I’ve been trying to get a hold of you for a while. How did the baking date with Gertie go?
+  <<char_right CassandraNeutral>>
   <<kristen Nervous>>
   <<voiceline KristenNeutral1>>
   Kristen: Okay? I think? Fabian kinda crashed it so that was a little awkward, but I think they may have found a truce. Maybe?
+  <<char_right CassandraNeutral>>
   Cassandra: That’s a move in the right direction! I know that probably wasn’t easy for either of them, so it shows how much they <i>both</i> care about you.
+  <<char_right CassandraNeutral>>
   <<kristen Neutral>>
   Kristen: You’re right! We had a great day, though. We made some great baklava and I even got some more kisses.
   <<char_right CassandraHappy>>
@@ -346,7 +389,9 @@ title: Cassandra5
   <<char_right CassandraNeutral>>
   <<voiceline CassPhone3>>
   Cassandra: Hey! Uh, I’ve been trying to get a hold of you for a while. How did the baking date with Gertie go?
+  <<char_right CassandraNeutral>>
   Kristen: Oh yeah, about that… sorry I missed your calls. I’ve been really preoccupied with some honey sweet lips and the rest of the night got away from me.
+  <<char_right CassandraNeutral>>
   <<kristen Grin>>
   Kristen: If you know what I’m saaaayin’.
   <<char_right CassandraSurprised>>
@@ -388,9 +433,12 @@ title: Cassandra6
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: Sooooooo, tell me absolutely everything!
+  <<char_right CassandraNeutral>>
   Kristen: I thought I screwed everything up because I was late picking her up. The movie was… probably not the best choice, and the Hangvan couldn’t connect to the audio.
+  <<char_right CassandraNeutral>>
   <<kristen Neutral>>
   Kristen: Buuuuuut we ended up having a great time! Have I mentioned how smart Gertie is? Or how just being around her makes me smile, even when I mess up?
+  <<char_right CassandraNeutral>>
   <<kristen Soft>>
   Kristen: I know we just said goodnight, but I’m already counting down the seconds until I can see her again.
   <<char_right CassandraHappy>>
@@ -409,7 +457,9 @@ title: Cassandra6
   <<char_right CassandraSad>>
   <<voiceline CassDisappointed1>>
   Cassandra: Kristen…
+  <<char_right CassandraSad>>
   Kristen: I know what you’re going to say! I was late and I goofed it big time and just about everything that could have gone wrong, well… actually did go wrong.
+  <<char_right CassandraSad>>
   <<kristen Neutral>>
   <<voiceline KristenRomantic2>>
   Kristen: But <i>pleaseeeee</i> tell me you didn’t miss the part where I made up for it, and we made it work? Gertie might have added a few more nemeses to the list, but she’s cute when she sleep-drools and she’s as into me as I’m into her.
@@ -427,11 +477,16 @@ title: Cassandra6
   <<char_right CassandraAngry>>
   <<voiceline CassDisappointed1>>
   Cassandra: KRISTEN!
+  <<char_right CassandraAngry>>
   Kristen: I know, I knowwwwwwww. I was late. No big deal. It all ended up fine. It’s alllll gooooood.
+  <<char_right CassandraAngry>>
   Cassandra: It’s not <i>’all good’!</i> What do you mean, <i>’It’s all good’?</i>
+  <<char_right CassandraAngry>>
   <<voiceline KristenAwkward2>>
   Kristen: We kissed and made up! I’ll make it up to her.
+  <<char_right CassandraAngry>>
   Cassandra: We’re running out of time and you can’t afford to keep blowing it. I love you so much, but you’re really making it hard to stay calm about this.
+  <<char_right CassandraAngry>>
   <<kristen Awkward>>
   Kristen: Dude, I’m sorry, okay? I beefed it big time.
   <<char_right CassandraSad>>
@@ -458,6 +513,7 @@ title: Cassandra7
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: I saw you and Gertie hung out at the career fair! That’s super duper cute, by the way! Already making some future plans together?
+  <<char_right CassandraNeutral>>
   <<kristen Grin>>
   Kristen: And if I told you <i>marriage</i>, would you say I was crazy?
   <<char_right CassandraSurprised>>
@@ -480,6 +536,7 @@ title: Cassandra7
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: I saw you and Gertie hung out at the career fair! That’s super duper cute, by the way! Already making some future plans together?
+  <<char_right CassandraNeutral>>
   Kristen: There was… a lot going on all at once, I think it may take a few business days to wrap my mind around all of it, but it was okay.
   <<kristen Nervous>>
   Kristen: I mean, how exciting can a career day be?
@@ -505,6 +562,7 @@ title: Cassandra7
   <<char_right CassandraNeutral>>
   <<voiceline CassGreeting1>>
   Cassandra: I saw you and Gertie hung out at the career fair! That’s super duper cute, by the way! Already making some future plans together?
+  <<char_right CassandraNeutral>>
   <<kristen Nervous>>
   Kristen: Uhhh…
   <<char_right CassandraSurprised>>
@@ -544,7 +602,9 @@ title: Cassandra8
   <<char_right CassandraSad>>
   <<voiceline CassPhone2>>
   Cassandra: Hey Kristen…
+  <<char_right CassandraSad>>
   Kristen: Hello? Why are you crying??
+  <<char_right CassandraSad>>
   Cassandra: The whole day has been so beautiful!
   <<char_right CassandraHappy>>
   <<voiceline CassHappy2>>
@@ -599,10 +659,14 @@ title: Cassandra8
   <<char_right CassandraAngry>>
   <<voiceline CassPhone3>>
   Cassandra: KRISTEN! PICK UP! RIGHT NOW!
+  <<char_right CassandraAngry>>
   Kristen: Whaaaaaaat! It’s been a crazy day!
+  <<char_right CassandraAngry>>
   Cassandra: So I heard. <i>Excuseeee me</i> for making sure you’re not in jail.
+  <<char_right CassandraAngry>>
   <<voiceline KristenSurprised3>>
   Kristen: I— What do you mean?
+  <<char_right CassandraAngry>>
   Cassandra: Eco-terrorism? Stealing? Stalking people for revenge?
   <<char_right CassandraSad>>
   <<voiceline CassDisappointed3>>
