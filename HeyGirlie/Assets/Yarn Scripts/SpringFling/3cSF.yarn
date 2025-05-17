@@ -7,8 +7,8 @@
 :Gotta do this right. You spend a couple hours researching flower language. You don’t really understand most of it, but you think you’ve got the gist enough to put together something Nara will like.
 :You make sure to pick a couple that you just know both of them like. Hopefully that doesn’t change the meaning.
 :You invite Nara over with your heart in your throat.
-:It’ll be—
-// door knock sfx
+:It’ll be —
+<<sfx knock>>
 :You open the door and see Nara smiling at you.
 <<char_right NaraHappy>>
 Nara: Good morning, Kristen! I…
@@ -26,7 +26,7 @@ Kristen: What?!
 <<char_left TrackerSurprised_1>>
 Tracker: Sorry, <i>what</i> did I just walk in on?
 Nara: Kristren is asking my mother to the dance!
-<<char_left TrackerLaugh_1>>
+<<char_right TrackerLaugh_1>>
 Tracker: Hell yeah, Kristren. I didn’t know you liked MILFs.
 :Aw no, now they’re <i>both</i> doing it.
 <<kristen Awkward>>
@@ -43,6 +43,7 @@ Kristen: Nara, watching you dive right into discovering the world has made it so
 Kristen: I want — I <i>hope</i> you both feel the same.
 <<kristen Awkward>>
 Kristen: And. Um. Say something before my heart gives out, please.
+
 <<sf_success 3C>>
 <<if $succeed>>
   <<jump TrackerNaraSuccess>>
@@ -122,19 +123,22 @@ Kristen: Bye, girlies…
 title: TrackerNaraEnding
 ---
 <<fade_in_ui>>
+<<kristen Neutral_3C>>
 :You’re waiting anxiously by the entrance for Tracker or Nara to show up.
 :You’d wanted to pick them up yourself, but alas, presidential duties called. Despite objectively knowing the two of them agreed to come to this event with you, however, the longer you wait, the more your brain keeps helpfully turning over that one nightmare you had at the Manor sleepover.
-:Cassandra swore like a billion times that was not a prophetic dream. Your goddess wouldn’t <i>lie</i> to you, right…?
-<<char_left TrackerNeutral_2>>
+:Cassandra swore like a billion times that was not a prophetic dream. Your goddex wouldn’t <i>lie</i> to you, right…?
+<<char_left TrackerNeutral_5>>
 <<char_right NaraNeutral4b>>
 :Then Tracker shows up arm-in-arm with Nara, and the sight of them takes your breath away.
 :The guy at the door seems a little confused at two non-Aguefort students showing up, but you smooth it over.
 Kristen: They’re with me.
 :You proudly flash the guy your PRESIDENT button on your jacket and he sighs and lets you all through.
-<<char_left TrackerHappy_2>>
+<<char_left TrackerHappy_5>>
+<<voiceline TrackerGreeting4>>
 :Tracker pulls you into a warm hug the second you’re through the crowd. She smells good, like a really nice cologne.
-:When you pull back, you see Nara looking around the room. You hope she’s impressed by it. Maybe it’s nothing to Fallinelven parties, but you did what you could.
+:When you pull back, you see Nara looking around the room. You hope she’s impressed by it. Maybe it’s nothing on Fallinelven parties, but you did what you could.
 <<char_right NaraHappy4b>>
+<<voiceline NaraHappy1>>
 Nara: I must say I am impressed, Kristen! By Solesian standards, this is the perfect prom!
 Kristen: Oh, this is Spring Fling, not prom.
 Nara: I do not understand the distinction.
@@ -154,17 +158,22 @@ Nara: I understand there is dancing at a prom, yes?
 :The three of you chat while drinking the punch — Tracker and her werewolf senses assure you no one’s managed to get past your security and spike it yet — about all the work you’d put into planning tonight.
 Tracker: The disco ball’s a nice touch.
 Kristen: Yes! I knew you’d say that! I just wish I’d been able to push forward Shrimp Jump Two. Curse Aguefort’s Presidential Reform Act...
+<<voiceline TrackerSurprised2>>
 Tracker: Ah, dictatorship, such a good look on you. Wasn’t one shrimp party enough, though?
 Kristen: Oh, right, you weren’t there for the second one.
+<<char_left TrackerSurprised_5>>
 Tracker: You’ve <i>gotta</i> tell me about that one.
 <<char_right NaraNeutral4b>>
 :Nara makes a brave face.
+<<voiceline NaraNeutral2>>
 Nara: Jumping into seafood… another Solesian tradition I would surely love to partake in...
+<<char_right TrackerHappy_5>>
 :You tell them all about it before getting back on the dance floor.
 :Dancing as a trio is a little more difficult than just dancing with Nara. 
 :People make room for their president, (as they should), but ballroom dancing was designed for two people, and eventually it devolves into the three of you dancing in a circle like you’re performing some kind of ritual.
 :You dance yourselves out after a few songs, and you lead them to your second-favorite part of the whole event.
 Nara: Are we absconding to kiss passionately outside now? Preferably with tongue, as is Solesian tradition?
+<<voiceline KristenRomantic2>>
 Kristen: Um! Maybe later! I wanted to try this first.
 :You gesture to the photobooth in the corner.
 Kristen: It’s cheesy, I know, but I want… I want to be able to look back on tonight and remember how great it was.
@@ -172,7 +181,7 @@ Kristen: And, you know, I want everyone to know that I have two hot girlfriends 
 Nara: There is nothing I would rather do, Kristren.
 :Tracker takes you both by the hand.
 <<char_right NaraBlush4b>>
-<<char_left TrackerBlush_2>>
+<<char_left TrackerBlush_5>>
 Tracker: You heard our girlfriend, cowboy. 
 <<kristen transparent>>
 <<char_right transparent>>

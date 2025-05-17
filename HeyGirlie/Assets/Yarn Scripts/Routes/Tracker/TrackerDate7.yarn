@@ -30,6 +30,7 @@ Tracker: No alcohol?
     <<add_points 1>>
 -> I wanna remember every second of this.
     :Tracker’s cheeks go even redder.
+    <<voiceline TrackerHappy1>>
     Tracker: You… that’s… you got <i>smooth</i>, cowboy.
     <<kristen Soft>>
     Kristen: Maybe. But I mean it!
@@ -93,6 +94,7 @@ Kristen: Really?
 <<char_right TrackerBlush_4>>
 Tracker: Really.
 :Both of you fall silent, but it’s a comfortable quiet. Well, it’s not really all that quiet, the music is <i>loud</i>, but still.
+<<kristen Neutral>>
 :As nice as this is, though, you have bigger plans than just sitting here.
 Kristen: Hey, Tracker?
 -> I promised you a dance.
@@ -141,6 +143,7 @@ Tracker: Come on, cowboy. Let’s dance.
 :Okay. Ouch. But the initial sting of rejection aside, you get the feeling that it wasn’t really about you.
 :You lean in, close enough to be heard over the rush of people.
 <<kristen Neutral>>
+<<voiceline KristenNeutral3>>
 Kristen: Hey, you good?
 Tracker: What? Yeah, I’m fine.
 :You wait a second.
@@ -171,11 +174,13 @@ She looks so sad that you can’t help but pull her in for a hug and say…
     <<kristen Neutral>>
     Kristen: My point is, that’s not on you, <i>and</i> I’ve got your back, if you need me.
     <<char_right TrackerBlush_4>>
+    <<voiceline TrackerNeutral3>>
     Tracker: You do, don’t you?
     <<add_points 2>>
 -> It’ll be okay! It’s not gonna happen again.
     <<char_right TrackerNeutral_4>>
     Tracker: Kristen, you don’t know that.
+    <<voiceline KristenNeutral1>>
     Kristen: Uh, yes, I do. We killed that DJ Brainzz guy.
     Tracker: Well… that’s actually a fair point.
     <<add_points 1>>
@@ -184,6 +189,7 @@ She looks so sad that you can’t help but pull her in for a hug and say…
 Tracker: I just... really don’t want to hurt you, Kristen. Not again.
 :You have a feeling she’s not just talking about wolfing out that night anymore.
 <<char_right TrackerAwkward_4>>
+<<voiceline TrackerDateFail1>>
 Tracker: Don’t worry about it, really! We came here to have fun.
 Kristen: I’m not worried about it. About you hurting me, I mean.
 Kristen: I told you I trusted you, and I meant that.
@@ -210,6 +216,7 @@ Kristen: Well, I <i>do</i> have this pair of handcuffs…
 Tracker: I <i>meant</i> they’re probably just trying not to interrupt our date, Kristen.
 <<char_right TrackerHappy_4>>
 :You make it a point to dramatically sigh.
+<<voiceline KristenNeutral3>>
 Kristen: Now you tell me. I make it a point to abuse any authority I’m given. Could’ve made them all do a shrimp jump for our entertainment...
 <<char_right TrackerLaugh_4>>
 :Tracker laughs, but then turns a little pensive.
@@ -240,6 +247,7 @@ It’s been a great time. You really want to wrap this up right. And you think y
     :It’s a quick kiss. Relatively chaste, too, compared to what you used to get up to.
     <<char_right TrackerHappy_4>>
     :You can feel Tracker smiling into it even before you pull back to see it on her face.
+    <<voiceline TrackerRomantic3>>
     Tracker: Man, I missed doing that.
     <<add_points 2>>
 -> Ask her if she wants to come home with you.
@@ -271,9 +279,12 @@ Tracker: I’m… actually pretty busy. Something’s coming up for me then.
 Kristen: Aw, okay. Maybe we’ll run into each other somewhere.
 <<char_right TrackerBlush_4A>>
 Tracker: If we’re lucky.
+<<char_right TrackerNeutral_4>>
 Tracker: Um, good night, Kristen.
+<<voiceline TrackerFarewell2>>
 Tracker: Drive safe.
 <<kristen Soft>>
+<<voiceline KristenFarewellTracker1>>
 Kristen: Good night!
 :You get into your car and drive home, the half-moon shining bright in the night sky above you. You wonder what’s got Tracker so busy next week?
 <<jump Cassandra7>>

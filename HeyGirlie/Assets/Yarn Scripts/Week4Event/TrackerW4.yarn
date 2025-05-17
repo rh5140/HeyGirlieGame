@@ -6,22 +6,26 @@
 :It had been terrifying and exhilarating for you, still getting used to the idea that regular old pop music wasn’t just for warlocks or people who preferred Marge’s corn to your mother’s. You know, unforgivable sins.
 :Between Tracker and Fig’s influence, you actually know almost all the bands whose fans you’re walking by.
 :Finding Tracker is gonna be really difficult. You might have to dig up that old shared playlist to guess what bands she’d be visiting…
-<<char_right TrackerHappy_4>>
+<<char_right TrackerHappy_1>>
+<<voiceline TrackerGreeting1>>
 Tracker: Kristen!
 <<kristen Surprised>>
 :Before you can even open the link, you’re nearly tackled into the people behind you by the force of Tracker’s hug.
 <<voiceline KristenSurprised3>>
 Kristen: Uwaugauh!
 :Tracker pulls back a little bit, beaming wide. With her arms around you, it's suddenly much harder to care about the annoyed crowd members you nearly barrelled into. Totally worth it.
+<<kristen Neutral>>
 Tracker: I’m so glad you’re here! Come on, we’ve still got time to get up to the front.
 Tracker: Thanks for coming over to this side of the festival, seriously. It would’ve been so much harder to find you in time if you’d wandered off somewhere else.
 <<kristen Grin>>
 Kristen: Don’t you mean harder to… <i>track</i> me?
-<<char_right TrackerNeutral_4>>
+<<char_right TrackerNeutral_1>>
+<<voiceline TrackerNeutral1>>
 Tracker: Oh, ha-ha. Jawbone’s been making that same joke since I was thirteen, you’ll have to try harder than that.
 <<kristen Neutral>>
 :As you always have with these shows, you kind of just let Tracker yank you along. She’s much better at navigating through the crowds than you are, thanks to the werewolf sense of smell and familiarity with this scene.
 :You aren’t <i>right</i> next to the stage by the time she’s satisfied, but you are pretty damn close. Close enough that you could bless the band if you felt like it.
+<<char_right TrackerHappy_1>>
 Tracker: Yeah. This is gonna be good. Galicaea, it’s been <i>so</i> long since I’ve been to a good concert.
 Kristen: The scene in Fallinel’s kind of lacking, huh?
 Tracker: You have no idea. Even their hardcore bands think acoustic guitars are 'too alternative'.
@@ -31,17 +35,20 @@ Tracker: I do remember the songs you added to our playlist, babe. You might enjo
 Kristen: Well… yeah, probably. But I like this, too.
 <<kristen Soft>>
 Kristen: Especially with you as my festival buddy.
-<<char_right TrackerHappy_4>>
+<<char_right TrackerHappy_1>>
+<<voiceline TrackerSurprised1>>
 :Tracker’s hand tightens in yours, smile widening further.
 Tracker: Aw. You’re sweet.
 <<kristen Surprised>>
 Tracker: And a bit of a poser, but still sweet.
+<<voiceline KristenAngry1>>
 Kristen: You’re so mean to me. I should go see if there’s still room at Chappell Gnome’s —
-<<char_right TrackerLaugh_4>>
+<<char_right TrackerLaugh_1>>
 Tracker: Babe, I don’t even think Cassandra could make that miracle happen.
 <<kristen Neutral>>
-<<char_right TrackerHappy_4>>
+<<char_right TrackerHappy_1>>
 :You’re absolutely about to retort that with something devastatingly witty and charming - but before you can, the stage lights dim, and a loud, angsty voice cuts through the air.
+<<voiceline TrackerHappy3>>
 :Tracker howls as the rest of the crowd cheers. The music is immediately so loud you can barely hear yourself think, let alone hear her talking. She’s mouthing... something. 
 Tracker: LET’S GO TO THE HOBBIT!
 Kristen: WHAT??
@@ -51,11 +58,12 @@ Tracker: THE DOSH MITT.
 Kristen: WHAT?!
 Tracker: HOLLOW ME!
 :Tracker gestures towards... oh, the <i>mosh pit</i>. That makes more sense.
-<<char_right TrackerNeutral_4>>
+<<char_right TrackerNeutral_1>>
 :She gives you a questioning look. As if to ask, “<i>Wanna go?</i>”
 :You know if you hesitated, she’d stay out here with you, just enjoying the music.
 <<kristen Happy>>
 <<char_right TrackerHappy_4>>
+<<voiceline TrackerHappy2>>
 :Instead, you use the hand laced with hers to tug her in after you. You think you can even hear her delighted laughter over the cacophony.
 <<kristen transparent>>
 <<char_right transparent>>
@@ -74,5 +82,4 @@ Kristen: FUCK YEAH!
 <<fade_out_ui>>
 <<wait 2>>
 <<enable_continue>>
-<<jump EndEvent>>
 ===

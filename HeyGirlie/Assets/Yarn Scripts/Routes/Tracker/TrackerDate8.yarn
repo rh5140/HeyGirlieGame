@@ -31,6 +31,7 @@ Wow, you really thought you were going to have to wait longer than that.
     :She narrows her eyes and glares at you, managing to look both incredibly anxious and deeply unimpressed.
     <<kristen Sad>>
     :You know this look well.
+    <<voiceline TrackerDateFail4>>
     Tracker: I <i>really</i> thought we were past the point of lying to each other. Look, if I wanted you to be here, I would have asked. Just…
     <<char_right TrackerNeutral_1>>
     Tracker: I guess you’re here now, though.
@@ -41,6 +42,7 @@ Wow, you really thought you were going to have to wait longer than that.
     Tracker: I’m not a child, you don’t have to worry about me. I can handle myself.
     Tracker: But… well, it is sweet that you’re here.
     <<kristen Happy>>
+    <<voiceline KristenHappy2>>
     Kristen: That’s me! The sweetest.  
     Tracker: Don’t push your luck.
     <<kristen Neutral>>
@@ -50,6 +52,7 @@ Wow, you really thought you were going to have to wait longer than that.
     :Her face softens considerably, at that. She gives you a small, watery grin.
     Tracker: ...Yeah. Yeah, okay. I guess it'll make up for all those times I've come to your rescue, huh?
     <<kristen Soft>>
+    <<voiceline KristenRomantic1>>
     Kristen: Oh, so it’s like that?
     <<char_right TrackerBlush_1>>
     <<voiceline TrackerRomantic1>>
@@ -96,6 +99,7 @@ Tracker: Here.
 :You sit across to watch while she unpacks. Tracker’s always had a steady presence, but you’ve never seen her quite like this, so… self-assured. Confident. Calm. When she speaks, there’s a serenity in her voice that you swear feels more holy than any sermon of Helio you’ve ever had to sit through.
 Tracker: Do you remember when we met the <i>second</i> time?
 :You nod.
+<<voiceline KristenNeutral2>>
 Kristen: In front of school, right? Didn’t Fabian punch Gorgug?
 Tracker: Oh, I don’t know. Probably.
 <<char_right TrackerBlush_1>>
@@ -108,6 +112,7 @@ Tracker: Yeah, I remember that all too well. But it was nice to see you trying t
 :She meets your eyes and smirks.
 Tracker: Even if you shook my hand for a solid minute.
 <<kristen Awkward>>
+<<voiceline KristenAwkward2>>
 Kristen: You know I was still figuring out a <i>lot</i> —
 Tracker: I know. Just teasing.
 <<kristen Neutral>>
@@ -122,10 +127,12 @@ Tracker: A little bit. I got over it sometime after you moved in.
 :You reach for her hand. She takes it, laces her fingers with yours without even needing to look. Instinct or familiarity? Either way, it leaves a warm feeling in your chest.
 Kristen: You know you can ask me, right?
 <<char_right TrackerBlush_1>>
+<<voiceline TrackerRomantic3>>
 Tracker: I know that now. And I don’t think that anymore, either. You’re still here with me.
 Kristen: Nowhere else I’d rather be.
 <<char_right TrackerHappy_1>>
 Tracker: Not that I don’t love the hand-holding, but I do need both hands for this.
+<<voiceline KristenNeutral2>>
 Kristen: Right, sorry.
 :You drop her hand and watch as she casts the moonstones, glowing slightly in the dim light. 
 Tracker: Um, what was I saying before?
@@ -167,6 +174,7 @@ Tracker: … seriously.
 Kristen: Will you tell me when I’m good to turn back around?
 Tracker: I’m not gonna have human vocal chords, Kristen.
 Kristen: So one bark for yes, two for no, three for turn around?
+<<voiceline TrackerHappy2>>
 :Tracker laughs.
 Tracker: You know what? Sure.
 :There’s a bit of quiet. You don’t hear anything.
@@ -187,7 +195,9 @@ Tracker: Don’t push your luck, cowboy.
 :You can hear the smile in her voice. 
 :And then, eventually, you hear <i>it.</i> 
 :It goes on for both forever and a second. You stand there, waiting for the signal. Then you hear the soft sound of leaves being crushed underfoot. Or, well, underpaw, you guess.
+<<sfx bark2>>
 :And three barks.
+<<sfx bark1>>
 <<char_right TrackerWolf_1>>
 :You turn, just in time to witness Tracker in all her lycanthropic glory. She’s both undeniably inhuman, and undeniably herself – the type of thing you didn’t know you’d miss until you spent a year without it. This time, you take it all in.
 You recognise that look in Tracker’s eyes. She’s nervous. About what she’s going to do. About what <i>you’re</i> going to do.
@@ -213,6 +223,7 @@ You recognise that look in Tracker’s eyes. She’s nervous. About what she’s
 :The last time you saw her shift, she looked so scared and in pain. So it’s good to see she looks… healthy? Happy?
 :You wish you could ask her something now. Well, you guess you could as long as it’s a yes or no question.
 Kristen: Still remember the one bark for yes thing?
+<<sfx bark1>>
 :Tracker pulls back and fixes you with an exasperated glare that looks <i>just</i> like the one she gives you in her human form, and barks once.
 Kristen: Just checking.
 Kristen: It’s, um, really nice to see so many of the stars out here.
@@ -226,10 +237,13 @@ Kristen: Point is… it’s really pretty.
 :It’s a comfortable silence, but you want to fill it, anyway. Tracker had asked you to stay, so you better be good company.
 :Just to be safe, you ask:
 Kristen: It’s not bothering you when I talk, right?
+<<sfx bark2>>
 :Tracker huffs out a sound and barks twice.
+<<voiceline KristenNeutral3>>
 Kristen: Wait… is that two barks for no, it <i>is</i> bothering you or no, it isn’t?
 :Tracker blinks at you.
 Kristen: Okay, one bark for if I’m bothering you, two for if I’m not —
+<<sfx bark2>>
 :Tracker doesn’t even let you finish the sentence before she barks twice, nuzzling her head against your palm.
 Kristen: Okay, cool. Great. Awesome.
 :Tracker snorts. You just know she’d be laughing at you if she had the vocal chords to right now.
@@ -260,26 +274,32 @@ Kristen: I know you know that! Just saying.
 Hang on. This is the perfect time for a joke… okay, maybe not, but you want to try and make her laugh, anyway.
 -> <i>Make a stupid wolf pun.</i>
     Kristen: Hey, are you cold?
+    <<sfx bark2>>
     :Tracker barks twice.
     Kristen: Because you know what they call a cold wolf?
     <<voiceline TrackerConfused1>>
     :Tracker makes a noise of acknowledgement.
     <<kristen Grin>>
     Kristen: A chili dog.
+    <<sfx howl>>
     :There’s a pause, then Tracker literally howls with laughter.
     <<add_points 2>>
 -> <i>Joke about your time in Sylvaire.</i>
     Kristen: This is going a lot better than our last date in the woods.
     :Tracker tenses.
     Kristen: You know, in —
+    <<sfx bark2>>
     :Tracker barks twice, glaring at you. Too soon?
     <<add_points 0>>
 -> <i>Tell her a knock knock joke.</i>
     Kristen: Hey, Tracker. Knock knock.
     :She gives you, considering the circumstances, an impressively unmistakable look of disbelief. You give her a pleading look.
     Kristen: Please?
+    <<sfx bark2>>
     :She barks twice. You’re going to take that as a ‘who’s there’ and not a ‘no’.
+    <<sfx bark1>>
     Kristen: Eva.
+    <<sfx bark2>>
     :She barks three times, one for each syllable in ‘Eva who?’.
     Kristen: Eva see a werewolf howl at the moon?
     :Tracker barks once for yes, then gives a little howl for good measure.
@@ -299,21 +319,23 @@ Kristen: I mean, I like seeing <i>all</i> sides of you.
 :Tracker waggles her eyebrows, which looks way weirder when she’s wolfed out.
 Kristen: Not like that! Well, also like that, sure.
 Kristen: But…
-:You pause as you try to figure out how to phrase what you mean.
-Kristen: I guess I’ve been thinking a lot about the ways things used to be?
-Kristen: Like, no matter where we’d go, you always seemed so completely in your element - at the Black Pit, in Strongtower, all those pride events. And there I was, hiding in the bathroom. Just happy to be there.
+:You pause as you try to figure out how to Kristen: I guess I’ve just... always seen you as so confident?
+:Tracker snorts.
+Kristen: No, really! Like, no matter where we’d go, you always seemed so completely in your element — at the Black Pit, in Strongtower, all those pride events. And there I was, hiding in the bathroom. Just happy to be there.
 :Your voice, thankfully, only barely cracks. Tracker gives you a comforting head bump to the shoulder.
-Kristen: Thanks. Yeah, I was a <i>mess.</i> In a ton of ways. I made mistakes. I hurt you by not understanding there could be more to things than the way I saw them. I’m still not as put together as you are. 
+Kristen: Thanks. Yeah, I was a <i>mess.</i> In a ton of ways. I made mistakes, I hurt you by assuming and not understanding. I’m still not as put together as you are.
 Kristen: But I guess I’m trying to say… you don’t <i>have</i> to be either? Put together, that is. I don’t always have to be silly, you don’t always have to be serious.
 :You give her a wry smile.
-Kristen: Which I think you know. I mean, the first thing we did when we were both not calling these dates, but also not <i>not</i> calling these dates, was go to a centaur rodeo. But I just… I wanted to say it.
+Kristen: Which, I think you know. I mean, the first thing we did when we were both not calling these dates, but also not <i>not</i> calling these dates, was go to a centaur rodeo. But I just… I wanted to say it.
 Kristen: Or, I wanted you to hear it? Both, I guess. 
 :There’s silence. Tracker can’t answer you, so you don’t blame her, but you have to resist the urge to make another joke, just to break the tension.
 :Tracker nuzzles your hand with her snout, then adjusts her position so she’s fully cuddling against you.
 Kristen: Your fur is <i>so</i> soft. Do you shampoo it or something?
+<<sfx bark2>>
 :Tracker barks twice.
 <<kristen Neutral>>
 Kristen: Damn, werewolf magic does that for you too?
+<<sfx bark1>>
 :Tracker barks once this time, more than a little smugly.
 Kristen: Nice. I should see if Cassandra will do that for me, save me some time whenever I need to get all presidential.
 :You wait to see if she’ll make your phone buzz angrily in your pocket at the joke, but there’s nothing.
@@ -321,13 +343,16 @@ Kristen: Nice. I should see if Cassandra will do that for me, save me some time 
 :Tracker pushes back from you, and you let her go reluctantly.
 :But she doesn’t leave it at that, barking at you and actually walking around you to push at your back.
 Kristen: You want me to stand up?
+<<sfx bark1>>
 :Tracker barks once.
 :You stand, looking down at her.
 Kristen: Do you, um, want me to go?
+<<sfx bark2>>
 :Tracker immediately barks twice, then gives a little ‘awoo’. 
 <<kristen Happy>>
 Kristen: Awww. Uh, are we going on a walk?
 :Tracker gives you a little… bow? It looks playful, but you have no idea what she’s saying. You… bow back?
+<<sfx bark2>>
 :Tracker barks twice.
 Kristen: I’m lost, dude.
 :Tracker throws her head over her own shoulder, gesturing at her back.
@@ -349,6 +374,7 @@ Tracker does her best wolfy approximation of an eye roll. Then, way quicker than
     :You stay flat on the ground, knowing that Tracker would never hurt you. You breathe deeply, feeling almost meditative. Being near her just has that effect on you these days – makes your brain calmer, somehow. More at peace.
     :Her approach is fast, lightning fast, but you’re not scared for a second. It’s still just her.
     :At the last second, her head tilts downward, nosing under your body and lifting you into the air.
+    <<sfx howl>>
     :For a single moment, you’re flying, weightless, surrendering yourself completely to the sky and the moon and the night - and then suddenly, you’ve landed on her back. She lets loose a loud, joyful howl.
     :Holy fuck you’re on top of a werewolf. You’re on top of <i>your</i> werewolf. There’s definitely a dirty joke there, but you’re so happy you won’t even make it. This rules.
     <<add_points 5>>
@@ -360,6 +386,7 @@ Tracker does her best wolfy approximation of an eye roll. Then, way quicker than
 :No doubt about it.
 Kristen: Hey. Tracker?
 :Man, you can’t even hear yourself over the howl of the wind. You try again, significantly louder.
+<<voiceline KristenGreetingTracker3>>
 Kristen: HEY, TRACKER?
 :So now you’re yelling, and it’s at the exact moment she stops so everything is quiet and you just yelled in a silent forest and it’s very awkward. Whoops.
 :You hear an affirmative grunt from Tracker, and an amused snort.
@@ -373,6 +400,7 @@ Kristen: I just wanted to say I’m glad we found each other again. That’s all
 //werewolf tracker disappear
 <<char_right transparent>>
 :The first band of sunlight peeks out from the horizon, bathing you in a soft, orange glow. You hear motion from where Tracker is standing, but you don’t turn around. You give her her privacy.
+<<voiceline TrackerGreeting4>>
 :You feel a soft kiss touch the nape of your neck, and finally turn back around.
 <<char_right TrackerBlush_1>>
 Tracker: I’m glad we found each other, too.
@@ -414,7 +442,7 @@ Kristen: Tracker, you’re my dream girl. There’s not a plane I could travel t
 :Right. You two did kind of… stay up all night together. You see the faint glow of the moonstones in the distance, and she follows your gaze, seeming to only just now remember that all her stuff is a forest away.
 Tracker: Take a hike with me?
 Kristen: You know it, babe.
-:You hold hands the whole way back. 
 <<voiceline TrackerBespoke4>>
+:You hold hands the whole way back. 
 <<jump Cassandra8>>
 ===

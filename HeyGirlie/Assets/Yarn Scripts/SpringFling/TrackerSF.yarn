@@ -102,9 +102,12 @@ Tracker: What?
 title: TrackerEnding
 ---
 <<fade_in_ui>>
+<<kristen Neutral_Tracker>>
 <<char_right TrackerHappy_2>>
 :You’re waiting by the front door for Tracker - so you’re surprised when someone taps on your shoulder from behind and you turn to see her already inside.
 :She looks really good. You don’t think you’ve ever seen her do that with her hair before, which is a shame, because <i>damn</i>. 
+<<kristen Soft_Tracker>>
+<<voiceline KristenRomantic2>>
 Kristen: Damn.
 :It appears your mouth has treacherously decided to disconnect from your brain. Tracker smiles, though, and leans in to steal a quick kiss, so at least she doesn’t seem to care.
 <<char_right TrackerFlirt_2>>
@@ -116,9 +119,11 @@ Tracker: Aw. Cute. Jawbone let me in, though. I didn’t want to get stuck in li
 :You blush. Completely unfair! She knows you’re weak to her sincerity!
 Kristen: That’s — <i>you’re</i> cute, actually.
 <<char_right TrackerLaugh_2>>
+<<voiceline TrackerHappy2>>
 :It’s not exactly the witty retort you were hoping for, but it makes Tracker scrunch her nose and laugh, so you’ll count that as a win.
 <<char_right TrackerHappy_2>>
 Tracker: Come on. Let’s dance.
+<<kristen Happy_Tracker>>
 :This time, Tracker doesn’t hesitate. Her smile is wide and guileless as you spin her around in a move that really doesn’t fit the song that’s playing at all, but who cares?
 :You do step on her feet again. Some things never change.
 :Tracker’s smile still takes your breath away like it has from the moment you met. Your heart still beats too-fast like it does every time her eyes catch yours. 
@@ -147,7 +152,7 @@ Tracker: Hell yeah.
 <<fade_in_ui>>
 <<kristen Neutral_Tracker>>
 <<char_right TrackerNeutral_2>>
-:Eventually, though, Tracker shoos him away, though not fast enough to escape his ‘helpful’ parting advice.
+:Eventually, though, Tracker shoos him away, though not fast enough to escape his “helpful” parting advice.
 Jawbone: Real glad to see you both happy. Make sure you stay on the same page, keep it safe —
 <<char_right TrackerAwkward_2>>
 Tracker: Yes, Jawbone, <i>goodbye</i>, Jawbone!
@@ -169,6 +174,7 @@ Kristen: Hey, Tracker?
 Tracker: Yeah?
 Kristen: I love you.
 :Tracker smiles at you.
+<<voiceline TrackerDateSuccess5>>
 Tracker: Hey, Kristen? I love you, too.
 <<kristen transparent>>
 <<char_right transparent>>
@@ -176,5 +182,5 @@ Tracker: Hey, Kristen? I love you, too.
 <<wait 2>>
 <<background SpringFling_Tracker>>
 <<enable_continue>>
-<<jump EndingForReal>>
+
 ===

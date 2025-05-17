@@ -9,20 +9,28 @@
 <<char_right TrackerNeutral_1>>
 :But that was then! This is now, and Tracker is… also making a face at one of the skeletons, though it shifts into a wide smile when she sees you.	
 <<char_right TrackerHappy_1>>
+<<voiceline TrackerGreeting3>>
 Tracker: Hey, Kristen! Nice to see you here - thought you were in the section with the other Bad Kids and the escaped reanimated skeletons.
 <<kristen Surprised>>
+<<voiceline KristenSurprised2>>
 :You turn around, just as a dinosaur skeleton with Riz clinging desperately to its back disappears into the hallway.
 <<char_right TrackerAwkward_1>>
 Tracker: I think it's also on fire...?
 <<kristen Neutral>>
+<<voiceline KristenAwkward1>>
 Kristen: My official quote as president is, ‘no comment’.
 They’ve got it… probably…
 <<char_right TrackerNeutral_1>>
 :Tracker snorts.
+<<kristen Neutral>>
 Tracker: Well, sorry to disappoint, but I’m not planning on anything that crazy. I haven’t had a chance to come here since I was a kid.
-Kristen: Me either. I’m down for a chill, normal, non-destructive day at the museum with you.
+<<kristen Happy>>
+<<voiceline KristenHappy2>>
+Kristen: Me either! I’m down for a chill, normal, non-destructive day at the museum with you.
+<<kristen Nervous>>
 Which you totally mean… even if your back still aches a bit from getting bucked off that centaur.
 <<kristen Awkward>>
+<<voiceline KristenAwkward2>>
 Kristen: And it’s not disappointing! I should have said that first!
 <<char_right TrackerHappy_1>>
 Tracker: Easy, cowboy. I get it. Come look at how nasty this thing’s teeth were.
@@ -37,6 +45,10 @@ Tracker: Easy, cowboy. I get it. Come look at how nasty this thing’s teeth wer
 :You’re so surprised by the feeling of her hand in yours that you don’t even think to look at what she’s so excited about until you’re there.
 <<kristen Neutral>>
 Tracker: This is kind of trippy.
+:Tracker’s not holding your hand anymore, but she’s still <i>very close.</i> You do your best not to blush.
+<<kristen Nervous>>
+<<voiceline KristenRomantic2>>
+Kristen: Yeah...
 <<kristen transparent>>
 <<char_right transparent>>
 <<fade_out_ui>>
@@ -45,23 +57,31 @@ Tracker: This is kind of trippy.
 <<fade_in_ui>>
 :You look at the wolf skeleton she’s brought you in front of. It’s a wolf-wolf skeleton, not a werewolf-wolf skeleton, because she looks more fascinated than furious.
 Kristen: Hey, at least this one didn’t come to life.
+<<char_right TrackerSurprised_1>>
+<<voiceline TrackerConfused1>>
 Tracker: What?
 Kristen: Don’t worry about it.
+<<char_right TrackerNeutral_1>>
 <<voiceline TrackerNeutral3>>
 Tracker: Uh… sure, okay. It’s just… I’m used to seeing human skeletons, but I’ve never seen a wolf one like this. It’s kind of weird.
 Kristen: Bad weird? We can leave.
 Tracker shakes her head.
+<<voiceline TrackerNeutral1>>
 Tracker: Just weird-weird. Not good or bad.
 :You’re not super sure what to say here. Would it be weird if you called it pretty? It would definitely be weird if you called it pretty.
 :She makes a face at it,  ridiculous enough that you know she’s trying to make you laugh over anything else.
 <<voiceline KristenHappy2>>
 :Obviously, it works. But you can sense that there’s a little sadness there, too, beneath the silly expression, and Tracker raises an eyebrow at the sudden change in your mood.
 Tracker: What, a werewolf can’t make a face at her local museum’s wolf skeleton? For shame, Applebees.
+<<kristen Grin>>
 Kristen: Me? Shame someone for a silly face? Political suicide, O'Shaughnessey. My constituents would never elect me again.
+<<kristen Neutral>>
 <<voiceline KristenRomanticTracker1>>
 Kristen: But also, um… if you just wanna sit in silence and have a weird-weird moment, I’m here for that too, you know?
+<<char_right TrackerBlush_1>>
 :Tracker’s face softens into an expression you haven’t seen on her since before she left. Your heart skips a beat.
 Tracker: Good to know. But, for the record…
+<<char_right TrackerHappy_1>>
 :She makes the face again. You, predictable as ever, laugh at it again.
 <<voiceline TrackerDateSuccess1>>
 Tracker: Sometimes I really do just want to make you laugh, too.
@@ -69,5 +89,4 @@ Tracker: Sometimes I really do just want to make you laugh, too.
 <<wait 2>>
 <<background Museum_Tracker>>
 <<enable_continue>>
-<<jump EndEvent>>
 ===
