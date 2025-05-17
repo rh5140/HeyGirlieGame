@@ -18,6 +18,7 @@ public class DateSelectionInterface : MonoBehaviour
     public void Start()
     {
         _atm.MuteTrack("cassandra");
+        _atm.MuteTrack("default");
         List<Button> valid = new List<Button>();
         
         if (GameManager.Instance.DatesThisWeek == 0) SetUpRegions();
@@ -33,6 +34,8 @@ public class DateSelectionInterface : MonoBehaviour
 
     public void SetUpRegions()
     {
+        _atm.MuteTrack("cassandra");
+        _atm.MuteTrack("default");
         GameManager.Instance.awayDates.Clear();
         GameManager.Instance.outdoorsDates.Clear();
         GameManager.Instance.schoolDates.Clear();
