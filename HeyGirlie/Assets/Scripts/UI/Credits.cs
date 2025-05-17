@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using Yarn.Unity;
 
 public class Credits : Menu
 {
@@ -23,8 +24,10 @@ public class Credits : Menu
     [SerializeField] private CanvasGroup background;
     [SerializeField] private Image black;
 
+    public bool isEnd = false;
+
     void OnEnable(){
-        if(SceneManager.GetActiveScene().name.Equals("SpringFling")){
+        if(isEnd){
             GameObject.Find("AudioTrackManager").GetComponent<AudioTrackManager>().ChangeTrack("default");
         } else {
             Pause();
@@ -67,7 +70,7 @@ public class Credits : Menu
             else rightPageBottomAfterImage.sprite = rightPage;
         }
 
-        if(SceneManager.GetActiveScene().name.Equals("SpringFling")) {
+        if(isEnd) {
             yield return new WaitForSecondsRealtime(2.5f);
 
             rightPageBottomBefore.gameObject.SetActive(false);
@@ -95,6 +98,7 @@ public class Credits : Menu
             SettingManager.Instance.voices.PlayOneShot(farewellAudio);
             yield return new WaitWhile(() => SettingManager.Instance.voices.isPlaying);
 
+            Destroy(GameManager.Instance.gameObject);
             SceneManager.LoadScene("Main Menu");
         }
     }
