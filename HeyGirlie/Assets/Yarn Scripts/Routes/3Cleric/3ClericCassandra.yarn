@@ -34,11 +34,8 @@ title: Cassandra1
     <<kristen Happy>>
     <<char_right CassandraHappy>>
     Kristen: Okay, you were right, that was great.
-    <<char_right CassandraHappy>>
     Cassandra: I know! But tell me about it anyway. I want to hear it from you!
-    <<char_right CassandraHappy>>
     Kristen: I don’t know why I never thought of this before! It was easy and only a little awkward.
-    <<char_right CassandraHappy>>
     <<kristen Neutral>>
     Kristen: Do you think it’ll stay that way?
     <<char_right CassandraNeutral>>
@@ -48,30 +45,22 @@ title: Cassandra1
     <<kristen Nervous>>
     <<char_right CassandraNeutral>>
     Kristen: Okay, it was a little awkward, but I think this could be good! It’ll be good, right?
-    <<char_right CassandraNeutral>>
     Cassandra: Of course!
-    <<char_right CassandraNeutral>>
     Kristen: Is that a prophecy or are you just hyping me up?
-    <<char_right CassandraNeutral>>
     Cassandra: I just believe in you!
-    <<char_right CassandraNeutral>>
     <<kristen Neutral>>
     Kristen: That... actually does help. Any advice for me?
-    <<char_right CassandraNeutral>>
     Cassandra: Remember you <i>know</i> Nara and Tracker already. Don’t treat them like they’re totally different people!
 <<else>>
     //flop
     <<kristen Awkward>>
     <<char_right CassandraSurprised>>
     Kristen: Okay, that was a total disaster! Why did I let you talk me into this?
-    <<char_right CassandraSurprised>>
     Cassandra: Kristen, all I gave you was a hint on where they would be. You’re the one who acted like <i>that</i>.
-    <<char_right CassandraSurprised>>
     <<kristen Sad>>
     Kristen: Oh my you. You’re right. How am I supposed to recover from this?
     <<char_right CassandraNeutral>>
     Cassandra: Just... talk to them like normal people you like?
-    <<char_right CassandraNeutral>>
     Cassandra: ... maybe it’s a good thing you got a few more people to think of me today. At least Spring Fling won’t kill <i>both</i> of us.
 <<endif>>
 <<jump EndDate>>
@@ -95,33 +84,23 @@ title: Cassandra2
     <<kristen Happy>>
     <<char_right CassandraHappy>>
     Cassandra: How was the game, Kristen?
-    <<char_right CassandraHappy>>
     Kristen: It was really fun! Tracker tackled me and Nara looked <i>so</i> cute.
-    <<char_right CassandraHappy>>
     Kristen: Also, the Hellions got their ass kicked, which I feel like I should care about as president.
     <<char_right CassandraNeutral>>
     Cassandra: Sure! Tracker and Nara had fun too, right?
-    <<char_right CassandraNeutral>>
     <<kristen Soft>>
     Kristen: Yeah, I think so. I think the spa will be more Nara’s thing, though.
-    <<char_right CassandraNeutral>>
     Cassandra: Aw, how cute! I hope you three have fun!
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
     <<kristen Neutral>>
     <<char_right CassandraNeutral>>
     Cassandra: How was the game, Kristen?
-    <<char_right CassandraNeutral>>
     Kristen: Pretty good! The Mimics killed the Hellions’ butt.
-    <<char_right CassandraNeutral>>
     Cassandra: I <i>mean</i>, how was your date with Tracker and Nara?
-    <<char_right CassandraNeutral>>
     Kristen: Oh, right! Pretty good, I think? A little awkward but not, like, terrible.
-    <<char_right CassandraNeutral>>
     Cassandra: Hm... well, the spa next week should be a little more relaxing! 
-    <<char_right CassandraNeutral>>
     Cassandra: As long as you don’t do something totally ridiculous, it should go smoothly!
-    <<char_right CassandraNeutral>>
     Cassandra: Oh, no. We’re doomed.
     <<kristen Angry>>
     Kristen: Hey!
@@ -130,16 +109,12 @@ title: Cassandra2
     <<kristen Sad>>
     <<char_right CassandraAngry>>
     Cassandra: If I weren’t a goddex, I’d think it was a miracle. You didn’t say a single thing right. <i>Literally</i> not one correct choice.
-    <<char_right CassandraAngry>>
     Kristen: It’s not like we’re keeping score!
-    <<char_right CassandraAngry>>
     Cassandra: Who told you that?
-    <<char_right CassandraAngry>>
     <<kristen Surprised>>
     Kristen: Wait, I’m being graded?!
     <<char_right CassandraSurprised>>
     Cassandra: Yes, on whether or not they still want to date you once it’s time for Spring Fling!
-    <<char_right CassandraSurprised>>
     <<kristen Neutral>>
     Kristen: So... how are my odds?
     Cassandra: Well...
@@ -165,16 +140,11 @@ title: Cassandra3
     <<kristen Happy>>
     <<char_right CassandraNeutral>>
     Kristen: I feel so <i>relaxed</i>. Nara was right, spas are great.
-    <<char_right CassandraNeutral>>
     Cassandra: You three are <i>so</i> cute. If everything keeps going this well, you won’t have to worry about your principal murdering you for being a loser nerd anymore!
-    <<char_right CassandraNeutral>>
     <<kristen Neutral>>
     Kristen: Stress, my old friend, welcome back.
-    <<char_right CassandraNeutral>>
     Cassandra: Oh, no, I didn’t mean to! Sorry!
-    <<char_right CassandraNeutral>>
     Kristen: It’s fine, Cass! Uh, just tell me that Tracker and Nara <i>also</i> think the date went well?
-    <<char_right CassandraNeutral>>
     Cassandra: Of course they do!
     <<kristen Happy>>
     Kristen: Yeehaw!
@@ -183,13 +153,10 @@ title: Cassandra3
     <<kristen Neutral>>
     <<char_right CassandraNeutral>>
     Kristen: Spas are okay, I guess. That could’ve been a little more relaxing.
-    <<char_right CassandraNeutral>>
     Cassandra: Dating your ex and your ex’s ex isn’t a challenge for the faint of heart! But you’re doing great!
-    <<char_right CassandraNeutral>>
     Kristen: Huh. Do you... think I need a pep talk or something?
     <<char_right CassandraSurprised>>
     Cassandra: Don’t you?
-    <<char_right CassandraSurprised>>
     <<kristen Sad>>
     Cassandra: No, don’t freak out! I wouldn’t bother if I didn’t think you still had a shot!
     Kristen: Uh, thanks, I think?
@@ -198,13 +165,9 @@ title: Cassandra3
     <<kristen Sad>>
     <<char_right CassandraSad>>
     Kristen: That was so <i>stressful</i>. I feel like I need a spa break from my spa date.
-    <<char_right CassandraSad>>
     Cassandra: I hate to tell you this, but that isn’t the spa’s fault. That’s all you.
-    <<char_right CassandraSad>>
     Kristen: That’s even worse!
-    <<char_right CassandraSad>>
     Cassandra: Maybe suggesting you date both Tracker and Nara was a bad idea...
-    <<char_right CassandraSad>>
     <<kristen Awkward>>
     Kristen: Don’t say that now! I’m already freaking out!
     <<char_right CassandraAngry>>
@@ -231,11 +194,8 @@ title: Cassandra4
     <<kristen Soft>>
     <<char_right CassandraHappy>>
     Cassandra: Hey, Kristen! How was your date?
-    <<char_right CassandraHappy>>
     Kristen: Don’t you already know?
-    <<char_right CassandraHappy>>
     Cassandra: Would you begrudge you goddex a little bit of gossip?
-    <<char_right CassandraHappy>>
     Kristen: I guess not. It was really good. We finally had The Talk.
     <<char_right CassandraSurprised>>
     Cassandra: You asked them to Spring Fling?
@@ -251,14 +211,10 @@ title: Cassandra4
     <<kristen Neutral>>
     <<char_right CassandraNeutral>>
     Kristen: Hey, Cass. How am I doing?
-    <<char_right CassandraNeutral>>
     Cassandra: Not that bad! Still a little shaky, but you’re not totally fumbling.
-    <<char_right CassandraNeutral>>
     Cassandra: If you think the last three weeks were enough for them to give this a real shot, you might want to ask them to Spring Fling <i>soon</i>.
-    <<char_right CassandraNeutral>>
     <<kristen Nervous>>
     Kristen: Right. Totally. Um. Will they say yes?
-    <<char_right CassandraNeutral>>
     Cassandra: I can’t just give you <i>all</i> the answers. But... be realistic about how your last dates went before you ask. 
     Cassandra: I really don’t want to be the Nightmare King <i>again</i>.
 <<else>>
@@ -266,22 +222,16 @@ title: Cassandra4
     <<kristen Sad>>
     <<char_right CassandraSad>>
     Kristen: Adding a third <i>doesn’t</i> fix relationship problems. That’s so messed up!
-    <<char_right CassandraSad>>
     Cassandra: Kristen.
-    <<char_right CassandraSad>>
     <<kristen Nervous>>
     Kristen: This was your idea, though! So it’s all gonna work out, right?
-    <<char_right CassandraSad>>
     Cassandra: Kristen...
-    <<char_right CassandraSad>>
     Kristen: They’re <i>not</i> gonna get together without me, right? Right?!
-    <<char_right CassandraSad>>
     Cassandra: Um.
     <<kristen Sad>>
     Kristen: Oh my you. It’s so over for us.
     <<char_right CassandraAngry>>
     Cassandra: Kristen! It’s our lives on the line! If you’ve fumbled this date, you better <i>hope</i> the other three dates were good enough to make up for it!
-    <<char_right CassandraAngry>>
     Cassandra: Or, you know. Maybe ask someone else out. Try asking only <i>one</i> of them out if you really fumbled the other.
     Kristen: ...but that’s a no on the dating without me?
     Cassandra: Kristen. Lock the fuck in! We have bigger problems!

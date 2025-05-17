@@ -33,13 +33,9 @@ title: Cassandra1
     <<char_right CassandraHappy>>
   	<<voiceline CassStartup1>>
     Cassandra: Hi, Kristen! How was class?
-    <<char_right CassandraHappy>>
     Kristen: Pretty good, surprisingly. Lucy and I are partnered up on a project.
-    <<char_right CassandraHappy>>
     Kristen: The Lucy part’s good, anyway. She seems really cool. I don’t know her that well, though.
-    <<char_right CassandraHappy>>
     Cassandra: Not <i>yet</i>.
-    <<char_right CassandraHappy>>
     Kristen: Yeah. Not yet. But maybe soon?
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
@@ -48,22 +44,16 @@ title: Cassandra1
     Cassandra: Hi, Kristen! How was class?
     <<kristen Sad>>
   	<<voiceline KristenSad2>>
-    <<char_right CassandraNeutral>>
     Kristen: Badgood’s assigned us a <i>long</i> paper. My partner’s okay — you know Lucy Frostblade, obviously — but oof, that’s gonna be rough.
-    <<char_right CassandraNeutral>>
     Kristen: I don’t really know how to talk to her yet. It was a little awkward.
-    <<char_right CassandraNeutral>>
     Cassandra: Only a little awkward is good! Better than super awkward!
-    <<char_right CassandraNeutral>>
     Kristen: You know... that’s actually a great point!
 <<else>>
     //flop
     <<kristen Awkward>>
     <<char_right CassandraSad>>
     Kristen: Was that as awkward as it felt or am I freaking out over nothing?
-    <<char_right CassandraSad>>
     Cassandra: Well, it’s not the second thing!
-    <<char_right CassandraSad>>
     <<kristen Neutral>>
     Kristen: Damn. Okay, there goes Lucy as a potential Spring Fling date. Better luck next time, right?
     <<char_right CassandraAngry>>
@@ -93,12 +83,9 @@ title: Cassandra2
   <<kristen Happy>>
   <<char_right CassandraHappy>>
   Kristen: Lucy’s really cool! We’ve got plans to hang out soon, too.
-  <<char_right CassandraHappy>>
   Cassandra: That’s amazing, Kristen! I’m so happy for you!
-  <<char_right CassandraHappy>>
   <<kristen Neutral>>
   Kristen: I mean, I don’t think we’re anywhere near asking her to Spring Fling yet. 
-  <<char_right CassandraHappy>>
   Kristen: Honestly, I’m just having fun getting to know her. I’m happy with that no matter what happens.
   <<char_right CassandraBlush>>
   <<voiceline CassHappy1>>
@@ -108,17 +95,12 @@ title: Cassandra2
   <<kristen Neutral>>
   <<char_right CassandraNeutral>>
   Cassandra: How was your date?
-  <<voiceline KristenNeutral2>>
-  <<char_right CassandraNeutral>>
+<<voiceline KristenNeutral2>>
   Kristen: I don’t know if I’d call that a <i>date</i>...
-  <<char_right CassandraNeutral>>
   Kristen: But she seems pretty cool! I’m sure I’ll figure out how to be less awkward around her soon.
-  <<char_right CassandraNeutral>>
   Cassandra: Sure!
-  <<char_right CassandraNeutral>>
   Kristen: Aren’t you supposed to have faith in me? Or help me be, like, normal around a pretty frost giant girl?
-  <<char_right CassandraNeutral>>
-  <<voiceline CassNeutral2>>
+<<voiceline CassNeutral2>>
   Cassandra: Kristen, I say this as your goddex: I don’t think I’m capable of that particular miracle.
 <<else>>
   //flop
@@ -126,12 +108,9 @@ title: Cassandra2
   <<char_right CassandraNeutral>>
   <<voiceline CassDisappointed2>>
   Cassandra: Yeowch. Rough day?
-  <<char_right CassandraNeutral>>
   Kristen: We could have avoided all of this if you just helped me with my essay!
-  <<char_right CassandraNeutral>>
-  <<voiceline KristenAngry1>>
+<< voiceline KristenAngry1>>
   Kristen: How am I supposed to avoid Lucy forever so I never have to deal with the weight of this awkwardness when we’re in class together?
-  <<char_right CassandraNeutral>>
   Cassandra: I think you have other, more important things to worry about, Kristen.
   <<char_right CassandraSurprised>>
   Cassandra: Like how you’re ever going to get her to agree to go to Spring Fling if you keep this up!
@@ -154,14 +133,10 @@ title: Cassandra3
   <<kristen Soft>>
   <<char_right CassandraHappy>>
   Kristen: When you’re right, you’re right. Lucy’s... she’s really great.
-  <<char_right CassandraHappy>>
   <<voiceline CassHappy2>>
   Cassandra: Someone’s got a cruuuuush.
-  <<char_right CassandraHappy>>
   Cassandra: I think it’s great! You two would be really cute together. 
-  <<char_right CassandraHappy>>
   Cassandra: And you seem to be getting along really well, too... should I have Ankarna put in a good word with her sister?
-  <<char_right CassandraHappy>>
   <<kristen Awkward>>
   <<voiceline KristenNeutral3>>
   Kristen: Little soon for that, don’t you think?!
@@ -172,16 +147,12 @@ title: Cassandra3
   <<kristen Neutral>>
   <<char_right CassandraNeutral>>
   Kristen: Lucy’s super cool. I’m not sure how much she likes <i>me</i>, though.
-  <<char_right CassandraNeutral>>
   <<voiceline CassNeutral1>>
   Cassandra: The good news is you’re not <i>totally</i> hopeless. Buuuut... maybe try relaxing a little bit? Be yourself!
-  <<char_right CassandraNeutral>>
   Cassandra: I think Kristen Applebees is a pretty cool person to be.
-  <<char_right CassandraNeutral>>
   <<kristen Happy>>
   <<voiceline KristenHappy4>>
   Kristen: Aw!
-  <<char_right CassandraNeutral>>
   Cassandra: Besides, that’ll definitely be cooler than when you get too nervous to just talk with Lucy like a normal person!
   <<kristen Surprised>>
   Kristen: Hey!
@@ -190,10 +161,8 @@ title: Cassandra3
   <<kristen Neutral>>
   <<char_right CassandraNeutral>>
   Kristen: Cass. Level with me. What am I doing wrong?
-  <<char_right CassandraNeutral>>
   <<voiceline CassDisappointed1>>
   Cassandra: Um... do you want the short answer or the long one?
-  <<char_right CassandraNeutral>>
   <<kristen Sad>>
   Kristen: Shit, that bad?
   <<char_right CassandraSurprised>>
@@ -220,19 +189,13 @@ title: Cassandra4
   <<kristen Soft>>
   <<char_right CassandraHappy>>
   Kristen: Just got the text that Lucy’s home safe. Which means I don’t have to worry about being overheard when I say oh my you did you <i>see</i> how good her new hair looks?
-  <<char_right CassandraHappy>>
   <<voiceline KristenHappy3>>
   Cassandra: It does look very good, and I’m not just saying that to flatter you!
-  <<char_right CassandraHappy>>
   Cassandra: Seems like you kind of like her, Kristen.
   <<voiceline CassHappy3>>
-  <<char_right CassandraHappy>>
   Kristen: Oh, we’re past that. I think I’m already in deep.
-  <<char_right CassandraHappy>>
   Cassandra: You don’t look all that upset.
-  <<char_right CassandraHappy>>
   Kristen: I know this is normally where I’d start freaking out, but I think I’m just really excited to spend more time with her. Is that bad?
-  <<char_right CassandraHappy>>
   <<voiceline CassHappy1>>
   Cassandra: Not at all! That’s wonderful! I’m really happy for you <i>and</i> for our continued survival!
 <<elseif $date_points >= (1/3) * $date_points_total>>
@@ -240,17 +203,12 @@ title: Cassandra4
   <<kristen Neutral>>
   <<char_right CassandraNeutral>>
   Kristen: Lucy got home safe, so you can tell me how I did now!
-  <<char_right CassandraNeutral>>
   Cassandra: Sure, if you want to be all <i>direct</i> about these check-ins... but it went okay!
-  <<char_right CassandraNeutral>>
   Kristen: Okay? Not good, not bad?
-  <<char_right CassandraNeutral>>
   <<voiceline CassNeutral2>>
   Cassandra: The haircut came out nice, so that’s definitely a point in your favor, but still: middle of the line! Room for improvement but not a failing grade. 
-  <<char_right CassandraNeutral>>
   <<kristen Sad>>
   Kristen: Don’t remind me of my homework now…
-  <<char_right CassandraNeutral>>
   <<voiceline KristenSad3>>
   Cassandra: It has to get done sometime, Kristen. Maybe you can ask Lucy for help? I bet she’d love to know what’s going on with you, too.
 <<else>>
@@ -263,11 +221,9 @@ title: Cassandra4
   Cassandra: Kristen, don’t give up now!
   <<char_right CassandraNeutral>>
   Cassandra: Even if that date <i>was</i> kind of a mess.
-  <<char_right CassandraNeutral>>
   Cassandra: You’ve spent a few weeks hanging out now. Relax a little bit! Be honest!
   <<voiceline KristenAngry2>>
   Kristen: Hey, it’s not like I’m lying about anything!
-  <<char_right CassandraNeutral>>
   Cassandra: True... maybe I should say be <i>earnest</i>.
   <<kristen Surprised>>
 	<<voiceline KristenAwkward1>>
@@ -295,11 +251,9 @@ title: Cassandra5
   <<char_right CassandraHappy>>
 	<<voiceline KristenGreeting3>>
   Kristen: Even community service is fun with Lucy! I really, really like getting to hang out with her.
-  <<char_right CassandraHappy>>
   Cassandra: She likes hanging out with you, too! 
   <<kristen Neutral>>
   Kristen: I could’ve guessed from today, but that’s still a huge relief. Any other tips you can give me?
-  <<char_right CassandraHappy>>
   Cassandra: Hm... honestly, just keep doing what you’re doing! It’s going great!
 	<<voiceline CassFarewell3>>
   <<kristen Happy>>
@@ -310,15 +264,11 @@ title: Cassandra5
   <<char_right CassandraNeutral>>
   Kristen: Did you know talking about your feelings makes you feel better?
 	<<voiceline CassDisappointed1>>
-  <<char_right CassandraNeutral>>
   Cassandra: Of course I did, Kristen. Did you... not know that?
 	<<voiceline KristenAwkward3>>
   Kristen: <i>Anyway</i>... I’m still figuring out how Lucy and I fit together, but I’m starting to make sense of it. Only a couple awkward moments, that’s not too bad.
-  <<char_right CassandraNeutral>>
   Cassandra: Not bad at all! I’m sure she liked getting to know you, too.
-  <<char_right CassandraNeutral>>
   Cassandra: She seems very sweet. So pull out all the stops to woo her, okay? She deserves something good.
-  <<char_right CassandraNeutral>>
   Cassandra: You both do!
 <<else>>
   //flop
@@ -326,17 +276,12 @@ title: Cassandra5
   <<char_right CassandraSad>>
 	<<voiceline KristenSad2>>
   Kristen: Is community service cursed? Am <i>I</i> cursed?
-  <<char_right CassandraSad>>
   Cassandra: Cursed with awkwardness, maybe.
-  <<char_right CassandraSad>>
   <<kristen Surprised>>
   Kristen: Hey!
-  <<char_right CassandraSad>>
   Cassandra: Don’t blame the messenger! You had to have some idea that date was a bit of a disaster.
-  <<char_right CassandraSad>>
   Kristen: Yeah... I just don’t know why. 
 	<<voiceline CassNeutral1>>
-  <<char_right CassandraSad>>
   Cassandra: If you want my advice — and you’d better — pay attention a little more. And don’t be afraid to flirt a little! It’s been more than a month now, and we’re on a short timeline here!
 <<endif>>
 
@@ -358,17 +303,11 @@ title: Cassandra6
   <<char_right CassandraBlush>>
 	<<voiceline CassGreeting1>>
   Kristen: Cass, where could I get a bouquet of snowdrops and orchids without having to mess up Lucy’s flowers?
-  <<char_right CassandraBlush>>
   Cassandra: How should I know? I’m a goddex, not a florist.
-  <<char_right CassandraBlush>>
   Cassandra: But that’s a really good idea! It’s nice to see you’re both in sync.
-  <<char_right CassandraBlush>>
   Cassandra: So? Do you think you’ll ask her to Spring Fling?
-  <<char_right CassandraBlush>>
   Kristen: That depends. Is this your way of telling me she’d say yes?
-  <<char_right CassandraBlush>>
   Cassandra: I can’t give you all the answers! Buuuut if every date went as well as this one…
-  <<char_right CassandraBlush>>
   Cassandra: Then I’d say you’ve got a good shot!
 	<<voiceline CassFarewell3>>
 <<elseif $date_points >= (1/3) * $date_points_total>>
@@ -377,17 +316,12 @@ title: Cassandra6
   <<char_right CassandraNeutral>>
 	<<voiceline KristenHappy3>>
   Kristen: Cass! Lucy told me she <i>liked</i> me!
-  <<char_right CassandraNeutral>>
   Kristen: I mean, she implied it via flower language. Flowerography.
-  <<char_right CassandraNeutral>>
   Cassandra: Floriography. And she did! I’m happy for you, Kristen!
-  <<char_right CassandraNeutral>>
   <<kristen Soft>>
   Kristen: I still get a little tongue-tied around her, but... I think this is something good.
-  <<char_right CassandraNeutral>>
 	<<voiceline CassHappy2>>
   Cassandra: I agree!
-  <<char_right CassandraNeutral>>
   Cassandra: So on your next date, relax a little. Don’t overthink. You know she likes you, so just... be you!
 	<<voiceline CassFarewell4>>
 <<else>>
@@ -396,21 +330,16 @@ title: Cassandra6
   <<char_right CassandraNeutral>>
 	<<voiceline KristenGreeting2>>
   Kristen: Cass, you don’t have to worry about Spring Fling anymore. I’ve got it handled! Lucy’s going to give me roses!
-  <<char_right CassandraNeutral>>
 	<<voiceline CassNeutral1>>
   Cassandra: <i>Orchids</i>, Kristen. Were you paying attention at all?
-  <<char_right CassandraNeutral>>
   <<kristen Neutral>>
   Kristen: I mean, I tried to. That’s got to count for something. 
-  <<char_right CassandraNeutral>>
   <<kristen Awkward>>
   Kristen: Why? Did that date go badly or something?
   Cassandra: Well... it didn’t go <i>well</i>.
-  <<char_right CassandraNeutral>>
   <<kristen Surprised>>
 	<<voiceline KristenAwkward3>>
   Cassandra: Kristen, Lucy might not say yes to go to the dance with you if you act like this. She deserves better than settling.
-  <<char_right CassandraNeutral>>
   Cassandra: So don’t be someone she’d just have to settle for!
 <<endif>>
 
@@ -434,9 +363,7 @@ title: Cassandra7
   Cassandra: Hey, Kristen! You’ve been on my mind all day — I can’t wait to hear about how it went with Lucy!
   <<char_right CassandraSurprised>>
   Cassandra: …
-  <<char_right CassandraSurprised>>
   Cassandra: Why do you have that look on your face?
-  <<char_right CassandraSurprised>>
   Kristen: What, this one?
   <<kristen Happy>>
   <<voiceline KristenHappy1>>
@@ -510,9 +437,7 @@ title: Cassandra8
   <<char_right CassandraSurprised>>
   <<voiceline CassPhone3>>
   Cassandra: KRISTEN!
-  <<char_right CassandraSurprised>>
   Kristen: CASSANDRA!
-  <<char_right CassandraSurprised>>
   Cassandra: Ruvina told Ankarna some juicy gossip that she is <i>purposely</i> withholding from me. I can’t wait any longer. You HAVE to tell me everything rightnowpleasethankyou!
   <<kristen Happy>>
   Kristen: We kissed!
@@ -538,9 +463,7 @@ title: Cassandra8
   <<char_right CassandraSurprised>>
   <<voiceline CassPhone3>>
   Cassandra: KRISTEN!
-  <<char_right CassandraSurprised>>
   Kristen: CASSANDRA!
-  <<char_right CassandraSurprised>>
   Cassandra: Ruvina told Ankarna some juicy gossip that she is <i>purposely</i> withholding from me. I can’t wait any longer. You HAVE to tell me everything rightnowpleasethankyou!
   <<kristen Happy>>
   Kristen: We kissed!
@@ -565,9 +488,7 @@ title: Cassandra8
   <<char_right CassandraSurprised>>
   <<voiceline CassPhone3>>
   Cassandra: KRISTEN!
-  <<char_right CassandraSurprised>>
   Kristen: CASSANDRA!
-  <<char_right CassandraSurprised>>
   Cassandra: Ruvina told Ankarna some juicy gossip that she is <i>purposely</i> withholding from me. I can’t wait any longer. You HAVE to tell me everything rightnowpleasethankyou!
   <<kristen Happy>>
   Kristen: We kissed!
