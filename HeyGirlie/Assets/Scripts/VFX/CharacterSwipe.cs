@@ -47,6 +47,8 @@ public class CharacterSwipe : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        characters[i].anchoredPosition = new Vector2(end, characters[i].anchoredPosition.y);
+        //gameObject.SetActive(false);
     }
 
 }

@@ -24,7 +24,7 @@ Kristen: It’ll be okay! It’ll be <i>great</i>, actually.
 :Which works, by the way! She’s not freaking out anymore.
 Tracker: Thanks, Kristen.
 Kristen: Anytime.
-Tracker: So which package did we end up go—
+Tracker: So which package did we end up go —
 <<char_left NaraNeutral2>>
 <<voiceline NaraGreeting2>>
 Nara: I have some thoughts!
@@ -33,9 +33,10 @@ Nara: I have some thoughts!
 <<voiceline KristenSurprised3>>
 Kristen: Uwauhgah!
 <<voiceline TrackerConfused1>>
-:You don’t jump so much as collapse into Tracker in your  shock. Tracker keeps you on your feet, which is good, because you really don’t want to eat shit <i>again</i>. Her hands feel warm as they slide against your back, then shoulders, gently maneuvering you back up — and you should probably stop thinking about this right now.
+:You don’t jump so much as collapse into Tracker in your shock. Tracker keeps you on your feet, which is good, because you really don’t want to eat shit <i>again</i>. Her hands feel warm as they slide against your back, then shoulders, gently maneuvering you back up — and you should probably stop thinking about this right now.
 Nara: Yes! Please contain your excitement.
 <<char_left NaraThink2>>
+<<voiceline NaraNeutral2>>
 Nara: I must say, I am pleasantly surprised at your choice of establishment. And it actually looks clean! It is almost as if you two actually put effort into your appearance and hygiene…
 Kristen: Hey! We shower!
 Nara: <i>Do</i> you though?
@@ -48,6 +49,7 @@ Tracker: Y’know, maybe she has a point.
 Kristen: It’s also <i>your</i> house?!
 Tracker: Wait, shit, yeah. I should probably be defending Mordred’s honor, right?
 <<char_left NaraShock2>>
+<<voiceline NaraSurprised1>>
 Nara: My goodness, you both move quickly!
 <<char_right TrackerSurprised_3A>>
 Tracker: Uh —
@@ -56,6 +58,7 @@ Tracker: Uh —
 Kristen: No, it’s not because we’re —
 Nara: It is quite alright. I would never live there myself.
 <<char_left NaraDisgust2>>
+<<voiceline NaraSad3>>
 Nara: The mess alone…
 <<char_right TrackerNeutral_3A>>
 Tracker: Where <i>do</i> you live, anyway?
@@ -65,13 +68,14 @@ Nara: To the spa!
 :Used to this, you just follow her inside without another question. Tracker still looks a little baffled, but she falls in step next to you a moment later.
 :Nara’s already talking animatedly at the receptionist when you make it inside. You get the slight suspicion she may have done this before. She’s mentioning a sister site in Fallinel?
 Kristen: What’s going on? Is there a problem with our package?
-Nara: Yes! The problem is that it is bad. Not to worry, though! I have organised a new package that is sure to thrill and delight you both!
+Nara: Yes! The problem is that it is bad. Not to worry, though! I have organized a new package that is sure to thrill and delight you both!
 Wait, what? This was your thing! You were supposed to do this for her! And now she’s ruining her own gift!
 -> <i>Actually, you don’t know anything about spas. This is probably for the best.</i>
     Kristen: Um… yeah, okay.
     :You look at Tracker and shrug. Tracker shrugs back.
     Tracker: You know more about this than we do, Nara. I’m down to follow your lead.
     Kristen: What she said.
+    <<voiceline NaraHappy1>>
     <<char_left NaraHappy2>>
     Nara: Excellent!
     <<add_points 2>>
@@ -88,6 +92,7 @@ Wait, what? This was your thing! You were supposed to do this for her! And now s
     <<add_points 1>>
 -> <i>Tell the receptionist that you’re going to stick with the original package, thanks.</i>
     :The receptionist gives you the side-eye of someone who has just spent the last five minutes listening to an incredibly complicated request and now has to redo everything.
+    <<voiceline NaraAngry1>>
     <<char_left NaraAngry2>>
     Nara: Kristen, I do not think you understand how much more I know about this than you. It is in your best interest to let me take the lead.
     Tracker: She’s got a point, Kristen.
@@ -113,14 +118,17 @@ Tracker: Damn, those massage tables look pretty big.
 :She’s smiling, but she looks a little tense. When you give her a concerned look, though, she shakes her head at your wordless question.
 Tracker: Nah, I’m fine. Just not used to places like… this.
 :Nara looks her up and down. Her face screws up a bit, like she's come up with something a little mean to say but thought better of it. Instead, she breaks into a wide bright smile.
+<<voiceline NaraHappy3>>
 <<char_left NaraHappy2>>
 Nara: Well then, I am delighted to accompany you to your first.
 :Tracker’s smile softens into something a little more genuine when she looks at Nara, too. Maybe you should be jealous, but you’re just happy to see Tracker happy. Happier? Whatever, you get it.
 :Nara pulls an entire bag out of one of her pockets of holding and looks at you questioningly.
-<<char_left NaraThink2>>
+<<voiceline NaraCurious1>>
+<<char_left NaraNeutral2>>
 Nara: Kristen, where is your spa bag? I know this is a new experience for Tracker, but I assume you have at least taken advantage of one of your gym’s many spas.
 Kristen: Spa bag?
 :Nara sighs.
+<<voiceline NaraSad3>>
 Nara: I should not be surprised. Sigh… I suppose you will have to content yourselves with what the spa provides.
 :What the spa provides is honestly nicer than anything you own, so this should be an improvement for you both.
 <<char_left NaraNeutral2>> 
@@ -180,6 +188,7 @@ Tracker: Right. Easy peasy, thanks, Kristen. // TRACKER can be a little mean as 
 :Manicures are next, it seems. Though two immediate problems present themselves: you’ve never had your nails painted professionally, and Tracker’s nails are probably impervious to the humble nail clipper.
 Tracker: It’s fine, don’t worry about me. You two can get pampered and I can just hang out.
 <<char_left NaraSad2>>
+<<voiceline NaraAngry2>>
 Nara: Tracker! The purpose of a spa is to relax! And if you are not relaxing, I am unable to relax!
 Tracker: You seemed pretty relaxed earlier…
 <<voiceline NaraSad1>>
@@ -188,6 +197,7 @@ Nara: Not as relaxed as I could have been! Can you at least <i>try?</i> Please? 
 <<char_right TrackerNeutral_3A>>
 Tracker: Okay. I’ll try.
 Tracker: But I still might have to skip this part, unless they’ve got silver nail clippers.
+<<voiceline NaraHappy2>>
 <<char_left NaraHappy2>>
 Nara: Yippee!
 :As it turns out, when the manicure team finally does arrive and you explain Tracker’s situation, they don’t even blink. In fact, the head manicurist seems to gain a steely look of determination.
@@ -217,6 +227,7 @@ Tracker: Just perfectly. But you already know I’m a cheap date, Nara.
 :Okay, so you know. But you reserve the right to be disappointed at your own predictability. Turns out, grappling with jealousy is just as bad as confronting yourself for <i>not</i> being jealous… 
 <<char_left NaraBlush2>>
 :At least Nara seems pleased — though you can’t tell if it’s due to the implications of that last comment, or just her natural reaction to Tracker being happy. (Cute.)
+<<voiceline NaraHappy1>>
 Nara: Wonderful! I am delighted to learn they still bring you joy. It is why I rearranged the traditional spa itinerary in the first place.
 :Aw. That’s even cuter, actually.
 :You find it a lot easier to relax in here too, actually. Maybe it’s the steam, or maybe it’s the fact that it’s just the three of you and not a bunch of attendants, or maybe it’s that Tracker’s finally relaxed, too. 
@@ -230,6 +241,7 @@ Tracker: This was really nice.
 <<char_left NaraNeutral2>>
 Nara: Of course it was! I enjoyed an opportunity to show you both the finer things in life.
 <<char_left NaraThink2>>
+<<voiceline NaraCurious1>>
 Nara: Though I do wonder what contract this spa has struck with infernals to maintain this heat so consistently…
 Tracker: Babe, it’s arcanotech. 
 :Nara, predictably, ignores this entirely.
@@ -245,7 +257,8 @@ Kristen: Are you... cool with me and Tracker?
 Nara: Of course, why would I not be?
 Kristen: No, I mean are you cool with all three of us being a thing. Together, I mean.
 <<char_left NaraThink2>>
-Nara: I am not sure I understand you correctly, Kristen. I love you. I love Tracker. I know those feelings are mutual, and I know you both love each other. I know all of this, and it makes me love the both of you even more.
+<<voiceline NaraNeutral2>>
+Nara: I am not sure I understand you correctly, Kristen. I like you. I like Tracker. I know those feelings are mutual, and I know you both like each other. I know all of this, and it makes me like the both of you even more.
 Nara: I must admit, I had my reservations in the past regarding relationships involving more than one paramour. But being with both of you… together… there is nothing in the world that I want more. 
 Nara: Why? Are… <i>you</i> not cool with us?
 Kristen: No! No, I am. I’m sorry for asking, Nara.
@@ -263,16 +276,18 @@ You turn to Tracker, half-expecting her to have a suggestion all ready. But she 
     Kristen: What if we go to the Vulture Dimension? That’ll get our heart rates up after relaxing so much.
     :Tracker is intrigued. Nara is not.
     <<char_left NaraDisgust2>>
+    <<voiceline NaraPompous1>>
     Nara: The What.
     :For a second, you actually think before you speak, and try to imagine explaining to <i>Nara</i> — who just learnt how Solesian microwaves work — that there’s an entire parallel dimension you once discovered because you had to fuck with a bird during a pivotal battle.
     <<char_left NaraShock2>>
+    <<voiceline NaraConfused2>>
     Nara: You fucked a what?
     <<kristen Awkward>>
     :Oh shit you said that last bit out loud.
     Kristen: No, I didn’t — 
     <<voiceline KristenSurprised3>>
     <<char_left NaraNeutral2>>
-    Nara: Of course, I knew of your principal’s extensive lobbying in support of the pro avian intercourse community, Kristren. I am greatly surprised to learn of your personal support for him, though! Tell me, was the bird a longtime committed partner, or —
+    Nara: Of course, I knew of your principal’s extensive lobbying in support of the Avian Intercourse community, Kristren. I am greatly surprised to learn of your personal support for him, though! Tell me, was the bird a longtime committed partner, or —
     Kristen: NARA, I HAVE NEVER FUCKED A BIRD IN MY LIFE EVER. 
     <<char_right TrackerLaugh_3A>>
     <<voiceline TrackerHappy2>>
@@ -291,6 +306,7 @@ You turn to Tracker, half-expecting her to have a suggestion all ready. But she 
 -> Kristen: “I don’t know. Let’s just see what happens.”
     Kristen: You know, just roll with the punches. I’ll see you when I see you.
     <<char_left NaraDisgust2>>
+    <<voiceline NaraAngry3>>
     Nara: Kristren, this is most unhelpful.
     Tracker: If you’re too busy to spend time together soon, we can plan something further out. 
     Kristen: I mean, whatever works is fine.
@@ -305,6 +321,7 @@ Kristen: I really don’t know, though. Normally I just meet up with people wher
 Kristen: Uh, you can come over to my place?
 <<voiceline TrackerNeutral2>>
 Tracker: Which is also my place. But yeah, I’d be down to hang out at home.
+<<voiceline NaraSurprised3>>
 <<char_left NaraHappy2>>
 Nara: Are you inviting me to the beloved Solesian ritual commonly known as a Slumber Party?
 Kristen: Um.
@@ -313,6 +330,7 @@ Kristen: Um.
 Kristen: Sure!
 <<voiceline TrackerHappy3>>
 Tracker: Sounds fun.
+<<voiceline NaraHappy3>>
 Nara: I accept your invitation! I will come prepared with only the finest of nightwear.
 :She probably has a matching set, you think fondly. Wait, should you have a matching set? Eh, Tracker’s pajamas will help lower the standards.
 <<kristen Happy>>
