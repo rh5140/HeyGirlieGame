@@ -234,68 +234,56 @@ title: Cassandra4
 <<cass_call  false>>
 <<if $date_points >= (2/3) * $date_points_total>>
     // slay
-    <<kristen Happy>>
     <<char_right CassandraHappy>>
-	<<voiceline CassGreeting1>>
-    Cassandra: Hi, Kristen! How was your date?
-    Kristen: I mean, you saw! It was really nice.
-    Kristen: I’m glad she can share this place with me now. I don’t remember her ever even <i>talking</i> about it before.
-    <<char_right CassandraBlush>>
-    Cassandra: But this time... ?
     <<kristen Soft>>
-    Kristen: It feels good. I like getting to be there for her.
-    <<kristen Grin>>
-	<<voiceline KristenHappy4>>
-    Kristen: Especially in those shorts.
+	<<voiceline KristenSurprised1>>
+    Cassandra: Kristen! That was <i>so</i> cute! No wonder you’re still blushing!
+    Kristen: She kissed me! Did you see that? <i>She</i> kissed <i>me</i>!
+    Kristen: I know I still need to take it slow, I’m not gonna ask her to Spring Fling <i>now</i>. But I feel really good about this. 
+    Kristen: This feels different, this time.
+	<<voiceline CassHappy1>>
+    Cassandra: For the better, right?
+    Kristen: Totally for the better.
+    Kristen: Any tips for me?
+    Cassandra: Honestly, no! Just keep at it and go get her, tiger.
+    <<kristen Surprised>>
     <<char_right CassandraNeutral>>
-    Cassandra: I suppose it was a little <i>too</i> romantic to last...
-    <<char_right CassandraBlush>>
-    Cassandra: ...but that date was still really cute.
+    Cassandra: ...yeah, no, that didn’t work. Still rooting for you two!
+	<<voiceline CassFarewell3>>
 <<elseif $date_points >= (1/3) * $date_points_total>>
     // mid
     <<kristen Neutral>>
     <<char_right CassandraNeutral>>
-	<<voiceline CassGreeting1>>
-    Cassandra: Hi, Kristen! How was your date?
-    Kristen: Good! I think good.
-    Kristen: A little awkward, but not <i>super</i> awkward, so... we’re getting better at being together!
-    <<kristen Grin>>
-    Kristen: Heh. That rhymed.
-    Cassandra: How do you think next week will go?
-    <<kristen Neutral>>
-    Kristen: Meditating? Um...
-    <<kristen Nervous>>
-    Kristen: Do you think it’s too late to ask to go ribbon dancing instead?
-    <<char_right CassandraAngry>>
-	<<voiceline CassDisappointed3>>
-    Cassandra: Yes!
-    <<char_right CassandraNeutral>>
-    Cassandra: Just give it a shot. As long as you’re actually <i>trying</i>, Tracker will be happy.
+	<<voiceline CassDisappointed2>>
+    Kristen: Okay, a little rough at points but I think we got somewhere really nice at the end!
+    Cassandra: Awkward moments are normal! You two used to date, I think every second chance romance has a rough patch.
+    Cassandra: I mean, me and Ankarna... oof. It took us some time to get where we are.
+    Kristen: What? No, you guys were cute again literally right away.
+    <<char_right CassandraBlush>>
+    Cassandra: We <i>are</i> cute. But just because you didn’t see the work doesn’t mean it wasn’t there!
+    Cassandra: And we keep putting the work in, too! It matters.
+    Kristen: Right. And so does Tracker.
     <<char_right CassandraHappy>>
-    Cassandra: And so will I!
+    Cassandra: Exactly!
 <<else>>
     //flop
-    <<kristen Sad>>
-    <<char_right CassandraNeutral>>
-<<voiceline CassGreeting1>>
-    Cassandra: Hi, Kristen! How was your date?
-    Kristen: So are we, like, <i>completely</i> sure I have to get a date for Spring Fling?
-    Cassandra: Yes.
-    <<kristen Surprised>>
-    Kristen: Wow, really? Total certainty from the goddex of doubt?
-	<<voiceline CassNeutral1>>
-    Cassandra: I am 100 percent convinced Arthur Aguefort will kill you if you don’t get a date.
-	<<voiceline KristenSad3>>
+    <<kristen Grin>>
     <<char_right CassandraSad>>
-    Cassandra: The date didn’t go <i>that</i> bad, did it?
-    Kristen: I don’t know! Maybe?
-    <<char_right CassandraNeutral>>
-    Kristen: I thought we were supposed to be past all the awkward stuff, but it’s still <i>so</i> awkward.
-    Kristen: Is it ever going to be as easy as it used to?
-    Cassandra: Kristen... I think you’re getting a little too in your own head.
-    Cassandra: Relax. Be honest with Tracker and with yourself about what you want and it’ll all work out.
-    Cassandra: ...probably.
-    Kristen: Probably?!
+    Kristen: Did you see that, Cass? We kissed! Spring Fling, here we come!
+    Cassandra: Kristen. 
+	<<voiceline CassDisappointed1>>
+    <<kristen Awkward>>
+    Kristen: What? Did Tracker say something to Galicaea?
+    Cassandra: I’m not upset because of Tracker.
+    <<kristen Awkward>>
+    Kristen: ...listen, I know Bucky —
+    Cassandra: Spring Fling is important, Kristen, but it’s not everything.
+    Kristen: It’s literally life or death! Tracker was mad I picked up the phone on our date!
+    Cassandra: Kristen, do you really think she was mad about <i>that</i>?
+    <<kristen Sad>>
+	<<voiceline KristenSad1>>
+    Kristen: ...no. I’ll do better.
+    Cassandra: I know you’ll try.
 <<endif>>
 <<jump EndDate>>
 ===
