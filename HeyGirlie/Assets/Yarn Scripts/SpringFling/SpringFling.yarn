@@ -285,7 +285,7 @@ title: FlopEnding
 <<location "Aguefort Gym">>
 <<background SpringFling>>
 <<fade_in_ui>>
-<<play_track sf>>
+<<play_track bluegrace>>
 <<if $date == "FigAyda">>
     <<set $date = "Fig and Ayda">>
 <<elseif $date == "FKB">>
@@ -309,7 +309,6 @@ Wait, that voiceline wasn’t supposed to be in your flashback…
 <<bg_filter_off>>
 <<char_right  transparent>>
 <<wait  1>>
-<<play_track bluegrace>>
 <<background SpringFling>>
 <<kristen  Surprised_SF>>
 You look around for the owner of the mysterious voice.
