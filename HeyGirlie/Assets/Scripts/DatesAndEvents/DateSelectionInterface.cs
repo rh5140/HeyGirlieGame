@@ -17,6 +17,7 @@ public class DateSelectionInterface : MonoBehaviour
     [SerializeField] private AudioTrackManager _atm;
     public void Start()
     {
+        _atm.MuteTrack("cassandra");
         List<Button> valid = new List<Button>();
         
         if (GameManager.Instance.DatesThisWeek == 0) SetUpRegions();

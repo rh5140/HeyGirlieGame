@@ -10,11 +10,12 @@ You thought Kipperlilly would blow up your phone with a list of ridiculous, undo
 
 <<sfx vibrate>>
 <<toggleText 2Kipperlilly>>
-Kipperlilly: Library, after school. I can’t force you to be punctual but at least try to be on time, Applebees.
+Kipperlilly (text): Library, after school. I can’t force you to be punctual but at least try to be on time, Applebees.
 <<toggleText none>>
 
 She <i>has</i> to be the only person your age in the world who texts like she’s writing an essay.
 
+<<sfx ring>>
 When the final bell rings, you haphazardly sweep all of your stuff into your backpack and head to the library, expecting to find Kipperlilly waiting near the front door, or at least within eyeshot of it. 
 
 <<location "Library">>
@@ -24,6 +25,7 @@ No sign of a smug halfling ready to blackmail you.
 
 :You resign yourself to long hours of wandering in search of her. Maybe this is your first task: waste your time attempting to track down a rogue that was small enough to fit in an air vent or between the pages of a book just for her amusement.
 
+<<sfx crash>>
 Suddenly, something lands on your shoulders and wrenches you off-balance, yanking you backwards by your ponytail. 
 
 <<voiceline KipBespoke1>>
@@ -60,15 +62,15 @@ Kipperlilly: Hmm. More fun for me, then.
   <<voiceline KipSmug2>>
   Kipperlilly: Ha! Don’t flatter yourself.
   <<add_points 1>>
--> Kristen: “Are you going to do that every time?”
-  <<voiceline KipHappy1>>
-  Kipperlilly: Why? Should I?
-  <<add_points 1>>
 -> Kristen: “Is this kind of practice fun for you guys? We just hang out and stuff.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipSad1>>
   Kipperlilly: Not my fault Gukgak doesn’t care enough about you to prepare you for an ambush.
   <<add_points 0>>
+-> Kristen: “Are you going to do that every time?”
+  <<voiceline KipHappy1>>
+  Kipperlilly: Why? Should I?
+  <<add_points 1>>
 
 <<kristen Sad>>
 You resign yourself to more sneak attacks in your future. Maybe you should ask Riz for pointers next time you see him.
@@ -79,37 +81,49 @@ Kristen: Alright, Kipperlilly, what do you need me to do? Unless ambushing me to
 Kipperlilly: Please, you weren’t even a decent challenge. C’mon, this way.
 
 <<kristen Neutral>>
-She leads you through a maze of bookshelves to a table barely big enough for the two of you and produces notebooks, stationery, and a stack of library books on heists and thieves. What could she want you to do with these? She knows you’re not exactly the most academically minded student out there. 
+She leads you through a maze of bookshelves to a table barely big enough for the two of you and produces notebooks, stationery, and a stack of library books on heists and thieves. 
+
+What could she want you to do with these? She knows you’re not exactly the most academically minded student out there. 
 
 Kristen: … am I supposed to read these for you or…?
 
 <<char_right KipperlillyAnnoyed>>
+<<voiceline KipSad1>>
 Kipperlilly: No, don’t touch anything. You’ll fuck up my system.
 
 Kipperlilly: I need some quotes from <i>Encyclopedia Speculatus.</i> There’s a chapter in there on circumventing magical detection, and <i>your</i> rogue has the only copy out on loan.
 
+<<kristen Surprised>>
 Kristen: Riz? Why would he have it?
 
 <<char_right KipperlillyNeutral>>
-Kipperlilly: Unless there’s some freshman trying to get extra credit, which is annoyingly plausible but unlikely, he’s the only other student who’d need it. We’re the only two doing this project — we can’t exactly point at Eugenia’s grave <i>twice</i>. It ruins the spirit of the exam or whatever.
+Kipperlilly: Unless there’s some freshman trying to get extra credit, which is annoyingly plausible but unlikely, he’s the only other student who’d need it. 
 
+Kipperlilly: We’re the only two doing this project — we can’t exactly point at Eugenia’s grave <i>twice</i>. It ruins the spirit of the exam or whatever.
+
+<<kristen Neutral>>
 Kipperlilly: All I need is some pictures of that book. It’s not like <i>I</i> can just ask nicely.
 
+<<kristen Happy>>
 Kristen: And then you’ll give me the key?
 
 <<char_right KipperlillyAnnoyed>>
 <<voiceline KipAnnoyed2>>
 Kipperlilly: ... lesson number two is going to be on how multistep plans work. Of course not. This is step one of getting the key. 
 -> Kristen: “In that case, let’s get some pictures!”
+  <<kristen Neutral>>
+  <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral2>>
   Kipperlilly: That’s what I like to hear, Applebees.
   <<add_points 2>>
 -> Kristen: “Hmm. Seems simple enough.”
+  <<kristen Neutral>>
   <<char_right KipperlillySmug>>
   <<voiceline KipSmug1>>
   Kipperlilly: I knew you’d see it my way.
   <<add_points 1>>
 -> Kristen: “What exactly are you going to use that chapter for?”
+  <<kristen Neutral>>
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly: Literally just homework. This draft’s due in two days. What, do you think I’m using you for my latest plan to end the world? Even if I <i>was</i>, why would I tell you that?
@@ -117,27 +131,29 @@ Kipperlilly: ... lesson number two is going to be on how multistep plans work. O
 
 <<char_right KipperlillyNeutral>>
 
-Now that you think about it, you do remember Riz stressing about some insane capstone project he’s working on this year. It’s something like 120% of his grade; when Adaine asked how <i>that</i> worked, he said it could cover some of his missing credits from freshman year when you were all in jail.
+Now that you think about it, you do remember Riz stressing about some insane capstone project he’s working on this year. It’s something like 120% of his grade. 
+
+When Adaine asked how <i>that</i> worked, he said it could cover some of his missing credits from freshman year when you were all in jail.
 
 It’s also something you have absolutely nothing to do with. He might get suspicious of ulterior motives if you suddenly ask for pictures of some book about heists and traps. Mentioning Kipperlilly probably wouldn’t go over very well.
 
 <<kristen Awkward>>
 <<voiceline KristenAwkward2>>
 <<toggleText Kristen>>
-Kristen: hey riz :) big favor to ask
-
--> Kristen: “does ur project have anything about getting around magic detection? tryin to get my president shit done lol”
-  <<toggleText none>>
-  Kristen: Riz trusts me enough to not think too hard about it, and Arthur’s crazy enough to, like, set up magical spyware on the student president. Probably.
-  <<add_points 2>>
--> Kristen: “some sophomore is working on one of eugenia’s puzzles and apparently youve got the book on getting around it. wanna help a president out B)”
-  <<toggleText none>>
-  Kristen: There’s no way Riz knows every rogue at Aguefort, right?
-  <<add_points 1>>
+Kristen (text): hey riz :) big favor to ask
 -> Kristen: “might start rogue classes, could i get photos of ur shit to study like ch7 of that encyclopedia youve been dragging around B)”
   <<toggleText none>>
   Kristen: Multiclassing in senior year with no warning? Why not?
   <<add_points 0>>
+-> Kristen: “some sophomore is working on one of eugenia’s puzzles and apparently youve got the book on getting around it. wanna help a president out B)”
+  <<toggleText none>>
+  Kristen: There’s no way Riz knows every rogue at Aguefort, right?
+  <<add_points 1>>
+-> Kristen: “does ur project have anything about getting around magic detection? tryin to get my president shit done lol”
+  <<toggleText none>>
+  Kristen: Riz trusts me enough to not think too hard about it, and Arthur’s crazy enough to, like, set up magical spyware on the student president. Probably.
+  <<add_points 2>>
+
 
 Riz doesn’t reply immediately. You’re not surprised; he refused to drop any of the clubs he joined last year. Apparently, it implies to colleges that he’ll just give up on his responsibilities.
 
@@ -172,15 +188,15 @@ Kipperlilly doesn’t quite look up, but her writing slows down a little as she 
 Kristen: What kind of project is this, anyways? Are you two working on the same thing?
 
 Kipperlilly: I have to design a security system based on available resources and outline a potential heist I would conduct against those countermeasures. Gukgak’s parameters are completely different, there’s just a lot of overlap in research.
+-> Kristen: “Is there a point to holding the books hostage?”
+  <<voiceline KipNeutral1>>
+  Kipperlilly: Learning how to exchange information is just as important as acquiring it in the first place. That’s freshman year knowledge.
+  <<add_points 1>>
 -> Kristen: “Is it a competition?”
   <<char_right KipperlillySmug>>
   <<voiceline KipHappy1>>
   Kipperlilly: Eugenia doesn’t think so, but she hasn’t been an adventurer in decades. So yes, and I’m going to get a better score than him and laugh while he cries about it.
   <<add_points 2>>
--> Kristen: “Is there a point to holding the books hostage?”
-  <<voiceline KipNeutral1>>
-  Kipperlilly: Learning how to exchange information is just as important as acquiring it in the first place. That’s freshman year knowledge.
-  <<add_points 1>>
 -> Kristen: “And you two can’t just... share?”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
@@ -203,7 +219,9 @@ Oh well. A bit late to back out now.
 
 <<char_right KipperlillyNeutral>>
 <<kristen Grin>>
-Kristen: You know, I’m actually not all that surprised Riz set this kind of thing up with you. He’s a great guy, but man is he such a rogue. Always gotta have a ten-step plan for everything. That’s what you’re like, right? Plans upon plans, or whatever you said —
+Kristen: You know, I’m actually not all that surprised Riz set this kind of thing up with you. 
+
+Kristen: He’s a great guy, but man is he such a rogue. Always gotta have a ten-step plan for everything. That’s what you’re like, right? Plans upon plans, or whatever you said —
 
 <<char_right KipperlillyAnnoyed>>
 Kipperlilly: Shhh. I’m not getting booted from the library because you can’t ever shut up, Applebees.
@@ -226,7 +244,7 @@ A brilliant idea strikes you, and you pull out your crystal.
 <<kristen Grin>>
 <<voiceline KristenHappy3>>
 <<toggleText Kristen>>
-Kristen: heyyyyyy kipperlilly :)
+Kristen (text): heyyyyyy kipperlilly :)
 <<toggleText none>>
 
 <<sfx vibrate>>
@@ -238,47 +256,47 @@ Kristen: You’re the one who said I needed to shut up!
 She narrows her eyes at you before picking up her crystal.
 
 <<toggleText 2Kipperlilly>>
-Kipperlilly: I specifically told you not to text me.
+Kipperlilly (text): I specifically told you not to text me.
 <<toggleText Kristen>>
-Kristen: u also told me not to get u kicked out of the library
+Kristen (text): u also told me not to get u kicked out of the library
 <<toggleText none>>
 
 <<kristen Neutral>>
-<<char_right KipperlillyNeutral>>
 Kipperlilly pointedly stands one of her books up so it blocks her from your view. Good thing you don’t need line of sight to send a text.
+<<char_right KipperlillyNeutral>>
 <<toggleText Kristen>>
--> Kristen: “what if he doesn’t reply today”
-  <<toggleText 2Kipperlilly>>
-  Kipperlilly: Then you’ll have to get it another way, won’t you?
-  <<add_points 1>>
--> Kristen: “so hows the heisting going :)”
-  <<toggleText 2Kipperlilly>>
-  Kipperlilly: It would be going perfectly if I had those photos.	  
-  <<add_points 1>>
 -> Kristen: “do u think dimweather would actually kick us out if i screamed”
   <<toggleText 2Kipperlilly>>
   <<char_right KipperlillyAnnoyed>>
-  Kipperlilly: You are actually the worst.
+  Kipperlilly (text): You are actually the worst.
   <<add_points 0>>
+-> Kristen: “what if he doesn’t reply today”
+  <<toggleText 2Kipperlilly>>
+  Kipperlilly (text): Then you’ll have to get it another way, won’t you?
+  <<add_points 1>>
+-> Kristen: “so hows the heisting going :)”
+  <<toggleText 2Kipperlilly>>
+  Kipperlilly (text): It would be going perfectly if I had those photos.	  
+  <<add_points 1>>
+
 <<toggleText Kristen>>
 <<char_right KipperlillyNeutral>>
-Kristen: so
+Kristen (text): so
 
-Kristen: besides this how has school been :)
+Kristen (text): besides this how has school been :)
 <<toggleText 2Kipperlilly>>
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly: You are incorrigible.
+Kipperlilly (text): You are incorrigible.
 <<toggleText none>>
 
-<<kristen Soft>>
+<<kristen Grin>>
 <<voiceline KipSad1>>
 You heart-react that one. Kipperlilly audibly scoffs.
 
 <<toggleText Kristen>>
-Kristen: thanks!
+Kristen (text): thanks!
 <<toggleText none>>
 
-<<kristen Grin>>
 Kipperlilly actually takes down her book-wall to give you a truly disgusted look. You send another smile emoji. She rolls her eyes dramatically before going back to studying, leaving the book flat on her table this time.
 
 <<kristen Neutral>>
@@ -308,30 +326,30 @@ She doesn’t even bother making eye contact, typing out a rushed reply, but you
 <<toggleText Kristen>>
 -> Kristen: “no need to be embarrassed <3”
   <<toggleText 2Kipperlilly>>
-  Kipperlilly: I’m not.
-  <<add_points 1>>
--> Kristen: “nearly your curfew?”
-  <<toggleText 2Kipperlilly>>
-  Kipperlilly: It’s literally 4:30.
+  Kipperlilly (text): I’m not.
   <<add_points 1>>
 -> Kristen: “thats a lot of emojis for one message”
   <<toggleText 2Kipperlilly>>
-  Kipperlilly: It’s rude to look at someone else’s texts.
+  Kipperlilly (text): It’s rude to look at someone else’s texts.
   <<add_points 0>>
+-> Kristen: “nearly your curfew?”
+  <<toggleText 2Kipperlilly>>
+  Kipperlilly (text): It’s literally 4:30.
+  <<add_points 1>>
 
 <<toggleText Kristen>>
 <<char_right KipperlillyNeutral>>
-Kristen: so whats up kip? u getting picked up or something?
+Kristen (text): so whats up kip? u getting picked up or something?
 
 <<toggleText 2Kipperlilly>>
 <<char_right KipperlillyAngry>>
-Kipperlilly: Don’t call me that.
+Kipperlilly (text): Don’t call me that.
 
 <<char_right KipperlillyNeutral>>
-Kipperlilly: She was asking what I wanted for dessert tonight, if you must know. 
+Kipperlilly (text): She was asking what I wanted for dessert tonight, if you must know. 
 
 <<toggleText Kristen>>
-Kristen: awwww its sweet that shes checking in
+Kristen (text): awwww its sweet that shes checking in
 <<toggleText none>>
 
 <<voiceline KipSad1>>
@@ -353,26 +371,28 @@ Kipperlilly: Well?
 You scroll through the messages. 
 
 <<toggleText Riz>>
-Riz: ?
+Riz (text): ?
 
-Riz: that makes no sense kristen
+Riz (text): that makes no sense kristen
 
-Riz: what does that have to do w my schoolwork
+Riz (text): what does that have to do w my schoolwork
 
-Riz: is this for a heist
+Riz (text): is this for a heist
 
-Riz: are you planning a heist WITHOUT ME
+Riz (text): are you planning a heist WITHOUT ME
 
-Riz: i thought we were friends
+Riz (text): i thought we were friends
 
-Riz: :( 
+Riz (text): :( 
 
-Riz: i’m kidding
+Riz (text): i’m kidding
 
-Riz: though if you ARE planning a heist let me in on it, yeah?
+Riz (text): though if you ARE planning a heist let me in on it, yeah?
 <<toggleText none>>
 
-Riz then sends around twenty pictures of dense text. He’s such a good friend. Too bad you and Kipperlilly are both exploiting his loyalty right now. You forward everything to Kipperlilly, who studies her crystal before breaking out into giddy giggles.
+Riz then sends around twenty pictures of dense text. He’s such a good friend. Too bad you and Kipperlilly are both exploiting his loyalty right now. 
+
+You forward everything to Kipperlilly, who studies her crystal before breaking out into giddy giggles.
 
 <<char_right KipperlillyHappy>>
 <<voiceline KipHappy1>>

@@ -182,7 +182,7 @@ She gives you one last smile, though it looks half like a wince, before quietly 
 <<voiceline KristenSad1>>
 
 You blow out a breath, trying to ignore the ache in your chest. It’s not like it’s the end of the world, even if it feels like the end of something.
-
+<<jump Ending>>
 ===
 
 title: FrostkettleEnding
@@ -190,20 +190,24 @@ title: FrostkettleEnding
 <<play_track sf>>
 <<background SpringFling>>
 <<fade_in_ui>>
+<<kristen Neutral_FK>>
 You’re about to walk onto the dance floor while you wait for your dates to arrive when you’re suddenly pulled into the dark side room you spent two hours shoving all of the school’s dodgeballs and wall pads into. 
 
+<<kristen Grin_FK>>
 Kristen: Can’t I get at least one hour at a dance before being kidnapped or whatever?
 
 <<char_right KipperlillyNeutral1>>
 Kipperlilly: What the fuck are you talking about? 
 
 <<kristen Neutral_FK>>
-Speak of the devil. Or devils, as it were. Kipperlilly darts back out and inexplicably dives under the bleachers before you can tell her how well her earrings go with her dress and overall vibe. At least Lucy stuck around, even if her own dress is half-crumpled as she squashes herself next to the doorway.
+Speak of the devil. Or devils, as it were. Kipperlilly darts back out and inexplicably dives under the bleachers before you can tell her how well her earrings go with her dress and overall vibe. 
+
+<<char_left LucyNeutral4>>
+At least Lucy stuck around, even if her own dress is half-crumpled as she squashes herself next to the doorway.
 
 <<kristen Happy_FK>>
 Kristen: You look great! Love the boots—
 
-<<char_left LucyNeutral4>>
 Lucy: Shh, keep your voice down.
 
 <<kristen Neutral_FK>>
@@ -230,10 +234,13 @@ Kristen: What does Adaine have to do with anything?
 
 You join them at the doorway, sneaking your head between the two of theirs.
 
-<<background SpringFling_FKB>>
 <<kristen transparent>>
 <<char_left transparent>>
 <<char_right transparent>>
+<<fade_out_ui>>
+<<background SpringFling_FKB>>
+<<wait 2>>
+<<fade_in_ui>>
 
 //<<char_right KipperlillyHappy>>
 Kipperlilly: Oh, Ivy’s seen her!
@@ -248,7 +255,9 @@ Kipperlilly: Why would she listen to that? It’s Ivy.
 Kristen: Okay, what am I missing?
 
 //<<char_right KipperlillyNeutral>>
-Oisin glares over his shoulder at Ivy, who smugly waves back from the fringe of the dance floor, before turning to make eye contact with Adaine, who’s watching the whole exchange with her patented “what <i>now?</i>” look. Oisin visibly swallows before digging for something in his pocket.
+Oisin glares over his shoulder at Ivy, who smugly waves back from the fringe of the dance floor, before turning to make eye contact with Adaine, who’s watching the whole exchange with her patented “what <i>now?</i>” look. 
+
+Oisin visibly swallows before digging for something in his pocket.
 
 <<voiceline KristenSurprised1>>
 Kristen: Wait—
@@ -279,34 +288,45 @@ Kipperlilly: Mission success, motherfuckers.
 //<<char_left LucyHappy>>
 <<voiceline LucyHappy1>>
 Lucy: I do love a happy ending.
+
+<<fade_out_ui>>
+<<wait 2>>
 <<background SpringFling>>
+<<fade_in_ui>>
 <<kristen Neutral_FK>>
 <<char_right KipperlillyNeutral1>>
 <<char_left LucyHappy4>>
 Kipperlilly goes to walk out of the room, but you grab her shoulder before she can leave. 
 
+<<char_right KipperlillyAnnoyed1>>
 Kipperlilly: What now?
 
 <<kristen Grin_FK>>
 Kristen: The two of you dragged me into a dark room and <i>didn’t</i> expect me to take advantage of it?
 
 <<char_left LucyBlush4>>
+<<char_right KipperlillyBlush1>>
 <<voiceline LucyRomantic2>>
 You can just barely make out both of them blushing in the light filtering in from the Spring Fling. You sit down on a pile of mats and wait for their response.
 
 <<kristen Soft_FK>>
-Kipperlilly recovers first; she clears her throat as she steps forward. There’s a moment of uncertainty before she kisses you, but she relaxes as you pull her closer. You break the kiss as Lucy steps behind you and wraps her arms around you both, one knee on the mats and her chin on your shoulder. Kipperlilly stretches up to kiss Lucy, who tilts your chin back when they’ve drawn apart.
+Kipperlilly recovers first; she clears her throat as she steps forward. There’s a moment of uncertainty before she kisses you, but she relaxes as you pull her closer. 
+
+You break the kiss as Lucy steps behind you and wraps her arms around you both, one knee on the mats and her chin on your shoulder. Kipperlilly stretches up to kiss Lucy, who tilts your chin back when they’ve drawn apart.
 
 You think you could sit here with the two of them forever.
 
+<<sfx vibrate>>
 Kipperlilly’s phone buzzes in a pocket you didn’t realize she had. She lazily checks it.
 
+<<char_right KipperlillyAnnoyed1>>
 Kipperlilly: Ugh, they’ve noticed we’re missing.
 
 <<char_left LucyNeutral4>>
 Lucy: We <i>have</i> been here for a while.
 
 <<kristen Neutral_FK>>
+<<char_right KipperlillyNeutral1>>
 Kristen: Wanna head out, then?
 
 As you stand, your hand finds Kipperlilly’s and you kiss Lucy’s cheek. Lucy and Kipperlilly lace their fingers together as you step out of the side room and into the mayhem of the Spring Fling. 
@@ -322,4 +342,5 @@ You squeeze Kipperlilly’s hand and exchange a smile with Lucy. They turn to yo
 <<wait 2>>
 <<background SpringFling_FKB>>
 <<enable_continue>>
+
 ===

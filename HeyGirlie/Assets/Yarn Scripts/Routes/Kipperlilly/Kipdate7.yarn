@@ -71,12 +71,6 @@ Kristen: Oh shit, the <i>key.</i>
 <<char_right KipperlillyAnnoyed>>
 <<voiceline KipAnnoyed2>>
 Kipperlilly: Did you forget about the fucking key?
--> Kristen: “You stopped mentioning it, so I thought you just liked hanging out with me!”
-  <<char_right KipperlillyBlush>>
-  <<voiceline KipSurprised1>>
-  Kipperlilly: Oh, please. You would know if I liked hanging out with you that much.
-  <<add_points 2>>
-  <<kristen Awkward>>
 -> Kristen: “Um, kinda? Maybe? Yeah.”
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral2>>
@@ -88,6 +82,12 @@ Kipperlilly: Did you forget about the fucking key?
   <<voiceline KipAngry2>>
   Kipperlilly: You’re <i>still</i> a shitty liar, Applebees.
   <<add_points 0>>
+-> Kristen: “You stopped mentioning it, so I thought you just liked hanging out with me!”
+  <<char_right KipperlillyBlush>>
+  <<voiceline KipSurprised1>>
+  Kipperlilly: Oh, please. You would know if I liked hanging out with you that much.
+  <<add_points 2>>
+  <<kristen Awkward>>
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly flicks the key up into the air, catching it in her hand and rolling her eyes.
@@ -101,13 +101,13 @@ Kipperlilly: I keep the key. Maybe I’ll renovate your office again.
 Kristen: Wait, so everything I already did for you doesn’t count?
 
 Kipperlilly: Never heard of an ultimatum before?
+-> Kristen: “Then it’s a good thing I’m here to win.”
+  Kipperlilly narrows her eyes at you, but the corner of her mouth curls up in a smirk.
+  <<add_points 1>>
 -> Kristen: “Probably should’ve expected a last minute plan, huh?”
   <<voiceline KipHappy2>>
   Kipperlilly: I can’t believe you didn’t. Your naivete is almost refreshing.
   <<add_points 2>>
--> Kristen: “Then it’s a good thing I’m here to win.”
-  Kipperlilly narrows her eyes at you, but the corner of her mouth curls up in a smirk.
-  <<add_points 1>>
 -> Kristen: “That’s not fair, I’ve never played!”
   <<voiceline KipSmug1>>
   Kipperlilly: Kiss this key goodbye forever, then.
@@ -116,12 +116,11 @@ Kipperlilly: Never heard of an ultimatum before?
 <<kristen Grin>>
 Kristen: Alright, Kip. All or nothing.
 
+<<play_track k7>>
 <<char_right KipperlillyNeutral>>
 You stick out a hand for her to shake. Kipperlilly shoves the key back into her pocket before taking it. She shakes it for barely a second before turning around and walking to the chessboard, taking a seat behind the black pieces.
 
 Kipperlilly: First move is yours.
-
-<<play_track k7>>
 
 You slide into your seat, looking at the board. All memory of how the pieces move and how to win vanish from your brain.
 
@@ -161,15 +160,16 @@ Kipperlilly: What do you mean?
   Kipperlilly: It was going to happen eventually.
   She doesn’t seem as pleased about it as you would imagine.
   <<add_points 1>>
+->  Kristen: “The game. You’re obviously calling your defeat already — you even brought the key, right? You know you’ll never defeat my insane beginner’s luck strategy.”
+  <<voiceline KipNeutral1>>
+  Kipperlilly: Keep telling yourself that.
+  <<add_points 0>>
 -> Kristen: “Did I piss you off or something?”
   <<voiceline KipAnnoyed1>>
   Kipperlilly: You <i>always</i> piss me off.
   She doesn’t sound as convinced as usual.
   <<add_points 1>>
-->  Kristen: “The game. You’re obviously calling your defeat already — you even brought the key, right? You know you’ll never defeat my insane beginner’s luck strategy.”
-  <<voiceline KipNeutral1>>
-  Kipperlilly: Keep telling yourself that.
-  <<add_points 0>>
+
 
 <<sfx chess>>
 She makes a move. You’re not sure what. You aren’t really paying attention. You idly pick up one of your pieces (a bishop, you think), tilting your head to the side.
@@ -199,15 +199,15 @@ Kipperlilly: This is your problem, you know, you’re so blasé. Unfocused.
   <<char_right KipperlillyNeutral>>
   Kipperlilly doesn’t answer for a long moment, before slowly nodding once.
   <<add_points 2>>
+-> Kristen: “Not my fault all these pieces do something different.”
+  <<voiceline KipAnnoyed2>>
+  Kipperlilly: If you just paid attention, it wouldn’t be an issue.
+  <<add_points 0>>
 -> Kristen: “I’m just looking out for the forest and not the trees.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed2>>
   Kipperlilly: Excuses, Kristen.
   <<add_points 1>>
--> Kristen: “Not my fault all these pieces do something different.”
-  <<voiceline KipAnnoyed2>>
-  Kipperlilly: If you just paid attention, it wouldn’t be an issue.
-  <<add_points 0>>
 
 <<char_right KipperlillyAnnoyed>>
 <<sfx chess>>
@@ -236,7 +236,7 @@ Guess you’d better keep doing more of that. If you’re not consistent enough 
 
 <<sfx chess>>
 <<kristen Neutral>>
-You focus on just moving the pieces correctly to avoid pissing Kipperlilly off needlessly, but you just barely get away with taking a little too long to decide on your next move each turn. You fill the dead space with chatter.
+You focus on moving the pieces correctly to avoid pissing Kipperlilly off needlessly, but you just barely get away with taking a little too long to decide on your next move each turn. You fill the dead space with chatter.
 
 Kristen: When did you start playing chess?
 
@@ -330,19 +330,19 @@ Kristen: Are you sure? You seem a little…
 She glares at you.
 
 Kipperlilly: What are you getting at? 
--> Kristen: “I’ve just been missing the smug gloating about your inevitable victory.”
-  <<voiceline KipNeutral1>>
-  Kipperlilly: I don’t know what you’re talking about.
-  <<add_points 2>>
--> Kristen: “I dunno. Maybe I’m imagining it.”
-  <<voiceline KipAnnoyed1>>
-  Kipperlilly: Maybe you should stop imagining and focus.
-  <<add_points 1>>
 -> Kristen: “Something’s obviously got you pressed, so just tell me.”
   <<char_right KipperlillyAngry>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly: It’s just a tail, it doesn’t mean anything.
   <<add_points 0>>
+-> Kristen: “I dunno. Maybe I’m imagining it.”
+  <<voiceline KipAnnoyed1>>
+  Kipperlilly: Maybe you should stop imagining and focus.
+  <<add_points 1>>
+-> Kristen: “I’ve just been missing the smug gloating about your inevitable victory.”
+  <<voiceline KipNeutral1>>
+  Kipperlilly: I don’t know what you’re talking about.
+  <<add_points 2>>
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: Just play the stupid game so we can be done with this.
@@ -398,6 +398,10 @@ Kipperlilly: Then why didn’t you?
 Kristen: I was having too much fun spending time with you.
 
 Kipperlilly: Don’t say something stupid like that.
+-> Kristen: “Do you think that I exclusively lie to you or something?”
+  <<voiceline KipSad3>>
+  Kipperlilly: Maybe it’d be better if you did.
+  <<add_points 0>>
 -> Kristen: “Why not? It’s the truth.”
   <<char_right KipperlillySad>>
   <<voiceline KipSad1>>
@@ -408,10 +412,6 @@ Kipperlilly: Don’t say something stupid like that.
   <<voiceline KipAngry2>>
   Kipperlilly: What’s stupid is you acting like you actually do.
   <<add_points 1>>
--> Kristen: “Do you think that I exclusively lie to you or something?”
-  <<voiceline KipSad3>>
-  Kipperlilly: Maybe it’d be better if you did.
-  <<add_points 0>>
 
 <<kristen Surprised>>
 Kristen: Did you really think I only cared about the key this whole time?
@@ -423,13 +423,13 @@ Kipperlilly: The key was the only reason you started talking to me again in the 
 Kristen: Yeah, and then I actually got to know you.
 
 Kristen: If I only cared about the key, would I have…
+-> “… looked for you at the arcade?”
+  Kipperlilly: I still made you play laser tag with me.
+  <<add_points 1>>
 -> “… asked you to help with Gorgug’s capstone project? That was me asking <i>you</i> for something.”
   <<char_right KipperlillySad>>
   Kipperlilly: I… I was just the best person for the job anyway.
   <<add_points 2>>
--> “… looked for you at the arcade?”
-  Kipperlilly: I still made you play laser tag with me.
-  <<add_points 1>>
 -> “… helped you study in the library?”
   <<char_right KipperlillyAngry1>>
   <<voiceline KipAnnoyed2>>
@@ -453,10 +453,6 @@ Kipperlilly: You don’t know what I think.
 
 <<kristen Soft>>
 Kristen: I know that if <i>you</i> only cared about the key you wouldn’t have…
--> “… gone out of your way to help me bake cupcakes for my brother.”
-  <<char_right KipperlillySurprised>>
-  Kipperlilly: That… you were desperate. That was pity.
-  <<add_points 2>>
 -> “… told me those things about Porter and the Rat Grinders at the rose garden.”
   <<char_right KipperlillySad>>
   Kipperlilly: I… Don’t read into that.
@@ -464,6 +460,10 @@ Kristen: I know that if <i>you</i> only cared about the key you wouldn’t have�
 -> “… given me a chance to get it in the first place.”
   Kipperlilly: It was for my own amusement. That’s all.
   <<add_points 0>>
+-> “… gone out of your way to help me bake cupcakes for my brother.”
+  <<char_right KipperlillySurprised>>
+  Kipperlilly: That… you were desperate. That was pity.
+  <<add_points 2>>
 
 She falls quiet again. You already know how much she deflects and obfuscates. It took weeks just for her to admit she had fun in your presence.
 
@@ -488,6 +488,7 @@ You look back at the chessboard. Partly because it’s your turn again, partly t
   She’s gone back to not looking at you, rubbing her collarbone. She outlines a starburst with her finger.
   <<add_points 1>>
 
+<<kristen Sad>>
 This sucks. You can’t let it end like this, with a miserable chess game. 
 
 Tentatively, you move your king. A second later, Kipperlilly moves her bishop.
@@ -496,6 +497,7 @@ Kipperlilly: Check.
 
 She looks disappointed. 
 
+<<kristen Angry>>
 <<sfx chess>>
 Nah. Not on your watch. After a moment of deliberation, you move your last knight in the way of the bishop.
 
@@ -811,10 +813,10 @@ You stumble out of the chair and catch her hand, squeezing it tight.
 She doesn’t look at you, but she doesn’t try to pull her hand out of your grip, leaning away but waiting for whatever you’re going to say next. 
 
 Kristen: Kip. We don’t need the stupid key. I love spending time with you.
--> Kristen: “We don’t need to pretend there’s an ulterior motive.”
-  <<add_points 2>>
 -> Kristen: “I still want to spend more time with you.”
   <<add_points 1>>
+-> Kristen: “We don’t need to pretend there’s an ulterior motive.”
+  <<add_points 2>>
 -> Kristen: “Even when you make it so complicated.”
   <<add_points 0>> 
 

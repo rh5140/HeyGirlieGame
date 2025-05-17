@@ -13,6 +13,7 @@ Pieces of paper have been stuck on the walls next to boxes adorned with various 
 <<kristen Grin>>
 Kristen: So we can’t just undo the doorhinge screws?
 
+<<sfx feedback>>
 Gorgug’s voice crackles over a speaker system he’s screwed into the ceiling. He’s in the A.V. club’s room, courtesy of Skrank, who’d helped program all of the crystal surveillance cameras temporarily installed in the room, and Riz, who had convinced Skrank to help Gorgug in the first place.
 
 Gorgug: Please don’t destroy my workshop, Kristen. I don’t want to pay the destruction fees Hopclap warned me about.
@@ -128,12 +129,13 @@ For the first time since you’ve started hanging out with her, Kipperlilly is s
 She looks around almost numbly, clocking the black tape Gorgug pointed out as well as all of the little trinkets he’s arranged with paper signs designating the puzzles he’s come up with. 
 
 Then she turns to you.
+-> Kristen: “Does this earn me any more brownie points?”
+  <<add_points 1>>
 -> Kristen: “Surprise!”
   <<add_points 2>>
 -> Kristen: “So, what d’you think?”
   <<add_points 2>>
--> Kristen: “Does this earn me any more brownie points?”
-  <<add_points 1>>
+
 
 <<voiceline KipSurprised4>>
 Kipperlilly: I mean…
@@ -237,6 +239,7 @@ Nope, the door stays locked, and Kipperlilly turns back with a frown.
 Kristen: Have you looked at this—
 
 <<char_right KipperlillyAnnoyed>>
+<<voiceline KipNeutral1>>
 Kipperlilly: Yes.
 
 You frown a little before putting your hands on your hips and trying to decide what to do next.
@@ -266,7 +269,7 @@ That’s fine, though. You know exactly what to do.
 
 <<kristen Grin>>
 <<char_right KipperlillySurprised>>
-<<sfx glass>>
+<<sfx glass1>>
 You grin as glass shatters against the wall, Kipperlilly jumping nearly a foot in the air on the other side of the room. 
 
 <<voiceline KipSurprised1>>
@@ -300,6 +303,7 @@ Unfortunately, you only kind of know what she’s talking about, which wouldn’
 
 She takes your lack of an answer as an admission of ignorance and folds her arms.
 
+<<voiceline KipSmug1>>
 Kipperlilly: Exactly. So let me handle this.
 
 <<kristen Neutral>>
@@ -321,12 +325,12 @@ Gorgug sighs into the mic again, but very notably he does not contradict you.
 Kipperlilly: …huh. 
 
 <<kristen Grin>>
-<<sfx glass>>
+<<sfx glass2>>
 She seems confused. Only one thing to do. You walk across the black tape, gingerly stepping over the pieces already covering the ground, and throw one of the empty vials on the floor. It shatters on impact, glass clinking as it bounces off the preexisting shards.
 
 Kipperlilly keeps staring. 
 
-<<sfx glass>>
+<<sfx glass1>>
 You destroy another vial.
 
 She puts the cipher down and walks over to you as if in a trance.
@@ -348,7 +352,7 @@ Kipperlilly: You can just break things.
 Kristen: Hell yeah, you can.
 
 <<char_right KipperlillyHappy>>
-<<sfx glass>>
+<<sfx glass1>>
 A switch turns on. Kipperlilly whips around to the remaining vials with a frenetic look in her eyes. She grabs one in each hand, winds up, and throws them against the wall where they explode in a flurry of sparkling bits.
 
 <<char_right KipperlillyLaugh>>
@@ -364,12 +368,12 @@ Kipperlilly laughs again in response. She leaps back across the room and starts 
 <<kristen Neutral>>
 <<char_right KipperlillyHappy>>
 Well, she’s pretty occupied with that. You look around the room for anything else that might help get you out of here.
--> <i>There’s a lamp that hasn’t been turned on yet?</i>
-  Oh! There’s a number written on the inside of the lampshade! You don’t know if it’ll help yet, but that’s exciting. 
-  <<add_points 2>>
 -> <i>One of the desk drawers is still closed…</i>
   You find a deck of playing cards. After some further inspection, it seems Kipperlilly already found it and took out the relevant cards. You leave the drawer open so neither of you get confused about it later.
   <<add_points 1>>
+-> <i>There’s a lamp that hasn’t been turned on yet?</i>
+  Oh! There’s a number written on the inside of the lampshade! You don’t know if it’ll help yet, but that’s exciting. 
+  <<add_points 2>>
 -> <i>Maybe Gorgug’s written something on the walls?</i>
   You give up after searching for a bit. That’s probably more Riz’s style, anyways. 
   <<add_points 0>>
@@ -485,6 +489,7 @@ Kipperlilly: Is there a number written on the inside of that door?
 Kristen: What?
 
 <<char_right KipperlillyAnnoyed>>
+<<voiceline KipNeutral1>>
 Kipperlilly: Could you just fucking check? You’re like right next to it.
 
 …huh. Would you look at that. You have no idea how either of you could have missed it the first time, but “24” is clearly written on the panel door.
@@ -508,11 +513,6 @@ Kristen: “One to hinder, one to help. Go in order.”
 Kipperlilly: And <i>now</i> what the fuck does that mean?
 
 You glance up at the timer. Seven minutes left and ticking. If there’s ever been a time for you to have a breakthrough, now’s your chance.
--> Kristen: “Maybe it’s something to do with us as players?”
-  <<char_right KipperlillyNeutral>>
-  <<voiceline KipNeutral1>>
-  Kipperlilly: A personalized escape-rage room? Would that make sense? Though, I guess Thistlespring knew you’d be the one solving it…
-  <<add_points 2>>
 -> Kristen: “Okay, hear me out: what if we get Gorgug to <i>lie</i> to us instead of just straight-up giving us a hint?”
   <<voiceline KipAnnoyed2>>
   Kipperlilly: … I suppose it would be like having another puzzle rather than just being given the answer.
@@ -522,8 +522,15 @@ You glance up at the timer. Seven minutes left and ticking. If there’s ever be
   <<voiceline KipSad1>>
   Kipperlilly: There’s no time for that; some of these safes lock for like, ten minutes. We’d lose if we went in blind. Use your brain, Applebees. Don’t you know <i>anything</i> that could have to do with that stupid riddle?
   <<add_points 0>>
+-> Kristen: “Maybe it’s something to do with us as players?”
+  <<char_right KipperlillyNeutral>>
+  <<voiceline KipNeutral1>>
+  Kipperlilly: A personalized escape-rage room? Would that make sense? Though, I guess Thistlespring knew you’d be the one solving it…
+  <<add_points 2>>
 
-You read the two lines again, over and over. “One to hinder, one to help” …is it meant to be two unrelated things that happen to mirror each other? Kipperlilly looks just as confused as you, but surely it’s a common enough thing that Gorgug felt comfortable writing a puzzle around it. 
+You read the two lines again, over and over. “One to hinder, one to help” …is it meant to be two unrelated things that happen to mirror each other? 
+
+Kipperlilly looks just as confused as you, but surely it’s a common enough thing that Gorgug felt comfortable writing a puzzle around it. 
 
 So what would you know better than her? What would you — and Gorgug, for that matter — have studied that she doesn’t have any reason to know more about?
 
@@ -569,6 +576,7 @@ Gorgug: There’s just one. It’s something we’ve all got in us right now.
 <<kristen Grin>>
 Kristen: Is that a piss joke?
 
+<<voiceline KipAngry1>>
 Kipperlilly: Why the fuck would it be a piss joke? It has to be something <i>red</i>, right? Is it blood?
 
 <<kristen Happy>>

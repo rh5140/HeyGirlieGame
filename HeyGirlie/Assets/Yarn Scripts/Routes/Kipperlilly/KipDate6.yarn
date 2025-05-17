@@ -4,7 +4,7 @@
 <<location "Rose Garden">>
 <<set $date_points = 0>>
 <<set $date_points_total = 8>>
-
+<<play_track outside>>
 <<kristen Happy>>
 You get to the garden first. It gives you a little time to wander around before Kipperlilly gets there. 
 
@@ -62,16 +62,17 @@ Kipperlilly stares at the plastic container for another second before she shakes
 <<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
 Kipperlilly: Whatever. Is there anything in particular you wanted to see?
+-> Kristen: “I dunno, where d’you think we could sneak off by ourselves?”
+  <<char_right KipperlillyAnnoyed>>
+  Kipperlilly: Sneak off? What do you mean, “sneak off?” There’s so much open space, it’s not like we’d be particularly well-hidden, and is that really what you were thinking about when I first mentioned this place? What the fuck?
+  She’s talking a little too quickly to really hide how flustered she sounds. You graciously change the topic.
+  <<add_points 1>>
 -> Kristen: “I mean, where you think the best spots for photos are, right?”
   <<voiceline KipSurprised2>>
   Kipperlilly: That’s rather efficient of you.
   Kristen: I have my moments.
+  She begins leading you down a pathway along the side of the garden.
   <<add_points 2>>
--> Kristen: “I dunno, where d’you think we could sneak off by ourselves?”
-  <<char_right KipperlillyAnnoyed>>
-  Kipperlilly: Sneak off? What do you mean, “sneak off?” There’s so much open space, it’s not like we’d be particularly well-hidden, and is that really what you were thinking about when I first mentioned this place? What the fuck?
-  She’s talking a little too quickly to really hide how flustered she sounds.
-  <<add_points 1>>
 -> Kristen: “Ooh, d’you think they have a gift store?”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
@@ -116,6 +117,7 @@ Kipperlilly: I didn’t know anything about his scheming or his plotting, really
 <<kristen Neutral>>
 Kipperlilly: Instead of yelling at me or giving me detention or whatever, he laughed and told me I had a spark that a lot of kids at school were lacking. He told me our party could be great adventurers if we let him help us. 
 
+<<voiceline KipSad3>>
 Kipperlilly: Looking back, it was all bullshit, but…
 
 <<kristen Sad>>
@@ -257,29 +259,27 @@ Kipperlilly: When you’re stuck in that, you kind of forget the petty things yo
 
 You hadn’t thought of Hell as, well, <i>hell</i> in a second. That’s just where Fig’s recording studio is and Fabian’s dad “lives” to you. It’s somewhat surreal to hear Kipperlilly describe an actual eternal torment in the same place where Bill Seacaster flies Kalvaxus around like a fucked-up swan boat.
 
-// demarcating this section bc im about to make up shit that lucy team might want to have a say in
-
 Kristen: How’d you get out?
 
 <<char_right KipperlillyAnnoyed>>
-Kipperlilly: Apparently Oisin spent months figuring out how Plane Shift worked and dragged the rest of them along with him. No idea what possessed any of them to think it was a decent idea, but now I’m here, so I can’t complain.
+Kipperlilly: Apparently Oisin spent months figuring out how approximately where I would be dragged the rest of them along with him with Plane Shift. No idea what possessed any of them to think it was a decent idea, but now I’m here, so I can’t complain.
 
 Kipperlilly’s grip tightens on your wrist. She’s lying. There’s no way she would have left the Rat Grinders’ motivations well alone. She knows exactly why they went down there for her.
--> Kristen: “They must really care about you to put in all that work.”
-  <<char_right KipperlillyNeutral>>
-  <<voiceline KipNeutral1>>
-  Kipperlilly doesn’t answer, but her posture relaxes ever so slightly.
-  <<add_points 2>>
--> Kristen: “They must’ve just been lost without you!”
-  <<char_right KipperlillyAnnoyed>>
-  <<voiceline KipAnnoyed1>>
-  Kipperlilly: Without <i>me?</i> Please. They were doing just fine while I was gone.
-  <<add_points 1>>
 -> Kristen: “I guess they had to do <i>something</i> for their yearly quest.”
   <<char_right KipperlillyAngry>>
   <<voiceline KipAngry2>>
   You can feel the joke fall flat as it leaves your mouth. Kipperlilly gives you a truly scathing glare. You bear it with all of the repentance you can muster in your soul.
   <<add_points 0>>
+-> Kristen: “They must’ve just been lost without you!”
+  <<char_right KipperlillyAnnoyed>>
+  <<voiceline KipAnnoyed1>>
+  Kipperlilly: Without <i>me?</i> Please. They were doing just fine while I was gone.
+  <<add_points 1>>
+-> Kristen: “They must really care about you to put in all that work.”
+  <<char_right KipperlillyNeutral>>
+  <<voiceline KipNeutral1>>
+  Kipperlilly doesn’t answer, but her posture relaxes ever so slightly.
+  <<add_points 2>>
 
 <<char_right KipperlillySad>>
 Kipperlilly: No matter why they did it, I landed myself there. I wouldn’t have blamed them for leaving me.
@@ -324,6 +324,7 @@ Kipperlilly: That’s what accent colors are for. Gold would work best for you, 
 Kristen: Accent color, huh? Are you wearing burgundy to the Spring Fling, then? 
 
 <<char_right KipperlillySmug>>
+<<voiceline KipHappy1>>
 Kipperlilly: What? Of course not. My dress is white.
 
 Of course. How could you have been so silly?
@@ -369,6 +370,7 @@ Her hand is still in yours.
 Kristen: Kipperlilly.
 
 <<char_right KipperlillyAnnoyed>>
+<<voiceline KipAnnoyed2>>
 Kipperlilly: What <i>now,</i> Applebees?
 
 You don’t say anything. You just stare at your hands.
@@ -386,7 +388,9 @@ Kristen: I didn’t mind it!
 
 Kipperlilly: SHUT UP. DON’T TALK TO ME.
 
-Her face is buried in her hands but you can still tell she’s turned bright red. Honestly, you’re probably the same shade but you can’t deny that you <i>really</i> didn’t mind. Her hand had been soft and holding it had felt nice. You almost missed it now that it was gone.
+Her face is buried in her hands but you can still tell she’s turned bright red. Honestly, you’re probably the same shade but you can’t deny that you <i>really</i> didn’t mind. 
+
+Her hand had been soft and holding it had felt nice. You almost missed it now that it was gone.
 
 <<kristen Soft>>
 <<voiceline KristenRomanticKip2>>
@@ -396,11 +400,6 @@ Kristen: …did you still want to go see the singing flowers or whatever?
 Kipperlilly: ABSOLUTELY THE FUCK NOT. I DON’T WANT TO SEE <i>YOU</i> RIGHT NOW.
 
 Contradictorily, she makes no effort to leave, giving you one last chance to get her to stick around.
--> Kristen: “Hey, hey, it’s all good. I didn’t see anything if you didn’t.”
-  <<char_right KipperlillyNeutral>>
-  <<voiceline KipSmug1>>
-  Kipperlilly: Right! Right. Of course. Everything’s fine.
-  <<add_points 2>>
 -> Kristen: “You could close your eyes and we could hold hands again if you want.”
   <<char_right KipperlillyBlush>>
   Kipperlilly: NOT NOW, APPLEBEES.
@@ -410,6 +409,11 @@ Contradictorily, she makes no effort to leave, giving you one last chance to get
   <<voiceline KipSurprised1>>
   Kipperlilly: … what???
   <<add_points 1>>
+-> Kristen: “Hey, hey, it’s all good. I didn’t see anything if you didn’t.”
+  <<char_right KipperlillyNeutral>>
+  <<voiceline KipSmug1>>
+  Kipperlilly: Right! Right. Of course. Everything’s fine.
+  <<add_points 2>>
 
 She at least looks like she’s calmed down. 
 
@@ -445,11 +449,6 @@ Kristen: But what if I want to get a good grade in dating?
 
 <<char_right KipperlillyAngry>>
 Kipperlilly: That’s not my problem right now. Nor will it ever be!
--> Kristen: “What if I want it to be your problem?”
-  <<char_right KipperlillyBlush>>
-  <<voiceline KipRomantic3>>
-  Kipperlilly: Ohhhhh my god, shut the fuck up.
-  <<add_points 2>>
 -> Kristen: “Aw come on. Scale of one to ten, how charming and romantic was I on this totally-not-a-date?”
   Kipperlilly sputters incoherently for a couple seconds.
   Kipperlilly: You didn’t even know what color burgundy was!
@@ -457,15 +456,20 @@ Kipperlilly: That’s not my problem right now. Nor will it ever be!
   <<voiceline KipNeutral2>>
   Kipperlilly: My life was so much more normal before I met you.
   <<add_points 1>>
+-> Kristen: “What if I want it to be your problem?”
+  <<char_right KipperlillyBlush>>
+  <<voiceline KipRomantic3>>
+  Kipperlilly: Ohhhhh my god, shut the fuck up.
+  <<add_points 2>>
 -> Kristen: “Alright, alright, dropping out of that class I guess.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipNeutral1>>
   Kipperlilly: Hmph. You just - you’re impossible sometimes, Applebees. 
   <<add_points 0>>
 
-<<char_right KipperlillyNeutral>>
 Kristen: You can’t say that you didn’t have a good time today. You would have just left if that was the case.
 
+<<char_right KipperlillyNeutral>>
 Kipperlilly: Why are you so confident about that?
 
 <<kristen Neutral>>

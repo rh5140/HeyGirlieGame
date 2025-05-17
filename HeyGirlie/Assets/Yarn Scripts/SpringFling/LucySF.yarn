@@ -119,8 +119,8 @@ Lucy: Thanks, Kristen. You’re the best.
 
 title: LucyEnding
 ---
-<<background SpringFling>>
 <<fade_in_ui>>
+<<play_track sf>>
 <<kristen Nervous_Lucy>>
 Students begin filing in through the doors, and the room soon fills with excited chatter and laughter. 
 You spot your friends in the crowd and give them a wave, making a mental note to save them a few dances, too.
@@ -151,18 +151,16 @@ Kristen: Even Fabian has his limits.
 You escort her to the food table and deliberate with her over which appetizers to try. 
 There are a lot of little finger foods that Lucy manages to eat daintily and you… kind of just scarf down. They’re delicious.
 Kristen: Man, I wish we could eat like this forever.
-<<char_right LucyJoking4>>
-Lucy: Hmm, I don’t know. They’re good, but you know what’s even better?
-Kristen: What?
-Lucy: Those deep-fried chocolate pickles.
+Lucy: We should try learning some fancy food recipes.
 <<kristen Happy_Lucy>>
-You elbow her and she laughs along with you.
-<<kristen Neutral>>
+Kristen: That sounds so fun!
+Lucy smiles warmly.
+<<kristen Neutral_Lucy>>
 <<char_right LucyNeutral4>>
 Eventually the DJ starts to play music, and you pull Lucy onto the dance floor. 
 You end up shimmying along with her to a few songs, and then you’re both pulled away for a few dances by your respective friends.
 <<kristen Happy_Lucy>>
-<<char_right LucyHappy4>>
+<<char_right LucyFlirty4>>
 As you dance with them, you’re caught up in the happiness of just being a <i>teenager</i> for once. 
 You catch Lucy’s eye several times as you dance, and you both give each other huge grins. Somehow, you know she’s thinking the same thing.
 You’ve earned this joy.
@@ -171,33 +169,34 @@ Finally, just as you make your way back to each other, the lights dim and a slow
 <<char_right LucyBlush4>>
 Kristen: Dance with me?
 Lucy: Of course.
-You wrap your arms around her neck, and her hands settle on your waist. 
+You wrap your arms around her waist, and her arms settle around your neck. 
 Your forehead tilts upward to meet hers, and you can feel her breath on your mouth. 
-You try not to stare too obviously at her lips, even though you haven’t stopped thinking about kissing her again since your picnic date. 
-As you sway gently on the spot, you can feel her pulse beating fast against your wrist. 
+You try not to stare too obviously at her lips.
 Kristen: So, you know what I just realized?
 Lucy: What?
-Kristen: We’ve now officially knocked everything off your list. Isn’t that awesome?
+Kristen: We’ve knocked, like, a billion things off the list. Isn’t that awesome?
 Lucy smiles. Her eyes are suddenly intent on yours.
 <<char_right LucyFlirty4>>
-Lucy: Not everything.
-<<kristen Surprised>>
+Lucy: Have we?
+<<kristen Neutral_Lucy>>
 Kristen: What do you mean?
 <<voiceline LucyDateSuccess2>>
-Lucy: I just added one. ‘Kiss someone at Spring Fling.’
+Lucy: I just added one. A really important one. ‘Kiss someone at Spring Fling.’
 <<kristen Nervous_Lucy>>
 <<voiceline KristenRomantic1>>
 Damn. You’re not ashamed to say your knees weaken a little.
 Kristen: Wow. That was really smooth.
 Lucy: I learned from the best.
-You laugh, flustered. Lucy magnanimously lets you recover from that devastatingly attractive move. 
+You laugh, flustered. Lucy graciously lets you recover from that devastatingly attractive move. 
 When you look up again, her gaze is adoring. 
-<<char_right LucySoft>>
+<<char_right LucyBlush4>>
 <<kristen Soft_Lucy>>
 //splash art here
 <<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<background SpringFling_Lucy>>
+<<fade_out_ui>>
+<<background SpringFling_Lucy>> 
 <<wait 2>>
 <<fade_in_ui>>
 Lucy pulls you closer, and your eyes slip closed.
@@ -205,6 +204,11 @@ She kisses you, soft and cool and perfect.
 You tighten your arms around her and kiss her back. 
 And for a moment that stretches into eternity, nothing in the world exists other than you and this beautiful, brilliant, strong girl in your arms. 
 <<kristen transparent>>
+<<char_left transparent>>
 <<char_right transparent>>
-<<enable_continue>> 
+<<fade_out_ui>>
+<<wait 2>>
+<<background SpringFling_Lucy>> // Set up your splash again
+<<enable_continue>> // Enables a continue button that lets people choose when to move on from the splash
+
 ===

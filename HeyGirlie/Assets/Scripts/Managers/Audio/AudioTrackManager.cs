@@ -33,5 +33,10 @@ public class AudioTrackManager : MonoBehaviour
     {
         audioMixer.SetFloat(currentTrack, Mathf.Log10(0) * 20);
     }
+    
+    public void MuteTrack(string audioName)
+    {
+        audioMixer.SetFloat(currentTrack, Mathf.Log10(0) * 20);
+    }
 
 }

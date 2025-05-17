@@ -4,7 +4,7 @@
 <<location "Mordred Manor">>
 <<set $date_points = 0>>
 <<set $date_points_total = 9>>
-
+<<play_track none>>
 <<kristen Sad>>
 You’re the worst big sister in the entire world. All this bullshit about dates and the Spring Fling and flirting has somehow distracted you from the things in your life that are actually important, and now you have to fix it. 
 
@@ -25,17 +25,20 @@ But he would know that you’d half-assed it, and you would know that he knew, a
 
 Your crystal lies heavy in your pocket.
 <<toggleText KristenOption>>
--> Kristen: “dude i think im having a panic attack over a birthday card lol”
-  <<toggleText Kipperlilly>>
-  Kipperlilly: ... have you ever had a panic attack before, Applebees? 
-  <<add_points 2>>
 -> Kristen: “dont laugh but do u know how to draw an ear of corn. or like literally anything a 10yo boy might like its urgent”
+  <<sfx vibrate>>
   <<toggleText Kipperlilly>>
-  Kipperlilly: Do I look like the internet to you?
+  Kipperlilly (text): Do I look like the internet to you?
   <<add_points 1>>
--> Kristen: “do u think cork would be ok if i just get him basrars or something”
+-> Kristen: “dude i think im having a panic attack over a birthday card lol”
+  <<sfx vibrate>>
   <<toggleText Kipperlilly>>
-  Kipperlilly: ... okay, I’ll bite. Why would a cork like ice cream?
+  Kipperlilly (text): ... have you ever had a panic attack before, Applebees? 
+  <<add_points 2>>
+-> Kristen: “do u think cork would be ok if i just get him basrars or something”
+  <<sfx vibrate>>
+  <<toggleText Kipperlilly>>
+  Kipperlilly (text): ... okay, I’ll bite. Why would a cork like ice cream?
   <<add_points 1>>
 <<toggleText none>>
 
@@ -43,29 +46,29 @@ Your crystal lies heavy in your pocket.
 You stare at your phone in horror. You texted <i>Kipperlilly?!</i> You meant to text literally anyone else, and now the bane of your presidential career knows exactly how much of a mess you still are.
 
 <<toggleText Kristen>>
-Kristen: hey can u pretend i never sent that
+Kristen (text): hey can u pretend i never sent that
 <<toggleText Kipperlilly>>
-Kipperlilly: Now, why would I do that? The great Kristen Applebees, begging me for help again? I could call in so many more favors from you now.
+Kipperlilly (text): Now, why would I do that? The great Kristen Applebees, begging me for help again? I could call in so many more favors from you now.
 <<toggleText Kristen>>
-Kristen: kipperlilly im being so fucking serious right now i cannot take this on top of everything else
+Kristen (text): kipperlilly im being so fucking serious right now i cannot take this on top of everything else
 <<toggleText none>>
 
 There’s a pause. A speech bubble with three dots pops up before disappearing.
 
 <<toggleText Kipperlilly>>
-Kipperlilly: Oh, you’re actually panicking, aren’t you.
+Kipperlilly (text): Oh, you’re actually panicking, aren’t you.
 
 <<kristen Surprised>>
 <<voiceline KristenSurprised1>>
 <<toggleText Kristen>>
-Kristen: ??????????
+Kristen (text): ??????????
 
 <<toggleText Kipperlilly>>
-Kipperlilly: Please, you can’t blame me for thinking you’re messing with me after all of last year.
+Kipperlilly (text): Please, you can’t blame me for thinking you’re messing with me after all of last year.
 
-Kipperlilly: What’s the full context?
+Kipperlilly (text): What’s the full context?
 
-Kipperlilly: And don’t think I can’t parse it out for myself. All that would do is waste my time and piss me off. Just tell me what’s going on, Applebees.
+Kipperlilly (text): And don’t think I can’t parse it out for myself. All that would do is waste my time and piss me off. Just tell me what’s going on, Applebees.
 <<toggleText none>>
 
 <<kristen Sad>>
@@ -78,59 +81,63 @@ Maybe it’s because you don’t expect any empty sympathy from her the way your
 Maybe there’s something about Kipperlilly herself that makes it easy to confess minor shames to her.
 
 <<toggleText Kipperlilly>>
-Kipperlilly: Well. That’s a lot. 
+Kipperlilly (text): Well. That’s a lot. 
 
-Kipperlilly: I don’t know anything about boys, but they like food, right? You could bake. It’s easy enough to throw together a batch of cupcakes in an afternoon.
+Kipperlilly (text): I don’t know anything about boys, but they like food, right? You could bake. It’s easy enough to throw together a batch of cupcakes in an afternoon.
 
 <<toggleText Kristen>>
-Kristen: i dont know shit about baking unless its readymade cookie dough from the store
+Kristen (text): i dont know shit about baking unless its readymade cookie dough from the store
 
 <<toggleText Kipperlilly>>
-Kipperlilly: Wow, that’s pretty sad. You should try it sometime.
+Kipperlilly (text): Wow, that’s pretty sad. You should try it sometime.
 
+<<play_track>>
 <<kristen Neutral>>
 <<toggleText Kristen>>
-Kristen: like... today maybe? with someone who already knows so much about baking things like cupcakes? hint hint??
+Kristen (text): like... today maybe? with someone who already knows so much about baking things like cupcakes? hint hint??
 <<toggleText none>>
 
 Okay, that sounded pretty desperate, but in your defense, you <i>are</i> desperate. Hopefully she takes pity on you.
 
 <<toggleText Kipperlilly>>
-Kipperlilly: Hmm. What do I get out of it?
+Kipperlilly (text): Hmm. What do I get out of it?
 <<toggleText none>>
 
 Rogues and their favors. Surely you can think of something Kipperlilly would consider worth her while.
 <<toggleText Kristen>>
 -> Kristen: “ill steal another one of riz’s books for u”
   <<toggleText Kipperlilly>>
-  Kipperlilly: Ha. You really know how to tempt a girl.
+  Kipperlilly (text): Ha. You really know how to tempt a girl.
   <<add_points 2>>
--> Kristen: “literally anything u want”
-  <<toggleText Kipperlilly>>
-  Kipperlilly: Aren’t you already doing that for the office key? 
-  <<add_points 1>>
 -> Kristen: “idk cant u do it for like honor or something”
   <<toggleText Kipperlilly>>
-  Kipperlilly: ... wow, you’re REALLY bad at this negotiation thing.
+  Kipperlilly (text): ... wow, you’re REALLY bad at this negotiation thing.
   <<add_points 0>>
+-> Kristen: “literally anything u want”
+  <<toggleText Kipperlilly>>
+  Kipperlilly (text): Aren’t you already doing that for the office key? 
+  <<add_points 1>>
 
-Kipperlilly: Fine, Applebees, I’ll save going to the arcade for next week and help your sorry ass this time. When should I expect you?
+Kipperlilly (text): Fine, Applebees, I’ll save going to the arcade for next week and help your sorry ass this time. When should I expect you?
 
 <<toggleText Kristen>>
-Kristen: wdym
+Kristen (text): wdym
 
 <<toggleText Kipperlilly>>
-Kipperlilly: Oh, I’m supposed to go to you, now?
+Kipperlilly (text): Oh, I’m supposed to go to you, now?
 
-Kipperlilly: I should have expected that.
+Kipperlilly (text): I should have expected that.
 
-Kipperlilly: Remind me where you live, again?
+Kipperlilly (text): Remind me where you live, again?
 <<toggleText none>>
 
+<<background  Kitchen>>
 You send Kipperlilly the address to Mordred Manor and spend the next twenty minutes scrolling through cake recipes in the kitchen, each more elaborate than the last. 
 
+<<sfx knock>>
 You’re about to give up in a fit of despair when you hear someone open the front door. 
 
+<<background  Mordred>>
 There’s a quiet conversation before deliberate footsteps slowly make their way down the hall, and Kipperlilly appears with a small tote bag.
 
 <<char_right KipperlillyAnnoyed>>
@@ -143,8 +150,10 @@ Belatedly, you remember reading all of Jawbone’s notes on his sessions with Ki
 
 Kristen: Ah, yeah, sorry, should’ve said something —
 
+<<voiceline KipAnnoyed1>>
 Kipperlilly: Whatever.
 
+<<background  Kitchen>>
 <<kristen Neutral>>
 <<char_right KipperlillyNeutral>>
 She begins taking things out of the bag and placing them in a certain order on the counter. 
@@ -206,6 +215,7 @@ She doesn’t ask after the obvious. You’re more grateful than you thought you
 Kristen: Three younger brothers and me. Bucky’s a sophomore paladin at Aguefort; you’ve probably seen him around.
 
 <<char_right KipperlillyAnnoyed>>
+<<voiceline KipSurprised3>>
 Kipperlilly: The brat who’s always trying to get people to join that PrayerChain app?
 
 <<kristen Awkward>>
@@ -213,12 +223,12 @@ You wince.
 
 Kipperlilly: I see the resemblance.
 
-<<kristen Neutral>>
 Kristen: Hey, now.
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: Don’t overmix. They’ll turn out horrible.
 
+<<kristen Neutral>>
 Kristen: Is that experience talking?
 
 <<char_right KipperlillyAnnoyed>>
@@ -275,7 +285,7 @@ Kipperlilly: Oh, <i>very</i> good, Applebees. A joke absolutely no one’s made 
 She turns to an invisible crowd and gestures towards you.
 
 <<voiceline KipHappy1>>
-Kipperlilly: Everyone, bow down to the intellectual <i>wonder</i> that is President Kristen Applebees. Here she is, the person you elected, displaying just how clever she is.
+Kipperlilly: Everyone, bow down to the intellectual <i>wonder</i> that is President Kristen Applebees. Here she is, the person <i>you all</i> elected, displaying just how clever she is.
 
 She cuts herself off with a laugh. She’s being mean, but it doesn’t actually sound like she <i>means</i> it. It’s kind of weird seeing her so carefree.
 
@@ -328,7 +338,9 @@ Kristen: Huh. Do you get to see her much?
 
 Kipperlilly: Only when she comes to Elmville for the holidays.
 
-You think about how long it’s been since you’ve seen your brothers in person. Sometimes you wonder what they think of you. How often they think of you. If it’s as often as you think of them.
+You think about how long it’s been since you’ve seen your brothers in person. 
+
+Sometimes you wonder what they think of you. How often they think of you. If it’s as often as you think of them.
 -> Kristen: “You must miss her.”
   <<char_right KipperlillySad>>
   Kipperlilly: … sometimes. 
@@ -457,3 +469,6 @@ You think about it. Then you lock your phone and put it in your pocket.
 
 <<jump Cassandra3>>
 ===
+
+
+
