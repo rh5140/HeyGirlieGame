@@ -31,45 +31,45 @@ Kristen: Cass, that wasn’t a prophetic dream, right?
 :Maybe it’s a little silly to sleep <i>before</i> a slumber party, but your freshly made bed looked so inviting. You put in all this effort to clean, you deserve a good nap!
 :Besides, slumber parties aren’t about sleeping. They’re about —
 <<toggleText Tracker>>
-Trquckee: Hey do we have any plans for tonight?
-Trquckee: Like does Nara need to bring anything special
-Trquckee: Or if I need to pick something up at the store
+Trquckee (text): Hey do we have any plans for tonight?
+Trquckee (text): Like does Nara need to bring anything special
+Trquckee (text): Or if I need to pick something up at the store
 <<toggleText Kristen>>
-Kristen: no ur good :)
-Kristen: i think were just hanging out
-Kristen: just bring yourselves ;) ;) ;)
+Kristen (text): no ur good :)
+Kristen (text): i think were just hanging out
+Kristen (text): just bring yourselves ;) ;) ;)
 <<toggleText Tracker>>
-Trquckee: See I don’t like how you said that
+Trquckee (text): See I don’t like how you said that
 <<toggleText Kristen>>
-Kristen: no its cute
-Kristen: im being cute
+Kristen (text): no its cute
+Kristen (text): im being cute
 <<toggleText Tracker>>
-Trquckee: I can literally hear you giggling to yourself from down the hall
+Trquckee (text): I can literally hear you giggling to yourself from down the hall
 <<toggleText Kristen>>
-Kristen: boo no you cant 
-Kristen: nara are you getting the messages from this groupchat
+Kristen (text): boo no you cant 
+Kristen (text): nara are you getting the messages from this groupchat
 <<toggleText 2Nara>>
-Nara (Prin/cess): I assume we will be performing the Solesian Ritual of the Pillow Fight
-Nara (Prin/cess) Rest assured I will Come Prepared
-Trquckee: I’ve never actually had one of those at a slumber party
-Nara (Prin/cess): An Outrage of the Highest Order!
+Nara (text): I assume we will be performing the Solesian Ritual of the Pillow Fight
+Nara (text): Rest assured I will Come Prepared
+Trquckee (text): I’ve never actually had one of those at a slumber party
+Nara (text): An Outrage of the Highest Order!
 <<toggleText Kristen>>
-Kristen: we can have a pillow fight if you want
-Kristen: weve got plenty of pillows
+Kristen (text): we can have a pillow fight if you want
+Kristen (text): weve got plenty of pillows
 <<toggleText 2Nara>>
-Nara (Prin/cess): Huzzah! Of course I will bring My Own Personal Pillows as I assume yours are Wholly Inadequate and will not meet League Regulation Standards
+Nara (text): Huzzah! Of course I will bring My Own Personal Pillows as I assume yours are Wholly Inadequate and will not meet League Regulation Standards
 <<toggleText Kristen>>
-Kristen: u would not be wrong
+Kristen (text): u would not be wrong
 <<toggleText Tracker>>
-Trquckee: Yeah that’s probably a good call
+Trquckee (text): Yeah that’s probably a good call
 <<toggleText 2Nara>>
-Nara (Prin/cess): No we are Texting 
+Nara (text): No we are Texting 
 <<toggleText Tracker>>
 Trquckee: What
 <<toggleText none>>
+<<char_right TrackerHappy_3E>>
 :You hear a knock on your door and open it to see Tracker smiling at you.
 <<kristen Surprised>>
-<<char_right TrackerHappy_3E>>
 Tracker: I figure we can wait for Nara together?
 <<kristen Happy>>
 Kristen: Yeah, sure! Come on in.
@@ -97,25 +97,29 @@ Tracker: I’m kind of excited for it.
     <<char_right TrackerNeutral_3E>>
     Tracker: <i>Officer Kristen</i>should remember I have the right to remain silent.
     <<char_right TrackerLaugh_3E>>
+    <<voiceline TrackerHappy2>>
     Tracker says it with an air of grave seriousness, but her mouth is twitching. Eventually, she loses the battle with herself and just bursts into laughter.
     Tracker: Okay okay, you got me, I surrender. But…
     <<char_right TrackerFlirt_3E>>
     <<kristen Nervous>>
     She leans in. With a start, you realize that, with how close you already were standing, her doing so almost completely closes the gap between the two of you.
+     <<voiceline TrackerRomantic1>>
     Judging from Tracker’s mischievous smile, the new situation seems to suit her perfectly. Suddenly, <i>you’re</i> the one who’s flustered. 
     Tracker: Hmm. I don’t think I’m the only one who’s excited...
     <<add_points 2>>
 -> Kristen: “Excited? <i>Excited?</i> I’m literally right here?!”
     <<char_right TrackerAngry_3E>>
+    <<voiceline TrackerAngry3>>
     Tracker: Kristen, the slumber party was <i>your</i> idea.
     <<kristen Angry>>
     Kristen: Yeah, but I didn’t think you’d just flaunt how much more excited you are about Nara than me!
     Tracker pinches the bridge of her nose, exasperated.
     Tracker: That’s not what I was doing! Ugh, let’s just forget it.
     <<add_points 0>>
--> Kristen: “Whatever, it’s just clothes. No biggie.
-    Tracker frowns.”
+-> Kristen: “Whatever, it’s just clothes. No biggie.”
+    Tracker frowns.
     Tracker: Better not say that to Nara, cowboy. It matters to her.
+    <<voiceline KristenNeutral2>>
     Kristen: Well, yeah, but —
     Tracker: It’s… you know it’s okay to be excited, yeah? If we’re doing… well. I don’t know what we’re doing. But let’s do it right.
     You nod, a little abashed. Her face softens a little.
@@ -187,14 +191,18 @@ Kristen: Y’know what, fuck it. Let’s just make sure it’s nothing so bad Ri
 <<char_left NaraThink5>>
 Nara: Riz? Is that the nickname of the Ball?
 <<char_left NaraNeutral5>>
-:You find a ritual on The Phone that doesn’t require a grocery run. It’s for some sort of bird king, which is probably just the Vulture King again, right? You can totally handle the Vulture King.
+:You find a ritual on The Phone that doesn’t require a grocery run. It’s for some sort of bird monarch, which is probably just the Vulture King again, right? You can totally handle the Vulture King.
 :The three of you chant in union.
 Kristen: Vulturis Emergis…
 Tracker: Vulturis Emergis!
 Nara: Vulturis Emergis!
+<<kristen Surprised>>
+<<char_left NaraSurprised5>>
+<<char_right TrackerSurprised_3E>>
 :You are not actually summoned to the Vulture Dimension. Instead, there’s a veritable explosion of feathers in your room.
 :Oh, Cassandra, Nara told you never to get her dirty again. Well, she said not to inflict torment upon her fair visage, but same thing.
 <<char_left NaraAngry5>>
+<<kristen Nervous>>
 :You’ve only just turned to look at her when she snaps.
 Nara: Kristren! How many times have I told you-
 :The Vulture King looks down at Nara. It’s hard to read bird facial expressions, but you think he’s nervous.
@@ -203,9 +211,11 @@ Vulture King: My deepest apologies, Princess Naradriel. It is the height of rude
 :The Vulture King squawks, and Nara is suddenly spotless.
 <<char_left NaraHappy5>>
 Nara: My deepest thanks, Your Majesty!
+<<kristen Surprised>>
 Kristen: Wait, you know this guy?
 <<char_left NaraNeutral5>>
 Nara: Why of course I do! Learning the many royals of Spyre and beyond is one of my duties as princess, you know.
+<<kristen Neutral>>
 Nara: Kristen, Tracker. Allow me to introduce to you <i>Her</i> Royal Highness the Vulture Queen.
 :The Vulture <i>Queen</i> ruffles her feathers proudly.
 Tracker: Living in Solace is really weird sometimes. Is that clean up spell for royalty only?
@@ -383,6 +393,7 @@ Nara: As was I. This is a new experience for all of us. If we are all hesitant t
 :... Wow. You’d never thought of that.
 Kristen: That’s a great point. We can all just… go with the flow. Support each other. Together.
 :Tracker smiles. It seems like you and Nara helping work this out together has visibly lifted a weight from her shoulders.
+<<voiceline TrackerBespoke3>>
 Tracker: I couldn’t agree more.
 :You all flop onto the bed, limbs tangling together to form a cuddle pile the likes of which the world has never before seen. It’s messy and complicated, but also? Kind of perfect. More than perfect. Finally, the three of you are exactly all where you’re supposed to be.
 :And when you fall asleep this time, it’s with a smile on your face. No bad dream can ruin this reality.

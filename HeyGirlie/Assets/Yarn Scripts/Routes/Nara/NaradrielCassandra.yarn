@@ -46,7 +46,6 @@ title: Cassandra1
     Cassandra: Fine, I won’t get ahead of myself… yet.
     <<char_right CassandraBlush>>
     <<kristen Soft>>
-    <<voiceline CassFarewell4>>
     Cassandra: I’m glad you had a nice time, Kristen.
 
 
@@ -84,6 +83,7 @@ title: Cassandra1
     <<char_right CassandraSad>>
     Cassandra: I know. You’ll figure it out, I believe in you!
 <<endif>>
+
 <<jump EndDate>>
 ===
 
@@ -245,34 +245,57 @@ title: Cassandra4
   // slay 
     <<voiceline CassPhone1>>
     Cassandra: Kristen! How did it go?
+    <<kristen Happy>>
+    <<voiceline KristenHappy3>>
     Kristen: It was so fun! We ate, we laughed, we were vulnerable…
+    <<voiceline CassHappy3>>
+    <<char_right CassandraSurprised>>
     Cassandra: Vulnerable? You? Are you feeling alright? Need me to check your temperature?
     Kristen: Better than alright. Who knew relationships were about openness and honesty the whole time?
+    <<char_right CassandraNeutral>>
     Cassandra: Um, I did? I’m pretty sure I’ve told you that.
+    <<kristen Neutral>>
     Kristen: She’s so easy to talk to, Cass. I just need to not ask her anything about her life in Fallinel ever.
+    <<voiceline CassDisappointed3>>
     Cassandra: What?
     Kristen: What?
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid 
     <<voiceline CassPhone2>>
+    <<kristen Neutral>>
     Kristen: That was the weirdest date I’ve ever had.
     Cassandra: Weird good or weird bad?
+    <<voiceline KristenNeutral1>>
     Kristen: Weird weird. Nara’s life in Fallinel is so <i>weird…</i>
     Cassandra: … How weird?
     Kristen: Her childhood friend is a Little Man who sat in her room and stared at her until she fell asleep.
     Cassandra: …
+    <<char_right CassandraSad>>
+    Cassandra: …
+    <<voiceline CassDisappointed3>>
     Cassandra: What about the rest of the date?
+    <<voiceline KristenAwkward1>>
+    <<kristen Nervous>>
     Kristen: I’m gonna be honest, after I heard about the Little Man, my mind decided to self-destruct. I don’t remember what happened.
+    <<char_right CassandraNeutral>>
     Cassandra: Well, let’s hope you didn’t fuck up too badly!
+    <<kristen Grin>>
     Kristen: Fucking up doesn’t sound like me at all.
 <<else>>
   //flop 
     <<voiceline CassPhone3>>
+    <<kristen Sad>>
     Cassandra: Kristen! How was the — uh oh.
+    <<char_right CassandraSad>>
+    <<voiceline KristenSad3>>
     Kristen: I didn’t know dates could even <i>get</i> that bad. I need to melt into a puddle of cottage cheese and disappear forever.
+    <<voiceline CassDisappointed2>>
     Cassandra: C’mon, it couldn’t have been <i>that</i> bad.
+    <<kristen Angry>>
     Kristen: I took her to a diner and she hated everything! And then she opened up to me and I didn’t really open up to <i>her</i> and there weren’t enough forks and now she hates me forever!!
+    <<char_right CassandraSurprised>>
     Cassandra: Kristen, hey! It’s okay! There’s always next time! Um, maybe!
+    <<kristen Sad>>
     Kristen: Maybe…
 <<endif>>
 <<jump EndDate>>
@@ -294,37 +317,62 @@ title: Cassandra5
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay 
     <<voiceline CassPhone1>>
+    <<kristen Happy>>
     Cassandra: Well someone looks happy!
     Kristen: I had such a good time!
+    <<char_right CassandraHappy>>
+    <<voiceline CassHappy2>>
     Cassandra: What did you do? Go to a fancy restaurant? Watch a nice movie? Look at the stars, but realize the real stars are in each other’s eyes and kiss?
-    Kristen: We did errands.
+    Kristen: Close! We ran some errands.
+    <<char_right CassandraSurprised>>
     Cassandra: …
     Cassandra: <i>Errands?</i>
+    <<kristen Soft>>
+    <<voiceline KristenHappy4>>
     Kristen: Yeah! I thought I was gonna hate it, ‘cause errands suck, but like. I don’t know. They were easier when she was there, too. More fun?
+    <<char_right CassandraBlush>>
+    Kristen: Plus, I feel like we actually have a lot in common!
+    <<voiceline CassHappy1>>
     Cassandra: Awwwwww!!
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid
     <<voiceline CassPhone2>>
-    Cassandra: Sooo how did it go?
-    Kristen: We just… did errands.
+    Cassandra: Soooo, how did your date go?
+    <<kristen Neutral>>
+    Kristen: Um, we ran errands? I’m actually not sure this one was really a date.
     Cassandra: …
+    <<char_right CassandraAngry>>
+    <<voiceline CassNeutral1>>
     Cassandra: That’s it?!
-    Kristen: Yeah. I had errands to do, and Nara wanted to come. That’s it.
+    <<kristen Awkward>>
+    <<voiceline KristenSurprised3>>
+    Kristen: Yeah. I had shit to do, and Nara wanted to tag along. That’s it.
     Cassandra: Kristen! This is a rookie move! You need to take her out on real dates! Real dates for real girlfriends!
-    Kristen: I dunno, I thought it would be cute maybe.
+    <<voiceline KristenAngry1>>
+    Kristen: I dunno, I thought it would be cute maybe!
+    <<char_right CassandraSad>>
     Cassandra: Did you think it would be cute or did you procrastinate until Nara visited and shamed you into doing errands?
+    <<kristen Nervous>>
     Kristen: …
+    <<kristen Sad>>
     Kristen: … The second one.
+    <<voiceline CassDisappointed1>>
     Cassandra: That’s what I thought.
 <<else>>
   //flop 
     <<voiceline CassPhone3>>
+    <<kristen Sad>>
     Cassandra: How was the date?
     Kristen: Ughhhhhh…
+    <<char_right Cassandra Sad>>
+    <<voiceline CassDisappointed2>>
     Cassandra: That bad, huh?
     Kristen: I just… I don’t know how to talk to her. We’re so alike, but also so different and everything is so confusing all the time.
     Kristen: How do I make sure I’m listening to her? And responding in a way that doesn’t make me look like a complete asshole?
+    <<char_right CassandraNeutral>>
+    <<voiceline CassNeutral2>>
     Cassandra: You two are alike, right? So maybe try a little empathy? Put yourself in her shoes?
+    <<voiceline KristenSad2>>
     Kristen: But I hate her shoes. I think she wears heels.
     Cassandra: You know what I mean.
 <<endif>>
@@ -347,39 +395,70 @@ title: Cassandra6
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay 
     <<voiceline CassPhone1>>
+    <<char_right CassandraSurprised>>
     Cassandra: Wow, an ambush! Are you okay?
+    <<kristen Happy>>
     Kristen: Somehow? Yeah. I actually am!
     Cassandra: Really?
-    Kristen: Yeah! It was hard at first, but… I learned a lot about Nara. And I really want to see her again.
+    <<voiceline KristenHappy3>>
+    Kristen: Yeah! Elf Practice was hard at first, but… I learned a lot about Nara. And I really want to see her again.
     Cassandra: Sounds like you’re pretty serious about her.
+    <<kristen Soft>>
     Kristen: I… think I am. And I think Nara feels the same way? I hope she does.
-    Cassandra: Eeeee! I’m so happy for the two of you!
+    <<char_right CassandraBlush>>
+    <<voiceline CassHappy1>>
+    Cassandra: Aw, Kristen! That’s… surprisingly sincere! I am SO proud of —
+    <<kristen Neutral>>
+    Kristen: And get this, I didn’t even have to eat a leaf because it was <i>holo</i>-salad the whole time!
+    <<char_right CassandraNeutral>>
+    Cassandra: Aaaaaand, there’s the nonsense I know and love. Proud of you, anyway!
+    Cassandra: Also, maybe eat a vegetable once in a while.
+    <<kristen Grin>>
+    Kristen: Never.
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid 
     <<voiceline CassPhone2>>
+    <<kristen Neutral>>
     Cassandra: Sooooo how was it? Did you learn something?
     Kristen: Yeah, I learned a lot of things. Maybe <i>too</i> many things. Is it possible to learn too many things?
     Cassandra: In your case? Never.
-    //kristen pouts or something
-    Cassandra: Oh don’t be like that! I’m sure you did a great job.
-    Kristen: Uhh… kinda? We had. Talks. About family and spoons and parents and family and stuff.
-    Cassandra: Aaaaand?
-    Kristen: I don’t know. I think the anxiety just kept building up in her head.
-    Cassandra: And did you help make her feel better?
-    Kristen: Kiiiiinda? I think the date went ok. I think.
+    <<kristen Angry>>
+    Kristen: Hey! I’m smart!!
+    <<char_right CassandraHappy>>
+    Cassandra: Oh don’t be like that! I’m only teasing — I’m sure you did a great job.
+    <<kristen Nervous>>
+    Kristen: Uhh… well, kinda? I dunno, Elf Practice was weird. We had. Talks. About family and forks and parents and family and stuff.
+    Cassandra: Forks?
+    Kristen: Forks. Cass, there are so many forks in the world. Why do we need so many forks? I think I might hate forks now.
+    <<char_right CassandraNeutral>>
+    <<voiceline CassDisappointed1>>
+    Cassandra: You also mentioned parents and family stuff. I feel like that’s maybe more important than your weird fork-grudge?
+    <<voiceline KristenAwkward3>>
+    Kristen: Oh! Right. She roleplayed as her mom and I was kinda into it, but I’m not really sure I impressed her. I actually know I didn’t. She had, like, a breakdown halfway through our mom-date.
+    <<char_right CassandraSurprised>>
+    Cassandra: I’m… gonna let you have your privacy on that one. But there’s always next time to turn things around with her! Or, her mom? I didn’t entirely follow.
 <<else>>
   //flop 
     <<voiceline CassPhone3>>
-    Cassandra: Well you look like a ray of sunshine.
-    Kristen: Cassandra I don’t know about this.
-    Cassandra: About Nara…?
+    <<kristen Sad>>
+    Cassandra: Well, don’t you look like a ray of sunshine!
+    Kristen: Cass… I don’t know about this.
+    Cassandra: About Elf Practice? About Nara??
     Kristen: About dating. In general.
-    Cassandra: Aw come on. You can’t throw all this away because of one bad date.
-    Kristen: But it was <i>so bad!</i> Nara’s going through so much, and I can’t help her with any of it.
-    Cassandra: Couldn’t you get better though?
-    Kristen: I don’t know…
-    Cassandra: I mean, you kinda have to. If you wanna live.
-    //maybe something else IDK
+    <<char_right CassandraAngry>>
+    Cassandra: Aw, come on. You can’t throw all this away because of one bad date!
+    <<kristen Angry>>
+    <<voiceline KristenAngry2>>
+    Kristen: I have to!! It was <i>so bad!</i> Nara’s going through so much, and I can’t relate to any of her insane royal problems and I can’t help her with any of it and I don’t remember what a sucket fork is even though she literally <i>just</i> told me, and —
+    <<char_right CassandraSurprised>>
+    <<voiceline CassNeutral1>>
+    Cassandra: Kristen!! Slow down. All you need to do is be there for her! It really can’t be that hard to show your girlfriend a little empathy.
+    <<kristen Sad>>
+    <<voiceline KristenSad3>>
+    Kristen: Really, <i>really</i> not in the mood to bring out the G-word.
+    <<char_right CassandraSad>>
+    <<voiceline CassDisappointed3>>
+    Cassandra: Look, just… keep on trying your best, okay? I’d really like for us to survive your school dance.
 <<endif>>
 <<jump EndDate>>
 ===
@@ -400,34 +479,65 @@ title: Cassandra7
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay 
     <<voiceline CassPhone1>>
-    Cassandra: Whoaaa you look so red! What happened?
-    Kristen: I made a little dinner then we watched a little movie and we had a little kiss…
-    Cassandra: Aaaa!!!! I’m so proud of you my little Ratatouille!
-    Kristen: Yeah I’m soooo good at romance and cooking and kissing and stuff. You should call, me, like, the Kissanova. Cause I’m like Casanova. But with kissing.
+    <<kristen Nervous>>
+    Cassandra: You look SO red. What happened? Did you step on a rake like in a cartoon? Did you have that nightmare again where you were at school naked from the waist down, which would never happen in real life?
+    <<char_right CassandraSurprised>>
+    Cassandra: Did you… eat a TOMATO??
+    Kristen: No, I just. I made a little dinner, and then we watched a little movie, and then we had a little kiss…
+    <<voiceline CassHappy3>>
+    Cassandra: Woah!! Huge moves!!
+    <<kristen Neutral>>
+    Kristen: Yeah! I’m pretty much awesome at romance and cooking and kissing and stuff. You should call me Kissanova. Heh, get it? Cause I’m like Casanova. But with kissing.
+    <<char_right CassandraHappy>>
     Cassandra: Hey! I’m the real Casanova here! You can’t spell Casanova without Cass, after all!
+    Kristen: Man. Now that I think about it, who even is Casanova? Is that even a real guy?
+    <<voiceline CassNeutral3>>
+    Cassandra: I think he was from somewhere in the Baronies. Italy, maybe?
+    Cassandra: Anyway, that super doesn’t matter! Great job on the kissing!
+    <<kristen Happy>>
+    <<voiceline KristenHappy3>>
+    Kristen: Thanks!
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid 
     <<voiceline CassPhone2>>
-    Cassandra: Hey my little chef! How did it go?
-    Kristen: We made a little pasta and did a little kiss…
-    Cassandra: Wow! I didn’t know you could cook!
-    Kristen: Yeah, it took a few tries but I did it. I kinda had to go to the supermarket though.
-    Cassandra: That’s fine, as long as you didn’t go with-
+    Cassandra: Heya, Chef Kristen! How did it go? Did you burn the kitchen down?
+    <<kristen Grin>>
+    Kristen: Not even a little bit! It only took one or two tries to make pasta.
+    <<voiceline CassHappy3>>
+    Cassandra: Wow! Color me pleasantly surprised.
+    <<kristen Neutral>>
+    <<voiceline KristenNeutral2>>
+    Kristen: Yeah. I kinda had to go to the store though. I kinda maybe forgor my —
+    <<char_right CassandraSad>>
+    <<voiceline CassDisappointed3>>
+    Cassandra: Your ingredients? Aw, man, again? That’s fine, I guess, as long as you didn’t go with —
     Kristen: I went with Nara.
-    Cassandra: No!!!
-    Kristen: At least we still kissed!
-    Cassandra: Yes, but… at what cost…
+    Cassandra: Noooo!
+    <<kristen Awkward>>
+    <<voiceline KristenAwkward2>>
+    Kristen: But then we kissed! So I must not have been a total idiot… right?
+    <<char_right CassandraBlush>>
+    Cassandra: Yeah, okay! Maybe making yourself look like a dummy wasn’t the end of the world and also both of our lives! We’re being super calm and thinking positively.
 <<else>>
   //flop 
     <<voiceline CassPhone3>>
-    Kristen: Cassandraaaaaaaa
+    <<kristen Sad>>
+    Kristen: Cassandraaaaaaaa.
     Cassandra: Kristennnnnnnnnn!
+    <<voiceline KristenSad3>>
     Kristen: I fucked up…
-    Cassandra: Yeah, I noticed. You… forgor? The ingredience?
-    Kristen: Yeah… then I had to take Nara to the supermarket and then I fucked up making spaghetti and then she kissed me - 
+    Cassandra: Yeah, I noticed. You… forgor? The ingredience? Is that even Common?
+    Kristen: Yeah… I forgor… and then I had to take Nara to the store and then I fucked up making spaghetti and then she kissed me —
+    <<char_right CassandraSurprised>>
     Cassandra: Wait. She kissed you, and you still think the date went badly?
-    Kristen: She only did it because the people in the movie did it…
-    Cassandra: Well… at least you tried!
+    Kristen: Well, um. She only did it because the people in the movie did it. So.
+    <<char_right CassandraSad>>
+    <<voiceline CassDisappointed1>>
+    Cassandra: Oh. Should I… maybe start writing a will?
+    Kristen: …
+    Kristen: …
+    <<voiceline KristenSad2>>
+    Kristen: … Yeah maybe.
 <<endif>>
 <<jump EndDate>>
 ===
@@ -448,32 +558,64 @@ title: Cassandra8
 <<if $date_points >= (2/3) * $date_points_total>>
   // slay 
     <<voiceline CassPhone1>>
-    Cassandra: KRISTEN!!!!!
-    Kristen: CASSANDRA!!!!!!!!
-    Cassandra: YOU DID SUCH A GOOD JOB I’M SO PROUD OF YOU!!! I	was SO worried you were gonna die but then I thought well I could get another follower-
-    Kristen: What-
-    Cassandra: But then this date happened and I was like SHE’S GONNA LIVE!!!!
-    Kristen: You didn’t think I was gonna get a date?
-    Cassandra: …
-    Kristen: …
-    Cassandra: You’re gonna look so happy and pretty and alive at the Spring Fling!!!
-    Kristen: Emphasis on-
-    Cassandra: Emphasis on the alive part, yeah.
+    Cassandra: Kristen, give me ALL the details!
+    <<kristen Soft>>
+    Kristen: It was really, really good, I think. She set up a cute little picnic and then we did some stargazing… oh! And we talked about life! And the future and stuff!
+    <<char_right CassandraSurprised>>
+    Cassandra: Kristen, that’s — that’s <i>huge</i> for you. How did it go?
+    <<kristen Nervous>>
+    <<voiceline KristenRomantic2>>
+    Kristen: A lot easier than I thought it’d be. I dunno, something about Nara just… makes me want to think about that kind of stuff. The future. Like, with her.
+    <<char_right CassandraBlush>>
+    <<voiceline CassHappy1>>
+    Cassandra: Awww!!!! That is the cutest, most character-developmentalliest thing you’ve ever said.
+    Cassandra: I kid, but, well. I really am proud of you, Kristen. You know that, right?
+    <<kristen Soft>>
+    Kristen: Yeah. I’m… I’m proud of me, too.
+
 <<elseif $date_points >= (1/3) * $date_points_total>>
   // mid 
     <<voiceline CassPhone2>>
-    Cassandra: Kristen give me ALL the details!!!
-    Kristen: It was pretty good! I think! We did some stargazing
+    <<char_right CassandraHappy>>
+    Cassandra: Hey! Kristen!
+    <<kristen Happy>>
+    <<voiceline KristenHappy1>>
+    Kristen: Cass! Tonight was SO fun.
+    Cassandra: It sure looks like it! You’ve been dating Nara for, like, two months now? And it’s been going <i>so</i> well??
+    Cassandra: Which is wild, ‘cause I was SO worried you were gonna die, but then I thought, well, maybe I could get another follower —
+    <<kristen Surprised>>
+    <<voiceline KristenSurprised3>>
+    Kristen: What —
+    Cassandra: But then this date happened and you look so happy and so I thought to myself, woah! She’s gonna live! And so am I!!
+    Kristen: You didn’t think I was gonna get this far?
+    <<char_right CassandraSurprised>>
+    Cassandra: …
+    Kristen: …
+    <<char_right CassandraNeutral>>
+    <<voiceline CassHappy2>>
+    Cassandra: You’re gonna look so happy and pretty and alive at the Spring Fling!!
+    <<kristen Neutral>>
+    Kristen: Emphasis on…?
+    Cassandra: Emphasis on the alive part, yeah.
+
 <<else>>
   //flop 
     <<voiceline CassPhone3>>
-    Cassandra: Kristen!!! How was the date? Did you fuck up - oh no you fucked up didn’t you.
-    Kristen: Nnnno…? Maybe? Nara surprised me in the woods and then she told me I’m Ass Constellation - 
+    Cassandra: Kristen!! How was the date? Did you fuck up — oh, no. You fucked up, didn’t you.
+    Kristen: Nnnno…? Maybe? Nara surprised me in the woods and then she told me I’m Ass Constellation — 
+    <<char_right CassandraSurprised>>
+    <<voiceline CassDisappointed2>>
     Cassandra: Ass Constellation?
-    Kristen: And then I ate charcuterie wrong and we talked but I talked wrong and I can’t even eat <i>cheese</i> right - 
-    Cassandra: Kristen! It’s okay! It was one date! And you kissed! Maybe it wasn’t as bad as you thought! And if it was, you can always ask someone else to the spring fling!
+    <<kristen Angry>>
+    Kristen: And then I ate charcuterie wrong and we talked but I talked wrong and I can’t even eat <i>cheese</i> right — 
+    <<voiceline CassNeutral1>>
+    <<char_right CassandraNeutral>>
+    Cassandra: Kristen! It’s okay! It was one date! And you kissed! Maybe it wasn’t as bad as you thought! And if it was, well, then you can always ask someone else to the Spring Fling? Nothing wrong with a backup plan.
+    <<kristen Sad>>
+    <<voiceline KristenAwkward1>>
     Kristen: If you say so.
 <<endif>>
+
 <<jump EndDate>>
 ===
 title: EndDate
