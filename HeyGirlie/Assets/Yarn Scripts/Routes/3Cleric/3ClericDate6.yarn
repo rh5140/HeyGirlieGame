@@ -3,8 +3,8 @@
 <<location "Bloodrush Field">>
 <<set $date_points = 0>>
 <<set $date_points_total = 4>>
-<<play_track rodeo>>
 <<kristen Neutral>>
+<<play_track rodeo>>
 :Hoot, growl! Hoot, growl! Hoot, growl!
 :Or something like that. You don’t actually know any other bloodrush-adjacent cheers. Is this game even for the Owlbears? They do out-of-town games, right?
 :You keep your eyes peeled for Fabian, but you don’t see him, or any of the same screaming crowd that you usually see at these kinds of games.
@@ -38,7 +38,7 @@ Is that really <i>that</i> funny?
     Kristen: What can I say? Solesian tradition, <i>babe.</i>
     <<char_left TrackerAwkward_3D>>
     <<char_right NaraBlush3>>
-    :It works out just how you want it to — Nara blushes at your sudden forwardness, while Tracker looks away, flustered by the indirect callout.
+    :It works out just how you want it to — Tracker looks away, flustered by the indirect callout, while Nara blushes at your sudden forwardness.
     :Most importantly, continuing to tease you is clearly the furthest thing from their minds. Victory.
     <<char_left TrackerBlush_3D>>
     Tracker: ...Let’s just find our seats.
@@ -160,7 +160,7 @@ Kristen: Yeah! Why wouldn’t we be on the same team?
 Tracker: Hmm… so I can do this.
 :And then she gives you a little shove.
 :You stumble back but miraculously keep your footing.
-<<char_left TrackerFlirt_3D>>
+<<char_right TrackerFlirt_3D>>
 :Tracker shoots a finger gun at you as she takes a scrimmage vest.
 <<voiceline KristenRomanticTracker2>>
 Kristen: Oh, it is <i>so</i> on.
@@ -192,7 +192,7 @@ Kristen: Okay, okay, you got me.
 <<voiceline TrackerHappy3>>
 Tracker: Sure did, babe.
 :She reaches a hand down to help you up and you take it, completely ignoring the scramble of your respective teams going for the ball.
-Kristen: What happened to ‘whether or not you eat shit is up to you’?
+Kristen: What happened to “whether or not you eat shit is up to you,” huh?
 Tracker: What, you didn’t choose to do that?
 :You give her a Look.
 Tracker: Okay, okay, maybe it was a little bit up to me. If it makes you feel better, you still look super cute.
@@ -206,7 +206,7 @@ Tracker: Um. We’re in trouble.
 Kristen: Is this, like, an Officer Kristen —
 Tracker: No! Uh, look.
 <<char_right NaraSad3>>
-:Tracker points and you realize you are in the splash zone, and also have been the splash in the splash zone.
+:Tracker points and you realize you are in the Splash Zone, and also have been the Splash in the Splash Zone.
 :Most of the people sitting there are cheering. Nara, splattered with mud, looks a lot like a kicked puppy.
 Nara: Kristren! This is not the Splash I was promised!
 <<kristen Neutral>>
@@ -235,8 +235,9 @@ Nara: Now extricate me.
 Nara: My heroes.
 <<kristen Nervous>>
 <<char_left TrackerBlush_3D>>
-Nara: I must say, you looked splendid on the field, like warriors in battle. Warriors that then proceeded to cover my royal visage in the mud of a thousand puddles. But,  rather fetching warriors nonetheless.
+Nara: I must say, you looked splendid on the field, like warriors in battle. Warriors that then proceeded to cover my royal visage in the mud of a thousand puddles. But, rather fetching warriors, nonetheless.
 Nara: I believe it is customary for such brave knights to be rewarded with a kiss from a princess?
+<<char_right NaraBlush3>>
 Nara: And forgive my forwardness, but I see no other princesses on the field.
 Nara: And far be it from me to shirk my royal duties.
 <<kristen Neutral>>
@@ -248,6 +249,7 @@ Kristen: But you —
 Tracker: I’m no princess, but… I just wanted to kiss you.
 :And just when you think your brain can’t break any further, Nara steps back and then kisses Tracker’s cheek as well, making her blush deepen even more.
 :You’re maybe a little bit speechless, which is possibly for the best, because Nara’s got enough words for all three of you.
+<<char_right NaraNeutral3>>
 Nara: Lovely. Now I must return to the land of the <i>washed</i> masses through the aid of my unseen servants. Really, I do not know how you people live without Little Men at your beck and call.
 :Tracker gives you a confused look, and you silently shake your head. <i>Don’t ask.</i> 
 <<char_right transparent>>

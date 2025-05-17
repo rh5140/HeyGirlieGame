@@ -376,7 +376,7 @@ namespace Yarn.Unity
             var bg = dialogueBubblePrefab.GetComponentInChildren<Image>();
             var message = dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
             // message.text = "";
-            if (character == "" || character == "Kristen")
+            if (character == "" || character == "Kristen" || character == "Kristen (text)" )
             {
                 bg.color = purple;
                 message.color = white;
@@ -413,7 +413,7 @@ namespace Yarn.Unity
             var bg = oldClone.GetComponentInChildren<Image>();
             var message = oldClone.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
             // message.text = "";
-            if (String.IsNullOrEmpty(character) || character == "Kristen")
+            if (String.IsNullOrEmpty(character) || character == "Kristen" || character == "Kristen (text)" )
             {
                 bg.color = purple;
                 message.color = white;
