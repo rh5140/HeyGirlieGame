@@ -4,6 +4,7 @@
 <<set $date_points = 0>>
 <<set $date_points_total = 6>>
 :A slumber party! What could go wrong?
+<<kristen Neutral>>
 <<char_right TrackerAngry_1>>
 <<char_left NaraAngry>>
 :Why are they so angry? Why are you so cold? Why are you in your underwear when they’re not?
@@ -52,7 +53,9 @@ Kristen (text): nara are you getting the messages from this groupchat
 <<toggleText 2Nara>>
 Nara (text): I assume we will be performing the Solesian Ritual of the Pillow Fight
 Nara (text): Rest assured I will Come Prepared
+<<toggleText Tracker>>
 Trquckee (text): I’ve never actually had one of those at a slumber party
+<<toggleText 2Nara>>
 Nara (text): An Outrage of the Highest Order!
 <<toggleText Kristen>>
 Kristen (text): we can have a pillow fight if you want
@@ -168,7 +171,7 @@ Nara: I do not know. I was never able to catch them in the act, as it were. But 
 :Nara’s said a lot of creepy shit. But this might be the creepiest.
 Tracker: Um. 
 Kristen: Uh.
-<<char_right TrackerSurprised_3E>>
+<<char_right TrackerNeutral_3E>>
 <<voiceline TrackerDateFail1>>
 Tracker: Hey, I’ve got an idea. Let’s do anything else.
 Kristen: Please, dear Cassandra, let’s.
@@ -215,7 +218,7 @@ Tracker: Vulturis Emergis!
 Nara: Vulturis Emergis!
 <<kristen Surprised>>
 <<char_left NaraThink5>>
-<<char_right TrackerSurprised_3E>>
+<<char_right TrackerNeutral_3E>>
 :You are not actually summoned to the Vulture Dimension. Instead, there’s a veritable explosion of feathers in your room.
 :Oh, Cassandra, Nara told you never to get her dirty again. Well, she said not to inflict torment upon her fair visage, but same thing.
 <<char_left NaraAngry5>>
@@ -253,7 +256,9 @@ The Vulture Queen: The power of eggstrogen… it courses through my beins......
 Kristen: Your what?
 The Vulture Queen: Bird veins.
 <<voiceline TrackerRomantic2>>
+<<char_right TrackerLaugh_3E>>
 Tracker: Yeah, Kristen, try to keep up.
+<<char_right TrackerNeutral_3E>>
 :Are you having a stroke? This is apparently your life now. Seems like it’s time to fully commit to the bit.
 <<voiceline KristenGreeting2>>
 Kristen: Okay. Hell yeah, sister. Welcome to the family.
@@ -435,11 +440,11 @@ Nara: I see… is this her attempt to initiate a polycule with us? Or does she h
 -> <i>Wake up and smile! They seem pretty cool about all of this, so you should be too!</i>
     As you wake up more fully, your brain does too. Cool the paranoia, Applebees — from the context, it seems more like they want to have a conversation <i>with</i> you, not without.
     <<bg_filter_off>>
+    <<char_left NaraNeutral5>>
+    <<char_right TrackerNeutral_3E>>
     <<kristen Grin>>
     You slowly sit up, try your best not to sweat under the weight of both of their eyes suddenly turning towards you. Okay, deep breath. Smile. Yes, you’re about to have the “what are we” conversation with your ex and her ex girlfriend, but you can totally be chill about this — 
     Tracker: You’re doing the “hey girlie” face, you know that right? 
-    <<char_left NaraNeutral5>>
-    <<char_right TrackerNeutral_3E>>
     Nara: Yes, your face is practically <i>begging</i> to greet all of the girls before you. 
     Tracker: … You don’t know what it is, do you?
     Nara: No…
