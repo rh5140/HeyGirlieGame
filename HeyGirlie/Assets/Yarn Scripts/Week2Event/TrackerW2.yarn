@@ -57,6 +57,11 @@ Kristen: Yeah...
 <<fade_in_ui>>
 :You look at the wolf skeleton she’s brought you in front of. It’s a wolf-wolf skeleton, not a werewolf-wolf skeleton, because she looks more fascinated than furious.
 Kristen: Hey, at least this one didn’t come to life.
+<<fade_out_ui>>
+<<wait 2>>
+<<background Museum>>
+<<fade_in_ui>>
+<<kristen Neutral>>
 <<char_right TrackerSurprised_1>>
 <<voiceline TrackerConfused1>>
 Tracker: What?
@@ -85,6 +90,8 @@ Tracker: Good to know. But, for the record…
 :She makes the face again. You, predictable as ever, laugh at it again.
 <<voiceline TrackerDateSuccess1>>
 Tracker: Sometimes I really do just want to make you laugh, too.
+<<kristen transparent>>
+<<char_right transparent>>
 <<fade_out_ui>>
 <<background Museum_Tracker>>
 <<wait 2>>
