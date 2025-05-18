@@ -5,6 +5,7 @@ using Yarn.Unity;
 public class UpdateCassWeek : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
+    public bool springFling = false;
     void Start()
     {
         int weekNum = GameManager.Instance.Week;
@@ -13,6 +14,6 @@ public class UpdateCassWeek : MonoBehaviour
             dialogueRunner.StartDialogue("Cassandra");
             transform.parent.gameObject.SetActive(false);
         }
-        else GetComponent<TextMeshProUGUI>().text = "Week " + weekNum;
+        else if(!springFling) GetComponent<TextMeshProUGUI>().text = "Week " + weekNum;
     }
 }
