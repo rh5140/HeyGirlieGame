@@ -79,17 +79,10 @@ Cassandra: No doubt about it. Now go get ‘em, girlie!
 
 title: Ending
 ---
+<<location "Aguefort Gym">>
 <<if $succeed is false>>
     <<jump FlopEnding>>
 <<else>>
-    <<kristen transparent>>
-    <<char_right transparent>>
-    <<char_left transparent>>
-    <<fade_out_ui>>
-    <<wait  2>>
-    <<location "Aguefort Gym">>
-    <<background SpringFling>>
-    <<fade_in_ui>>
     <<play_track sf>>
     <<if $date == "Fig">>
         <<kristen Neutral_Fig>>
@@ -240,14 +233,6 @@ title: EndingForReal
 
 title: FlopEnding
 ---
-<<kristen transparent>>
-<<char_right transparent>>
-<<char_left transparent>>
-<<fade_out_ui>>
-<<wait  2>>
-<<location "Aguefort Gym">>
-<<background SpringFling>>
-<<fade_in_ui>>
 <<play_track bluegrace>>
 <<if $date == "FigAyda">>
     <<set $date = "Fig and Ayda">>
