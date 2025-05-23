@@ -37,15 +37,15 @@ Gertie: Not much else. I’ve spent my whole day here, with the hives.
 Kristen: The whole day? What about your ranger classes?
 Gertie: Ah, that’s the benefit of an independent study, Miss Applebees.
 Gertie: I can count the Apiarists’ Society as academic credit.
-  -> Kristen: “Must be nice to get class credit to do your own thing.”
+  -> “Must be nice to get class credit to do your own thing.”
     <<char_right GertieAngry>>
     Gertie bristles a bit at your comment. 
     <<add_points 0>>
-  -> Kristen: “Awesome! I’m sure you’ll learn more here than in a classroom.”
+  -> “Awesome! I’m sure you’ll learn more here than in a classroom.”
     <<kristen Happy>>
     <<voiceline GertieDateSuccess1>>
     <<add_points 2>>
-  -> Kristen: “But don’t you ever dream of adventure?”
+  -> “But don’t you ever dream of adventure?”
     Kristen: Aguefort is an adventuring academy, after all.
     Gertie: I know what I want, Miss Applebees.
     Gertie: I didn’t come here for thrills, I came here to learn about my passion. This <i>is</i> my adventure.
@@ -120,7 +120,7 @@ Gertie: Only the most skilled beekeepers approach them uncovered.
     <<kristen Neutral>>
     You put on gloves before your approach. Their buzzing doesn’t cease, but they allow you to check their hive without getting aggressive.
     <<add_points 2>>
-  -> Kristen: “Maybe you can come along with me? To put them at ease?”
+  -> “Maybe you can come along with me? To put them at ease?”
     <<kristen Soft>>
     <<char_right GertieGrin>>
     <<voiceline GertieDateSuccess2>>
@@ -183,18 +183,18 @@ It suddenly hits you how deep this impromptu visit has gotten.
 Kristen: No wonder the bees don’t like me. I bet they still smell the corn on me.
 Gertie gives a pitying chuckle.
 Gertie: Would you like to try approaching the bees again?
-  -> Kristen: “Haha, definitely not.”
+  -> “Haha, definitely not.”
     <<kristen Nervous>>
     <<char_right GertieSad>>
     <<voiceline GertieDateFail3>>
     Gertie grimaces at your response. Maybe you came off a bit too harsh in your rejection.
     <<add_points 0>>
-  -> Kristen: “I don’t think that’s a great idea.”
+  -> “I don’t think that’s a great idea.”
     <<kristen Nervous>>
     <<char_right GertieSad>>
     Gertie seems a bit disappointed, but you can tell she doesn’t want to push you too far.
     <<add_points 1>>
-  -> Kristen: “Are you sure?”
+  -> “Are you sure?”
     <<kristen Surprised>>
     Gertie: I assure you they don’t want to sting you anymore than you want to be stung.
     <<add_points 2>>

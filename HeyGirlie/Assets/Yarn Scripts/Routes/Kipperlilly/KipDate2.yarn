@@ -58,16 +58,16 @@ Kristen: Not really?
 
 <<char_right KipperlillySmug>>
 Kipperlilly: Hmm. More fun for me, then.
--> Kristen: “I’ll just have to catch you next time.”
+-> “I’ll just have to catch you next time.”
   <<voiceline KipSmug2>>
   Kipperlilly: Ha! Don’t flatter yourself.
   <<add_points 1>>
--> Kristen: “Is this kind of practice fun for you guys? We just hang out and stuff.”
+-> “Is this kind of practice fun for you guys? We just hang out and stuff.”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipSad1>>
   Kipperlilly: Not my fault Gukgak doesn’t care enough about you to prepare you for an ambush.
   <<add_points 0>>
--> Kristen: “Are you going to do that every time?”
+-> “Are you going to do that every time?”
   <<voiceline KipHappy1>>
   Kipperlilly: Why? Should I?
   <<add_points 1>>
@@ -110,19 +110,19 @@ Kristen: And then you’ll give me the key?
 <<char_right KipperlillyAnnoyed>>
 <<voiceline KipAnnoyed2>>
 Kipperlilly: ... lesson number two is going to be on how multistep plans work. Of course not. This is step one of getting the key. 
--> Kristen: “In that case, let’s get some pictures!”
+-> “In that case, let’s get some pictures!”
   <<kristen Neutral>>
   <<char_right KipperlillyNeutral>>
   <<voiceline KipNeutral2>>
   Kipperlilly: That’s what I like to hear, Applebees.
   <<add_points 2>>
--> Kristen: “Hmm. Seems simple enough.”
+-> “Hmm. Seems simple enough.”
   <<kristen Neutral>>
   <<char_right KipperlillySmug>>
   <<voiceline KipSmug1>>
   Kipperlilly: I knew you’d see it my way.
   <<add_points 1>>
--> Kristen: “What exactly are you going to use that chapter for?”
+-> “What exactly are you going to use that chapter for?”
   <<kristen Neutral>>
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
@@ -141,15 +141,15 @@ It’s also something you have absolutely nothing to do with. He might get suspi
 <<voiceline KristenAwkward2>>
 <<toggleText Kristen>>
 Kristen (text): hey riz :) big favor to ask
--> Kristen: “might start rogue classes, could i get photos of ur shit to study like ch7 of that encyclopedia youve been dragging around B)”
+-> (text): “might start rogue classes, could i get photos of ur shit to study like ch7 of that encyclopedia youve been dragging around B)”
   <<toggleText none>>
   Kristen: Multiclassing in senior year with no warning? Why not?
   <<add_points 0>>
--> Kristen: “some sophomore is working on one of eugenia’s puzzles and apparently youve got the book on getting around it. wanna help a president out B)”
+-> (text): “some sophomore is working on one of eugenia’s puzzles and apparently youve got the book on getting around it. wanna help a president out B)”
   <<toggleText none>>
   Kristen: There’s no way Riz knows every rogue at Aguefort, right?
   <<add_points 1>>
--> Kristen: “does ur project have anything about getting around magic detection? tryin to get my president shit done lol”
+-> (text): “does ur project have anything about getting around magic detection? tryin to get my president shit done lol”
   <<toggleText none>>
   Kristen: Riz trusts me enough to not think too hard about it, and Arthur’s crazy enough to, like, set up magical spyware on the student president. Probably.
   <<add_points 2>>
@@ -188,16 +188,16 @@ Kipperlilly doesn’t quite look up, but her writing slows down a little as she 
 Kristen: What kind of project is this, anyways? Are you two working on the same thing?
 
 Kipperlilly: I have to design a security system based on available resources and outline a potential heist I would conduct against those countermeasures. Gukgak’s parameters are completely different, there’s just a lot of overlap in research.
--> Kristen: “Is there a point to holding the books hostage?”
+-> “Is there a point to holding the books hostage?”
   <<voiceline KipNeutral1>>
   Kipperlilly: Learning how to exchange information is just as important as acquiring it in the first place. That’s freshman year knowledge.
   <<add_points 1>>
--> Kristen: “Is it a competition?”
+-> “Is it a competition?”
   <<char_right KipperlillySmug>>
   <<voiceline KipHappy1>>
   Kipperlilly: Eugenia doesn’t think so, but she hasn’t been an adventurer in decades. So yes, and I’m going to get a better score than him and laugh while he cries about it.
   <<add_points 2>>
--> Kristen: “And you two can’t just... share?”
+-> “And you two can’t just... share?”
   <<char_right KipperlillyAnnoyed>>
   <<voiceline KipAnnoyed1>>
   Kipperlilly stares at you like you’re an idiot again. Of course. What an outrageous suggestion.
@@ -265,16 +265,16 @@ Kristen (text): u also told me not to get u kicked out of the library
 Kipperlilly pointedly stands one of her books up so it blocks her from your view. Good thing you don’t need line of sight to send a text.
 <<char_right KipperlillyNeutral>>
 <<toggleText Kristen>>
--> Kristen: “do u think dimweather would actually kick us out if i screamed”
+-> (text): “do u think dimweather would actually kick us out if i screamed”
   <<toggleText 2Kipperlilly>>
   <<char_right KipperlillyAnnoyed>>
   Kipperlilly (text): You are actually the worst.
   <<add_points 0>>
--> Kristen: “what if he doesn’t reply today”
+-> (text): “what if he doesn’t reply today”
   <<toggleText 2Kipperlilly>>
   Kipperlilly (text): Then you’ll have to get it another way, won’t you?
   <<add_points 1>>
--> Kristen: “so hows the heisting going :)”
+-> (text): “so hows the heisting going :)”
   <<toggleText 2Kipperlilly>>
   Kipperlilly (text): It would be going perfectly if I had those photos.	  
   <<add_points 1>>
@@ -324,15 +324,15 @@ Kipperlilly: Shut the fuck up, Applebees.
 <<kristen Grin>>
 She doesn’t even bother making eye contact, typing out a rushed reply, but you simply grab your crystal.
 <<toggleText Kristen>>
--> Kristen: “no need to be embarrassed <3”
+-> (text): “no need to be embarrassed <3”
   <<toggleText 2Kipperlilly>>
   Kipperlilly (text): I’m not.
   <<add_points 1>>
--> Kristen: “thats a lot of emojis for one message”
+-> (text): “thats a lot of emojis for one message”
   <<toggleText 2Kipperlilly>>
   Kipperlilly (text): It’s rude to look at someone else’s texts.
   <<add_points 0>>
--> Kristen: “nearly your curfew?”
+-> (text): “nearly your curfew?”
   <<toggleText 2Kipperlilly>>
   Kipperlilly (text): It’s literally 4:30.
   <<add_points 1>>
@@ -452,15 +452,15 @@ Kristen: That’s seriously not enough to get the key?
 
 <<char_right KipperlillyNeutral>>
 Kipperlilly: I told you, Applebees. I’m making you work for it.
--> Kristen: “Fine, fine. I can handle a little hard work.”
+-> “Fine, fine. I can handle a little hard work.”
   <<voiceline KipHappy1>>
   Kipperlilly: Ha. Good.
   <<add_points 2>>
--> Kristen: “Am I going to have to betray any more of my friends?”
+-> “Am I going to have to betray any more of my friends?”
   <<voiceline KipNeutral1>>
   Kipperlilly: You and I both know Gukgak is the only one paranoid enough that you’d have to lie to get anything out of him.
   <<add_points 1>>
--> Kristen: “Come on, this is a bit much, isn’t it?”
+-> “Come on, this is a bit much, isn’t it?”
   <<char_right KipperlillySmug>>
   <<voiceline KipSmug2>>
   Kipperlilly: Aww, giving up so soon? 

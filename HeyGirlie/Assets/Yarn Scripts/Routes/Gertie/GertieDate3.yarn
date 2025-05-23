@@ -84,16 +84,16 @@ Gertie: Get ready for Bladeshield!
 <<sfx sword>>
 You know you’ve got one chance to speak up before the duel begins.
 What do you say?
-  -> Kristen: “Let this one go, Gertie. Some fights are not worth it.”
+  -> “Let this one go, Gertie. Some fights are not worth it.”
     <<kristen Awkward>>
     Gertie: And some can’t be avoided.
     <<add_points 0>>
-  -> Kristen: “Is that a sword in your hand or are you just happy to see me?”
+  -> “Is that a sword in your hand or are you just happy to see me?”
     <<kristen Grin>>
     <<char_right GertieGrin>>
     Gertie blushes, momentarily distracted, then shakes her head to refocus on the duel.
     <<add_points 1>>
-  -> Kristen: “Give ’em hell, Bladeshield. I’ll watch your back.”
+  -> “Give ’em hell, Bladeshield. I’ll watch your back.”
     <<kristen Happy>>
     <<char_right GertieHappy>>
     <<voiceline KristenHappy1>>
@@ -142,16 +142,16 @@ Gertie catches sight of your worried expression.
 <<char_right GertieNeutral>>
 Gertie: Thank you for your concern, Miss Applebees.
 Gertie: I can assure you that I am perfectly fine.
-  -> Kristen: “Totally! You were un<i>bee</i>lievable out there.”
+  -> “Totally! You were un<i>bee</i>lievable out there.”
     <<kristen Grin>>
     <<add_points 1>>
     You cheer her up as best as you can, gushing over her sword stances while she pops a few goodberries, but it soon becomes clear that she needs some actual clerical attention.
-  -> Kristen: “I still need to give you a check-up. Cleric’s Oath, and all that.”
+  -> “I still need to give you a check-up. Cleric’s Oath, and all that.”
     <<kristen Neutral>>
     <<voiceline GertieNeutral2>>
     Gertie: If you insist. Who am I to keep you from your vow?
     <<add_points 1>>
-  -> Kristen: “Are you sure? I was really worried about you for a second…”
+  -> “Are you sure? I was really worried about you for a second…”
     <<kristen Soft>>
     <<voiceline GertieDateSuccess1>>
     Gertie: That’s very kind of you to say. I will admit, I am feeling a certain soreness in my sword arm.
@@ -159,7 +159,7 @@ Gertie: I can assure you that I am perfectly fine.
 As you check over Gertie, an alert comes on her crystal.
 <<kristen Surprised>>
 <<char_right GertieSad>>
-  -> Kristen: “What’s going on?”
+  -> “What’s going on?”
     Gertie: Someone left a bad review on my honey.
     Kristen: Where?
     Gertie: Everywhere.
@@ -230,16 +230,16 @@ Has anyone else ever asked?
 Gertie: I suppose, whenever I feel something big — anger, outrage, hurt — it’s as though I can barely contain the emotion. I’m compelled by this need to get it out, to do <i>something</i>.
 Gertie: Perhaps I have a tendency to escalate, but is it not better to settle such disputes on the spot, rather than drag out the bitterness?
 Gertie: What do you think?
-  -> Kristen: “Well, You can always call Dr. Kristen to patch you up after.”
+  -> “Well, You can always call Dr. Kristen to patch you up after.”
     <<kristen Grin>>
     <<char_right GertieBlush>>
     Kristen: Just don’t expect me to dress up… unless you’re into that.
     <<add_points 1>>
-  -> Kristen: “Hurt begets hurt. You should think before you act.”
+  -> “Hurt begets hurt. You should think before you act.”
     <<kristen Nervous>>
     Gertie frowns, looking chastened, but also a little irritated. Who are <i>you</i> to rag on someone else’s impulsiveness?
     <<add_points 0>>
-  -> Kristen: “I’m happy to listen if you ever want to talk about it first.”
+  -> “I’m happy to listen if you ever want to talk about it first.”
     <<kristen Soft>>
     <<char_right GertieNeutral>>
     <<voiceline GertieHappy3>>
