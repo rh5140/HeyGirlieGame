@@ -115,6 +115,12 @@ namespace Yarn.Unity
         /// </remarks>
         [SerializeField] internal GameObject characterNameContainer = null;
 
+        [SerializeField] private Color kristenNameColor;
+        [SerializeField] private Color otherNameColor;
+
+        [SerializeField] private Color kristenTextColor;
+        [SerializeField] private Color otherTextColor;
+
         /// <summary>
         /// Controls whether the text of <see cref="lineText"/> should be
         /// gradually revealed over time.
@@ -158,7 +164,6 @@ namespace Yarn.Unity
 
         // current message bubble styling settings, modified by SetSender
         bool isRightAlignment = true;
-        Color purple = new Color(0.4313726f, 0.2f, 0.6470588f, 1f), white = Color.white;
 
         /// <summary>
         /// A Unity Event that is called when a pause inside of the typewriter effect occurs.
@@ -370,24 +375,6 @@ namespace Yarn.Unity
             onInterruptLineFinished();
         }
 
-        // when we clone a new message box, re-style the message box based on whether SetSenderMe or SetSenderThem was most recently called
-        void UpdateMessageBoxSettings(string character)
-        {
-            var bg = dialogueBubblePrefab.GetComponentInChildren<Image>();
-            var message = dialogueBubblePrefab.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
-            // message.text = "";
-            if (character == "" || character == "Kristen" || character == "Kristen (text)" )
-            {
-                bg.color = purple;
-                message.color = white;
-            }
-            else
-            {
-                bg.color = white;
-                message.color = purple;
-            }
-        }
-
         public void CloneMessageBoxToHistory(LocalizedLine dialogueLine)
         {
             dialogueBubblePrefab.SetActive(true);
@@ -413,15 +400,15 @@ namespace Yarn.Unity
             var bg = oldClone.GetComponentInChildren<Image>();
             var message = oldClone.transform.Find("TextBG/Text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
             // message.text = "";
-            if (String.IsNullOrEmpty(character) || character == "Kristen" || character == "Kristen (text)" )
+            if (String.IsNullOrEmpty(character) || character == "Kristen" || character == "Kristen (text)")
             {
-                bg.color = purple;
-                message.color = white;
+                bg.color = kristenNameColor;
+                message.color = Color.white;
             }
             else
             {
-                bg.color = white;
-                message.color = purple;
+                bg.color = Color.white;
+                message.color = kristenNameColor;
             }
             //UpdateMessageBoxSettings(character);
         }
@@ -458,11 +445,20 @@ namespace Yarn.Unity
                     // so just hide the container
                     if (string.IsNullOrWhiteSpace(dialogueLine.CharacterName))
                     {
+                        lineText.color = kristenTextColor;
                         characterNameContainer.SetActive(false);
                     }
                     else
                     {
                         // we have a character name text view, show the character name
+                        if (dialogueLine.CharacterName == "Kristen") {
+                            characterNameText.color = kristenNameColor;
+                            lineText.color = kristenTextColor;
+                        } else {
+                            characterNameText.color = otherNameColor;
+                            lineText.color = otherTextColor;
+                        }
+
                         characterNameText.text = dialogueLine.CharacterName;
                         characterNameContainer.SetActive(true);
                     }
