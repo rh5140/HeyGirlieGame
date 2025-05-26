@@ -62,10 +62,10 @@ public class Dropdown : Menu
     IEnumerator HoverDropdown(bool hover){
         float time = 0, lerpTime = 0.25f;
         RectTransform paperRect = paper.GetComponent<RectTransform>(); 
-        float pStart = -2220.5f, pEnd = -2588f;
+        float pStart = -2220.5f, pEnd = -1*start;
         if(hover){
             // paper.SetActive(true);
-            pEnd = -2220.5f; pStart = -2588f;
+            pEnd = -2220.5f; pStart = -1*start;
         }
 
         while(time < lerpTime){
@@ -74,10 +74,8 @@ public class Dropdown : Menu
             time += Time.unscaledDeltaTime;
             yield return null;
         }
-
-        if(!hover){
-            // paper.SetActive(false);
-        }
+        
+        paperRect.anchoredPosition = new Vector2(pEnd, 0);
     }
 
     public void DisableHover(){
@@ -99,15 +97,10 @@ public class Dropdown : Menu
             hoverArea.SetActive(false);
             overlay.SetActive(true);
             cStart = 0f; cEnd = 1f; pStart = -1*start; pEnd = -1457.5f;
-        } else {
-            // "OnDestroy"
-            // Unpause();
-            // UnlockEsc();
         }
 
         Color c = overlayImg.color;
         while(time < lerpTime){
-            // c = overlayImg.color;
             c.a = Mathf.Lerp(cStart, cEnd, time / lerpTime);
             overlayImg.color = c;
 
@@ -126,9 +119,7 @@ public class Dropdown : Menu
             hoverArea.SetActive(true);
             ChangeTab("Menu");
         } else {
-            // // "Awake"
-            // Pause();
-            // LockEsc(EscLock.Dropdown);
+            // Open
             ChangeTab("Close");
         }
 

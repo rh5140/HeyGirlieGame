@@ -38,7 +38,12 @@ namespace Yarn.Unity
         [SerializeField] GameObject lastLineCharacterNameContainer;
 
         [SerializeField] GameObject dialogueBubblePrefab;
-        Color purple = new Color(0.4313726f, 0.2f, 0.6470588f, 1f), white = Color.white;
+
+        [SerializeField] private Color kristenNameColor;
+        [SerializeField] private Color otherNameColor;
+
+        [SerializeField] private Color kristenTextColor;
+        [SerializeField] private Color otherTextColor;
 
         // A cached pool of OptionView objects so that we can reuse them
         List<HGGOptionView> optionViewsVertical = new List<HGGOptionView>();
@@ -295,13 +300,13 @@ namespace Yarn.Unity
             // message.text = "";
             if (String.IsNullOrEmpty(character) || character == "Kristen")
             {
-                bg.color = purple;
-                message.color = white;
+                bg.color = otherNameColor;
+                message.color = Color.white;
             }
             else
             {
-                bg.color = white;
-                message.color = purple;
+                bg.color = Color.white;
+                message.color = otherNameColor;
             }
         }
 
